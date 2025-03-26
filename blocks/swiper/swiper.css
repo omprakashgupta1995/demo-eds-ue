@@ -1,0 +1,28 @@
+@import url('../swiper/swiper-bundle-min.css');
+
+/* .swiper-wrapper{
+    position: relative;
+} */
+
+.swiper {
+    width: 500px;
+    height: 380px;
+    background-color: lavender;
+}
+
+.swiper p{
+    font-size: 30px;
+    color: green;
+}
+
+.swiper img{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* .swiper .swiper-button-next{
+    position: absolute;
+    right: -39px;
+} */
