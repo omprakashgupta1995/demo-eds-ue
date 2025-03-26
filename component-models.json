@@ -230,7 +230,7 @@
     ]
   },
   {
-    "id": "swiper",
+    "id": "swiper-item",
     "fields": [
       {
         "component": "reference",

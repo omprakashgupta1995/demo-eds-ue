@@ -17,8 +17,7 @@
       "columns",
       "quote",
       "fragment",
-      "byline",
-      "swiper"
+      "byline"
     ]
   },
   {
@@ -40,6 +39,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "swiper",
+    "components": [
+      "swiper-item"
     ]
   }
 ]
