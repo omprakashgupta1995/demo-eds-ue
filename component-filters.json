@@ -29,6 +29,12 @@
     ]
   },
   {
+    "id": "swiper",
+    "components": [
+      "swiper-item"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
