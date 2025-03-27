@@ -210,22 +210,27 @@
       },
       {
         "id": "tab-item",
-        "fields": [
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "title",
-            "label": "title"
-          },
-          {
-            "component": "richtext",
-            "valueType": "string",
-            "name": "heading",
-            "value":"",
-            "label": "heading"
-            
-          }
-        ]
+       "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "titleType",
+        "label": "Title Type"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
       }
     ]
   }
