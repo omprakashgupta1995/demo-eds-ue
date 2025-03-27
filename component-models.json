@@ -326,5 +326,24 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "form-url",
+        "label": "Form URL",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "api-url",
+        "label": "API URL",
+        "multi": false
+      }
+    ]
   }
 ]
