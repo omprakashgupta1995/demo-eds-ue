@@ -187,21 +187,21 @@
   {
     "id": "swiper-cards-items",
     "fields": [
-       {
-         "component": "richtext",
-         "name": "swiper-cards-items",
-         "value": "",
-         "label": "swiper-cards-items",
-         "valueType": "string"
-       },
-       {
-         "component": "text",
-         "valueType": "string",
-         "name": "author",
-         "label": "Author",
-         "value": ""
-       }
-     ]
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   },  
   {
     "id": "hero",
