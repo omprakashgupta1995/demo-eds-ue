@@ -214,28 +214,49 @@
     "id": "tabs",
     "fields": [
       {
-        "component": "tabs",
+        "component": "text",
+        "name": "tabs1",
         "label": "Tabs 1",
-        "name": "tabs1"
-      },
-      {
-        "component": "text-input",
-        "label": "Text 1",
-        "name": "text1",
         "valueType": "string"
       },
       {
-        "component": "tabs",
-        "label": "Tabs 2",
-        "name": "tabs2"
-      },
-      {
-        "component": "text-input",
-        "label": "Text 2",
-        "name": "text2",
+        "component": "litle",
+        "name": "config",
+        "label": "Config",
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "title",
+        "multi": false
+      },
+      {
+        "component": "text2",
+        "valueType": "string",
+        "name": "titleType",
+        "label": "Title Type",
+        "multi": false
+      },
+      {
+        "component": "text3",
+        "valueType": "string",
+        "name": "titleType",
+        "label": "Title Type",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "title",
+        "label": "Text"
+      }
+    ]
   }
-  
 ]
