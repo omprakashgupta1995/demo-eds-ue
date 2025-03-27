@@ -271,10 +271,20 @@
     "id": "tab",
     "fields": [
       {
-        "component": "text",
+        "component": "multiselect",
         "valueType": "string",
         "name": "classes",
-        "label": "Style" 
+        "label": "Style" ,
+        "options": [
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          },
+          {
+            "name": "Highlight 1",
+            "value": "highlight-1"
+          }
+        ]
       },
       {
         "component": "text",
