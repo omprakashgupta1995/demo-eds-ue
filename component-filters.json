@@ -19,6 +19,7 @@
       "byline",
       "product",
       "swiper",
+      "tab",
       "fragment"
     ]
   },
@@ -32,6 +33,12 @@
     "id": "swiper",
     "components": [
       "swiper-item"
+    ]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "tab-item"
     ]
   },
   {
