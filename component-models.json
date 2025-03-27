@@ -224,8 +224,7 @@
         "component": "text",
         "valueType": "string",
         "name": "titletype",
-        "label": "Title Type",
-        "value": ""
+        "label": "Title Type"
       },
       {
         "component": "richtext",
