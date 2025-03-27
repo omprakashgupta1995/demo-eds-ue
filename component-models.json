@@ -223,7 +223,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "titletype",
+        "name": "titleType",
         "label": "Title Type"
       },
       {
