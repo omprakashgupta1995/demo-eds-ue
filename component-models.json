@@ -194,20 +194,63 @@
   {
     "id": "quote",
     "fields": [
-       {
-         "component": "richtext",
-         "name": "quote",
-         "value": "",
-         "label": "Quote",
-         "valueType": "string"
-       },
-       {
-         "component": "text",
-         "valueType": "string",
-         "name": "alok",
-         "label": "Author",
-         "value": ""
-       }
-     ]
+      {
+        "component": "richtext",
+        "name": "quote",
+        "value": "",
+        "label": "Quote",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "author",
+        "label": "Author",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "text",
+        "name": "classes",
+        "label": "Quote",
+        "valueType": "string"
+      },
+      {
+        "component": "litle",
+        "valueType": "string",
+        "name": "config",
+        "label": "config",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "title",
+         "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "titleType",
+        "label": "Title Type",
+         "multi": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "title",
+        "label": "Text"
+      }
+    ]
   }
 ]

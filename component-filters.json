@@ -49,7 +49,14 @@
       "hero",
       "cards",
       "columns",
-      "quote"
+      "quote",
+      "tabs"
      ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs-item"
+    ]
   }
 ]
