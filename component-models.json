@@ -345,5 +345,68 @@
         "multi": false
       }
     ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bannercol1_bgimage",
+        "label": "Background Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol1_bgimageAlt",
+        "label": "Background Image Alt"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bannercol1_frontimage",
+        "label": "Front Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol1_frontimageAlt",
+        "label": "Front Image Alt"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "bannercol2_description",
+        "label": "Content"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "bannercol2_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol2_linkText",
+        "label": "Link Text"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "bannercol2_linkType",
+        "label": "Link Text",
+        "options" : [
+          {
+            "name" : "Primary",
+            "value" : "primary"
+          },
+          {
+            "name" : "Secondary",
+            "value" : "secondary"
+          }
+        ]
+      }
+    ]
   }
 ]
