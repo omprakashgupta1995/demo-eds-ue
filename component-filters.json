@@ -21,8 +21,14 @@
       "swiper",
       "tab",
       "form",
-      "banner",
+      "banner-container",
       "fragment"
+    ]
+  },
+  {
+    "id": "banner-container",
+    "components": [
+      "banner"
     ]
   },
   {
