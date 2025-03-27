@@ -44,7 +44,7 @@
   {
     "id": "tab",
     "components": [
-      "teb-item"
+      "tab-item"
     ]
   }
 
