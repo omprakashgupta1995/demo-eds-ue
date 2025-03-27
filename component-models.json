@@ -195,7 +195,7 @@
     "id": "tabs-item",
     "fields": [
       {
-        "component": "reference",
+        "component": "richtext",
         "valueType": "string",
         "name": "title",
         "label": "title",
