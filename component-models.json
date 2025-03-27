@@ -218,13 +218,6 @@
         "name": "classes",
         "label": "text",
         "valueType": "string"
-      },
-      {
-        "component": "litle",
-        "valueType": "string",
-        "name": "config",
-        "label": "config",
-        "value": ""
       }
     ]
   },
