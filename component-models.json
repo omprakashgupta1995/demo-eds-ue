@@ -234,18 +234,11 @@
         "component": "text",
         "valueType": "string",
         "name": "title",
-        "label": "title",
+        "label": "Title",
         "multi": false
       },
       {
-        "component": "text2",
-        "valueType": "string",
-        "name": "titleType",
-        "label": "Title Type",
-        "multi": false
-      },
-      {
-        "component": "text3",
+        "component": "text",
         "valueType": "string",
         "name": "titleType",
         "label": "Title Type",
@@ -254,8 +247,8 @@
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "title",
-        "label": "Text"
+        "name": "description",
+        "label": "Description"
       }
     ]
   }
