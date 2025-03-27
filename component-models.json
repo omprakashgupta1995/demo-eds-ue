@@ -211,53 +211,31 @@
     ]
   },
   {
-    "id": "tabs",
+    "id": "tab",
     "fields": [
       {
-        "component": "text",
-        "name": "classes",
-        "label": "Quote",
+        "component": "tab",
+        "label": "Tab 1",
+        "name": "tab1"
+      },
+      {
+        "component": "text-input",
+        "label": "Text 1",
+        "name": "text1",
         "valueType": "string"
       },
       {
-        "component": "litle",
-        "valueType": "string",
-        "name": "config",
-        "label": "config",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "tabs-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "title",
-         "multi": false
+        "component": "tab",
+        "label": "Tab 2",
+        "name": "tab2"
       },
       {
-        "component": "text2",
-        "valueType": "string",
-        "name": "titleType",
-        "label": "Title Type",
-         "multi": false
-      },
-      {
-        "component": "text3",
-        "valueType": "string",
-        "name": "titleType",
-        "label": "Title Type",
-         "multi": false
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "title",
-        "label": "Text"
+        "component": "text-input",
+        "label": "Text 2",
+        "name": "text2",
+        "valueType": "string"
       }
     ]
   }
+  
 ]
