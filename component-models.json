@@ -218,9 +218,9 @@
             "label": "title"
           },
           {
-            "component": "text",
-            "name": "titleType",
-            "label": "Title Type",
+            "component": "richtext",
+            "name": "heading",
+            "label": "Heading",
             "valueType": "string"
           }
         ]
