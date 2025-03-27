@@ -277,12 +277,19 @@
         "label": "Style" ,
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Theme",
+            "children": [
+              { "name": "Light", "value": "light" },
+              { "name": "Dark",  "value": "dark" }
+            ]
           },
           {
-            "name": "Highlight 1",
-            "value": "highlight-1"
+            "name": "Type",
+            "children": [
+              { "name": "Alpha", "value": "alpha" },
+              { "name": "Beta", "value": "beta" },
+              { "name": "Gamma", "value": "gamma" }
+            ]
           }
         ]
       },
