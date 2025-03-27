@@ -215,15 +215,16 @@
     "fields": [
       {
         "component": "text",
-        "name": "tabs1",
-        "label": "Tabs 1",
+        "name": "classes",
+        "label": "text",
         "valueType": "string"
       },
       {
         "component": "litle",
+        "valueType": "string",
         "name": "config",
-        "label": "Config",
-        "valueType": "string"
+        "label": "config",
+        "value": ""
       }
     ]
   },
