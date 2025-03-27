@@ -68,7 +68,7 @@
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "richs",
         "value": "",
         "label": "Text",
         "valueType": "string"
