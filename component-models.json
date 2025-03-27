@@ -202,7 +202,26 @@
          "value": ""
        }
      ]
-  }, 
+  },
+  {
+    "id": "swiper-cards-items",
+    "fields": [
+       {
+         "component": "richtext",
+         "name": "swiper-cards-items",
+         "value": "",
+         "label": "swiper-cards-items",
+         "valueType": "string"
+       },
+       {
+         "component": "text",
+         "valueType": "string",
+         "name": "author",
+         "label": "Author",
+         "value": ""
+       }
+     ]
+  },  
   {
     "id": "hero",
     "fields": [

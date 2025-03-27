@@ -173,7 +173,22 @@
               }
             }
           }
-        },       
+        },
+        {
+          "title": "Swiper-Cards-items",
+          "id": "swiper-cards-items",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Swiper-Cards-items",
+                  "filter": "swiper-cards-items"
+                }
+              }
+            }
+          }
+        },        
         {
           "title": "Hero",
           "id": "hero",
