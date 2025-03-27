@@ -207,6 +207,23 @@
             "valueType": "string"
           }
         ]
+      },
+      {
+        "id": "tab-item",
+        "fields": [
+          {
+            "component": "title",
+            "valueType": "string",
+            "name": "title",
+            "label": "title"
+          },
+          {
+            "component": "text",
+            "name": "titleType",
+            "label": "Title Type",
+            "valueType": "string"
+          }
+        ]
       }
     ]
   }

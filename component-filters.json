@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "byline"
+      "byline",
+      "tab"
     ]
   },
   {
@@ -39,5 +40,12 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "teb-item"
+    ]
   }
+
 ]
