@@ -183,7 +183,26 @@
          "value": ""
        }
      ]
-  },  
+  }, 
+  {
+    "id": "swiper-cards",
+    "fields": [
+       {
+         "component": "richtext",
+         "name": "swiper-cards",
+         "value": "",
+         "label": "swiper-cards",
+         "valueType": "string"
+       },
+       {
+         "component": "text",
+         "valueType": "string",
+         "name": "author",
+         "label": "Author",
+         "value": ""
+       }
+     ]
+  }, 
   {
     "id": "hero",
     "fields": [
