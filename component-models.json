@@ -239,7 +239,14 @@
          "multi": false
       },
       {
-        "component": "text",
+        "component": "text2",
+        "valueType": "string",
+        "name": "titleType",
+        "label": "Title Type",
+         "multi": false
+      },
+      {
+        "component": "text3",
         "valueType": "string",
         "name": "titleType",
         "label": "Title Type",
