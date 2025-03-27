@@ -68,10 +68,10 @@
       },
       {
         "component": "richtext",
-        "name": "richs",
+        "valueType": "string",
+        "name": "heading",
         "value": "",
-        "label": "richs",
-        "valueType": "string"
+        "label": "Heading"
       }
     ]
   },
