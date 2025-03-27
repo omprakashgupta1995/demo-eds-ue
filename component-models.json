@@ -1,5 +1,15 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "theme",
+        "label": "Theme"
+      }
+    ]
+  },  
+  {
     "id": "image",
     "fields": [
       {
