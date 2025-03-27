@@ -70,7 +70,7 @@
         "component": "richtext",
         "name": "richs",
         "value": "",
-        "label": "Text",
+        "label": "richs",
         "valueType": "string"
       }
     ]
