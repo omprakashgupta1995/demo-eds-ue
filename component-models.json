@@ -219,9 +219,11 @@
           },
           {
             "component": "richtext",
+            "valueType": "string",
             "name": "heading",
-            "label": "Heading",
-            "valueType": "string"
+            "value":"",
+            "label": "heading"
+            
           }
         ]
       }
