@@ -247,5 +247,29 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title" 
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "titleType",
+        "label": "Title Type" 
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
