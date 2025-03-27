@@ -274,7 +274,13 @@
         "component": "text",
         "valueType": "string",
         "name": "classes",
-        "label": "Style"
+        "label": "Style" 
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "config",
+        "label": "Config" 
       }
     ]
   },
