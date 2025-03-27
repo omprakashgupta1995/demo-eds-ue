@@ -185,6 +185,11 @@
      ]
   }, 
   {
+    "id": "swiper-cards",
+    "fields": [
+    ]
+  },
+  {
     "id": "swiper-cards-items",
     "fields": [
       {
