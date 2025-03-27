@@ -190,5 +190,24 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "title",
+        "label": "title",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "TitleType",
+        "valueType": "titletype"
+      }
+    ]
   }
 ]
