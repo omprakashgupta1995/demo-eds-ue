@@ -196,7 +196,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Tab Item",
-                  "filter": "tab-item"
+                  "model": "tab-item"
                 }
               }
             }
