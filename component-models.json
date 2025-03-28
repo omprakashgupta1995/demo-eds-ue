@@ -221,21 +221,22 @@
     "fields": [
       {
         "component": "multiselect",
-        "valueType": "string",
-        "name": "classes",
+        "name": "style",
+        "value": "",
         "label": "Style",
-        "multi": true,
+        "valueType": "string",
         "options": [
           {
-            "name": "default",
-            "value": ""
+            "name": "Om sai Ram",
+            "value": "mujhe maaf karna"
           },
           {
-            "name": "Swiper",
+            "name": "swiper",
             "value": "swiper"
           }
         ]
       }
+  
     ]
   }
 ]
