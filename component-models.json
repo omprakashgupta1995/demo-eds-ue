@@ -209,7 +209,7 @@
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "textert",
         "value": "",
         "label": "Text",
         "valueType": "string"
