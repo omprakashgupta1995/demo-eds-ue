@@ -215,5 +215,27 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "cards-carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Style",
+        "multi": true,
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "Swiper",
+            "value": "swiper"
+          }
+        ]
+      }
+    ]
   }
 ]
