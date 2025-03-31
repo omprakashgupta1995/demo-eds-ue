@@ -118,7 +118,7 @@
     ]
   },
   {
-    "id": "newSection",
+    "id": "MySection",
     "fields": [
       {
         "component": "text",
