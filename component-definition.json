@@ -79,8 +79,8 @@
       ]
     },
     {
-      "title": "Sections",
-      "id": "sections",
+      "title": "new section",
+      "id": "newSection",
       "components": [
         {
           "title": "Section",
@@ -90,7 +90,7 @@
               "page": {
                 "resourceType": "core/franklin/components/section/v1/section",
                 "template": {
-                  "model": "sections"
+                  "model": "section"
                 }
               }
             }
