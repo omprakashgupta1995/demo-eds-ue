@@ -79,7 +79,7 @@
       ]
     },
     {
-      "title": "new section",
+      "title": "Anurag Section",
       "id": "anuragSection",
       "components": [
         {
@@ -90,7 +90,7 @@
               "page": {
                 "resourceType": "core/franklin/components/section/v1/section",
                 "template": {
-                  "model": "My Section"
+                  "model": "MySection"
                 }
               }
             }
