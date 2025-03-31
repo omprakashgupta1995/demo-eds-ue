@@ -80,11 +80,11 @@
     },
     {
       "title": "new section",
-      "id": "newSection",
+      "id": "anuragSection",
       "components": [
         {
           "title": "Section",
-          "id": "anuragSection",
+          "id": "newSection",
           "plugins": {
             "xwalk": {
               "page": {

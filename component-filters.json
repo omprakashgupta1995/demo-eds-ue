@@ -50,7 +50,7 @@
     "components": ["tab-item"]
   },
   {
-    "id" : "newSection",
+    "id" : "anuragSection",
     "components": [
       "text"
     ]
