@@ -83,7 +83,7 @@
       "id": "anuragSection",
       "components": [
         {
-          "title": "Section",
+          "title": "My New Section",
           "id": "newSection",
           "plugins": {
             "xwalk": {
