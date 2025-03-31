@@ -79,6 +79,26 @@
       ]
     },
     {
+      "title": "Sections",
+      "id": "sections",
+      "components": [
+        {
+          "title": "Section",
+          "id": "anuragSection",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/section/v1/section",
+                "template": {
+                  "model": "sections"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "title": "Blocks",
       "id": "blocks",
       "components": [
@@ -172,6 +192,7 @@
             }
           }
         },
+        
         {
           "title": "Anurag Block",
           "id": "quote",

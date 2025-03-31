@@ -45,5 +45,11 @@
   {
     "id": "tab",
     "components": ["tab-item"]
+  },
+  {
+    "id" : "anuragSection",
+    "components": [
+
+    ]
   }
 ]
