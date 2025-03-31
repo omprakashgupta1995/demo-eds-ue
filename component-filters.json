@@ -1,7 +1,10 @@
 [
   {
     "id": "main",
-    "components": ["section"]
+    "components": [
+      "section",
+      "anuragSection"
+    ]
   },
   {
     "id": "section",
