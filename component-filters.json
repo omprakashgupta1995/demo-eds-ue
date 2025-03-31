@@ -52,7 +52,7 @@
   {
     "id" : "newSection",
     "components": [
-      "text"
+      "swiperTab"
     ]
   }
 ]

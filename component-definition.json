@@ -194,7 +194,7 @@
         },
         {
           "title": "My Swiper Tab",
-          "id": "swiper tab",
+          "id": "swiperTab",
           "plugins": {
             "xwalk": {
               "page": {
