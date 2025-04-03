@@ -42,9 +42,9 @@
     ]
   },
   {
-      "id": "sample-swipper",
-      "components": [
-        "sample-swipper-item"
-      ]  
+    "id": "sample-swipper",
+    "components": [
+      "sample-swipper-item"
+    ]  
   }
 ]
