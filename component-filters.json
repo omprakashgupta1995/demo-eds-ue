@@ -13,6 +13,7 @@
       "button",
       "hero-banner",
       "product-1",
+      "hero-banner-item",
       "title",
       "hero",
       "cards",
@@ -39,6 +40,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "components": [
+      "hero-banner-item"
     ]
   }
 ]

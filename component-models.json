@@ -201,5 +201,16 @@
         "label": "product-1"
       }
     ]
+  },
+  {
+    "id": "hero-banner-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col_1",
+        "label": "col_1"
+      }
+    ]
   }
 ]
