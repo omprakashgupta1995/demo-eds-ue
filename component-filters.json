@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "sample",
-      "slider"
+      "slider",
+      "slider-item"
     ]
   },
   {
