@@ -1,4 +1,4 @@
-import Swiper from '../hero-banner/swiper-bundle.min.js';
+import Swiper from './swiper-bundle.min.js';
 
 export default function decorate(block) {
     block.classList.add('swiper');
