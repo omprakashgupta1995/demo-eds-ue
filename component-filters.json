@@ -41,5 +41,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "hero-banner",
+    "components": [
+      "hero-banner-item"
+    ]
   }
 ]
