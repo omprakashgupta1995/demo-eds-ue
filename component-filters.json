@@ -16,9 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "productcard",
-      "hero-banner",
-      "hero-banner-item"
+      "productcard"
     ]
   },
   {
@@ -41,11 +39,5 @@
       "button",
       "title"
     ]
-  },
-  {
-    "id": "hero-banner",
-    "components": [
-      "hero-banner-item"
-    ]
-  }  
+  }
 ]
