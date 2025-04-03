@@ -1,0 +1,1 @@
+import Swiper from '../hero-banner/swiper-bundle.min.js';
