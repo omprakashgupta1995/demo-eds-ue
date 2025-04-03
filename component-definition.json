@@ -159,15 +159,15 @@
         },
         {
           "title": "Swiper",
-          "id": "sampleId",
+          "id": "sample-id",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Swiper",
-                  "model": "sampleId",
-                  "filter": "sampleId"
+                  "model": "sample-id",
+                  "filter": "sample-id"
                 }
               }
             }

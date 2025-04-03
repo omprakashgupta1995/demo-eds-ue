@@ -16,7 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "sampleId"
+      "sample-id"
     ]
   },
   {
@@ -41,7 +41,7 @@
     ]
   },
   {
-    "id": "sampleId",
+    "id": "sample-id",
     "components": [
       "swiper-item"
     ]
