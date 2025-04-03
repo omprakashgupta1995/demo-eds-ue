@@ -197,8 +197,7 @@
       "hero-banner-item"
     ]
   },
-
-{
+  {
     "id": "swiper-item",
     "fields": [
       {
@@ -245,5 +244,4 @@
       }
     ]
   }
-
 ]
