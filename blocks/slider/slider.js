@@ -1,4 +1,4 @@
-import Slider from './swiper-bundle.min.js';
+import Swipper from './swiper-bundle.min.js';
 export default function decorate(block) {
     block.classList.add('slider');
     const swiperWrapper = document.createElement('div');
@@ -8,7 +8,7 @@ export default function decorate(block) {
         swiperWrapper.appendChild(row);
     });
     block.appendChild(swiperWrapper);
-    Slider(block, {
+    Swipper(block, {
         autoplay: true
     });
 }
