@@ -158,7 +158,7 @@
           }
         },
         {
-          "title": "Product Card",
+          "title": "Productcard",
           "id": "productcard",
           "plugins": {
             "xwalk": {
@@ -172,7 +172,6 @@
             }
           }
         }
-     
       ]
     }
   ]
