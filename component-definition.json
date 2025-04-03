@@ -183,6 +183,8 @@
                 "template": {
                   "name": "Swiper Item",
                   "model": "swiper-item"
+
+
                 }
               }
             }
