@@ -44,7 +44,7 @@
   {
     "id": "slider",
     "components": [
-      "slider-items"
+      "slider-item"
     ]
   }
 ]

@@ -219,7 +219,7 @@
   },
 
   {
-    "id": "slider-items",
+    "id": "slider-item",
     "fields": [
       {
         "component": "reference",
