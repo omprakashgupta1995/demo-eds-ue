@@ -40,5 +40,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "sampleId",
+    "components": [
+      "swiper-item"
+    ]
   }
 ]
