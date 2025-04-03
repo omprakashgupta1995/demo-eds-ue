@@ -174,7 +174,7 @@
         },
         {
           "title": "Hero Banner",
-          "id": "herobanner",
+          "id": "hero-banner",
           "plugins": {
             "xwalk": {
               "page": {
