@@ -190,5 +190,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "product-1",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "Product 1",
+        "label": "Product 1",
+        "multi": true
+      }
+    ]
   }
 ]
