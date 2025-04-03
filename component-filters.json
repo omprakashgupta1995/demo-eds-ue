@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "productcard",
-      "hero-banner"
+      "hero-banner",
+      "hero-banner-item"
     ]
   },
   {
