@@ -192,12 +192,6 @@
     ]
   },
   {
-    "id": "hero-banner",
-    "components": [
-      "hero-banner-item"
-    ]
-  },
-  {
     "id": "swiper-item",
     "fields": [
       {
