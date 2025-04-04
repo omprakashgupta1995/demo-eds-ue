@@ -24,7 +24,9 @@
       "birla-container-item",
       "birla-teaser",
       "birla-banner",
-      "birla-banner-item"
+      "birla-banner-item",
+      "birla-category",
+      "birla-category-item"
     ]
   },
   {
