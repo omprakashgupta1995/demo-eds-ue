@@ -303,5 +303,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "ifb-footer-left",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
