@@ -19,7 +19,8 @@
       "hero-banner",
       "hero-banner-item",
       "product-1",
-      "birla-container",
+      "birla-left-container",
+      "birla-right-container",
       "birla-container-item"
     ]
   },
