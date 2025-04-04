@@ -1,15 +1,3 @@
-main .columnflex-container .columnflex-wrapper .columnflex {
-    display: flex;
-    flex-direction: row;
-    background: #27548D;
-    padding-top: 48px;
-    padding-right: 64px;
-    padding-left: 64px;
-    gap: 94px;
-    border-top-left-radius: 24px;
-    border-bottom-left-radius: 24px;
-    align-items: flex-end;
-}
 main .columnflex-container .columnflex-wrapper .columnflex .row-1 .row1-col-1{
     width: 260.7067565917969px;
     height: 379px;
@@ -26,7 +14,7 @@ main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-1 p
     height: 186px;
 
 }
-main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 p{
+main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-1 p{
     font-family: Raleway;
     font-weight: 700;
     font-size: 26px;
@@ -37,11 +25,11 @@ main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 p
 
 
 }
-main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-3 p {
+main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 p {
     display: flex;
     flex-direction: row;
 }
-main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-3 p picture {
+main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 p picture {
     width: 143px;
     height: 49px;
 
