@@ -231,6 +231,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Birla Banner Container",
+          "id": "birla-banner-container",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                      "name": "Birla Banner Container",
+                      "model": "birla-banner-container"
+                }
+              }
+            }
+          }
         }
       ]
     }
