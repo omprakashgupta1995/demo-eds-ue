@@ -67,5 +67,12 @@
       "socialmedia",
       "connection"
     ]
+  },
+  {
+    "id": "listformat",
+    "components": [
+      "listformat-item"
+      
+    ]
   }
 ]
