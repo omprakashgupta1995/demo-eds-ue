@@ -18,7 +18,13 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "socialmedia",
+      "connection",
+      "columnflex",
+      "listformat",
+      "cards-flex",
+      "credentials"
     ]
   },
   {
@@ -46,6 +52,20 @@
     "id": "hero-banner",
     "components": [
       "hero-banner-item"
+    ]
+  },
+  {
+    "id": "cards-flex",
+    "components": [
+      "text",
+      "credentials"
+    ]
+  },
+  {
+    "id": "columnflex",
+    "components": [
+      "socialmedia",
+      "connection"
     ]
   }
 ]

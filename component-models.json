@@ -248,5 +248,111 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "credentials",
+    "fields": [
+      {
+        "row": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "col1_image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "col1_title",
+            "label": "Title",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "col1_description",
+            "label": "Description",
+            "value": "",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "row": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "col2_image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "col2_title",
+            "label": "Title",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "col2_description",
+            "label": "Description",
+            "value": "",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "row": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "col3_image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "col3_title",
+            "label": "Title",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "col3_description",
+            "label": "Description",
+            "value": "",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "row": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "col4_image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "col4_title",
+            "label": "Title",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "col4_description",
+            "label": "Description",
+            "value": "",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
   }
+  
 ]

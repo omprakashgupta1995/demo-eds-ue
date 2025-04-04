@@ -1,0 +1,72 @@
+main .columnflex .connection-wrapper .connection {
+    display: flex;
+    flex-direction: row;
+    background: #27548D;
+    padding-top: 48px;
+    padding-right: 64px;
+    padding-left: 64px;
+    gap: 94px;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    align-items: flex-end;
+}
+main .columnflex .connection-wrapper .connection .row-1{
+    width: 260.7067565917969px;
+    height: 379px;
+    overflow: hidden;
+}
+main .columnflex .connection-wrapper .connection .row-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+main .columnflex .connection-wrapper .connection .row-2 .row-2-col-1 p picture{
+    width: 187.22569274902344px;
+    height: 186px;
+
+}
+main .columnflex .connection-wrapper .connection .row-2 .row-2-col-1 p{
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #FFFFFF;
+
+
+}
+main .columnflex .connection-wrapper .connection .row-2 .row-2-col-2 p {
+    display: flex;
+    flex-direction: row;
+}
+main .columnflex .connection-wrapper .connection .row-2 .row-2-col-2 p picture {
+    width: 143px;
+    height: 49px;
+
+
+}
+main .columnflex .socialmedia-wrapper {
+    font-family: Manrope;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color:#000000;
+
+}
+main .columnflex .socialmedia-wrapper .socialmedia {
+    width: 446px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    padding-top: 168px;
+    padding-right: 40px;
+    padding-bottom: 168px;
+    padding-left: 64px;
+
+}

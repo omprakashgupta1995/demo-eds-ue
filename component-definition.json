@@ -202,8 +202,136 @@
               }
             }
           }
+        },
+        {
+          "title": "hero-banner",
+          "id": "hero-banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "hero-banner",
+                  "filter": "hero-banner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "hero-banner-item",
+          "id": "hero-banner-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "hero-banner-item",
+                  "model": "hero-banner-item"
+                  
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "cards-flex",
+          "id": "cards-flex",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "cards-flex",
+                  "filter": "cards-flex"
+                  
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "credentials",
+          "id": "credentials",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "credentials",
+                  "model": "credentials"
+                  
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "listformat",
+          "id": "listformat",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "listformat",
+                  "filter": "listformat"
+                  
+                }
+              }
+            }
+          }
+        },
+        
+        {
+          "title": "columnflex",
+          "id": "columnflex",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "columnflex",
+                  "filter": "columnflex"
+                  
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "socialmedia",
+          "id": "socialmedia",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "socialmedia",
+                  "model": "socialmedia"
+                  
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "connection",
+          "id": "connection",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "connection",
+                  "model": "connection"
+                  
+                }
+              }
+            }
+          }
         }
       ]
-    }
+    }  
   ]
 }

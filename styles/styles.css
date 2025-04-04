@@ -255,3 +255,66 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+main .cards-flex .default-content-wrapper p {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: Typeface/Size/H4;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #093E81;
+  padding-bottom: 40px;
+}
+
+main .listformat{
+  width: 100%;
+}
+
+main .listformat .default-content-wrapper {
+  width: 70%; 
+}
+
+main .listformat .default-content-wrapper p {
+  align-items: center;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: Typeface/Size/H4;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #093E81;
+  text-align: center;
+  padding-bottom: 40px;
+}
+main .listformat .default-content-wrapper ul {
+  width: 820px;
+  height: 122px;
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+main .listformat .default-content-wrapper ul li {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #2E2E2E;
+  list-style: none;
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 100px;
+  gap: 8px;
+}
+
+main .columnflex {
+  
+  display: flex;
+  flex-direction: row;
+  
+}
