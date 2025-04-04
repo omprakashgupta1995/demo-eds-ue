@@ -192,6 +192,19 @@
     ]
   },
   {
+    "id": "birla-slider",
+    "fields": [
+      {
+        "component": "classes",
+        "name": "classes",
+        "value": "",
+        "label": "Class",
+        "valueType": "string"
+      }
+    ]
+  }
+  ,
+  {
     "id": "hero-banner-item",
     "fields": [
       {
