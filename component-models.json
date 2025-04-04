@@ -282,7 +282,7 @@
     ]
   },
   {
-    "id": "listformat=item",
+    "id": "listformat-item",
     "fields": [
       {
         "component": "richtext",
