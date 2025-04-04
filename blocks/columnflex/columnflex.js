@@ -16,5 +16,17 @@ export default function decorate(block) {
         col.classList.add(colClass); // Add the class to the column
       });
     });
+    
+    let columnFlexContainer = document.querySelector('.columnflex-container')
+    // console.log('Akash',columnFlexContainer);
+    let childrenDivClassName = columnFlexContainer.children[1];
+    childrenDivClassName.classList.add('connect');
+
+
+    let columnFlexContainer2 = document.querySelector('.columnflex-container')
+    // console.log('Akash',columnFlexContainer);
+    let childrenDivClassName2 = columnFlexContainer2.children[0];
+    childrenDivClassName2.classList.add('connect1');
+    
   }
   
