@@ -203,15 +203,15 @@
           }
         },
         {
-          "title": "Birla Slider",
-          "id": "birla-slider",
+          "title": "Birla Teaser",
+          "id": "birla-teaser",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Birla Slider",
-                  "filter": "birla-slider"
+                      "name": "Birla Teaser",
+                      "model": "birla-teaser"
                 }
               }
             }
