@@ -280,7 +280,94 @@
         "valueType": "string"
       }
     ]
-  }
-  
-  
+  },
+  {
+    "id": "listformat",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      }
     ]
+  } 
+]
