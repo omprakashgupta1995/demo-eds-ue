@@ -267,15 +267,15 @@ main .cards-flex-container .default-content-wrapper p {
   padding-bottom: 40px;
 }
 
-main .listformat{
+main .listformat-container{
   width: 100%;
 }
 
-main .listformat .default-content-wrapper {
-  width: 70%; 
+main .listformat-container .listformat-wrapper  {
+  width: 70%;
 }
 
-main .listformat .default-content-wrapper p {
+main .listformat-container .listformat-wrapper .listformat p {
   align-items: center;
   font-family: Raleway;
   font-weight: 700;
@@ -286,7 +286,7 @@ main .listformat .default-content-wrapper p {
   text-align: center;
   padding-bottom: 40px;
 }
-main .listformat .default-content-wrapper ul {
+main .listformat-container .listformat-wrapper .listformat ul {
   width: 820px;
   height: 122px;
   display: flex;
@@ -298,7 +298,7 @@ main .listformat .default-content-wrapper ul {
   margin: 0 auto;
   padding: 0;
 }
-main .listformat .default-content-wrapper ul li {
+main .listformat-container .listformat-wrapper .listformat ul li {
   font-family: Raleway;
   font-weight: 400;
   font-size: 12px;
