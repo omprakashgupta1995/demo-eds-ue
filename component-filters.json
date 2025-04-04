@@ -23,7 +23,14 @@
       "form",
       "banner-container",
       "product-1",
+      "teaser-cards",
       "fragment"
+    ]
+  },
+  {
+    "id": "teaser-cards",
+    "components": [
+      "teaser-card"
     ]
   },
   {
