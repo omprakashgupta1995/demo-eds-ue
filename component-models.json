@@ -437,7 +437,7 @@
       {
         "component": "multiselect",
         "valueType": "string",
-        "name": "style",
+        "name": "classes",
         "label": "Style",
         "options": [
           {
