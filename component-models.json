@@ -341,5 +341,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"birla-teaser",
+    "fields":[
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
