@@ -1,4 +1,6 @@
 .first-component{
+    max-width: 1560px;
+    width: 100%;
     background-color: #000000;
     color: white;
     border-bottom-right-radius: 24px;
