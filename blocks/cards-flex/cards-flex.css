@@ -1,11 +1,11 @@
-main .cards-flex .credentials-wrapper .credentials {
+main .cards-flex-container .cards-flex-wrapper .cards-flex {
     display: flex;
     flex-direction: row;
     gap: 24px;
 
 }
 
-main .cards-flex .credentials-wrapper .credentials .common-row{
+main .cards-flex-container .cards-flex-wrapper .cards-flex .common-row{
    
     
     padding: 20px;
@@ -17,14 +17,14 @@ main .cards-flex .credentials-wrapper .credentials .common-row{
     
 }
 
-main .cards-flex .credentials-wrapper .credentials .common-row .image-col {
+main .cards-flex-container .cards-flex-wrapper .cards-flex .common-row .image-col {
     width: 40px;
     height: 40px;
     padding-bottom: 24px;
 
 }
 
-main .cards-flex .credentials-wrapper .credentials .common-row .title-col{
+main .cards-flex-container .cards-flex-wrapper .cards-flex .common-row .title-col{
     font-family: Raleway;
     font-weight: 600;
     font-size: 16.5px;
@@ -33,7 +33,7 @@ main .cards-flex .credentials-wrapper .credentials .common-row .title-col{
     letter-spacing: 0%;
 
 }
-main .cards-flex .credentials-wrapper .credentials .common-row .description-col{
+main .cards-flex-container .cards-flex-wrapper .cards-flex .common-row .description-col{
     font-family: Raleway;
     font-weight: 400;
     font-size: 11.55px;
