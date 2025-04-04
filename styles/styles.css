@@ -256,7 +256,7 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-main .cards-flex .default-content-wrapper p {
+main .cards-flex-container .default-content-wrapper p {
   font-family: Raleway;
   font-weight: 700;
   font-size: Typeface/Size/H4;
