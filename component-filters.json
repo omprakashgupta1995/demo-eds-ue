@@ -18,7 +18,8 @@
       "fragment",
       "sample",
       "slider",
-      "slider-item"
+      "slider-item",
+      "oona-container"
     ]
   },
   {
@@ -46,6 +47,12 @@
     "id": "slider",
     "components": [
       "slider-item"
+    ]
+  },
+  {
+    "id": "oona-container",
+    "components": [
+      "oona-conatiner-item"
     ]
   }
 ]
