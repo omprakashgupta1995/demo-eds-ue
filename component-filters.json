@@ -17,7 +17,9 @@
       "columns",
       "fragment",
       "sample-hero",
-      "sample-swipper"
+      "sample-swipper",
+      "ifb-product-feature",
+      "ifb-product-feature-item"
     ]
   },
   {
@@ -45,6 +47,13 @@
     "id": "sample-swipper",
     "components": [
       "sample-swipper-item"
-    ]  
+    ]
+  },
+  {
+    "id": "ifb-product-feature",
+    "components": [
+      "ifb-product-feature-item"
+    ]
   }
+  
 ]
