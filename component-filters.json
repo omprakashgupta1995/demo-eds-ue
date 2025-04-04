@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "productcard",
-      "hero-banner"
+      "hero-banner",
+      "birla-slider"
     ]
   },
   {
@@ -43,6 +44,12 @@
   },
   {
     "id": "hero-banner",
+    "components": [
+      "hero-banner-item"
+    ]
+  },
+  {
+    "id": "birla-slider",
     "components": [
       "hero-banner-item"
     ]
