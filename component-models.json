@@ -343,8 +343,8 @@
     ]
   },
   {
-    "id":"birla-teaser",
-    "fields":[
+    "id": "birla-banner-item",
+    "fields": [
       {
         "component": "richtext",
         "name": "col1_text",

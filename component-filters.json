@@ -22,7 +22,9 @@
       "birla-left-container",
       "birla-right-container",
       "birla-container-item",
-      "birla-teaser"
+      "birla-teaser",
+      "birla-banner",
+      "birla-banner-item"
     ]
   },
   {

@@ -306,6 +306,66 @@
               }
             }
           }
+        },
+        {
+          "title": "Birla Banner",
+          "id": "birla-banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Birla Banner",
+                  "filter": "birla-banner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Birla Banner Item",
+          "id": "birla-banner-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Birla Banner Item",
+                  "model": "birla-banner-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Birla Category",
+          "id": "birla-category",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Birla Category",
+                  "filter": "birla-category"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Birla Category Item",
+          "id": "birla-category-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Birla Category Item",
+                  "model": "birla-category-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
