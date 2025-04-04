@@ -252,8 +252,6 @@
   {
     "id": "credentials",
     "fields": [
-      {
-        "row": [
           {
             "component": "reference",
             "valueType": "string",
@@ -274,11 +272,7 @@
             "label": "Description",
             "value": "",
             "valueType": "string"
-          }
-        ]
-      },
-      {
-        "row": [
+          },
           {
             "component": "reference",
             "valueType": "string",
@@ -299,11 +293,7 @@
             "label": "Description",
             "value": "",
             "valueType": "string"
-          }
-        ]
-      },
-      {
-        "row": [
+          },
           {
             "component": "reference",
             "valueType": "string",
@@ -324,11 +314,7 @@
             "label": "Description",
             "value": "",
             "valueType": "string"
-          }
-        ]
-      },
-      {
-        "row": [
+          },
           {
             "component": "reference",
             "valueType": "string",
@@ -353,6 +339,3 @@
         ]
       }
     ]
-  }
-  
-]
