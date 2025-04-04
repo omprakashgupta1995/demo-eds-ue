@@ -41,7 +41,7 @@ export default function decorate(block) {
 
     // Initialize Swiper with navigation and pagination
     Swiper1(block, {
-        autoplay: true,
+        // autoplay: true,
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
