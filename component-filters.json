@@ -18,7 +18,7 @@
       "fragment",
       "sample-swiper",
       "swiper-item",
-      "first-componenet",
+      "first-component",
       "first-component-item"
     ]
   },
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "id": "first-componenet",
+    "id": "first-component",
     "components": [
       "first-component-item"
     ]
