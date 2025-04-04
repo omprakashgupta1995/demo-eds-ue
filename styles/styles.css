@@ -317,7 +317,7 @@ main .listformat-container .listformat-wrapper .listformat ul li {
 main .columnflex-container .columnflex-wrapper .columnflex {
   display: flex;
   flex-direction: row;
-  background: #27548D;
+  
   padding-top: 48px;
   padding-right: 64px;
   padding-left: 64px;
