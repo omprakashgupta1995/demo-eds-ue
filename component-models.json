@@ -270,7 +270,7 @@
     ]
   },
   {
-    "id": "hero-banner-item",
+    "id": "birla-container-item",
     "fields": [
       {
         "component": "reference",
