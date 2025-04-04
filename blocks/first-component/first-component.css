@@ -11,6 +11,14 @@
 
 }
 .child-3{
+   display: none;
+
+}
+.child-2{
+   display: none;
+
+}
+.child-3{
     max-width: 538px;
     width: 100%
 
