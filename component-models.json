@@ -267,6 +267,12 @@
         "value": ""
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "product-1",
+        "label": "product-1"
+      },
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
