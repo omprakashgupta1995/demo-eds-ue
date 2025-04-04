@@ -1,18 +1,20 @@
-export default function decorate(block){
-
-    const rowsCollection = block.children;
-    const rows = Array.from(rowsCollection);
-    console.log(rows);
+export default function decorate(block) {
+    const rowsCollection = block.children; // Get the child rows of the block
+    const rows = Array.from(rowsCollection); // Convert rowsCollection (HTMLCollection) into an array
+  
     rows.forEach((row, index) => {
-    let rowClass = `row-${index+1}`
-    row.classList.add(rowClass);
-
-    const colsCon = row.children;
-    const cols = Array.from(colsCon);
-    console.log(cols);
-    cols.forEach((col,colIn)=>{
-        let colClass = `${rowClass}-col-${colIn+1}`;
-        col.classList.add(colClass);
-    })
+      // For each row, create a class with the format 'row-{index+1}' and add it to the row
+      let rowClass = `row-${index + 1}`;
+      row.classList.add(rowClass); // Add the class to the row
+  
+      const colsCon = row.children; // Get the columns inside the row
+      const cols = Array.from(colsCon); // Convert columns into an array
+  
+      cols.forEach((col, colIn) => {
+        // For each column, create a class with the format 'row-{index+1}-col-{colIn+1}' and add it to the column
+        let colClass = `${rowClass}-col-${colIn + 1}`;
+        col.classList.add(colClass); // Add the class to the column
+      });
     });
-}
+  }
+  
