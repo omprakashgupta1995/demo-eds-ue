@@ -329,16 +329,23 @@
         "multi": false
       },
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
+        "name": "col_imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "product-1",
+        "name": "col_product-1",
         "label": "product-1"
       },
       {
