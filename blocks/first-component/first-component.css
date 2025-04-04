@@ -1,5 +1,6 @@
 .first-component{
     max-width: 1560px;
+    margin: 0px auto;
     width: 100%;
     background-color: #000000;
     color: white;
@@ -21,19 +22,55 @@
 .child-3{
     max-width: 538px;
     width: 100%;
-    padding: 30px 0px 60px 30px;
+    padding: 50px 0px 60px 130px;
 
+}
+.child-3 div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.child-3 div h1{
+    font-size: 54px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+.child-3 div h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+.child-3 div p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.child-3 div ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.child-3 div ul li{
+    list-style: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
 }
 .child-4{
     max-width: 677px;
     width: 100%
+    
 
 }
 
 .child-4 img{
-    max-width: 677px;
+    max-width: 550px;
     width: 100%;
-    position: relative;
+    position: absolute;
     bottom: 0px;
     right: 0px;
+    border-bottom-right-radius: 24px;
+}
+
+.background{
+    background-color: #2B2B2B;
 }
