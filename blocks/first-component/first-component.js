@@ -1,10 +1,12 @@
 export default async function decorate(block) {
-    block.forEach((element) => {
-        console.log(element);
+    // If block is a single DOM element
+    
+        const children = block.children;  // This will give you a live HTMLCollection
 
-        const children = element.children;  
-        Array.from(children).forEach((child) => {
-            console.log(child);  // Log each child
+        // Optionally, convert HTMLCollection to an array and log each child element
+        Array.from(children).forEach(child => {
+            console.log(child);  
         });
-    });
+    
 }
+
