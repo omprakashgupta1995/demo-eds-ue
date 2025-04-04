@@ -30,6 +30,8 @@ export default function decorate(block) {
 
     block.appendChild(swiperWrapper);
 
+   
+
     // Create navigation buttons
     const prevButton = document.createElement('div');
     prevButton.classList.add('swiper-button-prev');
@@ -41,8 +43,9 @@ export default function decorate(block) {
 
     // Initialize Swiper with navigation and pagination
     Swiper1(block, {
-        // autoplay: true,
+        autoplay: true,
         loop: true,
+     
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'

@@ -6,9 +6,16 @@ export default function decorate(block) {
     Array.from(block.children).forEach(function (row) {
         row.classList.add('swiper-slide');
         swiperWrapper.appendChild(row);
+        const pagination = document.createElement('div');
+        pagination.classList.add('swiper-pagination');
+        block.appendChild(pagination);
     });
     block.appendChild(swiperWrapper);
     Swiper1(block, {
-        autoplay: true
+        autoplay: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
     });
 }
