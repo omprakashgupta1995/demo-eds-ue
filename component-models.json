@@ -255,7 +255,8 @@
     "id":"birla-teaser",
     "fields":[
       {
-      
+        "component": "text",
+        "name": "pretitle_text"
       }
     ]
   }
