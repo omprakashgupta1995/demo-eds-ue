@@ -1,4 +1,4 @@
-main .columnflex-container .columnflex-wrapper .columnfelx {
+main .columnflex-container .columnflex-wrapper .columnflex {
     display: flex;
     flex-direction: row;
     background: #27548D;
@@ -10,23 +10,23 @@ main .columnflex-container .columnflex-wrapper .columnfelx {
     border-bottom-left-radius: 24px;
     align-items: flex-end;
 }
-main .columnflex-container .columnflex-wrapper .columnfelx .row-1{
+main .columnflex-container .columnflex-wrapper .columnflex .row-1 .row1-col-1{
     width: 260.7067565917969px;
     height: 379px;
     overflow: hidden;
 }
-main .columnflex-container .columnflex-wrapper .columnfelx .row-2 {
+main .columnflex-container .columnflex-wrapper .columnflex .row-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
 }
-main .columnflex-container .columnflex-wrapper .columnfelx .row-2 .row-2-col-1 p picture{
+main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-1 p picture{
     width: 187.22569274902344px;
     height: 186px;
 
 }
-main .columnflex-container .columnflex-wrapper .columnfelx .row-2 .row-2-col-2 p{
+main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 p{
     font-family: Raleway;
     font-weight: 700;
     font-size: 26px;
@@ -37,11 +37,11 @@ main .columnflex-container .columnflex-wrapper .columnfelx .row-2 .row-2-col-2 p
 
 
 }
-main .columnflex .connection-wrapper .connection .row-2 .row-2-col-3 p {
+main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-3 p {
     display: flex;
     flex-direction: row;
 }
-main .columnflex .connection-wrapper .connection .row-2 .row-2-col-3 p picture {
+main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-3 p picture {
     width: 143px;
     height: 49px;
 
