@@ -266,7 +266,7 @@
     ]
   },
   {
-    "id": "oona-conatiner-item",
+    "id": "oona-container-item",
     "fields": [
       {
         "component": "reference",

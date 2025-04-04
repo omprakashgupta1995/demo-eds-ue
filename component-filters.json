@@ -52,7 +52,7 @@
   {
     "id": "oona-container",
     "components": [
-      "oona-conatiner-item"
+      "oona-container-item"
     ]
   }
 ]

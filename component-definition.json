@@ -219,14 +219,14 @@
         },
         {
           "title": "Oona Container Item",
-          "id": "oona-conatiner-item",
+          "id": "oona-container-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Oona Container Item",
-                  "model": "oona-conatiner-item"
+                  "model": "oona-container-item"
                 }
               }
             }
