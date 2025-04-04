@@ -1,4 +1,4 @@
-main .columnflex .connection-wrapper .connection {
+main .columnflex-container .columnflex-wrapper .columnfelx {
     display: flex;
     flex-direction: row;
     background: #27548D;
