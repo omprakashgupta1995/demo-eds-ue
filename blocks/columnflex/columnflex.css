@@ -8,12 +8,9 @@ main .columnflex-container .columnflex-wrapper .columnflex .row-2 {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
+    
 }
-main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-1 p picture{
-    width: 187.22569274902344px;
-    height: 186px;
 
-}
 main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-1 p{
     font-family: Raleway;
     font-weight: 700;
@@ -22,17 +19,18 @@ main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-1 p
     letter-spacing: 0%;
     text-align: center;
     color: #FFFFFF;
+    width: 187.22569274902344px;
+    height: 186px;
 
 
 }
-main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 p {
+main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 {
     display: flex;
     flex-direction: row;
 }
-main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 p picture {
+main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 p{
     width: 143px;
     height: 49px;
-
 
 }
 main .columnflex-container .columnflex-wrapper .columnfelx .row-3 .row-3-col-1 {
