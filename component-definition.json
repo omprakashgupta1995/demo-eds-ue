@@ -202,6 +202,21 @@
               }
             }
           }
+        },
+        {
+          "title": "First Component Item",
+          "id": "first-component-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "First Component Item",
+                  "model": "first-component-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
