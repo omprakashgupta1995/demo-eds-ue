@@ -330,16 +330,10 @@
   {
     "id": "ups-container-left",
     "fields": [
-      {
-        "component": "text",
-        "name": "classes",
-        "value": "",
-        "label": "Class",
-        "valueType": "string"
-      },
+ 
       {
         "component": "multiselect",
-        "name": "style",
+        "name": "classes",
         "label": "Style",
         "options": [
           {
