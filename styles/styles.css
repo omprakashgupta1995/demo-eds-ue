@@ -260,3 +260,11 @@ main .section.highlight {
 .section{
   display: flex;
 }
+
+main .birla-banner-container{
+  position: relative;
+}
+main .birla-category-container{
+  position: absolute;
+  /* top: 100px; */
+}

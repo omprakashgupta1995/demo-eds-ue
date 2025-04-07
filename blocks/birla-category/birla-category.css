@@ -1,0 +1,15 @@
+.birla-category{
+    display: flex;
+    gap: 64px;
+}
+.birla-category div div p picture img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.birla-category div div p:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
