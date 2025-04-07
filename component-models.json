@@ -340,6 +340,13 @@
       },
       {
         "component": "text",
+        "name": "texttitle",
+        "value": "",
+        "label": "TextTitle",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
         "name": "text",
         "value": "",
         "label": "Text",
