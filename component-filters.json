@@ -16,7 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "banner"
+      "custom-rt"
     ]
   },
   {
@@ -38,6 +38,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id":"custom-rt",
+    "components":[
+      "custom-rt-text"
     ]
   }
 ]
