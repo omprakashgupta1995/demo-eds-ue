@@ -315,5 +315,31 @@
         "label": "Text"
       }
     ]
+  },
+  {
+    "id": "oona-block-2-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "richtext",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_imageAlt",
+        "label": "Alt",
+        "value": ""
+      }
+    ]
   }
 ]

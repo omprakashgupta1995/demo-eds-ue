@@ -20,6 +20,8 @@
       "product1",
       "oona-block-1",
       "oona-block-1-item",
+      "oona-block-2",
+      "oona-block-2-item",
       "fragment"
     ]
   },
@@ -54,6 +56,12 @@
     "id": "oona-block-1",
     "components": [
       "oona-block-1-item"
+    ]
+  },
+  {
+    "id": "oona-block-2",
+    "components": [
+      "oona-block-2-item"
     ]
   }
 ]
