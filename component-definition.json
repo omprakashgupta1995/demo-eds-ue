@@ -307,6 +307,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Birla Richtext",
+          "id": "birla-richtext",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Birla Richtext",
+                  "model": "birla-richtext"
+                }
+              }
+            }
+          }
         }
       ]
     }

@@ -72,7 +72,17 @@
   "components":[
     "text",
     "hero-banner-item",
-    "birla-container-item"
+    "birla-container-item",
+    "birla-richtext"
+  ]
+},
+{
+  "id":"ups-container-right",
+  "components":[
+    "text",
+    "hero-banner-item",
+    "birla-container-item",
+    "birla-richtext"
   ]
 }
 ]

@@ -340,13 +340,6 @@
       },
       {
         "component": "text",
-        "name": "texttitle",
-        "value": "",
-        "label": "TextTitle",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
         "name": "text",
         "value": "",
         "label": "Text",
@@ -355,6 +348,18 @@
       {
         "component": "richtext",
         "name": "text2",
+        "value": "",
+        "label": "RichText",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id":"birla-richtext",
+    "fields":[
+      {
+        "component": "richtext",
+        "name": "text",
         "value": "",
         "label": "RichText",
         "valueType": "string"
