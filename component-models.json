@@ -331,7 +331,7 @@
     "id": "ups-container-left",
     "fields": [
       {
-        "component": "classes",
+        "component": "text",
         "name": "classes",
         "value": "",
         "label": "Class",
