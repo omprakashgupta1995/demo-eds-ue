@@ -19,7 +19,8 @@
       "productcard",
       "hero-banner",
       "birla-slider",
-      "birla-teaser"
+      "birla-teaser",
+      "card-container"
     ]
   },
   {
@@ -51,6 +52,12 @@
   },
   {
     "id": "birla-slider",
+    "components": [
+      "hero-banner-item"
+    ]
+  },
+  {
+    "id": "card-container",
     "components": [
       "hero-banner-item"
     ]
