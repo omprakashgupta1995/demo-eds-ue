@@ -1,0 +1,51 @@
+.oona-block-1-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.oona-block-1-container .default-content-wrapper {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+}
+
+.oona-block-1-container .default-content-wrapper #why-chooes-oona {
+    margin: 0;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: #21153a;
+}
+
+.oona-block-1-container .default-content-wrapper p {
+    color: #4f5b66;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.oona-block-1-wrapper{
+    width: 70%;
+    padding: 0;
+}
+
+.oona-block-1{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20%;
+}
+
+.oona-block-1 > div{
+    width: calc(100% / 3);
+    min-height: 145px;
+    padding: 20px 14px 20px 20px;
+    border: 1px solid #673fae;
+    border-radius: 12px;
+}
