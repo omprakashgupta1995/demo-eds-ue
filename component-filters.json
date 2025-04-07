@@ -18,8 +18,8 @@
       "hero-banner",
       "hero-banner-item",
       "product1",
-      "oona-card-1",
-      "oona-card-1-item",
+      "oona-block-1",
+      "oona-block-1-item",
       "fragment"
     ]
   },
@@ -51,9 +51,9 @@
     ]
   },
   {
-    "id": "oona-card-1",
+    "id": "oona-block-1",
     "components": [
-      "oona-card-1-item"
+      "oona-block-1-item"
     ]
   }
 ]
