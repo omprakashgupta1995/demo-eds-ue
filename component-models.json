@@ -334,7 +334,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "image2Alt",
+        "name": "imageAlt",
         "label": "Alt",
         "value": ""
       },
@@ -347,9 +347,9 @@
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "text2",
         "value": "",
-        "label": "Text",
+        "label": "RichText",
         "valueType": "string"
       }
     ]
