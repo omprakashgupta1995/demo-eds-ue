@@ -314,10 +314,10 @@ main .listformat-container .listformat-wrapper .listformat ul li {
   display: flex;
 }
 
-main .columnflex-container .columnflex-wrapper .columnflex {
+main .columnflex-container .connect1 .columnflex{
   display: flex;
   flex-direction: row;
-  
+  background: #27548D;
   padding-top: 48px;
   padding-right: 64px;
   padding-left: 64px;
@@ -325,4 +325,9 @@ main .columnflex-container .columnflex-wrapper .columnflex {
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
   align-items: flex-end;
+}
+main .columnflex-container{
+  display: flex;
+  flex-direction: row;
+  padding-top: 25px;
 }

@@ -1,16 +1,16 @@
 
-main .columnflex-container .columnflex-wrapper .columnflex .row-1 .row-1-col-1{
+main .columnflex-container .connect1 .columnflex .row-1 .row-1-col-1{
     width: 260.7067565917969px;
     height: 379px;
     overflow: hidden;
-    background: #27548D;
+    
 }
-main .columnflex-container .columnflex-wrapper .columnflex .row-2 {
+main .columnflex-container .connect1 .columnflex .row-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
-    background: #27548D;
+    
     
 }
 
@@ -36,7 +36,7 @@ main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 p
     height: 49px;
 
 }
-main .columnflex-container .columnflex-wrapper .columnfelx .row-3 .row-3-col-1 {
+main .columnflex-container .connect .columnflex .row-1 .row-1-col-1 {
     font-family: Manrope;
     font-weight: 700;
     font-size: 20px;
@@ -46,7 +46,7 @@ main .columnflex-container .columnflex-wrapper .columnfelx .row-3 .row-3-col-1 {
     color:#000000;
 
 }
-main .columnflex-container .columnflex-wrapper .columnfelx .row-3 {
+main .columnflex-container .connect .columnflex .row-1 {
     width: 446px;
     display: flex;
     flex-direction: column;
