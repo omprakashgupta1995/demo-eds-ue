@@ -278,6 +278,21 @@
           }
         },
         {
+          "title": "Birla Container Item New",
+          "id": "birla-container-item-new",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Birla Container Item New",
+                  "model": "birla-container-item-new"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Birla C1 Item",
           "id": "birla-c1-item",
           "plugins": {
