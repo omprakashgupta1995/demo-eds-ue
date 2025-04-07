@@ -224,6 +224,25 @@
         "value": "",
         "label": "Class",
         "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "upsMainCards",
+            "value": "upsMain"
+          },
+          {
+            "name": "exploreMoreCards",
+            "value": "exploreMoreCards"
+          },
+          {
+            "name": "certificationCards",
+            "value": "certificationCards"
+          }
+        ]
       }
     ]
   }
@@ -317,6 +336,25 @@
         "value": "",
         "label": "Class",
         "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "upsMain",
+            "value": "upsMain"
+          },
+          {
+            "name": "exploreMore",
+            "value": "exploreMore"
+          },
+          {
+            "name": "certification",
+            "value": "certification"
+          }
+        ]
       }
 
     ]
