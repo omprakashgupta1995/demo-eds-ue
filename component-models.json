@@ -275,20 +275,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_image",
+        "name": "image",
         "label": "Image",
         "multi": true
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_imageAlt",
+        "name": "imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "col1_text",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
@@ -296,7 +296,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col2_image",
+        "name": "image1",
         "label": "Image",
         "multi": true
       },
