@@ -24,6 +24,7 @@
       "columnflex",
       "listformat",
       "cards-flex",
+      "swippers",
       "credentials"
     ]
   },
@@ -72,6 +73,13 @@
     "id": "listformat",
     "components": [
       "listformat-item"
+      
+    ]
+  },
+  {
+    "id": "swippers",
+    "components": [
+      "mountain","text"
       
     ]
   }
