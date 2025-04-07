@@ -61,7 +61,9 @@
   {
     "id": "card-container",
     "components": [
-      "hero-banner-item"
+      "hero-banner-item",
+      "birla-container-item"
+
     ]
   }
 ,
@@ -71,8 +73,6 @@
     "text",
     "hero-banner-item",
     "birla-container-item"
-    
-
   ]
 }
 ]
