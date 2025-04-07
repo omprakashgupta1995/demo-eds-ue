@@ -237,10 +237,14 @@
         "label": "Description"
       },
       {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
         "component": "text",
-        "valueType": "string",
-        "name": "text2",
-        "label": "Description"
+        "name": "linkText",
+        "label": "Text"
       }
     ]
   },
