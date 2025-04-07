@@ -338,6 +338,21 @@
           }
         },
         {
+          "title": "Birla USP Item",
+          "id": "birla-usp-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Birla USP Item",
+                  "model": "birla-usp-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Birla Category",
           "id": "birla-category",
           "plugins": {

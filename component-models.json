@@ -296,7 +296,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image1",
+        "name": "image",
         "label": "Image",
         "multi": true
       },
@@ -374,6 +374,25 @@
       {
         "component": "richtext",
         "name": "col1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "birla-usp-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": true
+      },
+      {
+        "component": "richtext",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
