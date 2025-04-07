@@ -235,6 +235,12 @@
         "valueType": "string",
         "name": "text",
         "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text2",
+        "label": "Description"
       }
     ]
   },
