@@ -197,7 +197,6 @@
                 "template": {
                   "name": "hero-banner-item",
                   "model": "hero-banner-item"
-                  
                 }
               }
             }
@@ -228,7 +227,6 @@
                 "template": {
                   "name": "hero-banner-item",
                   "model": "hero-banner-item"
-                  
                 }
               }
             }
@@ -244,7 +242,6 @@
                 "template": {
                   "name": "cards-flex",
                   "filter": "cards-flex"
-                  
                 }
               }
             }
@@ -260,7 +257,6 @@
                 "template": {
                   "name": "credentials",
                   "model": "credentials"
-                  
                 }
               }
             }
@@ -275,9 +271,8 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "listformat",
-                   "filter": "listformat",
-                   "model": "listformat"
-                  
+                  "filter": "listformat",
+                  "model": "listformat"
                 }
               }
             }
@@ -292,14 +287,12 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "listformat-item",
-                   "model": "listformat-item"
-                  
+                  "model": "listformat-item"
                 }
               }
             }
           }
         },
-        
         {
           "title": "columnflex",
           "id": "columnflex",
@@ -310,7 +303,6 @@
                 "template": {
                   "name": "columnflex",
                   "filter": "columnflex"
-                  
                 }
               }
             }
@@ -326,7 +318,6 @@
                 "template": {
                   "name": "socialmedia",
                   "model": "socialmedia"
-                  
                 }
               }
             }
@@ -342,7 +333,6 @@
                 "template": {
                   "name": "connection",
                   "model": "connection"
-                  
                 }
               }
             }
@@ -358,7 +348,6 @@
                 "template": {
                   "name": "swippers",
                   "filter": "swippers"
-                  
                 }
               }
             }
@@ -374,13 +363,12 @@
                 "template": {
                   "name": "mountain",
                   "model": "mountain"
-                  
                 }
               }
             }
           }
         }
       ]
-    }  
+    }
   ]
 }
