@@ -99,8 +99,8 @@ footer .footer[data-block-status="loaded"] {
 }
 
 h1,
-h2,
-h3,
+/* h2, */
+/* h3, */
 h4,
 h5,
 h6 {
@@ -228,13 +228,13 @@ main img {
 }
 
 /* sections */
-main > .section {
+/* main > .section {
   margin: 40px 0;
-}
+} */
 
 main > .section > div {
   max-width: 1200px;
-  margin: auto;
+/*   margin: auto;*/ 
   padding: 0 24px;
 }
 
@@ -254,4 +254,12 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+
+
+/* IFB STYLING */
+.ifb-footer-left-wrapper
+{
+    margin-top: 10px;
 }

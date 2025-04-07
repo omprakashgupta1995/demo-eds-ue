@@ -20,7 +20,9 @@
       "sample-swipper",
       "ifb-product-feature",
       "ifb-product-feature-item",
-      "ifb-footer-left"
+      "ifb-footer-left",
+      "ifb-hero-banner",
+      "ifb-hero-banner-item"
     ]
   },
   {
@@ -55,5 +57,11 @@
     "components": [
       "ifb-product-feature-item"
     ]
-  } 
+  } ,
+  {
+    "id": "ifb-hero-banner",
+    "components" : [
+      "ifb-hero-banner-item"
+    ]
+  }
 ]

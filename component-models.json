@@ -315,5 +315,45 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "ifb-hero-banner-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component":"text",
+        "name": "col3_text",
+        "value":"",
+        "label":"Above Btn Text",
+        "valueType":"string"
+      },
+      {
+        "component":"text",
+        "name": "col4_text",
+        "value":"",
+        "label":"Button ",
+        "valueType":"string"
+      }
+    ]
   }
 ]
