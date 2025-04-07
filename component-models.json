@@ -207,7 +207,7 @@
     "id": "birla-slider",
     "fields": [
       {
-        "component": "classes",
+        "component": "text",
         "name": "classes",
         "value": "",
         "label": "Class",
@@ -227,20 +227,20 @@
       },
       {
         "component": "multiselect",
-        "name": "style",
+        "name": "classes",
         "label": "Style",
         "options": [
           {
-            "name": "upsMainCards",
-            "value": "upsMain"
+            "name": "ups Main Cards",
+            "value": "ups-Main"
           },
           {
-            "name": "exploreMoreCards",
-            "value": "exploreMoreCards"
+            "name": "explore More Cards",
+            "value": "explore-more-cards"
           },
           {
-            "name": "certificationCards",
-            "value": "certificationCards"
+            "name": "certification Cards",
+            "value": "certification-cards"
           }
         ]
       }
