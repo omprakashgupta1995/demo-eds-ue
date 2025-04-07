@@ -20,7 +20,9 @@
       "hero-banner",
       "birla-slider",
       "birla-teaser",
-      "card-container"
+      "card-container",
+      "ups-container-left",
+      "ups-container-right"
     ]
   },
   {
@@ -62,5 +64,15 @@
       "hero-banner-item"
     ]
   }
+,
+{
+  "id":"ups-container-left",
+  "components":[
+    "text",
+    "hero-banner-item",
+    "birla-container-item"
+    
 
+  ]
+}
 ]
