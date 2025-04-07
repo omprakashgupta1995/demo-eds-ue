@@ -266,7 +266,7 @@
         "label": "Alt",
         "value": ""
       },
-      {
+      { 
         "component": "text",
         "valueType": "string",
         "name": "product-1",
