@@ -1,5 +1,5 @@
 @import url("./swiper-bundle.min.css");
 .swiper{
-    height: 400px;
-    width: 400px;
+    height: auto;
+    width: 750px;
 }
