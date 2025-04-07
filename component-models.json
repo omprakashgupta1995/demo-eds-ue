@@ -219,13 +219,6 @@
     "id": "card-container",
     "fields": [
       {
-        "component": "classes",
-        "name": "classes",
-        "value": "",
-        "label": "Class",
-        "valueType": "string"
-      },
-      {
         "component": "multiselect",
         "name": "classes",
         "label": "Class",
