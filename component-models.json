@@ -391,8 +391,8 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "product-1",
-        "label": "product-1"
+        "name": "text",
+        "label": "text"
       }
     ]
   }
