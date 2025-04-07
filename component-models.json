@@ -195,7 +195,7 @@
     "id": "custom-rt-text",
     "fields": [
       {"component": "richtext",
-        "name": "text",
+        "name": "col1_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
@@ -203,7 +203,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
+        "name": "col1_image",
         "label": "Image",
         "multi": false
       }
