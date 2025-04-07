@@ -8,7 +8,7 @@ export default function decorate(block){
 
         let colClass = row.children;
         Array.from(colClass).forEach((col, colIndex) => {
-            let colClasses = `block-1-${rowClass}-col-${colIndex + 1}`;
+            let colClasses = `${rowClass}-col-${colIndex + 1}`;
             col.classList.add(colClasses);
         })
     })

@@ -49,3 +49,29 @@
     border: 1px solid #673fae;
     border-radius: 12px;
 }
+
+.block-1-row-1 .block-1-row-1-col-1 img,
+.block-1-row-2-col-1 img,
+.block-1-row-3-col-1 img{
+    width: 48px;
+    height: 48px;
+}
+
+.block-1-row-1 .block-1-row-1-col-2 p,
+.block-1-row-2-col-2 p,
+.block-1-row-3-col-2 p{
+    margin: 0;
+    font-size: 28px;
+    line-height: 34px;
+    padding: 16px 0 6px 0;
+    font-weight: 500;
+    color: #5f34aa;
+}
+
+.block-1-row-1 .block-1-row-1-col-3 p,
+.block-1-row-2-col-3 p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #65737e;
+    margin: 0;
+}
