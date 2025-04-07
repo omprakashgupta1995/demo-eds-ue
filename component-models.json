@@ -306,5 +306,22 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id": "oona-block-3-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text2",
+        "label": "Text"
+      }
+    ]
   }
 ]

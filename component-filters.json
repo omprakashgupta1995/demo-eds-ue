@@ -65,5 +65,11 @@
     "components": [
       "oona-block-2-item"
     ]
+  },
+  {
+    "id": "oona-block-3",
+    "components": [
+      "oona-block-3-item"
+    ]
   }
 ]
