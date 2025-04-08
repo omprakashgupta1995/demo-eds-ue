@@ -335,6 +335,7 @@
                 "template": {
                   "name": "Video  Container",
                   "filter": "video-container"
+                  
                 }
               }
             }
