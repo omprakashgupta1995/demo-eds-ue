@@ -62,8 +62,8 @@
     "id": "card-container",
     "components": [
       "hero-banner-item",
-      "birla-container-item"
-
+      "birla-container-item",
+      "card"
     ]
   }
 ,
