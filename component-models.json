@@ -195,7 +195,7 @@
     "id": "birla-slider",
     "fields": [
       {
-        "component": "classes",
+        "component": "text",
         "name": "classes",
         "value": "",
         "label": "Class",
@@ -403,6 +403,18 @@
         "label": "Alt Text"
       }
 
+    ]
+  },
+  {
+    "id":"video-container",
+    "fields":[
+      {
+        "component": "text",
+        "name": "classes",
+        "value": "",
+        "label": "Class",
+        "valueType": "string"
+      }
     ]
   }
 ]
