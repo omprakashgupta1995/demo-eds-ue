@@ -1,0 +1,18 @@
+.experience{
+    display: flex;
+    gap: 58px;
+
+} 
+.experience div{
+    width: 25%;
+    border: 1px solid #5f34aa;
+    border-radius: 12px;
+    flex: 1;
+    padding:4px 8px 20px 8px
+}
+.experience div div:nth-child(1),.experience div div:nth-child(2){
+    border: none;
+}
+.default-content-wrapper{
+    line-height: 14px;
+}
