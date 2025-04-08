@@ -1,5 +1,5 @@
 import buildAccordianBlock from '../accordion/accordion.js';
-import {ul,ol,li,div} from '../../scripts/domhelper.js'
+import {ul,li,div} from '../../scripts/domhelper.js'
 export default async function decorate(block) {
     console.log(block);
     const path = block.textContent.trim();
