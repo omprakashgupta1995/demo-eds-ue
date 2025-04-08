@@ -2,3 +2,19 @@
     background: red;
     display: flex;
 }
+
+.feature-cards{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+..feature-cards > div{
+    width: 243px;
+    height: 292px;
+    gap: 24px;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
