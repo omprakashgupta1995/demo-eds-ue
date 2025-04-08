@@ -82,10 +82,10 @@
 }); */
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Select all the question elements
-    const questions = document.querySelectorAll('.oona-block-3.block > div');
+    // Select all the question blocks (questions are inside the first <p> tag in each div)
+    const questions = document.querySelectorAll('.oona-block-3-wrapper .oona-block-3.block > div');
 
-    // Loop through each question
+    // Loop through each question block
     questions.forEach(function(item) {
         const question = item.querySelector('div p:first-of-type'); // Select the question
         const answer = item.querySelector('div p:last-of-type');   // Select the answer
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Add event listener to the question (with icon)
         question.addEventListener('click', function() {
-            // Toggle answer visibility
+            // Toggle the clicked answer visibility
             if (answer.style.display === 'none') {
                 answer.style.display = 'block';  // Show the answer
                 icon.textContent = '-';  // Change icon to minus
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 icon.textContent = '+';  // Change icon to plus
             }
 
-            // Close other answers when clicking on a new question
+            // Close all other answers when clicking on a new question
             questions.forEach(function(otherItem) {
                 if (otherItem !== item) {
                     const otherAnswer = otherItem.querySelector('div p:last-of-type');
