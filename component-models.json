@@ -359,41 +359,18 @@
     ]
   },
   {
-    "id": "mountain",
+    "id": "faq",
     "fields": [
+      
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "product-1",
-        "label": "product-1"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
+        "component": "aem-content",
+        "name": "faq",
         "value": "",
-        "label": "Text",
+        "label": "faq",
         "valueType": "string"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "text",
-        "label": "text"
       }
+      
     ]
   }
+  
 ]
