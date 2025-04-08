@@ -1,3 +1,19 @@
-.looking{
+.looking {
     display: flex;
+    gap: 38px;
+}
+
+.looking div {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.button-container{
+    position: absolute;
+    top: 164px;
+    left: 13px;
 }
