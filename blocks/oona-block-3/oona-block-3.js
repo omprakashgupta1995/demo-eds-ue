@@ -81,51 +81,57 @@
     firstToggle.textContent = '-'; // Change first toggle to '-'
 }); */
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Wait until the DOM is fully loaded
-    setTimeout(function() {
-        // Select all question blocks (each question-answer pair is inside a div)
-        const questions = document.querySelectorAll('.oona-block-3-wrapper .oona-block-3.block > div');
+export default function decorate(block) {
+    document.addEventListener("DOMContentLoaded", function() {
+        // Select all question-answer blocks inside the oona-block-3-wrapper
+        const faqBlocks = block.querySelectorAll('.oona-block-3-wrapper .oona-block-3.block > div');
 
-        // Loop through each question block
-        questions.forEach(function(item) {
-            const question = item.querySelector('div p:first-of-type'); // Select the question text
-            const answer = item.querySelector('div p:last-of-type');   // Select the answer text
+        // Loop through each FAQ block and add class names for easier access
+        faqBlocks.forEach(function(item, index) {
+            // Add classes to the question and answer divs for easier targeting
+            const questionDiv = item.querySelector('div:nth-child(1)');
+            const answerDiv = item.querySelector('div:nth-child(2)');
             
-            if (!question || !answer) return; // Make sure both question and answer exist
-            
+            // Assign class names to question and answer for easy targeting
+            questionDiv.classList.add('faq-question');
+            answerDiv.classList.add('faq-answer');
+
+            // Add a unique ID to each FAQ block for easier access
+            questionDiv.classList.add(`faq-question-${index + 1}`);
+            answerDiv.classList.add(`faq-answer-${index + 1}`);
+
+            // Initially hide all answers
+            answerDiv.style.display = 'none';
+
+            // Create a '+' icon and append it to the question
             const icon = document.createElement('span');
-            icon.textContent = '+';  // Set initial icon as "+"
-            icon.style.fontWeight = 'bold';
-            icon.style.marginLeft = '10px';
-            question.appendChild(icon); // Append icon to the question text
+            icon.textContent = '+';
+            icon.classList.add('faq-icon');
+            questionDiv.appendChild(icon);
 
-            // Initially hide the answer text
-            answer.style.display = 'none';
-
-            // Add click event to toggle the accordion
-            question.addEventListener('click', function() {
-                // Toggle the answer visibility
-                if (answer.style.display === 'none') {
-                    answer.style.display = 'block';  // Show the answer
-                    icon.textContent = '-';  // Change the icon to "-"
+            // Add click event listener to toggle the answer visibility
+            questionDiv.addEventListener('click', function() {
+                // Toggle the visibility of the answer
+                if (answerDiv.style.display === 'none') {
+                    answerDiv.style.display = 'block';
+                    icon.textContent = '-'; // Change icon to minus when answer is shown
                 } else {
-                    answer.style.display = 'none';  // Hide the answer
-                    icon.textContent = '+';  // Change the icon back to "+"
+                    answerDiv.style.display = 'none';
+                    icon.textContent = '+'; // Change icon back to plus when answer is hidden
                 }
 
-                // Close all other answers (ensuring only one is open at a time)
-                questions.forEach(function(otherItem) {
+                // Close all other answers when a new question is clicked
+                faqBlocks.forEach(function(otherItem) {
                     if (otherItem !== item) {
-                        const otherAnswer = otherItem.querySelector('div p:last-of-type');
-                        const otherIcon = otherItem.querySelector('div p:first-of-type').querySelector('span');
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
+                        const otherIcon = otherItem.querySelector('.faq-question span');
                         if (otherAnswer && otherAnswer.style.display === 'block') {
                             otherAnswer.style.display = 'none';
-                            otherIcon.textContent = '+';  // Reset the icon for other questions
+                            otherIcon.textContent = '+'; // Reset icon for other questions
                         }
                     }
                 });
             });
         });
-    }, 100); // Set a small delay (100ms) to ensure DOM elements are fully loaded
-});
+    });
+}
