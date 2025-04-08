@@ -1,3 +1,7 @@
+.birla-teaser{
+    display: flex;
+    gap: 42px;
+}
 .birla-teaser div div:nth-child(1) picture img{
     width: 400px;
     height: 331px;

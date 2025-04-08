@@ -268,3 +268,8 @@ main .birla-category-container{
   position: absolute;
   /* top: 100px; */
 }
+
+main .birla-teaser-container{
+  display: flex;
+  flex-direction: column;
+}
