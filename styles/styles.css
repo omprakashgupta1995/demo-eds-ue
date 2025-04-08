@@ -277,22 +277,24 @@ main .section.highlight {
   flex-direction: column;
   gap: 40px;
 }
-.section.card-container-container >h2{
-  width: 305px;
-  font-family: Poppins;
-  font-weight: 300;
-  font-size: 46px;
-  line-height: 64px;
-  letter-spacing: 0px;
-  color: #454545;
+.section.card-container-container >.default-content-wrapper {
+  width: 100%;
 
 }
-.section.card-container-container >p{
-  width: 710px;
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 28px;
-  letter-spacing: 0px;
-  color: #454545;
+.section.card-container-container >.default-content-wrapper > h2{
+font-family: Poppins;
+font-weight: 300;
+font-size: 46px;
+line-height: 64px;
+letter-spacing: 0px;
+
+}
+.section.card-container-container >.default-content-wrapper >p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    width: 60%;
+    line-height: 28px;
+    letter-spacing: 0px;
+
 }

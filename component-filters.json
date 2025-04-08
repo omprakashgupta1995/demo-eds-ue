@@ -73,7 +73,9 @@
     "text",
     "hero-banner-item",
     "birla-container-item",
-    "birla-richtext"
+    "birla-richtext",
+    "birla-video"
+
   ]
 },
 {
@@ -82,7 +84,8 @@
     "text",
     "hero-banner-item",
     "birla-container-item",
-    "birla-richtext"
+    "birla-richtext",
+    "birla-video"
   ]
 }
 ]

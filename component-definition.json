@@ -324,6 +324,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Birla Video",
+          "id": "birla-video",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Birla Video",
+                  "model": "birla-video"
+                }
+              }
+            }
+          }
         }
       ]
     }
