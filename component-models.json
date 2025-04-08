@@ -112,10 +112,6 @@
           {
             "name": "Highlight",
             "value": "highlight"
-          },
-          {
-            "name": "HeroTitle-Container",
-            "value": "HeroTitle-Container"
           }
         ]
       }
