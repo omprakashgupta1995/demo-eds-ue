@@ -264,20 +264,6 @@
         "valueType": "string"
       },
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col2_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col2_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
         "component": "richtext",
         "name": "col2_text",
         "value": "",
