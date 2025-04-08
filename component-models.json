@@ -417,5 +417,18 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"faq",
+    "fields":[
+      {
+        "component":"aem-content",
+        "name":"faq",
+        "value": "",
+        "label": "faq",
+        "valueType": "string"
+        
+      }
+    ]
   }
 ]

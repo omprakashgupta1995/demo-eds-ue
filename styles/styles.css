@@ -273,3 +273,17 @@ main .birla-teaser-container{
   display: flex;
   flex-direction: column;
 }
+
+main .birla-top-banner-container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.birla-bottom-banner-wrapper{
+  position: absolute;
+  /* top: 100px; */
+  top: 270px;
+  left: 20%;
+  margin-bottom: 100px;
+}
+/* .birla-top-banner-wrapper */

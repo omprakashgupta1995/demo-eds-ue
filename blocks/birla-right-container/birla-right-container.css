@@ -2,6 +2,9 @@
     width: 100px;
     height: 100px;
 }
+.div-index-0 div:nth-child(2) .button-container{
+    display: inline;
+}
 
 .div-index-3 div:nth-child(1){
     display: flex;
