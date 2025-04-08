@@ -78,6 +78,6 @@
     cursor: pointer;
 }
 
-.oona-block-3 .block > div p {
-    display: inline;
+.oona-block-3 .block > div .answer.visible {
+    display: block;
 }
