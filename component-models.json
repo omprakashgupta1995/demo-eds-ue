@@ -263,10 +263,10 @@
         "valueType": "string"
       },
       {
-        "component": "text",
-        "name": "col2_text",
+        "component": "richtext",
+        "name": "col2_richtext",
         "value": "",
-        "label": " Col-2 Text",
+        "label": "Col-2 Text",
         "valueType": "string"
       }
     ]
