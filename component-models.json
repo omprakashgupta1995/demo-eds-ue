@@ -563,5 +563,17 @@
         ]
       }
     ]
+  },
+  {
+    "id": "faq",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "faq-url",
+        "value": "",
+        "label": "FAQ API PATH",
+        "valueType": "string"
+      }
+    ]
   }
 ]
