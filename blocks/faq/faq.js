@@ -1,5 +1,5 @@
 import buildAccordianBlock from '../accordion/accordion.js'
-import {li, ul, span, ol} from '../../scripts/domhelper.js'
+import {li, ul, div} from '../../scripts/domhelper.js'
 
 export default async function decorate(block) {
     console.log(block);

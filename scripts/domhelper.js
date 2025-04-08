@@ -10,181 +10,90 @@
  * governing permissions and limitations under the License.
  */
 
-/* eslint-disable no-restricted-syntax,  no-await-in-loop */
+/* eslint-disable no-param-reassign */
 
-async function* request(url, context) {
-    const {
-      chunkSize, cacheReload, sheetName, fetch,
-    } = context;
-    for (let offset = 0, total = Infinity; offset < total; offset += chunkSize) {
-      const params = new URLSearchParams(`offset=${offset}&limit=${chunkSize}`);
-      if (sheetName) params.append('sheet', sheetName);
-      const resp = await fetch(`${url}?${params.toString()}`, { cache: cacheReload ? 'reload' : 'default' });
-      if (resp.ok) {
-        const json = await resp.json();
-        total = json.total;
-        context.total = total;
-        for (const entry of json.data) yield entry;
-      } else {
-        return;
-      }
-    }
-  }
+/**
+ * Example Usage:
+ *
+ * domEl('main',
+ *  div({ class: 'card' },
+ *  a({ href: item.path },
+ *    div({ class: 'card-thumb' },
+ *     createOptimizedPicture(item.image, item.title, 'lazy', [{ width: '800' }]),
+ *    ),
+ *   div({ class: 'card-caption' },
+ *      h3(item.title),
+ *      p({ class: 'card-description' }, item.description),
+ *      p({ class: 'button-container' },
+ *       a({ href: item.path, 'aria-label': 'Read More', class: 'button primary' }, 'Read More'),
+ *     ),
+ *   ),
+ *  ),
+ * )
+ */
+
+/**
+ * Helper for more concisely generating DOM Elements with attributes and children
+ * @param {string} tag HTML tag of the desired element
+ * @param  {[Object?, ...Element]} items: First item can optionally be an object of attributes,
+ *  everything else is a child element
+ * @returns {Element} The constructred DOM Element
+ */
+export function domEl(tag, ...items) {
+    const element = document.createElement(tag);
   
-  // Operations:
+    if (!items || items.length === 0) return element;
   
-  function withFetch(upstream, context, fetch) {
-    context.fetch = fetch;
-    return upstream;
-  }
+    if (!(items[0] instanceof Element || items[0] instanceof HTMLElement) && typeof items[0] === 'object') {
+      const [attributes, ...rest] = items;
+      items = rest;
   
-  function withHtmlParser(upstream, context, parseHtml) {
-    context.parseHtml = parseHtml;
-    return upstream;
-  }
-  
-  function chunks(upstream, context, chunkSize) {
-    context.chunkSize = chunkSize;
-    return upstream;
-  }
-  
-  function sheet(upstream, context, sheetName) {
-    context.sheetName = sheetName;
-    return upstream;
-  }
-  
-  async function* skip(upstream, context, from) {
-    let skipped = 0;
-    for await (const entry of upstream) {
-      if (skipped < from) {
-        skipped += 1;
-      } else {
-        yield entry;
-      }
-    }
-  }
-  
-  async function* limit(upstream, context, aLimit) {
-    let yielded = 0;
-    for await (const entry of upstream) {
-      yield entry;
-      yielded += 1;
-      if (yielded === aLimit) {
-        return;
-      }
-    }
-  }
-  
-  async function* map(upstream, context, fn, maxInFlight = 5) {
-    const promises = [];
-    for await (let entry of upstream) {
-      promises.push(fn(entry));
-      if (promises.length === maxInFlight) {
-        for (entry of promises) {
-          entry = await entry;
-          if (entry) yield entry;
+      Object.entries(attributes).forEach(([key, value]) => {
+        if (!key.toLowerCase().startsWith('on')) {
+          element.setAttribute(key, Array.isArray(value) ? value.join(' ') : value);
+        } else {
+          element.addEventListener(key.substring(2).toLowerCase(), value);
         }
-        promises.splice(0, promises.length);
-      }
+      });
     }
-    for (let entry of promises) {
-      entry = await entry;
-      if (entry) yield entry;
-    }
+  
+    items.forEach((item) => {
+      item = item instanceof Element || item instanceof HTMLElement
+        ? item
+        : document.createTextNode(item);
+      element.appendChild(item);
+    });
+  
+    return element;
   }
   
-  async function* filter(upstream, context, fn) {
-    for await (const entry of upstream) {
-      if (fn(entry)) {
-        yield entry;
-      }
-    }
-  }
-  
-  function slice(upstream, context, from, to) {
-    return limit(skip(upstream, context, from), context, to - from);
-  }
-  
-  function follow(upstream, context, name, newName, maxInFlight = 5) {
-    const { fetch, parseHtml } = context;
-    return map(upstream, context, async (entry) => {
-      const value = entry[name];
-      if (value) {
-        const resp = await fetch(value);
-        return { ...entry, [newName || name]: resp.ok ? parseHtml(await resp.text()) : null };
-      }
-      return entry;
-    }, maxInFlight);
-  }
-  
-  async function all(upstream) {
-    const result = [];
-    for await (const entry of upstream) {
-      result.push(entry);
-    }
-    return result;
-  }
-  
-  async function first(upstream) {
-    /* eslint-disable-next-line no-unreachable-loop */
-    for await (const entry of upstream) {
-      return entry;
-    }
-    return null;
-  }
-  
-  // Helper
-  
-  function assignOperations(generator, context) {
-    // operations that return a new generator
-    function createOperation(fn) {
-      return (...rest) => assignOperations(fn.apply(null, [generator, context, ...rest]), context);
-    }
-    const operations = {
-      skip: createOperation(skip),
-      limit: createOperation(limit),
-      slice: createOperation(slice),
-      map: createOperation(map),
-      filter: createOperation(filter),
-      follow: createOperation(follow),
-    };
-  
-    // functions that either return the upstream generator or no generator at all
-    const functions = {
-      chunks: chunks.bind(null, generator, context),
-      all: all.bind(null, generator, context),
-      first: first.bind(null, generator, context),
-      withFetch: withFetch.bind(null, generator, context),
-      withHtmlParser: withHtmlParser.bind(null, generator, context),
-      sheet: sheet.bind(null, generator, context),
-    };
-  
-    Object.assign(generator, operations, functions);
-    Object.defineProperty(generator, 'total', { get: () => context.total });
-    return generator;
-  }
-  
-  export default function ffetch(url) {
-    let chunkSize = 255;
-    let cacheReload = false;
-    const fetch = (...rest) => window.fetch.apply(null, rest);
-    const parseHtml = (html) => new window.DOMParser().parseFromString(html, 'text/html');
-  
-    try {
-      if ('connection' in window.navigator && window.navigator.connection.saveData === true) {
-        // request smaller chunks in save data mode
-        chunkSize = 64;
-      }
-      // detect page reloads and set cacheReload to true
-      const entries = performance.getEntriesByType('navigation');
-      const reloads = entries.filter((entry) => entry.type === 'reload');
-      if (reloads.length > 0) cacheReload = true;
-    } catch (e) { /* ignore */ }
-  
-    const context = {
-      chunkSize, cacheReload, fetch, parseHtml,
-    };
-    const generator = request(url, context);
-  
-    return assignOperations(generator, context);
-  }
+  /*
+    More short hand functions can be added for very common DOM elements below.
+    domEl function from above can be used for one off DOM element occurrences.
+  */
+  export function div(...items) { return domEl('div', ...items); }
+  export function p(...items) { return domEl('p', ...items); }
+  export function a(...items) { return domEl('a', ...items); }
+  export function h1(...items) { return domEl('h1', ...items); }
+  export function h2(...items) { return domEl('h2', ...items); }
+  export function h3(...items) { return domEl('h3', ...items); }
+  export function h4(...items) { return domEl('h4', ...items); }
+  export function h5(...items) { return domEl('h5', ...items); }
+  export function h6(...items) { return domEl('h6', ...items); }
+  export function ul(...items) { return domEl('ul', ...items); }
+  export function ol(...items) { return domEl('ol', ...items); }
+  export function li(...items) { return domEl('li', ...items); }
+  export function i(...items) { return domEl('i', ...items); }
+  export function img(...items) { return domEl('img', ...items); }
+  export function span(...items) { return domEl('span', ...items); }
+  export function form(...items) { return domEl('form', ...items); }
+  export function input(...items) { return domEl('input', ...items); }
+  export function label(...items) { return domEl('label', ...items); }
+  export function button(...items) { return domEl('button', ...items); }
+  export function iframe(...items) { return domEl('iframe', ...items); }
+  export function nav(...items) { return domEl('nav', ...items); }
+  export function fieldset(...items) { return domEl('fieldset', ...items); }
+  export function article(...items) { return domEl('article', ...items); }
+  export function strong(...items) { return domEl('strong', ...items); }
+  export function select(...items) { return domEl('select', ...items); }
+  export function option(...items) { return domEl('option', ...items); }
