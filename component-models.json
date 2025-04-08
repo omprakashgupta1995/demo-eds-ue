@@ -234,6 +234,10 @@
           {
             "name": "certification Cards",
             "value": "certification-cards"
+          },
+          {
+            "name": "feature Cards",
+            "value": "feature-cards"
           }
         ]
       }
