@@ -8,7 +8,7 @@ export default async function decorate(block) {
     const resp = await fetch(path);
     const respData = await resp.json();
     const data = respData.data;
-    block.textContent = '';
+    // block.textContent = '';
     const list = [li('All')];
     const accordianBlock = div({class : 'block accordion'},
       ...data.map(function (eachdata) {
