@@ -353,18 +353,19 @@
         "value":"",
         "label":"Button ",
         "valueType":"string"
-      },
+      }
+      
+    ]
+  },
+  {
+    "id":"faq",
+    "fields":[
       {
-        "id":"faq",
-        "fields":[
-          {
-            "component":"aem-content",
-            "name":"faq",
-            "value": "",
-            "label": "faq",
-            "valueType": "string"
-          }
-        ]
+        "component":"aem-content",
+        "name":"faq",
+        "value": "",
+        "label": "faq",
+        "valueType": "string"
       }
     ]
   }
