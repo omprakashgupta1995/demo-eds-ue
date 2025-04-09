@@ -48,11 +48,11 @@ import { ul, li, div } from '../../scripts/domhelper.js';
 
 export default async function decorate(block) {
     console.log(block);
-    const path = block.textContent.trim();
+    const path = a.herf.trim();
     const resp = await fetch(path);
     const respData = await resp.json();
     const data = respData.data;
-    block.textContent = '';
+    // block.textContent = '';
     const list = [li('All')]; // Add "All" option at the start
 
     // Create an accordion block with category-based content
@@ -66,9 +66,13 @@ export default async function decorate(block) {
             );
         })
     );
+    const title = block.children[1];
+    block.textContent = '';
+    // block.append(ul(...list));
     block.append(ul(...list));
-    block.append(accordianBlock);
+    block.append(title);
     buildAccordianBlock(accordianBlock);
+    block.append(accordianBlock);
 
     // Handle click event on each category
     let selectLi = document.querySelectorAll('li');
