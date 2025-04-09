@@ -339,7 +339,7 @@
         "valueType": "string",
         "name": "classes",
         "label": "Style",
-        "option": [
+        "options": [
           {
             "name": "Primary",
             "value": "primary"
