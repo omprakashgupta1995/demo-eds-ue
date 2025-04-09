@@ -5,7 +5,7 @@
     "/content/demo-ue-022/om/form/leads-form:/om/leads-form.json",
     "/content/demo-ue-022/metadata:/metadata.json",
     "/content/demo-ue-022/om/api/faq:/api/faq.json",
-    "/content/demo-ue-022/akanksha/accordion/trial:/accordion/trial.json"
+    "/content/demo-ue-022/akanksha/accordion/trials:/accordion/trials.json"
   ],
   "includes": [
     "/content/demo-ue-022/"
