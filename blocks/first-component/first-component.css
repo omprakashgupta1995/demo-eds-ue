@@ -1,4 +1,4 @@
-.first-component{
+.flex-block-container{
     max-width: 1560px;
     margin: 0px auto;
     width: 100%;
@@ -7,20 +7,17 @@
     border-bottom-right-radius: 24px;
     border-bottom-left-radius: 24px;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     position: relative;
 
 }
-.child-1{
-   display: none;
 
-}
-.child-2{
-   display: none;
-
-}
-.child-3{
+.flex-block-container-2{
     max-width: 538px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
     padding: 50px 0px 60px 130px;
 
@@ -30,39 +27,39 @@
     flex-direction: column;
     gap: 20px;
 }
-.child-3 div h1{
+.flex-block-container-2 h1{
     font-size: 54px;
     font-weight: 600;
     color: #FFFFFF;
 }
-.child-3 div h3{
+.flex-block-container-2 h3{
     font-size: 18px;
     font-weight: 600;
     color: #FFFFFF;
 }
-.child-3 div p{
+.cflex-block-container-2 p{
     font-size: 14px;
     font-weight: 400;
     color: #FFFFFF;
 }
-.child-3 div ul{
+.flex-block-container-2 ul{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.child-3 div ul li{
+.flex-block-container-2 ul li{
     list-style: none;
     padding-bottom: 10px;
     border-bottom: 1px solid white;
 }
-.child-4{
+.flex-block-container-1{
     max-width: 677px;
     width: 100%
     
 
 }
 
-.child-4 img{
+.flex-block-container-1 img{
     max-width: 550px;
     width: 100%;
     position: absolute;
