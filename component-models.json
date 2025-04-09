@@ -129,6 +129,11 @@
         "component": "text",
         "name": "id",
         "label": "Section Data Id"
+      },
+      {
+        "component": "text",
+        "name": "background-color",
+        "label": "Background Color"
       }
     ]
   },
