@@ -210,8 +210,7 @@
         "name": "col1_image",
         "label": "Image",
         "multi": false
-      }
-      
+      } 
     ]
   },
   {
@@ -229,16 +228,7 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      },
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Primary",
-            "value": "primary"
-          }
+      }
     ]
   }
 ]
