@@ -114,8 +114,8 @@
             "value": "highlight"
           },
           {
-             "name": "Video2",
-             "value": "video-second"
+            "name": "Video2",
+            "value": "video-second"
           }
         ]
       }
@@ -246,8 +246,7 @@
         ]
       }
     ]
-  }
-  ,
+  },
   {
     "id": "hero-banner-item",
     "fields": [
@@ -296,8 +295,8 @@
     ]
   },
   {
-    "id":"birla-teaser",
-    "fields":[
+    "id": "birla-teaser",
+    "fields": [
       {
         "component": "text",
         "name": "text",
@@ -331,7 +330,6 @@
   {
     "id": "ups-container-left",
     "fields": [
- 
       {
         "component": "multiselect",
         "name": "classes",
@@ -351,12 +349,11 @@
           }
         ]
       }
-
     ]
   },
   {
-    "id":"birla-container-item",
-    "fields":[
+    "id": "birla-container-item",
+    "fields": [
       {
         "component": "reference",
         "valueType": "string",
@@ -381,8 +378,8 @@
     ]
   },
   {
-    "id":"birla-richtext",
-    "fields":[
+    "id": "birla-richtext",
+    "fields": [
       {
         "component": "richtext",
         "name": "text",
@@ -391,10 +388,10 @@
         "valueType": "string"
       }
     ]
-  }
-  ,{
-    "id":"birla-video",
-    "fields":[
+  },
+  {
+    "id": "birla-video",
+    "fields": [
       {
         "component": "reference",
         "name": "image",
@@ -406,12 +403,11 @@
         "name": "imageAlt",
         "label": "Alt Text"
       }
-
     ]
   },
   {
-    "id":"video-container",
-    "fields":[
+    "id": "video-container",
+    "fields": [
       {
         "component": "aem-content",
         "name": "link",
@@ -425,8 +421,8 @@
     ]
   },
   {
-    "id":"faq-container",
-    "fields":[
+    "id": "faq-container",
+    "fields": [
       {
         "component": "aem-content",
         "name": "link",
@@ -441,13 +437,19 @@
         "component": "text",
         "name": "linkTitle",
         "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "RichText",
+        "valueType": "string"
       }
     ]
-  }
-  ,
+  },
   {
-    "id":"myvideo",
-    "fields":[
+    "id": "myvideo",
+    "fields": [
       {
         "component": "reference",
         "name": "image",
