@@ -298,3 +298,100 @@ letter-spacing: 0px;
     letter-spacing: 0px;
 
 }
+
+.section.myvideo-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  background: url('https://s3-alpha-sig.figma.com/img/9030/7375/11a1d0c0602264047def8e8410aecd47?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=PYXJtcOsNkXLutzivGV-ux9TVI8UQ5rXy0QAqEYX1MvFXartdEaJM0nRHPVMoUaSwi6U5uCDEfUaO-frsdEnxDZmAQqI902wG-4etiHQ4GDVuqnFWwdfxPDhvwUzRKkZe2mXWcFEXQTImSnWgq8SpM3qx7wvjTkUeKww6yDboNFcv8Y-Gm8sphZpoyRN2L97mhwSn62nafKOj-zyJmJWy6dMHHqHTqtJDfRNzu7K1QsKlxLOuix5VH55g2cZmjyqFrlVuENqsrAQmi4Vv9YhhcSf85kGiSYoBhxvQ4yK4-NKXhv6gU2s3nEN9WXQRYMgWx2~SYCSjZYntNmDNk3uAA__');
+  padding: 40px 30px;
+}
+.section.myvideo-container >div:nth-child(1){
+  width: 950px;
+  padding: 0px;
+  margin: 0px;
+}
+.section.myvideo-container >div:nth-child(2){
+ 
+  padding: 0px;
+  margin: 0px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.section.myvideo-container >div:nth-child(2) h3{
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+/* .section.myvideo-container >div:nth-child(2) h3 strong{
+  font-weight: 700;
+  display: inline-block;
+}
+.section.myvideo-container >div:nth-child(2) h3 strong::before {
+  content: "";
+  position: absolute;
+  bottom: -12px; 
+  left: 0;
+  width: 200px;
+  border-radius:5px;
+  
+  border:1px solid orange
+}
+
+.section.myvideo-container >div:nth-child(2) h3 strong::after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 204px;   
+  background-color: orange;
+  height:3px;
+  width:3px;
+  border-radius: 50%;
+} */
+
+.section.myvideo-container >div:nth-child(2) h3 strong {
+  font-weight: 700;
+  display: inline-block;
+  position: relative; /* <-- key fix */
+}
+
+.section.myvideo-container >div:nth-child(2) h3 strong::before {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  width: 308px;
+  height: 2px; /* Make sure this is present */
+  border-radius: 5px;
+  border: none;
+  background-color: orange; /* Instead of border for clean line */
+}
+
+.section.myvideo-container >div:nth-child(2) h3 strong::after {
+  content: "";
+  position: absolute;
+  bottom: -14px; /* aligns better with 8px dot */
+  left: 316px;
+  background-color: orange;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+}
+
+.section.myvideo-container >div:nth-child(2) p{
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0px;
+}
