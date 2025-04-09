@@ -335,5 +335,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "trial",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "trial",
+        "value": "",
+        "label": "trial",
+        "valueType": "string"
+      }
+    ]
   }
 ]
