@@ -348,8 +348,7 @@
       },
       {
         "component": "richtext",
-        "name": "richtext",
-        "value": "",
+        "value": "text",
         "label": "Text",
         "valueType": "string"
       }
