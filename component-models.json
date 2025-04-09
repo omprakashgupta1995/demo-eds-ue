@@ -365,6 +365,17 @@
         "multi": false
       },
       {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
