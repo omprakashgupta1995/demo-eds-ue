@@ -25,3 +25,39 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+
+/* OWN CSS */
+
+/* 
+li{
+    display: flex;
+    width: 340px;
+    padding: 29.5px 24px;
+    border: none;
+    background-color: white;
+}
+
+.cards-card-image
+{
+  margin-top: 10px;
+    margin-right: 24px;
+}
+
+img
+{
+  width: 56px;
+    height: 56px;
+}
+
+.cards-card-body
+{
+  width: 260px;
+    margin: 0px;
+}
+
+p{
+  margin: 0px;
+  font-size: 16px;
+}
+ */
