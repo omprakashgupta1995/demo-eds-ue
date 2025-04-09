@@ -188,6 +188,11 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "id",
+        "label": "Section Name"
       }
     ]
   },
