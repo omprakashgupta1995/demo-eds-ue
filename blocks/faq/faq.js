@@ -18,7 +18,7 @@
           })
         )
         const title = block.children[1];
-        block.textContent = '';
+        // block.textContent = '';
         block.append(ul(...list));
         block.append(title);
         buildAccordianBlock(accordianBlock);
