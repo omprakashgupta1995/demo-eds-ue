@@ -373,14 +373,14 @@
     ]
   },
   {
-    "id": "trial",
+    "id": "trials",
     "fields": [
       
       {
         "component": "aem-content",
-        "name": "trial",
+        "name": "trials",
         "value": "",
-        "label": "trial",
+        "label": "trials",
         "valueType": "string"
       }
       
