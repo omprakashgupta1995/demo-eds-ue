@@ -409,13 +409,6 @@
     "id":"video-container",
     "fields":[
       {
-        "component": "text",
-        "name": "classes",
-        "value": "",
-        "label": "Class",
-        "valueType": "string"
-      },
-      {
         "component": "aem-content",
         "name": "link",
         "label": "Link"
@@ -424,11 +417,6 @@
         "component": "text",
         "name": "linkText",
         "label": "Text"
-      },
-      {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
       }
     ]
   },
