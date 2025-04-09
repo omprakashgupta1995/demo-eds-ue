@@ -345,6 +345,25 @@
         "value": "",
         "label": "trials",
         "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Style",
+        "option": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "richtext",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
