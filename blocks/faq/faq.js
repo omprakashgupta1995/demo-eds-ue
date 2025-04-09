@@ -21,7 +21,7 @@ export default async function decorate(block) {
     )
     const title = block.children[1];
     block.textContent = '';
-    block.append(ul(...list));
+    // block.append(ul(...list));
     block.append(title);
     block.append(ul(...list));
     buildAccordianBlock(accordianBlock);
