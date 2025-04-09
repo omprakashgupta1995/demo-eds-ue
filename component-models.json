@@ -363,6 +363,13 @@
         "name": "faq",
         "label": "faq",
         "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
