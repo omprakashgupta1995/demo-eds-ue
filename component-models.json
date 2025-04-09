@@ -124,6 +124,11 @@
             "value": "highlight"
           }
         ]
+      },
+      {
+        "component": "text",
+        "name": "id",
+        "label": "Section Data Id"
       }
     ]
   },
