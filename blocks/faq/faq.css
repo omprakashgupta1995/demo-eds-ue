@@ -1,1 +1,15 @@
 @import url(../accordion/accordion.css);
+.faq ul {
+    display: flex;
+    gap: 40px;
+}
+.faq ul li {
+    list-style: none;
+    /* background-color: blue; */
+    background-color: rgb(195, 234, 224);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border-style: none;
+}

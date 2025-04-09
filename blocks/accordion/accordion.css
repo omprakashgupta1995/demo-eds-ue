@@ -59,3 +59,34 @@
     border-top: 1px solid #dadada;
     background-color: var(--background-color);
   }
+
+
+  .faq ul {
+    display: flex;
+    gap: 40px;
+}
+.faq ul li {
+    list-style: none;
+    /* background-color: blue; */
+    background-color: rgb(195, 234, 224);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    padding: 15px;
+    border-radius: 24px;
+    background-color: rgb(195, 234, 224);
+    border: 1px solid rgb(195, 234, 224);
+}
+.accordion-item-label {
+    background-color: rgb(195, 234, 224);
+    font-size: 20px;
+    font-weight: 700;
+}
