@@ -13,8 +13,6 @@ export default async function decorate(block) {
         list.push(li(eachdata.category));
         return div(
           div(eachdata.title),
-          //demo
-          
           div(eachdata.description)
         )
       })
