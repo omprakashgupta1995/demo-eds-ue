@@ -112,6 +112,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+             "name": "Video2",
+             "value": "video-second"
           }
         ]
       }
