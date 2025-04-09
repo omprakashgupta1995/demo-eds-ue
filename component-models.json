@@ -228,6 +228,17 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          }
+        ]
       }
     ]
   }
