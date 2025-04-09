@@ -333,18 +333,6 @@
         "value": "",
         "label": "faq",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "trials",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "trials",
-        "value": "",
-        "label": "trials",
-        "valueType": "string"
       },
       {
         "component": "multiselect",
@@ -363,6 +351,18 @@
         "name": "richtext",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "trials",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "trials",
+        "value": "",
+        "label": "trials",
         "valueType": "string"
       }
     ]
