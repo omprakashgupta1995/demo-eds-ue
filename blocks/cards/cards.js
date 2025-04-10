@@ -22,9 +22,5 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
 
-
-
-  //OWN JS:
-
-  
+  // OWN JS:
 }
