@@ -42,6 +42,8 @@ export default async function decorate(block) {
       );
     }),
   );
+
+  // Most asked part
   const title = block.children[1];
   block.textContent = '';
   // block.append(ul(...list));
