@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*
  * Fragment Block
  * Include content on a page as a fragment.
