@@ -1,8 +1,5 @@
 .custom-rt.block .button-container .button{
     background: #000;
     border-radius: 4px;
-    padding-top: 250;
-    padding-right: 500;
-    padding-bottom: 250;
-    padding-left: 500;
+    padding: 250 500;
 }
