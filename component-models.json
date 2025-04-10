@@ -179,7 +179,7 @@
     "id": "fragment",
     "fields": [
       {
-        "component": "aem-content",
+        "component": "text",
         "name": "reference",
         "label": "Reference",
         "multi": true
