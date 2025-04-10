@@ -108,6 +108,42 @@ async function loadEager(doc) {
     // do nothing
   }
 }
+ 
+//harsh added doc
+function autolinkModals(element) {
+  element.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
+}
+
+
+async function loadLazy(doc) {
+  autolinkModals(doc);
+
+  const main = doc.querySelector('main');
+  await loadBlocks(main);
+
+  const { hash } = window.location;
+  const element = hash ? doc.getElementById(hash.substring(1)) : false;
+  if (hash && element) element.scrollIntoView();
+
+  loadHeader(doc.querySelector('header'));
+  loadFooter(doc.querySelector('footer'));
+
+  loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
+  loadFonts();
+
+  sampleRUM('lazy');
+  sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
+  sampleRUM.observe(main.querySelectorAll('picture > img'));
+}
+
 
 /**
  * Loads everything that doesn't need to be delayed.
