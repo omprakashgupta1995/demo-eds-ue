@@ -10,6 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
+
 :root {
   /* colors */
   --background-color: white;
@@ -257,9 +258,7 @@ main .section.highlight {
 }
 
 main .cards-flex-container .default-content-wrapper p {
-  font-family: Raleway;
   font-weight: 700;
-  font-size: Typeface/Size/H4;
   line-height: 130%;
   letter-spacing: 0%;
   text-align: center;
@@ -277,29 +276,28 @@ main .listformat-container .listformat-wrapper  {
 
 main .listformat-container .listformat-wrapper .listformat p {
   align-items: center;
-  font-family: Raleway;
   font-weight: 700;
-  font-size: Typeface/Size/H4;
   line-height: 130%;
   letter-spacing: 0%;
   color: #093E81;
   text-align: center;
   padding-bottom: 40px;
 }
+
 main .listformat-container .listformat-wrapper .listformat ul {
   width: 820px;
   height: 122px;
   display: flex;
   gap: 16px;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding: 0;
 }
+
 main .listformat-container .listformat-wrapper .listformat ul li {
-  font-family: Raleway;
+  /* font-family: Raleway; */
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
@@ -326,6 +324,7 @@ main .columnflex-container .connect1 .columnflex{
   border-bottom-left-radius: 24px;
   align-items: flex-end;
 }
+
 main .columnflex-container{
   display: flex;
   flex-direction: row;

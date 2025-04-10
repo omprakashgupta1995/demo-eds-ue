@@ -1,10 +1,11 @@
 
 main .columnflex-container .connect1 .columnflex .row-1 .row-1-col-1{
-    width: 260.7067565917969px;
+    width: 260px;
     height: 379px;
     overflow: hidden;
     
 }
+
 main .columnflex-container .connect1 .columnflex .row-2 {
     display: flex;
     flex-direction: column;
@@ -15,37 +16,40 @@ main .columnflex-container .connect1 .columnflex .row-2 {
 }
 
 main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-1 p{
-    font-family: Raleway;
+    /* font-family: Raleway; */
     font-weight: 700;
     font-size: 26px;
     line-height: 130%;
     letter-spacing: 0%;
     text-align: center;
-    color: #FFFFFF;
-    width: 187.22569274902344px;
+    color: #FFF;
+    width: 187px;
     
 
 
 }
+
 main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 {
     display: flex;
     flex-direction: row;
 }
+
 main .columnflex-container .columnflex-wrapper .columnflex .row-2 .row-2-col-2 p{
     width: 143px;
     height: 49px;
 
 }
+
 main .columnflex-container .connect .columnflex .row-1 .row-1-col-1 {
-    font-family: Manrope;
     font-weight: 700;
     font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    color:#000000;
+    color:#000;
 
 }
+
 main .columnflex-container .connect .columnflex .row-1 {
     width: 446px;
     display: flex;
@@ -53,10 +57,7 @@ main .columnflex-container .connect .columnflex .row-1 {
     gap: 12px;
     border-top-right-radius: 24px;
     border-bottom-right-radius: 24px;
-    padding-top: 168px;
-    padding-right: 40px;
-    padding-bottom: 168px;
-    padding-left: 64px;
+    padding: 168px 40px 168px 64px;
 
 }
 
