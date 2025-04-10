@@ -31,13 +31,16 @@
     padding: 10px;
     border-radius: 10px;
 }
+
 .looking >div >div:nth-child(1){
     display: flex;
     justify-content: center;
 }
+
 .looking >div >div:nth-child(2) h2{
     font-size: 24px;
 }
+
 .looking >div >div:nth-child(2) p{
     font-size: 18px;
 }
