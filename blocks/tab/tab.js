@@ -9,8 +9,8 @@ export default async function decorate(block) {
 
   // decorate tab and tabpanels
   const tab = [...block.children].map((child) => child.firstElementChild);
-  tab.forEach((tab, i) => {
-    const id = toClassName(tab.textContent);
+  tab.forEach((eachtab, i) => {
+    const id = toClassName(eachtab.textContent);
 
     // decorate tabpanel
     const tabpanel = block.children[i];
@@ -24,7 +24,7 @@ export default async function decorate(block) {
     const button = document.createElement('button');
     button.className = 'tab-tab';
     button.id = `tab-${id}`;
-    button.innerHTML = tab.innerHTML;
+    button.innerHTML = eachtab.innerHTML;
     button.setAttribute('aria-controls', `tabpanel-${id}`);
     button.setAttribute('aria-selected', !i);
     button.setAttribute('role', 'tab');
@@ -40,7 +40,7 @@ export default async function decorate(block) {
       button.setAttribute('aria-selected', true);
     });
     tablist.append(button);
-    tab.remove();
+    eachtab.remove();
   });
 
   block.prepend(tablist);
