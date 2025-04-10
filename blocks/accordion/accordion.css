@@ -23,13 +23,13 @@
 
 .accordion details[open] summary {
     /* background-color: var(--light-color); */
-    background-color: rgb(195, 234, 224);
+    background-color: rgb(195 234 224);
 }
 
 .accordion details summary:focus,
 .accordion details summary:hover {
     /* background-color: var(--light-color); */
-    background-color: rgb(195, 234, 224);
+    background-color: rgb(195 234 224);
 }
 
 .accordion details summary::-webkit-details-marker {
@@ -59,8 +59,9 @@
 
 .accordion details[open] .accordion-item-body {
     border-top: 1px solid #dadada;
+
     /* background-color: var(--background-color); */
-    background-color: rgb(195, 234, 224);
+    background-color: rgb(195 234 224);
 }
 
 .faq ul {
@@ -70,8 +71,9 @@
 
 .faq ul li {
     list-style: none;
+
     /* background-color: blue; */
-    background-color: rgb(195, 234, 224);
+    background-color: rgb(195 234 224);
     font-size: 20px;
     font-weight: 600;
     padding: 12px 24px; 
@@ -81,19 +83,21 @@
 }
 
 .active {
-    background-color: rgb(12, 14, 14);
+    background-color: rgb(12 14 14);
   }
+
 .accordion-item {
     display: flex;
     flex-direction: column;
     gap: 27px;
     padding: 15px;
     border-radius: 24px;
-    background-color: rgb(195, 234, 224);
-    border: 1px solid rgb(195, 234, 224);
+    background-color: rgb(195 234 224);
+    border: 1px solid rgb(195 234 224);
 }
+
 .accordion-item-label {
-    background-color: rgb(195, 234, 224);
+    background-color: rgb(195 234 224);
     font-size: 20px;
     font-weight: 700;
 }

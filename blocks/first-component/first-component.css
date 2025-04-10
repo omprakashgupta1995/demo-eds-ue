@@ -1,8 +1,8 @@
 .flex-block-container{
     max-width: 1560px;
-    margin: 0px auto;
+    margin: 0 auto;
     width: 100%;
-    background-color: #000000;
+    background-color: #000;
     color: white;
     border-bottom-right-radius: 24px;
     border-bottom-left-radius: 24px;
@@ -19,39 +19,46 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    padding: 50px 0px 60px 130px;
+    padding: 50px 0 60px 130px;
 
 }
+
 .child-3 div{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .flex-block-container-2 h1{
     font-size: 54px;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #FFF;
 }
+
 .flex-block-container-2 h3{
     font-size: 18px;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #FFF;
 }
+
 .cflex-block-container-2 p{
     font-size: 14px;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #FFF;
 }
+
 .flex-block-container-2 ul{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .flex-block-container-2 ul li{
     list-style: none;
     padding-bottom: 10px;
     border-bottom: 1px solid white;
 }
+
 .flex-block-container-1{
     max-width: 677px;
     width: 100%
@@ -63,8 +70,8 @@
     max-width: 550px;
     width: 100%;
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    right: 0;
     border-bottom-right-radius: 24px;
 }
 
