@@ -2,6 +2,7 @@
     width: 100px;
     height: 100px;
 }
+
 .div-index-0 div:nth-child(2) .button-container{
     display: inline;
 }
@@ -16,10 +17,12 @@
     width: 151px;
     height: 40px;
 }
+
 .div-index-3{
     display: flex;
     gap: 20px;
 }
+
 .div-index-3 div:nth-child(2){
     display: flex;
     justify-content: center;
@@ -27,6 +30,7 @@
     color: black;
     border: 1px solid #D1D5DB;
     border-radius: 4px;
+
     /* background-color: #2DABE3; */
     width: 151px;
     height: 40px;

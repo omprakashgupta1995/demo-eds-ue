@@ -2,6 +2,7 @@
     display: flex;
     gap: 64px;
 }
+
 .birla-category div div p picture img{
     height: 120px;
     width: 120px;

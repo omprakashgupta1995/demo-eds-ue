@@ -257,15 +257,17 @@ main .section.highlight {
 }
 
 
-.section{
+main.section{
   display: flex;
 }
 
 main .birla-banner-container{
   position: relative;
 }
+
 main .birla-category-container{
   position: absolute;
+
   /* top: 100px; */
 }
 
@@ -279,11 +281,12 @@ main .birla-top-banner-container{
   flex-direction: column;
   position: relative;
 }
+
 .birla-bottom-banner-wrapper{
   position: absolute;
-  /* top: 100px; */
   top: 270px;
   left: 20%;
   margin-bottom: 100px;
 }
+
 /* .birla-top-banner-wrapper */

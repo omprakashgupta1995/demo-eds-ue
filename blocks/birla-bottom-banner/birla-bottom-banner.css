@@ -2,11 +2,13 @@
     display: flex;
     gap: 64px;
 }
+
 .birla-bottom-banner div div:nth-child(1) picture img{
     height: 120px;
     width: 120px;
     border-radius: 50%;
 }
+
 .birla-bottom-banner div div:nth-child(2){
     display: flex;
     justify-content: center;
@@ -14,12 +16,11 @@
 }
 
 .birla-bottom-banner div div:nth-child(2) p{
-
-    font-family: Poppins;
+    /* font-family: Poppins; */
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: center;
     color: #9CA3AF;
 }
