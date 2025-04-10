@@ -181,7 +181,8 @@
       {
         "component": "aem-content",
         "name": "reference",
-        "label": "Reference"
+        "label": "Reference",
+        "multi": true
       }
     ]
   },
