@@ -20,6 +20,11 @@
     font-weight: 500;
 }
 
+.faq-question p, 
+.faq-answer p{
+    margin: 0;
+}
+
 .oona-block-3-container .default-content-wrapper p:first-child{
     margin: 0;
     margin-bottom: 32px;
@@ -70,9 +75,4 @@
     margin-top: 20px;
     color: #65737e;
     font-weight: 500;
-}
-
-.faq-question p, 
-.faq-answer p{
-    margin: 0;
 }

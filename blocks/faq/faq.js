@@ -24,23 +24,24 @@ import { li, ul, div } from '../../scripts/domhelper.js';
   } */
 
 export default async function decorate(block) {
-  console.log(block);
+  // console.log(block);
   const a = block.querySelector('a');
   const path = a?.href.trim();
   const resp = await fetch(path);
   const respData = await resp.json();
-  const data = respData.data;
+  const { data } = respData;
   // block.textContent = '';
   const list = [li('All')];
-  const accordianBlock = div({ class: 'block accordion' },
-    ...data.map(function (eachdata) {
+  const accordianBlock = div(
+    { class: 'block accordion' },
+    ...data.map((eachdata) => {
       list.push(li(eachdata.category));
       return div(
         div(eachdata.title),
-        div(eachdata.description)
-      )
-    })
-  )
+        div(eachdata.description),
+      );
+    }),
+  );
   const title = block.children[1];
   block.textContent = '';
   // block.append(ul(...list));

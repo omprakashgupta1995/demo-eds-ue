@@ -33,12 +33,13 @@
 
 .oona-block-2-wrapper .oona-block-2 > div {
     width: 33.33%;
+
     /* max-width: 418px; */
     min-height: 120px;
     border-radius: 12px;
     background-color: #fff;
     padding: 24px;
-    box-shadow: 0 15px 32px 0 rgba(72, 44, 119, 0.10);
+    box-shadow: 0 15px 32px 0 rgb(72 44 119 / 10%);
     display: flex;
     gap: 10px;
 }
