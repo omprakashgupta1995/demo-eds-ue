@@ -7,7 +7,12 @@
     "/content/demo-ue-022/om/api/faq:/api/faq.json",
     "/content/demo-ue-022/om/form/lead:/om/form/lead.json",
     "/content/demo-ue-022/metadata:/metadata.json",
+<<<<<<< HEAD
     "/content/demo-ue-022/karishmagosalia/forms/lead-forms:/forms/lead-froms.json"
+=======
+    "/content/demo-ue-022/akash-kushwaha/form/lead:/akash-kushwaha/form/lead.json",
+
+>>>>>>> c1e2eaf15ffcf5717a755d104df7c18ab584a94c
   ],
   "includes": [
     "/content/demo-ue-022/"
