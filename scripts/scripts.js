@@ -17,6 +17,19 @@ import {
  * @param {Element} from the element to copy attributes from
  * @param {Element} to the element to copy attributes to
  */
+
+function autolinkModals(element) {
+  element.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
+}
+
 export function moveAttributes(from, to, attributes) {
   if (!attributes) {
     // eslint-disable-next-line no-param-reassign
@@ -114,6 +127,7 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
+  autolinkModals(doc);
   const main = doc.querySelector('main');
   await loadSections(main);
 
