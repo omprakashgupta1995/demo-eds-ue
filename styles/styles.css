@@ -256,6 +256,6 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-/* .hero-container{
-  text-align: center;
-} */
+.banner-logo .default-content-wrapper p a{
+  background: none;
+}
