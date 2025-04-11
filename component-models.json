@@ -482,5 +482,24 @@
         "label": "Title"
       }
     ]
+  },
+  {
+    "id":"form-block",
+    "fields": [
+      {
+        "component": "text",
+        "name": "form-url",
+        "value": "",
+        "label": "Form PATH",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "api-url",
+        "value": "",
+        "label": "API URL",
+        "valueType": "string"
+      }
+    ]
   }
 ]
