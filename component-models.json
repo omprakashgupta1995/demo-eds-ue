@@ -290,6 +290,25 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"my-form",
+    "fields":[
+      {
+        "component":"text",
+        "name":"form",
+        "value": "",
+        "label": "Fom",
+        "valueType": "string"
+      }
+      ,
+      {
+        "component":"text",
+        "name":"form",
+        "value": "",
+        "label": "Fom",
+        "valueType": "string"
+      }
+    ]
   }
-  
 ]
