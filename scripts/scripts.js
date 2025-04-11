@@ -108,8 +108,9 @@ async function loadEager(doc) {
     // do nothing
   }
 }
- 
-//harsh added doc
+
+// Harsh
+
 function autolinkModals(element) {
   element.addEventListener('click', async (e) => {
     const origin = e.target.closest('a');
@@ -122,37 +123,32 @@ function autolinkModals(element) {
   });
 }
 
-
-async function loadLazy(doc) {
-  autolinkModals(doc);
-
-  const main = doc.querySelector('main');
-  await loadBlocks(main);
-
-  const { hash } = window.location;
-  const element = hash ? doc.getElementById(hash.substring(1)) : false;
-  if (hash && element) element.scrollIntoView();
-
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
-
-  loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
-  loadFonts();
-
-  sampleRUM('lazy');
-  sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
-  sampleRUM.observe(main.querySelectorAll('picture > img'));
+function wrapImgsInLinks(container) {
+  const pictureParas = container.querySelectorAll('p picture');
+  pictureParas.forEach((pic) => {
+    const pictureWrapper = pic.closest('p');
+    const nextPara = pictureWrapper?.nextElementSibling;
+    if (
+      nextPara && nextPara.querySelector('a')
+    ) {
+      const link = nextPara.querySelector('a');
+      // Move the picture into the link
+      link.innerHTML = pic.outerHTML;
+      // Replace the picture's <p> entirely with the button <p>
+      pictureWrapper.replaceWith(nextPara);
+    }
+  });
 }
-
 
 /**
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
+  autolinkModals(doc);
   const main = doc.querySelector('main');
   await loadSections(main);
-
+  wrapImgsInLinks(main);
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
