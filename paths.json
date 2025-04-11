@@ -4,6 +4,7 @@
     "/content/demo-ue-022/configuration:/.helix/config.json",
     "/content/demo-ue-022/om/form/leads-form:/om/leads-form.json",
     "/content/demo-ue-022/om/api/faq:/api/faq.json",
+    "/content/demo-ue-022/om/form/lead-form:/om/form/lead-form.json",
     "/content/demo-ue-022/metadata:/metadata.json"
   ],
   "includes": [
