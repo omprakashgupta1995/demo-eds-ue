@@ -292,21 +292,20 @@
     ]
   },
   {
-    "id":"my-form",
-    "fields":[
+    "id": "my-form",
+    "fields": [
       {
-        "component":"text",
-        "name":"form",
+        "component": "text",
+        "name": "form-url",
         "value": "",
-        "label": "Fom",
+        "label": "Form PATH",
         "valueType": "string"
-      }
-      ,
+      },
       {
-        "component":"text",
-        "name":"form",
+        "component": "text",
+        "name": "api-url",
         "value": "",
-        "label": "Fom",
+        "label": "API URL",
         "valueType": "string"
       }
     ]
