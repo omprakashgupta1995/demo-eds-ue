@@ -1,1 +1,5 @@
 @import url("../accordion/accordion.css");
+
+.faq-container{
+    padding: 30px;
+}

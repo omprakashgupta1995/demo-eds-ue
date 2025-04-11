@@ -12,6 +12,24 @@ import {
   loadCSS,
 } from './aem.js';
 
+function wrapImgsInLinks(container) {
+  const pictureParas = container.querySelectorAll('p picture');
+  pictureParas.forEach((pic) => {
+    const pictureWrapper = pic.closest('p');
+    const nextPara = pictureWrapper?.nextElementSibling;
+    if (
+      nextPara && nextPara.querySelector('a')
+    ) {
+      const link = nextPara.querySelector('a');
+      // Move the picture into the link
+      link.innerHTML = pic.outerHTML;
+      // Replace the picture's <p> entirely with the button <p>
+      pictureWrapper.replaceWith(nextPara);
+    }
+  });
+}
+
+
 /**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
@@ -114,8 +132,11 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
+  autolinkModals(doc);
   const main = doc.querySelector('main');
   await loadSections(main);
+
+  wrapImgsInLinks(main)
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
@@ -145,3 +166,18 @@ async function loadPage() {
 }
 
 loadPage();
+
+
+
+
+function autolinkModals(element) {
+  element.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
+}
