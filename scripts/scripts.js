@@ -31,6 +31,34 @@ export function moveAttributes(from, to, attributes) {
   });
 }
 
+function autolinkModals(element) {
+  element.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
+}
+
+function wrapImgsInLinks(container) {
+  const pictureParas = container.querySelectorAll('p picture');
+  pictureParas.forEach((pic) => {
+    const pictureWrapper = pic.closest('p');
+    const nextPara = pictureWrapper?.nextElementSibling;
+    if (
+      nextPara && nextPara.querySelector('a')
+    ) {
+      const link = nextPara.querySelector('a');
+      // Move the picture into the link
+      link.innerHTML = pic.outerHTML;
+      // Replace the picture's <p> entirely with the button <p>
+      pictureWrapper.replaceWith(nextPara);
+    }
+  });
+}
 /**
  * Move instrumentation attributes from a given element to another given element.
  * @param {Element} from the element to copy attributes from
@@ -116,7 +144,8 @@ async function loadEager(doc) {
 async function loadLazy(doc) {
   const main = doc.querySelector('main');
   await loadSections(main);
-
+  wrapImgsInLinks(main);
+  autolinkModals(doc);
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();

@@ -116,6 +116,10 @@
           {
             "name":"abs",
             "value":"abs"
+          },
+          {
+            "name":"banner-logo",
+            "value":"banner-logo"
           }
         ]
       }
