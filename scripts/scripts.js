@@ -32,6 +32,61 @@ export function moveAttributes(from, to, attributes) {
 }
 
 /**
+ * Wraps images followed by links within a matching <a> tag.
+ * @param {Element} container The container element
+ */
+/* function wrapImgsInLinks(container) {
+  const pictureParas = container.querySelectorAll('p picture');
+  pictureParas.forEach((pic) => {
+    const pictureWrapper = pic.closest('p');
+    const nextPara = pictureWrapper?.nextElementSibling;
+
+    if (
+      nextPara && nextPara.querySelector('a')
+    ) {
+      const link = nextPara.querySelector('a');
+
+      // Move the picture into the link
+      link.innerHTML = pic.outerHTML;
+      // Replace the picture's <p> entirely with the button <p>
+      pictureWrapper.replaceWith(nextPara);
+    }
+  });
+} */
+
+/* OPTIMIZED WAY: */
+function wrapImgsInLinks(container) {
+  const pictureElements = container.querySelectorAll('p picture');
+
+  pictureElements.forEach((picture) => {
+    const pictureParagraph = picture.closest('p');
+    const nextParagraph = pictureParagraph?.nextElementSibling;
+
+    if (!nextParagraph) return;
+
+    const anchor = nextParagraph.querySelector('a');
+    if (!anchor) return;
+
+    // Replace anchor's content with the picture
+    anchor.replaceChildren(picture.cloneNode(true));
+
+    // Replace the picture's <p> with the anchor's <p>
+    pictureParagraph.replaceWith(nextParagraph);
+  });
+}
+
+/* function wrapImgsInLinks(container) {
+  const pictures = container.querySelectorAll('picture');
+  pictures.forEach((pic) => {
+    const link = pic.nextElementSibling;
+    if (link && link.tagName === 'A' && link.href) {
+      link.innerHTML = pic.outerHTML;
+      pic.replaceWith(link);
+    }
+  });
+} */
+
+/**
  * Move instrumentation attributes from a given element to another given element.
  * @param {Element} from the element to copy attributes from
  * @param {Element} to the element to copy attributes to
@@ -56,6 +111,18 @@ async function loadFonts() {
   } catch (e) {
     // do nothing
   }
+}
+// AKASH
+function autolinkModals(element) {
+  element.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
 }
 
 /**
@@ -114,8 +181,12 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
+  autolinkModals(doc);
   const main = doc.querySelector('main');
   await loadSections(main);
+
+  /* Image with A tag link */
+  wrapImgsInLinks(main);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;

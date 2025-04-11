@@ -14,9 +14,8 @@ export default async function decorate(block) {
     ...data.map((eachdata) => {
       list.push(li(eachdata.category));
       return div(
-        { class: 'accordion-item' },
-        div({ class: 'accordion-title' }, eachdata.title),
-        div({ class: 'accordion-description' }, eachdata.description),
+        div(eachdata.title),
+        div(eachdata.description),
       );
     }),
   );
@@ -24,8 +23,10 @@ export default async function decorate(block) {
   // MOST ASKED PART
   const title = block.children[1];
   block.textContent = '';
+  // btns code.
   block.append(ul(...list));
   block.append(title);
+  // to get all data.
   buildAccordianBlock(accordianBlock);
   block.append(accordianBlock);
 
@@ -39,16 +40,14 @@ export default async function decorate(block) {
 
       if (event.currentTarget.textContent === 'All') {
         accordionItems.forEach((item) => {
-          item.style.display = '';
+          item.style.display = 'block';
         });
       } else {
         // Only show items matching the selected category
         data.forEach((elem, index) => {
           if (elem.category === event.currentTarget.textContent) {
             const matchingItem = accordionItems[index];
-            if (matchingItem) {
-              matchingItem.style.display = ''; // Show matching item
-            }
+            matchingItem.style.display = 'block';
           }
         });
       }

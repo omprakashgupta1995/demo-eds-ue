@@ -265,3 +265,8 @@ main .section.highlight {
 {
     margin-top: 10px;
 }
+
+.button-container > a:any-link
+{
+  background: transparent;
+}
