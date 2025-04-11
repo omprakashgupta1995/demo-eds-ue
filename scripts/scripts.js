@@ -29,6 +29,23 @@ export function moveAttributes(from, to, attributes) {
     }
   });
 }
+// wrapsImageInLinks
+function wrapImgsInLinks(container) {
+  const pictureParas = container.querySelectorAll('p picture');
+  pictureParas.forEach((pic) => {
+    const pictureWrapper = pic.closest('p');
+    const nextPara = pictureWrapper?.nextElementSibling;
+    if (
+      nextPara && nextPara.querySelector('a')
+    ) {
+      const link = nextPara.querySelector('a');
+      // Move the picture into the link
+      link.innerHTML = pic.outerHTML;
+      // Replace the picture's <p> entirely with the button <p>
+      pictureWrapper.replaceWith(nextPara);
+    }
+  });
+}
 /**
  * Move instrumentation attributes from a given element to another given element.
  * @param {Element} from the element to copy attributes from
@@ -121,6 +138,8 @@ async function loadLazy(doc) {
 
   const main = doc.querySelector('main');
   await loadSections(main);
+
+  wrapImgsInLinks(main);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
