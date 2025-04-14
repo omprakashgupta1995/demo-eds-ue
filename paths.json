@@ -8,13 +8,18 @@
     "/content/demo-ue-022/om/form/lead:/om/form/lead.json",
     "/content/demo-ue-022/metadata:/metadata.json",
     "/content/demo-ue-022/karishmagosalia/forms/lead-forms:/forms/lead-froms.json",
-    "/content/demo-ue-022/akash-kushwaha/form/lead:/akash-kushwaha/form/lead.json",
+    "/content/demo-ue-022/abhay/form/lead:/abhay/form/lead.json",
+    "/content/demo-ue-022/harshnachane/form/lead:/harshnachane/form/lead.json",
     "/content/demo-ue-022/harsh-patil/form/lead-form:/form/lead.json",
     "/content/demo-ue-022/akash-kushwaha/form/lead:/akash-kushwaha/form/lead.json",
     "/content/demo-ue-022/abhay/form/lead:/abhay/form/lead.json",
     "/content/demo-ue-022/akanksha/form/lead:/akanksha/form/lead.json",
-    "/content/demo-ue-022/akanksha/nerolac/index/form/lead-form:/form/lead-form.json"
-
+    "/content/demo-ue-022/akanksha/nerolac/form/lead-form:/form/lead-form.json",
+    "/content/demo-ue-022/karishmagosalia/nerolac/form/lead-form:/form/lead-form.json",
+    "/content/demo-ue-022/akanksha/form/lead:/akanksha/form/lead.json",
+    "/content/demo-ue-022/nihar/form/lead:/form/lead.json",
+    "/content/demo-ue-022/yashkudve/form/lead:/yashkudve/form/lead.json",
+    "/content/demo-ue-022/akanksha/form/lead:/akanksha/form/lead.json"
   ],
   "includes": [
     "/content/demo-ue-022/"
