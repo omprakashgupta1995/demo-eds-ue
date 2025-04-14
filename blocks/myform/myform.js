@@ -5,7 +5,6 @@ async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
   const resp = await fetch(pathname);
   const json = await resp.json();
-
   const form = document.createElement('form');
   form.dataset.action = submitHref;
 
