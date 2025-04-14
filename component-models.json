@@ -120,6 +120,10 @@
           {
             "name": "navbar",
             "value": "navbar"
+          },
+          {
+            "name": "findUs-section",
+            "value": "findUs-section"
           }
         ]
       }
