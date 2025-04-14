@@ -472,6 +472,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Nerolac acoordion left item",
+          "id": "nal-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Nerolac acoordion left item",
+                  "model": "nal-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
