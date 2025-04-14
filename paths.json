@@ -19,11 +19,10 @@
     "/content/demo-ue-022/nihar/form/lead:/form/lead.json",
     "/content/demo-ue-022/yashkudve/form/lead:/yashkudve/form/lead.json",
     "/content/demo-ue-022/akanksha/form/lead:/akanksha/form/lead.json",
-<<<<<<< HEAD
-    "/content/demo-ue-022/nihar/form/lead:/nihar/form/lead.json"
-=======
-    "/content/demo-ue-022/yashkudve/nerolac/form/lead-form:/yashkudve/lead-form.json"
->>>>>>> 3b72f523c91a86fa0f79af12d59d566d8435a453
+    "/content/demo-ue-022/nihar/form/lead:/nihar/form/lead.json",
+    "/content/demo-ue-022/yashkudve/nerolac/form/lead-form:/yashkudve/lead-form.json",
+    "/content/demo-ue-022/harshnachane/nerolac/form/lead-form:/harshnachane/lead-form.json",
+    "/content/demo-ue-022/harshpatil/nerolac/form/lead-form:/harshpatil/lead-form.json"
   ],
   "includes": [
     "/content/demo-ue-022/"
