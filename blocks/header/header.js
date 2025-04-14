@@ -119,7 +119,7 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand', 'sections', 'tools'];
+  const classes = ['head', 'brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
@@ -163,4 +163,19 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  // MOVE nav-head to nav-wrapper
+  const newnavWrapper = document.querySelector('.nav-wrapper');
+  const navHead = document.querySelector('.nav-head');
+
+  if (newnavWrapper && navHead) {
+    newnavWrapper.insertBefore(navHead, newnavWrapper.firstChild);
+  }
+
+  const navAnotherClassName = document.querySelector('.nav-wrapper');
+  navAnotherClassName.classList.add('nav-block');
+
+  const childNav = navAnotherClassName.children[1];
+  // console.log(childNav);
+  childNav.classList.add('logo-nav-block');
 }

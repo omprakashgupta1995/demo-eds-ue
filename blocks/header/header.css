@@ -10,8 +10,8 @@ header nav {
   box-sizing: border-box;
   display: grid;
   grid-template:
-    'hamburger brand tools' var(--nav-height)
-    'sections sections sections' 1fr / auto 1fr auto;
+    'head hamburger brand tools' var(--nav-height)
+    'sections sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
   gap: 0 24px;
   margin: auto;
@@ -265,4 +265,27 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+.nav-block
+{
+  background-color: #D1CFD0B2 !important;
+}
+
+.nav-head > div
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.nav-head > div ul{
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.logo-nav-block
+{
+  background-color: white;
 }
