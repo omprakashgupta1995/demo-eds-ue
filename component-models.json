@@ -120,6 +120,10 @@
           {
             "name": "test1",
             "value": "test1"
+          },
+          {
+            "name": "my-Footer-Seg1",
+            "value": "my-Footer-Seg1"
           }
         ]
       }
