@@ -116,6 +116,10 @@
           {
             "name": "image-link",
             "value": "image-link"
+          },
+          {
+            "name": "navbar",
+            "value": "navbar"
           }
         ]
       }
