@@ -124,7 +124,15 @@
           {
             "name": "my-Footer-Seg1",
             "value": "my-Footer-Seg1"
+          },
+          {
+            "name": "my-Footer-Seg2",
+            "value": "my-Footer-Seg2"
+          },   {
+            "name": "my-Footer-Seg2",
+            "value": "my-Footer-Seg2"
           }
+
         ]
       }
     ]
