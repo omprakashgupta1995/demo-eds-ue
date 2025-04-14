@@ -18,7 +18,8 @@
     "/content/demo-ue-022/akanksha/form/lead:/akanksha/form/lead.json",
     "/content/demo-ue-022/nihar/form/lead:/form/lead.json",
     "/content/demo-ue-022/yashkudve/form/lead:/yashkudve/form/lead.json",
-    "/content/demo-ue-022/akanksha/form/lead:/akanksha/form/lead.json"
+    "/content/demo-ue-022/akanksha/form/lead:/akanksha/form/lead.json",
+    "/content/demo-ue-022/yashkudve/nerolac/form/lead-form:/yashkudve/lead-form.json"
   ],
   "includes": [
     "/content/demo-ue-022/"
