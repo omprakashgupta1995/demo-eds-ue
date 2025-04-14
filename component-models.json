@@ -124,6 +124,10 @@
           {
             "name": "findUs-section",
             "value": "findUs-section"
+          },
+          {
+            "name": "bottom-banner",
+            "value": "bottom-banner"
           }
         ]
       }
