@@ -561,13 +561,6 @@
         "value": ""
       },
       {
-        "component": "richtext",
-        "name": "col1_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "col2_image",
@@ -582,11 +575,18 @@
         "value": ""
       },
       {
-        "component": "richtext",
-        "name": "col2_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "component": "reference",
+        "valueType": "string",
+        "name": "col3_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col3_imageAlt",
+        "label": "Alt",
+        "value": ""
       }
     ]
   }
