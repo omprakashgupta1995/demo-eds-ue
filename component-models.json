@@ -465,5 +465,70 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+  "components": {
+    "modalComponent": {
+      "type": "modal",
+      "title": "Choose an Option",
+      "triggerText": "Open Modal",
+      "content": {
+        "type": "group",
+        "items": [
+          {
+            "type": "button",
+            "text": "Option 1",
+            "action": "selectOption",
+            "value": "option1"
+          },
+          {
+            "type": "button",
+            "text": "Option 2",
+            "action": "selectOption",
+            "value": "option2"
+          },
+          {
+            "type": "button",
+            "text": "Option 3",
+            "action": "selectOption",
+            "value": "option3"
+          }
+        ]
+      }
+    }
   }
+},
+{
+  "id": "option-modal",
+  "label": "Option Modal Component",
+  "fields": [
+    {
+      "component": "text",
+      "name": "modal-title",
+      "label": "Modal Title",
+      "valueType": "string",
+      "value": "Choose an Option"
+    },
+    {
+      "component": "text",
+      "name": "trigger-button-label",
+      "label": "Trigger Button Label",
+      "valueType": "string",
+      "value": "Open Modal"
+    },
+    {
+      "component": "multifield",
+      "name": "options",
+      "label": "Modal Options",
+      "field": {
+        "component": "text",
+        "label": "Option Label",
+        "name": "option-label",
+        "valueType": "string"
+      }
+    }
+  ]
+}
+
+
 ]
