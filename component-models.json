@@ -120,6 +120,14 @@
           {
             "name": "test1",
             "value": "test1"
+          },
+          {
+            "name": "footer-upperSection",
+            "value": "footer-upperSection"
+          },
+          {
+            "name": "footer-lowerSection",
+            "value": "footer-lowerSection"
           }
         ]
       }
