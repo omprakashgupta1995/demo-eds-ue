@@ -29,6 +29,8 @@
       "my-form",
       "footer-address",
       "footer-address-item",
+      "footer-link-accordion",
+      "footer-link-accordion-item",
       "fragment"
     ]
   },
@@ -82,5 +84,11 @@
     "components": [
       "footer-address-item"
     ] 
+  },
+  {
+    "id": "footer-link-accordion",
+    "components": [
+      "footer-link-accordion-item"
+    ]
   }
 ]

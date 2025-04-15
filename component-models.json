@@ -431,5 +431,24 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "footer-link-accordion",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Question",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Answer",
+        "value": ""
+      }
+    ]
   }
 ]
