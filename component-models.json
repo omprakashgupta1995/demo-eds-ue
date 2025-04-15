@@ -470,29 +470,16 @@
     "id": "option-modal",
     "fields": [
       {
-        "component": "text",
-        "name": "modal-title",
-        "label": "Modal Title",
+        "component": "multiselect",
         "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "trigger-button-label",
-        "label": "Trigger Button Label",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "multifield",
-        "name": "options",
-        "label": "Modal Options",
-        "field": {
-          "component": "text",
-          "label": "Option Label",
-          "name": "option-label",
-          "valueType": "string"
-        }
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          }
+        ]
       }
     ]
   }
