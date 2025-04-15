@@ -38,6 +38,10 @@ footer {
 .main-footer img{
   filter: brightness(0) invert(1);
 }
+ 
+.main-footer .footer-address-wrapper .footer-address div > div:first-child{
+  display: none;
+}
 
 /* footer .footer > div {
   margin: auto; 
