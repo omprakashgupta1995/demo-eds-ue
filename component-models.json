@@ -438,14 +438,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "text",
+        "name": "text1",
         "label": "Question",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "text",
+        "name": "text2",
         "label": "Answer",
         "value": ""
       }
