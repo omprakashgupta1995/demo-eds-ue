@@ -433,7 +433,7 @@
     ]
   },
   {
-    "id": "footer-link-accordion",
+    "id": "footer-link-accordion-item",
     "fields": [
       {
         "component": "text",
