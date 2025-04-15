@@ -22,7 +22,8 @@
     "/content/demo-ue-022/nihar/form/lead:/nihar/form/lead.json",
     "/content/demo-ue-022/yashkudve/nerolac/form/lead-form:/yashkudve/lead-form.json",
     "/content/demo-ue-022/harshnachane/nerolac/form/lead-form:/harshnachane/lead-form.json",
-    "/content/demo-ue-022/harshpatil/nerolac/form/lead-form:/harshpatil/lead-form.json"
+    "/content/demo-ue-022/harshpatil/nerolac/form/lead-form:/harshpatil/lead-form.json",
+    "/content/demo-ue-022/nihar/nerolac/form/lead-form:/nihar/lead-form.json"
   ],
   "includes": [
     "/content/demo-ue-022/"
