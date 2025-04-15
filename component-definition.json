@@ -422,7 +422,7 @@
           }
         },
         {
-          "title": "kainsai teaser",
+          "title": "kainsai accordian",
           "id": "kainsai-accordian",
           "plugins": {
             "xwalk": {
