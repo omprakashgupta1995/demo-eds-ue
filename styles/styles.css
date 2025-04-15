@@ -345,31 +345,36 @@ main .section h1{
   color:#0D2042;
 }
 
-main .section p {
-  /* font-family: Typeface/Family/Body; */
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 130%;
-  letter-spacing: 0%;
-  text-align: center;
-  color:#0D2042;
+main .ticker .default-content-wrapper{
+  display: flex;
+  flex-direction: row;
+  padding: 16px 40px;
+  gap: 34px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #D2D8EF;
+
 }
 
-[data-section-name="usp-features"] li[data-name="trained"]{
-  color: green;
-  
-}
-
-[data-section-name="usp-features"] li[data-name="reliable"] p{
-  color: blue;
-}
-
-[data-section-name="usp-features"] li[data-name="top-user-rated"] p{
-  color: orange;
-}
-
-[data-section-name="usp-features"] li[data-name="dot"] p .icon-dot{
+/* Style for p tags with class 'dot' */
+p.dot span.icon{
   width: 5px;
   height: 5px;
-  color:#0D2042; 
+  color: #0D2042;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+
+/* You can also target more dynamic classes if needed, for example: */
+p.trained,
+p.reliable,
+p.top-user-rated {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  color: #0D2042;
 }

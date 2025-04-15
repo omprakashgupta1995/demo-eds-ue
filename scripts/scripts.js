@@ -175,27 +175,18 @@ async function loadPage() {
 
 loadPage();
 
-//Section 2 
-document.addEventListener('DOMContentLoaded', function () {
-  // Select all sections with data-section-name "usp-features"
-  const sections = document.querySelectorAll('.section');
+// Select all the <p> tags inside the .default-content-wrapper
+const pTags = document.querySelectorAll('.default-content-wrapper p');
 
-  sections.forEach((section) => {
-    const paragraphs = section.querySelectorAll('p');
-
-    paragraphs.forEach((p, index) => {
-      const span = p.querySelector('span.icon-dot'); // Check if there's a dot icon in the <p>
-      
-      // If span.icon-dot exists, it's a dot, so add class 'dot'
-      if (span) {
-        p.classList.add('dot');
-      } else {
-        // Add a class based on the text content of the <p>
-        const text = p.innerText.trim().toLowerCase().replace(/\s+/g, '-');
-        p.classList.add(text);  // Add a class based on the text content
-      }
-    });
-
-    console.log('✅ All <p> tags are now named and classed!');
-  });
+// Loop through each <p> tag
+pTags.forEach(p => {
+  // Check if the <p> tag contains the dot icon
+  if (p.querySelector('.icon.icon-dot')) {
+    // Add the class 'dot' to the <p> tag
+    p.classList.add('dot');
+  } else {
+    // If it doesn't contain a dot icon, add the class based on its text content
+    const className = p.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+    p.classList.add(className);
+  }
 });
