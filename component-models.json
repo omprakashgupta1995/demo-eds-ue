@@ -120,19 +120,7 @@
           {
             "name": "test1",
             "value": "test1"
-          },
-          {
-            "name": "my-Footer-Seg1",
-            "value": "my-Footer-Seg1"
-          },
-          {
-            "name": "my-Footer-Seg2",
-            "value": "my-Footer-Seg2"
-          },   {
-            "name": "my-Footer-Seg2",
-            "value": "my-Footer-Seg2"
           }
-
         ]
       }
     ]
@@ -510,6 +498,47 @@
         "name": "api-url",
         "value": "",
         "label": "API URL",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "kainsai-teaser",
+    "fields": [
+  
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image2",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_image2Alt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text1",
+        "value": "",
+        "label": "Text",
         "valueType": "string"
       }
     ]
