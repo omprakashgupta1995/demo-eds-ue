@@ -437,7 +437,7 @@
           }
         },
         {
-          "title": "kainsai teaser item",
+          "title": "kainsai accordian item",
           "id": "kainsai-accordian-item",
           "plugins": {
             "xwalk": {
