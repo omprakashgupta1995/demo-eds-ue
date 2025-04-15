@@ -518,35 +518,33 @@
         "component": "reference",
         "valueType": "string",
         "name": "col1_image",
-        "label": "Image",
-        "multi": false
+        "label": "Image"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2_imageAlt",
+        "name": "col1_imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col3_image2",
-        "label": "Image",
-        "multi": false
+        "name": "col1_img",
+        "label": "Image1"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col4_image2Alt",
-        "label": "Alt",
+        "name": "col1_alt",
+        "label": "Alt1",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "col5_text2",
+        "name": "richtext",
         "value": "",
-        "label": "desktop-view-text",
+        "label": "Text",
         "valueType": "string"
       }
     ]
