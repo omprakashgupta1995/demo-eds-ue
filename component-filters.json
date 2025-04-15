@@ -35,7 +35,9 @@
       "nerolac-accordion-right",
       "nerolac-accordion-left",
       "nal-item",
-      "my-video"
+      "my-video",
+      "nerolac-testimonial",
+      "nerolac-testimonial-item"
     ]
   },
   {
