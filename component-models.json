@@ -247,7 +247,7 @@
     ]
   },
   {
-    "id": "carousel",
+    "id": "hero-banner-item",
     "fields": [
       {
         "component": "reference",
