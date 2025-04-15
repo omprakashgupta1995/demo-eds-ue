@@ -540,6 +540,13 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text2",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
