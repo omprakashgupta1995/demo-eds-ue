@@ -487,6 +487,12 @@
             "value": "secondary"
           }
         ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
       }
     ]
   }

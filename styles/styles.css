@@ -331,8 +331,19 @@ main .columnflex-container{
   padding-top: 25px;
 }
 
-main .usp-features{
-  background-color: #131313;
+main .highlight{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+}
+
+.highlight .default-content-wrapper {
+  gap: 8px;
+  display: flex;
+  align-items: center;
 }
 
 main .naming h1{
@@ -354,6 +365,27 @@ main .naming h1{
   text-align: center;
   color:#0D2042;
 }
+
+.highlight .default-content-wrapper p{
+  /* font-family: Gotham Book; */
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color:#262626;
+}
+
+.highlight .default-content-wrapper p .icon-arrow{
+  color: #000;
+  width: 5.55px;
+  height: 9.62px;
+}
+
+main .usp-features{
+  background-color: #131313;
+}
+
+
 
 main .ticker .default-content-wrapper{
   display: flex;
@@ -387,4 +419,10 @@ p.top-user-rated {
   letter-spacing: 0%;
   vertical-align: bottom;
   color: #0D2042;
+}
+
+main .hero-banner-container{
+  display: flex;
+  width: 100%;
+  gap: 24px;
 }

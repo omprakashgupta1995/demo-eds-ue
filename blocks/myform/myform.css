@@ -53,7 +53,7 @@
     font-weight: normal;
   }
   
-  .myform input,
+  
   .myform select,
   .myform textarea {
     box-sizing: border-box;
@@ -73,6 +73,19 @@
     resize: vertical;
   }
   
+  .myform input{
+    gap: 10px;
+    border-radius: 8px;
+    border: 0.5px solid #B0B6C1;
+    padding: 3px 8px;
+    font-weight: 700;
+    font-size:14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    color: #2E3E5C;
+    
+  }
+
   .myform input:hover,
   .myform select:hover,
   .myform textarea:hover {
@@ -168,3 +181,47 @@
   .myform .toggle-wrapper input:checked + .slider::before {
     transform: translateX(24px);
   }
+
+  .heading-wrapper h2{
+    /* font-family: Typeface/Family/Body; */
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #001640;
+  }
+
+  .text-wrapper #form-name-label, .myform fieldset > legend, .email-wrapper #form-label-2{
+    /* font-family: Typeface/Family/Body; */
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: #0D2042;
+  }
+
+  .plaintext-wrapper p{
+    /* font-family: Typeface/Family/Body; */
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #3B4A66;
+  }
+
+  .submit-wrapper button{
+    gap: 8px;
+    border-radius: 16px;
+    padding: 16px 32px;
+    background: #001438;
+    border: 1px solid #001438;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    color: #FFF;
+  }
+
+  .myform-wrapper{
+    width: 340px;
+  }  
