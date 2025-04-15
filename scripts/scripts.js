@@ -160,3 +160,23 @@ async function loadPage() {
 }
 
 loadPage();
+
+
+// Select the wrapper inside the bottom banner section
+const wrapper = document.querySelector('.bottom-banner .default-content-wrapper');
+
+// Get all child elements of the wrapper
+const children = Array.from(wrapper.children);
+
+// Keep the first <p> tag and move the rest
+const elementsToMove = children.slice(1);
+
+// Create a new div to hold the moved elements
+const newDiv = document.createElement('div');
+newDiv.className = 'banner-bottom-text'; // Name the class as needed
+
+// Append the remaining elements into the new div
+elementsToMove.forEach(el => newDiv.appendChild(el));
+
+// Append the new div back into the original wrapper
+wrapper.appendChild(newDiv);

@@ -70,6 +70,10 @@
     --heading-font-size-xs: 18px;
   }
 }
+*{
+  padding: 0;
+  margin: 0;
+}
 
 body {
   display: none;
@@ -351,5 +355,62 @@ main .birla-top-banner-container{
   border-radius: 100px;
   padding: 8px 16px;
   color: #0D2042;
+
+}
+/* .bottom-banner .default-content-wrapper p{
+  position: relative;
+} */
+.bottom-banner{
+  position: relative;
+}
+
+.bottom-banner .default-content-wrapper .banner-bottom-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+}
+
+.banner-bottom-text h1,.banner-bottom-text p{
+  padding: 0;
+  margin: 0;
+}
+
+.banner-bottom-text h1{
+  /* font-family: Typeface/Family/Heading; */
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #0D2042;
+
+}
+
+.banner-bottom-text p{
+  /* font-family: Typeface/Family/Body; */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #0D2042;
+  
+}
+
+.banner-bottom-text .button-container .button{
+  background-color: #001438;
+  padding: 16px 32px;
+  border-radius: 16px;
+    /* font-family: Typeface/Family/Heading; */
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+
 
 }
