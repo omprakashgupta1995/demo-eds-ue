@@ -542,5 +542,24 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"kainsai-accordian-item",
+    "fields":[
+      {
+        "component": "text",
+        "name": "text",
+        "value": "",
+        "label": "Question",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text2",
+        "value": "",
+        "label": "Answer",
+        "valueType": "string"
+      }
+    ]
   }
 ]

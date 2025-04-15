@@ -28,7 +28,8 @@
       "myvideo",
       "demoblock",
       "form-block",
-      "kainsai-teaser"
+      "kainsai-teaser",
+      "kainsai-accordian"
     ]
   },
   {
@@ -99,5 +100,12 @@
   "components":[
     "birla-video"
   ]
+},
+{
+  "id":"kainsai-accordian",
+  "components":[
+    "kainsai-accordian-item"
+  ]
 }
+
 ]
