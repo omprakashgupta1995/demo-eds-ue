@@ -1,8 +1,14 @@
+/* stylelint-disable */
+
 footer {
   width: 100%;
   background-color: #00205C;
   font-size: var(--body-font-size-xs);
   color: #fff;
+}
+
+.subscribe-footer{
+  padding-bottom: 30px;
 }
 
 .subscribe-footer .default-content-wrapper{
@@ -35,13 +41,18 @@ footer {
   letter-spacing: .5px;
 }
 
+.main-footer{
+  padding: 40px 0;
+  border-top: 1px solid rgba(248, 243, 243, 0.29);
+}
+
 .main-footer img{
   filter: brightness(0) invert(1);
 }
  
-.main-footer .footer-address-wrapper .footer-address div > div:first-child{
+/* .main-footer .footer-address-wrapper .footer-address div > div:first-child{
   display: none;
-}
+} */
 
 /* footer .footer > div {
   margin: auto; 
