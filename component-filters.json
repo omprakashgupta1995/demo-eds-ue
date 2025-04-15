@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "custom-rt",
-      "faq"
+      "faq",
+      "carousel"
     ]
   },
   {
@@ -45,6 +46,12 @@
     "id":"custom-rt",
     "components":[
       "custom-rt-text"
+    ]
+  },
+  {
+    "id":"carousel",
+    "components":[
+      "hero-banner-item"
     ]
   }
 ]
