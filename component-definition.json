@@ -461,6 +461,22 @@
               }
             }
           }
+        },
+        {
+          "title": "four-card",
+          "id": "four-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "four-card",
+                  "model": "four-card",
+                  "filter": "four-card"
+                }
+              }
+            }
+          }
         }
       ]
     }
