@@ -1,61 +1,49 @@
-/* Carousel wrapper */
-.carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
-    box-sizing: border-box;
-  }
-  
-  /* Inner track (scrollable) */
-  .carousel-track {
+/* Make sure the wrapper can scroll horizontally */
+.carousel-2.block {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    overflow: auto hidden;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    gap: 1rem;
+    padding: 1rem;
+    -webkit-overflow-scrolling: touch; /* For iOS smooth scrolling */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
   }
   
-  .carousel-track::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+  /* Hide scrollbars (optional) */
+  .carousel-2.block::-webkit-scrollbar {
+    display: none;
   }
   
-  /* Slide styles */
-  .carousel-slide {
+  /* The children are treated as individual slides */
+  .carousel-2-child {
     flex: 0 0 auto;
-    width: 300px;
-    margin-right: 16px;
+    width: calc(100% / 1.2); /* default for mobile */
     scroll-snap-align: start;
-    background: #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-size: 1.2em;
-    text-align: center;
+
   }
-  
-  /* Navigation buttons */
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background: #000;
-    border: none;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
+
+  .carousel-2-child div{
+    width: 331px;
+    height: 387px;
+    border-radius: 16.33px;
+
   }
-  
-  .carousel-button.prev {
-    left: 10px;
+
+  .carousel-2-container .carousel-2-wrapper .carousel-2 .carousel-2-child div picture{
+    width: 331px;
+    height: 387px;
+    border-radius: 16.33px;
+    display: inline-block;
   }
-  
-  .carousel-button.next {
-    right: 10px;
+
+  .carousel-2-container .carousel-2-wrapper .carousel-2 .carousel-2-child{
+    width: 331px;
+    height: 387px;
   }
-  
+
+  .carousel-2-container .carousel-2-wrapper{
+    margin: 0;
+    padding: 0;
+  }

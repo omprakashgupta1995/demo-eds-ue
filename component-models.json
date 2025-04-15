@@ -120,6 +120,14 @@
           {
             "name": "naming",
             "value": "naming"
+          },
+          {
+            "name": "select",
+            "value": "select"
+          },
+          {
+            "name": "cards",
+            "value": "cards"
           }
         ]
       }
