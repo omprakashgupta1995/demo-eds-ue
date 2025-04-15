@@ -444,6 +444,21 @@
               }
             }
           }
+        },
+        {
+          "title": "carousel-2-item",
+          "id": "carousel-2-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "carousel-2",
+                  "model": "carousel-2"
+                }
+              }
+            }
+          }
         }
       ]
     }
