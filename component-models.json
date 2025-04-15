@@ -518,7 +518,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "image1",
-        "label": "Image 2"
+        "label": "Image 1"
       },
       {
         "component": "text",
