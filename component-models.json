@@ -116,6 +116,10 @@
           {
             "name": "subscribe-footer",
             "value": "subscribe-footer"
+          },
+          {
+            "name": "main-footer",
+            "value": "main-footer"
           }
         ]
       }

@@ -1,6 +1,6 @@
 footer {
   width: 100%;
-  background-color: blue;
+  background-color: #00205C;
   font-size: var(--body-font-size-xs);
   color: #fff;
 }
@@ -17,6 +17,12 @@ footer {
   margin: 0;
   border-left: 2px solid red;
   padding-left: 20px;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .subscribe-footer .default-content-wrapper p a{
