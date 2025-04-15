@@ -28,6 +28,7 @@
       "trials",
       "my-form",
       "footer-address",
+      "footer-address-item",
       "fragment"
     ]
   },
@@ -75,5 +76,11 @@
     "components": [
       "oona-block-3-item"
     ]
+  },
+  {
+    "id": "footer-address",
+    "components": [
+      "footer-address-item"
+    ] 
   }
 ]

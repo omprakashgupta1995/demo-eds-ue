@@ -395,7 +395,7 @@
     ]
   },
   {
-    "id": "footer-address",
+    "id": "footer-address-item",
     "fields": [
       {
         "component": "reference",
