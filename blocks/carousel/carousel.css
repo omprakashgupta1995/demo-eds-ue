@@ -1,5 +1,6 @@
 .carousel .carousel-slides-container {
     position: relative;
+    height: 535px;
   }
   
   .carousel .carousel-slides,
@@ -14,6 +15,7 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     overflow: scroll clip;
+    height: 535px;
   }
   
   .carousel .carousel-slides::-webkit-scrollbar {
@@ -150,4 +152,17 @@
     .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
       --slide-content-width: auto;
     }
+  }
+  
+  .carousel-container .carousel-wrapper{
+    margin: 0;
+    width: -webkit-fill-available;
+    padding-right: 0;
+  }
+
+  .carousel-container{
+    display: flex;
+    flex-direction: row;
+    padding: 0 ;
+    gap: 24px;
   }

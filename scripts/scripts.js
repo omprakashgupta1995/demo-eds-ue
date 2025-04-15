@@ -176,17 +176,23 @@ async function loadPage() {
 loadPage();
 
 // Select all the <p> tags inside the .default-content-wrapper
-const pTags = document.querySelectorAll('.default-content-wrapper p');
+document.addEventListener('DOMContentLoaded', () => {
+  const pTags = document.querySelectorAll('.default-content-wrapper p');
 
-// Loop through each <p> tag
-pTags.forEach(p => {
-  // Check if the <p> tag contains the dot icon
-  if (p.querySelector('.icon.icon-dot')) {
-    // Add the class 'dot' to the <p> tag
-    p.classList.add('dot');
-  } else {
-    // If it doesn't contain a dot icon, add the class based on its text content
-    const className = p.textContent.trim().toLowerCase().replace(/\s+/g, '-');
-    p.classList.add(className);
+  if (!pTags.length) {
+    console.warn('No <p> tags found inside .default-content-wrapper');
   }
+
+  pTags.forEach((p, index) => {
+    console.log(`Processing <p> #${index + 1}: "${p.textContent.trim()}"`);
+
+    if (p.querySelector('.icon.icon-dot')) {
+      p.classList.add('dot');
+      console.log('→ Added class: dot');
+    } else {
+      const className = p.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+      p.classList.add(className);
+      console.log(`→ Added class: ${className}`);
+    }
+  });
 });

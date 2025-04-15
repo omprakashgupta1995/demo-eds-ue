@@ -217,17 +217,6 @@ main img {
   height: auto;
 }
 
-.icon {
-  display: inline-block;
-  height: 24px;
-  width: 24px;
-}
-
-.icon img {
-  height: 100%;
-  width: 100%;
-}
-
 /* sections */
 
 /* main > .section {
@@ -401,7 +390,7 @@ main .ticker .default-content-wrapper{
 }
 
 /* Style for p tags with class 'dot' */
-p.dot span.icon{
+p.dot span.icon-dot{
   width: 5px;
   height: 5px;
   color: #0D2042;
@@ -411,9 +400,7 @@ p.dot span.icon{
 }
 
 /* You can also target more dynamic classes if needed, for example: */
-p.trained,
-p.reliable,
-p.top-user-rated {
+main .ticker .default-content-wrapper p{
   font-size: 16px;
   font-weight: 700;
   line-height: 130%;

@@ -1,0 +1,61 @@
+/* Carousel wrapper */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+  
+  /* Inner track (scrollable) */
+  .carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+  /* Slide styles */
+  .carousel-slide {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 16px;
+    scroll-snap-align: start;
+    background: #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  /* Navigation buttons */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: #000;
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  

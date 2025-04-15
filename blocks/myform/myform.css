@@ -2,6 +2,7 @@
     display: grid;
     grid-auto-flow: row;
     align-items: center;
+    gap: 4px;
   }
   
   .myform fieldset {
@@ -141,8 +142,9 @@
 
   .myform-container .myform-wrapper{
     width: 340px;
-    padding: 0;
+    padding-right: 83px;
     margin: 0;
+    padding-left: 0;
   } 
 
   .myform-container .myform-wrapper .myform form{
@@ -167,3 +169,4 @@
   display: flex;
     gap: 6px;
 }
+
