@@ -470,14 +470,21 @@
     "id": "option-modal",
     "fields": [
       {
-        "component": "multiselect",
-        "valueType": "string",
-        "name": "classes",
-        "label": "Style",
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
         "options": [
           {
-            "name": "Primary",
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
             "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
           }
         ]
       }
