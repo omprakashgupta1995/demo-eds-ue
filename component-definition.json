@@ -364,7 +364,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Footer Address Item",
-                  "model": "footer-address-item",
+                  "model": "footer-address-item"
                 }
               }
             }
