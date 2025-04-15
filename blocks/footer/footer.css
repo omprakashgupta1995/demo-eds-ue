@@ -46,9 +46,9 @@ footer {
   border-top: 1px solid rgba(248, 243, 243, 0.29);
 }
 
-.main-footer img{
+/* .main-footer img{
   filter: brightness(0) invert(1);
-}
+} */
  
 /* .main-footer .footer-address-wrapper .footer-address div > div:first-child{
   display: none;
