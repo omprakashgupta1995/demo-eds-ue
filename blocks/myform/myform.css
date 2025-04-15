@@ -11,21 +11,12 @@
     border: none;
     padding: 0;
   }
-  
-  .myform form > .field-wrapper + .field-wrapper,
-  .myform form fieldset .field-wrapper + .field-wrapper {
-    margin-top: 24px;
-  }
-  
-  .myform form > .selection-wrapper + .selection-wrapper,
-  .myform form fieldset .selection-wrapper + .selection-wrapper {
-    margin-top: 0.25em;
-  }
-  
+    
+ 
   @media (width >= 600px) {
     .myform fieldset {
       grid-template-columns: repeat(2, auto);
-      gap: 0.25em 24px;
+      
     }
   
     .myform form > .selection-wrapper + .selection-wrapper,
@@ -41,38 +32,11 @@
     }
   }
   
-  .myform label,
-  .myform fieldset > legend {
-    margin-bottom: 0.25em;
-    font-size: var(--body-font-size-s);
-    font-weight: 700;
-  }
-  
   .myform .selection-wrapper label {
     margin: 0;
     font-weight: normal;
   }
-  
-  
-  .myform select,
-  .myform textarea {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0.5em;
-    border-radius: 4px;
-    border: 1px solid var(--dark-color);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-size: var(--body-font-size-s);
-    transition: border-color 0.2s;
-  }
-  
-  .myform textarea {
-    resize: vertical;
-  }
-  
+
   .myform input{
     gap: 10px;
     border-radius: 8px;
@@ -135,53 +99,6 @@
     margin-inline-start: 1ch;
   }
   
-  .myform .toggle-wrapper .switch {
-    position: relative;
-    display: inline-block;
-    width: 52px;
-    height: 28px;
-  }
-  
-  .myform .toggle-wrapper input {
-    opacity: 0;
-    width: 52px;
-    height: 28px;
-  }
-  
-  .myform .toggle-wrapper .slider {
-    position: absolute;
-    cursor: pointer;
-    inset: 0;
-    border-radius: 28px;
-    background-color: var(--dark-color);
-    transition: background-color 0.2s;
-  }
-  
-  .myform .toggle-wrapper .slider::before {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 2px;
-    left: 2px;
-    border-radius: 50%;
-    background-color: var(--background-color);
-    transition: transform 0.2s;
-  }
-  
-  .myform .toggle-wrapper input:checked + .slider {
-    background-color: var(--link-color);
-  }
-  
-  .myform .toggle-wrapper input:focus + .slider {
-    outline: 2px solid var(--link-color);
-    outline-offset: 2px;
-  }
-  
-  .myform .toggle-wrapper input:checked + .slider::before {
-    transform: translateX(24px);
-  }
-
   .heading-wrapper h2{
     /* font-family: Typeface/Family/Body; */
   font-weight: 700;
@@ -222,6 +139,31 @@
     color: #FFF;
   }
 
-  .myform-wrapper{
+  .myform-container .myform-wrapper{
     width: 340px;
-  }  
+    padding: 0;
+    margin: 0;
+  } 
+
+  .myform-container .myform-wrapper .myform form{
+    margin: 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.field-wrapper #form-f1 .number-wrapper #form-1 {
+  width: 47px;
+}
+
+.fieldset-wrapper #form-f2 .number-wrapper input{
+  width: 32px;
+  margin: 0;
+  
+}
+
+.fieldset-wrapper #form-f2{
+  display: flex;
+    gap: 6px;
+}
