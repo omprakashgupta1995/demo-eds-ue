@@ -536,13 +536,6 @@
       },
       {
         "component": "richtext",
-        "name": "col1_text1",
-        "value": "",
-        "label": "Mobile-view-text",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
         "name": "col1_text2",
         "value": "",
         "label": "desktop-view-text",
