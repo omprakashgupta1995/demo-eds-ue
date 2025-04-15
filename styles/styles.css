@@ -330,3 +330,46 @@ main .columnflex-container{
   flex-direction: row;
   padding-top: 25px;
 }
+
+main .usp-features{
+  background-color: #131313;
+}
+
+main .section h1{
+  /* font-family: Manrope; */
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: center;
+  color:#0D2042;
+}
+
+main .section p {
+  /* font-family: Typeface/Family/Body; */
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: center;
+  color:#0D2042;
+}
+
+[data-section-name="usp-features"] li[data-name="trained"]{
+  color: green;
+  
+}
+
+[data-section-name="usp-features"] li[data-name="reliable"] p{
+  color: blue;
+}
+
+[data-section-name="usp-features"] li[data-name="top-user-rated"] p{
+  color: orange;
+}
+
+[data-section-name="usp-features"] li[data-name="dot"] p .icon-dot{
+  width: 5px;
+  height: 5px;
+  color:#0D2042; 
+}
