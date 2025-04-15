@@ -413,13 +413,13 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_image",
+        "name": "col1_img",
         "label": "Image1"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_imageAlt",
+        "name": "col1_alt",
         "label": "Alt1",
         "value": ""
       },
