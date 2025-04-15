@@ -523,20 +523,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_image2",
+        "name": "col2_image2",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_image2Alt",
+        "name": "col2_image2Alt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "col1_text2",
+        "name": "col3_text2",
         "value": "",
         "label": "desktop-view-text",
         "valueType": "string"
