@@ -124,6 +124,10 @@
           {
             "name": "city-section",
             "value": "city-section"
+          },
+          {
+            "name": "banner-section",
+            "value": "banner-section"
           }
         ]
       }
