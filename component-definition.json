@@ -542,7 +542,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Embed Video",
+                  "name": "Embed",
                   "model": "embed",
                   "filter":"embed",
                   "url":"/blocks/embed"

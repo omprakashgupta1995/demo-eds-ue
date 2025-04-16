@@ -1,4 +1,4 @@
-/* eslint-disable*/
+/*eslint-disable*/
 /*
  * Embed Block
  * Show videos and social posts directly on your page

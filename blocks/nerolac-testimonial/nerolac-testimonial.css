@@ -9,4 +9,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 16px;
+    padding: 6px;
+    border-radius: 16px;
+
+}
+.nerolac-testimonial div div:nth-child(2){
+    display: flex;
+    flex-direction: row;
+}
+.nerolac-testimonial div div:nth-child(2) p{
+    margin: 0;
+    /* font-family: Typeface/Family/Body; */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    color: #001438;
+
+}
+.nerolac-testimonial div div:nth-child(2) ul{
+    font-size: 12px;
 }
