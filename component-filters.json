@@ -26,7 +26,15 @@
       "teaser-cards",
       "faq",
       "my-form",
+      "carousel",
       "fragment"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "hero-banner",
+      "embed"
     ]
   },
   {

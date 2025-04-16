@@ -1,3 +1,4 @@
+import { fetchPlaceholders } from '../../scripts/aem.js';
 import { div, li, ul } from '../../scripts/dom-helpers.js';
 import buildAccordianBlock from '../accordion/accordion.js';
 
@@ -6,7 +7,10 @@ export default async function decorate(block) {
   const a = block.querySelector('a');
   const path = a?.href.trim();
   // a.remove();
-  const resp = await fetch(path);
+  const placeholders = await fetchPlaceholders();
+  console.log(placeholders);
+  
+  const resp = await fetch(placeholders.faqUrl);
   const respData = await resp.json();
   const { data } = respData;
   const list = [li('All')];

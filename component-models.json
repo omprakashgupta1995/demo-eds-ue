@@ -605,5 +605,126 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Image",
+        "valueType": "string",
+        "options" : [
+          {
+            "name" : "Theme" ,
+            "children" : [
+              {
+                "name" : "Dark",
+                "value" : "dark"
+              },
+              {
+                "name" : "White",
+                "value" : "white"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "col1_bannerAlt",
+        "value": "",
+        "label": "Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col1_mobbanner",
+        "value": "",
+        "label": "Mobile Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_mobbannerAlt",
+        "value": "",
+        "label": "Mobile Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_desc",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_banner",
+        "value": "",
+        "label": "Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_bannerAlt",
+        "value": "",
+        "label": "Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col1_mobbanner",
+        "value": "",
+        "label": "Mobile Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_mobbannerAlt",
+        "value": "",
+        "label": "Mobile Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_desc",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "embed-url",
+        "value": "",
+        "label": "Video URL",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "desc",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "rating",
+        "value": "",
+        "label": "Rating",
+        "valueType": "number"
+      }
+    ]
   }
 ]
