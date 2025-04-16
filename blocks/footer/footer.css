@@ -42,11 +42,15 @@ footer {
 }
 
 .main-footer{
+  width: 100%;
   padding-top: 40px;
   border-top: 1px solid rgba(248, 243, 243, 0.29);
   display: flex;
 }
 
+.main-footer .footer-addess-wrapper .footer-address{
+  width: 25%;
+}
 /* .main-footer .footer-address-wrapper .footer-address div > div p:last-child{
   display: none;
 } */
@@ -55,6 +59,12 @@ footer {
   filter: brightness(0) invert(1);
 } */
  
+.main-footer .footer-link-accordion-wrapper .footer-link-accordion{
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
 /* footer .footer > div {
   margin: auto; 

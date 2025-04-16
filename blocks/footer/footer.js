@@ -17,4 +17,24 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
-}
+
+  // === ADDING CLASSES DYNAMICALLY ===
+  const innerDivs = block.querySelectorAll('.footer-address.block > div > div');
+
+  innerDivs.forEach((div, index) => {
+    div.classList.add(`footer-inner-${index + 1}`); // Add class like footer-inner-1, footer-inner-2
+
+    // Add class to <p>, <h3>, and <ul> inside each div
+    div.querySelectorAll('p').forEach((p, i) => {
+      p.classList.add(`footer-paragraph-${i + 1}`);
+    });
+
+    div.querySelectorAll('h3').forEach((h3, i) => {
+      h3.classList.add(`footer-heading-${i + 1}`);
+    });
+
+    div.querySelectorAll('ul').forEach((ul, i) => {
+      ul.classList.add(`footer-list-${i + 1}`);
+    });
+  });
+} 
