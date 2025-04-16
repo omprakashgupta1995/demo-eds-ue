@@ -738,7 +738,7 @@
       },
       {
         "component": "richtext",
-        "name": "column1text",
+        "name": "column2text",
         "value": "",
         "label": "Description",
         "valueType": "string"
