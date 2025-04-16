@@ -27,7 +27,14 @@
       "faq",
       "my-form",
       "carousel",
+      "accordian",
       "fragment"
+    ]
+  },
+  {
+    "id": "accordian",
+    "components": [
+      "accordian-item"
     ]
   },
   {

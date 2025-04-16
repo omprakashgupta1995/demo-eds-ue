@@ -698,5 +698,51 @@
         "valueType": "number"
       }
     ]
+  },
+  {
+    "id": "accordian",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Style",
+        "valueType": "string",
+        "options" : [
+          {
+            "name" : "Theme",
+            "children" : [
+              {
+                "name" : "Dark",
+                "value" : "dark"
+              },
+              {
+                "name" : "White",
+                "value" : "white"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordian-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "column1text",
+        "value": "",
+        "label": "Head",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "column1text",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      }
+    ]
   }
 ]
