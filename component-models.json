@@ -152,6 +152,10 @@
           {
             "name": "city",
             "value": "city"
+          },
+          {
+            "name": "subscribe-footer",
+            "value": "subscribe-footer"
           }
 
         ]
