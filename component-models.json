@@ -425,7 +425,14 @@
       },
       {
         "component": "richtext",
-        "name": "richtext",
+        "name": "col2_richtext1",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_richtext2",
         "value": "",
         "label": "Text",
         "valueType": "string"

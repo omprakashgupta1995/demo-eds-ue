@@ -44,15 +44,17 @@ footer {
 .main-footer{
   padding-top: 40px;
   border-top: 1px solid rgba(248, 243, 243, 0.29);
+  display: flex;
 }
 
-/* .main-footer img{
+/* .main-footer .footer-address-wrapper .footer-address div > div p:last-child{
+  display: none;
+} */
+
+/* .main-footer .footer-address-wrapper .footer-address div > div p :first-child{
   filter: brightness(0) invert(1);
 } */
  
-/* .main-footer .footer-address-wrapper .footer-address div > div:first-child{
-  display: none;
-} */
 
 /* footer .footer > div {
   margin: auto; 
