@@ -649,10 +649,21 @@
         "component": "text",
         "name": "url",
         "label": "Embed URL",
-        "valueType": "string",
-        "value": "https://example.com/embed-url"
+        "valueType": "string"
       }
     ]
-  }
-  
+  },
+  {
+    "id": "rating",
+    "fields": [
+      {
+        "component": "number",
+        "name": "ratingValue",
+        "label": "Rating Value",
+        "minValue": 1,
+        "maxValue": 5,
+        "value": 3
+      }
+    ]
+  }  
 ]

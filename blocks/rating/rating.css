@@ -1,0 +1,21 @@
+.star-rating {
+    display: flex;
+  }
+  
+  .star {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zY3JlZW5zaG90L3N2ZyI+PHBhdGggZD0iTTEyIDBMNiA3Ljc2TDExLjQgMS4wM3YzLjg0TDEwIDBMNy41OTQgOC4zNzciLz48L3N2Zz4=');
+    margin-right: 4px;
+  }
+  
+  .star.filled {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zY3JlZW5zaG90L3N2ZyI+PHBhdGggZD0iTTEyIDBMNiA3Ljc2TDExLjQgMS4wM3YzLjg0TDEwIDBMNy41OTQgOC4zNzciLz48L3N2Zz4=');
+  }
+  
+  .star.empty {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zY3JlZW5zaG90L3N2ZyI+PHBhdGggZD0iTTEyIDBMNiA3Ljc2TDExLjQgMS4wM3YzLjg0TDEwIDBMNy41OTQgOC4zNzciLz48L3N2Zz4=');
+  }
+  

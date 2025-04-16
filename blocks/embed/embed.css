@@ -1,8 +1,8 @@
 .embed {
     width: unset;
     text-align: center;
-    max-width: 800px;
-    margin: 32px auto;
+    
+    
   }
   
   .embed > div {
@@ -59,4 +59,15 @@
     border-left: 6px solid;
     top: 4px;
     left: 7px;
+  }
+
+  .embed-video .embed-wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .embed-video{
+    display: flex;
+    justify-content: center;
   }
