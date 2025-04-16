@@ -700,7 +700,7 @@
     ]
   },
   {
-    "id": "accordian",
+    "id": "accordion",
     "fields": [
       {
         "component": "multiselect",

@@ -27,12 +27,12 @@
       "faq",
       "my-form",
       "carousel",
-      "accordian",
+      "accordion",
       "fragment"
     ]
   },
   {
-    "id": "accordian",
+    "id": "accordion",
     "components": [
       "accordian-item"
     ]
