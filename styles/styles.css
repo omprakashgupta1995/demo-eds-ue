@@ -1,3 +1,4 @@
+/* stylelint-disable */
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -499,4 +500,53 @@ main .select .default-content-wrapper{
 
 main .select{
   margin: 0;
+}
+
+main .testimonial .default-content-wrapper h4{
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color:#0D2042;
+}
+
+main .testimonial .default-content-wrapper p{
+  color:#0D2042;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+main .city .default-content-wrapper h4{
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color:#0D2042;
+  padding-bottom: 40px;
+}
+
+main .city .default-content-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main .city .default-content-wrapper p{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color:#0D2042;
+  gap: 8px;
+  border-radius: 100px;
+  padding: 8px 16px;
+  border: 0.5px solid #BFC4CD;
+  background: #FFFFFF;
 }

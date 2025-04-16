@@ -128,7 +128,32 @@
           {
             "name": "cards",
             "value": "cards"
+          },
+          {
+            "name": "testimonial",
+            "value": "testimonial"
+          },
+          {
+            "name": "embed-video",
+            "value": "embed-video"
+          },
+          {
+            "name": "video",
+            "value": "video"
+          },
+          {
+            "name": "faq",
+            "value": "faq"
+          },
+          {
+            "name": "banner",
+            "value": "banner"
+          },
+          {
+            "name": "city",
+            "value": "city"
           }
+
         ]
       }
     ]
@@ -616,5 +641,18 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "text",
+        "name": "url",
+        "label": "Embed URL",
+        "valueType": "string",
+        "value": "https://example.com/embed-url"
+      }
+    ]
   }
+  
 ]

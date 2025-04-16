@@ -2,21 +2,34 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
-  
+
+  .four-card.block div {
+    height: 100%;
+  }
+
+  .four-card.block div div {
+    height: 100%;
+    align-content: flex-end;
+  }
+
+  .four-card.block div div p{
+    padding-bottom: 32px;
+    width: 173px;
+  }
+
   /* Make the text overlay the image */
   .four-card.block > div:last-child {
     position: absolute;
-    bottom: 16px; /* adjust for padding */
     left: 16px;
     right: 16px;
-    color: white;
-    z-index: 2;
-    background: black; /* optional for better contrast */
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 600;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0%;
+
   }
   
   /* Optional: Make sure the image takes full space */
@@ -24,11 +37,21 @@
   .four-card.block img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   
   main .four-card-container .four-card-wrapper{
     width: 286px;
     height: 312px;
     border-radius: 11.08px;
+    margin: 0;
+    padding: 0;
   }
+
+  main .four-card-container{
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+    justify-content: center;
+  }
+  
