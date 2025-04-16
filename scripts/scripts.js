@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import {
   loadHeader,
   loadFooter,
@@ -174,3 +175,4 @@ async function loadPage() {
 }
 
 loadPage();
+

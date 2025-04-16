@@ -25,6 +25,7 @@ header nav {
   padding: 0 24px;
   font-family: var(--body-font-family);
 }
+
 header nav[aria-expanded='true'] {
   grid-template:
     'hamburger brand' var(--nav-height)
