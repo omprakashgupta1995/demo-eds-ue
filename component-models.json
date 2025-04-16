@@ -460,7 +460,7 @@
     ]
   },
   {
-    "id": "banner",
+    "id": "banner-section",
     "fields":[
       {
         "component": "reference",

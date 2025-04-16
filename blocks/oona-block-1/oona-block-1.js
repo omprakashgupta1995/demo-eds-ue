@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default function decorate(block) {
   const outerdiv = block.children;
   // console.log(outerdiv);
