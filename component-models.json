@@ -120,6 +120,10 @@
           {
             "name": "main-footer",
             "value": "main-footer"
+          },
+          {
+            "name": "city-section",
+            "value": "city-section"
           }
         ]
       }

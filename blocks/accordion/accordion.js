@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default function decorate(block) {
   [...block.children].forEach((row) => {
     // decorate accordion item label

@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default function decorate(block) {
   const faqBlocks = block.querySelectorAll('.oona-block-3-wrapper .oona-block-3.block > div');
 
