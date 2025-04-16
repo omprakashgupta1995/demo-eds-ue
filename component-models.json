@@ -630,34 +630,6 @@
             ]
           }
         ]
-      },
-      {
-        "component": "text",
-        "name": "col1_bannerAlt",
-        "value": "",
-        "label": "Image Alt",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "col1_mobbanner",
-        "value": "",
-        "label": "Mobile Image",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "col1_mobbannerAlt",
-        "value": "",
-        "label": "Mobile Image Alt",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "col2_desc",
-        "value": "",
-        "label": "Description",
-        "valueType": "string"
       }
     ]
   },
