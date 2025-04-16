@@ -411,6 +411,42 @@ main .birla-top-banner-container{
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0%;
+}
 
+.nerolac-testimonial-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.nerolac-testimonial-container{
+  display: flex;
+  flex-direction: column;
+}
+.nerolac-testimonial-container .default-content-wrapper{
+  /* margin: 0;
+  padding: 0; */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+.nerolac-testimonial-container .default-content-wrapper p:nth-child(1){
+  /* font-family: Typeface/Family/Heading; */
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #0D2042;
+
+}
+.nerolac-testimonial-container .default-content-wrapper p:nth-child(2){
+  /* font-family: Typeface/Family/Heading; */
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #0D2042;
 
 }

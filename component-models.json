@@ -503,5 +503,18 @@
       }
       
     ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "value": "",
+        "label": "Embed URL",
+        "valueType": "string"
+      }
+      
+    ]
   }
 ]

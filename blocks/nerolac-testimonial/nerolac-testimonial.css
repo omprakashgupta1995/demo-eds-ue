@@ -1,0 +1,12 @@
+/* stylelint-disable*/
+.nerolac-testimonial{
+    display: flex;
+    gap: 32px;
+}
+.nerolac-testimonial div{
+    background: #EBECEF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
