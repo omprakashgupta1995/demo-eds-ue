@@ -544,6 +544,7 @@
                 "template": {
                   "name": "Embed Video",
                   "model": "embed",
+                  "filter":"embed",
                   "url":"/blocks/embed"
                 }
               }
