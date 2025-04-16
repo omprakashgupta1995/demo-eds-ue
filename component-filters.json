@@ -112,7 +112,7 @@
 ,{
   "id":"kainsai-address",
   "components":[
-    "kainsai address-item"
+    "kainsai-address-item"
   ]
 }
 ]
