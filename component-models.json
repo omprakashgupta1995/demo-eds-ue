@@ -599,25 +599,12 @@
         "name": "col1_image1",
         "label": "Image 1"
       },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "image1Alt",
-        "label": "image1Alt",
-        "value": ""
-      },
+  
       {
         "component": "reference",
         "valueType": "string",
         "name": "col1_image2",
         "label": "Image 2"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "image2Alt",
-        "label": "Image2 Alt",
-        "value": ""
       },
       {
         "component": "richtext",
