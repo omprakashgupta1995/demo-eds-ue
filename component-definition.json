@@ -442,7 +442,7 @@
                 "template": {
                   "name": "Accordion",
                   "filter": "accordian",
-                  "model": "accordian"
+                  "model": "accordion"
                 }
               }
             }
