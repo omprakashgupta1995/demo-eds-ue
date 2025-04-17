@@ -1,7 +1,9 @@
 /* eslint-disable */
 export default function decorate(block) {
-  const divs = Array.from(block.children);
-  
+  const Maindivs = Array.from(block.children);
+  Maindivs[0].classList.add('red');
+  const divs = Array.from(Maindivs.children);
+  divs[0].classList.add('blue');
 
   if (divs.length > 0) {
     divs[0].classList.add('mobile-Image');

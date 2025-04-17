@@ -132,6 +132,38 @@
           {
             "name": "bottom banner",
             "value": "bottom-banner"
+          },
+          {
+            "name": "Nerolac navSec",
+            "value": "nerolac-navsec"
+          },
+          {
+            "name": "Nerolac FormSec",
+            "value": "nerolac-formsec"
+          },
+          {
+            "name": "Nerolac purpleSlider",
+            "value": "nerolac-purpleslider"
+          },
+          {
+            "name": "Nerolac serviceSection",
+            "value": "nerolac-servicesection"
+          },
+          {
+            "name": "Nerolac chooseUs",
+            "value": "nerolac-chooseus"
+          },
+          {
+            "name": "Nerolac testimonials",
+            "value": "nerolac-testimonials"
+          },
+          {
+            "name": "Nerolac video",
+            "value": "nerolac-video"
+          },
+          {
+            "name": "Nerolac video",
+            "value": "nerolac-video"
           }
         ]
       }
