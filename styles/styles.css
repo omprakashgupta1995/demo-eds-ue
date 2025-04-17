@@ -576,6 +576,7 @@ main .banner .four-card-wrapper .four-card div div h3{
   color: #0D2042;
   margin: 0;
   padding: 0;
+  padding-top:70px
 }
 
 main .banner .four-card-wrapper .four-card div div picture{
@@ -611,7 +612,6 @@ main .banner.four-card-container .four-card-wrapper .four-card div div .button-c
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 4px;
   margin: 0;
   padding: 0;

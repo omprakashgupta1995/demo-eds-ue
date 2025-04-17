@@ -100,12 +100,6 @@ footer {
   align-items: center;
 }
 
-.footer-accordion-section .footer-accordion-answer{
-  display: flex;
-  flex-direction: row;
-  gap: 28px;
-}
-
 .footer-accordion-paragraph{
   font-weight: 700;
   line-height: 16px;
@@ -177,6 +171,10 @@ footer .footer p {
   .main-footer{
     border-top: none;
     padding-top: 0;
+  }
+
+  .footer-address-para-2{
+    display: block;
   }
 
   .footer-address-para-1{
