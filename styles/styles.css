@@ -618,3 +618,46 @@ main .banner.four-card-container .four-card-wrapper .four-card div div .button-c
   border-radius: 16px;
 
 }
+
+main .faq-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+main .faq-container .default-content-wrapper{
+  gap: 16px;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  background: #FDE8ED;
+  width: 430px;
+}
+
+main .faq-container .default-content-wrapper h3{
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #0D2042;
+}
+
+main .faq-container .default-content-wrapper p{
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #001438;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+main .faq-container .default-content-wrapper p span img{
+  width: 32px;
+  height: 32px;
+
+}
