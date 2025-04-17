@@ -95,5 +95,17 @@
       "mountain","text"
       
     ]
+  },
+  {
+    "id": "footer-address",
+    "components": [
+      "footer-address-item"
+    ] 
+  },
+  {
+    "id": "footer-link-accordion",
+    "components": [
+      "footer-link-accordion-item"
+    ]
   }
 ]

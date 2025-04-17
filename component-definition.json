@@ -511,29 +511,30 @@
           }
         },
         {
-          "title": "footer-address",
+          "title": "Footer Address",
           "id": "footer-address",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "footer-address",
-                  "filter": "footer-address"
+                  "name": "Footer Address",
+                  "filter": "footer-address",
+                  "model": "footer-address"
                 }
               }
             }
           }
         },
         {
-          "title": "footer-address-item",
+          "title": "Footer Address Item",
           "id": "footer-address-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "footer-address-item",
+                  "name": "Footer Address Item",
                   "model": "footer-address-item"
                 }
               }
@@ -541,35 +542,21 @@
           }
         },
         {
-          "title": "footer-link-accordion",
+          "title": "Footer Link Accordion",
           "id": "footer-link-accordion",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "footer-link-accordion",
-                  "filter": "footer-link-accordion"
+                  "name": "Footer Link Accordion",
+                  "filter":"footer-link-accordion",
+                  "model": "footer-link-accordion"
                 }
               }
             }
           }
-        },
-        {
-          "title": "footer-link-accordion-item",
-          "id": "footer-link-accordion-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "footer-link-accordion-item",
-                  "filter": "footer-link-accordion-item"
-                }
-              }
-            }
-          }
-        } 
+        }
       ]
     }
   ]

@@ -674,18 +674,37 @@
     ]
   },
   {
-    "id": "footer-link-accordion-item",
+    "id": "footer-address-item",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_img1",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_alt1",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_img2",
+        "label": "Image1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_alt2",
+        "label": "Alt",
+        "value": ""
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "richtext",
         "value": "",
         "label": "Text",
         "valueType": "string"
@@ -693,41 +712,20 @@
     ]
   },
   {
-    "id": "footer-address-item",
+    "id": "footer-link-accordion-item",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col1_image1",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_imageAlt1",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col1_image2",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_imageAlt2",
-        "label": "Alt",
-        "value": ""
+        "component": "richtext",
+        "name": "richtext1",
+        "value": "",
+        "label": "Question",
+        "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "col2_text",
+        "name": "richtext2",
         "value": "",
-        "label": "Text",
+        "label": "Answer",
         "valueType": "string"
       }
     ]
