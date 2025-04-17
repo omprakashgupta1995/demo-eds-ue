@@ -492,7 +492,6 @@
       {
         "component": "text",
         "name": "url",
-        "value": "",
         "label": "Embed URL",
         "valueType": "string"
       }
