@@ -266,3 +266,21 @@ main .looking-container{
   flex-direction: row-reverse;
   background-color: #482c77;
 }
+
+.navbar .default-content-wrapper{
+  display: flex;
+}
+.navbar .default-content-wrapper ul{
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+  list-style: none;
+}
+.navbar .default-content-wrapper ul li{
+  font-size: 16px;
+  color: grey;
+}
+.navbar .default-content-wrapper p picture img{
+    width: 230px;
+    height: 35px;
+}
