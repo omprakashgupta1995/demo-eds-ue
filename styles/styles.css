@@ -53,7 +53,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -112,12 +112,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -142,7 +159,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -228,22 +245,22 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
-  margin-top: 0;
+main>.section:first-of-type {
+  margin-top: 80px;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }
@@ -256,31 +273,51 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-main .experience-container{
+main .experience-container {
   display: flex;
   flex-direction: row-reverse;
 }
 
-main .looking-container{
+main .looking-container {
   display: flex;
   flex-direction: row-reverse;
   background-color: #482c77;
 }
 
-.navbar .default-content-wrapper{
+.navbar .default-content-wrapper {
   display: flex;
 }
-.navbar .default-content-wrapper ul{
+
+.navbar .default-content-wrapper ul {
   display: flex;
   gap: 8px;
   text-decoration: none;
   list-style: none;
 }
-.navbar .default-content-wrapper ul li{
+
+.navbar .default-content-wrapper ul li {
   font-size: 16px;
   color: grey;
 }
-.navbar .default-content-wrapper p picture img{
-    width: 230px;
-    height: 35px;
+
+.navbar .default-content-wrapper p picture img {
+  width: 230px;
+  height: 35px;
+}
+
+.feature div {
+  position: relative;
+  display: flex;
+
+}
+
+.feature div ul {
+  background: #D2D8EF;
+  /* margin: 51px; */
+  width: 986px;
+  position: absolute;
+  top: 52px;
+  right: 280px;
+  display: flex;
+  gap: 85px;
 }

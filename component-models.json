@@ -116,6 +116,10 @@
           {
             "name": "feature",
             "value": "feature"
+          },
+          {
+            "name": "our-service",
+            "value": "our-service"
           }
         ]
       }
