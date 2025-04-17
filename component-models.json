@@ -747,5 +747,23 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "nerolac-testimonial-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]

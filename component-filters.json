@@ -38,8 +38,9 @@
       "embed",
       "footer-address",
       "footer-link-accordion",
-      "embed-card"
-
+      "embed-card",
+      "nerolac-testimonial",
+      "nerolac-testimonial-item"
     ]
   },
   {
