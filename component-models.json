@@ -729,5 +729,16 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "embed-card-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "url",
+        "label": "Embed URL",
+        "valueType": "string"
+      }
+    ]
   }
 ]

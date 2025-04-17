@@ -588,6 +588,22 @@
               }
             }
           }
+        },
+        {
+          "title": "embed-card-item",
+          "id": "embed-card-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "embed-card-item",
+                  "model": "embed-card-item",
+                  "url": "/blocks/embed"
+                }
+              }
+            }
+          }
         }
       ]
     }
