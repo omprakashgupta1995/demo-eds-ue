@@ -9,7 +9,7 @@ export default function decorate(block) {
     divs[2].classList.add('teaser-content');
   }
 
-  if (divs.length > 1 && divs[1].children.length > 0) {
+/*   if (divs.length > 1 && divs[1].children.length > 0) {
     const parasContainer = Array.from(divs[1].children);
     const paras = parasContainer.flatMap((container) => Array.from(container.children));
     // console.log(paras);
@@ -24,5 +24,5 @@ export default function decorate(block) {
     colorsku[1].classList.add('sku-container');
 
     paras[5].classList.add('get-btn-Container');
-  }
+  } */
 }

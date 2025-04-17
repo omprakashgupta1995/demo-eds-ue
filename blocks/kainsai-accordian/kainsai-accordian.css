@@ -1,0 +1,32 @@
+.kainsai-accordian{
+    display: flex;
+    padding: 70px 20px;
+    justify-content:space-around;
+    color: white;
+}
+
+.question-set{
+    padding: 0;
+    margin: 0;
+}
+
+.question-set div > p{
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.question-set div:nth-child(2) ul{
+    list-style: none;
+}
+
+.question-set div:nth-child(2) p{
+    padding: 0;
+    font-size: 14px;
+    margin: 10px 5px ;
+}
+
+.accordion-colours div:nth-child(2){
+    display: flex;
+    gap:10px
+}

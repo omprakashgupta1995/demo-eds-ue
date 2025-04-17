@@ -497,3 +497,21 @@ letter-spacing: 0;
   background: #f82222;
 }
 
+.footer-lowersection{
+  width: 100%;
+  display: flex;
+}
+
+.footer-lowersection >div:nth-child(1){
+  width: 20%;
+}
+
+.footer-lowersection >div:nth-child(2){
+  width: 80%;
+}
+
+@media(max-width:400px){
+  .footer-lowersection{
+    background-color: red;
+  }
+}
