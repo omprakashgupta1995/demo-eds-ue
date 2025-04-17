@@ -515,3 +515,43 @@ letter-spacing: 0;
     background-color: red;
   }
 }
+
+.bottom-banner{
+  /* padding: 40px 0px; */
+}
+
+.bottom-banner > div h1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #0D2042;
+}
+
+.bottom-banner > div h1,.bottom-banner > div >ul li{
+  padding: 0;
+  margin: 0;
+}
+
+.bottom-banner > div >ul{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:16px;
+  list-style: none;
+}
+ 
+.bottom-banner > div > ul li{
+  border-radius: 100px;
+  border: 0.5px solid #0D2042;
+  padding: 8px 16px;
+  font-size: 14px;
+}
