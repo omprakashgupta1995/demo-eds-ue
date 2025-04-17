@@ -657,6 +657,13 @@
         "name": "url",
         "label": "Embed URL",
         "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
