@@ -1,4 +1,5 @@
 /* stylelint-disable */
+
 /* header and nav layout */
 header .nav-wrapper {
   width: 1560px;
@@ -24,6 +25,7 @@ header nav {
   padding: 0 24px;
   font-family: var(--body-font-family);
 }
+
 header nav[aria-expanded='true'] {
   grid-template:
     'hamburger brand' var(--nav-height)
@@ -252,6 +254,7 @@ header nav .nav-tools {
   gap: 25px;
   list-style: none;
 }
+
 .nav-head > div > ul > li{
   font-size: 15px;
   color: white;
