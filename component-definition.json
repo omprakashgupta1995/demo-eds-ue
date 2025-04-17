@@ -488,6 +488,7 @@
                 "template": {
                   "name": "Embed",
                   "model": "embed",
+                  "filter": "embed",
                   "url": "/blocks/embed"
                 }
               }
