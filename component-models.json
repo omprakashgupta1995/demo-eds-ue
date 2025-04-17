@@ -164,6 +164,9 @@
           {
             "name": "Nerolac video",
             "value": "nerolac-video"
+          },{
+            "name":"bottom-banner",
+            "value":"bottom-banner"
           }
         ]
       }
