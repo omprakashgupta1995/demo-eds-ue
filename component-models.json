@@ -481,5 +481,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "embed",
+    "fields":[
+      {
+        "component": "richtext",
+        "name": "richtext",
+        "value": "",
+        "label": "Embed URL",
+        "valueType": "string"
+      }
+    ]
   }
 ]

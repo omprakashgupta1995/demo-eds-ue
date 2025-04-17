@@ -1,5 +1,8 @@
 .banner-section{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .banner-sec-child-1{
@@ -10,5 +13,27 @@
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: -50px;
+    bottom: 136px;
+}
+
+.banner-sec-heading{
+    color: #0D2042;
+    line-height: 120%;
+    font-weight: 700;
+    font-size: 44px;
+}
+
+.banner-sec-para-1{
+    color: #0D2042;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.banner-sec-para-2 a.button{
+    background-color: #001438;
+    border: 1px solid #001438;
+    padding: 16px 32px;
+    border-radius: 16px;
+    color: #fff;
 }
