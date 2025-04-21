@@ -120,6 +120,10 @@
           {
             "name":"banner-logo",
             "value":"banner-logo"
+          },
+          {
+            "name":"blue-section",
+            "value":"blue-section"
           }
         ]
       }
