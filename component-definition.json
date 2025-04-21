@@ -250,20 +250,20 @@
           }
         },
         {
-          "title": "Nav",
-          "id": "nav",
+          "title": "Favourite-Corner",
+          "id": "favourite-corner",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Nav",
-                  "model": "nav"
+                  "name": "Favourite-Corner",
+                  "model": "favourite-corner"
                 }
               }
             }
           }
-        }
+        },
       ]
     }
   ]
