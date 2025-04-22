@@ -333,13 +333,6 @@
         "value": "",
         "label": "Col_1 Richtext",
         "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "col1_richtext",
-        "value": "",
-        "label": "Col_1 Text",
-        "valueType": "string"
       }
     ]
   }
