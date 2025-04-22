@@ -122,7 +122,6 @@ h6 { font-size: var(--heading-font-size-xs); }
 p,
 dl,
 ol,
-ul,
 pre,
 blockquote {
   margin-top: 0.8em;
@@ -269,4 +268,95 @@ main .section.highlight {
 .button-container > a:any-link
 {
   background: transparent;
+}
+
+/* Find us Section */
+
+.findus-section .default-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.findus-section .default-content-wrapper h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #0D2042;
+}
+
+.findus-section .default-content-wrapper ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 16px;
+}
+
+.findus-section .default-content-wrapper ul li{
+  /* font-family: Typeface/Family/Body; */
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  border: 0.5px solid #BFC4CD;
+  border-radius: 100px;
+  padding: 8px 16px;
+  color: #0D2042;
+}
+
+.bottom-banner{
+  position: relative;
+}
+
+.bottom-banner .default-content-wrapper .banner-bottom-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+}
+
+.banner-bottom-text h1,.banner-bottom-text p{
+  padding: 0;
+  margin: 0;
+}
+
+.banner-bottom-text h1{
+  /* font-family: Typeface/Family/Heading; */
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #0D2042;
+}
+
+.banner-bottom-text p{
+  /* font-family: Typeface/Family/Body; */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #0D2042;
+}
+
+.banner-bottom-text .button-container .button{
+  background-color: #001438;
+  padding: 16px 32px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
 }

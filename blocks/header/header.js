@@ -1,11 +1,12 @@
-// Modified header.js with fixed submenu toggle behavior
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // Media query match that indicates desktop width
-const isDesktop = window.matchMedia('(min-width: 900px)');
+// Changed from 900px to 1200px
+const isDesktop = window.matchMedia('(min-width: 1200px)');
 
 // Create a utility object to hold all our functions
+// This avoids ESLint's "used before defined" errors by using object properties
 const navUtils = {
   /**
    * Toggles all nav sections
@@ -120,29 +121,6 @@ const navUtils = {
       nav.removeEventListener('focusout', navUtils.closeOnFocusLost);
     }
   },
-  
-  /**
-   * Toggle submenu on arrow click (mobile view)
-   * @param {Event} e The click event
-   */
-  toggleSubMenu(e) {
-    if (!isDesktop.matches) {
-      e.preventDefault();
-      e.stopPropagation();
-      
-      // Find the parent li element
-      let navItem = e.currentTarget.closest('li');
-      
-      if (navItem) {
-        const expanded = navItem.getAttribute('aria-expanded') === 'true';
-        navItem.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        
-        // Toggle arrow direction
-        const arrow = e.currentTarget;
-        arrow.style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
-      }
-    }
-  }
 };
 
 /**
@@ -178,78 +156,78 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
-    // Process main menu items
     navSections
       .querySelectorAll(':scope .default-content-wrapper > ul > li')
       .forEach((navSection) => {
         if (navSection.querySelector('ul')) {
           navSection.classList.add('nav-drop');
           
-          // Create the arrow element
-          const arrowElement = document.createElement('span');
-          arrowElement.className = 'nav-arrow';
-          arrowElement.innerHTML = '&#9662;'; // Down arrow Unicode
-          arrowElement.setAttribute('tabindex', '0');
-          arrowElement.setAttribute('role', 'button');
-          arrowElement.setAttribute('aria-label', 'Toggle submenu');
+          // Create a better hover behavior to avoid flickering
+          // Find the actual submenu for this nav item
+          const submenu = navSection.querySelector('ul');
           
-          // Make arrow only toggle the submenu on click, not the entire menu item
-          arrowElement.addEventListener('click', navUtils.toggleSubMenu);
+          // Add a flag to track if we're hovering on the menu or submenu
+          let isHovering = false;
           
-          // Add the arrow to the menu item
-          navSection.appendChild(arrowElement);
-        }
-
-        // Handle hover for desktop
-        navSection.addEventListener('mouseover', () => {
-          if (isDesktop.matches) {
-            const expanded = navSection.getAttribute('aria-expanded') === 'true';
-            navUtils.toggleAllNavSections(navSections);
-            navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-          }
-        });
-        
-        // Prevent the link from toggling the submenu
-        const navLink = navSection.querySelector('a');
-        if (navLink && !isDesktop.matches) {
-          navLink.addEventListener('click', (e) => {
-            // Only prevent default if we have submenus
-            if (navSection.querySelector('ul')) {
-              e.stopPropagation();
+          // When hovering on the parent menu item
+          navSection.addEventListener('mouseenter', () => {
+            if (isDesktop.matches) {
+              isHovering = true;
+              
+              // Close all other sections
+              navUtils.toggleAllNavSections(navSections, false);
+              
+              // Open this section
+              navSection.setAttribute('aria-expanded', 'true');
             }
           });
+          
+          // When leaving the parent menu item
+          navSection.addEventListener('mouseleave', (e) => {
+            if (isDesktop.matches) {
+              // Check if moving into the submenu by checking the relatedTarget
+              // This prevents the menu from closing when moving to the submenu
+              const relatedTarget = e.relatedTarget;
+              if (!submenu.contains(relatedTarget)) {
+                isHovering = false;
+                
+                // Use setTimeout to give a small delay before closing
+                // This allows time to move to the submenu
+                setTimeout(() => {
+                  if (!isHovering) {
+                    navSection.setAttribute('aria-expanded', 'false');
+                  }
+                }, 100);
+              }
+            }
+          });
+          
+          // Handle hovering on the submenu itself
+          if (submenu) {
+            submenu.addEventListener('mouseenter', () => {
+              if (isDesktop.matches) {
+                isHovering = true;
+                navSection.setAttribute('aria-expanded', 'true');
+              }
+            });
+            
+            submenu.addEventListener('mouseleave', (e) => {
+              if (isDesktop.matches) {
+                // Make sure we're not moving back to the parent menu item
+                const relatedTarget = e.relatedTarget;
+                if (!navSection.contains(relatedTarget) || relatedTarget === navSection) {
+                  isHovering = false;
+                  setTimeout(() => {
+                    if (!isHovering) {
+                      navSection.setAttribute('aria-expanded', 'false');
+                    }
+                  }, 100);
+                }
+              }
+            });
+          }
         }
       });
-      
-    // Process all submenu items (inside dropdown menus)
-    navSections.querySelectorAll('.nav-drop ul li').forEach((subNavItem) => {
-      if (subNavItem.querySelector('ul')) {
-        // Add arrow to submenu items that have their own nested submenus
-        const subArrowElement = document.createElement('span');
-        subArrowElement.className = 'nav-arrow submenu-arrow';
-        subArrowElement.innerHTML = '&#9662;'; // Down arrow Unicode
-        subArrowElement.setAttribute('tabindex', '0');
-        subArrowElement.setAttribute('role', 'button');
-        subArrowElement.setAttribute('aria-label', 'Toggle submenu');
-        
-        // Make arrow only toggle its nested submenu
-        subArrowElement.addEventListener('click', navUtils.toggleSubMenu);
-        
-        // Add the arrow to the submenu item
-        subNavItem.appendChild(subArrowElement);
-        
-        // Prevent the link from toggling the nested submenu
-        const subLink = subNavItem.querySelector('a');
-        if (subLink && !isDesktop.matches) {
-          subLink.addEventListener('click', (e) => {
-            // Only prevent default if we have nested submenus
-            if (subNavItem.querySelector('ul')) {
-              e.stopPropagation();
-            }
-          });
-        }
-      }
-    });
   }
 
   // Hamburger for mobile
@@ -257,11 +235,8 @@ export default async function decorate(block) {
   hamburger.classList.add('nav-hamburger');
 
   // Get logo for hamburger button in mobile view
-  const existingLogo = navBrand ? navBrand.querySelector('img') : null;
-  const logoHtml = existingLogo ? `<img class="hamburger-logo" src="${existingLogo.src}" alt="${existingLogo.alt || 'Logo'}">` : '';
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
-      ${logoHtml}
     </button>`;
 
   hamburger.addEventListener('click', () => navUtils.toggleMenu(nav, navSections));
@@ -295,7 +270,7 @@ export default async function decorate(block) {
     });
   }
 
-  // Add classes to dropdown list items
+  // Add classes to dropdown list items - safely handle potential missing elements
   const navDrops = document.querySelectorAll('.nav-drop ul');
   navDrops.forEach((dropDownList) => {
     if (dropDownList) {
@@ -305,12 +280,12 @@ export default async function decorate(block) {
     }
   });
 
-  // Add classes to navigation list items
+  // Add classes to navigation list items - safely handle potential missing elements
   const navList = document.querySelector('.logo-nav-block-child-3 ul');
   if (navList) {
     Array.from(navList.children).forEach((ulChildElement, index) => {
       ulChildElement.classList.add(`li-width-${index + 1}`);
-      ulChildElement.classList.add(`liContent`);
+      ulChildElement.classList.add('liContent');
     });
   }
 }
