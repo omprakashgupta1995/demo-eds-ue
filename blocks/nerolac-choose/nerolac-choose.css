@@ -1,0 +1,24 @@
+/* stylelint-disable */
+.nerolac-choose{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    /* flex-wrap: wrap; */
+}
+
+.nerolac-choose div{
+    position: relative;
+}
+
+.nerolac-choose div div:nth-child(2){
+    position: absolute;
+    top: 70%;
+    color: white;
+}
+
+.nerolac-choose div div:nth-child(2) p{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+}

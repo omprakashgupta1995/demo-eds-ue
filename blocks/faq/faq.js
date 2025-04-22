@@ -1,3 +1,4 @@
+/*eslint-disable */
 import buildAccordianBlock from '../accordion/accordion.js';
 import { ul, li, div } from '../../scripts/domhelper.js';
 

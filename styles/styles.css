@@ -450,3 +450,58 @@ main .birla-top-banner-container{
   color: #0D2042;
 
 }
+
+.nerolac-choose-container{
+  display: flex;
+  flex-direction: column;
+  color: #0D2042;
+}
+
+.nerolac-choose-container .default-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.nerolac-choose-container .default-content-wrapper h1{
+  margin: 0;
+  padding: 0;
+  /* font-family: Typeface/Family/Heading; */
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0%;
+
+}
+
+.nerolac-choose-container .default-content-wrapper p:nth-child(1){
+  margin: 0;
+  padding: 0;
+  /* font-family: Typeface/Family/Body; */
+  font-weight: 700;
+  font-size: Typeface/Size/Body 2;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: center;
+
+}
+.nerolac-choose-container .default-content-wrapper p:nth-child(2){
+  margin: 0;
+  padding: 0;
+}
+
+.nerolac-choose-container .default-content-wrapper .button-container .button{
+  border-radius: 16px;
+  border: 1px solid #001438;
+  padding: 16px 32px;
+  background-color: white;
+  /* font-family: Typeface/Family/Heading; */
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: #001438;
+
+}
