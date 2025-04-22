@@ -112,6 +112,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name" :"findus-section",
+            "value":"findus-section"
           }
         ]
       }
@@ -306,32 +310,6 @@
         "name": "api-url",
         "value": "",
         "label": "API URL",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "favourite-corner-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col1_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "col1_text",
-        "value": "",
-        "label": "Col_1 Richtext",
         "valueType": "string"
       }
     ]
