@@ -329,16 +329,16 @@
       },
       {
         "component": "richtext",
-        "name": "col2_text",
+        "name": "col1_text",
         "value": "",
-        "label": "Col-2 Richtext",
+        "label": "Col_1 Richtext",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "col2_richtext",
+        "name": "col1_richtext",
         "value": "",
-        "label": "Col-2 Text",
+        "label": "Col_1 Text",
         "valueType": "string"
       }
     ]
