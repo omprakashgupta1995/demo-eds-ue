@@ -5,6 +5,11 @@
     align-items: flex-start;
 }
 
+.banner-section-wrapper{
+    width: 100%;
+    margin: 0;
+}
+
 .banner-sec-child-1{
     position: relative;
 }
@@ -13,7 +18,6 @@
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 136px;
 }
 
 .banner-sec-heading{
