@@ -57,5 +57,11 @@
     "components": [
       "first-component-item"
     ]
+  },
+  {
+    "id": "favourite-corner",
+    "components": [
+      "favourite-corner-item"
+    ]
   }
 ]

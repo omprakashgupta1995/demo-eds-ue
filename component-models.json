@@ -311,7 +311,7 @@
     ]
   },
   {
-    "id": "favourite-corner",
+    "id": "favourite-corner-item",
     "fields": [
       {
         "component": "reference",

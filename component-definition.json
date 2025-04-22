@@ -263,6 +263,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Favourite Corner Item",
+          "id": "favourite-corner-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Favourite Corner Item",
+                  "model": "favourite-corner-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
