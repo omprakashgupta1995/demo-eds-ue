@@ -555,3 +555,19 @@ letter-spacing: 0;
   padding: 8px 16px;
   font-size: 14px;
 }
+
+.nerolac-video > div{
+  max-width: 90vw!important;
+  border-radius: 40px;
+}
+
+.nerolac-video > div > div {
+  max-width: 100%!important ;
+  border-radius: 40px;
+  margin: 0;
+}
+
+.nerolac-video > div > div iframe{
+  border-radius: 40px;
+  max-height : 600px !important;
+}

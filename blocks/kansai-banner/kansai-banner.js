@@ -17,7 +17,7 @@ export default function decorate(block) {
     // Insert the wrapper at the beginning of the block
     block.firstElementChild.firstElementChild.insertBefore(
       textWrapper,
-      block.firstElementChild.firstElementChild.firstChild
+      block.firstElementChild.firstElementChild.firstChild,
     );
   }
 }

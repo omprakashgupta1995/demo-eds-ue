@@ -32,6 +32,7 @@
       "kainsai-accordian",
       "kansai-banner",
       "kainsai-address",
+      "nerolac-slider",
       "embed"
     ]
   },
@@ -64,6 +65,11 @@
   },
   {
     "id": "birla-slider",
+    "components": [
+      "hero-banner-item"
+    ]
+  },  {
+    "id": "nerolac-slider",
     "components": [
       "hero-banner-item"
     ]
