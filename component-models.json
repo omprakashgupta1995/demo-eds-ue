@@ -114,8 +114,8 @@
             "value": "highlight"
           },
           {
-            "name" :"findus-section",
-            "value":"findus-section"
+            "name" :"find-section",
+            "value":"find-section"
           }
         ]
       }

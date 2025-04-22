@@ -267,13 +267,17 @@ main .section.highlight {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin: 0 auto;
+  padding-top:50px ;
+  max-width: 1131px;
+  width: 100%;
+
 }
 
-.findus-section .default-content-wrapper h2{
+.find-section .default-content-wrapper h2{
   display: flex;
   justify-content: center;
   align-items: center;
-    /* font-family: Typeface/Family/Heading; */
   font-weight: 700;
   font-size: 35px;
   line-height: 130%;
@@ -281,7 +285,7 @@ main .section.highlight {
   color: #0D2042;
 }
 
-.findus-section .default-content-wrapper ul{
+.find-section .default-content-wrapper ul{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -291,7 +295,7 @@ main .section.highlight {
   gap: 16px;
 }
 
-.findus-section .default-content-wrapper ul li{
+.find-section .default-content-wrapper ul li{
   /* font-family: Typeface/Family/Body; */
   font-weight: 400;
   font-size: 12px;

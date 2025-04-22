@@ -21,9 +21,7 @@
       "first-component",
       "first-component-item",
       "faq",
-     "my-form",
-     "favourite-corner",
-      "favourite-corner-item"
+     "my-form"
     ]
   },
   {
@@ -57,12 +55,6 @@
     "id": "first-component",
     "components": [
       "first-component-item"
-    ]
-  },
-  {
-    "id": "favourite-corner",
-    "components": [
-      "favourite-corner-item"
     ]
   }
 ]
