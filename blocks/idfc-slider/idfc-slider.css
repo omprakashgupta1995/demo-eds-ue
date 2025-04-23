@@ -1,3 +1,52 @@
 /*stylelint-disable*/
-/* @import url('../birla-slider/swiper-bundle.min.css'); */
+@import url('../birla-slider/swiper-bundle.min.css');
 
+.idfc-slider.slider-one{
+    >div  > div{
+        border: 2px solid gray;
+
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 340px;
+        border-radius: 16px;
+        background: var(--Orange-gradient, linear-gradient(250deg, #DE734D 2.05%, #A33B2B 103.74%));
+        background: linear-gradient(147deg, #75161B 8.51%, #A02931 94.76%);
+        padding: 18px 15px;
+        height: 100%;
+
+        div:nth-child(1) >p:nth-child(1){
+            color: #fff;
+            font-feature-settings: "clig" off, "liga" off;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28px;
+            margin-bottom: 18px;
+        }
+
+        div:nth-child(1) >p:nth-child(2){
+            color: #fff;
+            line-height: normal;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        div:nth-child(2){
+            width: 78px;
+            height: 78px;
+            border-radius: 39px;
+            margin-bottom: 20px;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, .24);
+            img{
+                width: 55px;
+                min-width: 55px;
+                height: auto;
+            }
+        }
+    }
+}
