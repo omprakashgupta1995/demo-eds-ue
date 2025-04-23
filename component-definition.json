@@ -259,7 +259,7 @@
                 "template": {
                   "name": "Favourite Corner",
                   "model": "favourite-corner",
-                  "filter": "favourite-corner-item"
+                  "filter": "favourite-corner"
                 }
               }
             }
