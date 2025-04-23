@@ -176,6 +176,14 @@
           {
             "name":"under-nav",
             "value":"under-nav"
+          },
+          {
+            "name":"IDFC Bank special",
+            "value":"idfc-bank-special"
+          },
+          {
+            "name":"IDFC Zero Fee",
+            "value":"idfc-zero-fee"
           }
         ]
       }
