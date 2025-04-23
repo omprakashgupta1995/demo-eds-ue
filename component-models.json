@@ -678,7 +678,7 @@
     ]
   },{
     "id":"idfc-slider",
-    "fields":[
+    "fields": [
       {
         "component": "multiselect",
         "name": "classes",
@@ -686,11 +686,11 @@
         "options": [
           {
             "name": "Slider1",
-            "value": "Slider1"
+            "value": "slider1"
           },
           {
-            "name": "Slider2",
-            "value": "Slider2"
+            "name": "slider2",
+            "value": "slider2"
           }
         ]
       }
