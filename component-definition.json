@@ -274,7 +274,7 @@
                 "template": {
                   "name": "Favourite Corner Item",
                   "model": "favourite-corner-item",
-                  "filter":"favourite-corner-item"
+                  "filter": "favourite-corner-item"
                 }
               }
             }
