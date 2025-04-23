@@ -524,7 +524,6 @@
         "label": "image",
         "multi": false
       },
-
       {
         "component": "text",
         "name": "imageAlt",
@@ -675,6 +674,73 @@
         "valueType": "string",
         "name": "url",
         "label": "Embed url"
+      }
+    ]
+  },{
+    "id":"idfc-slider",
+    "fields":[
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Slider1",
+            "value": "Slider1"
+          },
+          {
+            "name": "Slider2",
+            "value": "Slider2"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id":"idfc-slider-teaser",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id":"idfc-slider-embed",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
       }
     ]
   }

@@ -34,7 +34,8 @@
       "kainsai-address",
       "nerolac-slider",
       "embed",
-      "search"
+      "search",
+      "idfc-slider"
     ]
   },
   {
@@ -121,6 +122,13 @@
   "id":"kainsai-address",
   "components":[
     "kainsai-address-item"
+  ]
+},
+{
+  "id":"idfc-slider",
+  "components":[
+    "idfc-slider-teaser",
+    "idfc-slider-embed"
   ]
 }
 ]
