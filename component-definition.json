@@ -553,7 +553,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "IDFC Slider ItemType Teaser",
-                  "modal": "idfc-slider-teaser"
+                  "model": "idfc-slider-teaser"
                 }
               }
             }
@@ -568,7 +568,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "idfc Slider ItemType Embed",
-                  "modal": "idfc-slider-embed"
+                  "model": "idfc-slider-embed"
                 }
               }
             }
