@@ -685,15 +685,15 @@
         "label": "Style",
         "options": [
           {
-            "name": "Slider1",
+            "name": "Slider one",
             "value": "slider-one"
           },
           {
-            "name": "Slider2",
+            "name": "Slider two",
             "value": "slider-two"
           },
           {
-            "name": "Slider3",
+            "name": "Slider three",
             "value": "slider-three"
           }
         ]

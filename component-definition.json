@@ -538,7 +538,7 @@
                 "template": {
                   "name": "idfc Slider",
                   "filter": "idfc-slider",
-                  "modal":"idfc-slider"
+                  "model":"idfc-slider"
                 }
               }
             }
