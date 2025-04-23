@@ -540,7 +540,7 @@
     ]
   },
   {
-    "id": "idfc-banner-item",
+    "id": "idfc-embed-item",
     "fields": [
       {
         "component": "reference",

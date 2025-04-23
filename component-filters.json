@@ -75,7 +75,7 @@
     "id": "idfc-banner",
     "components": [
       "idfc-banner-item",
-      "idfc-Embed-item"
+      "idfc-embed-item"
     ]
   }
 ]

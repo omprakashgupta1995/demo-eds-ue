@@ -614,14 +614,14 @@
         },
         {
           "title": "IDFC Embed item",
-          "id": "idfc-Embed-item",
+          "id": "idfc-embed-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "IDFC Embed item",
-                  "model": "idfc-Embed-item"
+                  "model": "idfc-embed-item"
                 }
               }
             }
