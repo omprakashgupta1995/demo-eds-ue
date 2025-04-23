@@ -519,20 +519,40 @@
     "id": "idfc-banner-item",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Banner",
+            "value": "banner"
+          },
+          {
+            "name": "Embed",
+            "value": "Embed"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "name": "banner_image",
+        "label": "Image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "banner_imageAlt",
+        "label": "Image"
       },
       {
         "component": "aem-content",
-        "name": "link",
+        "name": "url_link",
         "label": "Link"
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "url_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
@@ -543,15 +563,35 @@
     "id": "idfc-embed-item",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Banner",
+            "value": "banner"
+          },
+          {
+            "name": "Embed",
+            "value": "Embed"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Thumbnail",
-        "multi": false
+        "name": "banner_image",
+        "label": "Thumbnail"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "banner_imageAlt",
+        "label": "Thumbnail"
       },
       {
         "component": "aem-content",
-        "name": "link",
+        "name": "url_link",
         "label": "Link"
       }
     ]
