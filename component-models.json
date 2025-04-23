@@ -540,7 +540,7 @@
         "label": "Image"
       },
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
         "name": "banner_imageAlt",
         "label": "Image"
@@ -584,7 +584,7 @@
         "label": "Thumbnail"
       },
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
         "name": "banner_imageAlt",
         "label": "Thumbnail"
