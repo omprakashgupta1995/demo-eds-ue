@@ -538,5 +538,22 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "idfc-banner-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Thumbnail",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      }
+    ]
   }
 ]

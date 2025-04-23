@@ -1,3 +1,4 @@
+/*eslint-disable */
 import Swiper from './swiper-bundle.min.js';
 
 export default function decorate(block) {
@@ -13,6 +14,8 @@ export default function decorate(block) {
 
   block.appendChild(swiperWrapper);
   Swiper(block, {
-    autoplay: true,
+    autoplay: false,
   });
+
+
 }
