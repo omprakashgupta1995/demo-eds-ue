@@ -238,9 +238,9 @@ main > .section > div {
   padding: 0 24px; */
 }
 
-a.button:any-link{
+/* a.button:any-link{
   background-color: transparent;
-}
+} */
 
 main > .section:first-of-type {
   margin-top: 0;
@@ -287,10 +287,9 @@ main .section.highlight {
 
 .find-section .default-content-wrapper ul{
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   list-style: none;
   gap: 16px;
 }
