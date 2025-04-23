@@ -676,7 +676,8 @@
         "label": "Embed url"
       }
     ]
-  },{
+  },
+  {
     "id":"idfc-slider",
     "fields": [
       {
@@ -707,7 +708,6 @@
       }
     ]
   },
-
   {
     "id":"idfc-slider-teaser",
     "fields": [
