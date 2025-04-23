@@ -315,7 +315,7 @@
     ]
   },
   {
-    "id": "favourite-corner-item",
+    "id": "favourite-corner",
     "fields": [
       {
         "component": "reference",
@@ -330,7 +330,12 @@
         "name": "col1_imageAlt",
         "label": "Alt",
         "value": ""
-      },
+      }
+    ]
+  },
+  {
+    "id": "favourite-corner-item",
+    "fields": [
       {
         "component": "richtext",
         "name": "col2_text",
