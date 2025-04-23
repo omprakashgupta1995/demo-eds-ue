@@ -313,5 +313,31 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "favourite-corner-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Col-2 Richtext",
+        "valueType": "string"
+      }
+    ]
   }
 ]
