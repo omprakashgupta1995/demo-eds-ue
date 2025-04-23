@@ -40,7 +40,8 @@
       "nerolac-testimonial-item",
       "embed",
       "nerolac-choose",
-      "git-accordion"
+      "git-accordion",
+      "idfc-banner"
     ]
   },
   {
@@ -68,6 +69,12 @@
     "id": "hero-banner",
     "components": [
       "hero-banner-item"
+    ]
+  },
+  {
+    "id": "idfc-banner",
+    "components": [
+      "idfc-banner-item"
     ]
   }
 ]

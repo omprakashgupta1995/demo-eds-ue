@@ -581,6 +581,36 @@
               }
             }
           }
+        },
+        {
+          "title": "IDFC Banner",
+          "id": "idfc-banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "IDFC Banner",
+                  "filter": "idfc-banner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC Banner item",
+          "id": "idfc-banner-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC Banner item",
+                  "model": "idfc-banner-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
