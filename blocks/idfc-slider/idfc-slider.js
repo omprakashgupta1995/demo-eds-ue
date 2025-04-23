@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import sliderBlock from '../birla-slider/swiper-bundle.min.js';
 
 export default async function decorate(block) { 
