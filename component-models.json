@@ -683,19 +683,26 @@
         "component": "multiselect",
         "name": "classes",
         "label": "Style",
+        "valueType":"string",
         "options": [
           {
-            "name": "Slider one",
-            "value": "slider-one"
-          },
-          {
-            "name": "Slider two",
-            "value": "slider-two"
-          },
-          {
-            "name": "Slider three",
-            "value": "slider-three"
+            "name":"test1",
+            "children":[
+              {
+                "name": "Slider one",
+                "value": "slider-one"
+              },
+              {
+                "name": "Slider two",
+                "value": "slider-two"
+              },
+              {
+                "name": "Slider three",
+                "value": "slider-three"
+              }
+            ]
           }
+          
         ]
       }
     ]
