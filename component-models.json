@@ -339,5 +339,86 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "hero-banner-slider-item",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Banner",
+            "value": "banner"
+          },
+          {
+            "name": "Embed",
+            "value": "Embed"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "banner_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "banner_imageAlt",
+        "label": "Image"
+      },
+      {
+        "component": "aem-content",
+        "name": "url_link",
+        "label": "Link"
+      },
+      {
+        "component": "richtext",
+        "name": "url_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "hero-banner-embed-slider-item",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Banner",
+            "value": "banner"
+          },
+          {
+            "name": "Embed",
+            "value": "Embed"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "banner_image",
+        "label": "Thumbnail"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "banner_imageAlt",
+        "label": "Thumbnail"
+      },
+      {
+        "component": "aem-content",
+        "name": "url_link",
+        "label": "Link"
+      }
+    ]
   }
 ]

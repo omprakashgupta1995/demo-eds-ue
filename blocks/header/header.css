@@ -12,7 +12,6 @@
 
 /* header and nav layout */
 header .nav-wrapper {
-  max-width: 1500px;
     width: 100%;
     background-color: var(--background-color);
     z-index: 2;
@@ -165,7 +164,7 @@ header nav[aria-expanded="true"] {
 @media (width >= 1200px) {
     header nav[aria-expanded="true"] {
         min-height: 0;
-        gap: 330px;
+        gap: 223px;
         overflow: visible;
     }
 }
@@ -294,9 +293,10 @@ header .nav-brand {
 header nav .nav-brand img {
     width: 128px;
     height: auto;
-    position: absolute;
+
+    /* position: absolute;
     left: 108px;
-    top: 65px;
+    top: 65px; */
 }
 
 /* sections */
@@ -440,11 +440,10 @@ header nav .nav-tools {
     border-radius: 10px;
 }
 
-.header-wrapper {
+/* .header-wrapper {
     max-width: 1560px;
     width: 100%;
-    margin: 0 auto;
-}
+} */
 
 
 .default-content-wrapper > .li-width-4[aria-expanded="true"] > :nth-child {

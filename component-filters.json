@@ -22,7 +22,8 @@
       "first-component-item",
       "faq",
       "my-form",
-      "favourite-corner"
+      "favourite-corner",
+      "hero-banner-slider"
     ]
   },
   {
@@ -62,6 +63,13 @@
     "id": "favourite-corner",
     "components": [
       "favourite-corner-item"
+    ]
+  },
+  {
+    "id": "hero-banner-slider",
+    "components": [
+      "hero-banner-slider-item",
+      "hero-banner-embed-slider-item"
     ]
   }
 ]
