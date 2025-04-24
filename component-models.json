@@ -128,6 +128,10 @@
           {
             "name": "bottom-banner",
             "value": "bottom-banner"
+          },
+          {
+            "name": "spotlight-section",
+            "value": "spotlight-section"
           }
         ]
       }
