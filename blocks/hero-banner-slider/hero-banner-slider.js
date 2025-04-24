@@ -56,4 +56,9 @@ export default function decorate(block) {
   navContainer.appendChild(nextButton);
   block.appendChild(navContainer);
 
+  const blockChild = block.children;
+  console.log("child",blockChild);
+
+
+
 }
