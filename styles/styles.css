@@ -1,3 +1,4 @@
+/*stylelint-disable*/
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -522,15 +523,15 @@ main .section.highlight {
     width: 80%;
 }
 
-@media (max-width: 400px) {
+@media (width <= 400px) {
     .footer-lowersection {
         background-color: red;
     }
 }
 
-.bottom-banner {
-    /* padding: 40px 0px; */
-}
+/* .bottom-banner {
+    padding: 40px 0px;
+} */
 
 .bottom-banner > div h1 {
     display: flex;
@@ -592,7 +593,6 @@ main .section.highlight {
 .nerolac-ribbon >div >ul{
   display: flex;
   margin: 0;
-  padding: 0;
   gap: 40px;
   justify-content: center;
   background: #d2d8ef;
@@ -627,3 +627,38 @@ main .section.highlight {
 .nerolac-ribbon > div > ul li:last-child::after {
   content: none;
 }
+
+.idfc-bank-special{
+    background: white;
+}
+
+.idfc-bank-special h2{
+    color: #3a3a3a;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.72px;
+}
+
+.idfc-bank-special p{
+    margin-top: 10px;
+    color: #3a3a3a;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.idfc-bank-special .button-container a{
+    color: #9b1e26;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    background: white;
+    padding: 0;
+}
+
+/* main .idfc-bank-special .idfc-slider-wrapper .idfc-slider .Card-details{
+    background-color: #030303;
+} */

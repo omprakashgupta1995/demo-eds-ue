@@ -128,7 +128,8 @@
   "id":"idfc-slider",
   "components":[
     "idfc-slider-teaser",
-    "idfc-slider-embed"
+    "idfc-slider-embed",
+    "text"
   ]
 }
 ]

@@ -1,4 +1,4 @@
-@import url("./swiper-bundle.min.css");
+@import "./swiper-bundle.min.css";
 
 .swiper{
     height: auto;

@@ -1,6 +1,6 @@
 .kainsai-accordian{
     display: flex;
-    padding: 33px 20px 70px 20px;
+    padding: 33px 20px 70px;
     justify-content:space-around;
     color: white;
 }
