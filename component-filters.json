@@ -82,7 +82,8 @@
   {
     "id": "idfc-spotlight",
     "components": [
-      "idfc-spotlight-item"
+      "idfc-spotlight-item",
+      "idfc-spotlight-item1"
     ]
   }
 ]

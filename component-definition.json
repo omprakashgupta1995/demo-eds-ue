@@ -656,6 +656,21 @@
               }
             }
           }
+        },
+        {
+          "title": "IDFC spotlight item 1",
+          "id": "idfc-spotlight-item1",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC spotlight item 1",
+                  "model": "idfc-spotlight-item1"
+                }
+              }
+            }
+          }
         }
       ]
     }
