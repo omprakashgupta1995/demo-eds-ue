@@ -595,5 +595,24 @@
         "label": "Link"
       }
     ]
+  },
+  {
+    "id": "idfc-spotlight-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "image",
+        "multi": false
+      }
+    ]
   }
+  
 ]

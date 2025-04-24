@@ -41,7 +41,8 @@
       "embed",
       "nerolac-choose",
       "git-accordion",
-      "idfc-banner"
+      "idfc-banner",
+      "idfc-spotlight"
     ]
   },
   {
@@ -76,6 +77,12 @@
     "components": [
       "idfc-banner-item",
       "idfc-embed-item"
+    ]
+  },
+  {
+    "id": "idfc-spotlight",
+    "components": [
+      "idfc-spotlight-item"
     ]
   }
 ]
