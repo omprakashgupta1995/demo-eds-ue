@@ -129,7 +129,7 @@
   "components":[
     "idfc-slider-teaser",
     "idfc-slider-embed",
-    "text"
+    "idfc-slider-richtext"
   ]
 }
 ]
