@@ -605,12 +605,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "image",
-        "multi": false
       }
     ]
   }
