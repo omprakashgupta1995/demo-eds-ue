@@ -132,6 +132,10 @@
           {
             "name": "embed",
             "value": "embed"
+          },
+          {
+            "name": "contact-section",
+            "value": "contact-section"
           }
         ]
       }
