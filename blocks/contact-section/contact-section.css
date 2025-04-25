@@ -15,17 +15,15 @@
 }
 
 .contact-block-section{
+    width: 100%;
     padding: 0;
-}
-
-.contact-section .contact-section-wrapper .block{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .contact-section .contact-section-wrapper .block > div{
-    width: calc(100% / 3);
+    /* width: calc(100% / 3); */
     display: flex;
     align-items: center;
     gap: 24px;
