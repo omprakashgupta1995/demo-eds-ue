@@ -1,47 +1,92 @@
+/*stylelint-disable*/
 @import url("../embed/embed.css");
-
-.idfc-banner {
-  overflow: hidden;
-  position: relative;
+.hero-banner-slider {
+    max-width: 1460px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
 }
-
-.idfc-banner .banner-1 {
+.hero-banner-slider .banner-1 {
+    max-width: 1200px;
+    width: 100%;
   display: flex;
-  width: 1200px;
+  gap: 50px;
   height: 400px;
 }
-
-.idfc-banner .banner-1 div:nth-child(2) h1 {
+.hero-banner-slider .banner-1 div:nth-child(2) h1 {
   font-size: 36px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.36px;
-  background: linear-gradient(98deg, rgb(244 132 132 / 72%) 43.72%, rgb(107 14 21 / 72%) 149.41%);
-  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  background: linear-gradient(98deg, rgba(244, 132, 132, 0.72) 43.72%, rgba(107, 14, 21, 0.72) 149.41%);
   background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: rgb(0 0 0 / 0%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
   margin-bottom: 16px;
 }
 
-.idfc-banner .slider-nav {
-  position: absolute;
 
+.hero-banner-slider .slider-nav {
+  position: absolute;
   /* top: 100px; */
-  bottom: 80px;
+  bottom: 150px;
   right: 6%;
   display: flex;
   gap: 5px;
 }
-
-.idfc-banner .slider-nav button {
+.hero-banner-slider .slider-nav button {
   margin: 0;
   width: 40px;
   height: 40px;
-  border-radius: 100%;
+  border-radius: 50%;
   background: #fff;
   color: #902a2c;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.child-0{
+    position: relative;
+}
+.swiper-slide  picture  img{
+   width: 1420px;
+   height: 400px;
+}
+.swiper-slide video{
+    width: 1420px;
+    height: 400px;
+}
+.child-1{
+    position: absolute;
+    top: 74px;
+    left: 108px
+}
+
+.child-1 h1{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    background: linear-gradient(98deg, rgba(244, 132, 132, 0.72) 43.72%, rgba(107, 14, 21, 0.72) 149.41%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    margin-bottom: 16px;
+}
+.child-1 p{
+    font-size: 12px;
+    font-weight: 400px;
+    color:white;
+}
+
+.child-1 >.button-container>a{
+    color: #902a2c;
+    background-color: white;
+}
+
+.section .hero-banner-slider-container{
+max-width: 1560px;
+width: 100%;
+overflow: hidden;
+margin: 0 auto;
 }

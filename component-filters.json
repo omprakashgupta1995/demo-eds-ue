@@ -23,7 +23,8 @@
       "faq",
       "my-form",
       "favourite-corner",
-      "hero-banner-slider"
+      "hero-banner-slider",
+      "Custom Swiper"
     ]
   },
   {
@@ -70,6 +71,13 @@
     "components": [
       "hero-banner-slider-item",
       "hero-banner-embed-slider-item"
+    ]
+  },
+  {
+    "id": "Custom Swiper",
+    "components": [
+      "custom-swiper-banner-item",
+      "custom-swiper-embed-item"
     ]
   }
 ]

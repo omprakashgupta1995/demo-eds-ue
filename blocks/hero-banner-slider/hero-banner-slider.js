@@ -1,5 +1,5 @@
 /*eslint-disable */
-import loadEmbed from '../embed/embed.js';
+import loadEmbed from '../video/video.js';
 import Swiper from './swiper-bundle.min.js';
 export default function decorate(block) {
 
@@ -22,7 +22,7 @@ export default function decorate(block) {
 
   block.appendChild(swiperWrapper);
   Swiper(block, {
-    autoplay: true,
+    // autoplay: true,
   },);
 
   const childDivs = Array.from(block.children);
@@ -56,9 +56,22 @@ export default function decorate(block) {
   navContainer.appendChild(nextButton);
   block.appendChild(navContainer);
 
-  const blockChild = block.children;
-  console.log("child",blockChild);
+  const swiperInstance = new Swiper(block, {
+    autoplay: {
+      delay: 3000, 
+      disableOnInteraction: true,
+    },
+    navigation: {
+      nextEl: nextButton,
+      prevEl: prevButton,
+    },
+    loop: true, 
+  });
 
+const childCollection = Array.from(block.children?.[0]?.children || []);
+childCollection.forEach(el => (el));
+const listOfchilds = Array.from(childCollection?.[0]?.children || []);
+listOfchilds.forEach((el, i) => el.classList.add(`child-${i}`));
 
 
 }
