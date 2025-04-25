@@ -33,6 +33,8 @@
       "footer-link-accordion-item",
       "banner-section",
       "embed",
+      "contact-section",
+      "contact-section-item",
       "fragment"
     ]
   },
@@ -91,6 +93,12 @@
     "id": "footer-link-accordion",
     "components": [
       "footer-link-accordion-item"
+    ]
+  },
+  {
+    "id": "contact-section",
+    "components": [
+      "contact-section-item"
     ]
   }
 ]
