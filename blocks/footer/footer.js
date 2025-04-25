@@ -110,4 +110,9 @@ export default async function decorate(block) {
   window.addEventListener('resize', () => {
     setupAccordion();
   });
+  const firstDiv = document.querySelector('.fot-one-wrapper > div > div:nth-child(1)');
+  const secondDiv = document.querySelector('.fot-one-wrapper > div > div:nth-child(2)');
+  
+  if (firstDiv) firstDiv.classList.add('one');
+  if (secondDiv) secondDiv.classList.add('two');
 }
