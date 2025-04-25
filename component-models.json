@@ -136,6 +136,10 @@
           {
             "name": "Contact Section",
             "value": "contact-section"
+          },
+          {
+            "name": "Grow Section",
+            "value": "grow-section"
           }
         ]
       }
