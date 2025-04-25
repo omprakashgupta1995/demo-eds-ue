@@ -132,6 +132,10 @@
           {
             "name": "spotlight-section",
             "value": "spotlight-section"
+          },
+          {
+            "name": "compliment-section",
+            "value": "compliment-section"
           }
         ]
       }
