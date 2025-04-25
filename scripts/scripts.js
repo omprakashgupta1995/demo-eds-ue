@@ -180,3 +180,16 @@ elementsToMove.forEach(el => newDiv.appendChild(el));
 
 // Append the new div back into the original wrapper
 wrapper.appendChild(newDiv);
+
+const pTags = document.querySelectorAll('.compliment-section .default-content-wrapper p');
+
+pTags.forEach((p) => {
+  const picture = p.querySelector('img');
+  if (picture) {
+    if (picture.alt === 'compliment-left-img') {
+      p.classList.add('left-img-wrapper');
+    } else if (picture.alt === 'compliment-right-img') {
+      p.classList.add('right-img-wrapper');
+    }
+  }
+});

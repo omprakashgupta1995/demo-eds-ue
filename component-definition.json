@@ -369,6 +369,21 @@
           }
         },
         {
+          "title": "Common Teaser",
+          "id": "common-teaser",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Common Teaser",
+                  "model": "common-teaser"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Birla USP Item",
           "id": "birla-usp-item",
           "plugins": {

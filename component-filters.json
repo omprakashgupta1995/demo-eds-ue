@@ -14,6 +14,7 @@
       "title",
       "hero",
       "cards",
+      "card",
       "columns",
       "fragment",
       "hero-banner",
@@ -43,7 +44,8 @@
       "git-accordion",
       "idfc-banner",
       "idfc-spotlight",
-      "idfc-compliment"
+      "idfc-compliment",
+      "common-teaser"
     ]
   },
   {
