@@ -771,7 +771,7 @@
     "id":"com-teaser",
     "fields": [
       {
-        "component": "select",
+        "component": "multiselect",
         "name": "classes",
         "label": "Style",
         "valueType":"string",
@@ -785,7 +785,6 @@
               }
             ]
           }
-          
         ]
       }
     ]
