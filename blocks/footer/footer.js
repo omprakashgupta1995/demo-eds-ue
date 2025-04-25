@@ -115,4 +115,12 @@ export default async function decorate(block) {
   
   if (firstDiv) firstDiv.classList.add('one');
   if (secondDiv) secondDiv.classList.add('two');
+
+  const fottwoFirstChild = document.querySelector('.fot-two-wrapper > div > div:nth-child(1)');
+  const fotTwoSecond = document.querySelector('.fot-two-wrapper > div > div:nth-child(2)');
+  const fotThreeSecond = document.querySelector('.fot-two-wrapper > div > div:nth-child(3)');
+  
+  if (fottwoFirstChild) fottwoFirstChild.classList.add('imp');
+  if (fotTwoSecond) fotTwoSecond.classList.add('mess');
+  if (fotThreeSecond) fotThreeSecond.classList.add('qrcode');
 }
