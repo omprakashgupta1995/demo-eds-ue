@@ -766,49 +766,5 @@
         "valueType": "string"
       }
     ]
-  },
-  {
-    "id": "birla-teaser",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "valueType":"string",
-        "options": [
-          {
-            "name":"Styles",
-            "children":[
-              {
-                "name": "Zero Fee Teaser",
-                "value": "idfc-zero-fee__teaser"
-              }
-            ]
-          }
-          
-        ]
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col1_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
   }
 ]
