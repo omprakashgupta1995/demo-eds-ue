@@ -599,7 +599,7 @@
             "template": {
               "name": "Common Teaser",
               "filter": "com-teaser",
-              "model": "idfc-slider"
+              "model": "com-teaser"
             }
           }
         }
