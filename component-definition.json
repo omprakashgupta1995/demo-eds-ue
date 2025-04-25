@@ -680,6 +680,21 @@
               }
             }
           }
+        },
+        {
+          "title": "fot-two-item",
+          "id": "fot-two-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "fot-two-item",
+                  "model": "fot-two-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
