@@ -1,27 +1,130 @@
-/* footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
-  background: blue;
+.fot-one-container{
+  background: #9d1d27;
+  color: #fff;
 }
 
-footer .footer > div {
- margin: 0;
-
+.fot-one-container .fot-one-wrapper{
+  padding: 50px 0;
+  position: relative;
 }
 
-footer .footer p {
+.fot-one-container .fot-one-wrapper .fot-one .one{
+  position: absolute;
+  top: -82px;
+  right: 0px;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #ffcb05;
+  font-size: 12px;
+  font-weight: 700;
+  color: #525252;
+}
+
+.fot-one-wrapper .fot-one .two{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.fot-one-wrapper .fot-one .two div h5{
+  font-weight: 700;
+  padding-bottom: 16px;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #ffffff36;
+}
+
+.fot-one-wrapper .fot-one .two div ul{
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+.fot-one-wrapper .fot-one .two div ul li{
+  margin-top: 12px;
+  font-size: 14px;
 }
- */
+
+.fot-one-wrapper .fot-one .two div ul li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.fot-two-wrapper{
+  padding: 40px 0;
+  background: #1111111a;
+}
+
+.fot-two{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.fot-two .mess{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fot-two .mess div:nth-child(1) p{
+  border-bottom: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 16px;
+  letter-spacing: .5px;
+}
+
+.fot-two .mess div:nth-child(2) picture{
+  width: 56px;
+  height: 56px;
+}
+
+.fot-two .qrcode div:nth-child(1) p{
+  border-bottom: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 16px;
+  letter-spacing: .5px;
+}
+
+.fot-two .qrcode div:nth-child(2) img{
+  width: 145px;
+  height: 56px;
+}
+
+.fot-two .imp div p{
+  border-bottom: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 16px;
+  letter-spacing: .5px;
+}
+
+.fot-two .imp div ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.fot-two .imp div ul li{
+  margin: 0 30px 0 0;
+}
 
 
- footer{
-  background-color: #00205c;
-  padding: 20px;
- }
+.fot-two .imp div ul li span img{
+  width: 24px;
+}
