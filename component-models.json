@@ -768,6 +768,29 @@
     ]
   },
   {
+    "id":"com-teaser",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Style",
+        "valueType":"string",
+        "options": [
+          {
+            "name":"test2",
+            "children":[
+              {
+                "name": "Zero Teaser",
+                "value": "Zero Teaser"
+              }
+            ]
+          }
+          
+        ]
+      }
+    ]
+  },
+  {
     "id":"com-teaser-item",
     "fields": [
       {
