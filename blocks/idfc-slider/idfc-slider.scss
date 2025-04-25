@@ -187,7 +187,7 @@
 }
 
 .idfc-slider.slider-two.block{
-  height: 250px;
+  height: 300px;
   margin-top: -75px;
   >div:nth-child(1){
     display: flex;
@@ -195,7 +195,7 @@
   }
 
   .swiper-slide {
-    width: 190px !important;
+    width: 165px !important;
     margin-right: 25px;
     border: 1px solid;
     height: 100%;
@@ -203,14 +203,14 @@
     border-radius: 12px;
     background: linear-gradient(180deg, #923233 0%, #721F2D 100%);
     text-align: center;
-    min-height: 120px;
+    min-height: 150px;
     max-height: max-content;
-    >p{
-      img[data-icon-name="zero-04"] {
-        width: 40px;
-        height: 40px;
-      }
-      p{
+    .icon{
+      width: 80px;
+      height: auto;
+    }
+     
+      strong{
         color: #fff;
         text-align: center;
         font-size: 20px;
@@ -218,11 +218,8 @@
         font-weight: 500;
         line-height: normal;
         display: -ms-flexbox;
-        display: flex;
-        -ms-flex-align: center;
-        align-items: center;
+     
       }
-    }
    
   }
   .swiper-button-prev,.swiper-button-next{

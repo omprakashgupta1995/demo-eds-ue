@@ -632,6 +632,11 @@ main .section.highlight {
     background: white;
 }
 
+.idfc-zero-fee.section{
+    margin: 60px 0 77px 0;
+    position: relative;
+}
+
 .idfc-bank-special h2,.idfc-zero-fee h2{
     color: #3a3a3a;
     font-size: 36px;
@@ -662,3 +667,14 @@ main .section.highlight {
 /* main .idfc-bank-special .idfc-slider-wrapper .idfc-slider .Card-details{
     background-color: #030303;
 } */
+
+.common-teaser.zero-teaser.block{
+    z-index: 1;
+    box-shadow: 4px 0px 2px 0px rgba(0, 0, 0, .25);
+    position: absolute;
+    z-index: 1;
+    top: 157px;
+    padding: 5px 51px;
+    /* left: 155px; */
+    background: white;
+}
