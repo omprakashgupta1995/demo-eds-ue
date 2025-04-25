@@ -768,16 +768,16 @@
     ]
   },
   {
-    "id":"com-teaser-item",
+    "id":"com-teaser",
     "fields":[
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "label": "Style",
         "valueType":"string",
         "options": [
           {
-            "name":"Styles",
+            "name":"test2",
             "children":[
               {
                 "name": "Zero Fee Teaser",

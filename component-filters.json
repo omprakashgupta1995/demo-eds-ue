@@ -1,9 +1,7 @@
 [
   {
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -41,102 +39,74 @@
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
+    "components": ["card"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
   },
   {
     "id": "hero-banner",
-    "components": [
-      "hero-banner-item"
-    ]
+    "components": ["hero-banner-item"]
   },
   {
     "id": "birla-slider",
-    "components": [
-      "hero-banner-item"
-    ]
-  },  {
+    "components": ["hero-banner-item"]
+  },
+  {
     "id": "nerolac-slider",
-    "components": [
-      "hero-banner-item"
-    ]
+    "components": ["hero-banner-item"]
   },
   {
     "id": "card-container",
+    "components": ["hero-banner-item", "birla-container-item", "card"]
+  },
+  {
+    "id": "ups-container-left",
     "components": [
+      "text",
       "hero-banner-item",
       "birla-container-item",
-      "card"
+      "birla-richtext",
+      "birla-video"
     ]
+  },
+  {
+    "id": "ups-container-right",
+    "components": [
+      "text",
+      "hero-banner-item",
+      "birla-container-item",
+      "birla-richtext",
+      "birla-video"
+    ]
+  },
+  {
+    "id": "video-container",
+    "components": ["birla-video"]
+  },
+  {
+    "id": "kainsai-accordian",
+    "components": ["kainsai-accordian-item"]
+  },
+  {
+    "id": "kainsai-address",
+    "components": ["kainsai-address-item"]
+  },
+  {
+    "id": "idfc-slider",
+    "components": [
+      "idfc-slider-teaser",
+      "idfc-slider-embed",
+      "idfc-slider-richtext"
+    ]
+  },
+  {
+    "id": "com-teaser",
+    "components": ["com-teaser-item"]
   }
-,
-{
-  "id":"ups-container-left",
-  "components":[
-    "text",
-    "hero-banner-item",
-    "birla-container-item",
-    "birla-richtext",
-    "birla-video"
-
-  ]
-},
-{
-  "id":"ups-container-right",
-  "components":[
-    "text",
-    "hero-banner-item",
-    "birla-container-item",
-    "birla-richtext",
-    "birla-video"
-  ]
-},
-{
-  "id":"video-container",
-  "components":[
-    "birla-video"
-  ]
-},
-{
-  "id":"kainsai-accordian",
-  "components":[
-    "kainsai-accordian-item"
-  ]
-},
-{
-  "id":"kainsai-address",
-  "components":[
-    "kainsai-address-item"
-  ]
-},
-{
-  "id":"idfc-slider",
-  "components":[
-    "idfc-slider-teaser",
-    "idfc-slider-embed",
-    "idfc-slider-richtext"
-  ]
-},
-{
-  "id":"com-teaser",
-  "components":[
-    "com-teaser-item"
-  ]
-}
 ]
