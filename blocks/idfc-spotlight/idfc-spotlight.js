@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 export default function decorate(block){
     const childDivs = Array.from(block.children);
 
