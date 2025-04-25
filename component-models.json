@@ -766,5 +766,28 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"com-teaser-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "label": "image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
