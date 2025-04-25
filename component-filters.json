@@ -35,7 +35,8 @@
       "nerolac-slider",
       "embed",
       "search",
-      "idfc-slider"
+      "idfc-slider",
+      "block-teaser"
     ]
   },
   {
@@ -129,7 +130,6 @@
   "components":[
     "idfc-slider-teaser",
     "idfc-slider-embed",
-    
     "idfc-slider-richtext"
   ]
 }

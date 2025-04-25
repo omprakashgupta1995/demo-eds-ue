@@ -628,11 +628,11 @@ main .section.highlight {
   content: none;
 }
 
-.idfc-bank-special{
+.idfc-bank-special,.idfc-zero-fee{
     background: white;
 }
 
-.idfc-bank-special h2{
+.idfc-bank-special h2,.idfc-zero-fee h2{
     color: #3a3a3a;
     font-size: 36px;
     font-weight: 700;
@@ -640,7 +640,7 @@ main .section.highlight {
     letter-spacing: -0.72px;
 }
 
-.idfc-bank-special p{
+.idfc-bank-special .default-content-wrapper >p:nth-child(2), .idfc-zero-fee .default-content-wrapper >p:nth-child(2){
     margin-top: 10px;
     color: #3a3a3a;
     font-feature-settings: "clig" off, "liga" off;
@@ -650,7 +650,7 @@ main .section.highlight {
     line-height: 28px;
 }
 
-.idfc-bank-special .button-container a{
+.idfc-bank-special .button-container a, .idfc-zero-fee  .button-container a{
     color: #9b1e26;
     font-size: 16px;
     font-weight: 700;
