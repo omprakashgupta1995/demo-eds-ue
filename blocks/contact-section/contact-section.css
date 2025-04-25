@@ -1,6 +1,8 @@
 .contact-section{
     width: 100%;
-    background: (73deg, #C7C6C6 -74.4%, #F1F1F1 23.15%);
+    background: linear-gradient(73deg, #C7C6C6 -74.4%, #F1F1F1 23.15%);
+    padding: 57px 0;
+    margin: 0;
 }
 
 .contact-section .default-content-wrapper h2{
@@ -10,4 +12,30 @@
     margin: 0;
     margin-bottom: 32px;
     text-align: center;
+}
+
+.contact-section .contact-section-wrapper .block{
+    display: flex;
+}
+
+.contact-section .contact-section-wrapper .block > div{
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.contact-section .contact-section-wrapper .block > div > div:nth-child(1) picture{
+    background: linear-gradient(77deg, #5F0D16 0%, #B43140 98.1%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section .contact-section-wrapper .block > div > div img{
+    width: 40px;
+    height: 40px;
 }
