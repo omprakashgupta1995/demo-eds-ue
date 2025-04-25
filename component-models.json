@@ -766,55 +766,5 @@
         "valueType": "string"
       }
     ]
-  },
-  {
-    "id":"com-teaser",
-    "fields":[
-      {
-        "component": "select",
-        "name": "classes",
-        "label": "Style",
-        "valueType":"string",
-        "options": [
-          {
-            "name":"test2",
-            "children":[
-              {
-                "name": "Zero Fee Teaser",
-                "value": "idfc-zero-fee__teaser"
-              }
-            ]
-          }
-          
-        ]
-      }
-    ]
-  }
-  ,
-  {
-    "id": "com-teaser-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col1_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
   }
 ]
