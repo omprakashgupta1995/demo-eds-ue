@@ -766,8 +766,9 @@
         "valueType": "string"
       }
     ]
-  },{
-    "id":"com-teaser",
+  },
+  {
+    "id":"com-teaser-item",
     "fields":[
       {
         "component": "multiselect",

@@ -118,8 +118,8 @@
   "components":[
     "kainsai-accordian-item"
   ]
-}
-,{
+},
+{
   "id":"kainsai-address",
   "components":[
     "kainsai-address-item"
