@@ -1,5 +1,4 @@
-/* stylelint-disable */
-
+/* 
 footer {
   width: 100%;
   background-color: #00205C;
@@ -41,7 +40,7 @@ footer {
   letter-spacing: .5px;
 }
 
-/* main footer */
+
 .main-footer{
   width: 100%;
   padding-top: 40px;
@@ -83,7 +82,7 @@ footer {
   margin-bottom: 10px;
 }
 
-/* footer accordion  */
+
 .footer-link-accordion-wrapper{
   width: 75%;
 }
@@ -178,4 +177,4 @@ footer .footer p {
   footer .footer > div {
     padding: 40px 32px 24px;
   }
-}
+} */

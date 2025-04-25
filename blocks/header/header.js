@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* 
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 // media query match that indicates mobile/tablet width
@@ -43,22 +43,20 @@ function openOnKeydown(e) {
 function focusNavSection() {
   document.activeElement.addEventListener('keydown', openOnKeydown);
 }
-/**
- * Toggles all nav sections
- * @param {Element} sections The container element
- * @param {Boolean} expanded Whether the element should be expanded or collapsed
- */
+ Toggles all nav sections
+  @param {Element} sections The container element
+  @param {Boolean} expanded Whether the element should be expanded or collapsed
+ 
 function toggleAllNavSections(sections, expanded = false) {
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
 }
-/**
- * Toggles the entire nav
- * @param {Element} nav The container element
- * @param {Element} navSections The nav sections within the container element
- * @param {*} forceExpanded Optional param to force nav expand behavior when not null
- */
+ Toggles the entire nav
+  @param {Element} nav The container element
+  @param {Element} navSections The nav sections within the container element
+  @param {*} forceExpanded Optional param to force nav expand behavior when not null
+
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
@@ -92,10 +90,9 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
     nav.removeEventListener('focusout', closeOnFocusLost);
   }
 }
-/**
- * loads and decorates the header, mainly the nav
- * @param {Element} block The header block element
- */
+ loads and decorates the header, mainly the nav
+  @param {Element} block The header block element
+ 
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
@@ -165,4 +162,4 @@ export default async function decorate(block) {
   Array.from(dropDownList.children).forEach((liElement) => {
     liElement.classList.add('flex-list');
   });
-}
+} */

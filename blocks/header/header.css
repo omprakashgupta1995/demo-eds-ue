@@ -1,5 +1,4 @@
-/* stylelint-disable */
-/* header and nav layout */
+/* 
 header .nav-wrapper {
   width: 100%;
   background-color: var(--background-color);
@@ -56,7 +55,7 @@ header nav p {
 header nav a:any-link {
   color: currentcolor;
 }
-/* hamburger */
+hamburger
 header nav .nav-hamburger {
   grid-area: hamburger;
   height: 22px;
@@ -126,7 +125,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
     visibility: hidden;
   }
 }
-/* brand */
+brand
 header .nav-brand {
   grid-area: brand;
   flex-basis: 128px;
@@ -138,7 +137,7 @@ header nav .nav-brand img {
   width: 128px;
   height: auto;
 }
-/* sections */
+sections
 header nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
@@ -236,7 +235,7 @@ header nav .nav-sections ul > li > ul > li {
     padding: 8px 0;
   }
 }
-/* tools */
+tools
 header nav .nav-tools {
   grid-area: tools;
 }
@@ -273,9 +272,9 @@ header nav .nav-tools {
   margin: 0 auto;
 }
 .nav-drop  > :nth-child(2) {
-  /*  display: flex;
+   display: flex;
    flex-direction: column;
-   gap: 20px; */
+   gap: 20px;
    padding: 50px;
    box-shadow: 4px 4px 10px rgb(0 0 0 / 30%) ;
  }
@@ -311,4 +310,4 @@ color: black;
   font-size: 15px;
   font-weight: 400px;
   color: #8B7F7F;
-}
+} */
