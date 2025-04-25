@@ -132,5 +132,11 @@
     "idfc-slider-embed",
     "idfc-slider-richtext"
   ]
+},
+{
+  "id":"com-teaser",
+  "components":[
+    "com-teaser-item"
+  ]
 }
 ]

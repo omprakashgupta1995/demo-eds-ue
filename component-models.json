@@ -766,10 +766,9 @@
         "valueType": "string"
       }
     ]
-  },
-  {
-    "id": "com-teaser",
-    "fields": [
+  },{
+    "id":"com-teaser",
+    "fields":[
       {
         "component": "multiselect",
         "name": "classes",
@@ -787,7 +786,13 @@
           }
           
         ]
-      },
+      }
+    ]
+  }
+  ,
+  {
+    "id": "com-teaser-item",
+    "fields": [
       {
         "component": "reference",
         "valueType": "string",
