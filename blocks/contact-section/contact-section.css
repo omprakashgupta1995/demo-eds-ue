@@ -1,0 +1,13 @@
+.contact-section{
+    width: 100%;
+    background: (73deg, #C7C6C6 -74.4%, #F1F1F1 23.15%);
+}
+
+.contact-section .default-content-wrapper h2{
+    color: #222;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 32px;
+    text-align: center;
+}
