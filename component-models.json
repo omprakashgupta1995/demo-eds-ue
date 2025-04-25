@@ -469,7 +469,7 @@
   },
   {
     "id": "banner-section",
-    "fields":[
+    "fields": [
       {
         "component": "reference",
         "name": "image",
@@ -492,7 +492,7 @@
   },
   {
     "id": "embed",
-    "fields":[
+    "fields": [
       {
         "component": "text",
         "name": "url",
@@ -503,27 +503,52 @@
   },
   {
     "id": "contact-section-item",
-    "fields":[
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "col1_img1",
-          "label": "Image"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "col1_alt1",
-          "label": "Alt",
-          "value": ""
-        },
-        {
-          "component": "richtext",
-          "name": "richtext",
-          "value": "",
-          "label": "Text",
-          "valueType": "string"
-        }
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_img1",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_alt1",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "richtext",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "grow-section-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_img1",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_alt1",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "richtext",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
     ]
   }
 ]

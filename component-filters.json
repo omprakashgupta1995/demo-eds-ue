@@ -35,6 +35,8 @@
       "embed",
       "contact-section",
       "contact-section-item",
+      "grow-section",
+      "grow-section-item",
       "fragment"
     ]
   },
@@ -99,6 +101,12 @@
     "id": "contact-section",
     "components": [
       "contact-section-item"
+    ]
+  },
+  {
+    "id": "grow-section",
+    "components": [
+      "grow-section-item"
     ]
   }
 ]
