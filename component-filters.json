@@ -24,7 +24,7 @@
       "my-form",
       "favourite-corner",
       "hero-banner-slider",
-      "Custom Swiper"
+      "custom-swiper"
     ]
   },
   {
@@ -74,7 +74,7 @@
     ]
   },
   {
-    "id": "Custom Swiper",
+    "id": "custom-swiper",
     "components": [
       "custom-swiper-banner-item",
       "custom-swiper-embed-item"
