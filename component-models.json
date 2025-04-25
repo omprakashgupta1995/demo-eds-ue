@@ -790,30 +790,30 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "text",
+        "name": "text_0",
         "value": "",
-        "label": "Text",
+        "label": "Text_0",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "text1",
+        "name": "text_1",
         "value": "",
-        "label": "Text1",
+        "label": "Text_1",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "text2",
+        "name": "text_2",
         "value": "",
-        "label": "Text2",
+        "label": "Text_2",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "text3",
+        "name": "text_3",
         "value": "",
-        "label": "Text3",
+        "label": "Text_3",
         "valueType": "string"
       }
     ]
