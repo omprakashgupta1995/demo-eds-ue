@@ -13,6 +13,8 @@ import {
   loadCSS,
 } from './aem.js';
 
+import Swiper from '../blocks/idfc-banner/swiper-bundle.min.js'
+
 /**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
@@ -192,4 +194,22 @@ pTags.forEach((p) => {
       p.classList.add('right-img-wrapper');
     }
   }
+});
+
+
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
 });

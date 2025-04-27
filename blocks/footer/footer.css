@@ -1,5 +1,6 @@
 /*stylelint-disable*/
 footer {
+  display: none;
   background-color: var(--light-color);
   font-size: var(--body-font-size-xs);
 }
