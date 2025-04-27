@@ -702,6 +702,21 @@
               }
             }
           }
+        },
+        {
+          "title": "IDFC compliment item",
+          "id": "idfc-compliment-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC compliment item",
+                  "model": "idfc-compliment-item"
+                }
+              }
+            }
+          }
         }
       ]
     }

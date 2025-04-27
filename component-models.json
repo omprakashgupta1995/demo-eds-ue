@@ -633,6 +633,18 @@
         "label": "Image"
       }
     ]
+  },
+  {
+    "id": "idfc-compliment-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
   
 ]

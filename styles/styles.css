@@ -513,11 +513,13 @@ main .birla-top-banner-container{
   height: 100vh;
 }
 
-.compliment-section .default-content-wrapper p:nth-child(4){
+.compliment-section .default-content-wrapper p:nth-child(1){
   position: absolute;
   left: 0;
+  top: -20px;
 }
-.compliment-section .default-content-wrapper p:nth-child(5){
+.compliment-section .default-content-wrapper p:nth-child(2){
   position: absolute;
   right: 0;
+  top: -20px;
 }

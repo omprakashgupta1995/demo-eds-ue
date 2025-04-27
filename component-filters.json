@@ -88,5 +88,11 @@
       "idfc-spotlight-item",
       "idfc-spotlight-item1"
     ]
+  },
+  {
+    "id": "idfc-compliment",
+    "components": [
+      "idfc-compliment-item"
+    ]
   }
 ]
