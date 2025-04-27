@@ -656,9 +656,13 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "name": "award_image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "award_imageAlt",
+        "label": "image alt"
       },
       {
         "component": "richtext",
