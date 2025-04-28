@@ -2,7 +2,6 @@ import loadEmbed from '../video/video.js';
 
 export default function decorate(block) {
   const customSwiper = block.children;
-  //   console.log(customSwiper);
   Array.from(customSwiper).forEach((element, index) => {
     element.classList.add('custom-swiper-slide');
     element.classList.add(`custom-swipper-slide-${index}`);
@@ -30,7 +29,10 @@ export default function decorate(block) {
 
   navContainer.appendChild(prevButton);
   navContainer.appendChild(nextButton);
-  customSwiperWrapper.appendChild(navContainer);
+
+  if (!Array.from(block.classList).includes('custom-swiper-second')) {
+    customSwiperWrapper.appendChild(navContainer);
+  }
 
   const slides = block.querySelectorAll('.custom-swiper-slide');
   let currentIndex = 0;
@@ -114,7 +116,9 @@ export default function decorate(block) {
     row.classList.add('swiper-slide');
     customSwiperWrapper.appendChild(row);
   });
-
+  if (Array.from(block.classList).includes('custom-swiper-second')) {
+    customSwiperWrapper.appendChild(navContainer);
+  }
   block.appendChild(customSwiperWrapper);
   setupAutoPlayVideos();
 }

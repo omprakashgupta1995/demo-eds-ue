@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.custom-swiper-second{
+    max-width: 1430px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.custom-slider-nav{
+    position:absolute;
+    top: 58%;
+    right: 8%;
+}
