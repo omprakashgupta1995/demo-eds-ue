@@ -25,7 +25,8 @@
       "favourite-corner",
       "hero-banner-slider",
       "custom-swiper",
-      "custom-swiper-second"
+      "custom-swiper-second",
+      "zero-fee-banking"
     ]
   },
   {
@@ -86,6 +87,12 @@
     "components": [
       "custom-swiper-banner-item-second",
       "custom-swiper-embed-item-second"
+    ]
+  },
+  {
+    "id": " zero-fee-banking",
+    "components": [
+      "zero-fee-banking-item"
     ]
   }
 ]

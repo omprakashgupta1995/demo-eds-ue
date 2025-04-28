@@ -545,5 +545,34 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "zero-fee-banking-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "banner_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "banner_imageAlt",
+        "label": "Image"
+      },
+      {
+        "component": "aem-content",
+        "name": "url_link",
+        "label": "Link"
+      },
+      {
+        "component": "richtext",
+        "name": "url_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
