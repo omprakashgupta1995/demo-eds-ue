@@ -550,6 +550,11 @@
     "id": "zero-fee-banking-item",
     "fields": [
       {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "banner_image",
