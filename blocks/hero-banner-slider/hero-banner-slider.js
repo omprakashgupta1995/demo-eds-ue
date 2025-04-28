@@ -22,7 +22,10 @@ export default function decorate(block) {
 
   block.appendChild(swiperWrapper);
   Swiper(block, {
-    // autoplay: true,
+    autoplay: {
+        delay: 2000, 
+        disableOnInteraction: true,
+      },
   },);
 
   const childDivs = Array.from(block.children);
@@ -56,11 +59,14 @@ export default function decorate(block) {
   navContainer.appendChild(nextButton);
   block.appendChild(navContainer);
 
+  block.querySelector(".slider-btn").addEventListener("click",()=>{
+    if(block.querySelector(".swiper-slide-active video") != null){
+        block.querySelector(".swiper-slide-active video").autoplayplay();
+    }
+  })
+
   const swiperInstance = new Swiper(block, {
-    autoplay: {
-      delay: 3000, 
-      disableOnInteraction: true,
-    },
+
     navigation: {
       nextEl: nextButton,
       prevEl: prevButton,
@@ -72,6 +78,7 @@ const childCollection = Array.from(block.children?.[0]?.children || []);
 childCollection.forEach(el => (el));
 const listOfchilds = Array.from(childCollection?.[0]?.children || []);
 listOfchilds.forEach((el, i) => el.classList.add(`child-${i}`));
+
 
 
 }

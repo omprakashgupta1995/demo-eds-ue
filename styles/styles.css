@@ -232,11 +232,11 @@ main > .section {
   margin: 40px 0;
 }
 
-main > .section > div {
-  /* max-width: 1200px;
+/* main > .section > div {
+  max-width: 1200px;
   margin: auto;
-  padding: 0 24px; */
-}
+  padding: 0 24px;
+} */
 
 /* a.button:any-link{
   background-color: transparent;
