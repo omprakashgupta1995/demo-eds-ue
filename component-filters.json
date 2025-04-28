@@ -90,7 +90,7 @@
     ]
   },
   {
-    "id": " zero-fee-banking",
+    "id": "zero-fee-banking",
     "components": [
       "zero-fee-banking-item"
     ]
