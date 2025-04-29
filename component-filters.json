@@ -100,7 +100,8 @@
   {
     "id": "our-funds",
     "components": [
-      "our-funds-item"
+      "our-funds-item",
+      "our-funds-header-item"
     ]
   }
 ]
