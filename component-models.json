@@ -587,4 +587,16 @@
       }
     ]
   }
+  ,{
+    "id": "zero-block",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "url_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  }
 ]

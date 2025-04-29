@@ -62,7 +62,14 @@ export default function decorate(block) {
     });
   }
   function updateSliderForAll() {
-    const slideWidth = 1450; // Adjust slide width as needed
+    let slideWidth = 1450; // Use 'let' so you can reassign the value
+
+    const listOfBlocks = block.classList;
+    Array.from(listOfBlocks).forEach((ele) => {
+      if (ele === 'zero-fee-banking') {
+        slideWidth = 260;
+      }
+    });
     const transitionDuration = '0.5s'; // Duration for the transition effect
     slides.forEach((slidesChild) => {
       slidesChild.style.transition = `transform ${transitionDuration} ease-in-out`;

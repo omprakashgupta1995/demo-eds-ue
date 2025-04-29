@@ -1,11 +1,54 @@
-*{
+* {
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
 }
 
-.default-content-wrapper{
+.default-content-wrapper {
     max-width: 1560px;
     width: 100%;
     margin: 0 auto;
+    overflow: hidden;
+}
+
+.zero-fee-banking-wrapper {
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+/* stylelint-disable-next-line rule-empty-line-before */
+.zero-fee-banking {
+    width: 1051px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.zero-fee-banking > .custom-swiper-wrapper-item > .custom-slider-nav {
+    position: absolute;
+    /* stylelint-disable-next-line length-zero-no-unit */
+    top: 0px;
+}
+
+.background {
+    height: 250px;
+    background-image: linear-gradient(rgb(146 50 51) 0%, rgb(114 31 45) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 40px;
+}
+/* stylelint-disable-next-line rule-empty-line-before */
+.background > div > picture > img {
+    width: 200px;
+    height: 64px;
+}
+
+.background > div > h5{
+    color: white;
+    font-family: 700;
 }
