@@ -612,6 +612,18 @@
     ]
   },
   {
+    "id": "our-funds-header-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "url_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "our-funds-item",
     "fields": [
       {
