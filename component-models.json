@@ -612,7 +612,7 @@
     ]
   },
   {
-    "id": "our-funds-header-item",
+    "id": "our-funds-header",
     "fields": [
       {
         "component": "richtext",
