@@ -27,7 +27,8 @@
       "custom-swiper",
       "custom-swiper-second",
       "zero-fee-banking",
-      "zero-block"
+      "zero-block",
+      "our-funds"
     ]
   },
   {
@@ -94,6 +95,12 @@
     "id": "zero-fee-banking",
     "components": [
       "zero-fee-banking-item"
+    ]
+  },
+  {
+    "id": "our-funds",
+    "components": [
+      "our-funds-item"
     ]
   }
 ]

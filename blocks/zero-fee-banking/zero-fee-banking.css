@@ -20,7 +20,7 @@
 }
 /* stylelint-disable-next-line rule-empty-line-before */
 .zero-fee-banking {
-    width: 1051px;
+    width: 1305px;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -48,7 +48,32 @@
     height: 64px;
 }
 
-.background > div > h5{
+.background > div > h5 {
     color: white;
     font-family: 700;
+}
+
+.zero-fee-banking-container {
+    position: relative;
+}
+
+.zero-block > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zero-block > div > div >h1{
+  font-size: 100px;
+}
+
+.zero-block-wrapper {
+    background: #fff;
+    box-shadow: 4px 0 2px 0 rgb(0 0 0 / 25%);
+    position: absolute;
+    left: 100px;
+    top: 160px;
+    z-index: 1;
+    padding: 25px;
 }

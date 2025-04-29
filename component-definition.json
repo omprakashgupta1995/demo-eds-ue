@@ -460,6 +460,36 @@
               }
             }
           }
+        },
+        {
+          "title": "Our Funds",
+          "id": "our-funds",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Our Funds",
+                  "model": "our-funds"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Our Funds Item",
+          "id": "our-funds-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Our Funds Item",
+                  "model": "our-funds-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
