@@ -491,6 +491,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Our Funds Header Item",
+          "id": "our-funds-header-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Our Funds Header Item",
+                  "model": "our-funds-header-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
