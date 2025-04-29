@@ -551,9 +551,9 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "url_text",
+        "name": "url_First-text",
         "value": "",
-        "label": "Text",
+        "label": "First-Text",
         "valueType": "string"
       },
       {
