@@ -550,10 +550,10 @@
     "id": "zero-fee-banking-item",
     "fields": [
       {
-        "component": "richtext",
+        "component": "text",
         "name": "url_First-text",
         "value": "",
-        "label": "First-Text",
+        "label": "hide-Text",
         "valueType": "string"
       },
       {
