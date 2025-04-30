@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.our-funds-header-container{
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.our-funds-header{
+    max-width: 1560px;
+    width: 100%;
+}
+
+.li-list{
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #b7b7b7; ;
+}
+
+.li-list > p{
+cursor: pointer;
+font-weight: 600;
+padding: 12px 24px;
+border: 1px solid black;
+border-radius: 20px;
+}
+
+
+
+
+
+

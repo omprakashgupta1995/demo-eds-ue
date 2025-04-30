@@ -1,10 +1,22 @@
-// export default function decorate(block) {
-//   const blockChild = block.children;
-//   const list = blockChild[0];
-//   const last = list.children;
+/* eslint-disable*/
+//  import swiperFirst from '../custom-swiper/custom-swiper.js';
+//  export default function decorate(block) {
+//    swiperFirst(block);
+//  }
 
-//   // Loop through the children and add class "list"
-//   Array.from(last).forEach((child) => {
-//     child.classList.add('li-list');
-//   });
-// }
+import swiper from '../custom-swiper/custom-swiper.js';
+
+export default function decorate(block) {
+    const slide = document.querySelectorAll(".our-funds");
+    Array.from(slide).forEach((data,index)=>{
+        data.classList.add(`show-data-${index}`)
+    })
+
+  const blockChild = block.children;
+  const freeBankingChild = blockChild;
+  Array.from(freeBankingChild).forEach((data) => {
+    data.classList.add('border');
+  });
+  swiper(block);
+}
+

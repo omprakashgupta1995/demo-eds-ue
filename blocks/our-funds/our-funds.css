@@ -1,26 +1,62 @@
-*{
+/* stylelint-disable selector-class-pattern */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
-.our-funds-container{
-    max-width: 1560px;
-    width: 100%;
-    margin: 0 auto;
+.border {
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+
+    /* display: none; */
 }
 
-.our-funds{
-    max-width: 1560px;
-    width: 100%;
+.border > div > p {
+    width: 350px;
 }
-.li-list{
+
+.custom-swiper-wrapper-item {
+    max-width: 1330px;
+    width: 100%;
+    overflow: hidden;
+    /* stylelint-disable-next-line shorthand-property-no-redundant-values */
+    margin: 30px 1px 30px 1px;
+}
+
+.our-funds {
+    position: relative;
+
+    /* display: none; */
+}
+
+.our-funds.prev-btn1 {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+
+.our-funds > .custom-swiper-wrapper-item > .custom-slider-nav {
+    width: 1360px;
     display: flex;
-    gap: 30px;
-    border-bottom: 1px solid #b7b7b7; ;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 20px;
 }
 
-.li-list > p{
-cursor: pointer;
-font-weight: 600;
+.show-data-0,
+.show-data-1,
+.show-data-2,
+.show-data-3,
+.show-data-4,
+.show-data-5,
+.show-data-6 {
+    display: none;
+}
+
+.active {
+    display: block;
 }

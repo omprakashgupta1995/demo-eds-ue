@@ -47,14 +47,14 @@ export default function decorate(block) {
       autoPlayVideo.setAttribute('playsinline', true);
       autoPlayVideo.muted = true;
 
-      autoPlayVideo.play().catch((error) => {
-        console.error('Error playing video:', error);
+      autoPlayVideo.play().catch(() => {
+        // console.error('Error playing video:', error);
         document.addEventListener(
           'click',
           () => {
             autoPlayVideo
-              .play()
-              .catch((e) => console.error("Still can't play video:", e));
+              .play();
+            // .catch((e) => console.error("Still can't play video:", e));
           },
           { once: true },
         );
@@ -68,6 +68,9 @@ export default function decorate(block) {
     Array.from(listOfBlocks).forEach((ele) => {
       if (ele === 'zero-fee-banking') {
         slideWidth = 260;
+        // chnages
+      } else if (ele === 'our-funds') {
+        slideWidth = 430;
       }
     });
     const transitionDuration = '0.5s'; // Duration for the transition effect

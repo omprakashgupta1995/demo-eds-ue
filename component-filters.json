@@ -29,7 +29,8 @@
       "zero-fee-banking",
       "zero-block",
       "our-funds",
-      "our-funds-header"
+      "our-funds-header",
+      "glider"
     ]
   },
   {
@@ -102,6 +103,12 @@
     "id": "our-funds",
     "components": [
       "our-funds-item"
+    ]
+  },
+  {
+    "id": "glider",
+    "components": [
+      "glider-item"
     ]
   }
 ]
