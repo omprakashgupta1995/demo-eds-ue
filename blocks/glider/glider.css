@@ -1,0 +1,8 @@
+@import url('./glider.min.css');
+
+.glider{
+    max-width: 1560px;
+    width: 100%;
+    overflow: hidden;
+}
+

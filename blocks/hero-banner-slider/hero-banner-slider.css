@@ -12,6 +12,7 @@
   display: flex;
   gap: 50px;
   height: 400px;
+  cursor: grab;
 }
 .hero-banner-slider .banner-1 div:nth-child(2) h1 {
   font-size: 36px;

@@ -30,6 +30,7 @@
     padding: 0;
     display: flex;
     z-index: 1;
+    gap: 20px;
 }
 .glider.draggable {
     user-select: none;
