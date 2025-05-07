@@ -583,6 +583,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Moti Tab Items",
+          "id": "moti-funds-Items",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Moti Tab Items",
+                  "model": "moti-tab-items"
+                }
+              }
+            }
+          }
         }
       ]
     }

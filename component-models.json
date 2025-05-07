@@ -669,6 +669,29 @@
         "valueType": "string"
       }
     ]
+  }, {
+    "id": "moti-tab-items",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "tab text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "url_link",
+        "label": "Link"
+      },
+      {
+        "component": "richtext",
+        "name": "tab body text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   },
   {
     "id": "glider-item",

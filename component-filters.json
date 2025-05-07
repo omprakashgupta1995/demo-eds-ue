@@ -89,6 +89,10 @@
     "components": ["glider-item"]
   },
   {
+    "id": "moti-tab",
+    "components": ["moti-tab-items"]
+  },
+  {
     "id": "moti-swiper",
     "components": ["moti-funds-Items"]
   }
