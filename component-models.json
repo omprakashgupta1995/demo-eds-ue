@@ -114,8 +114,8 @@
             "value": "highlight"
           },
           {
-            "name" :"find-section",
-            "value":"find-section"
+            "name": "find-section",
+            "value": "find-section"
           }
         ]
       }
@@ -276,16 +276,15 @@
     ]
   },
   {
-    "id":"faq",
-    "fields":[
+    "id": "faq",
+    "fields": [
       {
-        "component":"aem-content",
-        "name":"faq",
+        "component": "aem-content",
+        "name": "faq",
         "value": "",
         "label": "faq",
         "valueType": "string"
-      }
-      ,
+      },
       {
         "component": "richtext",
         "name": "text",
@@ -586,8 +585,8 @@
         "valueType": "string"
       }
     ]
-  }
-  ,{
+  },
+  {
     "id": "zero-block",
     "fields": [
       {
