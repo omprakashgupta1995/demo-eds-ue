@@ -114,6 +114,12 @@
       "com-teaser-item"
       
     ]
+  },
+  {
+    "id": "contact-section",
+    "components": [
+      "contact-section-item"
+    ]
   }
  
 ]

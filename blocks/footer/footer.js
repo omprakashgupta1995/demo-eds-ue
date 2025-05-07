@@ -121,6 +121,20 @@ export default async function decorate(block) {
   const fotThreeSecond = document.querySelector('.fot-two-wrapper > div > div:nth-child(3)');
   
   if (fottwoFirstChild) fottwoFirstChild.classList.add('imp');
-  if (fotTwoSecond) fotTwoSecond.classList.add('mess');
-  if (fotThreeSecond) fotThreeSecond.classList.add('qrcode');
+  if (fotTwoSecond) fotTwoSecond.classList.add('qrcode');
+  if (fotThreeSecond) fotThreeSecond.classList.add('imgDiv');
+
+
+  //footer section 3
+  const fotThreeFirstChild = document.querySelector('.fot-three-wrapper > div > div:nth-child(1)');
+  const fotThreeSecondChild = document.querySelector('.fot-three-wrapper > div > div:nth-child(2)');
+  const listTitle = fotThreeFirstChild.querySelector('div > div:nth-child(1)');
+  const UlTable = fotThreeFirstChild.querySelector('div > div:nth-child(2)');
+  if (listTitle) listTitle.classList.add('listTitle');
+  if (UlTable) UlTable.classList.add('UlTable');
+
+  if(fotThreeFirstChild) fotThreeFirstChild.classList.add(`textcontent`)
+  if(fotThreeSecondChild) fotThreeSecondChild.classList.add(`loccontent`)
+  
+  
 }

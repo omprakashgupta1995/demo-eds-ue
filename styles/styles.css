@@ -669,12 +669,4 @@ main .section.highlight {
 } */
 
 .common-teaser.zero-teaser.block{
-    z-index: 1;
-    box-shadow: 4px 0px 2px 0px rgba(0, 0, 0, .25);
-    position: absolute;
-    z-index: 1;
-    top: 157px;
-    padding: 5px 51px;
-    /* left: 155px; */
-    background: white;
 }
