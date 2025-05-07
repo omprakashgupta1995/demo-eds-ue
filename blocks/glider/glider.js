@@ -36,6 +36,9 @@ export default function decorate(block) {
         },
       ],
     });
+
+    // glider.js file  is not use ;
+
     // Glider(document.querySelector('.glider'), {
     //   slidesToShow: 5,
     //   slidesToScroll: 1,
@@ -43,7 +46,7 @@ export default function decorate(block) {
     //   dots: '.dots',
     //   arrows: {
     //     prev: '.glider-prev',
-    //     next: '.glider-next',    
+    //     next: '.glider-next',
     //   },
     // });
   });

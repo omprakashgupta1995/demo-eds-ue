@@ -10,7 +10,7 @@
     max-width: 1200px;
     width: 100%;
   display: flex;
-  gap: 50px;
+  gap: 40px;
   height: 400px;
   cursor: grab;
 }
@@ -51,11 +51,11 @@
     position: relative;
 }
 .swiper-slide  picture  img{
-   width: 1420px;
+   width: 1400px;
    height: 400px;
 }
 .swiper-slide video{
-    width: 1420px;
+    width: 1400px;
     height: 400px;
 }
 .child-1{

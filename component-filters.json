@@ -30,7 +30,8 @@
       "zero-block",
       "our-funds",
       "our-funds-header",
-      "glider"
+      "glider",
+      "moti-tab"
     ]
   },
   {
@@ -101,6 +102,12 @@
   },
   {
     "id": "our-funds",
+    "components": [
+      "our-funds-item"
+    ]
+  },
+  {
+    "id": "moti-tab",
     "components": [
       "our-funds-item"
     ]

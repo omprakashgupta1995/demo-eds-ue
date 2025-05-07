@@ -62,7 +62,7 @@ export default function decorate(block) {
     });
   }
   function updateSliderForAll() {
-    let slideWidth = 1450; // Use 'let' so you can reassign the value
+    let slideWidth = 1440; // Use 'let' so you can reassign the value
 
     const listOfBlocks = block.classList;
     Array.from(listOfBlocks).forEach((ele) => {
