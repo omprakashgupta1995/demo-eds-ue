@@ -109,7 +109,7 @@
   {
     "id": "moti-tab",
     "components": [
-      "our-funds-items"
+      "moti-funds-items"
     ]
   },
   {

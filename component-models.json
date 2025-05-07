@@ -701,14 +701,31 @@
     ]
   },
   {
-    "id": "our-funds-items",
+    "id": "moti-funds-items",
     "fields": [
       {
-        "component": "richtext",
-        "name": "tab body text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "component": "reference",
+        "valueType": "string",
+        "name": "first-banner_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "first-banner_imageAlt",
+        "label": "Image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "banner_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "banner_imageAlt",
+        "label": "Image"
       },
       {
         "component": "aem-content",

@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-unresolved
+/*eslint-disable*/
 import { toClassName } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
@@ -40,8 +40,8 @@ export default async function decorate(block) {
       button.setAttribute('aria-selected', true);
     });
     tablist.append(button);
-    tab.re
-move();
+    tab.remove();
   });
 
   block.prepend(tablist);
+}

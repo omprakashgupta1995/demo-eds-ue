@@ -555,15 +555,15 @@
           }
         },
         {
-          "title": "Our Funds Items",
-          "id": "our-funds-items",
+          "title": "Moti Funds Iems",
+          "id": "moti-funds-Items",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Our Funds Items",
-                  "model": "our-funds-items"
+                  "name": "Moti Funds Iems",
+                  "model": "moti-funds-Items"
                 }
               }
             }
