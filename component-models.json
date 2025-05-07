@@ -883,5 +883,28 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"contact-section",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType":"string",
+        "options": [
+          {
+            "name":"test2",
+            "children":[
+              {
+                "name": "Contact Section",
+                "value": "contact-section"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+    
   }
 ]
