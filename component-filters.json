@@ -46,7 +46,8 @@
       "idfc-spotlight",
       "idfc-compliment",
       "common-teaser",
-      "idfc-award-carousel"
+      "idfc-award-carousel",
+      "idfc-home-tab"
     ]
   },
   {
@@ -100,6 +101,12 @@
     "id": "idfc-award-carousel",
     "components": [
       "idfc-award-carousel-item"
+    ]
+  },
+  {
+    "id": "idfc-home-tab",
+    "components": [
+      "idfc-home-tab-item"
     ]
   }
 ]
