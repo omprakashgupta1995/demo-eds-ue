@@ -684,6 +684,13 @@
     "id": "idfc-home-tab-item",
     "fields": [
       {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image"
@@ -693,13 +700,6 @@
         "valueType": "string",
         "name": "imageAlt",
         "label": "image alt"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   }
