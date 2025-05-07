@@ -556,14 +556,14 @@
         },
         {
           "title": "Moti Tab Iems",
-          "id": "moti-tab-Items",
+          "id": "moti-tab-items",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Moti Tab Iems",
-                  "model": "moti-tab-Items"
+                  "model": "moti-tab-items"
                 }
               }
             }
