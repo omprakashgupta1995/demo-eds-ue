@@ -184,11 +184,8 @@
           {
             "name":"IDFC Zero Fee",
             "value":"idfc-zero-fee"
-          },
-          {
-            "name": "Contact Section",
-            "value": "contact-section"
           }
+        
         ]
       }
     ]
@@ -887,6 +884,27 @@
       }
     ]
   },
+  {
+    "id":"contact-section",
+    "fields":{
+      "component": "multiselect",
+      "name": "classes",
+      "label": "Style",
+      "valueType":"string",
+      "options": [
+        {
+          "name":"test1",
+          "children":[
+            {
+              "name": "contact-section",
+              "value": "contact-section"
+            }
+          ]
+        }
+      ]
+    }
+    
+  }
 
   {
     "id": "contact-section-item",
