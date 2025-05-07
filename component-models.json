@@ -681,7 +681,7 @@
     ]
   },
   {
-    "id": "idfc-award-carousel-item",
+    "id": "idfc-home-tab-item",
     "fields": [
       {
         "component": "reference",
