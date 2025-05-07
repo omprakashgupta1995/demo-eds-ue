@@ -570,15 +570,15 @@
           }
         },
         {
-          "title": "Moti Funds Iems",
-          "id": "moti-funds-Items",
+          "title": "Moti Tab Iems",
+          "id": "moti-tab-Items",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Moti Funds Iems",
-                  "model": "moti-funds-Items"
+                  "name": "Moti Tab Iems",
+                  "model": "moti-tab-Items"
                 }
               }
             }
