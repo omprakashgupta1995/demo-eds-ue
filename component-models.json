@@ -887,7 +887,7 @@
       }
     ]
   },
-  
+
   {
     "id": "contact-section-item",
     "fields": [
@@ -907,9 +907,9 @@
       {
         "component": "richtext",
         "name": "richtext",
-        "value": "",
         "label": "Text",
-        "valueType": "string"
+        "valueType": "string",
+        "value": ""
       }
     ]
   },
