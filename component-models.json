@@ -184,8 +184,11 @@
           {
             "name":"IDFC Zero Fee",
             "value":"idfc-zero-fee"
+          },
+          {
+            "name": "Contact Section",
+            "value": "contact-section"
           }
-        
         ]
       }
     ]
@@ -897,8 +900,8 @@
             "name":"test2",
             "children":[
               {
-                "name": "Contact Section",
-                "value": "contact-section"
+                "name": "Contact Block",
+                "value": "contact-block"
               }
             ]
           }
