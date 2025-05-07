@@ -657,7 +657,14 @@
       },
       {
         "component": "richtext",
-        "name": "url_text",
+        "name": "tab text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "tab body text",
         "value": "",
         "label": "Text",
         "valueType": "string"
