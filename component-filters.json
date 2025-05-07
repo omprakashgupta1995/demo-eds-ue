@@ -31,7 +31,8 @@
       "our-funds",
       "our-funds-header",
       "glider",
-      "moti-tab"
+      "moti-tab",
+      "moti-swiper"
     ]
   },
   {
@@ -116,6 +117,12 @@
     "id": "glider",
     "components": [
       "glider-item"
+    ]
+  },
+  {
+    "id": "moti-swiper",
+    "components": [
+      "moti-funds-Items"
     ]
   }
 ]
