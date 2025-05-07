@@ -94,6 +94,6 @@
   },
   {
     "id": "moti-swiper",
-    "components": ["moti-funds-Items"]
+    "components": ["moti-swiper-Items"]
   }
 ]

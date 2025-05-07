@@ -669,7 +669,8 @@
         "valueType": "string"
       }
     ]
-  }, {
+  }, 
+  {
     "id": "moti-tab-items",
     "fields": [
       {
@@ -723,7 +724,7 @@
     ]
   },
   {
-    "id": "moti-funds-items",
+    "id": "moti-swiper-Items",
     "fields": [
       {
         "component": "reference",
