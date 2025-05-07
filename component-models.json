@@ -724,7 +724,7 @@
     ]
   },
   {
-    "id": "moti-swiper-Items",
+    "id": "moti-swiper-items",
     "fields": [
       {
         "component": "reference",

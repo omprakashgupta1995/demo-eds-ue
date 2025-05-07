@@ -586,14 +586,14 @@
         },
         {
           "title": "Moti Swiper Items",
-          "id": "moti-swiper-Items",
+          "id": "moti-swiper-items",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Moti Swiper Items",
-                  "model": "moti-swiper-Items"
+                  "model": "moti-swiper-items"
                 }
               }
             }
