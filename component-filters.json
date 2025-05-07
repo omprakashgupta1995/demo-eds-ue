@@ -1,9 +1,7 @@
 [
   {
-    "id":"main",
-    "components": [
-      "section"
-    ]
+    "id": "main",
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -31,61 +29,41 @@
       "our-funds",
       "our-funds-header",
       "glider",
-      "moti-tab"
+      "moti-tab",
+      "moti-swiper"
     ]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
+    "components": ["card"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
   },
   {
     "id": "sample-swiper",
-    "components": [
-      "swiper-item"
-    ]
+    "components": ["swiper-item"]
   },
   {
     "id": "first-component",
-    "components": [
-      "first-component-item"
-    ]
+    "components": ["first-component-item"]
   },
   {
     "id": "favourite-corner",
-    "components": [
-      "favourite-corner-item"
-    ]
+    "components": ["favourite-corner-item"]
   },
   {
     "id": "hero-banner-slider",
-    "components": [
-      "hero-banner-slider-item",
-      "hero-banner-embed-slider-item"
-    ]
+    "components": ["hero-banner-slider-item", "hero-banner-embed-slider-item"]
   },
   {
     "id": "custom-swiper",
-    "components": [
-      "custom-swiper-banner-item",
-      "custom-swiper-embed-item"
-    ]
+    "components": ["custom-swiper-banner-item", "custom-swiper-embed-item"]
   },
   {
     "id": "custom-swiper-second",
@@ -96,32 +74,22 @@
   },
   {
     "id": "zero-fee-banking",
-    "components": [
-      "zero-fee-banking-item"
-    ]
+    "components": ["zero-fee-banking-item"]
   },
   {
     "id": "our-funds",
-    "components": [
-      "our-funds-item"
-    ]
+    "components": ["our-funds-item"]
   },
   {
     "id": "moti-tab",
-    "components": [
-      "moti-funds-items"
-    ]
+    "components": ["moti-funds-items"]
   },
   {
     "id": "glider",
-    "components": [
-      "glider-item"
-    ]
+    "components": ["glider-item"]
   },
   {
-    "id": "glider",
-    "components": [
-      "glider-item"
-    ]
+    "id": "moti-swiper",
+    "components": ["moti-funds-Items"]
   }
 ]
