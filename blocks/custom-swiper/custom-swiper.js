@@ -71,6 +71,8 @@ export default function decorate(block) {
         // chnages
       } else if (ele === 'our-funds') {
         slideWidth = 430;
+      } else if (ele === 'moti-swiper') {
+        slideWidth = 430;
       }
     });
     const transitionDuration = '0.5s'; // Duration for the transition effect
