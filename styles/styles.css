@@ -670,3 +670,20 @@ main .section.highlight {
 
 .common-teaser.zero-teaser.block{
 }
+
+.section.contact-section{
+    margin: 40px 0 0 0;
+    padding: 57px 0;
+    background: linear-gradient(73deg, #C7C6C6 -74.4%, #F1F1F1 23.15%);
+
+    >div h3{    
+        color: #222;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+}
+

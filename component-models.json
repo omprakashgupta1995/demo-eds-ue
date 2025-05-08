@@ -921,10 +921,8 @@
       },
       {
         "component": "text",
-        "valueType": "string",
-        "name": "col1_alt1",
-        "label": "Alt",
-        "value": ""
+        "name": "col1_imageAlt",
+        "label": "Alt Text"
       },
       {
         "component": "richtext",
@@ -946,10 +944,8 @@
       },
       {
         "component": "text",
-        "valueType": "string",
-        "name": "col1_alt1",
-        "label": "Alt",
-        "value": ""
+        "name": "col1_imageAlt",
+        "label": "Alt Text"
       },
       {
         "component": "richtext",

@@ -619,31 +619,31 @@
           }
         },
         {
-          "title": "Contact Section",
-          "id": "contact-section",
+          "title": "Contact Cards",
+          "id": "contact-cards",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Contact Section",
-                  "model": "contact-section",
-                  "filter": "contact-section"
+                  "name": "Contact Cards",
+                  "model": "contact-cards",
+                  "filter": "contact-cards"
                 }
               }
             }
           }
         },
         {
-          "title": "Contact Section Item",
-          "id": "contact-section-item",
+          "title": "Contact Cards Item",
+          "id": "contact-cards-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Contact Section Item",
-                  "model": "contact-section-item"
+                  "name": "Contact Cards Item",
+                  "model": "contact-cards-item"
                 }
               }
             }
