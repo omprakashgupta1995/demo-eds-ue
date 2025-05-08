@@ -4,4 +4,40 @@
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+.contact-block.block .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-block.block .card-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(77deg, #5F0D16 0%, #B43140 98.1%);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.contact-block.block .card-img_img {
+  width: 40px;
+}
+.contact-block.block .card-img p:nth-child(2) {
+  display: none;
+}
+.contact-block.block .card-context {
+  margin-bottom: 0;
+  margin-left: 24px;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  background: linear-gradient(77deg, #5F0D16 0%, #B43140 98.1%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }/*# sourceMappingURL=contact-section.css.map */

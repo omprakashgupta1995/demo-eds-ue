@@ -37,7 +37,8 @@
       "com-teaser",
       "fot-three",
       "fot-two",
-      "fot-one","contact-section"
+      "fot-one",
+      "contact-cards"
     ]
   },
   {
@@ -110,16 +111,10 @@
   },
   {
     "id": "com-teaser",
-    "components": [
-      "com-teaser-item"
-      
-    ]
+    "components": ["com-teaser-item"]
   },
   {
-    "id": "contact-section",
-    "components": [
-      "contact-section-item"
-    ]
+    "id": "contact-cards",
+    "components": ["contact-cards-item"]
   }
- 
 ]

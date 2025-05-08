@@ -888,7 +888,7 @@
     ]
   },
   {
-    "id":"contact-section",
+    "id":"contact-cards",
     "fields": [
       {
         "component": "multiselect",

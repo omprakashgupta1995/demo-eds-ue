@@ -4,4 +4,45 @@
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(77deg, #5F0D16 0%, #B43140 98.1%);
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            &_img {
+                width: 40px;
+            }
+
+            p:nth-child(2) {
+                display: none;
+            }
+        }
+
+        &-context {
+            margin-bottom: 0;
+            margin-left: 24px;
+            font-family: "Inter";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            background: linear-gradient(77deg, #5F0D16 0%, #B43140 98.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(0, 0, 0, 0);
+        }
+    }
 }
