@@ -911,7 +911,7 @@
     
   },
   {
-    "id": "contact-section-item",
+    "id": "contact-cards-item",
     "fields": [
       {
         "component": "reference",
