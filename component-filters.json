@@ -26,7 +26,18 @@
       "fot-three",
       "fot-two",
       "fot-one",
-      "contact-cards"
+      "contact-cards",
+      "hero-banner-item",
+      "product-1",
+      "faq",
+      "my-video",
+      "git-accordion",
+      "idfc-banner",
+      "idfc-spotlight",
+      "idfc-compliment",
+      "common-teaser",
+      "idfc-award-carousel",
+      "idfc-home-tab"
     ]
   },
   {
@@ -40,7 +51,8 @@
   {
     "id": "column",
     "components": ["text", "image", "button", "title"]
-  },  {
+  },
+  {
     "id": "idfc-slider",
     "components": [
       "idfc-slider-teaser",
@@ -55,5 +67,25 @@
   {
     "id": "contact-cards",
     "components": ["contact-cards-item"]
+  },
+  {
+    "id": "idfc-banner",
+    "components": ["idfc-banner-item", "idfc-embed-item"]
+  },
+  {
+    "id": "idfc-spotlight",
+    "components": ["idfc-spotlight-item", "idfc-spotlight-item1"]
+  },
+  {
+    "id": "idfc-compliment",
+    "components": ["idfc-compliment-item"]
+  },
+  {
+    "id": "idfc-award-carousel",
+    "components": ["idfc-award-carousel-item"]
+  },
+  {
+    "id": "idfc-home-tab",
+    "components": ["idfc-home-tab-item"]
   }
 ]
