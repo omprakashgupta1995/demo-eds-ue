@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   loadHeader,
   loadFooter,
@@ -12,11 +13,26 @@ import {
   loadCSS,
 } from './aem.js';
 
+import Swiper from '../blocks/idfc-banner/swiper-bundle.min.js'
+
 /**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
  * @param {Element} to the element to copy attributes to
  */
+
+function autolinkModals(element) {
+  element.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
+}
+
 export function moveAttributes(from, to, attributes) {
   if (!attributes) {
     // eslint-disable-next-line no-param-reassign
@@ -180,3 +196,54 @@ async function loadPage() {
 }
 
 loadPage();
+
+
+// Select the wrapper inside the bottom banner section
+const wrapper = document.querySelector('.bottom-banner .default-content-wrapper');
+
+// Get all child elements of the wrapper
+const children = Array.from(wrapper.children);
+
+// Keep the first <p> tag and move the rest
+const elementsToMove = children.slice(1);
+
+// Create a new div to hold the moved elements
+const newDiv = document.createElement('div');
+newDiv.className = 'banner-bottom-text'; // Name the class as needed
+
+// Append the remaining elements into the new div
+elementsToMove.forEach(el => newDiv.appendChild(el));
+
+// Append the new div back into the original wrapper
+wrapper.appendChild(newDiv);
+
+const pTags = document.querySelectorAll('.compliment-section .default-content-wrapper p');
+
+pTags.forEach((p) => {
+  const picture = p.querySelector('img');
+  if (picture) {
+    if (picture.alt === 'compliment-left-img') {
+      p.classList.add('left-img-wrapper');
+    } else if (picture.alt === 'compliment-right-img') {
+      p.classList.add('right-img-wrapper');
+    }
+  }
+});
+
+
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable */
+>>>>>>> 17662fabe813357100e661889b3d47b159fc6814
 /*
  * Copyright 2023 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");

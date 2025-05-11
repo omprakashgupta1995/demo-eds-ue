@@ -527,7 +527,6 @@
             }
           }
         },
-
         {
           "title": "GIT Accordion",
           "id": "git-accordion",
@@ -744,5 +743,6 @@
         }
       ]
     }
+    
   ]
 }

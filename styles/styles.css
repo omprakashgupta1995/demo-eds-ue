@@ -71,6 +71,10 @@
         --heading-font-size-xs: 18px;
     }
 }
+*{
+  padding: 0;
+  margin: 0;
+}
 
 body {
     display: none;

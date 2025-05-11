@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+/*eslint-disable */
+>>>>>>> 17662fabe813357100e661889b3d47b159fc6814
 import buildAccordianBlock from '../accordion/accordion.js';
 import { ul, li, div } from '../../scripts/domhelper.js';
 
 export default async function decorate(block) {
+<<<<<<< HEAD
   // console.log(block);
   const a = block.querySelector('a');
   const path = a?.href.trim();
@@ -9,6 +14,14 @@ export default async function decorate(block) {
   const respData = await resp.json();
   const { data } = respData;
   // block.textContent = '';
+=======
+  const a = block.querySelector('a');
+  const path = a?.href.trim();
+
+  const resp = await fetch(path);
+  const respData = await resp.json();
+  const { data } = respData;
+>>>>>>> 17662fabe813357100e661889b3d47b159fc6814
   const list = [li('All')];
   const accordianBlock = div(
     { class: 'block accordion' },

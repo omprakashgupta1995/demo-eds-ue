@@ -5,7 +5,8 @@
     "/content/demo-ue-022/om/form/leads-form:/om/leads-form.json",
     "/content/demo-ue-022/metadata:/metadata.json",
     "/content/demo-ue-022/om/api/faq:/api/faq.json",
-    "/content/demo-ue-022/Harsh-Patil/form:"
+    "/content/demo-ue-022/Harsh-Patil/form:",
+    "/content/demo-ue-022/om/api/faq:/api/faq.json"
   ],
   "includes": [
     "/content/demo-ue-022/"

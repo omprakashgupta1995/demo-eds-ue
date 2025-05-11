@@ -1,0 +1,70 @@
+/*stylelint-disable*/
+
+.idfc-spotlight{
+    display: flex;
+    gap: 16px;
+    overflow: hidden;
+    .spotlight-div{
+        display: flex;
+        justify-content: space-between;
+        min-width: 443px!important;
+        // width: 100%;
+        max-height: 187px;
+        border-radius: 16px;
+        padding: 20px 0px 20px 24px;
+        border: 1px solid black;
+        background-color: rgb(255, 55, 55);
+        color: white;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h2{
+                margin: 0;
+                color: #fff;
+                font-family: "Inter";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 32px;
+            }
+            p:nth-child(2){
+                color: #fff;
+                font-family: "Inter";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+                margin-top: 12px;
+            }
+            .button-container{
+                padding-top: 25px;
+                a{
+                    background: none;
+                    margin: 0;
+                    padding: 0;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+
+    .spotlight-item-1{
+        background: linear-gradient(135deg, #DA6E4A 0.9%, #9B2F20 100%);
+    }
+    .spotlight-item-2{
+        background: linear-gradient(130deg, rgb(46, 45, 45) -0.84%, rgb(72, 72, 72) 92.21%);
+    }
+    .spotlight-item-3{
+        background: linear-gradient(248deg, #75161b -23.47%, #a02931 114.49%);
+    }
+    .spotlight-item-4{
+        background: linear-gradient(24deg, #066697 -38.31%, #5A9DD6 93.18%);
+    }
+    .spotlight-item-5{
+        background: linear-gradient(100deg, #5A9DD6 24.67%, #8AC2F1 112.05%);
+    }
+    
+
+}
