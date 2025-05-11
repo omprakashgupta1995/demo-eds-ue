@@ -108,5 +108,11 @@
     "components": [
       "idfc-home-tab-item"
     ]
+  },
+  {
+    "id": "idfc-digital-banking",
+    "components": [
+      "idfc-digital-banking-item"
+    ]
   }
 ]

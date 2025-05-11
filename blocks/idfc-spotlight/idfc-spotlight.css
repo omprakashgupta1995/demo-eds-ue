@@ -1,64 +1,88 @@
 /*stylelint-disable*/
 .idfc-spotlight {
-  display: flex;
-  gap: 16px;
   overflow: hidden;
+
+  .swiper {
+    width: 100%;
+  overflow: hidden;
+  padding-bottom: 20px;
+  }
+
+  .swiper-wrapper {
+     display: flex;
+  width: max-content;
+  }
+
+  .swiper-slide {
+    flex-shrink: 0;
+     width: 443px !important; /* match your card width */
+  margin-right: 20px; /* space between slides */
+  }
+
+  .spotlight-div {
+    display: flex;
+    justify-content: space-between;
+    min-width: 443px !important;
+    max-height: 187px;
+    border-radius: 16px;
+    padding: 20px 0px 20px 24px;
+    border: 1px solid black;
+    color: white;
+
+    div:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      h2 {
+        margin: 0;
+        font-family: "Inter";
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        color: #fff;
+      }
+
+      p:nth-child(2) {
+        margin-top: 12px;
+        font-family: "Inter";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        color: #fff;
+      }
+
+      .button-container {
+        padding-top: 25px;
+
+        a {
+          background: none;
+          margin: 0;
+          padding: 0;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .spotlight-item-1 { background: linear-gradient(135deg, #DA6E4A 0.9%, #9B2F20 100%); }
+  .spotlight-item-2 { background: linear-gradient(130deg, #2E2D2D -0.84%, #484848 92.21%); }
+  .spotlight-item-3 { background: linear-gradient(248deg, #75161b -23.47%, #a02931 114.49%); }
+  .spotlight-item-4 { background: linear-gradient(24deg, #066697 -38.31%, #5A9DD6 93.18%); }
+  .spotlight-item-5 { background: linear-gradient(100deg, #5A9DD6 24.67%, #8AC2F1 112.05%); }
 }
-.idfc-spotlight .spotlight-div {
-  display: flex;
-  justify-content: space-between;
-  min-width: 443px !important;
-  max-height: 187px;
-  border-radius: 16px;
-  padding: 20px 0px 20px 24px;
-  border: 1px solid black;
-  background-color: rgb(255, 55, 55);
-  color: white;
+.idfc-spotlight .swiper-button-prev,
+.idfc-spotlight .swiper-button-next {
+  color: #333;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
-.idfc-spotlight .spotlight-div div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.idfc-spotlight .spotlight-div div h2 {
-  margin: 0;
-  color: #fff;
-  font-family: "Inter";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 32px;
-}
-.idfc-spotlight .spotlight-div div p:nth-child(2) {
-  color: #fff;
-  font-family: "Inter";
+
+.idfc-spotlight .swiper-button-prev:after,
+.idfc-spotlight .swiper-button-next:after {
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-  margin-top: 12px;
 }
-.idfc-spotlight .spotlight-div div .button-container {
-  padding-top: 25px;
-}
-.idfc-spotlight .spotlight-div div .button-container a {
-  background: none;
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
-}
-.idfc-spotlight .spotlight-item-1 {
-  background: linear-gradient(135deg, #DA6E4A 0.9%, #9B2F20 100%);
-}
-.idfc-spotlight .spotlight-item-2 {
-  background: linear-gradient(130deg, rgb(46, 45, 45) -0.84%, rgb(72, 72, 72) 92.21%);
-}
-.idfc-spotlight .spotlight-item-3 {
-  background: linear-gradient(248deg, #75161b -23.47%, #a02931 114.49%);
-}
-.idfc-spotlight .spotlight-item-4 {
-  background: linear-gradient(24deg, #066697 -38.31%, #5A9DD6 93.18%);
-}
-.idfc-spotlight .spotlight-item-5 {
-  background: linear-gradient(100deg, #5A9DD6 24.67%, #8AC2F1 112.05%);
-}/*# sourceMappingURL=idfc-spotlight.css.map */

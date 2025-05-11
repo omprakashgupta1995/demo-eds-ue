@@ -52,9 +52,12 @@
     transition: transform 0.3s ease;
 }
 
-.idfc-award-carousel .swiper-slide:hover {
+.idfc-award-carousel .swiper-slide:hover{
     /* transform: translateY(-5px); */
-    background-color: red;
+    background: #ff7746;
+    background: linear-gradient(90deg, #ff4500 60%, #ff7746 100%);
+    color: white;
+    cursor: pointer;
 }
 
 .idfc-award-carousel .swiper-slide picture img {
