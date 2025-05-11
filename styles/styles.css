@@ -265,77 +265,71 @@ main .section.highlight {
 main.section{
   display: flex;
 }
-
-main .birla-banner-container{
+/* main .birla-banner-container {
   position: relative;
 }
 
-main .birla-category-container{
+main .birla-category-container {
   position: absolute;
-
-  /* top: 100px; */
 }
 
-main .birla-teaser-container{
+main .birla-teaser-container {
   display: flex;
   flex-direction: column;
 }
 
-main .birla-top-banner-container{
+main .birla-top-banner-container {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.birla-bottom-banner-wrapper{
+.birla-bottom-banner-wrapper {
   position: absolute;
   top: 270px;
   left: 20%;
   margin-bottom: 100px;
 }
 
-/* Nerolac */
-.navbar .default-content-wrapper{
+.navbar .default-content-wrapper {
   display: flex;
 }
 
-.navbar .default-content-wrapper ul{
+.navbar .default-content-wrapper ul {
   display: flex;
   gap: 8px;
   text-decoration: none;
   list-style: none;
 }
 
-.navbar .default-content-wrapper ul li{
+.navbar .default-content-wrapper ul li {
   font-size: 16px;
   color: grey;
 }
 
-.navbar .default-content-wrapper p picture img{
-    width: 230px;
-    height: 35px;
+.navbar .default-content-wrapper p picture img {
+  width: 230px;
+  height: 35px;
 }
 
-.findus-section .default-content-wrapper{
+.findus-section .default-content-wrapper {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.findus-section .default-content-wrapper h2{
+.findus-section .default-content-wrapper h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-    /* font-family: Typeface/Family/Heading; */
   font-weight: 700;
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0%;
   color: #0D2042;
-
 }
 
-.findus-section .default-content-wrapper ul{
+.findus-section .default-content-wrapper ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -345,8 +339,7 @@ main .birla-top-banner-container{
   gap: 16px;
 }
 
-.findus-section .default-content-wrapper ul li{
-  /* font-family: Typeface/Family/Body; */
+.findus-section .default-content-wrapper ul li {
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
@@ -355,16 +348,13 @@ main .birla-top-banner-container{
   border-radius: 100px;
   padding: 8px 16px;
   color: #0D2042;
-
 }
-/* .bottom-banner .default-content-wrapper p{
-  position: relative;
-} */
-.bottom-banner{
+
+.bottom-banner {
   position: relative;
 }
 
-.bottom-banner .default-content-wrapper .banner-bottom-text{
+.bottom-banner .default-content-wrapper .banner-bottom-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -376,88 +366,80 @@ main .birla-top-banner-container{
   left: 40%;
 }
 
-.banner-bottom-text h1,.banner-bottom-text p{
+.banner-bottom-text h1, .banner-bottom-text p {
   padding: 0;
   margin: 0;
 }
 
-.banner-bottom-text h1{
-  /* font-family: Typeface/Family/Heading; */
+.banner-bottom-text h1 {
   font-weight: 700;
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0%;
   color: #0D2042;
-
 }
 
-.banner-bottom-text p{
-  /* font-family: Typeface/Family/Body; */
+.banner-bottom-text p {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
   letter-spacing: 0%;
   text-align: center;
   color: #0D2042;
-  
 }
 
-.banner-bottom-text .button-container .button{
+.banner-bottom-text .button-container .button {
   background-color: #001438;
   padding: 16px 32px;
   border-radius: 16px;
-    /* font-family: Typeface/Family/Heading; */
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0%;
 }
 
-.nerolac-testimonial-container{
+.nerolac-testimonial-container {
   display: flex;
   flex-direction: column;
 }
 
-.nerolac-testimonial-container{
+.nerolac-testimonial-container {
   display: flex;
   flex-direction: column;
 }
-.nerolac-testimonial-container .default-content-wrapper{
-  /* margin: 0;
-  padding: 0; */
+
+.nerolac-testimonial-container .default-content-wrapper {
   display: flex;
   flex-direction: column;
   gap: 16px;
   justify-content: center;
   align-items: center;
 }
-.nerolac-testimonial-container .default-content-wrapper p:nth-child(1){
-  /* font-family: Typeface/Family/Heading; */
+
+.nerolac-testimonial-container .default-content-wrapper p:nth-child(1) {
   font-weight: 700;
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0%;
   color: #0D2042;
-
 }
-.nerolac-testimonial-container .default-content-wrapper p:nth-child(2){
-  /* font-family: Typeface/Family/Heading; */
+
+.nerolac-testimonial-container .default-content-wrapper p:nth-child(2) {
   font-weight: 700;
   font-size: 24px;
   line-height: 120%;
   letter-spacing: 0%;
   text-align: center;
   color: #0D2042;
-
 }
 
-.nerolac-choose-container{
+.nerolac-choose-container {
   display: flex;
   flex-direction: column;
   color: #0D2042;
 }
 
-.nerolac-choose-container .default-content-wrapper{
+.nerolac-choose-container .default-content-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -465,46 +447,42 @@ main .birla-top-banner-container{
   gap: 16px;
 }
 
-.nerolac-choose-container .default-content-wrapper h1{
+.nerolac-choose-container .default-content-wrapper h1 {
   margin: 0;
   padding: 0;
-  /* font-family: Typeface/Family/Heading; */
   font-weight: 700;
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0%;
-
 }
 
-.nerolac-choose-container .default-content-wrapper p:nth-child(1){
+.nerolac-choose-container .default-content-wrapper p:nth-child(1) {
   margin: 0;
   padding: 0;
-  /* font-family: Typeface/Family/Body; */
   font-weight: 700;
   font-size: Typeface/Size/Body 2;
   line-height: 130%;
   letter-spacing: 0%;
   text-align: center;
-
 }
-.nerolac-choose-container .default-content-wrapper p:nth-child(2){
+
+.nerolac-choose-container .default-content-wrapper p:nth-child(2) {
   margin: 0;
   padding: 0;
 }
 
-.nerolac-choose-container .default-content-wrapper .button-container .button{
+.nerolac-choose-container .default-content-wrapper .button-container .button {
   border-radius: 16px;
   border: 1px solid #001438;
   padding: 16px 32px;
   background-color: white;
-  /* font-family: Typeface/Family/Heading; */
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0%;
   color: #001438;
+} */
 
-}
 
 /* IDFC */
 
