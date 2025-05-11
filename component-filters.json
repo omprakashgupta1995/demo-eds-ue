@@ -14,23 +14,11 @@
       "cards",
       "columns",
       "fragment",
-      "productcard",
       "hero-banner",
-      "birla-slider",
-      "birla-teaser",
-      "card-container",
-      "ups-container-left",
-      "ups-container-right",
-      "video-container",
       "faq-container",
       "myvideo",
       "demoblock",
       "form-block",
-      "kainsai-teaser",
-      "kainsai-accordian",
-      "kansai-banner",
-      "kainsai-address",
-      "nerolac-slider",
       "embed",
       "search",
       "idfc-slider",
@@ -52,56 +40,7 @@
   {
     "id": "column",
     "components": ["text", "image", "button", "title"]
-  },
-  {
-    "id": "hero-banner",
-    "components": ["hero-banner-item"]
-  },
-  {
-    "id": "birla-slider",
-    "components": ["hero-banner-item"]
-  },
-  {
-    "id": "nerolac-slider",
-    "components": ["hero-banner-item"]
-  },
-  {
-    "id": "card-container",
-    "components": ["hero-banner-item", "birla-container-item", "card"]
-  },
-  {
-    "id": "ups-container-left",
-    "components": [
-      "text",
-      "hero-banner-item",
-      "birla-container-item",
-      "birla-richtext",
-      "birla-video"
-    ]
-  },
-  {
-    "id": "ups-container-right",
-    "components": [
-      "text",
-      "hero-banner-item",
-      "birla-container-item",
-      "birla-richtext",
-      "birla-video"
-    ]
-  },
-  {
-    "id": "video-container",
-    "components": ["birla-video"]
-  },
-  {
-    "id": "kainsai-accordian",
-    "components": ["kainsai-accordian-item"]
-  },
-  {
-    "id": "kainsai-address",
-    "components": ["kainsai-address-item"]
-  },
-  {
+  },  {
     "id": "idfc-slider",
     "components": [
       "idfc-slider-teaser",
