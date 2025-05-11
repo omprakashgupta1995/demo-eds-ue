@@ -140,6 +140,10 @@
           {
             "name": "award-section",
             "value": "award-section"
+          },
+          {
+            "name": "digital-banking-section",
+            "value": "digital-banking-section"
           }
         ]
       }
