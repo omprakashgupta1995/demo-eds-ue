@@ -333,3 +333,18 @@ main .section.highlight {
     }
 }
 
+.compliment-section{
+  position: relative;
+  height: 100vh;
+}
+
+.compliment-section .default-content-wrapper p:nth-child(1){
+  position: absolute;
+  left: 0;
+  top: -20px;
+}
+.compliment-section .default-content-wrapper p:nth-child(2){
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
