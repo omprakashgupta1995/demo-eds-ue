@@ -516,12 +516,12 @@ main .birla-top-banner-container{
 .compliment-section .default-content-wrapper p:nth-child(1){
   position: absolute;
   left: 0;
-  top: -20px;
+  top: 45px;
 }
 .compliment-section .default-content-wrapper p:nth-child(2){
   position: absolute;
   right: 0;
-  top: -20px;
+  top: 45px;
 }
 
 /* IDFC Award Section */

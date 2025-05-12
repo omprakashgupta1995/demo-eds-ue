@@ -1,21 +1,84 @@
-/* eslint-disable */
-/* .swiper {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-right: 10px;
-  }
+.idfc-compliment.swiper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+  overflow: hidden;
+}
 
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-    margin-left: 30px;
-    margin-right: 20px;
-  }
+.idfc-compliment.swiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-  } */
+.idfc-compliment.swiper .swiper-slide {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.idfc-compliment.swiper .swiper-slide-active {
+  background: linear-gradient(77deg, #5F0D16 0%, #B43140 98.1%); 
+  transform: scale(1);
+  color: white;
+  opacity: 1;
+}
+
+.idfc-compliment.swiper .swiper-slide p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.idfc-compliment.swiper .swiper-slide ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.idfc-compliment.swiper .swiper-slide ul li {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.idfc-compliment.swiper .swiper-nav-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.idfc-compliment.swiper  .swiper-nav-wrapper .swiper-button-prev,
+.idfc-compliment.swiper  .swiper-nav-wrapper .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.idfc-compliment.swiper .swiper-nav-wrapper .swiper-button-prev {
+  background: #9b1e26;
+  left: -50px;
+}
+
+.idfc-compliment.swiper .swiper-nav-wrapper .swiper-button-next {
+  background: #9b1e26;
+  right: -50px;
+}

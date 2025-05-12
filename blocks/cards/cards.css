@@ -26,9 +26,6 @@
   object-fit: cover;
 }
 
-.cards.block{
-  background-color: rebeccapurple;
-}
 
 .cards.block div{
     display: flex;
