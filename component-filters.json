@@ -116,5 +116,11 @@
     "components": [
       "idfc-digital-banking-item"
     ]
+  },
+  {
+    "id": "idfc-digital-banking-nav",
+    "components": [
+      "idfc-digital-banking-nav-item"
+    ]
   }
 ]
