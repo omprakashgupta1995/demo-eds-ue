@@ -130,6 +130,10 @@
             "value": "footer-lowerSection"
           },
           {
+            "name": "footer-bottom",
+            "value": "footer-btm"
+          },
+          {
             "name": "bottom banner",
             "value": "bottom-banner"
           },
