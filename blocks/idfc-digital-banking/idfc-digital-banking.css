@@ -1,0 +1,80 @@
+.idfc-digital-banking.block .idfc-digital-banking-wrapper{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.idfc-digital-banking.block .db-rte{
+    margin-top: 84px;
+    width: 30%;
+}
+
+.idfc-digital-banking.block .db-rte h2{
+    color: #3a3a3a;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin-bottom: 16px;
+}
+
+.idfc-digital-banking.block .db-rte p{
+    color: #3a3a3a;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.idfc-digital-banking.block .db-rte ul{
+    display: flex;
+    margin-top: 40px;
+}
+
+.idfc-digital-banking.block .db-rte ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.idfc-digital-banking.block .db-rte ul li:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 191px;
+    background: #9c1d26;
+    border: 0;
+    width: 135px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    height: 45px;
+}
+
+.idfc-digital-banking.block .db-rte ul li:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+    border-radius: 191px;
+    border: 2px solid #9b1e26;
+    color: #9b1e26;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin-left: 12px;
+}
+
+.idfc-digital-banking.block .db-img img{
+    border: 1px solid;
+    position: absolute;
+    bottom: 25%;
+    right: 0;
+    padding: 13px 17px;
+    z-index: 2;
+    border-radius: 16px;
+}
