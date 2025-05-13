@@ -127,14 +127,33 @@ export default async function decorate(block) {
 
   //footer section 3
   const fotThreeFirstChild = document.querySelector('.fot-three-wrapper > div > div:nth-child(1)');
-  const fotThreeSecondChild = document.querySelector('.fot-three-wrapper > div > div:nth-child(2)');
-  const listTitle = fotThreeFirstChild.querySelector('div > div:nth-child(1)');
-  const UlTable = fotThreeFirstChild.querySelector('div > div:nth-child(2)');
-  if (listTitle) listTitle.classList.add('listTitle');
-  if (UlTable) UlTable.classList.add('UlTable');
+const fotThreeSecondChild = document.querySelector('.fot-three-wrapper > div > div:nth-child(2)');
+const listTitle = fotThreeFirstChild?.querySelector('div > div:nth-child(1)');
+const UlTable = fotThreeFirstChild?.querySelector('div > div:nth-child(2)');
 
-  if(fotThreeFirstChild) fotThreeFirstChild.classList.add(`textcontent`)
-  if(fotThreeSecondChild) fotThreeSecondChild.classList.add(`loccontent`)
-  
-  
+if (listTitle && UlTable) {
+  listTitle.classList.add('listTitle');
+  UlTable.classList.add('UlTable');
+
+  // Create a span for the icon
+  const toggleIcon = document.createElement('span');
+  toggleIcon.classList.add('toggle-icon');
+  toggleIcon.textContent = '−'; // Initially shown
+  listTitle.firstChild.appendChild(toggleIcon);
+
+  listTitle.style.cursor = 'pointer';
+
+  listTitle.addEventListener('click', () => {
+    const isVisible = UlTable.style.display !== 'none';
+    UlTable.style.display = isVisible ? 'none' : 'flex';
+    toggleIcon.textContent = isVisible ? '+' : '−';
+  });
+}
+
+// Add general section classes
+if (fotThreeFirstChild) fotThreeFirstChild.classList.add('textcontent');
+if (fotThreeSecondChild) fotThreeSecondChild.classList.add('loccontent');
+if (fotThreeSecondChild && listTitle) {
+  listTitle.appendChild(fotThreeSecondChild);
+}
 }
