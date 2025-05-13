@@ -46,7 +46,8 @@
       "idfc-award-carousel",
       "idfc-home-tab",
       "idfc-digital-banking",
-      "idfc-digital-banking-nav"
+      "idfc-digital-banking-nav",
+      "idfc-cs-card"
     ]
   },
   {
@@ -148,6 +149,10 @@
   {
     "id": "idfc-digital-banking",
     "components": ["idfc-digital-banking-item"]
+  },
+  {
+    "id": "idfc-digital-banking-nav",
+    "components": ["idfc-digital-banking-nav-item"]
   },
   {
     "id": "idfc-digital-banking-nav",
