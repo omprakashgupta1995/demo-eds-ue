@@ -126,7 +126,7 @@ async function loadEager(doc) {
 }
 
 // Harsh
-
+/* 
 function autolinkModals(element) {
   element.addEventListener('click', async (e) => {
     const origin = e.target.closest('a');
@@ -138,7 +138,7 @@ function autolinkModals(element) {
     }
   });
 }
-
+ */
 function wrapImgsInLinks(container) {
   const pictureParas = container.querySelectorAll('p picture');
   pictureParas.forEach((pic) => {
