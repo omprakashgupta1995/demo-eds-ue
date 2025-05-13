@@ -129,6 +129,8 @@
 import Swiper from "../idfc-banner/swiper-bundle.min.js";
 
 export default function decorate(block) {
+
+  console.log(`spotlight block is ${block.children}`)
   const childDivs = Array.from(block.children);
 
   // Add required Swiper classes to each child
@@ -167,7 +169,7 @@ export default function decorate(block) {
 
   // Init Swiper
   new Swiper(swiperContainer, {
-    slidesPerView: 5,
+    slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 20,
     navigation: {
@@ -182,4 +184,13 @@ export default function decorate(block) {
       480: { slidesPerView: 1 },
     },
   });
+  // Swiper(block, {
+  //     slidesPerView: 'auto',
+  //     watchOverflow: true,
+  //     slideClass: 'swiper-slide',
+  //     navigation: {
+  //       nextEl: nextBtn,
+  //       prevEl: prevBtn,
+  //     },
+  //   });
 }

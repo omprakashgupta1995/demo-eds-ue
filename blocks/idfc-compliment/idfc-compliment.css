@@ -21,6 +21,8 @@
   opacity: 0.6;
   transition: all 0.3s ease;
   box-sizing: border-box;
+  min-width: 255px;
+  min-height: 360px;
 }
 
 .idfc-compliment.swiper .swiper-slide-active {
@@ -34,6 +36,7 @@
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
+  text-align: left;
 }
 
 .idfc-compliment.swiper .swiper-slide ul {
@@ -46,6 +49,12 @@
 .idfc-compliment.swiper .swiper-slide ul li {
   font-style: italic;
   font-size: 14px;
+
+}
+
+.idfc-compliment.swiper .swiper-slide ul li:nth-child(1) {
+    margin-top: 18px;
+    font-weight: 700;
 }
 
 .idfc-compliment.swiper .swiper-nav-wrapper {
@@ -78,9 +87,9 @@
 }
 
 .idfc-compliment.swiper .swiper-button-prev {
-  left: -50px;
+  left: 0;
 }
 
 .idfc-compliment.swiper .swiper-button-next {
-  right: -50px;
+  right: 62px;
 }
