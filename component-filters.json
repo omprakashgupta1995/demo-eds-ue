@@ -135,7 +135,7 @@
   },
   {
     "id": "idfc-compliment",
-    "components": ["idfc-compliment-item"]
+    "components": ["idfc-compliment-item","cs-card-item"]
   },
   {
     "id": "idfc-award-carousel",

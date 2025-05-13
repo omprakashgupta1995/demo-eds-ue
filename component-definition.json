@@ -997,6 +997,21 @@
               }
             }
           }
+        },
+        {
+          "title": "CS card item",
+          "id": "cs-card-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "CS card item",
+                  "model": "cs-card-item"
+                }
+              }
+            }
+          }
         }
       ]
     }

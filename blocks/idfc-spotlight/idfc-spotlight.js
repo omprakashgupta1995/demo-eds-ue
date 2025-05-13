@@ -1,5 +1,4 @@
 /*eslint-disable */
-
 import Swiper from "../idfc-banner/swiper-bundle.min.js";
 
 export default function decorate(block) {
