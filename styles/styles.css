@@ -687,3 +687,52 @@ main .section.highlight {
     }
 }
 
+.compliment-section{
+    position: relative;
+    height: 100vh;
+  }
+  
+  .compliment-section .default-content-wrapper p:nth-child(1){
+    position: absolute;
+    left: 0;
+    top: 45px;
+  }
+  .compliment-section .default-content-wrapper p:nth-child(2){
+    position: absolute;
+    right: 0;
+    top: 45px;
+  }
+  
+  /* IDFC Award Section */
+  .section.award-section .default-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .section.award-section h2{
+    color: #3a3a3a;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.72px;
+  }
+  
+  .section.award-section p{
+    margin-top: 10px;
+    color: #3a3a3a;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  
+  .section.award-section .button-container .button{
+    color: #9b1e26;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    background: none;
+    margin: 0;
+    padding: 0;
+  }

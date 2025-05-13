@@ -76,8 +76,8 @@
     color: #d1433f;
 }
 
-  .swiper-button-prev,
-  .swiper-button-next {
+.idfc-award-carousel .swiper-button-prev,
+.idfc-award-carousel .swiper-button-next {
     pointer-events: auto; 
     background-color: #9b1e26;
     color: white;

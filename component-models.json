@@ -699,7 +699,7 @@
             "children": [
               {
                 "name": "Slider one",
-                "value": "slider-one"
+                "value": "slider-one slider-one-js"
               },
               {
                 "name": "Slider two",

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import Swiper from "../idfc-banner/swiper-bundle.min.js";
+import Swiper from "../idfc-slider/swiper-bundle.min.js";
 
 export default function decorate(block) {
   block.classList.add('swiper');
