@@ -170,24 +170,24 @@
             "value": "nerolac-video"
           },
           {
-            "name":"nerolac-ribbon",
-            "value":"nerolac-ribbon"
+            "name": "nerolac-ribbon",
+            "value": "nerolac-ribbon"
           },
           {
-            "name":"bottom-banner",
-            "value":"bottom-banner"
+            "name": "bottom-banner",
+            "value": "bottom-banner"
           },
           {
-            "name":"under-nav",
-            "value":"under-nav"
+            "name": "under-nav",
+            "value": "under-nav"
           },
           {
-            "name":"IDFC Bank special",
-            "value":"idfc-bank-special"
+            "name": "IDFC Bank special",
+            "value": "idfc-bank-special"
           },
           {
-            "name":"IDFC Zero Fee",
-            "value":"idfc-zero-fee"
+            "name": "IDFC Zero Fee",
+            "value": "idfc-zero-fee"
           },
           {
             "name": "Contact Section",
@@ -555,7 +555,7 @@
     ]
   },
   {
-    "id":"form-block",
+    "id": "form-block",
     "fields": [
       {
         "component": "text",
@@ -576,7 +576,6 @@
   {
     "id": "kainsai-teaser",
     "fields": [
-  
       {
         "component": "reference",
         "valueType": "string",
@@ -613,8 +612,8 @@
     ]
   },
   {
-    "id":"kainsai-accordian-item",
-    "fields":[
+    "id": "kainsai-accordian-item",
+    "fields": [
       {
         "component": "text",
         "name": "text",
@@ -630,8 +629,9 @@
         "valueType": "string"
       }
     ]
-  },{
-    "id":"kansai-banner",
+  },
+  {
+    "id": "kansai-banner",
     "fields": [
       {
         "component": "reference",
@@ -658,7 +658,7 @@
         "name": "col1_image1",
         "label": "Image 1"
       },
-  
+
       {
         "component": "reference",
         "valueType": "string",
@@ -686,17 +686,17 @@
     ]
   },
   {
-    "id":"idfc-slider",
+    "id": "idfc-slider",
     "fields": [
       {
         "component": "multiselect",
         "name": "classes",
         "label": "Style",
-        "valueType":"string",
+        "valueType": "string",
         "options": [
           {
-            "name":"test1",
-            "children":[
+            "name": "test1",
+            "children": [
               {
                 "name": "Slider one",
                 "value": "slider-one"
@@ -708,16 +708,23 @@
               {
                 "name": "Slider three",
                 "value": "slider-three"
+              },
+              {
+                "name": "Y Slider Banner",
+                "value": "slider-banner"
+              },
+              {
+                "name": "Y Slider Spotlight",
+                "value": "slider-spotlight"
               }
             ]
           }
-          
         ]
       }
     ]
   },
   {
-    "id":"idfc-slider-teaser",
+    "id": "idfc-slider-teaser",
     "fields": [
       {
         "component": "reference",
@@ -743,7 +750,7 @@
     ]
   },
   {
-    "id":"idfc-slider-embed",
+    "id": "idfc-slider-embed",
     "fields": [
       {
         "component": "reference",
@@ -764,7 +771,7 @@
     ]
   },
   {
-    "id":"idfc-slider-richtext",
+    "id": "idfc-slider-richtext",
     "fields": [
       {
         "component": "richtext",
@@ -776,17 +783,17 @@
     ]
   },
   {
-    "id":"com-teaser",
+    "id": "com-teaser",
     "fields": [
       {
         "component": "multiselect",
         "name": "classes",
         "label": "Style",
-        "valueType":"string",
+        "valueType": "string",
         "options": [
           {
-            "name":"test2",
-            "children":[
+            "name": "test2",
+            "children": [
               {
                 "name": "Zero Teaser",
                 "value": "Zero Teaser"
@@ -798,7 +805,7 @@
     ]
   },
   {
-    "id":"com-teaser-item",
+    "id": "com-teaser-item",
     "fields": [
       {
         "component": "reference",
@@ -892,17 +899,17 @@
     ]
   },
   {
-    "id":"contact-cards",
+    "id": "contact-cards",
     "fields": [
       {
         "component": "multiselect",
         "name": "classes",
         "label": "Style",
-        "valueType":"string",
+        "valueType": "string",
         "options": [
           {
-            "name":"test2",
-            "children":[
+            "name": "test2",
+            "children": [
               {
                 "name": "Contact Block",
                 "value": "contact-block"
@@ -912,7 +919,6 @@
         ]
       }
     ]
-    
   },
   {
     "id": "contact-cards-item",
@@ -957,6 +963,222 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "id": "idfc-banner-item",
+        "fields": [
+          {
+            "component": "multiselect",
+            "name": "style",
+            "label": "Style",
+            "options": [
+              {
+                "name": "Banner",
+                "value": "banner"
+              },
+              {
+                "name": "Embed",
+                "value": "Embed"
+              }
+            ]
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "banner_image",
+            "label": "Image"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "banner_imageAlt",
+            "label": "Image"
+          },
+          {
+            "component": "aem-content",
+            "name": "url_link",
+            "label": "Link"
+          },
+          {
+            "component": "richtext",
+            "name": "url_text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "id": "idfc-embed-item",
+        "fields": [
+          {
+            "component": "multiselect",
+            "name": "style",
+            "label": "Style",
+            "options": [
+              {
+                "name": "Banner",
+                "value": "banner"
+              },
+              {
+                "name": "Embed",
+                "value": "Embed"
+              }
+            ]
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "banner_image",
+            "label": "Thumbnail"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "banner_imageAlt",
+            "label": "Thumbnail"
+          },
+          {
+            "component": "aem-content",
+            "name": "url_link",
+            "label": "Link"
+          }
+        ]
+      },
+      {
+        "id": "idfc-spotlight-item",
+        "fields": [
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "id": "idfc-spotlight-item1",
+        "fields": [
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "id": "idfc-compliment-item",
+        "fields": [
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "id": "idfc-award-carousel-item",
+        "fields": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "award_image"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "award_imageAlt",
+            "label": "image alt"
+          },
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          }
+        ]
+      },
+      {
+        "id": "idfc-home-tab-item",
+        "fields": [
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "imageAlt",
+            "label": "image alt"
+          }
+        ]
+      },
+      {
+        "id": "idfc-digital-banking-item",
+        "fields": [
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "Link"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "imageAlt",
+            "label": "image alt"
+          }
+        ]
+      },
+      {
+        "id": "idfc-digital-banking-nav-item",
+        "fields": [
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
+          }
+        ]
       }
     ]
   }

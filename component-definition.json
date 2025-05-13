@@ -597,7 +597,7 @@
                 "template": {
                   "name": "Common Teaser",
                   "filter": "com-teaser",
-                  "model":"com-teaser"
+                  "model": "com-teaser"
                 }
               }
             }
@@ -612,7 +612,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Common Teaser Item",
-                  "model":"com-teaser-item"
+                  "model": "com-teaser-item"
                 }
               }
             }
@@ -734,6 +734,265 @@
                 "template": {
                   "name": "fot-three-item",
                   "model": "fot-three-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC Banner",
+          "id": "idfc-banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "IDFC Banner",
+                  "filter": "idfc-banner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC Banner item",
+          "id": "idfc-banner-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC Banner item",
+                  "model": "idfc-banner-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC Embed item",
+          "id": "idfc-embed-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC Embed item",
+                  "model": "idfc-embed-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC spotlight",
+          "id": "idfc-spotlight",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "IDFC spotlight",
+                  "filter": "idfc-spotlight"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC spotlight item",
+          "id": "idfc-spotlight-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC spotlight item",
+                  "model": "idfc-spotlight-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC spotlight item 1",
+          "id": "idfc-spotlight-item1",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC spotlight item 1",
+                  "model": "idfc-spotlight-item1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC compliment Main",
+          "id": "idfc-compliment-main",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "IDFC compliment Main",
+                  "filter": "idfc-compliment-main",
+                  "model": "idfc-compliment-main"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC compliment",
+          "id": "idfc-compliment",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "IDFC compliment",
+                  "filter": "idfc-compliment",
+                  "model": "idfc-compliment"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC compliment item",
+          "id": "idfc-compliment-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC compliment item",
+                  "model": "idfc-compliment-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC award carousel",
+          "id": "idfc-award-carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "IDFC award carousel",
+                  "filter": "idfc-award-carousel",
+                  "model": "idfc-award-carousel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC award carousel item",
+          "id": "idfc-award-carousel-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC award carousel item",
+                  "model": "idfc-award-carousel-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC Home Tab",
+          "id": "idfc-home-tab",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "IDFC Home Tab",
+                  "filter": "idfc-home-tab"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC Home Tab Item",
+          "id": "idfc-home-tab-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC Home Tab Item",
+                  "model": "idfc-home-tab-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC Digital Banking",
+          "id": "idfc-digital-banking",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "IDFC Digital Banking",
+                  "filter": "idfc-digital-banking"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC Digital Banking Item",
+          "id": "idfc-digital-banking-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC Digital Banking Item",
+                  "model": "idfc-digital-banking-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC Digital Banking Nav",
+          "id": "idfc-digital-banking-nav",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "IDFC Digital Banking Nav",
+                  "filter": "idfc-digital-banking-nav",
+                  "model": "idfc-digital-banking-nav"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IDFC Digital Banking Nav Item",
+          "id": "idfc-digital-banking-nav-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "IDFC Digital Banking Nav Item",
+                  "model": "idfc-digital-banking-nav-item"
                 }
               }
             }
