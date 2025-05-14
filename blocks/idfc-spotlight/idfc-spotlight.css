@@ -10,7 +10,7 @@
 
   .swiper-wrapper {
      display: flex;
-  width: max-content;
+     width: max-content;
   }
 
   .swiper-slide {
