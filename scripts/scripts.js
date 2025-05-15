@@ -12,7 +12,7 @@ import {
   loadCSS,
 } from "./aem.js";
 
-import { loadFragment } from "../blocks/fragment/fragment.js";
+import { fragmentURL } from "../blocks/fragment/fragment.js";
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -171,8 +171,8 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
-  autolinkFragments(doc);
   autolinkModals(doc);
+  autolinkFragments(doc);
   const main = doc.querySelector("main");
   await loadSections(main);
   /* Image with A tag link */
@@ -201,14 +201,15 @@ async function loadPage() {
 }
 loadPage();
 
-function autolinkFragments(element) {
+// changes for fragment 
+async function autolinkFragments(element) {
   element.querySelectorAll("a").forEach((origin) => {
     if (origin && origin.href && origin.href.includes("/fragment/")) {
       const parent = origin.parentElement;
       const div = document.createElement("div");
       div.append(origin);
       parent.append(div);
-      loadFragment(div);
+      fragmentURL(div);
     }
   });
 }
