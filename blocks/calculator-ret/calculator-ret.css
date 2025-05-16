@@ -42,7 +42,6 @@
 .inp-div {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
 }
 
 .inp-div input {
@@ -80,13 +79,13 @@
 
 .slid-div > input::-webkit-slider-thumb {
     appearance: none;
-    height: 20px;
-    width: 20px;
+    height: 26px;
+    width: 26px;
     background: #006eb9;
     border-radius: 50%;
 
     /* If using fake bar for filling then mergin will be removed */
-    margin-top: -7px;
+    margin-top: -11px;
 }
 
 .inputholder label {
