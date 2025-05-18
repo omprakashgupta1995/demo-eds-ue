@@ -1,5 +1,5 @@
 .idfc-digital-banking.block .idfc-digital-banking-wrapper{
-    max-width: 1440px;
+    max-width: 1920px;
     width: 100%;
     display: flex;
     position: relative;
@@ -10,7 +10,7 @@
     width: 30%;
 }
 
-.idfc-digital-banking.block .db-rte h2{
+.idfc-digital-banking.block .db-rte h4{
     color: #3a3a3a;
     font-size: 32px;
     font-style: normal;
@@ -19,7 +19,7 @@
     margin-bottom: 16px;
 }
 
-.idfc-digital-banking.block .db-rte p{
+.idfc-digital-banking.block .db-rte h6{
     color: #3a3a3a;
     font-size: 18px;
     font-style: normal;
@@ -29,7 +29,8 @@
 
 .idfc-digital-banking.block .db-rte ul{
     display: flex;
-    margin-top: 40px;
+    margin: 40px 0 0;
+    padding: 0;
 }
 
 .idfc-digital-banking.block .db-rte ul li{

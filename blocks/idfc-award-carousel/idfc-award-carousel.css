@@ -20,13 +20,13 @@
     margin-right: 0;
   }
   
-  .swiper-nav-wrapper {
+  .idfc-award-carousel .swiper-nav-wrapper {
     position: absolute; 
     top: 0;
     width: 100%;
     display: flex;
     gap: 10px; 
-    padding: 10px 0;
+    padding: 22px 0;
     pointer-events: none;
   }
 
@@ -104,31 +104,31 @@
     border-color: #a83232;
   } */
 
-  .swiper-button-prev:hover,
+  /* .swiper-button-prev:hover,
   .swiper-button-next:hover {
     background-color: #f0f0f0;
-  }
+  } */
 
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
+  .idfc-award-carousel .swiper-button-prev::after,
+  .idfc-award-carousel .swiper-button-next::after {
     display: none;
   }
 
-  .swiper-button-prev.swiper-button-disabled,
-  .swiper-button-next.swiper-button-disabled {
+  .idfc-award-carousel .swiper-button-prev.swiper-button-disabled,
+  .idfc-award-carousel .swiper-button-next.swiper-button-disabled {
     opacity: 0.5;
-    cursor: not-allowed;
+    /* cursor: not-allowed; */
   }
   
   @media (max-width: 768px) {
-    .swiper-slide {
+    .idfc-award-carousel .swiper-slide {
       flex: 0 0 calc(50% - 10px);
       margin-right: 10px;
     }
   }
   
   @media (max-width: 480px) {
-    .swiper-slide {
+    .idfc-award-carousel .swiper-slide {
       flex: 0 0 100%;
       margin-right: 0;
     }

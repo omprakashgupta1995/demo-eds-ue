@@ -687,37 +687,39 @@ main .section.highlight {
     }
 }
 
-.compliment-section{
+.section.idfc-compliment-container{
     position: relative;
     height: 100vh;
   }
   
-  .compliment-section .default-content-wrapper p:nth-child(1){
+  .section.idfc-compliment-container .default-content-wrapper p:nth-child(1){
     position: absolute;
     left: 0;
     top: 45px;
   }
-  .compliment-section .default-content-wrapper p:nth-child(2){
+  .section.idfc-compliment-container .default-content-wrapper p:nth-child(2){
     position: absolute;
     right: 0;
     top: 45px;
   }
   
   /* IDFC Award Section */
-  .section.award-section .default-content-wrapper{
+  .section.idfc-award-carousel-container .default-content-wrapper{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .section.award-section h2{
+  .section.idfc-award-carousel-container h2{
     color: #3a3a3a;
     font-size: 36px;
     font-weight: 700;
     line-height: 110%;
     letter-spacing: -0.72px;
+    margin: 0;
   }
   
-  .section.award-section p{
+  .section.idfc-award-carousel-container p{
+    margin: 0;
     margin-top: 10px;
     color: #3a3a3a;
     font-feature-settings: "clig" off, "liga" off;
@@ -727,7 +729,7 @@ main .section.highlight {
     line-height: 28px;
   }
   
-  .section.award-section .button-container .button{
+  .section.idfc-award-carousel-container .button-container .button{
     color: #9b1e26;
     font-size: 16px;
     font-weight: 700;
@@ -736,3 +738,27 @@ main .section.highlight {
     margin: 0;
     padding: 0;
   }
+
+/* IDFC Spotlight section */
+.section.idfc-spotlight-container .default-content-wrapper h4{
+    color: #9b1e26;
+    text-shadow: 8.0500001907px 24px 89.5px rgba(0, 0, 0, .1);
+    font-family: "Inter";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.36px;
+    margin: 0;
+}
+
+.section.idfc-spotlight-container .default-content-wrapper p{
+    color: #3a3a3a;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0;
+    margin-top: 12px;
+}

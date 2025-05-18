@@ -1,9 +1,11 @@
-/*eslint-disable */
-import Swiper from "../idfc-banner/swiper-bundle.min.js";
+/* eslint-disable */
+import Swiper from "../idfc-slider/swiper-bundle.min.js";
 
 export default function decorate(block) {
   block.classList.add('swiper');
+  console.log("this is compliment");
 
+  // Create swiper-wrapper
   const swiperWrapper = document.createElement('div');
   swiperWrapper.classList.add('swiper-wrapper');
 
@@ -13,9 +15,11 @@ export default function decorate(block) {
     swiperWrapper.appendChild(div);
   });
 
+  // Clear and re-append content
   block.innerHTML = '';
   block.appendChild(swiperWrapper);
 
+  // Navigation buttons
   const navWrapper = document.createElement('div');
   navWrapper.classList.add('swiper-nav-wrapper');
 
@@ -31,6 +35,7 @@ export default function decorate(block) {
 
   block.appendChild(navWrapper);
 
+  // Init Swiper with scoped navigation buttons
   new Swiper(block, {
     effect: 'coverflow',
     grabCursor: true,
@@ -45,8 +50,18 @@ export default function decorate(block) {
       slideShadows: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: block.querySelector('.swiper-button-next'),
+      prevEl: block.querySelector('.swiper-button-prev'),
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
     },
   });
 }

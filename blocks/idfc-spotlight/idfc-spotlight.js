@@ -2,7 +2,7 @@
 import Swiper from "../idfc-slider/swiper-bundle.min.js";
 
 export default function decorate(block) {
-    console.log("Hello 123 4321");
+    // console.log("Hello 123 4321");
     
   console.log(`spotlight block is ${block.children}`)
   const childDivs = Array.from(block.children);
