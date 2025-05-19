@@ -55,7 +55,7 @@
     src: local("Arial");
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
     :root {
         /* body sizes */
         --body-font-size-m: 18px;
@@ -161,7 +161,7 @@ pre {
     white-space: pre;
 }
 
-main > div {
+main>div {
     margin: 40px 16px;
 }
 
@@ -247,22 +247,22 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
     margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
     max-width: 1200px;
     margin: auto;
     padding: 0 24px;
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
     margin-top: 0;
 }
 
-@media (width >= 900px) {
-    main > .section > div {
+@media (width >=900px) {
+    main>.section>div {
         padding: 0 32px;
     }
 }
@@ -283,7 +283,7 @@ main .section.highlight {
     align-items: center;
 }
 
-.section.birla-slider-container > div {
+.section.birla-slider-container>div {
     width: 50%;
     padding: 0;
     margin: 0;
@@ -295,11 +295,11 @@ main .section.highlight {
     gap: 40px;
 }
 
-.section.card-container-container > .default-content-wrapper {
+.section.card-container-container>.default-content-wrapper {
     width: 100%;
 }
 
-.section.card-container-container > .default-content-wrapper > h2 {
+.section.card-container-container>.default-content-wrapper>h2 {
     font-family: Poppins, sans-serif;
     font-weight: 300;
     font-size: 46px;
@@ -307,7 +307,7 @@ main .section.highlight {
     letter-spacing: 0;
 }
 
-.section.card-container-container > .default-content-wrapper > p {
+.section.card-container-container>.default-content-wrapper>p {
     font-family: Poppins, sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -330,7 +330,7 @@ main .section.highlight {
     width: 100%;
 }
 
-.section.video-second > div:nth-child(1) {
+.section.video-second>div:nth-child(1) {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -340,7 +340,7 @@ main .section.highlight {
     gap: 20px;
 }
 
-.section.video-second > div:nth-child(1) h2 {
+.section.video-second>div:nth-child(1) h2 {
     font-family: Poppins, sans-serif;
     font-size: 40px;
     line-height: 100%;
@@ -350,11 +350,11 @@ main .section.highlight {
     position: relative;
 }
 
-.section.video-second > div:nth-child(1) h2 strong {
+.section.video-second>div:nth-child(1) h2 strong {
     font-weight: 700;
 }
 
-.section.video-second > div:nth-child(1) h2::before {
+.section.video-second>div:nth-child(1) h2::before {
     content: "";
     position: absolute;
     bottom: -13px;
@@ -366,7 +366,7 @@ main .section.highlight {
     background-color: orange;
 }
 
-.section.video-second > div:nth-child(1) h2::after {
+.section.video-second>div:nth-child(1) h2::after {
     content: "";
     position: absolute;
     bottom: -14px;
@@ -377,7 +377,7 @@ main .section.highlight {
     border-radius: 50%;
 }
 
-.section.video-second > div:nth-child(2) {
+.section.video-second>div:nth-child(2) {
     width: 1212px;
     height: 684px;
     border-radius: 16px;
@@ -481,7 +481,7 @@ main .section.highlight {
     padding: 15px 30px;
 }
 
-.my-footer-seg1 > div {
+.my-footer-seg1>div {
     width: 100%;
     color: #fff;
     display: flex;
@@ -490,7 +490,7 @@ main .section.highlight {
     margin: 0;
 }
 
-.my-footer-seg1 > div h2 {
+.my-footer-seg1>div h2 {
     border-left: 1px solid red;
     padding: 0;
     padding-left: 10px;
@@ -501,7 +501,7 @@ main .section.highlight {
 
 } */
 
-.my-footer-seg1.section > div .button-container a {
+.my-footer-seg1.section>div .button-container a {
     margin: 0;
     margin: auto 0;
     padding: 5px 75px;
@@ -515,15 +515,15 @@ main .section.highlight {
     display: flex;
 }
 
-.footer-lowersection > div:nth-child(1) {
+.footer-lowersection>div:nth-child(1) {
     width: 20%;
 }
 
-.footer-lowersection > div:nth-child(2) {
+.footer-lowersection>div:nth-child(2) {
     width: 80%;
 }
 
-@media (width <= 400px) {
+@media (width <=400px) {
     .footer-lowersection {
         background-color: red;
     }
@@ -533,7 +533,7 @@ main .section.highlight {
     padding: 40px 0px;
 } */
 
-.bottom-banner > div h1 {
+.bottom-banner>div h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -547,13 +547,13 @@ main .section.highlight {
     color: #0d2042;
 }
 
-.bottom-banner > div h1,
-.bottom-banner > div > ul li {
+.bottom-banner>div h1,
+.bottom-banner>div>ul li {
     padding: 0;
     margin: 0;
 }
 
-.bottom-banner > div > ul {
+.bottom-banner>div>ul {
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -563,81 +563,83 @@ main .section.highlight {
     list-style: none;
 }
 
-.bottom-banner > div > ul li {
+.bottom-banner>div>ul li {
     border-radius: 100px;
     border: 0.5px solid #0d2042;
     padding: 8px 16px;
     font-size: 14px;
 }
 
-.nerolac-video > div {
+.nerolac-video>div {
     max-width: 90vw !important;
     border-radius: 40px;
 }
 
-.nerolac-video > div > div {
-    max-width: 100% !important ;
+.nerolac-video>div>div {
+    max-width: 100% !important;
     border-radius: 40px;
     margin: 0;
 }
 
-.nerolac-video > div > div iframe {
+.nerolac-video>div>div iframe {
     border-radius: 40px;
     max-height: 600px !important;
 }
 
-.nerolac-ribbon >div {
-  max-width: 1400px!important;
+.nerolac-ribbon>div {
+    max-width: 1400px !important;
 }
 
-.nerolac-ribbon >div >ul{
-  display: flex;
-  margin: 0;
-  gap: 40px;
-  justify-content: center;
-  background: #d2d8ef;
-  border-radius: 5px;
-  color: black;
-  font-size: 20px;
-  padding: 12px 20px;
-  list-style: none;
+.nerolac-ribbon>div>ul {
+    display: flex;
+    margin: 0;
+    gap: 40px;
+    justify-content: center;
+    background: #d2d8ef;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    padding: 12px 20px;
+    list-style: none;
 }
 
-.nerolac-ribbon > div > ul li {
-  position: relative;
-  padding: 0 10px;
+.nerolac-ribbon>div>ul li {
+    position: relative;
+    padding: 0 10px;
 }
 
-.nerolac-ribbon >div >ul li:first-child{
-  list-style: none;
+.nerolac-ribbon>div>ul li:first-child {
+    list-style: none;
 
 }
 
 
 /* Add dot after every li except the last one */
-.nerolac-ribbon > div > ul li::after {
-  content: "•";
-  position: absolute;
-  right: -25px;
-  color: black;
-  
+.nerolac-ribbon>div>ul li::after {
+    content: "•";
+    position: absolute;
+    right: -25px;
+    color: black;
+
 }
 
 /* Remove the dot from the last item */
-.nerolac-ribbon > div > ul li:last-child::after {
-  content: none;
+.nerolac-ribbon>div>ul li:last-child::after {
+    content: none;
 }
 
-.idfc-bank-special,.idfc-zero-fee{
+.idfc-bank-special,
+.idfc-zero-fee {
     background: white;
 }
 
-.idfc-zero-fee.section{
+.idfc-zero-fee.section {
     margin: 60px 0 77px 0;
     position: relative;
 }
 
-.idfc-bank-special h2,.idfc-zero-fee h2{
+.idfc-bank-special h2,
+.idfc-zero-fee h2 {
     color: #3a3a3a;
     font-size: 36px;
     font-weight: 700;
@@ -645,7 +647,8 @@ main .section.highlight {
     letter-spacing: -0.72px;
 }
 
-.idfc-bank-special .default-content-wrapper >p:nth-child(2), .idfc-zero-fee .default-content-wrapper >p:nth-child(2){
+.idfc-bank-special .default-content-wrapper>p:nth-child(2),
+.idfc-zero-fee .default-content-wrapper>p:nth-child(2) {
     margin-top: 10px;
     color: #3a3a3a;
     font-feature-settings: "clig" off, "liga" off;
@@ -655,7 +658,8 @@ main .section.highlight {
     line-height: 28px;
 }
 
-.idfc-bank-special .button-container a, .idfc-zero-fee  .button-container a{
+.idfc-bank-special .button-container a,
+.idfc-zero-fee .button-container a {
     color: #9b1e26;
     font-size: 16px;
     font-weight: 700;
@@ -668,15 +672,14 @@ main .section.highlight {
     background-color: #030303;
 } */
 
-.common-teaser.zero-teaser.block{
-}
+.common-teaser.zero-teaser.block {}
 
-.section.contact-section{
+.section.contact-section {
     margin: 40px 0 0 0;
     padding: 57px 0;
     background: linear-gradient(73deg, #C7C6C6 -74.4%, #F1F1F1 23.15%);
 
-    >div h3{    
+    >div h3 {
         color: #222;
         font-size: 36px;
         font-style: normal;
@@ -687,38 +690,40 @@ main .section.highlight {
     }
 }
 
-.section.idfc-compliment-container{
+.section.idfc-compliment-container {
     position: relative;
     height: 100vh;
-  }
-  
-  .section.idfc-compliment-container .default-content-wrapper p:nth-child(1){
+}
+
+.section.idfc-compliment-container .default-content-wrapper p:nth-child(1) {
     position: absolute;
     left: 0;
     top: 45px;
-  }
-  .section.idfc-compliment-container .default-content-wrapper p:nth-child(2){
+}
+
+.section.idfc-compliment-container .default-content-wrapper p:nth-child(2) {
     position: absolute;
     right: 0;
     top: 45px;
-  }
-  
-  /* IDFC Award Section */
-  .section.idfc-award-carousel-container .default-content-wrapper{
+}
+
+/* IDFC Award Section */
+.section.idfc-award-carousel-container .default-content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  .section.idfc-award-carousel-container h2{
+}
+
+.section.idfc-award-carousel-container h2 {
     color: #3a3a3a;
     font-size: 36px;
     font-weight: 700;
     line-height: 110%;
     letter-spacing: -0.72px;
     margin: 0;
-  }
-  
-  .section.idfc-award-carousel-container p{
+}
+
+.section.idfc-award-carousel-container p {
     margin: 0;
     margin-top: 10px;
     color: #3a3a3a;
@@ -727,9 +732,9 @@ main .section.highlight {
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
-  }
-  
-  .section.idfc-award-carousel-container .button-container .button{
+}
+
+.section.idfc-award-carousel-container .button-container .button {
     color: #9b1e26;
     font-size: 16px;
     font-weight: 700;
@@ -737,10 +742,10 @@ main .section.highlight {
     background: none;
     margin: 0;
     padding: 0;
-  }
+}
 
 /* IDFC Spotlight section */
-.section.idfc-spotlight-container .default-content-wrapper h4{
+.section.idfc-spotlight-container .default-content-wrapper h4 {
     color: #9b1e26;
     text-shadow: 8.0500001907px 24px 89.5px rgba(0, 0, 0, .1);
     font-family: "Inter";
@@ -752,7 +757,7 @@ main .section.highlight {
     margin: 0;
 }
 
-.section.idfc-spotlight-container .default-content-wrapper p{
+.section.idfc-spotlight-container .default-content-wrapper p {
     color: #3a3a3a;
     font-family: "Inter";
     font-size: 20px;
@@ -761,4 +766,30 @@ main .section.highlight {
     line-height: 28px;
     margin: 0;
     margin-top: 12px;
+}
+
+.section.idfc-banner-container {
+  margin: 0px;
+  padding: 0px;
+  border: 2px solid gold;
+}
+
+.section.idfc-banner-container .idfc-banner-wrapper {
+  margin: 0px auto;
+  padding: 0px;
+  border: 2px solid royalblue;
+}
+
+.section.idfc-communities-container .default-content-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.section.idfc-communities-container .default-content-wrapper h4{
+    color: #262626;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 32px;
 }
