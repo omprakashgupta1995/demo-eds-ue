@@ -1288,5 +1288,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "idfc-communities-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "richtext",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]

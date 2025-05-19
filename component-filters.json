@@ -47,7 +47,8 @@
       "idfc-home-tab",
       "idfc-digital-banking",
       "idfc-digital-banking-nav",
-      "idfc-cs-card"
+      "idfc-cs-card",
+      "idfc-communities"
     ]
   },
   {
@@ -157,5 +158,9 @@
   {
     "id": "idfc-digital-banking-nav",
     "components": ["idfc-digital-banking-nav-item"]
+  },
+  {
+    "id": "idfc-communities",
+    "components": ["idfc-communities-item"]
   }
 ]
