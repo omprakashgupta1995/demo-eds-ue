@@ -264,3 +264,11 @@ main .section.highlight {
 .banner-logo .default-content-wrapper p a{
   background: none;
 }
+
+.blue-section .default-content-wrapper ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0px 40px;
+  background-color: #D2D8EF;
+}
