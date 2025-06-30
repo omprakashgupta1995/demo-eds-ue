@@ -594,6 +594,23 @@
     "id": "z-pattern",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Style",
+        "valueType": "string",
+        "options" : [
+          {
+            "name" : "Alpha",
+            "value" : "alpha"
+          },
+          {
+            "name" : "Beta",
+            "value" : "beta"
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "name": "content",
         "value": "",
