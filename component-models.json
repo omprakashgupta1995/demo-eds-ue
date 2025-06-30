@@ -598,7 +598,7 @@
         "name": "classes",
         "value": "",
         "label": "Style",
-        "valueType": "string",
+        "valueType": "string[]",
         "options" : [
           {
             "name" : "Alpha",
