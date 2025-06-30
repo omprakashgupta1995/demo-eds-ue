@@ -585,5 +585,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "z-pattern",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "value": "",
+        "label": "Content",
+        "valueType": "string"
+      }
+    ]
   }
 ]
