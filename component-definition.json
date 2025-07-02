@@ -373,13 +373,13 @@
         },
         {
           "title": "Custom Text",
-          "id": "customText",
+          "id": "custom-text",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "CustomText",
+                  "name": "Custom Text",
                   "model": "custom-text"
                 }
               }

@@ -587,7 +587,7 @@
     ]
   },
   {
-    "id": "customText",
+    "id": "custom-text",
     "fields": [
       {
         "component": "text",
