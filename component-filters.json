@@ -48,7 +48,8 @@
       "idfc-digital-banking",
       "idfc-digital-banking-nav",
       "idfc-cs-card",
-      "idfc-communities"
+      "idfc-communities",
+      "idfc-benefits-pl-calc"
     ]
   },
   {
@@ -162,5 +163,9 @@
   {
     "id": "idfc-communities",
     "components": ["idfc-communities-item"]
+  },
+  {
+    "id": "idfc-common-cards",
+    "components": ["idfc-common-cards-item"]
   }
 ]
