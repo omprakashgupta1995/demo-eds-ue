@@ -3,5 +3,8 @@
 }
 .custom-text-test-2{
     font-style: italic;
-    color: red;
+}
+.para-1{
+    color: greenyellow;
+    font-weight: 500;
 }
