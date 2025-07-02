@@ -602,6 +602,27 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+       {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Custom Content Type",
+            "children": [
+              {
+                "name": "custom-text-test",
+                "value": "custom-text-test"
+              },
+              {
+                "name": "custom-text-test-2",
+                "value": "custom-text-test-2"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
