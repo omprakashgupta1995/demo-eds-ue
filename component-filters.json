@@ -38,7 +38,8 @@
       "idfc-compliment",
       "common-teaser",
       "idfc-award-carousel",
-      "idfc-home-tab"
+      "idfc-home-tab",
+      "overview-rte"
     ]
   },
   {
@@ -88,5 +89,9 @@
   {
     "id": "idfc-home-tab",
     "components": ["idfc-home-tab-item"]
+  },
+  {
+    "id":"overview-rte",
+    "components":["overview-rte-item"]
   }
 ]
