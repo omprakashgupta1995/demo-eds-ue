@@ -819,12 +819,19 @@
     "id": "secondary-nav-item",
     "fields": [
       {
-      "component": "richtext",
-      "name": "text",
-      "label": "secondayNav",
+      "component": "text",
+      "name": "label",
+      "label": "Link Label",
       "value": "",
       "valueType": "string"
-    }
+      },
+      {
+        "component": "text",
+        "name": "url",
+        "label": "Link URL",
+        "value": "",
+        "valueType": "string"
+      }
     ]
   }
 
