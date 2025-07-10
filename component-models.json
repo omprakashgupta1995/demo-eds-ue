@@ -831,21 +831,6 @@
         "label": "Link URL",
         "value": "",
         "valueType": "string"
-      },
-       {
-        "component": "select",
-        "name": "type",
-        "label": "link Type",
-        "options": [
-          {
-            "name": "link",
-            "value": "link"
-          },
-          {
-            "name": "button",
-            "value": "button"
-          }
-        ]
       }
     ]
   }
