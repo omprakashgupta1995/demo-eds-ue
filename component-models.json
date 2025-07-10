@@ -815,32 +815,7 @@
       }
     ]
   },
-  {
-    "id": "secondary-nav",
-    "fields": [
-      {
-        "component": "text",
-        "name": "classes",
-        "label": "Classes",
-        "valueType": "string",
-        "optional": true
-      },
-      {
-        "component": "text",
-        "name": "ctaLabel",
-        "label": "CTA Label",
-        "valueType": "string",
-        "default": "Apply Now"
-      },
-      {
-        "component": "text",
-        "name": "ctaUrl",
-        "label": "CTA URL",
-        "valueType": "string",
-        "default": "#"
-      }
-    ]
-  },
+
   {
     "id": "secondary-nav-item",
     "fields": [
@@ -855,7 +830,18 @@
         "name": "url",
         "label": "Link URL",
         "valueType": "string"
-      }
+      },
+       {
+      "component": "select",
+      "name": "type",
+      "label": "Type",
+      "valueType": "string",
+      "default": "link",
+      "options": [
+        { "label": "Link", "value": "link" },
+        { "label": "Button", "value": "button" }
+      ]
+    }
     ]
   }
 ]
