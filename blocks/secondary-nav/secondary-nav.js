@@ -29,24 +29,26 @@
 //   if (cta) block.append(cta);
 // }
 export default function decorate(block) {
-  const nav = document.createElement('nav');
-  nav.className = 'secondary-nav-menu';
+  const ul = block.querySelector('ul');
+  const ctaHeading = block.querySelector('h6');
 
-  [...block.children].forEach((row) => {
-    const link = row.querySelector('a');
-    if (link) {
+  // Wrap links
+  if (ul) {
+    ul.classList.add('secondary-nav-menu');
+    [...ul.querySelectorAll('a')].forEach((link) => {
       link.classList.add('secondary-nav-item');
-      nav.appendChild(link);
-    }
-  });
+    });
+  }
 
-  block.innerHTML = '';
-  block.append(nav);
+  // Transform <h6> into CTA <a>
+  if (ctaHeading) {
+    const cta = document.createElement('a');
+    cta.textContent = ctaHeading.textContent;
+    cta.href = '#apply'; // hardcoded, or fetch from metadata if needed
+    cta.className = 'secondary-nav-cta';
+    ctaHeading.replaceWith(cta);
+  }
 
-  // Inject CTA Button
-  const cta = document.createElement('a');
-  cta.href = '#apply'; // or update via config/metadata if dynamic
-  cta.textContent = 'Apply Now';
-  cta.className = 'secondary-nav-cta';
-  block.append(cta);
+  block.classList.add('secondary-nav');
 }
+

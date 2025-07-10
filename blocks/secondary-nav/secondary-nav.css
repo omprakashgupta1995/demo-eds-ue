@@ -8,13 +8,16 @@
   border-bottom: 1px solid #eee;
 }
 
-.secondary-nav .secondary-nav-menu {
+.secondary-nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.secondary-nav .secondary-nav-menu .secondary-nav-item {
+.secondary-nav ul li a {
   text-decoration: none;
   color: #1a1a1a;
   font-weight: 500;
@@ -22,12 +25,13 @@
   transition: color 0.2s ease;
 }
 
-.secondary-nav .secondary-nav-menu .secondary-nav-item:hover {
-  color: #b71c1c; /* same tone as CTA */
+.secondary-nav ul li a:hover {
+  color: #b71c1c;
 }
 
+/* CTA link converted from h6 */
 .secondary-nav .secondary-nav-cta {
-  background-color: #b71c1c; /* Deep red */
+  background-color: #b71c1c;
   color: #fff;
   padding: 0.5rem 1.5rem;
   border-radius: 2rem;
@@ -48,7 +52,7 @@
     gap: 1rem;
   }
 
-  .secondary-nav .secondary-nav-menu {
+  .secondary-nav ul {
     gap: 1rem;
   }
 
