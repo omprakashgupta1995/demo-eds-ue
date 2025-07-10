@@ -815,33 +815,46 @@
       }
     ]
   },
-
-  {
-    "id": "secondary-nav-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "label",
-        "label": "Link Label",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "url",
-        "label": "Link URL",
-        "valueType": "string"
-      },
-       {
-      "component": "multiselect",
-      "name": "type",
-      "label": "Type",
-      "valueType": "string",
-      "default": "link",
-      "options": [
-        { "label": "Link", "value": "link" },
-        { "label": "Button", "value": "button" }
-      ]
+{
+  "id": "secondary-nav-item",
+  "fields": [
+    {
+      "component": "text",
+      "name": "label",
+      "label": "Link Label",
+      "value": "",
+      "valueType": "string"
+    },
+    {
+      "component": "text",
+      "name": "url",
+      "label": "Link URL",
+      "value": "",
+      "valueType": "string"
+    },
+    {
+  "component": "select",
+  "name": "linkType",
+  "label": "Type",
+  "value": "",
+  "valueType": "string",
+  "options": [
+    {
+      "name": "default",
+      "value": ""
+    },
+    {
+      "name": "primary",
+      "value": "primary"
+    },
+    {
+      "name": "secondary",
+      "value": "secondary"
     }
-    ]
-  }
+  ]
+}
+
+  ]
+}
+
 ]
