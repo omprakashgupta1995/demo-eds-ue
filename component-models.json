@@ -799,7 +799,7 @@
       {
         "component": "text",
         "name": "classes",
-        "label": "Style",
+        "label": "Classes",
         "valueType":"string"
       }]
   },
@@ -811,6 +811,49 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "secondary-nav",
+    "fields": [
+      {
+        "component": "text",
+        "name": "classes",
+        "label": "Classes",
+        "valueType": "string",
+        "optional": true
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "valueType": "string",
+        "default": "Apply Now"
+      },
+      {
+        "component": "text",
+        "name": "ctaUrl",
+        "label": "CTA URL",
+        "valueType": "string",
+        "default": "#"
+      }
+    ]
+  },
+  {
+    "id": "secondary-nav-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "label",
+        "label": "Link Label",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "url",
+        "label": "Link URL",
         "valueType": "string"
       }
     ]

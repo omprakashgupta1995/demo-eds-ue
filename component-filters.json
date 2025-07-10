@@ -39,7 +39,8 @@
       "common-teaser",
       "idfc-award-carousel",
       "idfc-home-tab",
-      "overview-rte"
+      "overview-rte",
+      "secondary-nav"
     ]
   },
   {
@@ -93,5 +94,9 @@
   {
     "id":"overview-rte",
     "components":["overview-rte-item"]
+  },
+   {
+    "id": "secondary-nav",
+    "components":["secondary-nav-item"]
   }
 ]
