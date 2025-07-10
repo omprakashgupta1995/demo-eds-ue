@@ -833,8 +833,8 @@
         "valueType": "string"
       },
        {
-        "component": "select",
-        "name": "Type",
+        "component": "multiselect",
+        "name": "type",
         "label": "link Type",
         "options": [
           {
