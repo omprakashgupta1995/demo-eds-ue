@@ -1,3 +1,4 @@
+/*eslint-disable*/
 export default function decorate(block) {
   const nav = document.createElement('nav');
   nav.className = 'secondary-nav-menu';

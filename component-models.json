@@ -832,7 +832,7 @@
         "valueType": "string"
       },
        {
-      "component": "select",
+      "component": "multiselect",
       "name": "type",
       "label": "Type",
       "valueType": "string",
