@@ -4,6 +4,8 @@
   "version": "1.3.0",
   "description": "Starter project for Adobe Helix",
   "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
     "fix-css": "stylelint --fix **/**/*.css",
     "fix-js": "eslint --fix **/**/*.js",
     "lint:js": "eslint . --ext .json,.js,.mjs",

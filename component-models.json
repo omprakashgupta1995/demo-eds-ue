@@ -590,6 +590,13 @@
     "id": "manage-fastag-item",
     "fields": [
       {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -600,13 +607,6 @@
         "component": "text",
         "name": "image_Alt",
         "label": "Alt Text"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   }
