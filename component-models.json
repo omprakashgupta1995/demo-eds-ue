@@ -609,5 +609,24 @@
         "label": "Alt Text"
       }
     ]
+  },
+  {
+    "id": "manage-fastag-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Accordion Question",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "abc",
+        "label": "Accordion Answer",
+        "valueType": "string"
+      }
+    ]
   }
 ]

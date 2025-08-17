@@ -26,7 +26,8 @@
       "teaser-cards",
       "faq",
       "fragment",
-      "manage-fastag-block"
+      "manage-fastag-block",
+      "fastag-faq"
     ]
   },
   {
@@ -78,6 +79,12 @@
     "id": "manage-fastag-block",
     "components": [
       "manage-fastag-item"
+    ]
+  },
+  {
+    "id": "fastag-faq",
+    "components": [
+      "fastag-faq-item"
     ]
   }
 ]
