@@ -1,0 +1,14 @@
+@import url('../swiper/swiper.min.css');
+
+.manage-fastag-block.block{
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.manage-fastag-block.block .fastag-item{
+    background: linear-gradient(#e66465, #9198e5);
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
