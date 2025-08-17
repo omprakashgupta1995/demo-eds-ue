@@ -623,7 +623,7 @@
       {
         "component": "richtext",
         "name": "text",
-        "value": "abc",
+        "value": "",
         "label": "Accordion Answer",
         "valueType": "string"
       }
