@@ -630,7 +630,7 @@
     ]
   },
   {
-    "id": "fastag-faq-item",
+    "id": "fastag-tab-item",
     "fields": [
       {
         "component": "richtext",
