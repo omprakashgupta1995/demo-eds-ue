@@ -622,7 +622,7 @@
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "text1",
         "value": "",
         "label": "Accordion Answer",
         "valueType": "string"
