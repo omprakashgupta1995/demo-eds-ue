@@ -611,7 +611,7 @@
     ]
   },
   {
-    "id": "manage-fastag-item",
+    "id": "fastag-faq-item",
     "fields": [
       {
         "component": "richtext",
