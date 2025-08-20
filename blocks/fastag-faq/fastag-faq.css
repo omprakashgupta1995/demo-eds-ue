@@ -1,1 +1,61 @@
-@import url(../accordion/accordion.css);
+.fastag-faq details {
+    border: 1px solid #dadada;
+  }
+  
+  /* stylelint-disable-next-line no-descending-specificity */
+  .fastag-faq details + details {
+    margin-top: 24px;
+  }
+  
+  .fastag-faq details p {
+    margin-bottom: 0.8em;
+  }
+  
+  .fastag-faq details summary {
+    position: relative;
+    padding: 0 16px;
+    padding-right: 46px;
+    cursor: pointer;
+    list-style: none;
+    overflow: auto;
+    transition: background-color 0.2s;
+  }
+  
+  .fastag-faq details[open] summary {
+    background-color: var(--light-color);
+  }
+  
+  .fastag-faq details summary:focus,
+  .fastag-faq details summary:hover {
+    background-color: var(--light-color);
+  }
+  
+  .fastag-faq details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .fastag-faq details summary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 6px;
+    height: 6px;
+    border: 2px solid;
+    border-width: 2px 2px 0 0;
+    transition: transform 0.2s;
+  }
+  
+  .fastag-faq details[open] summary::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  
+  .fastag-faq details .accordion-item-body {
+    padding: 0 16px;
+  }
+  
+  .fastag-faq details[open] .accordion-item-body {
+    border-top: 1px solid #dadada;
+    background-color: var(--background-color);
+  }

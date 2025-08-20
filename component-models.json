@@ -661,5 +661,31 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "fastag-dynamic-faq-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Enter Category",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text1",
+        "value": "",
+        "label": "Accordion Question",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text2",
+        "value": "",
+        "label": "Accordion Answer",
+        "valueType": "string"
+      }
+    ]
   }
 ]

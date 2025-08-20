@@ -28,7 +28,8 @@
       "fragment",
       "manage-fastag-block",
       "fastag-faq",
-      "fastag-tab"
+      "fastag-tab",
+      "fastag-dynamic-faq"
     ]
   },
   {
@@ -92,6 +93,12 @@
     "id": "fastag-tab",
     "components": [
       "fastag-tab-item"
+    ]
+  },
+  {
+    "id": "fastag-dynamic-faq",
+    "components": [
+      "fastag-dynamic-faq-item"
     ]
   }
 ]
