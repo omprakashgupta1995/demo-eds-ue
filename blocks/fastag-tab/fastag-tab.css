@@ -1,3 +1,19 @@
+.section.fastag-tab-container{
+  display: flex;
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.section.fastag-tab-container > div:nth-child(1){
+  width: 42%;
+  border-right: 1px solid #9B1E26;
+}
+.section.fastag-tab-container > div:nth-child(2){
+  width: 58%;
+}
 .fastag-tab .tabs-list {
   display: flex;
   gap: 0.5ch;
@@ -19,7 +35,7 @@
 }
 
 .fastag-tab .tabs-list button {
-  flex: 0 0 max-content;
+  /* flex: 0 0 max-content;
   margin: 0;
   border: 1px solid #dadada;
   border-radius: 0;
@@ -32,7 +48,19 @@
   text-overflow: unset;
   overflow: unset;
   white-space: unset;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s; */
+    display: block;
+    padding: 10px 18px;
+    color: #222;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    border-radius: 24px;
+    background: #E9E9E9;
 }
 
 .fastag-tab .tabs-list button p {
@@ -41,15 +69,17 @@
 
 
 .fastag-tab .tabs-list button[aria-selected='true'] {
-  border-bottom: 1px solid var(--background-color);
+  /* border-bottom: 1px solid var(--background-color);
   background-color: var(--background-color);
-  cursor: initial;
+  cursor: initial; */
+  background: #9B1E26;
+  color: #fff;
 }
 
 .fastag-tab .tabs-panel {
   margin-top: -1px;
   padding: 24px;
-  border: 1px solid #dadada;
+  /* border: 1px solid #dadada; */
   overflow: auto;
 }
 

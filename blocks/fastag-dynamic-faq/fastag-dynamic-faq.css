@@ -1,0 +1,70 @@
+.section.fastag-dynamic-faq-container h2{
+    display: flex;
+    justify-content: center;
+}
+.fastag-dynamic-faq .faq-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.fastag-dynamic-faq .faq-tab {
+  padding: 8px 30px;
+  border: 1px solid #242424;
+  background: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  color: #242424;
+}
+
+.fastag-dynamic-faq .faq-tab.active {
+  background: #242424;
+  color: #fff;
+  border-color: #242424;
+}
+
+/* Accordion */
+.fastag-dynamic-faq .faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+.fastag-dynamic-faq .faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  color: black;
+}
+
+.fastag-dynamic-faq .faq-question::after {
+  content: "▼";
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.fastag-dynamic-faq .faq-question.open::after {
+  transform: rotate(180deg);
+}
+
+.fastag-dynamic-faq .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.fastag-dynamic-faq .faq-answer.open {
+  max-height: 200px; /* adjust as needed */
+  padding: 0 1rem 1rem;
+}

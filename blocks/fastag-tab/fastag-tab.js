@@ -1,5 +1,5 @@
-import fastagTabs from '../tabs/tabs.js'
+import fastagTabs from '../tabs/tabs.js';
 
-export default function decorate(block){
-    fastagTabs(block);
+export default function decorate(block) {
+  fastagTabs(block);
 }

@@ -29,7 +29,8 @@
       "manage-fastag-block",
       "fastag-faq",
       "fastag-tab",
-      "fastag-dynamic-faq"
+      "fastag-dynamic-faq",
+      "buy-fastag-block"
     ]
   },
   {
@@ -99,6 +100,12 @@
     "id": "fastag-dynamic-faq",
     "components": [
       "fastag-dynamic-faq-item"
+    ]
+  },
+  {
+    "id": "buy-fastag-block",
+    "components": [
+      "buy-fastag-item"
     ]
   }
 ]

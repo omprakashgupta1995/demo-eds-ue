@@ -9,7 +9,7 @@ export default function decorate(block) {
   wrapper.classList.add('swiper-wrapper');
 
   childDivs.forEach((div, index) => {
-    div.classList.add('swiper-slide', 'fastag-item', 'fi-' + (index + 1));
+    div.classList.add('swiper-slide', 'fastag-item', `fi-${index + 1}`);
     wrapper.appendChild(div);
   });
 
