@@ -7,13 +7,13 @@ import {
   label,
   span,
   button,
-} from '../../scripts/domhelper.js';
+} from "../../scripts/domhelper.js";
 
 export default async function decorate(block) {
   const retirementCalculator = div(
     { class: "main-Container" },
     div(
-      { class: "calc-left" },
+        
       h1({ class: "black-head" }, "Retirement Calculator"),
       div(
         { class: "inputs-container" },
@@ -223,7 +223,7 @@ export default async function decorate(block) {
   );
   block.append(retirementCalculator);
 
-  // calculator logic 
+  // calculator logic
 
   const updateSliderBackground = async (slider) => {
     /* eslint-disable no-console */
@@ -485,75 +485,69 @@ export default async function decorate(block) {
     .addEventListener("click", resetCalculator);
 }
 
+// my logic
 
+//
 
+// ========== Validation Helper ==========
+//  function validateField(id, errorId, min, max) {
+//   const inputEl = block.getElementById(id);
+//   const errorEl = block.getElementById(errorId)?.querySelector("p");
 
+//   if (!inputEl || !errorEl) return false;
 
-// my logic 
+//   const value = parseFloat(inputEl.value);
 
+//   if (isNaN(value)) {
+//     errorEl.innerText = "This field is required.";
+//     errorEl.style.display = "block";
+//     return false;
+//   }
 
- //
+//   if (value < min || value > max) {
+//     errorEl.innerText = `Please enter a value between ${min} and ${max}.`;
+//     errorEl.style.display = "block";
+//     return false;
+//   }
 
-  // ========== Validation Helper ==========
-  //  function validateField(id, errorId, min, max) {
-  //   const inputEl = block.getElementById(id);
-  //   const errorEl = block.getElementById(errorId)?.querySelector("p");
+//   errorEl.innerText = "";
+//   errorEl.style.display = "none";
+//   return true;
+// }
 
-  //   if (!inputEl || !errorEl) return false;
+// ========== Main Calculation ==========
+//   function calculateRetirement() {
+//     const validations = [
+//       validateField("ret_CurrentAge", "reg-error", 15, 60),
+//       validateField("ret_DesiredAge", "desireage-error", 36, 70),
+//       validateField("ret_life", "retirement-life-error", 19, 100),
+//       validateField("ret_amount", "retirement-amount-error", 1000, Infinity),
+//     ];
+//     if (validations.includes(false)) return;
 
-  //   const value = parseFloat(inputEl.value);
+//     const currentAge = parseInt(block.getElementById("ret_CurrentAge").value);
+//     const desiredAge = parseInt(block.getElementById("ret_DesiredAge").value);
+//     const lifeExpectancy = parseInt(block.getElementById("ret_life").value);
+//     const currentExpenses = parseFloat(block.getElementById("ret_amount").value);
+//     const preReturn = parseFloat(block.getElementById("ret_exp_return").value) / 100;
+//     const postReturn = parseFloat(block.getElementById("ret_exp_return_post").value) / 100;
+//     const inflation = parseFloat(block.getElementById("ret_exp_inflation").value) / 100;
 
-  //   if (isNaN(value)) {
-  //     errorEl.innerText = "This field is required.";
-  //     errorEl.style.display = "block";
-  //     return false;
-  //   }
+//     const yearsToRetirement = desiredAge - currentAge;
+//     const yearsOfRetirement = lifeExpectancy - desiredAge;
+//     const futureExpenses = currentExpenses * Math.pow(1 + inflation, yearsToRetirement);
+//     const amountRequired =
+//       futureExpenses * ((1 - Math.pow(1 + postReturn, -yearsOfRetirement)) / postReturn);
+//     const monthlySIP =
+//       (amountRequired * preReturn) /
+//       (Math.pow(1 + preReturn, yearsToRetirement) - 1);
 
-  //   if (value < min || value > max) {
-  //     errorEl.innerText = `Please enter a value between ${min} and ${max}.`;
-  //     errorEl.style.display = "block";
-  //     return false;
-  //   }
+//     block.getElementById("right-first-txt-span").innerText =
+//       "₹" + Math.round(futureExpenses * 12).toLocaleString("en-IN");
 
-  //   errorEl.innerText = "";
-  //   errorEl.style.display = "none";
-  //   return true;
-  // }
+//     block.getElementById("right-second-txt-span").innerText =
+//       "₹" + Math.round(amountRequired).toLocaleString("en-IN");
 
-  // ========== Main Calculation ==========
-  //   function calculateRetirement() {
-  //     const validations = [
-  //       validateField("ret_CurrentAge", "reg-error", 15, 60),
-  //       validateField("ret_DesiredAge", "desireage-error", 36, 70),
-  //       validateField("ret_life", "retirement-life-error", 19, 100),
-  //       validateField("ret_amount", "retirement-amount-error", 1000, Infinity),
-  //     ];
-  //     if (validations.includes(false)) return;
-
-  //     const currentAge = parseInt(block.getElementById("ret_CurrentAge").value);
-  //     const desiredAge = parseInt(block.getElementById("ret_DesiredAge").value);
-  //     const lifeExpectancy = parseInt(block.getElementById("ret_life").value);
-  //     const currentExpenses = parseFloat(block.getElementById("ret_amount").value);
-  //     const preReturn = parseFloat(block.getElementById("ret_exp_return").value) / 100;
-  //     const postReturn = parseFloat(block.getElementById("ret_exp_return_post").value) / 100;
-  //     const inflation = parseFloat(block.getElementById("ret_exp_inflation").value) / 100;
-
-  //     const yearsToRetirement = desiredAge - currentAge;
-  //     const yearsOfRetirement = lifeExpectancy - desiredAge;
-  //     const futureExpenses = currentExpenses * Math.pow(1 + inflation, yearsToRetirement);
-  //     const amountRequired =
-  //       futureExpenses * ((1 - Math.pow(1 + postReturn, -yearsOfRetirement)) / postReturn);
-  //     const monthlySIP =
-  //       (amountRequired * preReturn) /
-  //       (Math.pow(1 + preReturn, yearsToRetirement) - 1);
-
-  //     block.getElementById("right-first-txt-span").innerText =
-  //       "₹" + Math.round(futureExpenses * 12).toLocaleString("en-IN");
-
-  //     block.getElementById("right-second-txt-span").innerText =
-  //       "₹" + Math.round(amountRequired).toLocaleString("en-IN");
-
-  //     block.getElementById("right-third-txt-span").innerText =
-  //       "₹" + Math.round(monthlySIP).toLocaleString("en-IN");
-  //   }
-
+//     block.getElementById("right-third-txt-span").innerText =
+//       "₹" + Math.round(monthlySIP).toLocaleString("en-IN");
+//   }

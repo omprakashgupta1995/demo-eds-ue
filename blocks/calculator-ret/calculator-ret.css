@@ -79,13 +79,13 @@
 
 .slid-div > input::-webkit-slider-thumb {
     appearance: none;
-    height: 26px;
-    width: 26px;
+    height: 22px;
+    width: 22px;
     background: #006eb9;
     border-radius: 50%;
 
     /* If using fake bar for filling then mergin will be removed */
-    margin-top: -11px;
+    margin-top: -9px;
 }
 
 .inputholder label {
@@ -105,7 +105,7 @@
     height: auto;
     text-transform: uppercase;
     color: #fff;
-    padding: 15px 55px 12px 40px;
+    padding: 10px 17px;
     line-height: 1;
     font-weight: 600;
     cursor: pointer;
@@ -137,7 +137,7 @@
 #right-first-txt-span,
 #right-second-txt-span,
 #right-third-txt-span {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #reset-calculator {
@@ -173,5 +173,9 @@
 
     .calc-info-para {
         display: block;
+    }
+
+    .inputholder label {
+        font-size: 15px;
     }
 }
