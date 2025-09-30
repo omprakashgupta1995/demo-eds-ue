@@ -704,13 +704,6 @@
     "id": "mbt-membership-form",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Enter Text",
-        "valueType": "string"
-      },
-      {
         "component": "text",
         "name": "css link",
         "label": "Css link"
@@ -719,6 +712,16 @@
         "component": "text",
         "name": "js link",
         "label": "JS link"
+      },
+      {
+        "component": "text",
+        "name": "form id",
+        "label": "Enter Form ID"
+      },
+      {
+        "component": "text",
+        "name": "form key",
+        "label": "Enter Form Key"
       }
     ]
   },
@@ -726,13 +729,6 @@
     "id": "mbt-hl-form",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Enter Text",
-        "valueType": "string"
-      },
-      {
         "component": "text",
         "name": "css link",
         "label": "Css link"
@@ -741,6 +737,16 @@
         "component": "text",
         "name": "js link",
         "label": "JS link"
+      },
+      {
+        "component": "text",
+        "name": "form id",
+        "label": "Enter Form ID"
+      },
+      {
+        "component": "text",
+        "name": "form key",
+        "label": "Enter Form Key"
       }
     ]
   }
