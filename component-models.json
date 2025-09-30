@@ -699,5 +699,29 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "mbt-membership-form",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Enter Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "mbt-hl-form",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Enter Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
