@@ -709,6 +709,16 @@
         "value": "",
         "label": "Enter Text",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Css link"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "JS link"
       }
     ]
   },
@@ -721,6 +731,16 @@
         "value": "",
         "label": "Enter Text",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Css link"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "JS link"
       }
     ]
   }
