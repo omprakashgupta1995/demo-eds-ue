@@ -544,7 +544,7 @@
         },
         {
           "title": "MBT Membership Block",
-          "id": "mbt-membersip-form",
+          "id": "mbt-membership-form",
           "plugins": {
             "xwalk": {
               "page": {
