@@ -712,12 +712,12 @@
       },
       {
         "component": "text",
-        "name": "title",
+        "name": "css link",
         "label": "Css link"
       },
       {
         "component": "text",
-        "name": "title",
+        "name": "js link",
         "label": "JS link"
       }
     ]
