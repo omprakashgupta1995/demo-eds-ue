@@ -1,0 +1,133 @@
+// import {
+//   form, div, domEl, linkEl,
+// } from '../../scripts/dom-helpers.js';
+
+// // export default function decorate(block) {
+// //   // 1. Build the form wrapper
+// //   const membershipForm = form(
+// //     {
+// //       method: 'post', action: '/forms/membership', id: 'WebForm', novalidate: 'novalidate',
+// //     },
+// //     div(
+// //       { class: 'formatic' },
+// //       div({ id: 'formcorp-form' }),
+// //     ),
+// //   );
+
+// //   // 2. Inject CSS <link>
+// //   document.head.appendChild(
+// //     linkEl({
+// //       rel: 'stylesheet',
+// //       href: 'https://www.tmbank.com.au/assets/formcorp/tmb/membership-sdk2/formcorp.membership-sdk2.css',
+// //     }),
+// //   );
+
+// //   // 3. Inject SDK <script> and call Formatic.createForm after it loads
+// //   const sdkScript = script({
+// //     type: 'text/javascript',
+// //     src: 'https://www.tmbank.com.au/assets/formcorp/tmb/membership-sdk2/formcorp.membership-sdk2.js',
+// //     async: true,
+// //   });
+
+// //   sdkScript.onload = () => {
+// //     try {
+// //       if (window.Formatic) {
+// //         window.Formatic.createForm(
+// //           'formcorp-form',
+// //           'C9D7527440aA913Dae12F649904B91e844593bBA02fEf7d4f5ed62300B841CE2',
+// //           '433',
+// //           'Live',
+// //           'tmb',
+// //           'default',
+// //         );
+// //       } else {
+// //         console.error('Formatic SDK not loaded');
+// //       }
+// //     } catch (err) {
+// //       console.error('Formatic error:', err);
+// //     }
+// //   };
+
+// //   document.body.appendChild(sdkScript);
+
+// //   block.innerHtml = '';
+
+// //   // 4. Append form to block
+// //   block.appendChild(membershipForm);
+// // }
+
+// export default function decorate(block) {
+//   console.log(block);
+
+//   // const divcontainer = form(
+//   //   {
+//   //     method: 'post', action: '/forms/membership', id: 'WebForm', novalidate: 'novalidate',
+//   //   },
+//   //   domEl({ type: 'text/javascript', src: 'https://www.tmbank.com.au/assets/formcorp/tmb/membership-sdk2/formcorp.membership-sdk2.js' }),
+//   //   domEl({ rel: 'stylesheet', href: 'https://www.tmbank.com.au/assets/formcorp/tmb/membership-sdk2/formcorp.membership-sdk2.css' }),
+//   //   div(
+//   //     { class: 'formatic' },
+//   //     div({ id: 'formcorp-form' }),
+//   //     domEl('try {\n                    Formatic.createForm(\'formcorp-form\', \'C9D7527440aA913Dae12F649904B91e844593bBA02fEf7d4f5ed62300B841CE2\',\n                        \'433\', \'Live\', \'tmb\', \'default\');\n                } catch (err) {\n                    console.log(err);\n                }'),
+//   //   ),
+//   // );
+
+//   // block.append(divcontainer);
+// }
+
+// Inline dom-helpers (you can remove if you already import them)
+function domEl(tag, props = {}) {
+  const el = document.createElement(tag);
+  Object.assign(el, props);
+  return el;
+}
+
+function linkEl(props = {}) {
+  return domEl('link', props);
+}
+
+// EDS component definition
+window.edsComponent('mbt-membership-block', async (block) => {
+  const cssUrl = 'https://www.tmbank.com.au/assets/formcorp/tmb/membership-sdk2/formcorp.membership-sdk2.css';
+  const jsUrl = 'https://www.tmbank.com.au/assets/formcorp/tmb/membership-sdk2/formcorp.membership-sdk2.js';
+
+  // You can either hardcode or extract these from the DOM (AEM authoring)
+  const formId = block.querySelector('[data-aue-prop="form id"]')?.textContent.trim();
+  const formKey = block.querySelector('[data-aue-prop="form key"]')?.textContent.trim();
+
+  if (!formId || !formKey) {
+    console.warn('[MBT Membership] Missing form ID or key.');
+    return;
+  }
+
+  // Load CSS
+  document.head.appendChild(linkEl({ rel: 'stylesheet', href: cssUrl }));
+
+  // Create target div for the form
+  const formWrapper = domEl('div', { className: 'formatic' });
+  const formTarget = domEl('div', { id: 'formcorp-form' });
+
+  formWrapper.appendChild(formTarget);
+  block.appendChild(formWrapper);
+
+  // Load JS and init Formatic
+  const script = domEl('script', { src: jsUrl });
+
+  script.onload = () => {
+    if (typeof window.Formatic?.createForm === 'function') {
+      try {
+        window.Formatic.createForm('formcorp-form', formId, formKey, 'Live', 'tmb', 'default');
+      } catch (err) {
+        console.error('[MBT Membership] Error creating form:', err);
+      }
+    } else {
+      console.error('[MBT Membership] Formatic SDK not loaded or missing createForm.');
+    }
+  };
+
+  script.onerror = () => {
+    console.error('[MBT Membership] Failed to load Formcorp JS:', jsUrl);
+  };
+
+  document.body.appendChild(script);
+});
