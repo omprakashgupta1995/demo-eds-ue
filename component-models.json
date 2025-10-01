@@ -755,11 +755,6 @@
     "fields": [
       {
         "component": "text",
-        "name": "action link",
-        "label": "Enter action link"
-      },
-      {
-        "component": "text",
         "name": "css link",
         "label": "Css link"
       },
@@ -777,6 +772,11 @@
         "component": "text",
         "name": "form key",
         "label": "Enter Form Key"
+      },
+      {
+        "component": "text",
+        "name": "action link",
+        "label": "Enter action link"
       }
     ]
   }
