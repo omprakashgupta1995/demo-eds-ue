@@ -701,7 +701,7 @@
     ]
   },
   {
-    "id": "mbt-membership-form",
+    "id": "mbt-membership-block",
     "fields": [
       {
         "component": "text",
@@ -726,7 +726,7 @@
     ]
   },
   {
-    "id": "mbt-hl-form",
+    "id": "mbt-hl-block",
     "fields": [
       {
         "component": "text",
