@@ -25,7 +25,8 @@
       "product-1",
       "teaser-cards",
       "faq",
-      "fragment"
+      "fragment",
+      "demo-teaser"
     ]
   },
   {
@@ -71,6 +72,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+   {
+    "id": "demo-teaser",
+    "components": [
+     "demo-teaser-item"
     ]
   }
 ]
