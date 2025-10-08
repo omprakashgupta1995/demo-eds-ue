@@ -779,5 +779,15 @@
         "label": "Enter action link"
       }
     ]
+  },
+  {
+    "id": "teachers-calculator-block",
+    "fields": [
+      {
+        "component": "text",
+        "name": "i-frame link",
+        "label": "Enter calculator iframe link"
+      }
+    ]
   }
 ]

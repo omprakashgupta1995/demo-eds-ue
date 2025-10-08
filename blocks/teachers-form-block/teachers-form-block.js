@@ -23,7 +23,7 @@ export default function decorate(block) {
     action: formAction,
   };
 
-  //   block.innerHTML = '';
+  block.innerHTML = '';
 
   // Build form wrapper
   const formEl = form({
