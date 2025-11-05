@@ -1,5 +1,6 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
+import fev from '../fevicreate/fevicreate.js';
 
 export default function decorate(block) {
   /* change to ul, li */
@@ -21,4 +22,6 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(ul);
+
+  fev();
 }

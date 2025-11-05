@@ -1,0 +1,166 @@
+.home{
+    padding: 100px 0;
+    background-image: url("../../icons/login-back.jpg");
+}
+
+main > .home{
+    margin: 0;
+}
+
+header, footer{
+    display: none;
+}
+
+.home .home-bottom-content .home-paragraph .home-picture img {
+    position: absolute;
+    content: "";
+    bottom: 10%;
+    left: 4%;
+    width: 95px;
+    height: 110px;
+    animation: anim-name 2s infinite;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+@keyframes anim-name {
+    0% {
+    transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home .home-header-logos .home-paragraph:nth-child(1) .home-picture {
+  display: flex;
+  justify-content: center;
+}
+
+.home .home-header-logos .home-paragraph:nth-child(2) .home-picture {
+    position: absolute;
+    content: "";
+    top: 9%;
+    right: 4%;
+    width: 90px;
+    height: 81px;
+    animation-duration: 1s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+    animation-name: pulse;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 100px 0 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale3d(1.04, 1.04, 1.04);
+        opacity: 0.85;
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+
+}
+
+.home .home-cards-wrapper .cards ul{
+    display: flex;
+    justify-content: center;
+
+}
+
+.home .home-cards-wrapper .cards ul .home-card-item {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 8px;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 8px 0 29px #00000024;
+    padding: 33px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    .cards-card-image .home-picture {    
+        img {
+            width: 87px;
+            height: 96px;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .home-card-body {
+        margin: 0;
+    }
+
+    .home-card-body p{
+        font-family: "Baloo Bhaina 2", cursive;
+        line-height: 1.1;
+        font-weight: 500;
+        color: #111;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        padding-top: 20px;
+        transition: color 0.3s ease;
+    }
+}
+
+.home .home-cards-wrapper .cards ul .home-card-item::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #40acf7;
+    z-index: 13;
+    transition: all 0.5s ease;
+}
+
+.home .home-cards-wrapper .cards ul .home-card-item:hover::before {
+    width: 100%;
+}
+
+.home .home-cards-wrapper .cards ul .home-card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 5px 35px #00000035;
+}
+
+.home .home-cards-wrapper .cards ul .home-card-item:hover .cards-card-image .home-picture img {
+    transform: scale(1.1);
+}
+
+.home .home-cards-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: column;
+    max-width: 1140px;
+}
+
+.home .home-cards-wrapper:nth-child(2) {
+    border-bottom: 1px solid #fff;
+}

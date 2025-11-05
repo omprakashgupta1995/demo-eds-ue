@@ -126,6 +126,14 @@
           {
             "name": "Home",
             "value": "home"
+          },
+          {
+            "name": "footer1",
+            "value": "footer1"
+          },
+          {
+            "name": "footer2",
+            "value": "footer2"
           }
         ]
       },
