@@ -134,6 +134,14 @@
           {
             "name": "footer2",
             "value": "footer2"
+          },
+          {
+            "name": "header1",
+            "value": "header1"
+          },
+          {
+            "name": "header2",
+            "value": "header2"
           }
         ]
       },

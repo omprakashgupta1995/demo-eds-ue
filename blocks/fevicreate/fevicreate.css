@@ -7,10 +7,6 @@ main > .home{
     margin: 0;
 }
 
-header, footer{
-    display: none;
-}
-
 .home .home-bottom-content .home-paragraph .home-picture img {
     position: absolute;
     content: "";
@@ -164,3 +160,4 @@ header, footer{
 .home .home-cards-wrapper:nth-child(2) {
     border-bottom: 1px solid #fff;
 }
+
