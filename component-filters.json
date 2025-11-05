@@ -111,5 +111,17 @@
     "components": [
       "buy-fastag-item"
     ]
+  },
+  {
+    "id": "mayura-cc-swiper",
+    "components": [
+      "mayura-cc-swiper-item"
+    ]
+  },
+  {
+    "id": "first-swyp",
+    "components": [
+      "first-swyp-item"
+    ]
   }
 ]

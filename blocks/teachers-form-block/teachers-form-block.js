@@ -3,17 +3,17 @@ import dataMapMoObj from '../mbt-membership-block/datamap.js';
 
 export default function decorate(block) {
   dataMapMoObj.CLASS_PREFIXES = [
-    'login-item',
-    'login-sub-item',
-    'login-inner-item',
+    'form-item',
+    'form-sub-item',
+    'form-inner-item',
   ];
   dataMapMoObj.addIndexed(block);
 
-  const cssLink = block.querySelector('.login-item1 .login-inner-item1 a').getAttribute('href');
-  const jsLink = block.querySelector('.login-item2 .login-inner-item1 a').getAttribute('href');
-  const formId = block.querySelector('.login-item3 .login-inner-item1').innerText;
-  const formKey = block.querySelector('.login-item4 .login-inner-item1').innerText;
-  const formAction = block.querySelector('.login-item5 .login-inner-item1 a').getAttribute('href');
+  const cssLink = block.querySelector('.form-item1 .form-inner-item1 a').getAttribute('href');
+  const jsLink = block.querySelector('.form-item2 .form-inner-item1 a').getAttribute('href');
+  const formId = block.querySelector('.form-item3 .form-inner-item1').innerText;
+  const formKey = block.querySelector('.form-item4 .form-inner-item1').innerText;
+  const formAction = block.querySelector('.form-item5 .form-inner-item1 a').getAttribute('href');
 
   const cfg = {
     css: cssLink,
@@ -79,9 +79,9 @@ export default function decorate(block) {
       } else {
         // console.error('Formatic library not available after loading script.');
       }
-    }).catch((err) => {
+    }).catch(() => {
     //   console.error('Failed to load Formatic script:', err);
-      console.log(err);
+      // console.log(err);
     });
   }
 }
