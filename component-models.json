@@ -122,6 +122,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Home",
+            "value": "home"
           }
         ]
       },
