@@ -1,9 +1,7 @@
 [
   {
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -25,52 +23,36 @@
       "product-1",
       "teaser-cards",
       "faq",
-      "fragment"
+      "fragment",
+      "pranav-demo"
     ]
   },
   {
     "id": "teaser-cards",
-    "components": [
-      "teaser-card"
-    ]
+    "components": ["teaser-card"]
   },
   {
     "id": "banner-container",
-    "components": [
-      "banner"
-    ]
+    "components": ["banner"]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
+    "components": ["card"]
   },
   {
     "id": "swiper",
-    "components": [
-      "swiper-item"
-    ]
+    "components": ["swiper-item"]
   },
   {
     "id": "tab",
-    "components": [
-      "tab-item"
-    ]
+    "components": ["tab-item"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
   }
 ]
