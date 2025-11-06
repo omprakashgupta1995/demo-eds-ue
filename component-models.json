@@ -142,6 +142,14 @@
           {
             "name": "header2",
             "value": "header2"
+          },
+          {
+            "name": "image1",
+            "value": "image1"
+          },
+          {
+            "name": "main-section",
+            "value": "main-section"
           }
         ]
       },
