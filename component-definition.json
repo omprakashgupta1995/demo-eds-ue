@@ -653,7 +653,8 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "IDFC BANK ITEM",
-                  "model": "idfc-bank-item"
+                  "model": "idfc-bank-item",
+                  "filter":"idfc-bank-item"
                 }
               }
             }
