@@ -98,5 +98,9 @@
   {
     "id": "moti-swiper",
     "components": ["moti-swiper-items"]
+  },
+  {
+    "id": "idfc-bank",
+    "components": ["idfc-bank-item"]
   }
 ]
