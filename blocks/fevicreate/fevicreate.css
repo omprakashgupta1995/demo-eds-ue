@@ -12,7 +12,7 @@ main > .home{
     content: "";
     bottom: 10%;
     left: 4%;
-    width: 95px;
+    width: 95px;    
     height: 110px;
     animation: anim-name 2s infinite;
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@ main > .home{
 .home .home-header-logos .home-paragraph:nth-child(2) .home-picture {
     position: absolute;
     content: "";
-    top: 33%;
+    top: 0%;
     right: 4%;
     width: 90px;
     height: 81px;

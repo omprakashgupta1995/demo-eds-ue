@@ -4,13 +4,16 @@
     padding: 0;
 }
 
-main{
+.main-wrapper{
     display: flex;
     background: #99d841;
     padding: 100px 0 50px;
     position: relative;
     z-index: 1;
     font-family: "Baloo Bhaina 2", cursive;
+    margin: 0;
+    justify-content: center;
+    gap: 30px;
 }
 
 /* Image Section Styles */

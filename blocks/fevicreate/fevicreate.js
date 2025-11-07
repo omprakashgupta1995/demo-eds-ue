@@ -1,8 +1,8 @@
 export default function decorate(block) {
     const homeSection = document.querySelector('.section.home');
-    
+
     if (homeSection) {
-        
+
         // Add class names to default content wrappers
         const defaultWrappers = homeSection.querySelectorAll('.default-content-wrapper');
         defaultWrappers.forEach((wrapper, index) => {
@@ -26,20 +26,20 @@ export default function decorate(block) {
                 }
             }
         });
-        
+
         // Add class names to cards wrapper and its contents
         const cardsWrappers = homeSection.querySelectorAll('.cards-wrapper');
         cardsWrappers.forEach((cardsWrapper) => {
             cardsWrapper.classList.add('home-cards-wrapper');
-            
+
             // Add classes to card elements
             const cardItems = cardsWrapper.querySelectorAll('.cards ul li');
             cardItems.forEach((item, index) => {
                 item.classList.add('home-card-item');
-                
+
                 const cardImage = item.querySelector('.cards-card-image');
                 const cardBody = item.querySelector('.cards-card-body');
-                
+
                 if (cardImage) {
                     cardImage.classList.add('home-card-image');
                 }
@@ -55,50 +55,63 @@ export default function decorate(block) {
                         cardBody.classList.add('school-category');
                     }
                 }
-                
+
                 // Add click functionality to each card
                 item.style.cursor = 'pointer';
-                item.addEventListener('click', function() {
+                item.addEventListener('click', function () {
                     const cardText = cardBody ? cardBody.textContent.trim().toLowerCase() : '';
                     let targetUrl = '';
-                    
+
                     // Define URLs based on card content
                     if (cardText.includes('3 to 5 years')) {
-                        targetUrl = '/3-to-5-years';
+                        targetUrl = '/karishmagosalia/fragement/three-five-years';
                     } else if (cardText.includes('6 to 8 years')) {
-                        targetUrl = '/6-to-8-years';
+                        targetUrl = '/karishmagosalia/fragement/six-eight-years';
                     } else if (cardText.includes('9 to 14 years')) {
-                        targetUrl = '/9-to-14-years';
+                        targetUrl = '/karishmagosalia/fragement/nine-fourteen-years';
                     } else if (cardText === 'teacher') {
-                        targetUrl = '/teacher';
+                        targetUrl = '/karishmagosalia/fragement/teacher';
                     } else if (cardText === 'school') {
-                        targetUrl = '/school';
+                        targetUrl = '/karishmagosalia/fragement/school';
                     }
-                    
+
                     if (targetUrl) {
                         window.location.href = targetUrl;
                     }
                 });
             });
         });
-        
+
         // Add classes to all pictures and images within home section
         const pictures = homeSection.querySelectorAll('picture');
         pictures.forEach((picture) => {
             picture.classList.add('home-picture');
         });
-        
+
         const allImages = homeSection.querySelectorAll('img');
         allImages.forEach((img) => {
             if (!img.classList.length) {
                 img.classList.add('home-image');
             }
         });
-        
+
         // Add classes to paragraphs
         const paragraphs = homeSection.querySelectorAll('p');
         paragraphs.forEach((p) => {
             p.classList.add('home-paragraph');
         });
+    }
+    if (window.location.href.includes('/karishmagosalia/fevicreatepoc/')){
+        // Hide header and footer for this specific URL
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        
+        if (header) {
+            header.style.display = 'none';
+        }
+        
+        if (footer) {
+            footer.style.display = 'none';
+        }
     }
 }
