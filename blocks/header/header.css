@@ -10,6 +10,51 @@ header .nav-wrapper {
   position: fixed;
 }
 
+/* Sticky header styles */
+.header.header-sticky .nav-wrapper{
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #e22973;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  transition: all 0.3s ease;
+
+  .header1 .default-content-wrapper{
+    background: transparent;
+  }
+
+  .header2 .default-content-wrapper{
+    margin-left: 112px;
+  }
+
+  header nav .nav-sections ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: var(--body-font-size-s);
+  }
+
+  header nav .nav-sections ul > li {
+    font-weight: 500;
+  }
+
+  header nav .nav-sections ul > li > ul {
+    margin-top: 0;
+  }
+
+  .header2 .default-content-wrapper ul:nth-child(1){
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+
+  .header2 .default-content-wrapper ul:nth-child(2){
+    display: none;
+  }
+}
+
 header nav {
   box-sizing: border-box;
   grid-template:
@@ -173,19 +218,6 @@ header nav[aria-expanded='true'] .nav-sections {
   align-self: start;
 }
 
-header nav .nav-sections ul {
-  list-style: none;
-  padding-left: 0;
-  font-size: var(--body-font-size-s);
-}
-
-header nav .nav-sections ul > li {
-  font-weight: 500;
-}
-
-header nav .nav-sections ul > li > ul {
-  margin-top: 0;
-}
 
 header nav .nav-sections ul > li > ul > li {
   font-weight: 400;
@@ -226,6 +258,49 @@ header nav .nav-sections ul > li > ul > li {
     top: unset;
     bottom: 0.5em;
     transform: rotate(315deg);
+  }
+
+  /* Age select styling */
+  header nav .nav-sections .age-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  header nav .nav-sections .age-select span img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  header nav .nav-sections .age-select select {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: "Baloo Bhaina 2", cursive;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    padding: 4px 20px 4px 0;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23ffffff" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    background-size: 12px;
+  }
+
+  header nav .nav-sections .age-select select:hover {
+    background-color: rgb(255 255 255 / 10%);
+    border-radius: 4px;
+  }
+
+  header nav .nav-sections .age-select select option {
+    background: #e22973;
+    color: #fff;
+    padding: 8px;
   }
 
   header nav .nav-sections ul {
@@ -277,6 +352,19 @@ header nav .nav-tools {
   grid-area: tools;
 }
 
+/* Age select mobile styling */
+@media (width < 900px) {
+  header nav .nav-sections .age-select {
+    padding: 12px 0;
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
+  }
+
+  header nav .nav-sections .age-select select {
+    font-size: 16px;
+    padding: 8px 20px 8px 0;
+  }
+}
+
 
 .header1{
   flex: 0 0 25%;
@@ -288,9 +376,9 @@ header nav .nav-tools {
   clip-path: polygon(0 20%, 100% 0, 87% 100%, 0 88%);
   background: #063a76;
   padding: 24px 100px;
-  top: 47px;
+  top: 63px;
   position: absolute;
-  left: 87px;
+  left: 11px;
   z-index: 9;
 }
 
@@ -312,13 +400,13 @@ header nav .nav-tools {
     text-align: right;
     float: right;
     padding: 50px;
-    position: relative;
     position: absolute;
     right: 24px;
     padding-right: 50px;
     padding-bottom: 36px;
     padding-left: 193px;
     top: 80px;
+    list-style: none;
 
     li:nth-child(8){
       background: #971b4c;
@@ -389,4 +477,45 @@ header nav .nav-tools {
     text-transform: capitalize;
     top: -21px;
   }
+}
+
+/* Sticky header modifications */
+.header.header-sticky .header1 {
+  flex: 0 0 25% !important;
+  max-width: 25% !important;
+}
+
+.header.header-sticky .header1 .default-content-wrapper {
+  clip-path: none !important;
+  background: #063a76;
+  position: static !important;
+  float: none !important;
+  padding: 12px 20px !important;
+  top: auto !important;
+  left: auto !important;
+  z-index: auto !important;
+}
+
+.header.header-sticky .header2 .default-content-wrapper ul:nth-child(1) {
+  width: 75% !important;
+  clip-path: none !important;
+  background: #e22973;
+  text-align: right;
+  float: none !important;
+  padding: 12px 20px !important;
+  position: static !important;
+  right: auto !important;
+  padding-right: 20px !important;
+  padding-bottom: 12px !important;
+  padding-left: 20px !important;
+  top: auto !important;
+  display: inline-block;
+}
+
+.header.header-sticky .header2 .default-content-wrapper ul:nth-child(2) {
+  display: none !important;
+}
+
+.header.header-sticky .header2 .default-content-wrapper ul:nth-child(1)::before {
+  display: none !important;
 }

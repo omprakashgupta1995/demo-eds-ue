@@ -58,7 +58,10 @@ function focusNavSection() {
  */
 function toggleAllNavSections(sections, expanded = false) {
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
-    section.setAttribute('aria-expanded', expanded);
+    // Only apply aria-expanded to nav-drop elements, not age-select elements
+    if (section.classList.contains('nav-drop')) {
+      section.setAttribute('aria-expanded', expanded);
+    }
   });
 }
 
@@ -135,14 +138,69 @@ export default async function decorate(block) {
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-      if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', () => {
-        if (isDesktop.matches) {
-          const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      const subList = navSection.querySelector('ul');
+      if (subList) {
+        // Check if this is an age-related dropdown
+        const mainText = navSection.querySelector('p')?.textContent?.trim();
+        const isAgeDropdown = mainText && (mainText.includes('years') || mainText.includes('age'));
+
+        if (isAgeDropdown) {
+          // Convert to select dropdown for age selection
+          navSection.classList.add('age-select');
+
+          // Create select element
+          const selectWrapper = document.createElement('li');
+          selectWrapper.className = 'age-select';
+
+          const iconSpan = document.createElement('span');
+          const iconImg = document.createElement('img');
+          iconImg.setAttribute('data-src', 'https://www.fevicreate.com/o/fevicreate-theme/images/smile.png');
+          iconImg.setAttribute('alt', 'img');
+          iconImg.setAttribute('loading', 'lazy');
+          iconImg.className = 'inline';
+          iconImg.src = 'https://www.fevicreate.com/o/fevicreate-theme/images/smile.png';
+          iconSpan.appendChild(iconImg);
+
+          const select = document.createElement('select');
+          select.id = 'userSelector';
+          select.name = 'age';
+
+          // Create options from existing list items
+          const listItems = subList.querySelectorAll('li');
+          listItems.forEach((item, index) => {
+            const option = document.createElement('option');
+            option.textContent = item.textContent.trim();
+
+            // Set values based on age ranges
+            if (item.textContent.includes('3 to 5')) {
+              option.value = 'age3_5';
+              if (index === 0) option.selected = true;
+            } else if (item.textContent.includes('6 to 8')) {
+              option.value = 'age6_8';
+            } else if (item.textContent.includes('9 to 14')) {
+              option.value = 'age9_14';
+            }
+
+            select.appendChild(option);
+          });
+
+          selectWrapper.appendChild(iconSpan);
+          selectWrapper.appendChild(select);
+
+          // Replace the original nav section with the new select
+          navSection.parentNode.replaceChild(selectWrapper, navSection);
+        } else {
+          // Keep as regular dropdown for non-age items
+          navSection.classList.add('nav-drop');
+          navSection.addEventListener('click', () => {
+            if (isDesktop.matches) {
+              const expanded = navSection.getAttribute('aria-expanded') === 'true';
+              toggleAllNavSections(navSections);
+              navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            }
+          });
         }
-      });
+      }
     });
   }
 
@@ -163,4 +221,30 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  // Add scroll event listener for sticky header behavior
+  let isScrolled = false;
+  function handleScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const shouldBeSticky = scrollTop > 100; // Trigger sticky after 100px scroll
+
+    if (shouldBeSticky && !isScrolled) {
+      // Add sticky class when scrolling down
+      block.classList.add('header-sticky');
+      isScrolled = true;
+    } else if (!shouldBeSticky && isScrolled) {
+      // Remove sticky class when back to top
+      block.classList.remove('header-sticky');
+      isScrolled = false;
+    }
+  }
+
+  // Throttled scroll event listener for better performance
+  let scrollTimer;
+  window.addEventListener('scroll', () => {
+    if (scrollTimer) {
+      clearTimeout(scrollTimer);
+    }
+    scrollTimer = setTimeout(handleScroll, 10);
+  });
 }
