@@ -16,6 +16,7 @@
       "cards",
       "columns",
       "loan-product",
+      "byline-1",
       "quote",
       "byline",
       "product",
@@ -46,6 +47,12 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+    {
+    "id": "byline-1",
+    "components": [
+      "byline-item-1"
     ]
   },
   {

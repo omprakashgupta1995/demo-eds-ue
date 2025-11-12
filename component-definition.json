@@ -190,6 +190,36 @@
           }
         },
          {
+          "title": "Byline 1",
+          "id": "byline-1",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Byline 1",
+                  "model": "byline-1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Byline Item 1",
+          "id": "byline-item-1",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Byline Item 1",
+                  "model": "byline-item-1"
+                }
+              }
+            }
+          }
+        },
+         {
           "title": "Loan Product",
           "id": "loan-product",
           "plugins": {
