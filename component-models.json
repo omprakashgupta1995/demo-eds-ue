@@ -273,8 +273,8 @@
         "label": "Toggle",
         "name": "boolean",
         "valueType": "boolean",
-        "rootPath": "/content/demo-ue-022",
         "validation": {
+          "rootPath": "/content/demo-ue-022/",
           "customErrorMsg": "Think, McFly. Think!"
         }
       }
