@@ -101,6 +101,6 @@
   },
   {
     "id": "idfc-bank",
-    "components": ["idfc-bank-item"]
+    "components": ["idfc-bank-item2"]
   }
 ]
