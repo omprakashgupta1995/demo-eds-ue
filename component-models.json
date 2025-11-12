@@ -253,6 +253,29 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "value": "",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "value": "",
+        "label": "CTA Text",
+        "valueType": "string"
+      },
+      {
+        "component": "boolean",
+        "label": "Toggle",
+        "name": "boolean",
+        "valueType": "boolean",
+        "validation": {
+          "customErrorMsg": "Think, McFly. Think!"
+        }
       }
     ]
   },
