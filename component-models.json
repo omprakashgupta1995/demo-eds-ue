@@ -772,7 +772,7 @@
     ]
   },
   {
-    "id": "idfc-bank-item2",
+    "id": "idfc-bank-item",
     "fields": [
       {
         "component": "reference",
