@@ -248,10 +248,37 @@
         "value": ""
       },
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image2",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "image2Alt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "value": "",
+        "label": "Select CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "value": "",
+        "label": "CAT Text",
         "valueType": "string"
       }
     ]
