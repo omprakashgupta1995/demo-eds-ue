@@ -248,6 +248,13 @@
         "value": ""
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageTitle",
+        "label": "Title",
+        "value": ""
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image2",
