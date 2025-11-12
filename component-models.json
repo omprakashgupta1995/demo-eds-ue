@@ -869,5 +869,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "idfc-1",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "col_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
