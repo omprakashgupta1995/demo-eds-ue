@@ -262,7 +262,7 @@
         "valueType": "string"
       },
       {
-        "component": "aem-content",
+        "component": "richtext",
         "name": "ctaText",
         "value": "",
         "label": "CTA Text",
