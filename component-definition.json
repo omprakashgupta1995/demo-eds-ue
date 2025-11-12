@@ -176,7 +176,7 @@
         },
         {
           "title": "Pratham",
-          "id": "pratham",
+          "id": "pratham-1",
           "plugins": {
             "xwalk": {
               "page": {
