@@ -222,6 +222,13 @@
             "multi": false
           },
           {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image2",
+            "label": "Image",
+            "multi": false
+          },
+          {
             "component": "text",
             "valueType": "string",
             "name": "imageAlt",
