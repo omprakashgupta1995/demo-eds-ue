@@ -193,14 +193,29 @@
         },
         {
           "title": "WhatsApp Banner Item",
-          "id": "whatsapp-banner-item",
+          "id": "whatsapp-banner-item-1",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "WhatsApp Banner Item",
-                  "model": "whatsapp-banner-item"
+                  "model": "whatsapp-banner-item-1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "WhatsApp Banner Item 2",
+          "id": "whatsapp-banner-item-2",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "WhatsApp Banner Item",
+                  "model": "whatsapp-banner-item-2"
                 }
               }
             }
