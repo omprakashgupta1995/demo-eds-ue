@@ -281,6 +281,125 @@
     ]
   },
   {
+    "id": "whatsapp-banner-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_title",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "col2_titleType",
+        "value": "",
+        "label": "Text",
+        "valueType": "string[]",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon1",
+        "value": "",
+        "label": "col2_icon1",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon1Alt",
+        "value": "",
+        "label": "icon1 Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_desc1",
+        "value": "",
+        "label": "icon1 Content",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon2",
+        "value": "",
+        "label": "col2_icon2",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon2Alt",
+        "value": "",
+        "label": "icon2 Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_desc2",
+        "value": "",
+        "label": "icon2 Content",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon3",
+        "value": "",
+        "label": "col2_icon3",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon3Alt",
+        "value": "",
+        "label": "icon3 Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_desc3",
+        "value": "",
+        "label": "icon3 Content",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "value": "",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "ctaText",
+        "value": "",
+        "label": "CTA Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "byline",
     "fields": [
       {

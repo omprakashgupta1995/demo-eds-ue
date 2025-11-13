@@ -24,7 +24,8 @@
       "product-1",
       "teaser-cards",
       "faq",
-      "fragment"
+      "fragment",
+      "whatsapp-banner"
     ]
   },
   {
@@ -42,6 +43,10 @@
   {
     "id": "byline",
     "components": ["byline-1"]
+  },
+  {
+    "id": "whatsapp-banner",
+    "components": ["whatsapp-banner-item"]
   },
   {
     "id": "swiper",
