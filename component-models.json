@@ -316,7 +316,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "title",
+        "name": "whatsappBanner_title",
         "label": "Whatsapp Banner Title",
         "multi": false
       },
