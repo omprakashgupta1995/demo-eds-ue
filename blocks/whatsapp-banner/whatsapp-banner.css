@@ -54,72 +54,45 @@
   line-height: 1.2;
 }
 
-/* HORIZONTAL ICONS LAYOUT - This is the key fix */
-.whatsapp-banner > div:last-child > p {
-  display: inline-block;
-  margin: 0 1rem;
-  vertical-align: top;
-}
-
-/* Make icon paragraphs display horizontally */
-.whatsapp-banner > div:last-child > p:has(picture) {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 1.5rem;
-  min-width: 100px;
-}
-
-.whatsapp-banner > div:last-child > p:has(picture) + p:not(:has(picture)) {
-  display: none; /* Hide the separate text paragraphs */
-}
-
-/* Icon styling */
-.whatsapp-banner > div:last-child > p:has(picture) picture,
-.whatsapp-banner > div:last-child > p:has(picture) img {
-  width: 72px;
-  height: 72px;
-  margin-bottom: 0.5rem;
-}
-
-/* Text that comes after icon pictures */
-.whatsapp-banner > div:last-child > p:has(picture)::after {
-  content: attr(data-text);
-  font-size: var(--body-font-size-s);
-  font-weight: 600;
-  line-height: 1.3;
-  display: block;
-}
-
-/* Alternative approach if the above doesn't work */
-.whatsapp-banner-icons-container {
+/* HORIZONTAL ICONS CONTAINER - All icons aligned at same level */
+.whatsapp-banner-icons-row {
   display: flex;
   justify-content: center;
+  align-items: flex-start; /* Align all items at the top */
   gap: 3rem;
   margin: 2rem 0;
   flex-wrap: wrap;
 }
 
+/* Each icon with text */
 .whatsapp-banner-icon-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   min-width: 100px;
+  flex: 0 1 auto;
 }
 
+/* Icon styling - all same size */
 .whatsapp-banner-icon-item picture,
 .whatsapp-banner-icon-item img {
   width: 72px;
   height: 72px;
   margin-bottom: 0.5rem;
+  flex-shrink: 0; /* Prevent icons from shrinking */
 }
 
+/* Text styling - all same */
 .whatsapp-banner-icon-item p {
   margin: 0;
   font-size: var(--body-font-size-s);
   font-weight: 600;
   line-height: 1.3;
+  min-height: 2.5em; /* Ensure text area is same height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Contact info */
@@ -185,23 +158,12 @@
     font-size: var(--heading-font-size-m);
   }
   
-  .whatsapp-banner > div:last-child > p:has(picture) {
-    margin: 0 0.5rem;
-    min-width: 80px;
-  }
-  
-  .whatsapp-banner > div:last-child > p:has(picture) picture,
-  .whatsapp-banner > div:last-child > p:has(picture) img {
-    width: 56px;
-    height: 56px;
-  }
-  
-  .whatsapp-banner > div:last-child > p:has(picture)::after {
-    font-size: var(--body-font-size-xs);
-  }
-  
-  .whatsapp-banner-icons-container {
+  .whatsapp-banner-icons-row {
     gap: 1.5rem;
+  }
+  
+  .whatsapp-banner-icon-item {
+    min-width: 80px;
   }
   
   .whatsapp-banner-icon-item picture,
@@ -212,5 +174,6 @@
   
   .whatsapp-banner-icon-item p {
     font-size: var(--body-font-size-xs);
+    min-height: 2em;
   }
 }
