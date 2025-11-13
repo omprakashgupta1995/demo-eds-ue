@@ -778,42 +778,42 @@
         "component": "reference",
         "valueType": "string",
         "name": "col1_image",
-        "label": "Image",
+        "label": "col1 Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "col1_imageAlt",
-        "label": "Alt",
+        "label": "col1 imageAlt",
         "value": ""
       },
       {
         "component": "richtext",
         "name": "col1_text",
         "value": "",
-        "label": "Text",
+        "label": "col1 Text",
         "valueType": "string"
       },
        {
         "component": "reference",
         "valueType": "string",
         "name": "col2_image",
-        "label": "Image",
+        "label": "col2 Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "col2_imageAlt",
-        "label": "Alt",
+        "label": "col2 imageAlt",
         "value": ""
       },
       {
         "component": "richtext",
         "name": "col2_text",
         "value": "",
-        "label": "Text",
+        "label": "col2 Text",
         "valueType": "string"
       }
     ]
