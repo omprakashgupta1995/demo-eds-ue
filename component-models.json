@@ -314,16 +314,28 @@
     "id": "whatsapp-banner",
     "fields": [
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bannercol1_bgimage",
+        "label": "Background Image"
+      },
+      {
         "component": "text",
         "valueType": "string",
-        "name": "whatsappBanner_title",
+        "name": "bannercol1_bgimageAlt",
+        "label": "Background Image Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol2_title",
         "label": "Whatsapp Banner Title",
         "multi": false
       },
       {
         "component": "select",
         "label": "Whatsapp Banner Title Type",
-        "name": "whatsappBanner_titleType",
+        "name": "bannercol2_titleType",
         "valueType": "string",
         "options": [
           {
@@ -345,7 +357,8 @@
           {
             "name": "H5",
             "value": "h5"
-          },{
+          },
+          {
             "name": "H6",
             "value": "h6"
           }
