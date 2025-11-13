@@ -269,14 +269,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "bannerheading",
+        "name": "col2_bannerheading",
         "label": "Banner Heading",
         "value": ""
       },
       {
         "component": "select",
         "valueType": "string",
-        "name": "bannerheadingType",
+        "name": "col2_bannerheadingType",
         "label": "Link Text",
         "options": [
           {
@@ -306,7 +306,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "icon1text",
+        "name": "col2_icon1text",
         "label": "Icon 1 Text",
         "value": ""
       },
@@ -327,7 +327,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "icon2text",
+        "name": "col2_icon2text",
         "label": "Icon 2 Text",
         "value": ""
       },
@@ -348,7 +348,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "icon3text",
+        "name": "col2_icon3text",
         "label": "Icon 2 Text",
         "value": ""
       }
