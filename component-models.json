@@ -633,7 +633,62 @@
         "valueType": "string",
         "name": "bannercol2_linkText",
         "label": "Link Text"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon1",
+        "label": "Icon Image 1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon1Alt",
+        "label": "Icon 1 Image Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon1desc",
+        "label": "Icon1 description"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon2",
+        "label": "Icon Image 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon2Alt",
+        "label": "Icon 2 Image Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon2desc",
+        "label": "Icon 2 description"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon3",
+        "label": "Icon Image 3"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon3Alt",
+        "label": "Icon 3 Image Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon3desc",
+        "label": "Icon3 description"
       }
+
     ]
   }
 ]
