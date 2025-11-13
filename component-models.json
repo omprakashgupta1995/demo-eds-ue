@@ -727,7 +727,7 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
+      },
       {
         "component": "reference",
         "valueType": "string",
