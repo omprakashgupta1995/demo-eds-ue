@@ -205,38 +205,55 @@
     ]
   },
   {
-    "id": "hero-1",
+    "id": "hero-1-item",
     "fields": [
       {
-        "component": "container",
-        "label": "Container",
-        "name": "container",
+        "component": "reference",
         "valueType": "string",
-        "collapsible": true,
-        "fields": [
-          {
-            "component": "reference",
-            "valueType": "string",
-            "name": "image1",
-            "label": "Image",
-            "multi": false
-          },
-          {
-            "component": "reference",
-            "valueType": "string",
-            "name": "image2",
-            "label": "Image",
-            "multi": false
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "imageAlt",
-            "label": "Alt",
-            "value": ""
-          }
-        ]
+        "name": "col1_image",
+        "label": "col-1 Image",
+        "multi": false
       },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "col-1 imageAlt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "col-1 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": "col-2 Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_imageAlt",
+        "label": "col-2 imageAlt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "col-2 Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "hero",
+    "fields": [
       {
         "component": "reference",
         "valueType": "string",

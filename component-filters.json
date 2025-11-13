@@ -49,6 +49,12 @@
     ]
   },
   {
+    "id": "hero-1",
+    "components": [
+      "hero-1-item"
+    ]
+  },
+  {
     "id": "swiper",
     "components": [
       "swiper-item"
