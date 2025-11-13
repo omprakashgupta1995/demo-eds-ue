@@ -40,6 +40,10 @@
     "components": ["card"]
   },
   {
+    "id": "byline",
+    "components": ["byline-1"]
+  },
+  {
     "id": "swiper",
     "components": ["swiper-item"]
   },

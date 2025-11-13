@@ -300,6 +300,51 @@
     ]
   },
   {
+    "id": "byline-1",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Col1 Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Col1 Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Col1 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": "Col2 Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_imageAlt",
+        "label": "Col2 Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Col2 Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "product",
     "fields": [
       {
