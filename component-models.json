@@ -811,7 +811,7 @@
       },
       {
         "component": "richtext",
-        "name": "col-2_text",
+        "name": "col2_text",
         "value": "",
         "label": "col-2 Text",
         "valueType": "string"
