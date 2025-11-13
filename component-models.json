@@ -287,20 +287,20 @@
         "component": "reference",
         "valueType": "string",
         "name": "col1_image",
-        "label": "Image"
+        "label": "Background Image"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "col1_imageAlt",
-        "label": "Alt",
+        "label": "image Alt",
         "value": ""
       },
       {
         "component": "text",
         "name": "col2_title",
         "value": "",
-        "label": "Text",
+        "label": "Heading text",
         "valueType": "string"
       },
       {
@@ -391,7 +391,7 @@
         "valueType": "string"
       },
       {
-        "component": "richtext",
+        "component": "text",
         "name": "ctaText",
         "value": "",
         "label": "CTA Text",
