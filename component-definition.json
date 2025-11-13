@@ -214,7 +214,7 @@
                 "template": {
                   "name": "Byline 1",
                   "model": "byline-1",
-                  "filter": "byline-item"
+                  "filter": "byline-1"
                 }
               }
             }
