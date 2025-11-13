@@ -287,7 +287,7 @@
       },
       {
         "component": "text",
-        "name": "col2_icon1Text",
+        "name": "col2_text1",
         "value": "",
         "label": "icon 1 Text",
         "valueType": "string"
@@ -308,7 +308,7 @@
       },
       {
         "component": "text",
-        "name": "col2_icon2Text",
+        "name": "col2_text2",
         "value": "",
         "label": "icon 2 Text",
         "valueType": "string"
@@ -329,7 +329,7 @@
       },
       {
         "component": "text",
-        "name": "col2_icon3Text",
+        "name": "col2_text3",
         "value": "",
         "label": "icon 3 Text",
         "valueType": "string"
@@ -342,7 +342,7 @@
         "valueType": "string"
       },
       {
-        "component": "aem-content",
+        "component": "text",
         "name": "col2_linkText",
         "value": "",
         "label": "CTA Text",
