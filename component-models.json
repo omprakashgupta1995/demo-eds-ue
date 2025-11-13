@@ -275,7 +275,7 @@
         "component": "text",
         "valueType": "string",
         "name": "left_icon1Desc",
-        "label": "Icon One Alt",
+        "label": "Icon One Text",
         "value": ""
       },
       {
@@ -295,7 +295,7 @@
         "component": "text",
         "valueType": "string",
         "name": "left_icon2Desc",
-        "label": "Icon Two Alt",
+        "label": "Icon Two Text",
         "value": ""
       },
       {
@@ -315,7 +315,7 @@
         "component": "text",
         "valueType": "string",
         "name": "left_icon3Desc",
-        "label": "Icon Three Alt",
+        "label": "Icon ThreTextlt",
         "value": ""
       },
       {
