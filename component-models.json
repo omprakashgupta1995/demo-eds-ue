@@ -250,6 +250,37 @@
     ]
   },
   {
+    "id": "byline-1",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "byline-1-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "test",
+        "label": "Test Label",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "product",
     "fields": [
       {

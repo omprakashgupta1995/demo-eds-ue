@@ -17,6 +17,7 @@
       "columns",
       "quote",
       "byline",
+      "byline-1",
       "product",
       "swiper",
       "tab",
@@ -32,6 +33,12 @@
     "id": "teaser-cards",
     "components": [
       "teaser-card"
+    ]
+  },
+  {
+    "id": "byline-1",
+    "components": [
+      "byline-1-item"
     ]
   },
   {
