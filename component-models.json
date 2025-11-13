@@ -287,7 +287,7 @@
       },
       {
         "component": "text",
-        "name": "col2_text1",
+        "name": "col2_desc1",
         "value": "",
         "label": "icon 1 Text",
         "valueType": "string"
@@ -308,7 +308,7 @@
       },
       {
         "component": "text",
-        "name": "col2_text2",
+        "name": "col2_desc2",
         "value": "",
         "label": "icon 2 Text",
         "valueType": "string"
@@ -329,7 +329,7 @@
       },
       {
         "component": "text",
-        "name": "col2_text3",
+        "name": "col2_desc3",
         "value": "",
         "label": "icon 3 Text",
         "valueType": "string"
