@@ -288,6 +288,20 @@
             "value": "h2"
           }
         ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_icon1",
+        "label": "Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon1text",
+        "label": "Icon alt",
+        "value": ""
       }
 
     ]
