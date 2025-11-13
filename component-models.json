@@ -274,7 +274,7 @@
         ]
       },
       {
-        "component": "aem-content",
+        "component": "reference",
         "valueType": "string",
         "name": "icon1",
         "label": "Icon 1",
@@ -295,7 +295,7 @@
         "value": ""
       },
       {
-        "component": "aem-content",
+        "component": "reference",
         "valueType": "string",
         "name": "icon2",
         "label": "Icon 2",
@@ -316,7 +316,7 @@
         "value": ""
       },
       {
-        "component": "aem-content",
+        "component": "reference",
         "valueType": "string",
         "name": "icon3",
         "label": "Icon 3",
