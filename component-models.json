@@ -299,7 +299,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2_icon1text",
+        "name": "col2_icon1Alt",
         "label": "Icon alt",
         "value": ""
       }
