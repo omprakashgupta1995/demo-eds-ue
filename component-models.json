@@ -265,7 +265,31 @@
         "name": "imageAlt",
         "label": "Alt",
         "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannerheading",
+        "label": "Banner Heading",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "bannerheadingType",
+        "label": "Link Text",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          }
+        ]
       }
+
     ]
   },
   {
