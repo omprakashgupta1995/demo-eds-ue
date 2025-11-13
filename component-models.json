@@ -385,14 +385,14 @@
       },
       {
         "component": "aem-content",
-        "name": "cta",
+        "name": "col2_cta",
         "value": "",
         "label": "CTA",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "ctaText",
+        "name": "col2_ctaText",
         "value": "",
         "label": "CTA Text",
         "valueType": "string"
