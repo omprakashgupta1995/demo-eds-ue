@@ -31,12 +31,6 @@
     ]
   },
   {
-    "id": "whatsapp-banner",
-    "components": [
-      "icon-with-text"
-    ]
-  },
-  {
     "id": "teaser-cards",
     "components": [
       "teaser-card"

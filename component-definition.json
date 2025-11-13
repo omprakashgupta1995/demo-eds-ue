@@ -129,21 +129,6 @@
           }
         },
         {
-          "title": "Icon with Text",
-          "id": "icon-with-text",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Icon with Text",
-                  "model": "icon-with-text"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Columns",
           "id": "columns",
           "plugins": {

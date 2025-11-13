@@ -348,31 +348,6 @@
     ]
   },
   {
-    "id": "icon-with-text",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "icon",
-        "label": "Icon"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "iconAlt",
-        "label": "Icon Alt",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "iconText",
-        "label": "Icon Text",
-        "value": ""
-      }
-    ]
-  },
-  {
     "id": "byline",
     "fields": [
       {
