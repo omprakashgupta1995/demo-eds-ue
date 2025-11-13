@@ -37,6 +37,12 @@
     ]
   },
   {
+    "id": "whatsapp-banner",
+    "components": [
+      "whatsapp-banner-item"
+    ]
+  },
+  {
     "id": "banner-container",
     "components": [
       "banner"
