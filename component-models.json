@@ -323,15 +323,49 @@
     "id": "byline-item-1",
     "fields": [
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_title",
+        "label": "Title",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "col1_titleType",
+        "label": "Title",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
         "label": "Image",
         "multi": false
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "col2_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
