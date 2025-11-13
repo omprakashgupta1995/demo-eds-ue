@@ -33,7 +33,8 @@
       "moti-swiper",
       "calculator-ret",
       "calculator-ret-graf",
-      "idfc-bank"
+      "idfc-bank",
+      "idfc-banner"
     ]
   },
   {
@@ -102,5 +103,9 @@
   {
     "id": "idfc-bank",
     "components": ["idfc-bank-item"]
+  },
+   {
+    "id": "idfc-banner",
+    "components": ["idfc-banner-item"]
   }
 ]
