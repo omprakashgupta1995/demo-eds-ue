@@ -277,7 +277,8 @@
         "component": "reference",
         "valueType": "string",
         "name": "icon1",
-        "label": "Icon 1"
+        "label": "Icon 1",
+        "multi": false
       },
       {
         "component": "text",
@@ -297,7 +298,8 @@
         "component": "reference",
         "valueType": "string",
         "name": "icon2",
-        "label": "Icon 2"
+        "label": "Icon 2",
+        "multi": false
       },
       {
         "component": "text",
@@ -317,7 +319,8 @@
         "component": "reference",
         "valueType": "string",
         "name": "icon3",
-        "label": "Icon 3"
+        "label": "Icon 3",
+        "multi": false
       },
       {
         "component": "text",
