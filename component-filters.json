@@ -73,5 +73,11 @@
       "button",
       "title"
     ]
+  },
+   {
+    "id": "demo1",
+    "components": [
+      "demo1-item"
+    ]
   }
 ]

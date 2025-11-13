@@ -385,6 +385,21 @@
               }
             }
           }
+        },
+         {
+          "title": "demo1-item",
+          "id": "demo1-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "demo1-item",
+                  "model": "demo1-item"
+                }
+              }
+            }
+          }
         }
       ]
     }

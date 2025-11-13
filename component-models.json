@@ -587,7 +587,7 @@
     ]
   },
    {
-    "id": "demo1",
+    "id": "demo1-item",
     "fields": [
       {
         "component": "reference",
