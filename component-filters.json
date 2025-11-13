@@ -18,6 +18,7 @@
       "columns",
       "quote",
       "byline",
+      "byline-1",
       "product",
       "swiper",
       "tab",
@@ -57,6 +58,12 @@
     "id": "tab",
     "components": [
       "tab-item"
+    ]
+  },
+  {
+    "id": "byline-1",
+    "components": [
+      "byline-item"
     ]
   },
   {
