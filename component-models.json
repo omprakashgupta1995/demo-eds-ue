@@ -1,453 +1,860 @@
-{
-  "groups": [
-    {
-      "title": "Default Content",
-      "id": "default",
-      "components": [
-        {
-          "title": "Text",
-          "id": "text",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/text/v1/text",
-                "template": {}
-              }
-            }
+[
+  {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "theme",
+        "label": "Theme"
+      }
+    ]
+  },
+  {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "title",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
           }
-        },
-        {
-          "title": "Title",
-          "id": "title",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/title/v1/title",
-                "template": {
-                  "model": "title"
-                }
-              }
-            }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "button",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
           }
-        },
-        {
-          "title": "Image",
-          "id": "image",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/image/v1/image",
-                "template": {}
-              }
-            }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Section Name",
+        "description": "The label shown for this section in the Content Tree"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Highlight",
+            "value": "highlight"
           }
-        },
-        {
-          "title": "Button",
-          "id": "button",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/button/v1/button",
-                "template": {
-                  "model": "button"
-                }
-              }
-            }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "id",
+        "label": "Section Data Id"
+      },
+      {
+        "component": "text",
+        "name": "background-color",
+        "label": "Background Color"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "fragment",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "quote",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "quote",
+        "value": "",
+        "label": "Quote",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "author",
+        "label": "Author",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "whatsapp-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_bgimage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_bgimageAlt",
+        "label": "Background Image Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "col2_titleType",
+        "value": "",
+        "label": "Title Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
           }
-        }
-      ]
-    },
-    {
-      "title": "Sections",
-      "id": "sections",
-      "components": [
-        {
-          "title": "Section",
-          "id": "section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "model": "section"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Blocks",
-      "id": "blocks",
-      "components": [
-        {
-          "title": "Cards",
-          "id": "cards",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Cards",
-                  "filter": "cards"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Card",
-          "id": "card",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Card",
-                  "model": "card"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Columns",
-          "id": "columns",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/columns/v1/columns",
-                "template": {
-                  "columns": "2",
-                  "rows": "1"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Fragment",
-          "id": "fragment",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Fragment",
-                  "model": "fragment"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Quote",
-          "id": "quote",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Quote",
-                  "model": "quote",
-                  "quote": "<p>Think, McFly! Think!</p>",
-                  "author": "Biff Tannen"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Hero",
-          "id": "hero",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Hero",
-                  "model": "hero"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "WhatsApp Banner",
-          "id": "whatsapp-banner",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "WhatsApp Banner",
-                  "model": "whatsapp-banner"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Hero 1",
-          "id": "hero-1",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Hero 1",
-                  "model": "hero-2"
-                }
-              }
-            }
-          }
-        },
-         {
-          "title": "Byline 1",
-          "id": "byline-1",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Byline 1",
-                  "model": "byline-1",
-                  "filter": "byline-1"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Byline Item 1",
-          "id": "byline-item-1",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Byline Item 1",
-                  "model": "byline-item-1"
-                }
-              }
-            }
-          }
-        },
-         {
-          "title": "Loan Product",
-          "id": "loan-product",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Loan Product",
-                  "model": "loan-product"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Byline",
-          "id": "byline",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Byline",
-                  "model": "byline"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Product",
-          "id": "product",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Product",
-                  "model": "product"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Swiper",
-          "id": "swiper",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Swiper",
-                  "filter": "swiper"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Swiper Item",
-          "id": "swiper-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Swiper Item",
-                  "model": "swiper-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Tab",
-          "id": "tab",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Tab",
-                  "filter": "tab",
-                  "model": "tab"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Tab Item",
-          "id": "tab-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Tab Item",
-                  "model": "tab-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Form",
-          "id": "form",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Form",
-                  "model": "form"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Banner Container",
-          "id": "banner-container",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Banner Container",
-                  "filter": "banner-container"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Banner",
-          "id": "banner",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Banner",
-                  "model": "banner"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Product 1",
-          "id": "product-1",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Product 1",
-                  "model": "product-1"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Teaser Cards",
-          "id": "teaser-cards",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Teaser Cards",
-                  "model": "teaser-cards",
-                  "filter": "teaser-cards"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Teaser Card",
-          "id": "teaser-card",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Teaser Card",
-                  "model": "teaser-card"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "FAQ",
-          "id": "faq",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "FAQ",
-                  "model": "faq"
-                }
-              }
-            }
-          }
-        }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon1",
+        "value": "",
+        "label": "icon 1",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon1Alt",
+        "value": "",
+        "label": "icon 1 Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_desc1",
+        "value": "",
+        "label": "icon 1 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon2",
+        "value": "",
+        "label": "icon 2",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon2Alt",
+        "value": "",
+        "label": "icon 2 Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_desc2",
+        "value": "",
+        "label": "icon 2 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon3",
+        "value": "",
+        "label": "icon 3",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon3Alt",
+        "value": "",
+        "label": "icon 3 Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_desc3",
+        "value": "",
+        "label": "icon 3 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_link",
+        "value": "",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_linkText",
+        "value": "",
+        "label": "CTA Text",
+        "valueType": "string"
+      }
+
+    ]
+  },
+  {
+    "id": "hero-2",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageTitle",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image2",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "image2Alt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "value": "",
+        "label": "Select CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "value": "",
+        "label": "CAT Text",
+        "valueType": "string"
+      },
+      {
+      "component": "checkbox-group",
+      "label": "Checkbox Group",
+      "name": "checkbox",
+      "valueType": "string[]",
+      "options": [
+        { "name": "Option 1", "value": "option1" },
+        { "name": "Option 2", "value": "option2" }
       ]
     }
-  ]
-}
+    ]
+  },
+  {
+    "id": "byline-1",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "byline-item-1",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_title",
+        "label": "Title",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "col1_titleType",
+        "label": "Title",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text 1",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_des",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "byline",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "product",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "swiper-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Theme",
+            "children": [
+              { "name": "Light", "value": "light" },
+              { "name": "Dark", "value": "dark" }
+            ]
+          },
+          {
+            "name": "Type",
+            "children": [
+              { "name": "Alpha", "value": "alpha" },
+              { "name": "Beta", "value": "beta" },
+              { "name": "Gamma", "value": "gamma" }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "config",
+        "label": "Config"
+      }
+    ]
+  },
+  {
+    "id": "tab-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "titleType",
+        "label": "Title Type",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "form-url",
+        "label": "Form URL",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "api-url",
+        "label": "API URL",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bannercol1_bgimage",
+        "label": "Background Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol1_bgimageAlt",
+        "label": "Background Image Alt"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bannercol1_frontimage",
+        "label": "Front Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol1_frontimageAlt",
+        "label": "Front Image Alt"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "bannercol2_description",
+        "label": "Content"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "bannercol2_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol2_linkText",
+        "label": "Link Text"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "bannercol2_linkType",
+        "label": "Link Text",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "product-1",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "product-1",
+        "label": "Product Name",
+        "multi": true
+      }
+    ]
+  },
+  {
+    "id": "teaser-cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Content Type",
+            "children": [
+              {
+                "name": "Primary",
+                "value": "primary"
+              },
+              {
+                "name": "Secondary",
+                "value": "secondary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component" : "reference" ,
+        "label" : "Select Image",
+        "name" : "image",
+        "valueType" : "string"
+      },
+      {
+        "component" : "text" ,
+        "label" : "Image Alt",
+        "name" : "imageAlt",
+        "valueType" : "string"
+      }
+    ]
+  },
+  {
+    "id": "teaser-card",
+    "fields": [
+      {
+        "component" : "reference" ,
+        "label" : "Select Image",
+        "name" : "image",
+        "valueType" : "string"
+      },
+      {
+        "component" : "text" ,
+        "label" : "Image Alt",
+        "name" : "imageAlt",
+        "valueType" : "string"
+      },
+      {
+        "component" : "text" ,
+        "label" : "Sub Title",
+        "name" : "teaserText_subtitle",
+        "valueType" : "string"
+      },
+      {
+        "component" : "text" ,
+        "label" : "Title",
+        "name" : "teaserText_title",
+        "valueType" : "string"
+      },
+      {
+        "component" : "select" ,
+        "label" : "Title Type",
+        "name" : "teaserText_titleType",
+        "valueType" : "string",
+        "options" : [
+          {
+            "name" : "H1",
+            "value" : "h1"
+          },
+          {
+            "name" : "H2",
+            "value" : "h2"
+          },
+          {
+            "name" : "H3",
+            "value" : "h3"
+          }
+        ]
+      },
+      {
+        "component" : "richtext" ,
+        "label" : "Description",
+        "name" : "teaserText_description",
+        "valueType" : "string"
+      },
+      {
+        "component" : "aem-content" ,
+        "label" : "Cta 1",
+        "name" : "teaserText_cta1",
+        "valueType" : "string"
+      },
+      {
+        "component" : "text" ,
+        "label" : "Cta 1 Text",
+        "name" : "teaserText_cta1Text",
+        "valueType" : "string"
+      },
+      {
+        "component" : "aem-content" ,
+        "label" : "Cta 2",
+        "name" : "teaserText_cta2",
+        "valueType" : "string"
+      },
+      {
+        "component" : "text" ,
+        "label" : "Cta 2 Text",
+        "name" : "teaserText_cta2Text",
+        "valueType" : "string"
+      },
+      {
+        "component" : "select" ,
+        "label" : "Cta 2 Type",
+        "name" : "teaserText_cta2Type",
+        "valueType" : "string",
+        "options" : [
+          {
+            "name" : "Primary",
+            "value" : "primary"
+          },
+          {
+            "name" : "Secondary",
+            "value" : "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "faq",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "faq-url",
+        "value": "",
+        "label": "FAQ API PATH",
+        "valueType": "string"
+      }
+    ]
+  }
+]
+   
