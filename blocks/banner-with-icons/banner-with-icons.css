@@ -1,0 +1,25 @@
+.banner-with-icons.block {
+    position: relative;
+}
+
+.banner-with-icons .content_wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-with-icons .content_wrapper .right_image {
+    width: 500px;
+}
+
+.banner-with-icons .content_wrapper .right_image img {
+    width: 100%;
+}
+
+.banner-with-icons .content_wrapper .left_content {
+    
+}
