@@ -363,6 +363,54 @@
             "value": "h6"
           }
         ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bannercol2_listImage1",
+        "label": "List Image 1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol2_listImage1Alt",
+        "label": "List Image 1 Alt"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bannercol2_listImage2",
+        "label": "List Image 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol2_listImage2Alt",
+        "label": "List Image 2 Alt"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bannercol2_listImage3",
+        "label": "List Image 3"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol2_listImage3Alt",
+        "label": "List Image 3 Alt"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "bannercol2_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannercol2_linkText",
+        "label": "Link Text"
       }
     ]
   },
