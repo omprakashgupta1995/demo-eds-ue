@@ -280,12 +280,12 @@
         "label": "Link Text",
         "options": [
           {
-            "name": "Primary",
-            "value": "primary"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "name": "Secondary",
-            "value": "secondary"
+            "name": "H2",
+            "value": "h2"
           }
         ]
       }
