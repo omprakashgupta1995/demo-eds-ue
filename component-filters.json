@@ -23,6 +23,7 @@
       "product-1",
       "teaser-cards",
       "pranav-demo",
+      "pranav-demo-column",
       "faq",
       "fragment"
     ]
@@ -30,6 +31,10 @@
   {
     "id": "teaser-cards",
     "components": ["teaser-card"]
+  },
+  {
+    "id": "pranav-demo",
+    "components": ["pranav-demo-column"]
   },
   {
     "id": "banner-container",

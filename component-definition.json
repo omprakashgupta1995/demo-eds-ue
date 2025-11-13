@@ -190,6 +190,21 @@
           }
         },
         {
+          "title": "Pranav Demo Column",
+          "id": "pranav-demo-column",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Pranav Demo Column",
+                  "model": "pranav-demo-column"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Byline",
           "id": "byline",
           "plugins": {
