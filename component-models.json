@@ -311,6 +311,18 @@
     ]
   },
   {
+    "id": "whatsapp-banner",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Whatsapp Banner Title",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "byline",
     "fields": [
       {
