@@ -24,6 +24,7 @@
       "teaser-cards",
       "pranav-demo",
       "pranav-demo-column",
+      "banner-with-icons",
       "faq",
       "fragment"
     ]
@@ -33,8 +34,8 @@
     "components": ["teaser-card"]
   },
   {
-    "id": "pranav-demo",
-    "components": ["pranav-demo-column"]
+    "id": "banner-with-icons",
+    "components": ["banner-icons"]
   },
   {
     "id": "banner-container",
