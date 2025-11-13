@@ -249,6 +249,49 @@
     ]
   },
   {
+    "id": "whatsapp-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bgimage",
+        "label": "Background Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bgimageAlt",
+        "label": "Background Image Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "icon-with-text",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "iconAlt",
+        "label": "Icon Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "iconText",
+        "label": "Icon Text",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "byline",
     "fields": [
       {
