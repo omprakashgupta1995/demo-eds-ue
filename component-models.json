@@ -325,16 +325,31 @@
           {
             "name": "Theme",
             "children": [
-              { "name": "Light", "value": "light" },
-              { "name": "Dark", "value": "dark" }
+              {
+                "name": "Light",
+                "value": "light"
+              },
+              {
+                "name": "Dark",
+                "value": "dark"
+              }
             ]
           },
           {
             "name": "Type",
             "children": [
-              { "name": "Alpha", "value": "alpha" },
-              { "name": "Beta", "value": "beta" },
-              { "name": "Gamma", "value": "gamma" }
+              {
+                "name": "Alpha",
+                "value": "alpha"
+              },
+              {
+                "name": "Beta",
+                "value": "beta"
+              },
+              {
+                "name": "Gamma",
+                "value": "gamma"
+              }
             ]
           }
         ]
@@ -492,16 +507,16 @@
         ]
       },
       {
-        "component" : "reference" ,
-        "label" : "Select Image",
-        "name" : "image",
-        "valueType" : "string"
+        "component": "reference",
+        "label": "Select Image",
+        "name": "image",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Image Alt",
-        "name" : "imageAlt",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Image Alt",
+        "name": "imageAlt",
+        "valueType": "string"
       }
     ]
   },
@@ -509,92 +524,92 @@
     "id": "teaser-card",
     "fields": [
       {
-        "component" : "reference" ,
-        "label" : "Select Image",
-        "name" : "image",
-        "valueType" : "string"
+        "component": "reference",
+        "label": "Select Image",
+        "name": "image",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Image Alt",
-        "name" : "imageAlt",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Image Alt",
+        "name": "imageAlt",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Sub Title",
-        "name" : "teaserText_subtitle",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Sub Title",
+        "name": "teaserText_subtitle",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Title",
-        "name" : "teaserText_title",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Title",
+        "name": "teaserText_title",
+        "valueType": "string"
       },
       {
-        "component" : "select" ,
-        "label" : "Title Type",
-        "name" : "teaserText_titleType",
-        "valueType" : "string",
-        "options" : [
+        "component": "select",
+        "label": "Title Type",
+        "name": "teaserText_titleType",
+        "valueType": "string",
+        "options": [
           {
-            "name" : "H1",
-            "value" : "h1"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "name" : "H2",
-            "value" : "h2"
+            "name": "H2",
+            "value": "h2"
           },
           {
-            "name" : "H3",
-            "value" : "h3"
+            "name": "H3",
+            "value": "h3"
           }
         ]
       },
       {
-        "component" : "richtext" ,
-        "label" : "Description",
-        "name" : "teaserText_description",
-        "valueType" : "string"
+        "component": "richtext",
+        "label": "Description",
+        "name": "teaserText_description",
+        "valueType": "string"
       },
       {
-        "component" : "aem-content" ,
-        "label" : "Cta 1",
-        "name" : "teaserText_cta1",
-        "valueType" : "string"
+        "component": "aem-content",
+        "label": "Cta 1",
+        "name": "teaserText_cta1",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Cta 1 Text",
-        "name" : "teaserText_cta1Text",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Cta 1 Text",
+        "name": "teaserText_cta1Text",
+        "valueType": "string"
       },
       {
-        "component" : "aem-content" ,
-        "label" : "Cta 2",
-        "name" : "teaserText_cta2",
-        "valueType" : "string"
+        "component": "aem-content",
+        "label": "Cta 2",
+        "name": "teaserText_cta2",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Cta 2 Text",
-        "name" : "teaserText_cta2Text",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Cta 2 Text",
+        "name": "teaserText_cta2Text",
+        "valueType": "string"
       },
       {
-        "component" : "select" ,
-        "label" : "Cta 2 Type",
-        "name" : "teaserText_cta2Type",
-        "valueType" : "string",
-        "options" : [
+        "component": "select",
+        "label": "Cta 2 Type",
+        "name": "teaserText_cta2Type",
+        "valueType": "string",
+        "options": [
           {
-            "name" : "Primary",
-            "value" : "primary"
+            "name": "Primary",
+            "value": "primary"
           },
           {
-            "name" : "Secondary",
-            "value" : "secondary"
+            "name": "Secondary",
+            "value": "secondary"
           }
         ]
       }
@@ -608,6 +623,109 @@
         "name": "faq-url",
         "value": "",
         "label": "FAQ API PATH",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "whatsapp-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_bgimage",
+        "value": "",
+        "label": "Background Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_bgimageAlt",
+        "value": "",
+        "label": "Background Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_title",
+        "value": "",
+        "label": "Banner Title",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon1",
+        "value": "",
+        "label": "Icon 1",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_iconAlt1",
+        "value": "",
+        "label": "Icon 1 Image Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_text1",
+        "value": "",
+        "label": "Text 1",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon2",
+        "value": "",
+        "label": "Icon 2",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_iconAlt2",
+        "value": "",
+        "label": "Icon 2 Image Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_text2",
+        "value": "",
+        "label": "Text 2",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon3",
+        "value": "",
+        "label": "Icon 3",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_iconAlt3",
+        "value": "",
+        "label": "Icon 3 Image Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_text3",
+        "value": "",
+        "label": "Text 3",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_wpImage",
+        "value": "",
+        "label": "WhatsApp Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_wpImageAlt",
+        "value": "",
+        "label": "WhatsApp Image Alt",
         "valueType": "string"
       }
     ]
