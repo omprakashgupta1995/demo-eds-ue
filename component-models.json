@@ -322,7 +322,7 @@
       },
       {
         "component": "select",
-        "label": "Title Type",
+        "label": "Whatsapp Banner Title Type",
         "name": "whatsappBanner_titleType",
         "valueType": "string",
         "options": [
