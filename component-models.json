@@ -369,6 +369,13 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_des",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
