@@ -14,6 +14,7 @@
       "title",
       "hero",
       "whatsapp-banner",
+      "icons-with-text",
       "cards",
       "columns",
       "quote",
@@ -31,7 +32,7 @@
     ]
   },
   {
-    "id": "whatsapp-banner",
+    "id": "icons-with-text",
     "components": [
       "icon-with-text"
     ]

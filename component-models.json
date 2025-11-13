@@ -249,24 +249,6 @@
     ]
   },
   {
-    "id": "whatsapp-banner",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "bgimage",
-        "label": "Background Image"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bgimageAlt",
-        "label": "Background Image Alt",
-        "value": ""
-      }
-    ]
-  },
-  {
     "id": "icon-with-text",
     "fields": [
       {
