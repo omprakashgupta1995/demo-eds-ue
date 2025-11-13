@@ -26,7 +26,9 @@
       "product-1",
       "teaser-cards",
       "faq",
-      "fragment"
+      "fragment",
+      "block-1",
+      "web-banner"
     ]
   },
   {
@@ -51,6 +53,12 @@
     "id": "swiper",
     "components": [
       "swiper-item"
+    ]
+  },
+   {
+    "id": "block-1",
+    "components": [
+      "block-item"
     ]
   },
   {

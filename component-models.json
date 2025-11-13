@@ -313,6 +313,25 @@
       }
     ]
   },
+   {
+    "id": "block-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
   {
     "id": "tab",
     "fields": [
@@ -609,6 +628,136 @@
         "value": "",
         "label": "FAQ API PATH",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "web-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "Col1_bgimage",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_bgimageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "text banner",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+       {
+        "component": "select",
+        "name": "titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      },  
+       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon1_bgimage",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon1_bgimageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "icon1_bgimagetext",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon2_bgimage",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon2_bgimageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "icon2_bgimagetext",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon3_bgimage",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon3_bgimageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "icon3_bgimagetext",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+       {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
       }
     ]
   }
