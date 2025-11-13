@@ -367,7 +367,7 @@
         "component": "richtext",
         "name": "col2_text",
         "value": "",
-        "label": "Text",
+        "label": "Text 1",
         "valueType": "string"
       },
       {
