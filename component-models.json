@@ -348,7 +348,151 @@
         "label": "CTA Text",
         "valueType": "string"
       }
+    ]
+  },
+  {
+    "id": "loan-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "backgroundImageAlt",
+        "label": "Background Image Alt Text"
+      },
 
+      {
+        "component": "text",
+        "name": "mainTitle",
+        "label": "Main Title",
+        "value": "Get Pre-Approved Loan Offers Instantly"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "label": "Title Type",
+        "options": [
+          { "name": "H1", "value": "h1" },
+          { "name": "H2", "value": "h2" }
+        ]
+      },
+
+      {
+        "component": "reference",
+        "name": "secureIcon",
+        "label": "Safe & Secure Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "secureIconAlt",
+        "label": "Safe & Secure Icon Alt Text"
+      },
+      {
+        "component": "text",
+        "name": "secureText",
+        "label": "Safe & Secure Text",
+        "value": "Safe & Secure"
+      },
+
+      {
+        "component": "reference",
+        "name": "availableIcon",
+        "label": "24x7 Available Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "availableIconAlt",
+        "label": "24x7 Available Icon Alt Text"
+      },
+      {
+        "component": "text",
+        "name": "availableText",
+        "label": "24x7 Available Text",
+        "value": "Available 24x7"
+      },
+
+      {
+        "component": "reference",
+        "name": "accountIcon",
+        "label": "Account Details Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "accountIconAlt",
+        "label": "Account Details Icon Alt Text"
+      },
+      {
+        "component": "text",
+        "name": "accountText",
+        "label": "Account Details Text",
+        "value": "All Account Details"
+      },
+
+      {
+        "component": "text",
+        "name": "contactNumber",
+        "label": "Contact Number",
+        "value": "7799000390"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "Call to Action Text",
+        "value": "Send us a Hi on"
+      },
+
+      {
+        "component": "aem-content",
+        "name": "viewMoreLink",
+        "label": "View More Link"
+      },
+      {
+        "component": "text",
+        "name": "viewMoreText",
+        "label": "View More Button Text",
+        "value": "View More"
+      },
+      {
+        "component": "select",
+        "name": "viewMoreType",
+        "label": "View More Button Type",
+        "options": [
+          { "name": "Primary", "value": "primary" },
+          { "name": "Secondary", "value": "secondary" }
+        ]
+      },
+
+      {
+        "component": "reference",
+        "name": "qrCodeImage",
+        "label": "QR Code Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "qrCodeAlt",
+        "label": "QR Code Alt Text"
+      },
+      {
+        "component": "text",
+        "name": "scanText",
+        "label": "Scan Text",
+        "value": "Scan this QR"
+      },
+
+      {
+        "component": "text",
+        "name": "backgroundColor",
+        "label": "Background Color (Hex)",
+        "description": "Optional: Override background color"
+      }
     ]
   },
   {
@@ -410,15 +554,15 @@
         "valueType": "string"
       },
       {
-      "component": "checkbox-group",
-      "label": "Checkbox Group",
-      "name": "checkbox",
-      "valueType": "string[]",
-      "options": [
-        { "name": "Option 1", "value": "option1" },
-        { "name": "Option 2", "value": "option2" }
-      ]
-    }
+        "component": "checkbox-group",
+        "label": "Checkbox Group",
+        "name": "checkbox",
+        "valueType": "string[]",
+        "options": [
+          { "name": "Option 1", "value": "option1" },
+          { "name": "Option 2", "value": "option2" }
+        ]
+      }
     ]
   },
   {
@@ -736,16 +880,16 @@
         ]
       },
       {
-        "component" : "reference" ,
-        "label" : "Select Image",
-        "name" : "image",
-        "valueType" : "string"
+        "component": "reference",
+        "label": "Select Image",
+        "name": "image",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Image Alt",
-        "name" : "imageAlt",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Image Alt",
+        "name": "imageAlt",
+        "valueType": "string"
       }
     ]
   },
@@ -753,92 +897,92 @@
     "id": "teaser-card",
     "fields": [
       {
-        "component" : "reference" ,
-        "label" : "Select Image",
-        "name" : "image",
-        "valueType" : "string"
+        "component": "reference",
+        "label": "Select Image",
+        "name": "image",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Image Alt",
-        "name" : "imageAlt",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Image Alt",
+        "name": "imageAlt",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Sub Title",
-        "name" : "teaserText_subtitle",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Sub Title",
+        "name": "teaserText_subtitle",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Title",
-        "name" : "teaserText_title",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Title",
+        "name": "teaserText_title",
+        "valueType": "string"
       },
       {
-        "component" : "select" ,
-        "label" : "Title Type",
-        "name" : "teaserText_titleType",
-        "valueType" : "string",
-        "options" : [
+        "component": "select",
+        "label": "Title Type",
+        "name": "teaserText_titleType",
+        "valueType": "string",
+        "options": [
           {
-            "name" : "H1",
-            "value" : "h1"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "name" : "H2",
-            "value" : "h2"
+            "name": "H2",
+            "value": "h2"
           },
           {
-            "name" : "H3",
-            "value" : "h3"
+            "name": "H3",
+            "value": "h3"
           }
         ]
       },
       {
-        "component" : "richtext" ,
-        "label" : "Description",
-        "name" : "teaserText_description",
-        "valueType" : "string"
+        "component": "richtext",
+        "label": "Description",
+        "name": "teaserText_description",
+        "valueType": "string"
       },
       {
-        "component" : "aem-content" ,
-        "label" : "Cta 1",
-        "name" : "teaserText_cta1",
-        "valueType" : "string"
+        "component": "aem-content",
+        "label": "Cta 1",
+        "name": "teaserText_cta1",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Cta 1 Text",
-        "name" : "teaserText_cta1Text",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Cta 1 Text",
+        "name": "teaserText_cta1Text",
+        "valueType": "string"
       },
       {
-        "component" : "aem-content" ,
-        "label" : "Cta 2",
-        "name" : "teaserText_cta2",
-        "valueType" : "string"
+        "component": "aem-content",
+        "label": "Cta 2",
+        "name": "teaserText_cta2",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Cta 2 Text",
-        "name" : "teaserText_cta2Text",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Cta 2 Text",
+        "name": "teaserText_cta2Text",
+        "valueType": "string"
       },
       {
-        "component" : "select" ,
-        "label" : "Cta 2 Type",
-        "name" : "teaserText_cta2Type",
-        "valueType" : "string",
-        "options" : [
+        "component": "select",
+        "label": "Cta 2 Type",
+        "name": "teaserText_cta2Type",
+        "valueType": "string",
+        "options": [
           {
-            "name" : "Primary",
-            "value" : "primary"
+            "name": "Primary",
+            "value": "primary"
           },
           {
-            "name" : "Secondary",
-            "value" : "secondary"
+            "name": "Secondary",
+            "value": "secondary"
           }
         ]
       }
@@ -857,4 +1001,3 @@
     ]
   }
 ]
-   
