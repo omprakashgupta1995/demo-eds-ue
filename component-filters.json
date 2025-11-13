@@ -15,6 +15,8 @@
       "hero",
       "cards",
       "columns",
+      "loan-product",
+      "byline-1",
       "quote",
       "byline",
       "product",
@@ -23,6 +25,8 @@
       "form",
       "banner-container",
       "product-1",
+      "hero-1",
+      "whatsapp-banner",
       "teaser-cards",
       "faq",
       "fragment"
@@ -44,6 +48,12 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+    {
+    "id": "byline-1",
+    "components": [
+      "byline-item-1"
     ]
   },
   {

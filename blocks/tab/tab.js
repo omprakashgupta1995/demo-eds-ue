@@ -45,3 +45,21 @@ export default async function decorate(block) {
 
   block.prepend(tablist);
 }
+
+
+// function myNew(constructor, ...args) {
+//   // Step 1: create an empty object
+//   const obj = {};
+
+//   // Step 2: set its prototype
+//   Object.setPrototypeOf(obj, constructor.prototype);
+
+//   // Step 3: execute the constructor
+//   const result = constructor.apply(obj, args);
+
+//   // Step 4: return the constructed object (if not returning an object)
+//   return result && typeof result === "object" ? result : obj;
+// }
+
+// const p2 = myNew(Person, "Suraj");
+
