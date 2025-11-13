@@ -302,7 +302,57 @@
         "name": "col2_icon1Alt",
         "label": "Icon alt",
         "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon1text",
+        "label": "Icon 1 Text",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_icon2",
+        "label": "Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon2Alt",
+        "label": "Icon 2 alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon2text",
+        "label": "Icon 2 Text",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_icon3",
+        "label": "Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon3Alt",
+        "label": "Icon 2 alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon3text",
+        "label": "Icon 2 Text",
+        "value": ""
       }
+      
 
     ]
   },
