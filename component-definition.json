@@ -183,7 +183,8 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Pranav Demo",
-                  "model": "pranav-demo"
+                  "model": "pranav-demo",
+                  "filter": "pranav-demo"
                 }
               }
             }
