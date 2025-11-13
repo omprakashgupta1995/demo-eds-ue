@@ -368,7 +368,10 @@
         "component": "reference",
         "valueType": "string",
         "name": "bannercol2_listImage1",
-        "label": "List Image 1"
+        "label": "List Image 1",
+        "validation": {
+          "rootPath": "/content/dam/demo-ue-022/ashish"
+        }
       },
       {
         "component": "text",
@@ -380,7 +383,10 @@
         "component": "reference",
         "valueType": "string",
         "name": "bannercol2_listImage2",
-        "label": "List Image 2"
+        "label": "List Image 2",
+        "validation": {
+          "rootPath": "/content/dam/demo-ue-022/ashish"
+        }
       },
       {
         "component": "text",
@@ -392,7 +398,10 @@
         "component": "reference",
         "valueType": "string",
         "name": "bannercol2_listImage3",
-        "label": "List Image 3"
+        "label": "List Image 3",
+        "validation": {
+          "rootPath": "/content/dam/demo-ue-022/ashish"
+        }
       },
       {
         "component": "text",
