@@ -231,6 +231,127 @@
     ]
   },
   {
+    "id": "whatsapp-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_bgimage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_bgimageAlt",
+        "label": "Background Image Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "col2_titleType",
+        "value": "",
+        "label": "Title Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon1",
+        "value": "",
+        "label": "icon 1",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon1Alt",
+        "value": "",
+        "label": "icon 1 Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon1Text",
+        "value": "",
+        "label": "icon 1 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon2",
+        "value": "",
+        "label": "icon 2",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon2Alt",
+        "value": "",
+        "label": "icon 2 Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon2Text",
+        "value": "",
+        "label": "icon 2 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_icon3",
+        "value": "",
+        "label": "icon 3",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon3Alt",
+        "value": "",
+        "label": "icon 3 Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_icon3Text",
+        "value": "",
+        "label": "icon 3 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_link",
+        "value": "",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_linkText",
+        "value": "",
+        "label": "CTA Text",
+        "valueType": "string"
+      }
+
+    ]
+  },
+  {
     "id": "hero-2",
     "fields": [
       {
