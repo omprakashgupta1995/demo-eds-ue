@@ -272,13 +272,6 @@
         "value": ""
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "left_icon1Desc",
-        "label": "Icon One Text",
-        "value": ""
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "left_icon2",
@@ -292,13 +285,6 @@
         "value": ""
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "left_icon2Desc",
-        "label": "Icon Two Text",
-        "value": ""
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "left_icon3",
@@ -309,6 +295,20 @@
         "valueType": "string",
         "name": "left_icon3Alt",
         "label": "Icon Three Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "left_icon1Desc",
+        "label": "Icon One Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "left_icon2Desc",
+        "label": "Icon Two Text",
         "value": ""
       },
       {

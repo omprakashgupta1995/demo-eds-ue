@@ -21,5 +21,10 @@
 }
 
 .banner-with-icons .content_wrapper .left_content {
-    
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.banner-with-icons .content_wrapper .left_content .heading {
+    grid-column: span 3;
 }
