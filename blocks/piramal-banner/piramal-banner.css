@@ -1,0 +1,24 @@
+.section.piramal-banner-container{
+    position: relative;
+}
+
+.piramal-banner.block{
+    position: absolute;
+    top: 20px;
+}
+
+.piramal-banner.block > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.piramal-banner.block .piramal-banner-content{
+    /* position: absolute; */
+    top: 10%;
+}
+
+.piramal-banner.block .piramal-banner-image{
+    /* position: absolute; */
+    width: 200px;
+    height: 200px;
+}

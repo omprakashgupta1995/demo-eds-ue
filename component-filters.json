@@ -38,7 +38,8 @@
       "first-swyp",
       "mayura-cc-swiper",
       "idfc-1",
-      "piramal-banner"
+      "piramal-banner",
+      "piramal-swiper"
     ]
   },
   {
@@ -132,6 +133,12 @@
     "id": "piramal-banner",
     "components": [
       "piramal-banner-item"
+    ]
+  },
+  {
+    "id": "piramal-swiper",
+    "components": [
+      "piramal-swiper-item"
     ]
   }
 ]
