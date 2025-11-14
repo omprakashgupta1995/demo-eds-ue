@@ -26,7 +26,8 @@
       "teaser-cards",
       "faq",
       "fragment",
-      "demo1"
+      "demo1",
+      "bs-Swiper"
     ]
   },
   {
@@ -78,6 +79,12 @@
     "id": "demo1",
     "components": [
       "demo1-item"
+    ]
+  },
+   {
+    "id": "bs-swiper",
+    "components": [
+      "bs-swiper-item"
     ]
   }
 ]
