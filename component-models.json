@@ -462,7 +462,7 @@
         "value": ""
       },
       {
-        "component": "richtext",
+        "component": "text",
         "name": "right_text",
         "value": "",
         "label": "Card Title",
