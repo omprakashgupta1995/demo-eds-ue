@@ -34,7 +34,8 @@
       "calculator-ret",
       "calculator-ret-graf",
       "idfc-bank",
-      "idfc-banner"
+      "idfc-banner",
+      "idfc-carousel"
     ]
   },
   {
@@ -107,5 +108,9 @@
    {
     "id": "idfc-banner",
     "components": ["idfc-banner-item"]
+  },
+   {
+    "id": "idfc-carousel",
+    "components": ["idfc-carousel-item"]
   }
 ]
