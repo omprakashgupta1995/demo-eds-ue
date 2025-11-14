@@ -1,0 +1,10 @@
+@import url("../../styles/swiper-bundle.min.css");
+
+.pranav-swiper.block {
+    position: relative;
+    user-select: none;
+}
+
+.pranav-swiper .swiper-pagination {
+    bottom: 0;
+}
