@@ -77,7 +77,7 @@
     ]
   },
   {
-    "id": "my-custom-swiper",
+    "id": "my-swiper",
     "components": [
       "my-swiper-item"
     ]
