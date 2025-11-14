@@ -257,6 +257,95 @@
     ]
   },
   {
+    "id": "piramal-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "pbcol1_bgimage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "pbcol1_bgimageAlt",
+        "label": "Background Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "pbcol1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "pbcol2_icon1",
+        "label": "Select Icon 1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "pbcol2_icon1Alt",
+        "label": "icon 1 alt text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "pbcol2_icon1text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "pbcol2_icon2",
+        "label": "Select Icon 2",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "pbcol2_icon2Alt",
+        "label": "icon 2 alt text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "pbcol2_icon2text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "pbcol2_icon3",
+        "label": "Select Icon 3",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "pbcol2_icon3Alt",
+        "label": "icon 3 alt text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "pbcol2_icon3text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "byline",
     "fields": [
       {
