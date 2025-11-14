@@ -755,5 +755,101 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "cc-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Banner Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "value": "",
+        "label": "Banner Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "description",
+        "value": "",
+        "label": "Banner Description",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "banner_icon1",
+        "label": "Banner Icon 1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "banner_icon1Alt",
+        "label": "Icon Alternate Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "banner_icon1description",
+        "value": "",
+        "label": "Icon 1 Description",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "banner_icon1",
+        "label": "Banner Icon 1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "banner_icon2Alt",
+        "label": "Icon 2 Alternate Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "banner_icon2description",
+        "value": "",
+        "label": "Icon 2 Description",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "banner_icon3",
+        "label": "Banner Icon 3",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "banner_icon3Alt",
+        "label": "Icon 3 Alternate Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "banner_icon3description",
+        "value": "",
+        "label": "Icon 3 Description",
+        "valueType": "string"
+      }
+    ]
   }
 ]
