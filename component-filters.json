@@ -25,6 +25,7 @@
       "form",
       "banner-container",
       "product-1",
+      "my-swiper",
       "hero-1",
       "whatsapp-banner",
       "teaser-cards",
@@ -42,6 +43,12 @@
     "id": "banner-container",
     "components": [
       "banner"
+    ]
+  },
+  {
+    "id": "my-swiper",
+    "components": [
+      "my-swiper-item-1"
     ]
   },
   {
