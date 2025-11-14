@@ -176,7 +176,7 @@
         },
         {
           "title": "CC Banner",
-          "id": "cc-banner",
+          "id": "mybanner",
           "plugins": {
             "xwalk": {
               "page": {
