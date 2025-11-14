@@ -1,0 +1,13 @@
+import swiper from "../../scripts/swiper.js"
+import { div } from "../../scripts/dom-helper";
+
+export default function decorate(block){
+const swiperEl = div({class:"swiper"},div({class:"swiper-wrapper"},
+    ...Array.from(block.children).map((child)=>{
+        chilc.classList.add('swiper-slide');
+        return child;
+    })
+));
+block.appendChild(swiperEl);
+swiper(block);
+}
