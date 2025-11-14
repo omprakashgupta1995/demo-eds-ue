@@ -253,6 +253,13 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_textcontetyn",
+        "value": "",
+        "label": "custom text",
+        "valueType": "string"
       }
     ]
   },

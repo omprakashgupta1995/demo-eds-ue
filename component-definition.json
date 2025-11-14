@@ -246,7 +246,7 @@
                 "template": {
                   "name": "My Swiper",
                   "model": "my-swiper",
-                  "filter": "my-swiper"
+                  "filter": "my-custom-swiper"
                 }
               }
             }
