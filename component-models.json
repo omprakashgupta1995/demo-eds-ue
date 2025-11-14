@@ -607,20 +607,32 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
+        "name": "col1_image",
         "label": "Bg Image"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
+        "name": "col1_imageAlt",
         "label": "Alt"
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "col1_text",
         "label": "Heading",
         "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "col1_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_linkText",
+        "label": "Link Text"
       },
       {
         "component": "reference",
@@ -637,7 +649,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2_icon1Desc",
+        "name": "col2_icon1desc",
         "label": "Icon 1 Description"
       },
       {
@@ -673,20 +685,8 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2_icon3Desc",
+        "name": "col2_icon3desc",
         "label": "Icon 3 Description"
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "bannercol2_link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bannercol2_linkText",
-        "label": "Link Text"
       }
     ]
   }
