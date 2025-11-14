@@ -590,105 +590,111 @@
     "id": "demo1-item",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Bg Image",
-        "multi": false
-      },
+      "component": "object",
+      "name": "background",
+      "label": "Background Section",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Bg Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "imageAlt",
+          "label": "Alt",
+          "value": ""
+        }
+      ]},
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Heading",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "bannercol1_frontimage",
-        "label": "Front Image"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bannercol1_frontimageAlt",
-        "label": "Front Image Alt"
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "bannercol2_link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bannercol2_linkText",
-        "label": "Link Text"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "icon1",
-        "label": "Icon Image 1"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon1Alt",
-        "label": "Icon 1 Image Alt"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon1desc",
-        "label": "Icon1 description"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "icon2",
-        "label": "Icon Image 2"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon2Alt",
-        "label": "Icon 2 Image Alt"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon2desc",
-        "label": "Icon 2 description"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "icon3",
-        "label": "Icon Image 3"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon3Alt",
-        "label": "Icon 3 Image Alt"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon3desc",
-        "label": "Icon3 description"
-      }
-
+      "component": "object",
+      "name": "content",
+      "label": "Content Section",
+      "fields": [
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Heading",
+            "valueType": "string"
+          },
+          {
+          "component": "object",
+          "name": "icons",
+          "label": "Icons Section",
+          "multi": false,
+          "fields": [
+            {
+              "component": "reference",
+              "valueType": "string",
+              "name": "icon1",
+              "label": "Icon Image 1"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "icon1Alt",
+              "label": "Icon 1 Image Alt"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "icon1desc",
+              "label": "Icon1 description"
+            },
+            {
+              "component": "reference",
+              "valueType": "string",
+              "name": "icon2",
+              "label": "Icon Image 2"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "icon2Alt",
+              "label": "Icon 2 Image Alt"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "icon2desc",
+              "label": "Icon 2 description"
+            },
+            {
+              "component": "reference",
+              "valueType": "string",
+              "name": "icon3",
+              "label": "Icon Image 3"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "icon3Alt",
+              "label": "Icon 3 Image Alt"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "icon3desc",
+              "label": "Icon3 description"
+            }
+          ]},
+          {
+            "component": "aem-content",
+            "valueType": "string",
+            "name": "bannercol2_link",
+            "label": "Link"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "bannercol2_linkText",
+            "label": "Link Text"
+          }
+      ]}
     ]
   }
 ]
