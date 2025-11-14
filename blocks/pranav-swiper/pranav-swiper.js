@@ -20,8 +20,13 @@ export default function decorate(block) {
   const mySwiper = Swiper(".swiper", {
     loop: true,
     spaceBetween: 30,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
+      dynamicBullets: true,
     },
   });
 }
