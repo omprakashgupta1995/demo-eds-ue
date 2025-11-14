@@ -819,6 +819,25 @@
     ]
   },
   {
+    "id": "idfc-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image For Background",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "image Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "idfc-banner-item",
     "fields": [
       {
@@ -841,25 +860,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-   {
-    "id": "idfc-banner",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image For Background",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "imageAlt",
-        "value": ""
       }
     ]
   }
