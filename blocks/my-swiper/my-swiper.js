@@ -1,5 +1,5 @@
 import swiper from "../../scripts/swiper.js"
-import { div } from "../../scripts/dom-helper";
+import { div } from "../../scripts/dom-helper.js";
 
 export default function decorate(block){
 const swiperEl = div({class:"swiper"},div({class:"swiper-wrapper"},
