@@ -685,20 +685,20 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_linkText",
+        "name": "col2_linkText",
         "label": "Link Text"
       },
       {
         "component": "reference",
         "valueType": "string",
         "name": "col2_frontimg",
-        "label": "Icon Image 3"
+        "label": "front Image"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "col2_frontimgAlt",
-        "label": "Icon 3 Image Alt"
+        "label": "front Image Alt"
       }
     ]
   },
