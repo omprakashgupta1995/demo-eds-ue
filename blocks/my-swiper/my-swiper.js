@@ -4,7 +4,7 @@ import { div } from "../../scripts/dom-helper.js";
 export default function decorate(block){
 const swiperEl = div({class:"swiper"},div({class:"swiper-wrapper"},
     ...Array.from(block.children).map((child)=>{
-        chilc.classList.add('swiper-slide');
+        child.classList.add('swiper-slide');
         return child;
     })
 ));
