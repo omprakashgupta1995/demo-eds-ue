@@ -38,6 +38,12 @@
     ]
   },
   {
+    "id": "piramal-banner",
+    "components":[
+      "piramal-banner-item"
+    ]
+  },
+  {
     "id": "banner-container",
     "components": [
       "banner"

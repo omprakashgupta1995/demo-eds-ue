@@ -257,7 +257,7 @@
     ]
   },
   {
-    "id": "piramal-banner",
+    "id": "piramal-banner-item",
     "fields": [
       {
         "component": "reference",
@@ -275,7 +275,7 @@
       },
       {
         "component": "richtext",
-        "name": "pbcol1_text",
+        "name": "pbcol2_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
