@@ -14,6 +14,7 @@
       "title",
       "hero",
       "whatsapp-banner",
+      "custom-swiper",
       "cards",
       "columns",
       "quote",
@@ -28,6 +29,12 @@
       "teaser-cards",
       "faq",
       "fragment"
+    ]
+  },
+  {
+    "id": "custom-swiper",
+    "components": [
+      "custom-swiper-item-1"
     ]
   },
   {

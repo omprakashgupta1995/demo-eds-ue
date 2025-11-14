@@ -351,6 +351,32 @@
     ]
   },
   {
+    "id": "custom-swiper-item-1",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Image Alt",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_text",
+        "label": "Text",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "byline",
     "fields": [
       {
