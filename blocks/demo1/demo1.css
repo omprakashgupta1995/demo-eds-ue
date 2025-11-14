@@ -1,0 +1,10 @@
+.demo1-wrapper{
+  margin: 40px 0;
+  background: red;
+    }
+
+.demo1-wrapper .demo1{
+  background-position: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

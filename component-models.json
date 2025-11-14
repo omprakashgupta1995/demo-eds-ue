@@ -590,13 +590,6 @@
     "id": "demo1-item",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Heading",
-        "valueType": "string"
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -609,6 +602,13 @@
         "name": "imageAlt",
         "label": "Alt",
         "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
       },
       {
         "component": "reference",
