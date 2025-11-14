@@ -602,92 +602,46 @@
     ]
   },
   {
-    "id": "demo1-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Bg Image"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "label": "Heading",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "icon1",
-        "label": "Icon Image 1"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon1Alt",
-        "label": "Icon 1 Image Alt"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon1desc",
-        "label": "Icon 1 Description"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "icon2",
-        "label": "Icon Image 2"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon2Alt",
-        "label": "Icon 2 Image Alt"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon2desc",
-        "label": "Icon 2 Description"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "icon3",
-        "label": "Icon Image 3"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon3Alt",
-        "label": "Icon 3 Image Alt"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon3desc",
-        "label": "Icon 3 Description"
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "bannercol2_link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bannercol2_linkText",
-        "label": "Link Text"
-      }
-    ]
-  }
+  "id": "demo1-item",
+  "label": "Demo Banner Block",
+  "category": "content",
+  "fields": [
+    {
+      "component": "group",
+      "name": "background",
+      "label": "Background Section",
+      "fields": [
+        { "component": "reference", "name": "image", "label": "Bg Image" },
+        { "component": "text", "name": "imageAlt", "label": "Alt" }
+      ]
+    },
+    {
+      "component": "group",
+      "name": "content",
+      "label": "Content Section",
+      "fields": [
+        { "component": "richtext", "name": "text", "label": "Heading" },
+        {
+          "component": "group",
+          "name": "icons",
+          "label": "Icons Section",
+          "fields": [
+            { "component": "reference", "name": "icon1", "label": "Icon Image 1" },
+            { "component": "text", "name": "icon1Alt", "label": "Icon 1 Alt" },
+            { "component": "text", "name": "icon1desc", "label": "Icon 1 Desc" },
+            { "component": "reference", "name": "icon2", "label": "Icon Image 2" },
+            { "component": "text", "name": "icon2Alt", "label": "Icon 2 Alt" },
+            { "component": "text", "name": "icon2desc", "label": "Icon 2 Desc" },
+            { "component": "reference", "name": "icon3", "label": "Icon Image 3" },
+            { "component": "text", "name": "icon3Alt", "label": "Icon 3 Alt" },
+            { "component": "text", "name": "icon3desc", "label": "Icon 3 Desc" }
+          ]
+        },
+        { "component": "aem-content", "name": "bannercol2_link", "label": "Link" },
+        { "component": "text", "name": "bannercol2_linkText", "label": "Link Text" }
+      ]
+    }
+  ]
+}
+
 ]
