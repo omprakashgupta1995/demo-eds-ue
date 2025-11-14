@@ -9,5 +9,5 @@ const swiperEl = div({class:"swiper"},div({class:"swiper-wrapper"},
     })
 ));
 block.appendChild(swiperEl);
-swiper(block);
+swiper(swiperEl);
 }
