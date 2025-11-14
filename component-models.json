@@ -364,7 +364,6 @@
         "name": "backgroundImageAlt",
         "label": "Background Image Alt Text"
       },
-
       {
         "component": "text",
         "name": "mainTitle",
@@ -495,6 +494,149 @@
       }
     ]
   },
+    {
+    "id": "my-swiper-item-1",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]},
+    {
+    "id": "banner-with-icons",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bgImage",
+        "label": "Background Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bgImageAlt",
+        "label": "Background Image Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "banner-icons",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "left_title",
+        "value": "",
+        "label": "Title Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "left_icon1",
+        "label": "Icon One"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "left_icon1Alt",
+        "label": "Icon One Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "left_icon1Desc",
+        "label": "Icon One Text",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "left_icon2",
+        "label": "Icon Two"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "left_icon2Alt",
+        "label": "Icon Two Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "left_icon2Desc",
+        "label": "Icon Two Text",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "left_icon3",
+        "label": "Icon Three"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "left_icon3Alt",
+        "label": "Icon Three Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "left_icon3Desc",
+        "label": "Icon ThreTextlt",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "left_cta",
+        "value": "",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "left_ctaText",
+        "value": "",
+        "label": "CTA Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "right_image",
+        "label": "Person Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "right_imageAlt",
+        "label": "Person Image Alt",
+        "value": ""
+      }
+    ]
+  },
+
   {
     "id": "hero-2",
     "fields": [

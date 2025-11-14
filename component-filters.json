@@ -1,9 +1,7 @@
 [
   {
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -28,6 +26,9 @@
       "hero-1",
       "whatsapp-banner",
       "loan-banner",
+      "banner-with-icons",
+            "my-swiper",
+
       "teaser-cards",
       "faq",
       "fragment"
@@ -35,53 +36,34 @@
   },
   {
     "id": "teaser-cards",
-    "components": [
-      "teaser-card"
-    ]
+    "components": ["teaser-card"]
   },
   {
     "id": "banner-container",
-    "components": [
-      "banner"
-    ]
+    "components": ["banner"]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
+    "components": ["card"]
   },
-    {
+  {
     "id": "byline-1",
-    "components": [
-      "byline-item-1"
-    ]
+    "components": ["byline-item-1"]
   },
   {
     "id": "swiper",
-    "components": [
-      "swiper-item"
-    ]
+    "components": ["swiper-item"]
   },
   {
     "id": "tab",
-    "components": [
-      "tab-item"
-    ]
+    "components": ["tab-item"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
   }
 ]
