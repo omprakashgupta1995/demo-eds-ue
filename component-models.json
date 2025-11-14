@@ -445,6 +445,66 @@
     ]
   },
   {
+    "id": "pranav-swiper-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "left_image",
+        "label": "Card Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "left_imageAlt",
+        "label": "Card Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "right_text",
+        "value": "",
+        "label": "Card Title",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "label": "Card Title Type",
+        "name": "right_textType",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "right_cta",
+        "value": "",
+        "label": "Card Button",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "right_ctaText",
+        "value": "",
+        "label": "card Button Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "byline",
     "fields": [
       {

@@ -26,7 +26,8 @@
       "pranav-demo-column",
       "banner-with-icons",
       "faq",
-      "fragment"
+      "fragment",
+      "pranav-swiper"
     ]
   },
   {
@@ -44,6 +45,10 @@
   {
     "id": "cards",
     "components": ["card"]
+  },
+  {
+    "id": "pranav-swiper",
+    "components": ["pranav-swiper-item"]
   },
   {
     "id": "swiper",
