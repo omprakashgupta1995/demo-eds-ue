@@ -6,11 +6,12 @@ export default function decorate(block) {
    console.log("block", block);
    const swiperContent = div({ class: "swiper" },
       ...Array.from(block.children).map(child => {
-         return div({ class: "swiper-slide" }, child)
+         child.classList.add("swiper-slide")
+         return child;
       })
    )
 
-   // Swiper(swiperContent, {})
-
    block.appendChild(swiperContent);
+
+   Swiper(swiperContent, {})
 }
