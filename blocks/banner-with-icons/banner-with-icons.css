@@ -14,6 +14,8 @@
 
 .banner-with-icons .content_wrapper .right_image {
     width: 500px;
+    align-self: last baseline;
+    padding-right: 80px;
 }
 
 .banner-with-icons .content_wrapper .right_image img {
@@ -22,9 +24,31 @@
 
 .banner-with-icons .content_wrapper .left_content {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
+    gap: 0;
+    height: min-content;
+    padding-top: 50px;
+    padding-left: 80px;
 }
 
 .banner-with-icons .content_wrapper .left_content .heading {
-    grid-column: span 3;
+    grid-column: span 4;
+}
+
+.banner-with-icons .content_wrapper .left_content .button-container {
+    grid-column: span 4;
+}
+
+.banner-with-icons .content_wrapper .left_content .point_content {
+    margin: 0;
+    height: min-content;
+    align-self: self-start;
+    font-size: 1.125rem;
+    width: 100px;
+    line-height: 26px;
+    padding-top: 8px;
+}
+
+.banner-with-icons .content_wrapper .left_content .point_content picture img {
+    width: 72px;
 }
