@@ -231,20 +231,20 @@
     ]
   },
   {
-    "id": "my-swiper-item",
+    "id": "hero",
     "fields": [
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_image",
+        "name": "image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_imageAlt",
-        "label": "image Alt",
+        "name": "imageAlt",
+        "label": "Alt",
         "value": ""
       },
       {
@@ -252,13 +252,6 @@
         "name": "col2_text",
         "value": "",
         "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "col2_textcontetyn",
-        "value": "",
-        "label": "custom text",
         "valueType": "string"
       }
     ]
