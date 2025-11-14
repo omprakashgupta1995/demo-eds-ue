@@ -10,5 +10,7 @@ export default function decorate(block) {
       })
    )
 
+   Swiper(swiperContent)
+
    block.appendChild(swiperContent);
 }
