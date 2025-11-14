@@ -14,8 +14,5 @@ export default function decorate(block) {
         )
     );
     block.appendChild(swiperE1);
-    Swiper(swiperE1, {
-        direction: 'horizontal',
-        loop: true
-    });
+    Swiper(swiperE1);
 }
