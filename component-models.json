@@ -729,5 +729,73 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "my-swiper-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_icon1",
+        "value": "",
+        "label": "Icon 1",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_iconAlt1",
+        "value": "",
+        "label": "Icon 1 Image Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_description1",
+        "value": "",
+        "label": "Description 1",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col1_icon2",
+        "value": "",
+        "label": "Icon 2",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_iconAlt2",
+        "value": "",
+        "label": "Icon 2 Image Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_description2",
+        "value": "",
+        "label": "Description 2",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col1_icon3",
+        "value": "",
+        "label": "Icon 3",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_iconAlt3",
+        "value": "",
+        "label": "Icon 3 Image Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_description3",
+        "value": "",
+        "label": "Description 3",
+        "valueType": "string"
+      }
+    ]
   }
 ]

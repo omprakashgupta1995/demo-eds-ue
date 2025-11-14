@@ -27,7 +27,8 @@
       "faq",
       "fragment",
       "hero-1",
-      "whatsapp-banner"
+      "whatsapp-banner",
+      "my-swiper"
     ]
   },
   {
@@ -73,6 +74,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "my-swiper",
+    "components": [
+      "my-swiper-item"
     ]
   }
 ]
