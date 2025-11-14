@@ -37,7 +37,8 @@
       "teachers-calculator-block",
       "first-swyp",
       "mayura-cc-swiper",
-      "idfc-1"
+      "idfc-1",
+      "piramal-banner"
     ]
   },
   {
@@ -125,6 +126,12 @@
     "id": "first-swyp",
     "components": [
       "first-swyp-item"
+    ]
+  },
+  {
+    "id": "piramal-banner",
+    "components": [
+      "piramal-banner-item"
     ]
   }
 ]
