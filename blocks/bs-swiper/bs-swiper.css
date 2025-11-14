@@ -1,0 +1,7 @@
+@import url('../../styles/swiper-bundle-min.css');
+
+.bs-swiper-wrapper{
+  margin: 40px 0;
+  background: red;
+    }
+

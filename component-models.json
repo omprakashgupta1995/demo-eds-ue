@@ -618,27 +618,15 @@
       },
       {
         "component": "richtext",
-        "name": "col1_text",
+        "name": "col2_text",
         "label": "Heading",
         "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "col1_link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_linkText",
-        "label": "Link Text"
       },
       {
         "component": "reference",
         "valueType": "string",
         "name": "col2_icon1",
-        "label": "Icon Image 1"
+        "label": "Icon Image 1",
       },
       {
         "component": "text",
@@ -687,7 +675,32 @@
         "valueType": "string",
         "name": "col2_icon3desc",
         "label": "Icon 3 Description"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "col2_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_linkText",
+        "label": "Link Text"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_frontimg",
+        "label": "Icon Image 3"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_frontimgAlt",
+        "label": "Icon 3 Image Alt"
       }
+
     ]
   },
   {
