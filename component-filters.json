@@ -27,7 +27,8 @@
       "product-1",
       "teaser-cards",
       "faq",
-      "fragment"
+      "fragment",
+      "my-swiper"
     ]
   },
   {
@@ -41,6 +42,12 @@
     "components": [
       "whatsapp-banner-item-1",
       "whatsapp-banner-item-2"
+    ]
+  },
+  {
+    "id": "my-custom-swiper",
+    "components": [
+      "my-swiper-item"
     ]
   },
   {
