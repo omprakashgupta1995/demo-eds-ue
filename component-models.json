@@ -277,7 +277,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "icon1",
-        "label": "Icon 1",
+        "label": "Icon-1",
         "multi": false
       },
       {
