@@ -10,18 +10,39 @@ export default function decorate(block) {
     .children[1].classList.add("right_image");
   block.querySelector(".left_content").children[0].classList.add("heading");
 
-
-//   let pointDiv =  document.createElement("div");
-
-//   pointDiv.classList.add("point")
-
-
-
   Array.from(block.querySelector(".left_content").children).forEach(
     (child, i) => {
-      if (i > 0) {
+      if (i > 0 && !child.classList.contains("button-container")) {
         child.classList.add("point_content");
       }
     }
   );
+
+  let pointText = "";
+  Array.from(block.querySelectorAll(".point_content")).forEach((point) => {
+    pointText += point.outerHTML;
+    point.remove();
+  });
+  let pointDiv = document.createElement("div");
+  pointDiv.classList.add("point_container");
+  pointDiv.innerHTML = pointText;
+
+  block
+    .querySelector(".button-container")
+    .parentNode.insertBefore(
+      pointDiv,
+      block.querySelector(".button-container")
+    );
+
+  Array.from(block.querySelectorAll(".point_content")).forEach((points, i) => {
+    if ((i + 1) % 2 == 0) {
+      let pointDiv = document.createElement("div");
+      pointDiv.classList.add("point_text");
+      pointDiv.innerHTML =
+        points.previousElementSibling.outerHTML + points.outerHTML;
+      points.previousElementSibling.remove();
+      points.remove();
+      block.querySelector(".point_container").appendChild(pointDiv);
+    }
+  });
 }
