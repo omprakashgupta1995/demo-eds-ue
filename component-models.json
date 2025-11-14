@@ -400,6 +400,70 @@
     ]
   },
   {
+    "id": "my-swiper-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Background Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "image Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_title",
+        "value": "",
+        "label": "Heading text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "col2_titleType",
+        "value": "",
+        "label": "Text",
+        "valueType": "string[]",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          }
+        ]
+      },
+
+      {
+        "component": "text",
+        "name": "col2_desc3",
+        "value": "",
+        "label": "icon3 Content",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_cta",
+        "value": "",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_ctaText",
+        "value": "",
+        "label": "CTA Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "byline",
     "fields": [
       {
