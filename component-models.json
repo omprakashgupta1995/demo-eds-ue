@@ -444,7 +444,7 @@
         "component": "text",
         "name": "col2_desc3",
         "value": "",
-        "label": "icon3 Content",
+        "label": "Description",
         "valueType": "string"
       },
       {
