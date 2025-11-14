@@ -10,8 +10,8 @@ export default function decorate(block) {
             ...Array.from(block.children).map((child) => {
                 child.classList.add('swiper-slide');
                 return child;
-            });
-        );
+            })
+        )
     );
     block.appendChild(swiperE1);
     Swiper(swiperE1, {
