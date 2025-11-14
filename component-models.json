@@ -626,9 +626,28 @@
         ]
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "label": "Heading"
+        "component": "container",
+        "name": "content",
+        "label": "Content Section",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "richtext",
+            "name": "text",
+            "label": "Heading"
+          },
+          {
+            "component": "aem-content",
+            "name": "bannercol2_link",
+            "label": "Link"
+          },
+          {
+            "component": "text",
+            "name": "bannercol2_linkText",
+            "label": "Link Text"
+          }
+        ]
       },
       {
         "component": "container",
@@ -683,17 +702,7 @@
             "label": "Icon 3 Desc"
           }
         ]
-      },
-      {
-        "component": "aem-content",
-        "name": "bannercol2_link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "bannercol2_linkText",
-        "label": "Link Text"
-      }    
+      }
     ]
   }
 ]
