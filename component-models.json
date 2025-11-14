@@ -236,27 +236,27 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "bgimage",
+        "name": "col1_bgimage",
         "label": "Background Image"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "bgimageAlt",
+        "name": "col1_bgimageAlt",
         "label": "Background Image Alt",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "whatsAppBanner_title",
+        "name": "col2_title",
         "label": "WhatsApp Banner Title",
         "value": "WhatsApp banner a title"
       },
       {
         "component": "select",
         "valueType": "string",
-        "name": "whatsAppBanner_titleType",
+        "name": "col2_titleType",
         "label": "WhatsApp Banner Title Type",
         "options": [
           {
@@ -276,76 +276,76 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "icon1",
-        "label": "Icon-1",
+        "name": "col2_icon1",
+        "label": "Icon 1",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "icon1Alt",
+        "name": "col2_icon1Alt",
         "label": "Icon 1 Alt",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "icon1Text",
+        "name": "col2_icon1Desc",
         "label": "Icon 1 Text",
         "value": ""
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "icon2",
+        "name": "col2_icon2",
         "label": "Icon 2",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "icon2Alt",
+        "name": "col2_icon2Alt",
         "label": "Icon 2 Alt",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "icon2Text",
+        "name": "col2_icon2Desc",
         "label": "Icon 2 Text",
         "value": ""
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "icon3",
+        "name": "col2_icon3",
         "label": "Icon 3",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "icon3Alt",
+        "name": "col2_icon3Alt",
         "label": "Icon 3 Alt",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "icon3Text",
+        "name": "col2_icon3Desc",
         "label": "Icon 3 Text",
         "value": ""
       },
       {
         "component": "aem-content",
         "label": "CTA Link",
-        "name": "whatsAppBanner_ctaLink",
+        "name": "col3_ctaLink",
         "valueType": "string"
       },
       {
         "component": "text",
         "label": "CTA",
-        "name": "whatsAppBanner_ctaText",
+        "name": "col3_ctaText",
         "valueType": "string"
       }
     ]
