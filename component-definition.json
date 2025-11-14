@@ -419,14 +419,14 @@
           }
         },
         {
-          "title": "Bs Swiper Item",
+          "title": "bs Swiper Item",
           "id": "bs-swiper-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Bs Swiper Item",
+                  "name": "bs Swiper Item",
                   "model": "bs-swiper-item"
                 }
               }
