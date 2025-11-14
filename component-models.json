@@ -626,7 +626,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "col2_icon1",
-        "label": "Icon Image 1",
+        "label": "Icon Image 1"
       },
       {
         "component": "text",
