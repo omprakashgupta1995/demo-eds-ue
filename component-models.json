@@ -607,9 +607,11 @@
     "category": "content",
     "fields": [
       {
-        "component": "group",
+        "component": "container",
         "name": "background",
         "label": "Background Section",
+        "valueType": "string",
+        "collapsible": true,
         "fields": [
           {
             "component": "reference",
@@ -624,79 +626,74 @@
         ]
       },
       {
-        "component": "group",
-        "name": "content",
-        "label": "Content Section",
+        "component": "richtext",
+        "name": "text",
+        "label": "Heading"
+      },
+      {
+        "component": "container",
+        "name": "icons",
+        "label": "Icons Section",
+        "valueType": "string",
+        "collapsible": true,
         "fields": [
           {
-            "component": "richtext",
-            "name": "text",
-            "label": "Heading"
-          },
-          {
-            "component": "group",
-            "name": "icons",
-            "label": "Icons Section",
-            "fields": [
-              {
-                "component": "reference",
-                "name": "icon1",
-                "label": "Icon Image 1"
-              },
-              {
-                "component": "text",
-                "name": "icon1Alt",
-                "label": "Icon 1 Alt"
-              },
-              {
-                "component": "text",
-                "name": "icon1desc",
-                "label": "Icon 1 Desc"
-              },
-              {
-                "component": "reference",
-                "name": "icon2",
-                "label": "Icon Image 2"
-              },
-              {
-                "component": "text",
-                "name": "icon2Alt",
-                "label": "Icon 2 Alt"
-              },
-              {
-                "component": "text",
-                "name": "icon2desc",
-                "label": "Icon 2 Desc"
-              },
-              {
-                "component": "reference",
-                "name": "icon3",
-                "label": "Icon Image 3"
-              },
-              {
-                "component": "text",
-                "name": "icon3Alt",
-                "label": "Icon 3 Alt"
-              },
-              {
-                "component": "text",
-                "name": "icon3desc",
-                "label": "Icon 3 Desc"
-              }
-            ]
-          },
-          {
-            "component": "aem-content",
-            "name": "bannercol2_link",
-            "label": "Link"
+            "component": "reference",
+            "name": "icon1",
+            "label": "Icon Image 1"
           },
           {
             "component": "text",
-            "name": "bannercol2_linkText",
-            "label": "Link Text"
+            "name": "icon1Alt",
+            "label": "Icon 1 Alt"
+          },
+          {
+            "component": "text",
+            "name": "icon1desc",
+            "label": "Icon 1 Desc"
+          },
+          {
+            "component": "reference",
+            "name": "icon2",
+            "label": "Icon Image 2"
+          },
+          {
+            "component": "text",
+            "name": "icon2Alt",
+            "label": "Icon 2 Alt"
+          },
+          {
+            "component": "text",
+            "name": "icon2desc",
+            "label": "Icon 2 Desc"
+          },
+          {
+            "component": "reference",
+            "name": "icon3",
+            "label": "Icon Image 3"
+          },
+          {
+            "component": "text",
+            "name": "icon3Alt",
+            "label": "Icon 3 Alt"
+          },
+          {
+            "component": "text",
+            "name": "icon3desc",
+            "label": "Icon 3 Desc"
           }
         ]
-      }
+      },
+      {
+        "component": "aem-content",
+        "name": "bannercol2_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "bannercol2_linkText",
+        "label": "Link Text"
+      }    
     ]
   }
 ]
