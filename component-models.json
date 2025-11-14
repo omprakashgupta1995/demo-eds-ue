@@ -361,11 +361,10 @@
         "multi": false
       },
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
         "name": "col1_imageAlt",
-        "label": "Image Alt",
-        "multi": false
+        "label": "Image Alt"
       },
       {
         "component": "richtext",
