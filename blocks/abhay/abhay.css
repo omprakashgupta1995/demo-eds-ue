@@ -1,3 +1,7 @@
 .section.abhay-container .abhay{
     background-color: red;
 }
+
+.section.abhay-container.abhay2 .abhay{
+    background-color: black;
+}
