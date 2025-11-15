@@ -25,7 +25,12 @@
       "product-1",
       "teaser-cards",
       "faq",
-      "fragment"
+      "fragment",
+      "idfc-features",
+      "payment-transfer",
+      "fastag-apps",
+      "secondary-nav",
+      "git-block"
     ]
   },
   {
@@ -71,6 +76,30 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "payment-transfer",
+    "components": [
+      "payment-transfer-item"
+    ]
+  },
+  {
+    "id": "fastag-apps",
+    "components": [
+      "fastag-apps-item"
+    ]
+  },
+  {
+    "id": "secondary-nav",
+    "components": [
+      "secondary-nav-item"
+    ]
+  },
+  {
+    "id": "git-block",
+    "components": [
+      "git-item"
     ]
   }
 ]
