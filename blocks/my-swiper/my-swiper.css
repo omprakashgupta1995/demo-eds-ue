@@ -1,1 +1,10 @@
 @import url('../../styles//swiper.css');
+
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+.swiper picture img{
+    width: 100px;
+    height: 100px;
+}
