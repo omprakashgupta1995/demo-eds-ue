@@ -38,7 +38,8 @@
   {
     "id": "product-banner-custom",
     "components": [
-      "teaser-card"
+      "product-banner-desc",
+      "product-banner-features"
     ]
   },
   {

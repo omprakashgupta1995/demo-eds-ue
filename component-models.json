@@ -246,13 +246,44 @@
         "name": "imageAlt",
         "label": "Banner Image Alt",
         "value": ""
+      }
+    ]
+  },
+  {
+    "id": "product-banner-desc",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Banner Image",
+        "multi": false
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Banner Image Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "product-banner-features",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Banner Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Banner Image Alt",
+        "value": ""
       }
     ]
   },
