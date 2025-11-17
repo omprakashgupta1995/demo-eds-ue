@@ -334,60 +334,60 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "product-banner-feature_image1",
+        "name": "product-banner-feature1_image1",
         "label": "Feature Icon Image 1"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "product-banner-feature_image1Alt",
+        "name": "product-banner-feature1_image1Alt",
         "label": "Feature Icon Alt 1",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "product-banner-feature_feature1text",
+        "name": "product-banner-feature1_feature1text",
         "label": "Feature Text 1",
         "value": ""
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "product-banner-feature_image2",
+        "name": "product-banner-feature2_image2",
         "label": "Feature Icon Image 2"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "product-banner-feature_image2Alt",
+        "name": "product-banner-feature2_image2Alt",
         "label": "Feature Icon Alt 2",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "product-banner-feature_feature2text",
+        "name": "product-banner-feature2_feature2text",
         "label": "Feature Text 2",
         "value": ""
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "product-banner-feature_image3",
+        "name": "product-banner-feature3_image3",
         "label": "Feature Icon Image 3"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "product-banner-feature_image3Alt",
+        "name": "product-banner-feature3_image3Alt",
         "label": "Feature Icon Alt 3",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "product-banner-feature_feature3text",
+        "name": "product-banner-feature3_feature3text",
         "label": "Feature Text 3",
         "value": ""
       }
