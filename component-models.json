@@ -246,6 +246,13 @@
         "name": "imageAlt",
         "label": "Banner Image Alt",
         "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
