@@ -29,6 +29,7 @@
       "idfc-features",
       "payment-transfer",
       "fastag-apps",
+      "product-cards",
       "secondary-nav",
       "git-block"
     ]
@@ -100,6 +101,12 @@
     "id": "git-block",
     "components": [
       "git-item"
+    ]
+  },
+  {
+    "id": "product-cards",
+    "components": [
+      "product-cards-item"
     ]
   }
 ]
