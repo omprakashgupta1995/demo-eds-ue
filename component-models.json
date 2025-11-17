@@ -255,14 +255,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "product_banner_desc-title",
+        "name": "product-banner-desc_title",
         "label": "Title",
         "multi": false
       },
       {
         "component": "select",
         "valueType": "string",
-        "name": "product_banner_desc-titleType",
+        "name": "product-banner-desc_titleType",
         "label": "Title Type",
         "options":[
           {
@@ -298,32 +298,32 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "product_banner_desc-subtitle",
+        "name": "product-banner-desc_subtitle",
         "label": "Sub Heading",
         "multi": false
       },
       {
         "component": "aem-content",
         "valueType": "string",
-        "name": "product_banner_desc_cta_section-primarycta",
+        "name": "product-banner-description-cta_primarycta",
         "label": "Cta Link"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "product_banner_desc_cta_section-primaryctaText",
+        "name": "product-banner-description-cta_primaryctaText",
         "label": "Cta Text"
       },
       {
         "component": "aem-content",
         "valueType": "string",
-        "name": "product_banner_desc_cta_section-secondarylink",
+        "name": "product-banner-description-cta_secondarylink",
         "label": "Secondary Link"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "product_banner_desc_cta_section-secondarylinkText",
+        "name": "product-banner-description-cta_secondarylinkText",
         "label": "Link Text"
       }
     ]
