@@ -245,25 +245,59 @@
         "valueType": "string",
         "name": "idfcHeroCol1_bgImageAlt",
         "label": "Background Image Alt",
-        "value": "Background Image Alt Text"
+        "value": "IDFC Hero BG Image Desc"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "idfcHeroCol2_breadcrumb",
-        "label": "Breadcrumb"
+        "label": "Breadcrumb",
+        "value": "PERSONAL BANKING / PAYMENTS / CREDIT CARD BILL PAYMENT"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "idfcHeroCol2_title",
-        "label": "Title"
+        "label": "Title",
+        "value": "Clear your credit card payments swiftly"
+      },
+      {
+        "component": "select",
+        "name": "idfcHeroCol2_titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "idfcHeroCol2_desc",
-        "label": "Description"
+        "label": "Description",
+        "value": "Ensure timely payments of your credit card bills with IDFC FIRST Bank"
       },
       {
         "component": "reference",
@@ -277,14 +311,14 @@
         "valueType": "string",
         "name": "idfcHeroCol3_feature1IconAlt",
         "label": "Feature 1 Icon Alt",
-        "value": ""
+        "value": "Feature 1 Icon Desc"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "idfcHeroCol3_feature1Desc",
         "label": "Feature 1 Description",
-        "value": ""
+        "value": "Quick & Secure Payments"
       },
       {
         "component": "reference",
@@ -298,14 +332,14 @@
         "valueType": "string",
         "name": "idfcHeroCol3_feature2IconAlt",
         "label": "Feature 2 Icon Alt",
-        "value": ""
+        "value": "Feature 2 Icon Desc"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "idfcHeroCol3_feature2Desc",
         "label": "Feature 2 Description",
-        "value": ""
+        "value": "Multiple & Convenient Payment Options"
       },
       {
         "component": "reference",
@@ -319,14 +353,35 @@
         "valueType": "string",
         "name": "idfcHeroCol3_feature3IconAlt",
         "label": "Feature 3 Icon Alt",
-        "value": ""
+        "value": "Feature 3 Icon Desc"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "idfcHeroCol3_feature3Desc",
         "label": "Feature 3 Description",
-        "value": ""
+        "value": "Easy Access Through Mobile App"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "idfcHeroCol3_feature4Icon",
+        "label": "Feature 4 Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "idfcHeroCol3_feature4IconAlt",
+        "label": "Feature 4 Icon Alt",
+        "value": "Feature 4 Icon Desc"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "idfcHeroCol3_feature4Desc",
+        "label": "Feature 4 Description",
+        "value": "No Transaction Charges"
       }
     ]
   },
