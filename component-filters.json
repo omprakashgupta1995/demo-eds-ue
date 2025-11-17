@@ -45,6 +45,13 @@
     ]
   },
   {
+    "id": "card-varient-01",
+    "components": [
+      "card-varient-01-image",
+      "card-varient-01-content"
+    ]
+  },
+  {
     "id": "banner-container",
     "components": [
       "banner"

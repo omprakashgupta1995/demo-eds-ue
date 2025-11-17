@@ -1,0 +1,18 @@
+.section.card-varient-01-container{
+    background-color: #f3f3f3;
+    padding-top: 3em;
+}
+
+#services{
+    text-align: center;
+    font-size: 48px;
+    color: #54565B;
+    line-height: 1;
+    letter-spacing: -1.6;
+    font-weight: 400;
+}
+
+.card-varient-01.block{
+    max-width: 80%;
+    margin: 0 auto;
+}
