@@ -1,0 +1,79 @@
+.fastag-apps.block {
+  border: 2px solid #a30000; /* red border */
+  border-radius: 10px;
+
+  /* padding: 20px; */
+  background: #fff;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+/* layout: two main columns */
+.fastag-apps.block > div {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left section (QR + shape) */
+.fastag-image picture,
+.fastag-image img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+/* Right content section */
+.fastag-content {
+  flex: 1;
+}
+
+.fastag-content h3 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.fastag-content p {
+  margin: 6px 0 0;
+  color: #555;
+  line-height: 1.5;
+  max-width: 550px;
+}
+
+/* Button */
+.fastag-content .button {
+  background: #a30000;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgb(163 0 0 / 30%);
+}
+
+/* Hover */
+.fastag-content .button:hover {
+  background: #7a0000;
+}
+
+/* Responsive */
+@media (width <= 768px) {
+  .fastag-apps.block > div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fastag-content p {
+    max-width: 100%;
+  }
+
+  .fastag-image picture,
+  .fastag-image img {
+    margin: 0 auto;
+  }
+}
