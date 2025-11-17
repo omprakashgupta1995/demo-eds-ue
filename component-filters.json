@@ -13,6 +13,7 @@
       "button",
       "title",
       "hero",
+      "product-banner",
       "cards",
       "columns",
       "quote",
@@ -30,6 +31,12 @@
   },
   {
     "id": "teaser-cards",
+    "components": [
+      "teaser-card"
+    ]
+  },
+  {
+    "id": "product-banner-custom",
     "components": [
       "teaser-card"
     ]
