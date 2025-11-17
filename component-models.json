@@ -255,71 +255,75 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_title",
+        "name": "product_banner_desc-title",
         "label": "Title",
         "multi": false
       },
       {
-        "component": "text",
+        "component": "select",
         "valueType": "string",
-        "name": "col1_titleType",
+        "name": "product_banner_desc-titleType",
         "label": "Title Type",
-        "options": [
+        "options":[
           {
-            "name": "h1",
-            "value": "h1"
+            "name":"H1",
+            "value":"h1"
           },
           {
-            "name": "h2",
-            "value": "h2"
+            "name":"H2",
+            "value":"h2"
           },
           {
-            "name": "h3",
-            "value": "h3"
+            "name":"H3",
+            "value":"h3"
           },
           {
-            "name": "h4",
-            "value": "h4"
+            "name":"H4",
+            "value":"h4"
           },
           {
-            "name": "h5",
-            "value": "h5"
+            "name":"H5",
+            "value":"h5"
           },
           {
-            "name": "h6",
-            "value": "h6"
+            "name":"H6",
+            "value":"h6"
+          },
+          {
+            "name":"p",
+            "value":"p"
           }
         ]
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_subtitle",
+        "name": "product_banner_desc-subtitle",
         "label": "Sub Heading",
         "multi": false
       },
       {
         "component": "aem-content",
         "valueType": "string",
-        "name": "col2-primarycta",
+        "name": "product_banner_desc_cta_section-primarycta",
         "label": "Cta Link"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2-primaryctaText",
+        "name": "product_banner_desc_cta_section-primaryctaText",
         "label": "Cta Text"
       },
       {
         "component": "aem-content",
         "valueType": "string",
-        "name": "col2-secondarylink",
+        "name": "product_banner_desc_cta_section-secondarylink",
         "label": "Secondary Link"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2-secondarylinkText",
+        "name": "product_banner_desc_cta_section-secondarylinkText",
         "label": "Link Text"
       }
     ]
