@@ -246,13 +246,6 @@
         "name": "imageAlt",
         "label": "Banner Image Alt",
         "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "mytext",
-        "label": "Banner Image Alt",
-        "value": ""
       }
     ]
   },
@@ -341,22 +334,21 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Banner Image",
-        "multi": false
+        "name": "product-banner-feature_image",
+        "label": "Feature Icon Image"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
-        "label": "Banner Image Alt",
+        "name": "product-banner-feature_imageAlt",
+        "label": "Feature Icon Alt",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "mytext",
-        "label": "Banner Text",
+        "name": "product-banner-feature_featuretext",
+        "label": "Feature Text",
         "value": ""
       }
     ]
