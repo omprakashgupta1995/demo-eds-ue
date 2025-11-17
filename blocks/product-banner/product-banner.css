@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.product-banner.block{
+    position: relative;
+}
+.product-banner.block > div:nth-of-type(2){
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top:0;
+    width: 100%;
+}
+
+.product-banner.block > div:nth-child(1) img{
+    width: 100%;
+}
+
+.product-banner.block > div:nth-of-type(2) div > div:nth-of-type(2){
+    display: flex;
+}
+
+.product-banner.block > div:nth-of-type(2) > div:nth-of-type(2) div{
+    display: flex;
+}
