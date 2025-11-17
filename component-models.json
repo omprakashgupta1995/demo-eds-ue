@@ -236,14 +236,14 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "product-banner-image",
+        "name": "image",
         "label": "Banner Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "product-banner-imageAlt",
+        "name": "imageAlt",
         "label": "Banner Image Alt",
         "value": ""
       }
