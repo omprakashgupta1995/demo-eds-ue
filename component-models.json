@@ -449,7 +449,7 @@
     ]
   },
   {
-    "id": "card-varient-01",
+    "id": "card-varient-one",
     "fields": [
       {
         "component": "text",
@@ -497,7 +497,7 @@
     ]
   },
   {
-    "id": "card-varient-01-image",
+    "id": "card-varient-one-image",
     "fields": [
       {
         "component": "reference",
@@ -516,7 +516,7 @@
     ]
   },
   {
-    "id": "card-varient-01-content",
+    "id": "card-varient-one-content",
     "fields": [
       {
         "component": "richtext",

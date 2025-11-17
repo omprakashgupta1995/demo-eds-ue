@@ -45,10 +45,10 @@
     ]
   },
   {
-    "id": "card-varient-01",
+    "id": "card-varient-one",
     "components": [
-      "card-varient-01-image",
-      "card-varient-01-content"
+      "card-varient-one-image",
+      "card-varient-one-content"
     ]
   },
   {
