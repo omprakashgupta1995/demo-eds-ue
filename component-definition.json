@@ -466,14 +466,14 @@
         },
         {
           "title": "Pranav Banner CC Items",
-          "id": "pranav-banner-cc-items",
+          "id": "pranav-cc-banner-items",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Pranav Banner CC Items",
-                  "model": "pranav-banner-cc-items"
+                  "model": "pranav-cc-banner-items"
                 }
               }
             }
