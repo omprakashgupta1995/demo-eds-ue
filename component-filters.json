@@ -41,9 +41,6 @@
     ]
   },
   {
-    "id": "section",
-    "components": [
-      "custom1"
-    ]
+    "id": "custom1"
   }
 ]
