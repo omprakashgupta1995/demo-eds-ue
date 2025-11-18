@@ -27,7 +27,8 @@
       "faq",
       "fragment",
       "demo1",
-      "bs-swiper"
+      "bs-swiper",
+      "cc-pay"
     ]
   },
   {
@@ -85,6 +86,14 @@
     "id": "bs-swiper",
     "components": [
       "bs-swiper-item"
+    ]
+  },
+   {
+    "id": "cc-pay",
+    "components": [
+      "cc-pay-banr",
+      "title",
+      "card"
     ]
   }
 ]

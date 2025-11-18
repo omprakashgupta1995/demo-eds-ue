@@ -727,5 +727,100 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "cc-pay-banr",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Bg Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_icon1",
+        "label": "Icon Image 1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon1Alt",
+        "label": "Icon 1 Image Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon1desc",
+        "label": "Icon 1 Description"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_icon2",
+        "label": "Icon Image 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon2Alt",
+        "label": "Icon 2 Image Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon2desc",
+        "label": "Icon 2 Description"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_icon3",
+        "label": "Icon Image 3"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon3Alt",
+        "label": "Icon 3 Image Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon3desc",
+        "label": "Icon 3 Description"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_icon4",
+        "label": "Icon Image 4"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon4Alt",
+        "label": "Icon 4 Image Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_icon4desc",
+        "label": "Icon 4 Description"
+      }
+    ]
   }
 ]

@@ -1,10 +1,128 @@
-.demo1-container{
-  margin: 40px 0;
-  background: transparent;
-    }
+.demo1-wrapper {
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0 !important ;
+}
 
-.demo1-wrapper .demo1{
-  background-position: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
+.demo1 > div, .demo1 > div > div:first-child{
+  position: relative;
+}
+
+/* Background image container */
+.demo1 > div > div:first-child picture img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.demo1-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;     /* higher z-index overlays */
+  display: flex;
+  /* align-items: center; */
+  padding: 0;
+  max-width: 1240px;
+  /* margin: 0 auto; */
+}
+
+.demo1-content .rightContent{
+    position: absolute;
+    right: 2px;
+    bottom: 0;
+}
+
+.demo1-content .rightContent picture img{
+    width: 517px;
+    height: 432px;
+}
+
+.demo1-content .leftContent{
+  width: 62.5%;
+}
+
+/* Heading */
+.demo1-content p:first-child {
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.demo1-content strong {
+  color: #ffe600;
+}
+
+/* Icons section */
+.demo1-icons {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.demo1-icon-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.demo1-icon-item picture img {
+  width: 60px;
+  height: 60px;
+}
+
+.demo1-icon-desc {
+  font-size: 16px;
+  margin: 0;
+  color: #f2f2f2;
+}
+
+/* CTA button */
+.demo1 .button-container {
+  margin: 20px 0;
+}
+
+.demo1 .button {
+  padding: 12px 24px;
+  background-color: #007aff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.demo1 .button:hover {
+  background-color: #005fcc;
+}
+
+/* Final small image (optional) */
+.demo1-final-img {
+  margin-top: 20px;
+}
+
+.demo1-final-img img {
+  width: 150px;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .demo1-content {
+    position: static;
+    transform: none;
+    padding: 30px 20px;
+  }
+
+  .demo1-content p:first-child {
+    font-size: 24px;
+  }
+
+  .demo1-icon-item picture img {
+    width: 48px;
+    height: 48px;
+  }
 }
