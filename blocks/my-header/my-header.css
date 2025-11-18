@@ -12,6 +12,10 @@ body {
    min-height: 100%;
 }
 
+p {
+   margin: inherit;
+}
+
 body {
    color: #fff;
    background-color: #000;
@@ -46,6 +50,7 @@ body {
    grid-area: navigation;
    display: flex;
    justify-content: center;
+   align-items: center;
    border-bottom: solid 2px #282828;
 }
 

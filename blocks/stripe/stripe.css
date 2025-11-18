@@ -1,0 +1,14 @@
+.stripe {
+   max-width: 1280px;
+   margin: 0 auto;
+}
+
+.stripe .row-1 .col-1 p {
+   font-family: Inter;
+   font-weight: 600;
+   font-size: 140px;
+   line-height: 144px;
+   letter-spacing: -7.5px;
+   text-align: center;
+   text-wrap: balance;
+}
