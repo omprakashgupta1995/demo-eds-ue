@@ -51,13 +51,6 @@
         }
       ]
     }
-  ],
-  "filters": [
-    {
-      "id": "custom",
-      "components": [
-        "custom"
-      ]
-    }
   ]
 }
+
