@@ -703,14 +703,56 @@
       },
       {
         "component": "text",
-        "name": "pair_navigation1",
+        "name": "npair_navigation1",
         "label": "navigation1",
         "value": ""
       },
       {
         "component": "text",
-        "name": "pair_navigation2",
+        "name": "npair_navigation2",
         "label": "navigation2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "npair_navigation3",
+        "label": "navigation3",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "npair_navigation4",
+        "label": "navigation4",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "name": "menu_image",
+        "label": "menu image",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "name": "inpair1_icon",
+        "label": "Icon 1 Image",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "inpair1_icon-text",
+        "label": "Icon 1 Text",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "name": "inpair2_icon",
+        "label": "Icon 2 Image",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "inpair2_icon-text",
+        "label": "Icon 2 Text",
         "value": ""
       }
     ]
