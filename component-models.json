@@ -781,7 +781,7 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "description",
         "value": "",
         "label": "Banner Description",
