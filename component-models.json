@@ -739,7 +739,7 @@
       },
       {
         "component": "text",
-        "name": "icon1_iconOneText",
+        "name": "icon1_icon-one-text",
         "label": "Icon 1 Text",
         "value": ""
       },
@@ -751,7 +751,7 @@
       },
       {
         "component": "text",
-        "name": "icon2_iconTwoText",
+        "name": "icon2_icon-two-text",
         "label": "Icon 2 Text",
         "value": ""
       }
