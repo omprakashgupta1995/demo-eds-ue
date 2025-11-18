@@ -27,7 +27,15 @@
       "banner-with-icons",
       "faq",
       "fragment",
-      "pranav-swiper"
+      "pranav-swiper",
+      "pranav-cc-banner",
+      "pranav-cc-nav",
+      "pranav-cc-overview",
+      "pranav-cc-services",
+      "pranav-cc-info-card",
+      "pranav-cc-accordian",
+      "pranav-cc-discover",
+      "pranav-cc-contact"
     ]
   },
   {
@@ -65,5 +73,25 @@
   {
     "id": "column",
     "components": ["text", "image", "button", "title"]
+  },
+  {
+    "id": "pranav-cc-banner",
+    "components": ["pranav-cc-banner-items"]
+  },
+  {
+    "id": "pranav-cc-services",
+    "components": ["pranav-cc-services-card"]
+  },
+  {
+    "id": "pranav-cc-accordian",
+    "components": ["pranav-cc-accordian-item"]
+  },
+  {
+    "id": "pranav-cc-discover",
+    "components": ["pranav-cc-discover-card"]
+  },
+  {
+    "id": "pranav-cc-contact",
+    "components": ["pranav-cc-contact-card"]
   }
 ]
