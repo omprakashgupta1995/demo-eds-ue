@@ -231,6 +231,159 @@
     ]
   },
   {
+    "id": "product-banner-idfc",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_bgImage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_bgImageAlt",
+        "label": "Background Image Alt",
+        "value": ""
+      },
+
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_breadcrumb",
+        "label": "Breadcrumb",
+        "value": ""
+      },
+
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "col2_titleType",
+        "label": "Title Type",
+        "value": "",
+        "options": [
+          { "name": "h1", "value": "h1" },
+          { "name": "h2", "value": "h2" }
+        ]
+      },
+
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_subTitle",
+        "label": "Sub Title",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "col2_subTitleType",
+        "label": "Sub Title Type",
+        "value": "",
+        "options": [
+          { "name": "h3", "value": "h3" },
+          { "name": "h4", "value": "h4" }
+        ]
+      },
+
+      {
+        "component": "reference",
+        "name": "col2_icon1",
+        "valueType": "string",
+        "label": "Icon 1",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_icon1Alt",
+        "valueType": "string",
+        "label": "Icon 1 Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_text1",
+        "valueType": "string",
+        "label": "Icon 1 Text",
+        "value": ""
+      },
+
+      {
+        "component": "reference",
+        "name": "col2_icon2",
+        "valueType": "string",
+        "label": "Icon 2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_icon2Alt",
+        "valueType": "string",
+        "label": "Icon 2 Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_text2",
+        "valueType": "string",
+        "label": "Icon 2 Text",
+        "value": ""
+      },
+
+      {
+        "component": "reference",
+        "name": "col2_icon3",
+        "valueType": "string",
+        "label": "Icon 3",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_icon3Alt",
+        "valueType": "string",
+        "label": "Icon 3 Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_text3",
+        "valueType": "string",
+        "label": "Icon 3 Text",
+        "value": ""
+      },
+
+      {
+        "component": "reference",
+        "name": "col2_icon4",
+        "valueType": "string",
+        "label": "Icon 4",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_icon4Alt",
+        "valueType": "string",
+        "label": "Icon 4 Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "col2_text4",
+        "valueType": "string",
+        "label": "Icon 4 Text",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "whatsapp-banner",
     "fields": [
       {
@@ -348,7 +501,6 @@
         "label": "CTA Text",
         "valueType": "string"
       }
-
     ]
   },
   {
@@ -436,15 +588,15 @@
         "valueType": "string"
       },
       {
-      "component": "checkbox-group",
-      "label": "Checkbox Group",
-      "name": "checkbox",
-      "valueType": "string[]",
-      "options": [
-        { "name": "Option 1", "value": "option1" },
-        { "name": "Option 2", "value": "option2" }
-      ]
-    }
+        "component": "checkbox-group",
+        "label": "Checkbox Group",
+        "name": "checkbox",
+        "valueType": "string[]",
+        "options": [
+          { "name": "Option 1", "value": "option1" },
+          { "name": "Option 2", "value": "option2" }
+        ]
+      }
     ]
   },
   {
@@ -762,16 +914,16 @@
         ]
       },
       {
-        "component" : "reference" ,
-        "label" : "Select Image",
-        "name" : "image",
-        "valueType" : "string"
+        "component": "reference",
+        "label": "Select Image",
+        "name": "image",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Image Alt",
-        "name" : "imageAlt",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Image Alt",
+        "name": "imageAlt",
+        "valueType": "string"
       }
     ]
   },
@@ -779,92 +931,92 @@
     "id": "teaser-card",
     "fields": [
       {
-        "component" : "reference" ,
-        "label" : "Select Image",
-        "name" : "image",
-        "valueType" : "string"
+        "component": "reference",
+        "label": "Select Image",
+        "name": "image",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Image Alt",
-        "name" : "imageAlt",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Image Alt",
+        "name": "imageAlt",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Sub Title",
-        "name" : "teaserText_subtitle",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Sub Title",
+        "name": "teaserText_subtitle",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Title",
-        "name" : "teaserText_title",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Title",
+        "name": "teaserText_title",
+        "valueType": "string"
       },
       {
-        "component" : "select" ,
-        "label" : "Title Type",
-        "name" : "teaserText_titleType",
-        "valueType" : "string",
-        "options" : [
+        "component": "select",
+        "label": "Title Type",
+        "name": "teaserText_titleType",
+        "valueType": "string",
+        "options": [
           {
-            "name" : "H1",
-            "value" : "h1"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "name" : "H2",
-            "value" : "h2"
+            "name": "H2",
+            "value": "h2"
           },
           {
-            "name" : "H3",
-            "value" : "h3"
+            "name": "H3",
+            "value": "h3"
           }
         ]
       },
       {
-        "component" : "richtext" ,
-        "label" : "Description",
-        "name" : "teaserText_description",
-        "valueType" : "string"
+        "component": "richtext",
+        "label": "Description",
+        "name": "teaserText_description",
+        "valueType": "string"
       },
       {
-        "component" : "aem-content" ,
-        "label" : "Cta 1",
-        "name" : "teaserText_cta1",
-        "valueType" : "string"
+        "component": "aem-content",
+        "label": "Cta 1",
+        "name": "teaserText_cta1",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Cta 1 Text",
-        "name" : "teaserText_cta1Text",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Cta 1 Text",
+        "name": "teaserText_cta1Text",
+        "valueType": "string"
       },
       {
-        "component" : "aem-content" ,
-        "label" : "Cta 2",
-        "name" : "teaserText_cta2",
-        "valueType" : "string"
+        "component": "aem-content",
+        "label": "Cta 2",
+        "name": "teaserText_cta2",
+        "valueType": "string"
       },
       {
-        "component" : "text" ,
-        "label" : "Cta 2 Text",
-        "name" : "teaserText_cta2Text",
-        "valueType" : "string"
+        "component": "text",
+        "label": "Cta 2 Text",
+        "name": "teaserText_cta2Text",
+        "valueType": "string"
       },
       {
-        "component" : "select" ,
-        "label" : "Cta 2 Type",
-        "name" : "teaserText_cta2Type",
-        "valueType" : "string",
-        "options" : [
+        "component": "select",
+        "label": "Cta 2 Type",
+        "name": "teaserText_cta2Type",
+        "valueType": "string",
+        "options": [
           {
-            "name" : "Primary",
-            "value" : "primary"
+            "name": "Primary",
+            "value": "primary"
           },
           {
-            "name" : "Secondary",
-            "value" : "secondary"
+            "name": "Secondary",
+            "value": "secondary"
           }
         ]
       }
