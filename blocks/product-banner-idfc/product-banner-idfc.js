@@ -1,8 +1,22 @@
 export default function decorate(block) {
   block.classList.add("banner-root");
+  block.classList.add("banner-root");
+
+  const [imageSection, contentSection] = block.children;
+
+  // Extract background image
+  // const img = imageSection.querySelector("img");
+  // if (img) {
+  //   block.style.backgroundImage = `url(${img.src})`;
+  // }
+
+  // Remove the separate image section
+  // imageSection.remove();
+
+
 
   // First two children
-  const [imageSection, contentSection] = block.children;
+  // const [imageSection, contentSection] = block.children;
 
   imageSection.classList.add("banner-image");
   contentSection.classList.add("banner-content");

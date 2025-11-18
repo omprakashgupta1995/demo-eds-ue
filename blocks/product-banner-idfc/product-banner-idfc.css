@@ -1,4 +1,78 @@
-*{
-    height: 100%;
-    width: 100%;
+/* stylelint-disable */
+/* Root container with background image */
+/* Full-width breakout */
+.product-banner-idfc-container{
+    position: relative;
 }
+.banner-root {
+  width: 100%;
+height: auto;
+   /* NEW → move content right */
+}
+
+.banner-image{
+    position: absolute;
+    inset: 0;
+}
+
+.banner-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Foreground content */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column; /* you MUST add this */
+  margin: 0; /* remove 120px */
+}
+
+/* Title styling */
+.banner-text h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 50px;
+}
+
+/* Description */
+.banner-text p {
+  font-size: 18px;
+  /* line-height: 1.5; */
+  /* margin: 0; */
+}
+
+/* Features container */
+.banner-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Each feature item */
+.banner-feature {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Icons */
+.banner-feature-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Text */
+.banner-feature-text {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
