@@ -231,7 +231,7 @@
     ]
   },
   {
-    "id": "idfc-product-banner",
+    "id": "product-banner-idfc",
     "fields": [
       {
         "component": "reference",
@@ -248,27 +248,25 @@
         "value": ""
       },
 
-   {
-  "component": "repeatable",
-  "name": "col2_breadcrumb",
-  "label": "Breadcrumb Items",
-  "fields": [
-    {
-      "component": "text",
-      "name": "label",
-      "label": "Breadcrumb Label",
-      "valueType": "string"
-    },
-    {
-      "component": "aem-content",
-      "name": "link",
-      "label": "Breadcrumb Link",
-      "valueType": "string"
-    }
-  ]
-}
-,
-
+      {
+        "component": "repeatable",
+        "name": "col2_breadcrumb",
+        "label": "Breadcrumb Items",
+        "fields": [
+          {
+            "component": "text",
+            "name": "label",
+            "label": "Breadcrumb Label",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "Breadcrumb Link",
+            "valueType": "string"
+          }
+        ]
+      },
       {
         "component": "text",
         "valueType": "string",
