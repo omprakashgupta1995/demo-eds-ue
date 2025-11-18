@@ -502,14 +502,14 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
+        "name": "col0_image",
         "label": "Card Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
+        "name": "col0_imageAlt",
         "label": "Alt",
         "value": ""
       },
