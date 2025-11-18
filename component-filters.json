@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "custom-2"
+      "fragment"
     ]
   },
   {
@@ -39,8 +38,5 @@
       "button",
       "title"
     ]
-  },
-  {
-    "id": "custom-2"
   }
 ]
