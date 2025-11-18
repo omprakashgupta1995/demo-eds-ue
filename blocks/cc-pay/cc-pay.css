@@ -1,4 +1,125 @@
+.cards-container .default-content-wrapper {
+  padding: 60px 0 0 0;
+  background: #ffffff;
+  max-width: 100% !important;
+  margin: 0 !important
+}
 
-.default-content-wrapper p{
-  padding : 60px;
+.cards-container .default-content-wrapper p {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.cards-container .default-content-wrapper p strong {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.cards-container .default-content-wrapper p u {
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 15px;
+  color: #54565B;
+}
+
+@media (min-width: 1200px) {
+  .cards-container .default-content-wrapper p {
+    max-width: 1140px;
+  }
+}
+
+.cards-container .default-content-wrapper h2 {
+  background: #F5F5F5;
+  width: 100%;
+  padding: 80px 0px 4px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.cards-wrapper {
+  background: #F5F5F5;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.cards-wrapper .cards ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.cards-wrapper .cards ul li {
+  background: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  flex-direction: row;
+}
+
+.cards-wrapper .cards ul li .cards-card-image {
+  padding: 25px;
+  text-align: center;
+  width: 35%;
+}
+
+.cards-wrapper .cards ul li .cards-card-image img {
+  min-height: 250px;
+  min-width: 250px;
+  width: 100%;
+
+}
+.cards-wrapper .cards ul li .cards-card-body {
+padding: 40px 20px 40px 40px;
+    width: 64%;
+    border-left: 1px solid #E8E8E8;
+    min-height: 450px;
+    margin:0;
+    font-size:14px;
+    color:#54565B;
+}
+.cards-wrapper .cards ul li .cards-card-body strong{
+  font-weight: 700;
+}
+
+.cards-wrapper .cards ul li .cards-card-body a{
+min-width: unset;
+    height: unset;
+    width: unset;
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 25px;
+    background: #9b1e26;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    border: 0;
+}
+.cards-wrapper .cards ul li .cards-card-body .button-container{
+margin-top: 230px;
+}
+
+
+
+
+@media (min-width: 1200px) {
+  .cards-wrapper .cards ul li {
+    max-width: 1140px;
+  }
+}
+.cards-wrapper .cards ul li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.cards-wrapper:nth-of-type(2){
+  background:#ffffff;
 }
