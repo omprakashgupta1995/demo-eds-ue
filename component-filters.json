@@ -31,7 +31,9 @@
       "fastag-apps",
       "product-cards",
       "secondary-nav",
-      "git-block"
+      "git-block",
+      "cc-bill-banner",
+      "faq-accordion"
     ]
   },
   {
@@ -108,6 +110,18 @@
     "id": "product-cards",
     "components": [
       "product-cards-item"
+    ]
+  },
+  {
+    "id": "cc-bill-banner",
+    "components": [
+      "cc-bill-banner-item"
+    ]
+  },
+  {
+    "id": "faq-accordion",
+    "components": [
+      "faq-accordion-item"
     ]
   }
 ]
