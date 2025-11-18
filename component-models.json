@@ -690,17 +690,15 @@
     "id": "my-header",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "text1",
-        "label": "text1",
+        "component": "reference",
+        "name": "logo",
+        "label": "logo",
         "value": ""
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "text2",
-        "label": "text2",
+        "component": "reference",
+        "name": "logoAlt",
+        "label": "logo Alt",
         "value": ""
       }
     ]
