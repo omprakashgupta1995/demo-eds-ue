@@ -762,7 +762,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
+        "name": "banner_image",
         "label": "Banner Image",
         "multi": false
       },
