@@ -231,7 +231,7 @@
     ]
   },
   {
-    "id": "product-banner-idfc",
+    "id": "idfc-product-banner",
     "fields": [
       {
         "component": "reference",
