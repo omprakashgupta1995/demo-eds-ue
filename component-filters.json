@@ -82,7 +82,8 @@
   {
     "id": "payment-transfer",
     "components": [
-      "payment-transfer-item"
+      "payment-transfer-item",
+      "payment-transfer-item-v2"
     ]
   },
   {

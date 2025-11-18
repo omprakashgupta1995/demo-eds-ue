@@ -419,6 +419,21 @@
           }
         },
         {
+          "title": "Payment transfer item v2",
+          "id": "payment-transfer-item-v2",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Payment transfer item v2",
+                  "model": "payment-transfer-item-v2"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Fastag Apps",
           "id": "fastag-apps",
           "plugins": {

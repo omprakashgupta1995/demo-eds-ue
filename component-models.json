@@ -622,6 +622,29 @@
     ]
   },
   {
+    "id": "payment-transfer-item-v2",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Enter feature text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col2_imageAlt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
     "id": "fastag-apps-item",
     "fields": [
       {
