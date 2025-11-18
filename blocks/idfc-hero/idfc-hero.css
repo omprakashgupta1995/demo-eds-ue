@@ -1,0 +1,135 @@
+.section {
+    margin: 0 !important;
+}
+
+.idfc-hero-container {
+    position: relative;
+}
+
+/* Block root */
+.idfc-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: clamp(32rem, 80vh, 40rem);
+}
+
+/* Background Image Wrapper */
+.idfc-hero__bg-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.idfc-hero__bg-wrapper picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Breadcrumb */
+.idfc-hero__breadcrumb {
+    font-size: 0.75rem;
+    background: #fff;
+    color: #54565b;
+    border-radius: 999px;
+    max-width: fit-content;
+    padding: 0.25rem 1.25rem;
+    margin-block-end: 1rem;
+}
+
+.idfc-hero__breadcrumb-text {
+    /* reset default margin */
+    margin: 0;
+}
+
+/* Main Content Layout*/
+.idfc-hero__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.idfc-hero__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.idfc-hero__section--left {
+    max-width: 42%;
+    justify-content: center;
+}
+
+.idfc-hero__section--right {
+    max-width: 25%;
+    display: flex;
+    gap: 2.25rem;
+}
+
+/* Title */
+.idfc-hero__title {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #54565b;
+    margin: 0 0 1rem 0;
+    max-width: 75%;
+}
+
+/* Description */
+.idfc-hero__description {
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin: 0;
+    max-width: 60%;
+}
+
+/* Features Container */
+.idfc-hero__features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    max-width: 450px;
+}
+
+/* Feature */
+.idfc-hero__feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Feature Icon Wrapper */
+.idfc-hero__feature-icon {
+    width: 4.25rem;
+    aspect-ratio: 1;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.idfc-hero__feature-icon picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.idfc-hero__feature-icon img {
+    width: 2rem;
+    height: auto;
+    max-height: 2rem;
+    object-fit: contain;
+}
+
+/* Feature text */
+.idfc-hero__feature-text {
+    font-size: 1rem;
+    color: #54565b;
+    line-height: 1.4;
+    margin: 0;
+}
