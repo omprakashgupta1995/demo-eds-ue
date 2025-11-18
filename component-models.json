@@ -723,7 +723,7 @@
     ]
   },
   {
-    "id": "product-cards-item",
+    "id": "cc-bill-banner-item",
     "fields": [
       {
         "component": "reference",
