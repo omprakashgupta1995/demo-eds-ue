@@ -692,8 +692,15 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_imageAlt",
-        "label": "col-1 imageAlt",
+        "name": "text1",
+        "label": "text1",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text2",
+        "label": "text2",
         "value": ""
       }
     ]
