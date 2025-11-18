@@ -696,7 +696,7 @@
         "value": ""
       },
       {
-        "component": "reference",
+        "component": "text",
         "name": "logoAlt",
         "label": "logo Alt",
         "value": ""
