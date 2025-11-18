@@ -248,13 +248,26 @@
         "value": ""
       },
 
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col2_breadcrumb",
-        "label": "Breadcrumb",
-        "value": ""
-      },
+   {
+  "component": "repeatable",
+  "name": "col2_breadcrumb",
+  "label": "Breadcrumb Items",
+  "fields": [
+    {
+      "component": "text",
+      "name": "label",
+      "label": "Breadcrumb Label",
+      "valueType": "string"
+    },
+    {
+      "component": "aem-content",
+      "name": "link",
+      "label": "Breadcrumb Link",
+      "valueType": "string"
+    }
+  ]
+}
+,
 
       {
         "component": "text",
