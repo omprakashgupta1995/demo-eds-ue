@@ -703,13 +703,13 @@
       },
       {
         "component": "text",
-        "name": "navigation1",
+        "name": "col1_navigation1",
         "label": "navigation1",
         "value": ""
       },
       {
         "component": "text",
-        "name": "navigation2",
+        "name": "col1_navigation2",
         "label": "navigation2",
         "value": ""
       }
