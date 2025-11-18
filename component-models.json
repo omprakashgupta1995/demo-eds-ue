@@ -700,6 +700,18 @@
         "name": "logoAlt",
         "label": "logo Alt",
         "value": ""
+      },
+      {
+        "component": "text",
+        "name": "navigation1",
+        "label": "navigation1",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "navigation2",
+        "label": "navigation2",
+        "value": ""
       }
     ]
   }
