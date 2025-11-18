@@ -756,5 +756,22 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id": "stripe",
+    "fields": [
+      {
+        "component": "text",
+        "name": "stripe-text",
+        "label": "text",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "name": "stripe-img",
+        "label": "Image",
+        "value": ""
+      }
+    ]
   }
 ]
