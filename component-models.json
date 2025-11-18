@@ -798,7 +798,7 @@
         "component": "text",
         "valueType": "string",
         "name": "banner_icon1Alt",
-        "label": "Icon Alternate Text",
+        "label": "Icon Alternate Text 1",
         "value": ""
       },
       {
@@ -811,8 +811,8 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "banner_icon1",
-        "label": "Banner Icon 1",
+        "name": "banner_icon2",
+        "label": "Banner Icon 2",
         "multi": false
       },
       {
