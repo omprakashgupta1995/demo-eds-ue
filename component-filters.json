@@ -92,7 +92,7 @@
     "id": "cc-pay",
     "components": [
       "cc-pay-banr",
-      "title",
+      "text",
       "card"
     ]
   }
