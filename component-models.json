@@ -745,13 +745,13 @@
       },
       {
         "component": "reference",
-        "name": "inpair_icon",
+        "name": "inpairr_icon",
         "label": "Icon 2 Image",
         "value": ""
       },
       {
         "component": "text",
-        "name": "inpair_icon-text",
+        "name": "inpairr_icon-text",
         "label": "Icon 2 Text",
         "value": ""
       }
