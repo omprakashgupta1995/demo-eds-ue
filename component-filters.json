@@ -47,7 +47,6 @@
   {
     "id": "card-varient-one",
     "components": [
-      "card-varient-one-image",
       "card-varient-one-content"
     ]
   },

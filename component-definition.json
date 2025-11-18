@@ -237,21 +237,6 @@
           }
         },
         {
-          "title": "Card Varient Image Section",
-          "id": "card-varient-one-image",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Card Varient Image Section",
-                  "model": "card-varient-one-image"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Card Varient Content Section",
           "id": "card-varient-one-content",
           "plugins": {

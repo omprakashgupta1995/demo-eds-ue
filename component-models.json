@@ -497,25 +497,6 @@
     ]
   },
   {
-    "id": "card-varient-one-image",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Card Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      }
-    ]
-  },
-  {
     "id": "card-varient-one-content",
     "fields": [
       {
