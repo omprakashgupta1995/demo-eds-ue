@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html,
+body {
+   min-height: 100%;
+}
+
+body {
+   color: #fff;
+   background-color: #000;
+   font-family: "Inter", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+}
+
+.my-header {
+   border: solid 2px #282828;
+   border-radius: 24px;
+   display: grid;
+   grid-template-columns: 194px 1fr 1fr 232px;
+   grid-template-rows: 1fr 1fr;
+   grid-template-areas:
+      "logo navigation navigation menu"
+      "logo CTA_Icon CTA_Icon CTA_Icon";
+   max-width: 1280px;
+   margin: 48px auto 64px auto;
+   min-height: 112px;
+}
+
+.my-header .row-1 {
+   grid-area: logo;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-right: solid 2px #282828;
+}
+
+.my-header .row-2 {
+   grid-area: navigation;
+   display: flex;
+   justify-content: center;
+   border-bottom: solid 2px #282828;
+}
+
+.my-header .row-3 {
+   grid-area: menu;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-left: solid 2px #282828;
+   border-bottom: solid 2px #282828;
+}
+
+.my-header .parent_row4_row5 {
+   grid-area: CTA_Icon;
+   display: flex;
+   align-items: center;
+}
+
+.my-header .row-4 {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   border-right: solid 2px #282828;
+}
+
+.my-header .row-5 {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+}
+
+
+
+.my-header .row-2 .col-1 {
+   color: #BDBDBD;
+   font-weight: 600;
+   font-size: 14px;
+   display: flex;
+   gap: 40px;
+}
+
+.my-header .row-4 .col-1 {
+   color: #BDBDBD;
+   font-weight: 600;
+   font-size: 14px;
+   display: flex;
+   gap: 5px;
+}
+
+.my-header .row-5 .col-1 {
+   color: #BDBDBD;
+   font-weight: 600;
+   font-size: 14px;
+   display: flex;
+   gap: 5px;
+}
