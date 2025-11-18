@@ -16,7 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "custom2"
+      "custom-2"
     ]
   },
   {
@@ -41,6 +41,6 @@
     ]
   },
   {
-    "id": "custom2"
+    "id": "custom-2"
   }
 ]
