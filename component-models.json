@@ -386,6 +386,75 @@
     ]
   },
   {
+    "id": "idfc-services",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "idfcServicesCol1_heading",
+        "label": "Heading",
+        "value": "Clear your credit card payments swiftly"
+      },
+      {
+        "component": "select",
+        "name": "idfcServicesCol1_headingType",
+        "label": "Heading Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "idfc-service-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "idfcServiceCol1_cardImage",
+        "label": "Card Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "idfcServiceCol1_cardImageAlt",
+        "label": "Card Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "idfcServiceCol2_cardContent",
+        "label": "Card Content",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "label": "Card Button Link",
+        "name": "idfcServiceCol2_cardButtonLink"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "label": "Card Button Text",
+        "name": "idfcServiceCol2_cardButtonText"
+      }
+    ]
+  },
+  {
     "id": "whatsapp-banner",
     "fields": [
       {

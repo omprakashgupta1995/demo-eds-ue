@@ -14,6 +14,7 @@
       "title",
       "hero",
       "idfc-hero",
+      "idfc-services",
       "whatsapp-banner",
       "custom-swiper",
       "cards",
@@ -30,6 +31,12 @@
       "teaser-cards",
       "faq",
       "fragment"
+    ]
+  },
+  {
+    "id": "idfc-services",
+    "components": [
+      "idfc-service"
     ]
   },
   {
