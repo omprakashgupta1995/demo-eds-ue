@@ -849,6 +849,27 @@
         "value": "",
         "label": "Icon 3 Description",
         "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "banner_icon4",
+        "label": "Banner Icon 4",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "banner_icon4Alt",
+        "label": "Icon 4 Alternate Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "banner_icon4description",
+        "value": "",
+        "label": "Icon 4 Description",
+        "valueType": "string"
       }
     ]
   }
