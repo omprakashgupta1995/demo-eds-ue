@@ -36,7 +36,8 @@
   {
     "id": "idfc-services",
     "components": [
-      "idfc-service-card"
+      "idfc-service-card",
+      "button"
     ]
   },
   {
