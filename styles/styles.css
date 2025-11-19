@@ -255,3 +255,9 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+.section.dark{
+  background-color: var(--dark-color);
+  color: var(--background-color);
+  margin: 0;
+  padding: 40px 0;
+}
