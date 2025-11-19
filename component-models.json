@@ -975,7 +975,7 @@
       },
       {
         "component": "text",
-        "name": "navItem",
+        "name": "navIdText",
         "value": "",
         "label": "Nav Text",
         "valueType": "string"
