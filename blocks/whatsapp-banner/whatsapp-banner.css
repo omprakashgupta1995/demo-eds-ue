@@ -1,0 +1,8 @@
+.whatsapp-banner {
+    position: relative;
+}
+
+.whatsapp-banner:nth-child(2) {
+    position: absolute;
+    top: 0;
+}
