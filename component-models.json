@@ -1028,8 +1028,11 @@
       {
         "component": "boolean",
         "label": "Toggle to push image to the right",
-        "name": "imageToggle",
-        "valueType": "boolean"
+        "name": "boolean",
+        "valueType": "boolean",
+        "validation": {
+          "customErrorMsg": "Think, McFly. Think!"
+        }
       },
       {
         "component": "reference",
