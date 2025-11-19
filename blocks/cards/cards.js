@@ -1,6 +1,6 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
-// import loadEmbed from '../embed/embed.js';
+import { loadEmbed } from '../embed/embed.js';
 
 export default function decorate(block) {
   /* change to ul, li */
@@ -26,4 +26,13 @@ export default function decorate(block) {
   //   const link = element.querySelector('a').getAttribute('href'),
   //   loadEmbed(block, link, false);
   // })
+  ul.querySelectorAll('li').forEach((card) => {
+    const linkElement = card.querySelector('a');
+    if (linkElement && (linkElement.href.includes('youtube') || linkElement.href.includes('x.com'))) {
+      const link = linkElement.href;
+      const cardBody = card.querySelector('.cards-car-body');
+      cardBody.textContent = '';
+      loadEmbed(cardBody, link, false);
+    }
+  });
 }
