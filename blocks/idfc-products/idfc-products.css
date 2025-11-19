@@ -1,0 +1,117 @@
+.section.idfc-products-container {
+    background-color: #f3f3f3;
+    padding-block: 3rem;
+}
+
+.section.idfc-products-container .default-content-wrapper {
+    font-size: 3rem;
+    font-weight: lighter;
+    color: #54565b;
+    text-align: center;
+}
+
+.section.idfc-products-container .default-content-wrapper :is(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+
+.idfc-products {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 2rem;
+}
+
+.idfc-product__card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 2rem;
+    padding-top: 1.5rem;
+    color: #54565b;
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+}
+
+.idfc-product__card-image picture,
+.idfc-product__card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.idfc-product__card-image img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    margin-inline-end: 1rem;
+}
+
+.idfc-product__card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+}
+
+.idfc-product__card-content> :first-child {
+    position: relative;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.idfc-product__card-content> :first-child::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    bottom: -0.5rem;
+    width: 15%;
+    height: 1px;
+    background-color: #9b1e26;
+}
+
+.idfc-product__card-content> :nth-child(2) {
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 1.25rem;
+}
+
+.idfc-product__card-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.idfc-product__card-buttons .button-container,
+.idfc-product__card-buttons a.button {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.idfc-product__card-buttons .button-container a.button {
+    font-size: 14px;
+    background-color: #9b1e26;
+    padding: 0.5rem 1.5rem;
+}
+
+.idfc-product__card-buttons .button-container:nth-of-type(2) a.button {
+    color: #9b1e26;
+    background-color: unset;
+    border: none;
+}
+
+/* .idfc-product__card-content .button-container {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.idfc-product__card-content .button-container .button {
+    background-color: #9b1e26;
+    margin-block: 0;
+    padding: 0.5rem 1.5rem;
+} */
