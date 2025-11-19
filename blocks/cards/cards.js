@@ -1,5 +1,6 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
+// import loadEmbed from '../embed/embed.js';
 
 export default function decorate(block) {
   /* change to ul, li */
@@ -21,4 +22,8 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(ul);
+  // Array.from(block.children).forEach((element)=>{
+  //   const link = element.querySelector('a').getAttribute('href'),
+  //   loadEmbed(block, link, false);
+  // })
 }
