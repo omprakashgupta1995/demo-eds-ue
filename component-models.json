@@ -576,6 +576,30 @@
     ]
   },
   {
+    "id": "idfc-contact-us",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_contactItem1Icon",
+        "label": "Contact Item 1 Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_contactItem1IconAlt",
+        "label": "Contact Item 1 Icon Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_contactItem1Desc",
+        "label": "Contact Item 1 Description"
+      }
+    ]
+  },
+  {
     "id": "whatsapp-banner",
     "fields": [
       {
