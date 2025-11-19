@@ -769,7 +769,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
+        "name": "bannerImageAlt",
         "label": "Alt",
         "value": ""
       },
