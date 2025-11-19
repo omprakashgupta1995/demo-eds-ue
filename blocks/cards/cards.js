@@ -1,4 +1,3 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 import { loadEmbed } from '../embed/embed.js';
 import { createModal } from '../modal/modal.js';
@@ -21,7 +20,6 @@ export default function decorate(block) {
 
   ul.querySelectorAll('li').forEach((card) => {
     const cardBody = card.querySelector('.cards-card-body');
-    const cardImageDiv = card.querySelector('.cards-card-image');
     let link = null;
 
     const linkElement = cardBody.querySelector('a');
