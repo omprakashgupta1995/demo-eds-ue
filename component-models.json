@@ -979,388 +979,388 @@
         "value": "",
         "label": "Nav Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pranav-cc-overview",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title Text",
+        "valueType": "string"
       },
       {
-        "id": "pranav-cc-overview",
-        "fields": [
+        "component": "select",
+        "name": "titleType",
+        "value": "",
+        "label": "Title Text Type",
+        "valueType": "string",
+        "options": [
           {
-            "component": "text",
-            "name": "title",
-            "value": "",
-            "label": "Title Text",
-            "valueType": "string"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "component": "select",
-            "name": "titleType",
-            "value": "",
-            "label": "Title Text Type",
-            "valueType": "string",
-            "options": [
-              {
-                "name": "H1",
-                "value": "h1"
-              },
-              {
-                "name": "H2",
-                "value": "h2"
-              },
-              {
-                "name": "H3",
-                "value": "h3"
-              }
-            ]
+            "name": "H2",
+            "value": "h2"
           },
           {
-            "component": "richtext",
-            "name": "description",
-            "value": "",
-            "label": "Description",
-            "valueType": "string"
+            "name": "H3",
+            "value": "h3"
           }
         ]
       },
       {
-        "id": "pranav-cc-services-card",
-        "fields": [
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pranav-cc-services-card",
+    "fields": [
+      {
+        "component": "boolean",
+        "label": "Toggle to push image to the right",
+        "name": "imageToggle",
+        "valueType": "boolean"
+      },
+      {
+        "component": "reference",
+        "name": "col1_cardImage",
+        "value": "",
+        "label": "Card Image",
+        "valueType": "string",
+        "rootPath": "/content/dam/a-pranav/idfc-cc"
+      },
+      {
+        "component": "text",
+        "name": "col1_cardImageAlt",
+        "value": "",
+        "label": "Card Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_title",
+        "value": "",
+        "label": "Title Text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "col2_titleType",
+        "value": "",
+        "label": "Title Text Type",
+        "valueType": "string",
+        "options": [
           {
-            "component": "boolean",
-            "label": "Toggle to push image to the right",
-            "name": "imageToggle",
-            "valueType": "boolean"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "component": "reference",
-            "name": "col1_cardImage",
-            "value": "",
-            "label": "Card Image",
-            "valueType": "string",
-            "rootPath": "/content/dam/a-pranav/idfc-cc"
+            "name": "H2",
+            "value": "h2"
           },
           {
-            "component": "text",
-            "name": "col1_cardImageAlt",
-            "value": "",
-            "label": "Card Image Alt",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "col2_title",
-            "value": "",
-            "label": "Title Text",
-            "valueType": "string"
-          },
-          {
-            "component": "select",
-            "name": "col2_titleType",
-            "value": "",
-            "label": "Title Text Type",
-            "valueType": "string",
-            "options": [
-              {
-                "name": "H1",
-                "value": "h1"
-              },
-              {
-                "name": "H2",
-                "value": "h2"
-              },
-              {
-                "name": "H3",
-                "value": "h3"
-              }
-            ]
-          },
-          {
-            "component": "richtext",
-            "name": "col2_description",
-            "value": "",
-            "label": "Description",
-            "valueType": "string"
-          },
-          {
-            "component": "aem-content",
-            "name": "col2_cta",
-            "value": "",
-            "label": "CTA Link",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "col2_ctaText",
-            "value": "",
-            "label": "CTA Text",
-            "valueType": "string"
+            "name": "H3",
+            "value": "h3"
           }
         ]
       },
       {
-        "id": "pranav-cc-info-card",
-        "fields": [
+        "component": "richtext",
+        "name": "col2_description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_cta",
+        "value": "",
+        "label": "CTA Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_ctaText",
+        "value": "",
+        "label": "CTA Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pranav-cc-info-card",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "cardImage",
+        "value": "",
+        "label": "Card Image",
+        "valueType": "string",
+        "rootPath": "/content/dam/a-pranav/idfc-cc"
+      },
+      {
+        "component": "text",
+        "name": "cardImageAlt",
+        "value": "",
+        "label": "Card Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_title",
+        "value": "",
+        "label": "Title Text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "col2_titleType",
+        "value": "",
+        "label": "Title Text Type",
+        "valueType": "string",
+        "options": [
           {
-            "component": "reference",
-            "name": "cardImage",
-            "value": "",
-            "label": "Card Image",
-            "valueType": "string",
-            "rootPath": "/content/dam/a-pranav/idfc-cc"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "component": "text",
-            "name": "cardImageAlt",
-            "value": "",
-            "label": "Card Image Alt",
-            "valueType": "string"
+            "name": "H2",
+            "value": "h2"
           },
           {
-            "component": "text",
-            "name": "col2_title",
-            "value": "",
-            "label": "Title Text",
-            "valueType": "string"
-          },
-          {
-            "component": "select",
-            "name": "col2_titleType",
-            "value": "",
-            "label": "Title Text Type",
-            "valueType": "string",
-            "options": [
-              {
-                "name": "H1",
-                "value": "h1"
-              },
-              {
-                "name": "H2",
-                "value": "h2"
-              },
-              {
-                "name": "H3",
-                "value": "h3"
-              }
-            ]
-          },
-          {
-            "component": "richtext",
-            "name": "col2_description",
-            "value": "",
-            "label": "Description",
-            "valueType": "string"
-          },
-          {
-            "component": "aem-content",
-            "name": "col3_cta",
-            "value": "",
-            "label": "CTA Link",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "col3_ctaText",
-            "value": "",
-            "label": "CTA Text",
-            "valueType": "string"
+            "name": "H3",
+            "value": "h3"
           }
         ]
       },
       {
-        "id": "pranav-cc-accordian",
-        "fields": [
+        "component": "richtext",
+        "name": "col2_description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col3_cta",
+        "value": "",
+        "label": "CTA Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col3_ctaText",
+        "value": "",
+        "label": "CTA Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pranav-cc-accordian",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "accordianImage",
+        "value": "",
+        "label": "Accordian Image",
+        "valueType": "string",
+        "rootPath": "/content/dam/a-pranav/idfc-cc"
+      },
+      {
+        "component": "text",
+        "name": "accordianImageAlt",
+        "value": "",
+        "label": "Accordian Image Alt",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pranav-cc-accordian-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "col1_subTitle",
+        "value": "",
+        "label": "Sub Title Text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "col1_subTitleType",
+        "value": "",
+        "label": "Sub Title Text Type",
+        "valueType": "string",
+        "options": [
           {
-            "component": "reference",
-            "name": "accordianImage",
-            "value": "",
-            "label": "Accordian Image",
-            "valueType": "string",
-            "rootPath": "/content/dam/a-pranav/idfc-cc"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "component": "text",
-            "name": "accordianImageAlt",
-            "value": "",
-            "label": "Accordian Image Alt",
-            "valueType": "string"
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
           }
         ]
       },
       {
-        "id": "pranav-cc-accordian-item",
-        "fields": [
+        "component": "text",
+        "name": "col1_title",
+        "value": "",
+        "label": "Title Text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "col1_titleType",
+        "value": "",
+        "label": "Title Text Type",
+        "valueType": "string",
+        "options": [
           {
-            "component": "text",
-            "name": "col1_subTitle",
-            "value": "",
-            "label": "Sub Title Text",
-            "valueType": "string"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "component": "select",
-            "name": "col1_subTitleType",
-            "value": "",
-            "label": "Sub Title Text Type",
-            "valueType": "string",
-            "options": [
-              {
-                "name": "H1",
-                "value": "h1"
-              },
-              {
-                "name": "H2",
-                "value": "h2"
-              },
-              {
-                "name": "H3",
-                "value": "h3"
-              }
-            ]
+            "name": "H2",
+            "value": "h2"
           },
           {
-            "component": "text",
-            "name": "col1_title",
-            "value": "",
-            "label": "Title Text",
-            "valueType": "string"
-          },
-          {
-            "component": "select",
-            "name": "col1_titleType",
-            "value": "",
-            "label": "Title Text Type",
-            "valueType": "string",
-            "options": [
-              {
-                "name": "H1",
-                "value": "h1"
-              },
-              {
-                "name": "H2",
-                "value": "h2"
-              },
-              {
-                "name": "H3",
-                "value": "h3"
-              }
-            ]
-          },
-          {
-            "component": "richtext",
-            "name": "col2_description",
-            "value": "",
-            "label": "Description",
-            "valueType": "string"
+            "name": "H3",
+            "value": "h3"
           }
         ]
       },
       {
-        "id": "pranav-cc-discover-card",
-        "fields": [
+        "component": "richtext",
+        "name": "col2_description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pranav-cc-discover-card",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "value": "",
+        "label": "Card Image",
+        "valueType": "string",
+        "rootPath": "/content/dam/a-pranav/idfc-cc"
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "value": "",
+        "label": "Card Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_title",
+        "value": "",
+        "label": "Title Text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "col1_titleType",
+        "value": "",
+        "label": "Title Text Type",
+        "valueType": "string",
+        "options": [
           {
-            "component": "reference",
-            "name": "col1_image",
-            "value": "",
-            "label": "Card Image",
-            "valueType": "string",
-            "rootPath": "/content/dam/a-pranav/idfc-cc"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "component": "text",
-            "name": "col1_imageAlt",
-            "value": "",
-            "label": "Card Image Alt",
-            "valueType": "string"
+            "name": "H2",
+            "value": "h2"
           },
           {
-            "component": "text",
-            "name": "col1_title",
-            "value": "",
-            "label": "Title Text",
-            "valueType": "string"
-          },
-          {
-            "component": "select",
-            "name": "col1_titleType",
-            "value": "",
-            "label": "Title Text Type",
-            "valueType": "string",
-            "options": [
-              {
-                "name": "H1",
-                "value": "h1"
-              },
-              {
-                "name": "H2",
-                "value": "h2"
-              },
-              {
-                "name": "H3",
-                "value": "h3"
-              }
-            ]
-          },
-          {
-            "component": "richtext",
-            "name": "col2_description",
-            "value": "",
-            "label": "Description",
-            "valueType": "string"
-          },
-          {
-            "component": "aem-content",
-            "name": "col2_cta1",
-            "value": "",
-            "label": "CTA 1 Link",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "col2_cta1Text",
-            "value": "",
-            "label": "CTA 1 Text",
-            "valueType": "string"
-          },
-          {
-            "component": "aem-content",
-            "name": "col2_cta2",
-            "value": "",
-            "label": "CTA 2 Link",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "col2_cta2Text",
-            "value": "",
-            "label": "CTA 2 Text",
-            "valueType": "string"
+            "name": "H3",
+            "value": "h3"
           }
         ]
       },
       {
-        "id": "pranav-cc-contact-card",
-        "fields": [
-          {
-            "component": "reference",
-            "name": "col1_image",
-            "value": "",
-            "label": "Card Image",
-            "valueType": "string",
-            "rootPath": "/content/dam/a-pranav/idfc-cc"
-          },
-          {
-            "component": "text",
-            "name": "col1_imageAlt",
-            "value": "",
-            "label": "Card Image Alt",
-            "valueType": "string"
-          },
-          {
-            "component": "richtext",
-            "name": "col2_description",
-            "value": "",
-            "label": "Description",
-            "valueType": "string"
-          }
-        ]
+        "component": "richtext",
+        "name": "col2_description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_cta1",
+        "value": "",
+        "label": "CTA 1 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_cta1Text",
+        "value": "",
+        "label": "CTA 1 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_cta2",
+        "value": "",
+        "label": "CTA 2 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_cta2Text",
+        "value": "",
+        "label": "CTA 2 Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pranav-cc-contact-card",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "value": "",
+        "label": "Card Image",
+        "valueType": "string",
+        "rootPath": "/content/dam/a-pranav/idfc-cc"
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "value": "",
+        "label": "Card Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
       }
     ]
   }
