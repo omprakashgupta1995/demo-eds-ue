@@ -869,7 +869,7 @@
         "value": "",
         "label": "Background Image",
         "valueType": "string",
-        "rootPath": "/content/dam/a-pranav/idfc-cc"
+        "rootPath": "/content/dam/a-pranav/idfc-cc/"
       },
       {
         "component": "text",
@@ -945,7 +945,7 @@
         "value": "",
         "label": "Background Image",
         "valueType": "string",
-        "rootPath": "/content/dam/a-pranav/idfc-cc"
+        "rootPath": "/content/dam/a-pranav/idfc-cc/"
       },
       {
         "component": "text",
@@ -1040,7 +1040,7 @@
         "value": "",
         "label": "Card Image",
         "valueType": "string",
-        "rootPath": "/content/dam/a-pranav/idfc-cc"
+        "rootPath": "/content/dam/a-pranav/idfc-cc/"
       },
       {
         "component": "text",
@@ -1109,7 +1109,7 @@
         "value": "",
         "label": "Card Image",
         "valueType": "string",
-        "rootPath": "/content/dam/a-pranav/idfc-cc"
+        "rootPath": "/content/dam/a-pranav/idfc-cc/"
       },
       {
         "component": "text",
@@ -1178,7 +1178,7 @@
         "value": "",
         "label": "Accordian Image",
         "valueType": "string",
-        "rootPath": "/content/dam/a-pranav/idfc-cc"
+        "rootPath": "/content/dam/a-pranav/idfc-cc/"
       },
       {
         "component": "text",
@@ -1266,7 +1266,7 @@
         "value": "",
         "label": "Card Image",
         "valueType": "string",
-        "rootPath": "/content/dam/a-pranav/idfc-cc"
+        "rootPath": "/content/dam/a-pranav/idfc-cc/"
       },
       {
         "component": "text",
@@ -1349,7 +1349,7 @@
         "value": "",
         "label": "Card Image",
         "valueType": "string",
-        "rootPath": "/content/dam/a-pranav/idfc-cc"
+        "rootPath": "/content/dam/a-pranav/idfc-cc/"
       },
       {
         "component": "text",
