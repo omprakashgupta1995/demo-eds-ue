@@ -25,3 +25,13 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.section.cards-container {
+  background-color: var(--light-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 40px 0;
+}
+.blocks.cards a {
+  color: var(--link-color);
+}

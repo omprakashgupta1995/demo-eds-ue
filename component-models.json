@@ -131,6 +131,30 @@
             "value": "dark"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "id",
+        "label": "Background Color",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "Default 1",
+            "value": "default-1"
+          },
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          }
+        ]
       }
     ]
   },
@@ -432,6 +456,28 @@
   {
     "id": "my-swiper-item-1",
     "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string[]",
+        "name": "col1_style",
+        "label": "Image",
+        "options": [
+          {
+            "name": "Image Style",
+            "children": [
+              {
+                "name": "Rounded",
+                "value": "rounded"
+              },
+              {
+                "name": "Circle",
+                "value": "circle"
+              }
+            ]
+          }
+        ],
+        "multi": false
+      },
       {
         "component": "reference",
         "valueType": "string",
