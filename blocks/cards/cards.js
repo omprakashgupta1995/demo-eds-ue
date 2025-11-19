@@ -1,10 +1,11 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 import { loadEmbed } from '../embed/embed.js';
+import { createModal } from '../modal/modal.js';
 
 export default function decorate(block) {
-  /* change to ul, li */
   const ul = document.createElement('ul');
+
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
     moveInstrumentation(row, li);
@@ -15,24 +16,52 @@ export default function decorate(block) {
     });
     ul.append(li);
   });
-  ul.querySelectorAll('picture > img').forEach((img) => {
-    const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
-    moveInstrumentation(img, optimizedPic.querySelector('img'));
-    img.closest('picture').replaceWith(optimizedPic);
-  });
   block.textContent = '';
   block.append(ul);
-  // Array.from(block.children).forEach((element)=>{
-  //   const link = element.querySelector('a').getAttribute('href'),
-  //   loadEmbed(block, link, false);
-  // })
+
   ul.querySelectorAll('li').forEach((card) => {
-    const linkElement = card.querySelector('a');
-    if (linkElement && (linkElement.href.includes('youtube') || linkElement.href.includes('x.com'))) {
-      const link = linkElement.href;
-      const cardBody = card.querySelector('.cards-car-body');
-      cardBody.textContent = '';
-      loadEmbed(cardBody, link, false);
+    const cardBody = card.querySelector('.cards-card-body');
+    const cardImageDiv = card.querySelector('.cards-card-image');
+    let link = null;
+
+    const linkElement = cardBody.querySelector('a');
+    if (linkElement) {
+      link = linkElement.href;
+    } else {
+      const pElement = cardBody.querySelector('p');
+      if (pElement) {
+        const textContent = pElement.textContent.trim();
+        if (textContent.includes('youtu.be') || textContent.includes('youtube.com') || textContent.includes('vimeo.com')) {
+          link = textContent;
+        }
+      }
+    }
+
+    if (link) {
+      // 1. Clean up the link text from the card body so it looks nice
+      if (linkElement) linkElement.remove();
+      else if (cardBody.querySelector('p')) cardBody.querySelector('p').textContent = '';
+
+      // 2. Add visual cue that it's clickable (optional CSS class)
+      card.classList.add('card-with-video');
+      card.style.cursor = 'pointer';
+
+      // 3. Add the Click Event Listener
+      card.addEventListener('click', async (e) => {
+        e.preventDefault();
+
+        // Create a temporary container for the video
+        const videoContainer = document.createElement('div');
+
+        // Use your existing loadEmbed logic to fill this container with the iframe
+        // We set autoplay to true because the user just clicked to watch
+        loadEmbed(videoContainer, link, true);
+
+        // Create the modal using this new video container
+        const { showModal } = await createModal([videoContainer]);
+
+        showModal();
+      });
     }
   });
 }
