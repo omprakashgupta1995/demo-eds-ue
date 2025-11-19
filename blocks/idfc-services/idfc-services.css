@@ -1,6 +1,6 @@
 .section.idfc-services-container {
     background-color: #f3f3f3;
-    padding-block: 2rem;
+    padding-block: 3rem;
 }
 
 .section.idfc-services-container .default-content-wrapper {
@@ -8,6 +8,11 @@
     font-weight: lighter;
     color: #54565b;
     text-align: center;
+}
+
+.section.idfc-services-container .default-content-wrapper :is(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+    padding-bottom: 2rem;
 }
 
 .idfc-services {
