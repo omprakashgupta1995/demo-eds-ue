@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
-.product-banner {
-    position: relative;
+.cc-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
