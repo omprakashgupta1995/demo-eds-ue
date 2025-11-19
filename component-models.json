@@ -512,17 +512,17 @@
       },
       {
         "component": "text",
-        "label": "Card Button Text",
+        "label": "Card Button 1 Text",
         "name": "col3_idfcProductCardBtn1LinkText"
       },
       {
         "component": "text",
-        "label": "Card Button Title",
+        "label": "Card Button 1 Title",
         "name": "col3_idfcProductCardBtn1LinkTitle"
       },
       {
         "component": "select",
-        "label": "Card Button Type",
+        "label": "Card Button 1 Type",
         "name": "col3_idfcProductCardBtn1LinkType",
         "options": [
           {
@@ -541,22 +541,22 @@
       },
       {
         "component": "aem-content",
-        "label": "Card Button Link",
+        "label": "Card Button 2 Link",
         "name": "col3_idfcProductCardBtn2Link"
       },
       {
         "component": "text",
-        "label": "Card Button Text",
+        "label": "Card Button 2 Text",
         "name": "col3_idfcProductCardBtn2LinkText"
       },
       {
         "component": "text",
-        "label": "Card Button Title",
+        "label": "Card Button 2 Title",
         "name": "col3_idfcProductCardBtn2LinkTitle"
       },
       {
         "component": "select",
-        "label": "Card Button Type",
+        "label": "Card Button 2 Type",
         "name": "col3_idfcProductCardBtn2LinkType",
         "options": [
           {
