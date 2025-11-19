@@ -790,20 +790,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "banner_icon1",
+        "name": "banner1_icon1",
         "label": "Banner Icon 1",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "banner_icon1Alt",
+        "name": "banner1_icon1Alt",
         "label": "Icon Alternate Text 1",
         "value": ""
       },
       {
         "component": "text",
-        "name": "banner_icon1description",
+        "name": "banner1_icon1description",
         "value": "",
         "label": "Icon 1 Description",
         "valueType": "string"
@@ -811,20 +811,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "banner_icon2",
+        "name": "banner2_icon2",
         "label": "Banner Icon 2",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "banner_icon2Alt",
+        "name": "banner2_icon2Alt",
         "label": "Icon 2 Alternate Text",
         "value": ""
       },
       {
         "component": "text",
-        "name": "banner_icon2description",
+        "name": "banner2_icon2description",
         "value": "",
         "label": "Icon 2 Description",
         "valueType": "string"
@@ -832,20 +832,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "banner_icon3",
+        "name": "banner3_icon3",
         "label": "Banner Icon 3",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "banner_icon3Alt",
+        "name": "banner3_icon3Alt",
         "label": "Icon 3 Alternate Text",
         "value": ""
       },
       {
         "component": "text",
-        "name": "banner_icon3description",
+        "name": "banner3_icon3description",
         "value": "",
         "label": "Icon 3 Description",
         "valueType": "string"
@@ -853,20 +853,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "banner_icon4",
+        "name": "banner4_icon4",
         "label": "Banner Icon 4",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "banner_icon4Alt",
+        "name": "banner4_icon4Alt",
         "label": "Icon 4 Alternate Text",
         "value": ""
       },
       {
         "component": "text",
-        "name": "banner_icon4description",
+        "name": "banner4_icon4description",
         "value": "",
         "label": "Icon 4 Description",
         "valueType": "string"
