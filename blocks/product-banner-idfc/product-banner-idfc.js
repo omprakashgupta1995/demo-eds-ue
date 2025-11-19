@@ -4,19 +4,6 @@ export default function decorate(block) {
 
   const [imageSection, contentSection] = block.children;
 
-  // Extract background image
-  // const img = imageSection.querySelector("img");
-  // if (img) {
-  //   block.style.backgroundImage = `url(${img.src})`;
-  // }
-
-  // Remove the separate image section
-  // imageSection.remove();
-
-
-
-  // First two children
-  // const [imageSection, contentSection] = block.children;
 
   imageSection.classList.add("banner-image");
   contentSection.classList.add("banner-content");
@@ -36,7 +23,7 @@ export default function decorate(block) {
     if (!iconWrapper || !textWrapper) break;
 
     const feature = document.createElement("div");
-    feature.classList.add("banner-feature");
+    feature.classList.add("banner-feature-block");
 
     iconWrapper.classList.add("banner-feature-icon");
     textWrapper.classList.add("banner-feature-text");
