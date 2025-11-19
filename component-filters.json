@@ -2,6 +2,7 @@
   {
     "id": "main",
     "components": [
+      "my-sections",
       "section"
     ]
   },

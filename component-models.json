@@ -106,6 +106,31 @@
     ]
   },
   {
+    "id" : "my-sections",
+    "fields" : [
+      {
+        "component" : "select",
+        "name" : "style",
+        "label" : "Background Color",
+        "valueType" : "string",
+        "options" : [
+          {
+            "name" : "Default",
+            "value" : "default"
+          },
+          {
+            "name" : "Light",
+            "value" : "light"
+          },
+          {
+            "name" : "Dark",
+            "value" : "dark"
+          }
+        ] 
+      }
+    ]
+  },
+  {
     "id": "section",
     "fields": [
       {
@@ -344,6 +369,13 @@
       {
         "component": "text",
         "name": "col2_linkText",
+        "value": "",
+        "label": "CTA Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_linkType",
         "value": "",
         "label": "CTA Text",
         "valueType": "string"

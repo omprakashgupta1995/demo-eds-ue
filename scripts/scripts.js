@@ -33,6 +33,21 @@ export function moveAttributes(from, to, attributes) {
 }
 
 /**
+ * Wraps images followed by links within a matching <a> tag.
+ * @param {Element} container The container element
+ */
+function wrapImgsInLinks(container) {
+  const pictures = container.querySelectorAll('picture');
+  pictures.forEach((pic) => {
+    const link = pic.parentElement?.nextElementSibling?.firstElementChild;
+    if (link && link.tagName === 'A' && link.href) {
+      link.innerHTML = pic.outerHTML;
+      pic.replaceWith(link);
+    }
+  });
+}
+
+/**
  * Move instrumentation attributes from a given element to another given element.
  * @param {Element} from the element to copy attributes from
  * @param {Element} to the element to copy attributes to
@@ -81,6 +96,7 @@ export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateIcons(main);
+  wrapImgsInLinks(main);
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);

@@ -79,6 +79,26 @@
       ]
     },
     {
+      "title": "My Sections",
+      "id": "my-sections",
+      "components": [
+        {
+          "title": "My Section",
+          "id": "my-sections",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/section/v1/section",
+                "template": {
+                  "model": "my-sections"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "title": "Blocks",
       "id": "blocks",
       "components": [
