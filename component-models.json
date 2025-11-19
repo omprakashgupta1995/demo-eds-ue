@@ -446,6 +446,136 @@
     ]
   },
   {
+    "id": "idfc-product-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_idfcProductCardImage",
+        "label": "Card Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_idfcProductCardImageAlt",
+        "label": "Card Image Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_idfcProductCardTitle",
+        "label": "Card Title"
+      },
+      {
+        "component": "select",
+        "name": "col2_idfcProductCardTitleType",
+        "label": "Card Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_idfcProductCardDesc",
+        "label": "Card Description"
+      },
+      {
+        "component": "aem-content",
+        "label": "Card Button 1 Link",
+        "name": "col2_idfcProductCardBtn1Link"
+      },
+      {
+        "component": "text",
+        "label": "Card Button Text",
+        "name": "col2_idfcProductCardBtn1LinkText"
+      },
+      {
+        "component": "text",
+        "label": "Card Button Title",
+        "name": "col2_idfcProductCardBtn1LinkTitle"
+      },
+      {
+        "component": "select",
+        "label": "Card Button Type",
+        "name": "col2_idfcProductCardBtn1LinkType",
+        "options": [
+          {
+            "name": "default",
+            "value": "primary"
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "label": "Card Button Link",
+        "name": "col2_idfcProductCardBtn2Link"
+      },
+      {
+        "component": "text",
+        "label": "Card Button Text",
+        "name": "col2_idfcProductCardBtn2LinkText"
+      },
+      {
+        "component": "text",
+        "label": "Card Button Title",
+        "name": "col2_idfcProductCardBtn2LinkTitle"
+      },
+      {
+        "component": "select",
+        "label": "Card Button Type",
+        "name": "col2_idfcProductCardBtn2LinkType",
+        "options": [
+          {
+            "name": "default",
+            "value": "secondary"
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "whatsapp-banner",
     "fields": [
       {

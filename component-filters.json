@@ -40,6 +40,12 @@
     ]
   },
   {
+    "id": "idfc-products",
+    "components": [
+      "idfc-product-card"
+    ]
+  },
+  {
     "id": "custom-swiper",
     "components": [
       "custom-swiper-item-1"
