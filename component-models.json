@@ -786,7 +786,12 @@
         "value": "",
         "label": "Banner Description",
         "valueType": "string"
-      },
+      }
+    ]
+  },
+  {
+    "id": "cc-banner-item",
+    "fields": [
       {
         "component": "reference",
         "valueType": "string",

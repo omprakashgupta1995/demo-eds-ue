@@ -83,5 +83,11 @@
     "components": [
       "my-swiper-item"
     ]
+  },
+  {
+    "id": "cc-banner",
+    "components": [
+      "cc-banner-item"
+    ]
   }
 ]

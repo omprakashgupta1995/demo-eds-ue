@@ -190,15 +190,16 @@
           }
         },
         {
-          "title": "CC Overview",
-          "id": "cc-secondary-nav",
+          "title": "CC Banner Item",
+          "id": "cc-banner-item",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "CC Overview",
-                  "model": "cc-secondary-nav"
+                  "name": "CC Banner Item",
+                  "model": "cc-banner-item",
+                  "filter": "cc-banner-item"
                 }
               }
             }
