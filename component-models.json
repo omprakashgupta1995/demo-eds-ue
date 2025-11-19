@@ -872,5 +872,24 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "cc-secondary-nav",
+    "fields": [
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "secondaryNav",
+        "label": "Navigation ID",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "secondaryNavName",
+        "label": "Navigation Name",
+        "value": ""
+      }
+    ]
   }
 ]
