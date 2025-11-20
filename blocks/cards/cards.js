@@ -36,23 +36,21 @@ export default function decorate(block) {
     }
 
     if (link) {
-      // 1. Clean up the link text from the card body so it looks nice
+      // removed the link text
       if (linkElement) linkElement.remove();
       else if (cardBody.querySelector('p')) cardBody.querySelector('p').textContent = '';
 
-      // 2. Add visual cue that it's clickable (optional CSS class)
+      // Added visual cue that it's clickable
       card.classList.add('card-with-video');
       card.style.cursor = 'pointer';
 
-      // 3. Add the Click Event Listener
+      // Added the Click Event Listener
       card.addEventListener('click', async (e) => {
         e.preventDefault();
 
         // Create a temporary container for the video
         const videoContainer = document.createElement('div');
 
-        // Use your existing loadEmbed logic to fill this container with the iframe
-        // We set autoplay to true because the user just clicked to watch
         loadEmbed(videoContainer, link, true);
 
         // Create the modal using this new video container
