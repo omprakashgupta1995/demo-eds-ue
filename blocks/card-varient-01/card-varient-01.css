@@ -17,6 +17,21 @@
     margin: 0 auto;
 }
 
-.card-varient-01.block{
-    
+.card-varient-01.block .card{
+    background-color: #fff;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+div.card-varient-01-wrapper:nth-of-type(2n) div div> div:nth-of-type(2n){
+    flex-direction: row-reverse;
+}
+
+.card-image{
+    min-width: 30%;
+    align-self: center;
 }
