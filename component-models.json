@@ -4,8 +4,22 @@
     "fields": [
       {
         "component": "text",
-        "name": "theme",
-        "label": "Theme"
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "keywords",
+        "multi": true,
+        "label": "Keywords"
       }
     ]
   },
@@ -124,16 +138,32 @@
             "value": "highlight"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "about-us",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
       },
       {
         "component": "text",
-        "name": "id",
-        "label": "Section Data Id"
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
       },
       {
-        "component": "text",
-        "name": "background-color",
-        "label": "Background Color"
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
@@ -186,25 +216,6 @@
     ]
   },
   {
-    "id": "quote",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "quote",
-        "value": "",
-        "label": "Quote",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "author",
-        "label": "Author",
-        "value": ""
-      }
-    ]
-  },
-  {
     "id": "hero",
     "fields": [
       {
@@ -226,362 +237,6 @@
         "name": "text",
         "value": "",
         "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "byline",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "product",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "swiper-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "tab",
-    "fields": [
-      {
-        "component": "multiselect",
-        "valueType": "string",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Theme",
-            "children": [
-              { "name": "Light", "value": "light" },
-              { "name": "Dark", "value": "dark" }
-            ]
-          },
-          {
-            "name": "Type",
-            "children": [
-              { "name": "Alpha", "value": "alpha" },
-              { "name": "Beta", "value": "beta" },
-              { "name": "Gamma", "value": "gamma" }
-            ]
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "config",
-        "label": "Config"
-      }
-    ]
-  },
-  {
-    "id": "tab-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Title",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "titleType",
-        "label": "Title Type",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "form",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "form-url",
-        "label": "Form URL",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "api-url",
-        "label": "API URL",
-        "multi": false
-      }
-    ]
-  },
-  {
-    "id": "banner",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "bannercol1_bgimage",
-        "label": "Background Image"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bannercol1_bgimageAlt",
-        "label": "Background Image Alt"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "bannercol1_frontimage",
-        "label": "Front Image"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bannercol1_frontimageAlt",
-        "label": "Front Image Alt"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "bannercol2_description",
-        "label": "Content"
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "bannercol2_link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bannercol2_linkText",
-        "label": "Link Text"
-      },
-      {
-        "component": "select",
-        "valueType": "string",
-        "name": "bannercol2_linkType",
-        "label": "Link Text",
-        "options": [
-          {
-            "name": "Primary",
-            "value": "primary"
-          },
-          {
-            "name": "Secondary",
-            "value": "secondary"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "product-1",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "product-1",
-        "label": "Product Name",
-        "multi": true
-      }
-    ]
-  },
-  {
-    "id": "teaser-cards",
-    "fields": [
-      {
-        "component": "multiselect",
-        "valueType": "string",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Content Type",
-            "children": [
-              {
-                "name": "Primary",
-                "value": "primary"
-              },
-              {
-                "name": "Secondary",
-                "value": "secondary"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "component" : "reference" ,
-        "label" : "Select Image",
-        "name" : "image",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Image Alt",
-        "name" : "imageAlt",
-        "valueType" : "string"
-      }
-    ]
-  },
-  {
-    "id": "teaser-card",
-    "fields": [
-      {
-        "component" : "reference" ,
-        "label" : "Select Image",
-        "name" : "image",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Image Alt",
-        "name" : "imageAlt",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Sub Title",
-        "name" : "teaserText_subtitle",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Title",
-        "name" : "teaserText_title",
-        "valueType" : "string"
-      },
-      {
-        "component" : "select" ,
-        "label" : "Title Type",
-        "name" : "teaserText_titleType",
-        "valueType" : "string",
-        "options" : [
-          {
-            "name" : "H1",
-            "value" : "h1"
-          },
-          {
-            "name" : "H2",
-            "value" : "h2"
-          },
-          {
-            "name" : "H3",
-            "value" : "h3"
-          }
-        ]
-      },
-      {
-        "component" : "richtext" ,
-        "label" : "Description",
-        "name" : "teaserText_description",
-        "valueType" : "string"
-      },
-      {
-        "component" : "aem-content" ,
-        "label" : "Cta 1",
-        "name" : "teaserText_cta1",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Cta 1 Text",
-        "name" : "teaserText_cta1Text",
-        "valueType" : "string"
-      },
-      {
-        "component" : "aem-content" ,
-        "label" : "Cta 2",
-        "name" : "teaserText_cta2",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Cta 2 Text",
-        "name" : "teaserText_cta2Text",
-        "valueType" : "string"
-      },
-      {
-        "component" : "select" ,
-        "label" : "Cta 2 Type",
-        "name" : "teaserText_cta2Type",
-        "valueType" : "string",
-        "options" : [
-          {
-            "name" : "Primary",
-            "value" : "primary"
-          },
-          {
-            "name" : "Secondary",
-            "value" : "secondary"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "faq",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "faq-url",
-        "value": "",
-        "label": "FAQ API PATH",
         "valueType": "string"
       }
     ]
