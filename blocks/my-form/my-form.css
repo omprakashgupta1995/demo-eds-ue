@@ -166,5 +166,5 @@
   }
   
   .my-form .toggle-wrapper input:checked + .slider::before {
-    transmy-form: translateX(24px);
+    /* transmy-form: translateX(24px); */
   }
