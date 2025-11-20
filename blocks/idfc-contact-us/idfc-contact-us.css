@@ -1,0 +1,33 @@
+.section.idfc-contact-us-container {
+    background-color: #f3f3f3;
+    color: #25243B;
+    padding-block: 3rem;
+}
+
+.section.idfc-contact-us-container .default-content-wrapper :is(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+.idfc-contact-us {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.idfc-contact-us__item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.idfc-contact-us__item p {
+    margin: 0;
+}
+
+.idfc-contact-us__item-image,
+.idfc-contact-us__item-image picture {
+    display: flex;
+    align-items: center;
+}
