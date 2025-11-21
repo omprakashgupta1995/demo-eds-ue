@@ -1,4 +1,4 @@
-/* .section.idfc-contact-us-container {
+.section.idfc-contact-us-container {
     background-color: #f3f3f3;
     color: #25243B;
     padding-block: 3rem;
@@ -9,25 +9,34 @@
     padding-bottom: 2rem;
 }
 
-.idfc-contact-us {
+.idfc-contact-us :is(ol, ul) {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
     gap: 2rem;
 }
 
-.idfc-contact-us__item {
+.idfc-contact-us :is(ol, ul) li {
+    flex: 1;
+}
+
+.idfc-contact-us :is(ol, ul) li a {
     flex: 1;
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: #25243B;
+    font-size: 1rem;
 }
 
-.idfc-contact-us__item p {
-    margin: 0;
+.idfc-contact-us :is(ol, ul) li a:is(:hover, :focus-visible) {
+    text-decoration: none;
 }
 
-.idfc-contact-us__item-image,
-.idfc-contact-us__item-image picture {
-    display: flex;
-    align-items: center;
-} */
+.idfc-contact-us .icon {
+    width: 110px;
+    height: 110px;
+}
