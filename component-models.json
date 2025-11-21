@@ -576,13 +576,13 @@
     ]
   },
   {
-    "id": "idfc-contact-us-item",
+    "id": "idfc-contact-us",
     "fields": [
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "col1_iconWithLabel",
-        "label": "Icon with Label"
+        "name": "col1_iconsWithLabels",
+        "label": "Icons with Labels"
       }
     ]
   },
