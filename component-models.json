@@ -606,7 +606,7 @@
     ]
   },
    {
-    "id": "hero",
+    "id": "herocc",
     "fields": [
       {
         "component": "reference",
