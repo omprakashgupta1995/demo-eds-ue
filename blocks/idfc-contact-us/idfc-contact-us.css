@@ -1,42 +1,57 @@
+/* Section background */
 .section.idfc-contact-us-container {
-    background-color: #f3f3f3;
+    background: #f3f3f3;
     color: #25243B;
     padding-block: 3rem;
 }
 
-.section.idfc-contact-us-container .default-content-wrapper :is(h1, h2, h3, h4, h5, h6) {
+/* Heading */
+.idfc-contact-us-container .default-content-wrapper > :is(h1, h2, h3, h4, h5, h6) {
     margin: 0;
     padding-bottom: 2rem;
 }
 
-.idfc-contact-us :is(ol, ul) {
+/* Contact Items List */
+.idfc-contact-us ol,
+.idfc-contact-us ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
     gap: 2rem;
+    justify-content: space-between;
 }
 
-.idfc-contact-us :is(ol, ul) li {
+/* List items */
+.idfc-contact-us li {
     flex: 1;
 }
 
-.idfc-contact-us :is(ol, ul) li a {
-    flex: 1;
+/* Contact Items Link */
+.idfc-contact-us li a {
     display: flex;
     align-items: center;
     gap: 1rem;
     color: #25243B;
     font-size: 1rem;
-}
-
-.idfc-contact-us :is(ol, ul) li a:is(:hover, :focus-visible) {
     text-decoration: none;
 }
 
+.idfc-contact-us li a:is(:hover, :focus-visible) {
+    text-decoration: none;
+}
+
+/* Icon wrapper */
 .idfc-contact-us .icon {
     width: 110px;
     height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.idfc-contact-us .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
