@@ -576,68 +576,6 @@
     ]
   },
   {
-    "id": "idfc-contact-us",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col1_contactItem1Icon",
-        "label": "Contact Item 1 Icon",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_contactItem1IconAlt",
-        "label": "Contact Item 1 Icon Alt"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_contactItem1Desc",
-        "label": "Contact Item 1 Description"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col1_contactItem2Icon",
-        "label": "Contact Item 2 Icon",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_contactItem2IconAlt",
-        "label": "Contact Item 2 Icon Alt"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_contactItem2Desc",
-        "label": "Contact Item 2 Description"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col1_contactItem3Icon",
-        "label": "Contact Item 3 Icon",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_contactItem3IconAlt",
-        "label": "Contact Item 3 Icon Alt"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_contactItem3Desc",
-        "label": "Contact Item 3 Description"
-      }
-    ]
-  },
-  {
     "id": "idfc-contact-us-item",
     "fields": [
       {
