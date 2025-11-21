@@ -638,6 +638,17 @@
     ]
   },
   {
+    "id": "idfc-contact-us-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_iconWithLabel",
+        "label": "Icon with Label"
+      }
+    ]
+  },
+  {
     "id": "whatsapp-banner",
     "fields": [
       {

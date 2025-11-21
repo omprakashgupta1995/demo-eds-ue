@@ -48,6 +48,12 @@
     ]
   },
   {
+    "id": "idfc-contact-us",
+    "components": [
+      "idfc-contact-us-item"
+    ]
+  },
+  {
     "id": "custom-swiper",
     "components": [
       "custom-swiper-item-1"
