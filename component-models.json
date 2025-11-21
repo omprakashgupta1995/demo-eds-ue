@@ -579,23 +579,10 @@
     "id": "idfc-contact-us-item",
     "fields": [
       {
-        "component": "reference",
+        "component": "richtext",
         "valueType": "string",
-        "name": "col1_contactItemIcon",
-        "label": "Contact Item Icon",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_contactItemIconAlt",
-        "label": "Contact Item Icon Alt"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_contactItemDesc",
-        "label": "Contact Item Description"
+        "name": "col1_iconWithLabel",
+        "label": "Icon with Label"
       }
     ]
   },
