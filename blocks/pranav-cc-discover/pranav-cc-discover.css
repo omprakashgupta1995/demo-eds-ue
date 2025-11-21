@@ -1,0 +1,95 @@
+.pranav-cc-discover-container {
+    background-color: #f3f3f3;
+    padding: 80px 0;
+    min-height: 500px;
+}
+
+.pranav-cc-discover-container .default-content-wrapper {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 300;
+    color: #54565b;
+    margin-bottom: 1rem;
+}
+
+.pranav-cc-discover {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+}
+
+.pranav-cc-discover .discover-card {
+    background-color: #ffffff;
+    padding: 20px 30px 40px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+    height: 100%;
+    min-height: 450px;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+}
+
+.pranav-cc-discover .discover-card picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pranav-cc-discover .discover-card h1,
+.pranav-cc-discover .discover-card h2,
+.pranav-cc-discover .discover-card h3,
+.pranav-cc-discover .discover-card h4,
+.pranav-cc-discover .discover-card h5,
+.pranav-cc-discover .discover-card h6 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.pranav-cc-discover .discover-card hr {
+    width: 24px;
+    border: #9d1d27 solid 1px;
+    margin-left: 0px;
+    display: inline-block;
+    margin: 0.6rem 0;
+}
+
+.pranav-cc-discover .discover-card .discover-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.pranav-cc-discover .discover-card .discover-card-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pranav-cc-discover .discover-card .discover-card-links .btn-red {
+    min-width: unset;
+    height: unset;
+    width: unset;
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 25px;
+    background: #9b1e26;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    border: 0;
+}
+
+.pranav-cc-discover .discover-card .discover-card-links .btn-link {
+    color: #9d1d27;
+    font-weight: 700;
+    font-size: 14px;
+    background: unset;
+}

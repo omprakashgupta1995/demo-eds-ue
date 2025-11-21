@@ -1,0 +1,73 @@
+.pranav-cc-accordian {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.pranav-cc-accordian .cc-info-card-right > div {
+    width: 665px;
+}
+
+.pranav-cc-accordian .cc-info-card-left {
+    width: 40%;
+}
+
+.pranav-cc-accordian .cc-info-card-left .cc-accordian-title {
+    cursor: pointer;
+    box-shadow: none;
+    font-size: 36px;
+    font-weight: 300;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 10px 50px 10px 0;
+    border-radius: 0;
+    line-height: 1;
+    position: relative;
+}
+
+.pranav-cc-accordian
+    .cc-info-card-left
+    .cc-accordian-item
+    .cc-accordian-title::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.pranav-cc-accordian
+    .cc-info-card-left
+    .cc-accordian-item.open
+    .cc-accordian-title::after {
+    content: "_";
+}
+
+.pranav-cc-accordian .cc-info-card-left .cc-accordian-content {
+    display: none;
+}
+
+.pranav-cc-accordian
+    .cc-info-card-left
+    .cc-accordian-item.open
+    .cc-accordian-content {
+    display: block;
+    animation: show 0.3s ease;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pranav-cc-accordian .cc-info-card-left .cc-accordian-title-subtext {
+    color: #b8b8b8;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}

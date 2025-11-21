@@ -1,0 +1,65 @@
+.pranav-cc-info-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 2px solid #9d1d27;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+    padding: 0px;
+}
+
+.pranav-cc-info-card .cc-info-card-image {
+    display: flex;
+    align-self: flex-end;
+    align-items: flex-end;
+    justify-content: center;
+    /* width: 30%; */
+}
+
+.pranav-cc-info-card .cc-info-card-image picture {
+    margin: 15px 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.pranav-cc-info-card .cc-info-card-image picture img {
+    width: 260px;
+    min-height: 130px;
+}
+
+.pranav-cc-info-card .cc-info-card-content {
+    color: #54565b;
+    width: 32%;
+    margin-right: 2%;
+}
+
+.pranav-cc-info-card .cc-info-card-content h1,
+.pranav-cc-info-card .cc-info-card-content h2,
+.pranav-cc-info-card .cc-info-card-content h3,
+.pranav-cc-info-card .cc-info-card-content h4,
+.pranav-cc-info-card .cc-info-card-content h5,
+.pranav-cc-info-card .cc-info-card-content h6 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.pranav-cc-info-card .cc-info-card-content p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pranav-cc-info-card .cc-info-card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-right: 24px;
+}
+
+.pranav-cc-info-card .cc-info-card-button .button {
+    background-color: #9d1d27;
+}
