@@ -138,6 +138,38 @@
     ]
   },
   {
+    "id": "plp-banner-sections",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "PLP Banner Name",
+        "description": "The label shown for this section in the Content Tree"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "PLP Banner",
+            "value": "plp-banner"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "id",
+        "label": "Section Data Id"
+      },
+      {
+        "component": "text",
+        "name": "background-color",
+        "label": "Background Color"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
