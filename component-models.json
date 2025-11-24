@@ -386,6 +386,18 @@
     ]
   },
   {
+    "id": "idfc-tabs",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "idfcTabLabels",
+        "value": "",
+        "label": "IDFC Tab Labels",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "idfc-service-card",
     "fields": [
       {
