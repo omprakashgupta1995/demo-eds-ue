@@ -79,6 +79,26 @@
       ]
     },
     {
+      "title": "Banner Section",
+      "id": "plp-banner-sections",
+      "components": [
+        {
+          "title": "Banner Section",
+          "id": "plp-banner-sections",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/section/v1/section",
+                "template": {
+                  "model": "plp-banner-sections"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "title": "Blocks",
       "id": "blocks",
       "components": [
