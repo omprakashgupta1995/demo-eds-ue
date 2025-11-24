@@ -84,13 +84,13 @@
       "components": [
         {
           "title": "Banner Section",
-          "id": "plp-banner-sections",
+          "id": "plp-banner-section",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/section/v1/section",
                 "template": {
-                  "model": "plp-banner-sections"
+                  "model": "plp-banner-section"
                 }
               }
             }

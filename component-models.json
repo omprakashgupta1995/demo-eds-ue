@@ -138,7 +138,7 @@
     ]
   },
   {
-    "id": "plp-banner-sections",
+    "id": "plp-banner-section",
     "fields": [
       {
         "component": "text",
