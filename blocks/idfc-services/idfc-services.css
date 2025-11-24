@@ -5,7 +5,6 @@
 
 .section.idfc-services-container .default-content-wrapper {
     font-size: 3rem;
-    font-weight: lighter;
     color: #54565b;
     text-align: center;
 }
@@ -41,6 +40,11 @@
     width: 65%;
     padding: 2.5rem;
     font-size: 0.875rem;
+}
+
+.idfc-services__card-content :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 0.875rem;
+    font-weight: 700;
 }
 
 .idfc-services__card-content .button-container {
