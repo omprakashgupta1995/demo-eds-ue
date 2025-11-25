@@ -41,6 +41,10 @@
     "id": "banner-container",
     "components": ["banner"]
   },
+   {
+    "id": "idfc-services",
+    "components": ["idfc-service-card"]
+  },
   {
     "id": "my-swiper",
     "components": ["my-swiper-item-1"]
