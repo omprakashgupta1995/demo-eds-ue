@@ -249,6 +249,74 @@
       {
         "component": "reference",
         "valueType": "string",
+        "name": "col2_image2",
+        "label": "Banner Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_imageAlt2",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_heading2",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "col2_cta2",
+        "label": "Cta Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_ctaText2",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image3",
+        "label": "Banner Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_imageAlt3",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_heading3",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "col2_cta3",
+        "label": "Cta Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_ctaText3",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
         "name": "col2_image",
         "label": "Banner Image",
         "multi": false
