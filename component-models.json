@@ -394,6 +394,67 @@
       }
     ]
   },
+    {
+    "id": "idfc-service-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "idfcServiceCol1_cardImage",
+        "label": "Card Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "idfcServiceCol1_cardImageAlt",
+        "label": "Card Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "idfcServiceCol2_cardContent",
+        "label": "Card Content",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "label": "Card Button Link",
+        "name": "idfcServiceCol2_cardButtonLink"
+      },
+      {
+        "component": "text",
+        "label": "Card Button Text",
+        "name": "idfcServiceCol2_cardButtonLinkText"
+      },
+      {
+        "component": "text",
+        "label": "Card Button Title",
+        "name": "idfcServiceCol2_cardButtonLinkTitle"
+      },
+      {
+        "component": "select",
+        "label": "Card Button Type",
+        "name": "idfcServiceCol2_cardButtonLinkType",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+
   {
     "id": "whatsapp-banner",
     "fields": [

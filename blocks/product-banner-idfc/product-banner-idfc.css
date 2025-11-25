@@ -6,14 +6,18 @@
 }
 
 .banner-root {
-    /* width: 100%; */
-    /* height: auto; */
-    /* NEW → move content right */
+    padding-block: 70px;
 }
 
 .banner-image {
     position: absolute;
     inset: 0;
+}
+
+.banner-image > div:first-child,
+.banner-image picture {
+width: 100%;
+    height: 100%;
 }
 
 .banner-image img {
