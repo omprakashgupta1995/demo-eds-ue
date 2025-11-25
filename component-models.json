@@ -231,6 +231,58 @@
     ]
   },
   {
+    "id": "getintouch",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Style"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_heading",
+        "label": "heading",
+        "value": ""
+      },  
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": "Banner Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_heading",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "col2_cta",
+        "label": "Cta Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_ctaText",
+        "label": "Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "fastagapp",
     "fields": [
       {
