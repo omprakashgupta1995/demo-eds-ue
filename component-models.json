@@ -231,6 +231,52 @@
     ]
   },
   {
+    "id": "fastagapp",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_heading",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_subheading",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "col3_cta",
+        "label": "Cta Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col3_ctaText",
+        "label": "Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "product-banner",
     "fields": [
       {

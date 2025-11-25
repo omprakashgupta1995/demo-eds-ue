@@ -26,3 +26,12 @@
 .product-banner.block > div:nth-of-type(2) > div:nth-of-type(2) div{
     display: flex;
 }
+
+div.card:nth-of-type(2n+1){
+    flex-direction: row-reverse;
+    margin-top: 4em;
+}
+
+div.card .card-section{
+    padding-left: 2em;
+}
