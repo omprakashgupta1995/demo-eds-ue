@@ -1,0 +1,52 @@
+.idfc-tabs-container {
+    position: sticky;
+    top: 4rem;
+    background: #fff;
+    z-index: 1;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.idfc-tabs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.idfc-tabs li a {
+    position: relative;
+    display: block;
+    padding-block: 1.5rem;
+    padding-inline: .75rem;
+    text-decoration: none;
+    line-height: 1.15;
+    outline: transparent;
+    color: #25243b;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.idfc-tabs li a:hover,
+.idfc-tabs li a.active {
+    background: rgba(155, 30, 38, 0.035);
+}
+
+.idfc-tabs li a::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    height: .125rem;
+    width: 100%;
+    background: #9b1e26;
+    transform: scaleX(0);
+    transform-origin: center;
+    will-change: transform;
+    transition: transform .2s ease;
+}
+
+.idfc-tabs li a:focus-visible::after,
+.idfc-tabs li a:hover::after,
+.idfc-tabs li a.active::after {
+    transform: scaleX(1);
+}
