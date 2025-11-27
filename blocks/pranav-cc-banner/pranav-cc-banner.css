@@ -1,10 +1,64 @@
-section.pranav-cc-banner-container {
+.section.pranav-cc-banner-container {
     position: relative;
 }
-.pranav-cc-banner .banner_image {
+
+.pranav-cc-banner.block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 500px;
+}
+
+.pranav-cc-banner .banner-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.pranav-cc-banner .banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pranav-cc-banner .left-content {
+    max-width: 40%;
+}
+
+.pranav-cc-banner .right-content {
+    margin-right: 20px;
+    max-width: 22%;
+}
+
+.pranav-cc-banner .right-content .banner-point {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 36px;
+    font-size: 14px;
+}
+
+.pranav-cc-banner .right-content .icon-image {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.pranav-cc-banner .right-content .icon-image picture {
+    width: 32px;
+    height: 32px;
+}
+
+.pranav-cc-banner .right-content .icon-image img {
+    width: 32px;
+    height: 32px;
+}
+
+.pranav-cc-banner .right-content .icon-text {
+    width: 60%;
 }
