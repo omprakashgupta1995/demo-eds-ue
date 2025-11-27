@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.whatsapp-banner:nth-child(2) {
+.whatsapp-banner .row-2 {
     position: absolute;
     top: 0;
 }
