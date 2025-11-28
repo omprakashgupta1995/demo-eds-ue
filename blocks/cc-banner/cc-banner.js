@@ -7,7 +7,7 @@ export default function decorate(block) {
             Array.from(el.children).forEach((e, ind) => {
                 let item = e.classList.add('feature-items');
                 Array.from(e.children).forEach((el, ind) => {
-                    console.log(el.childList);
+                    console.log('inner-' +el.childList);
                 });
                 console.log(e.children);
             });
