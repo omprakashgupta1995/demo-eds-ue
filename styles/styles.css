@@ -79,7 +79,7 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
-  
+  box-sizing: border-box;
 }
 
 body.appear {

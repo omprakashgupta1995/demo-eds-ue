@@ -22,14 +22,14 @@
     justify-content: space-between;
 }
 
-.contact-section .contact-section-wrapper .block > div{
+.contact-block-section > div{
     /* width: calc(100% / 3); */
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-.contact-section .contact-section-wrapper .block > div > div:nth-child(1) picture{
+.contact-block-section > div > div:nth-child(1) picture{
     background: linear-gradient(77deg, #5F0D16 0%, #B43140 98.1%);
     width: 80px;
     height: 80px;
@@ -39,12 +39,12 @@
     justify-content: center;
 }
 
-.contact-section .contact-section-wrapper .block > div > div img{
+.contact-block-section > div > div img{
     width: 40px;
     height: 40px;
 }
 
-.contact-section .contact-section-wrapper .block > div > div:nth-child(2) p{
+.contact-block-section > div > div:nth-child(2) p{
     color: #5F0D16;
     font-weight: 700;
 }
