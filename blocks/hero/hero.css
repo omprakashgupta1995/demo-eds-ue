@@ -35,3 +35,50 @@
     padding: 40px 32px;
   }
 }
+
+.wealth-chips .default-content-wrapper{
+  display: flex;
+}
+
+.wealth-chips .default-content-wrapper ul{
+  list-style: none;
+}
+
+.wealth-chips .default-content-wrapper ul li:nth-child(2){
+  margin-top: 60px;
+}
+
+.wealth-chips .default-content-wrapper ul li:last-child{
+      background-color: #2E2A94;
+    border-radius: 8px;
+    width: 164px;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wealth-chips .default-content-wrapper ul li:last-child a{
+  color: #fff;
+}
+
+.hero-banner .hero-wrapper .hero div:last-child div h2{
+  width: 370px;
+  height: 139px;
+  color: white;
+
+}
+
+.hero-banner .hero-wrapper .hero div:last-child div p{
+  color: white;
+  width: 504px;
+  height: 56px;
+
+}
+
+.hero-banner .hero-wrapper .hero div:last-child div .button-container a{
+  color: #2E2A94;
+  border-radius: 8px;
+  background-color: #FFFF;
+}
