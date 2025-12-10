@@ -126,6 +126,14 @@
            {
             "name": "Highlight 2",
             "value": "highlight2"
+          },
+           {
+            "name": "Wealth Chips",
+            "value": "wealth-chips"
+          },
+           {
+            "name": "Hero Banner",
+            "value": "hero-banner"
           }
         ]
       },
