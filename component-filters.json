@@ -26,7 +26,8 @@
       "teaser-cards",
       "faq",
       "fragment",
-      "demo-teaser"
+      "demo-teaser",
+      "swiper-card"
     ]
   },
   {
@@ -74,10 +75,16 @@
       "title"
     ]
   },
-   {
+  {
     "id": "demo-teaser",
     "components": [
      "demo-teaser-item"
+    ]
+  },
+  {
+    "id": "swiper-card",
+    "components": [
+     "swiper-card-item"
     ]
   }
 ]
