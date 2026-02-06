@@ -140,6 +140,10 @@
           {
             "name": "Grow Section",
             "value": "grow-section"
+          },
+          {
+            "name": "Loan Section",
+            "value": "loan-section"
           }
         ]
       }
