@@ -47,6 +47,14 @@
                                 {
                                     "name": "Bio Cards",
                                     "value": "bio-cards"
+                                },
+                                {
+                                    "name": "Bio Cards Variant",
+                                    "value": "bio-cards-variant"
+                                },
+                                {
+                                    "name": "Bio Cards Variant 2",
+                                    "value": "bio-cards-variant-2"
                                 }
                             ]
                         }
