@@ -9,6 +9,10 @@
     background-color: #f1f1f1;
 }
 
+.our-.bio-cards {
+    background-color: #4929c8;
+}
+
 .our-team .bio-cards {
     display: flex;
     flex-direction: column;
