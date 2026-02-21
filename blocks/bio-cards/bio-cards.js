@@ -1,8 +1,6 @@
-// blocks/bio-cards/bio-cards.js
-
 export default function decorate(block) {
   // Each direct child is a bio card (one per row)
-  [...block.children].forEach(card => {
+  [...block.children].forEach((card) => {
     card.classList.add('bio-cards-slide');
 
     // Each card has two columns: image + content
