@@ -16,7 +16,13 @@
       "cards",
       "columns",
       "fragment",
-      "bio-card"
+      "bio-cards"
+    ]
+  },
+  {
+    "id": "bio-cards",
+    "components": [
+      "bio-cards"
     ]
   },
   {
