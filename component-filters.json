@@ -20,8 +20,10 @@
     ]
   },
   {
-    "id": "cards",
-    "components": []
+    "id": "bio-cards",
+    "components": [
+      "bio-card"
+    ]
   },
   {
     "id": "cards",
