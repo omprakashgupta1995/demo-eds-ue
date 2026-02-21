@@ -1,5 +1,5 @@
-function decorator(block){
-    console.log(block)
+function abcj(block){
+    console.log(block, "bio-cards")
 }
 
-export default decorator;
+export default abcj;
