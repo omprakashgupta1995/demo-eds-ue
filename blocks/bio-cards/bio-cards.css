@@ -118,6 +118,11 @@
 .bio-card-name{
     color: #e00025;
 }
+.bio-card-designation{
+    color: red;
+    text-align: center;
+    font-size: 1.8rem;
+}
 @media (width <=900px) {
     .our-team {
         padding: 60px 0;
