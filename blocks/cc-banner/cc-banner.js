@@ -6,10 +6,6 @@ export default function decorate(block) {
         if (ind == 3) {
             Array.from(el.children).forEach((e, ind) => {
                 let item = e.classList.add('feature-items');
-                Array.from(e.children).forEach((el, ind) => {
-                    console.log('inner-' +el.childList);
-                });
-                console.log(e.children);
             });
         }
         if (ind == 1) {
@@ -21,6 +17,15 @@ export default function decorate(block) {
             items[0].classList.add('h1');
         }
     });
-
+    document.querySelectorAll('.feature-items').forEach(item => {
+        let featureIcon = item.querySelectorAll('p')[0];
+        let featureDesc = item.querySelectorAll('p')[1];
+        if (featureIcon) {
+            featureIcon.classList.add('fea-icon');
+        }
+        if (featureDesc) {
+            featureDesc.classList.add('fea-desc');
+        }
+    });
 
 }

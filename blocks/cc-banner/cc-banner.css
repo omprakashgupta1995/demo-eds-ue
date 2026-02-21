@@ -62,7 +62,30 @@
     padding-left: 0;
 }
 
+.banner-fea .feature-items .fea-icon {
+    background: #fff;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.banner-fea .feature-items .fea-icon img {
+    height: 32px;
+    width: 32px;
+    position: relative;
+    padding-left: 19.5px;
+    padding-top: 5px;
+}
+
+.banner-fea .feature-items .fea-desc {
+    font-size: 15px;
+}
+
 .banner-fea .feature-items {
     display: flex;
     margin-bottom: 10px;
+    align-items: center;
+    gap: 10px 30px;
 }
