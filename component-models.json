@@ -124,7 +124,7 @@
         "component": "text",
         "valueType": "string",
         "name": "text-1",
-        "label": "text-1",
+        "label": "Bio Header",
         "value": "",
         "class": "bio-header"
       },
