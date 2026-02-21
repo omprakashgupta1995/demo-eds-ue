@@ -1,4 +1,8 @@
 /* blocks/bio-cards/bio-cards.css */
+.bio-cards{
+  background: bisque;
+
+}
 
 .section.our-team {
     margin: 0;
