@@ -115,7 +115,9 @@
     line-height: var(--text-lg-lh);
     color: rgb(33 37 41);
 }
-
+.bio-card-name{
+    color: #e00025;
+}
 @media (width <=900px) {
     .our-team {
         padding: 60px 0;
