@@ -47,6 +47,10 @@
                               {
                                   "name": "Bio Cards",
                                   "value": "bio-cards"
+                              },
+                              {
+                                  "name": "nikita",
+                                  "value": "nikita"
                               }
                           ]
                       }
