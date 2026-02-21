@@ -9,6 +9,10 @@
     background-color: #f1f1f1;
 }
 
+.bio-cards {
+    background-color: lightblue;
+}
+
 .our-team .bio-cards {
     display: flex;
     flex-direction: column;
@@ -115,14 +119,17 @@
     line-height: var(--text-lg-lh);
     color: rgb(33 37 41);
 }
-.bio-card-name{
+
+.bio-card-name {
     color: #e00025;
 }
-.bio-card-designation{
+
+.bio-card-designation {
     color: red;
     text-align: center;
     font-size: 1.8rem;
 }
+
 @media (width <=900px) {
     .our-team {
         padding: 60px 0;
