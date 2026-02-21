@@ -79,7 +79,17 @@
                   "valueType": "string",
                   "name": "col1_imageAlt",
                   "label": "Image Alt",
-                  "value": ""
+                  "value": "",
+                  "options": [
+                    {
+                        "name": "Default",
+                        "value": ""
+                    },
+                    {
+                        "name": "nikita",
+                        "value": "nikita"
+                    }
+                ]
               },
               {
                   "component": "text",
