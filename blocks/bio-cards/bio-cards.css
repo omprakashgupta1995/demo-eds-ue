@@ -3,6 +3,9 @@
 .section.our-team {
     margin: 0;
 }
+.bio-cards{
+    background-color: #50e13a;
+}
 
 .our-team {
     padding: 6.75rem 0;
