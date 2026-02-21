@@ -118,7 +118,7 @@
     ]
   },
   {
-    "id": "bio-cards-kt",
+    "id": "bio-cards",
     "fields": [
       {
         "component": "multiselect",
@@ -129,8 +129,8 @@
             "name": "Cards Style",
             "children": [
               {
-                "name": "Bio Cards KT",
-                "value": "bio-cards-kt"
+                "name": "Bio Cards",
+                "value": "bio-cards"
               }
             ]
           }
@@ -139,7 +139,7 @@
     ]
   },
   {
-    "id": "bio-cards-kt",
+    "id": "bio-card",
     "fields": [
       {
         "component": "reference",

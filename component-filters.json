@@ -20,9 +20,9 @@
     ]
   },
   {
-    "id": "bio-cards-kt",
+    "id": "bio-cards",
     "components": [
-      "bio-cards-kt"
+      "bio-card"
     ]
   },
   {
