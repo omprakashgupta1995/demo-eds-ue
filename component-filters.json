@@ -22,7 +22,7 @@
   {
     "id": "bio-cards",
     "components": [
-      "bio-cards"
+      "bio-card"
     ]
   },
   {
