@@ -100,14 +100,14 @@
         },
         {
           "title": "Bio Card KT",
-          "id": "bio-card-kt",
+          "id": "bio-cards-kt",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Bio Card KT",
-                  "model": "bio-card-kt"
+                  "model": "bio-cards-kt"
                 }
               }
             }
