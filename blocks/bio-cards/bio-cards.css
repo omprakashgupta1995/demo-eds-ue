@@ -1,5 +1,9 @@
 /* blocks/bio-cards/bio-cards.css */
 
+.bio-cards {
+    background-color: rgb(218, 20, 221);
+}
+
 .section.our-team {
     margin: 0;
 }
