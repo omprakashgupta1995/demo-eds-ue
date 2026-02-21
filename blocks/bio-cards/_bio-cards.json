@@ -37,5 +37,12 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+        {
+            "id": "bio-cards",
+            "components": [
+                "bio-card"
+            ]
+        }
+    ]
 }
