@@ -131,6 +131,10 @@
               {
                 "name": "Bio Cards",
                 "value": "bio-cards"
+              },
+              {
+                "name": "Our Team",
+                "value": "our-team"
               }
             ]
           }
