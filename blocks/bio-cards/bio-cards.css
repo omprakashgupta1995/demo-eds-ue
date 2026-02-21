@@ -5,9 +5,9 @@
     justify-content: center;
     align-items: center;
     padding:20px;
+    width: calc(100% / 4 - 20px);
 }
 .bio-cards img{
     height: 200px;
     width: 200px;
-
 }
