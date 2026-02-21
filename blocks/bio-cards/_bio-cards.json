@@ -129,12 +129,5 @@
             ]
         }
     ],
-    "filters": [
-        {
-            "id": "bio-cards",
-            "components": [
-                "bio-card"
-            ]
-        }
-    ]
+    "filters": []
 }
