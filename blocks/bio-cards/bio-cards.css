@@ -1,4 +1,7 @@
 /* blocks/bio-cards/bio-cards.css */
+.bio-cards-wrapper{
+    background-color: red;
+}
 
 .section.our-team {
     margin: 0;
