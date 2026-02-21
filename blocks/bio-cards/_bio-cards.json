@@ -62,7 +62,17 @@
                   "valueType": "string",
                   "name": "col1_image",
                   "label": "Image",
-                  "multi": false
+                  "multi": false,
+                  "options": [
+                    {
+                        "name": "Default",
+                        "value": ""
+                    },
+                    {
+                        "name": "Side-by-side",
+                        "value": "side-by-side"
+                    }
+                ]
               },
               {
                   "component": "text",
