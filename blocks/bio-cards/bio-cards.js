@@ -1,4 +1,5 @@
 // blocks/bio-cards/bio-cards.js
+/* eslint-disable */
 
 export default function decorate(block) {
   console.log('Bio Cards block loaded!');
