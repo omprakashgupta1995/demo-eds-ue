@@ -139,7 +139,7 @@
     ]
   },
   {
-    "id": "bio-card",
+    "id": "bio-cards",
     "fields": [
       {
         "component": "reference",

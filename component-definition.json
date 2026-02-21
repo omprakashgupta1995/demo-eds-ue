@@ -100,7 +100,7 @@
         },
         {
           "title": "Bio Card",
-          "id": "bio-card",
+          "id": "bio-cards",
           "plugins": {
             "xwalk": {
               "page": {

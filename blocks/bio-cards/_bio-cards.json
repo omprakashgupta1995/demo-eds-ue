@@ -18,7 +18,7 @@
         },
         {
             "title": "Bio Card",
-            "id": "bio-card",
+            "id": "bio-cards",
             "plugins": {
                 "xwalk": {
                     "page": {
@@ -55,7 +55,7 @@
             ]
         },
         {
-            "id": "bio-card",
+            "id": "bio-cards",
             "fields": [
                 {
                     "component": "reference",
@@ -133,7 +133,7 @@
         {
             "id": "bio-cards",
             "components": [
-                "bio-card"
+                "bio-cards"
             ]
         }
     ]
