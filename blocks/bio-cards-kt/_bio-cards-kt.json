@@ -1,0 +1,140 @@
+{
+    "definitions": [
+        {
+            "title": "Bio Cards KT",
+            "id": "bio-cards-kt",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Bio Cards KT",
+                            "model": "bio-cards-kt",
+                            "filter": "bio-cards-kt"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "title": "Bio Card KT",
+            "id": "bio-card-kt",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block/item",
+                        "template": {
+                            "name": "Bio Card KT",
+                            "model": "bio-card-kt"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "bio-cards-kt",
+            "fields": [
+                {
+                    "component": "multiselect",
+                    "name": "classes",
+                    "label": "Classes",
+                    "options": [
+                        {
+                            "name": "Cards Style",
+                            "children": [
+                                {
+                                    "name": "Bio Cards KT",
+                                    "value": "bio-cards-kt"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "bio-card-kt",
+            "fields": [
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "col1_image",
+                    "label": "Image",
+                    "multi": false
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "col1_imageAlt",
+                    "label": "Image Alt",
+                    "value": ""
+                },
+                {
+                    "component": "text",
+                    "name": "col2_person",
+                    "value": "",
+                    "label": "Name",
+                    "valueType": "string"
+                },
+                {
+                    "component": "richtext",
+                    "name": "col2_designation",
+                    "value": "",
+                    "label": "Designation",
+                    "valueType": "string"
+                },
+                {
+                    "component": "richtext",
+                    "name": "col2_description",
+                    "value": "",
+                    "label": "Description",
+                    "valueType": "string"
+                },
+                {
+                    "component": "aem-content",
+                    "name": "col2_link",
+                    "label": "Link"
+                },
+                {
+                    "component": "text",
+                    "name": "col2_linkText",
+                    "label": "Text"
+                },
+                {
+                    "component": "text",
+                    "name": "col2_linkTitle",
+                    "label": "Title"
+                },
+                {
+                    "component": "select",
+                    "name": "col2_linkType",
+                    "label": "Type",
+                    "options": [
+                        {
+                            "name": "default",
+                            "value": ""
+                        },
+                        {
+                            "name": "primary",
+                            "value": "primary"
+                        },
+                        {
+                            "name": "secondary",
+                            "value": "secondary"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "id": "bio-cards-kt",
+            "components": [
+                "bio-card-kt"
+            ]
+        }
+    ]
+}
