@@ -33,6 +33,10 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Bio cards",
+              "value": "bio-cards"
             }
           ]
         }
