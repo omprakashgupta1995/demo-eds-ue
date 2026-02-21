@@ -67,17 +67,26 @@
             "fields": [
                 {
                     "component": "multiselect",
-                    "name": "style",
-                    "label": "Style",
+                    "name": "classes",
+                    "label": "Classes",
                     "options": [
-                    {
-                        "name": "Background Color",
-                        "value": "background-color"
-                    },
-                    {
-                        "name": "Change Layout",
-                        "value": "change-layout"
-                    }
+                        {
+                            "name": "Card Style",
+                            "children": [
+                                {
+                                    "name": "Default",
+                                    "value": "default"
+                                },
+                                {
+                                    "name": "Featured",
+                                    "value": "featured"
+                                },
+                                {
+                                    "name": "Highlighted",
+                                    "value": "highlighted"
+                                }
+                            ]
+                        }
                     ]
                 },
                 {
