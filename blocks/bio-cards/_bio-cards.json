@@ -55,7 +55,7 @@
             ]
         },
         {
-            "id": "bio-card",
+            "id": "bio-cards",
             "fields": [
                 {
                     "component": "reference",
@@ -130,11 +130,5 @@
         }
     ],
     "filters": [
-        {
-            "id": "bio-cards",
-            "components": [
-                "bio-card"
-            ]
-        }
     ]
 }
