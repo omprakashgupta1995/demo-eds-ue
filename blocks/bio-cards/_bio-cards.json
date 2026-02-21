@@ -65,21 +65,7 @@
         {
             "id": "bio-card",
             "fields": [
-                {
-                    "component": "multiselect",
-                    "name": "style",
-                    "label": "Style",
-                    "options": [
-                    {
-                        "name": "Background Color",
-                        "value": "background-color"
-                    },
-                    {
-                        "name": "Change Layout",
-                        "value": "change-layout"
-                    }
-                    ]
-                },
+                
                 {
                     "component": "reference",
                     "valueType": "string",
