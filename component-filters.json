@@ -15,14 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "bio-cards"
-    ]
-  },
-  {
-    "id": "bio-cards",
-    "components": [
-      "bio-card"
+      "fragment"
     ]
   },
   {
