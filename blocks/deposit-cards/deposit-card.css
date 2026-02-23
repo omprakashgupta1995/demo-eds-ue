@@ -1,0 +1,69 @@
+.deposit-cards-container h2 {
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 300;
+    color: #54565b;
+    text-align: center;
+    font-family: roboto, sans-serif;
+    margin-bottom: 30px;
+}
+
+.deposit-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.dep-card {
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+    padding: 20px 30px 40px;
+    border: 1px solid #E5E5E5;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 22%);
+    height: 100%;
+    position: relative;
+    max-width: 23.3333%;
+    margin: 0 15px;
+}
+
+.dep-card div:first-child {
+    display: flex;
+    justify-content: center;
+}
+
+.dep-card img {
+    width: 100%;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+.dep-card div:last-child {
+    border-bottom: 0;
+    padding: 20px 0;
+    background: transparent;
+    min-height: 230px;
+}
+
+.card-para .card-img {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #54565b;
+    margin-top: 0;
+    margin-bottom: 36px;
+}
+
+.card-para .card-img::after {
+    width: 24px;
+    border: #9D1D27 solid 1px;
+    display: inline-block;
+    margin: 0.6rem 0;
+    position: absolute;
+    top: 41px;
+    left: 46%;
+    content: '';
+}

@@ -1,5 +1,14 @@
+
+const depClass = document.querySelectorAll('.deposit-cards > div');
+
+const depbod = document.querySelectorAll('.dep-card');
 export default function decorate(block) {
-    console.log('Bio Cards block loaded!');
-    console.log('Block element:', block);
-    console.log('Children (cards):', block.children);
+  depClass.forEach(child => {
+    child.classList.add('dep-card');
+    depbod.forEach(child=>{
+    const { children } = child;
+    if(children[0]) children[0].classList.add('card-img');
+    if(children[1]) children[1].classList.add('card-para');
+})
+});
 }
