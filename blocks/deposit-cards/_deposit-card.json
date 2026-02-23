@@ -9,23 +9,23 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Deposit Cards",
-              "filter": "deposit-cards",
-               "model": "deposit-cards"
+              "model": "deposit-cards",
+              "filter": "deposit-cards"
             }
           }
         }
       }
     },
     {
-      "title": "Deposit Cards",
-      "id": "deposit-cards",
+      "title": "Deposit Card",
+      "id": "deposit-card",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Deposit Cards",
-              "model": "deposit-cards"
+              "name": "Deposit Card",
+              "model": "deposit-card"
             }
           }
         }
@@ -33,102 +33,102 @@
     }
   ],
   "models": [
+    {
+      "id": "deposit-cards",
+      "fields": [
         {
-            "id": "deposit-cards",
-            "fields": [
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Classes",
+          "options": [
+            {
+              "name": "Cards Style",
+              "children": [
                 {
-                    "component": "multiselect",
-                    "name": "classes",
-                    "label": "Classes",
-                    "options": [
-                        {
-                            "name": "Cards Style",
-                            "children": [
-                                {
-                                    "name": "deposit Cards",
-                                    "value": "deposit-card"
-                                }
-                            ]
-                        }
-                    ]
+                  "name": "Deposit Cards",
+                  "value": "deposit-card"
                 }
-            ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deposit-card",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col1_image",
+          "label": "Image",
+          "multi": false
         },
         {
-            "id": "deposit-cards",
-            "fields": [
-                {
-                    "component": "reference",
-                    "valueType": "string",
-                    "name": "col1_image",
-                    "label": "Image",
-                    "multi": false
-                },
-                {
-                    "component": "text",
-                    "valueType": "string",
-                    "name": "col1_imageAlt",
-                    "label": "Image Alt",
-                    "value": ""
-                },
-                {
-                    "component": "text",
-                    "name": "col2_person",
-                    "value": "",
-                    "label": "Name",
-                    "valueType": "string"
-                },
-                {
-                    "component": "richtext",
-                    "name": "col2_designation",
-                    "value": "",
-                    "label": "Designation",
-                    "valueType": "string"
-                },
-                {
-                    "component": "richtext",
-                    "name": "col2_description",
-                    "value": "",
-                    "label": "Description",
-                    "valueType": "string"
-                },
-                {
-                    "component": "aem-content",
-                    "name": "col2_link",
-                    "label": "Link"
-                },
-                {
-                    "component": "text",
-                    "name": "col2_linkText",
-                    "label": "Text"
-                },
-                {
-                    "component": "text",
-                    "name": "col2_linkTitle",
-                    "label": "Title"
-                },
-                {
-                    "component": "select",
-                    "name": "col2_linkType",
-                    "label": "Type",
-                    "options": [
-                        {
-                            "name": "default",
-                            "value": ""
-                        },
-                        {
-                            "name": "primary",
-                            "value": "primary"
-                        },
-                        {
-                            "name": "secondary",
-                            "value": "secondary"
-                        }
-                    ]
-                }
-            ]
+          "component": "text",
+          "valueType": "string",
+          "name": "col1_imageAlt",
+          "label": "Image Alt",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "col2_person",
+          "value": "",
+          "label": "Name",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "col2_designation",
+          "value": "",
+          "label": "Designation",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "col2_description",
+          "value": "",
+          "label": "Description",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "col2_link",
+          "label": "Link"
+        },
+        {
+          "component": "text",
+          "name": "col2_linkText",
+          "label": "Text"
+        },
+        {
+          "component": "text",
+          "name": "col2_linkTitle",
+          "label": "Title"
+        },
+        {
+          "component": "select",
+          "name": "col2_linkType",
+          "label": "Type",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            }
+          ]
         }
-    ],
+      ]
+    }
+  ],
   "filters": [
     {
       "id": "deposit-cards",

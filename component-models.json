@@ -262,7 +262,7 @@
             "name": "Cards Style",
             "children": [
               {
-                "name": "deposit Cards",
+                "name": "Deposit Cards",
                 "value": "deposit-card"
               }
             ]
@@ -272,7 +272,7 @@
     ]
   },
   {
-    "id": "deposit-cards",
+    "id": "deposit-card",
     "fields": [
       {
         "component": "reference",
