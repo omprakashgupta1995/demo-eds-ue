@@ -67,3 +67,45 @@
     left: 46%;
     content: '';
 }
+
+.button-container {
+    display: table-cell;
+}
+
+.card-para>.button-container a {
+    height: 50px;
+    min-width: 160px;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background: #9D1D27;
+    color: #FFF;
+    text-align: center;
+    line-height: 30px;
+    white-space: nowrap;
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 32%);
+}
+
+.card-para>.button-container:last-child a {
+    color: #9D1D27;
+    font-weight: 700;
+    font-size: 14px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+@media screen and (max-width768px) {
+    .section.deposit-cards-container {
+        padding: 0 15px;
+    }
+
+    .dep-card {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card-para > .button-container a{
+        font-size: 14px;
+    }
+}
