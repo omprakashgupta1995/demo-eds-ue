@@ -285,5 +285,9 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "home-banners",
+    "fields": []
   }
 ]
