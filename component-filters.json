@@ -49,6 +49,8 @@
   },
   {
     "id": "home-banners",
-    "components": []
+    "components": [
+      "home-banners"
+    ]
   }
 ]

@@ -30,7 +30,7 @@
         {
             "id": "home-banners",
             "components": [
-
+"home-banners"
             ]
         }
     ]
