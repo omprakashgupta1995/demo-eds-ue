@@ -21,6 +21,12 @@
     ]
   },
   {
+    "id": "banner",
+    "components": [
+      "banner-slide"
+    ]
+  },
+  {
     "id": "bio-cards",
     "components": [
       "bio-card"
