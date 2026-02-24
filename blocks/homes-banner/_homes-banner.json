@@ -15,22 +15,8 @@
                     }
                 }
             }
-        },
-        // {
-        //     "title": "Bio Card",
-        //     "id": "bio-card",
-        //     "plugins": {
-        //         "xwalk": {
-        //             "page": {
-        //                 "resourceType": "core/franklin/components/block/v1/block/item",
-        //                 "template": {
-        //                     "name": "Bio Card",
-        //                     "model": "bio-card"
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
+        }
+        
     ],
     "models": [
         {
@@ -38,13 +24,13 @@
             "fields": [
                 
             ]
-        },
+        }
     ],
     "filters": [
         {
             "id": "home-banners",
             "components": [
-                // "bio-card"
+
             ]
         }
     ]
