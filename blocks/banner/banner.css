@@ -34,6 +34,10 @@ main>.banner-container>.banner-wrapper {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .banner-container .banner-section .swiper-slide .banner-cnt-wrapper .banner-title {
