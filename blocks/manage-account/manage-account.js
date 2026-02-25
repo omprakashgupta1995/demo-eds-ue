@@ -1,6 +1,28 @@
+function buildVideoIframe(url) {
+	if (!url) return null;
+	let embedUrl = '';
+	const ytMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([\w-]{6,})/i);
+	if (ytMatch) {
+		embedUrl = `https://www.youtube.com/embed/${ytMatch[1]}`;
+	}
+	const vimeoMatch = url.match(/vimeo\.com\/(?:video\/)?(\d+)/i);
+	if (!embedUrl && vimeoMatch) {
+		embedUrl = `https://player.vimeo.com/video/${vimeoMatch[1]}`;
+	}
+	if (!embedUrl) return null;
+
+	const iframe = document.createElement('iframe');
+	iframe.src = embedUrl;
+	iframe.title = 'Embedded video';
+	iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+	iframe.allowFullscreen = true;
+	return iframe;
+}
+
 export default function decorate(block) {
 	const rows = [...block.children];
-
+	console.log('Manage Account block loaded!');
+	debugger
 	rows.forEach((row) => {
 		row.classList.add('manage-accounts-item');
 		const cells = [...row.children];
@@ -15,7 +37,13 @@ export default function decorate(block) {
 
 		if (videoCell) {
 			videoCell.classList.add('manage-accounts-video');
-			const iframe = videoCell.querySelector('iframe');
+			let iframe = videoCell.querySelector('iframe');
+			if (!iframe) {
+				const link = videoCell.querySelector('a');
+				const url = link?.href || videoCell.textContent.trim();
+				iframe = buildVideoIframe(url);
+				if (iframe) videoCell.textContent = '';
+			}
 			if (iframe) {
 				const iframeParent = iframe.parentElement;
 				const wrapper = document.createElement('div');
