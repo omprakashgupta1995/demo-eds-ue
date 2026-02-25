@@ -41,7 +41,7 @@
 
 .our-team .bio-cards .bio-card-content .bio-card-name {
     font-size: var(--text-3xl);
-    color: #e00025;
+    color: maroon;
     font-weight: 500;
     line-height: var(--text-3xl-lh);
     margin-bottom: 0.5rem;
