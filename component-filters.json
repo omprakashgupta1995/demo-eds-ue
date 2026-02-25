@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "bio-cards",
-      "deposit-cards"
+      "deposit-cards",
+      "manage-account"
     ]
   },
   {
@@ -51,6 +52,12 @@
     "id": "deposit-cards",
     "components": [
       "deposit-card"
+    ]
+  },
+  {
+    "id": "manage-account",
+    "components": [
+      "manage-accounts"
     ]
   }
 ]

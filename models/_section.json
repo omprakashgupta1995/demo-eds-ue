@@ -52,7 +52,8 @@
         "columns",
         "fragment",
         "bio-cards",
-        "deposit-cards"
+        "deposit-cards",
+        "manage-account"
       ]
     }
   ]
