@@ -34,12 +34,12 @@ export default function decorate(block) {
     block.appendChild(swiperWrapper);
     block.appendChild(pagination);
 
-    // Initialize Swiper
-    new Swiper(block, {
-        loop: true,
-        pagination: {
-            el: pagination,
-            clickable: true,
-        },
-    });
+    // // Initialize Swiper
+    // new Swiper(block, {
+    //     loop: true,
+    //     pagination: {
+    //         el: pagination,
+    //         clickable: true,
+    //     },
+    // });
 }
