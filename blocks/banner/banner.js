@@ -1,27 +1,45 @@
 export default function decorate(block) {
-    console.log(block);
     block.classList.add("banner-section");
-    [...block.children].forEach((slide) => {
-        slide?.classList.add("swiper-slide")
+
+    const slides = [...block.children];
+
+    slides.forEach((slide) => {
+        slide.classList.add("swiper-slide");
+
         let [imgWrapper, contentWrapper] = [...slide.children];
         imgWrapper?.classList.add("banner-img-wrapper");
         contentWrapper?.classList.add("banner-cnt-wrapper");
-        let [title, pretitle, cta, description] = [...contentWrapper.children];
-        title?.classList.add("banner-title");
-        pretitle?.classList.add("banner-pretitle");
-        cta?.classList.add("banner-cta-wrapper");
-        description?.classList.add("banner-description")
-    })
-    let blockChildren = [...block.children];
 
-    let swiperWrapper = document.createElement("div");
+        if (contentWrapper) {
+            let [title, pretitle, cta, description] = [...contentWrapper.children];
+            title?.classList.add("banner-title");
+            pretitle?.classList.add("banner-pretitle");
+            cta?.classList.add("banner-cta-wrapper");
+            description?.classList.add("banner-description");
+        }
+    });
+
+    const swiperWrapper = document.createElement("div");
     swiperWrapper.classList.add("swiper-wrapper");
 
-    let pagination = document.createElement("div");
+    const pagination = document.createElement("div");
     pagination.classList.add("swiper-pagination");
 
-    swiperWrapper.appendChild(blockChildren)
+    // Move slides into wrapper
+    slides.forEach((slide) => {
+        swiperWrapper.appendChild(slide);
+    });
+    
     block.innerHTML = "";
-    block.appendChild(swiperWrapper)
-    block.appendChild(pagination)
+    block.appendChild(swiperWrapper);
+    block.appendChild(pagination);
+
+    // Initialize Swiper
+    new Swiper(block, {
+        loop: true,
+        pagination: {
+            el: pagination,
+            clickable: true,
+        },
+    });
 }
