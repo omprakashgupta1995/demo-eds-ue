@@ -3,10 +3,13 @@
     padding-top: 89px;
 }
 
-main>.banner-container>.banner-wrapper {
+main>.banner-container>.banner-wrapper,
+main>.banner-container>.banner-section,
+main>.banner-container>.banner-section .swiper-wrapper {
     padding: 0;
     margin: 0;
     max-width: 100%;
+    height: 100%;
 }
 
 .banner-container .banner-section .swiper-slide {
@@ -36,8 +39,9 @@ main>.banner-container>.banner-wrapper {
     justify-content: center;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
     z-index: 1;
+    transform: translateX(-50%);
 }
 
 .banner-container .banner-section .swiper-slide .banner-cnt-wrapper .banner-title {
