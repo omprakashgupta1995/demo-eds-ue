@@ -18,7 +18,8 @@
       "fragment",
       "bio-cards",
       "deposit-cards",
-      "manage-account"
+      "manage-account",
+      "embed-videos"
     ]
   },
   {
@@ -52,6 +53,12 @@
     "id": "deposit-cards",
     "components": [
       "deposit-card"
+    ]
+  },
+  {
+    "id": "embed-videos",
+    "components": [
+      "embed-video"
     ]
   },
   {

@@ -346,6 +346,44 @@
     ]
   },
   {
+    "id": "embed-videos",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Classes",
+        "options": [
+          {
+            "name": "Cards Style",
+            "children": [
+              {
+                "name": "Embed Videos",
+                "value": "embed-videos"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_text",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
