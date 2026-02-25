@@ -367,13 +367,14 @@
     ]
   },
   {
-    "id": "embed",
+    "id": "embed-video",
     "fields": [
       {
         "component": "reference",
         "name": "col1_image",
         "label": "Image",
-        "valueType": "string"
+        "valueType": "string",
+        "multi": false
       },
       {
         "component": "text",
