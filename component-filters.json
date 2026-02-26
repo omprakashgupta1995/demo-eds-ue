@@ -46,5 +46,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "tags",
+    "components": [
+      "tag"
+    ]
   }
 ]

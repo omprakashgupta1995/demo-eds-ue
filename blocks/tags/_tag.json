@@ -29,5 +29,10 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+    "id": "tags",
+    "components": ["tag"]
+  }
+  ]
 }
