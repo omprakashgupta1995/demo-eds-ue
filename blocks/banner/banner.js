@@ -1,3 +1,6 @@
+import Swiper from 'swiper';
+import 'swiper/css';
+
 export default function decorate(block) {
     block.classList.add("banner-section");
 
@@ -25,21 +28,23 @@ export default function decorate(block) {
     const pagination = document.createElement("div");
     pagination.classList.add("swiper-pagination");
 
-    // Move slides into wrapper
     slides.forEach((slide) => {
         swiperWrapper.appendChild(slide);
     });
-    
+
     block.innerHTML = "";
     block.appendChild(swiperWrapper);
     block.appendChild(pagination);
 
-    // // Initialize Swiper
-    // new Swiper(block, {
-    //     loop: true,
-    //     pagination: {
-    //         el: pagination,
-    //         clickable: true,
-    //     },
-    // });
+    new Swiper(block, {
+        loop: true,
+        pagination: {
+            el: pagination,
+            clickable: true,
+            initialSlide: 0,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            loop: false,
+        },
+    });
 }

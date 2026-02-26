@@ -63,6 +63,10 @@ main>.banner-container .banner-section .swiper-wrapper {
     order: 2;
 }
 
+.banner-container .banner-section .swiper-slide .banner-cnt-wrapper .banner-cta-wrapper {
+    order: 3;
+}
+
 .banner-container .banner-section .swiper-slide .banner-cnt-wrapper .banner-cta-wrapper a {
     text-decoration: none;
     color: #fff;
