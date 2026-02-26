@@ -35,6 +35,7 @@ export default function decorate(block) {
     block.innerHTML = "";
     block.appendChild(swiperWrapper);
     block.appendChild(pagination);
+    console.log(block)
 
     new Swiper(block, {
         loop: true,
