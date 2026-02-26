@@ -54,7 +54,8 @@
         "bio-cards",
         "deposit-cards",
         "manage-account",
-        "embed-videos"
+        "embed-videos",
+        "card-with-link"
       ]
     }
   ]

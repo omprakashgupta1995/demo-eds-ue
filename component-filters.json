@@ -19,13 +19,20 @@
       "bio-cards",
       "deposit-cards",
       "manage-account",
-      "embed-videos"
+      "embed-videos",
+      "card-with-link"
     ]
   },
   {
     "id": "bio-cards",
     "components": [
       "bio-card"
+    ]
+  },
+  {
+    "id": "card-with-link",
+    "components": [
+      "card-with-links"
     ]
   },
   {

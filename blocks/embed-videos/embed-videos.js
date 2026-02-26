@@ -92,14 +92,14 @@ export default function decorate(block) {
   const placeholder = block.querySelector('picture');
   const link = block.querySelector('a').href;
   block.textContent = '';
-
   if (placeholder) {
-    const wrapper = document.createElement('div');
-    wrapper.className = 'embed-placeholder';
-    wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
-    wrapper.prepend(placeholder);
-    wrapper.addEventListener('click', () => {
-      loadEmbed(block, link, true);
+      const wrapper = document.createElement('div');
+      wrapper.className = 'embed-placeholder';
+      wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
+      wrapper.prepend(placeholder);
+      wrapper.addEventListener('click', () => {
+          loadEmbed(block, link, true);
+        
     });
     block.append(wrapper);
   } else {

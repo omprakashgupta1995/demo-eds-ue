@@ -69,6 +69,13 @@
                     "name": "col1_text",
                     "label": "Text",
                     "valueType": "string"
+                },
+                {
+                    "component": "reference",
+                    "name": "col2_image",
+                    "label": "Play Button Image",
+                    "valueType": "string",
+                    "multi": false
                 }
             ]
         }

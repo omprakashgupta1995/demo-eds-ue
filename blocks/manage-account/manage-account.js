@@ -22,7 +22,7 @@ function buildVideoIframe(url) {
 export default function decorate(block) {
 	const rows = [...block.children];
 	console.log('Manage Account block loaded!');
-	debugger
+
 	rows.forEach((row) => {
 		row.classList.add('manage-accounts-item');
 		const cells = [...row.children];
