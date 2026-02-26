@@ -1,7 +1,31 @@
-import Swiper from 'swiper';
-import 'swiper/css';
+function loadSwiperCSS() {
+    if (document.querySelector('link[data-swiper]')) return;
 
-export default function decorate(block) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+    link.setAttribute('data-swiper', 'true');
+    document.head.appendChild(link);
+}
+
+function loadSwiperJS() {
+    return new Promise((resolve) => {
+        if (window.Swiper) {
+            resolve();
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+        script.onload = resolve;
+        document.body.appendChild(script);
+    });
+}
+
+export default async function decorate(block) {
+
+    loadSwiperCSS();
+    await loadSwiperJS();
     block.classList.add("banner-section");
 
     const slides = [...block.children];
