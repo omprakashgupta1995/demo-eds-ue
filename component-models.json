@@ -291,7 +291,7 @@
     ]
   },
   {
-    "id": "tags",
+    "id": "tag",
     "fields": [
       {
         "component": "text",
