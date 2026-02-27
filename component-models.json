@@ -294,7 +294,18 @@
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false
+        "multi": false,
+        "options": [
+          {
+            "name": "Banner Style",
+            "children": [
+              {
+                "name": "Home Banner",
+                "value": "homeBannerSection"
+              }
+            ]
+          }
+        ]
       },
       {
         "component": "text",
