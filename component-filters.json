@@ -48,9 +48,7 @@
     ]
   },
   {
-    "id": "home-banners",
-    "components": [
-      "home-banners"
-    ]
+    "id": "home-banner",
+    "components": []
   }
 ]
