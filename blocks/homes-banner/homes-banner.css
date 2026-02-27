@@ -1,12 +1,26 @@
-main > .section.home-banner-container > .home-banner-wrapper{
-    max-width: 100%;
-    width: 100%;
-    height: 400px;
-    padding: 0;
+/* Section */
+.banner-section {
+  padding: 60px;
+  background: #f5f5f5;
 }
-/* .home-banner-container .home-banner-wrapper{
-    max-width: 100%;
-    width: 100%;
-    height: 400px;
-    padding: 0;
-} */
+
+/* Block */
+.banner-block {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Image */
+.banner-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Title */
+.banner-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}

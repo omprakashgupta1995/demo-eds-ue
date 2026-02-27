@@ -287,19 +287,35 @@
     ]
   },
   {
-    "id": "home-banner",
+    "id": "hero-banners",
     "fields": [
       {
         "component": "multiselect",
-        "name": "classes",
-        "label": "Classes",
+        "name": "sectionClass",
+        "label": "Section Class",
         "options": [
           {
-            "name": "Banner Style",
+            "name": "Section Style",
             "children": [
               {
-                "name": "Home Banner Section",
-                "value": "homeBannerSection"
+                "name": "Banner Section",
+                "value": "banner-section"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "blockClass",
+        "label": "Block Class",
+        "options": [
+          {
+            "name": "Block Style",
+            "children": [
+              {
+                "name": "Banner Block",
+                "value": "banner-block"
               }
             ]
           }
@@ -307,24 +323,45 @@
       },
       {
         "component": "reference",
-        "valueType": "string",
         "name": "image",
-        "label": "Image",
-        "multi": false
+        "label": "Image"
+      },
+      {
+        "component": "multiselect",
+        "name": "imageClass",
+        "label": "Image Class",
+        "options": [
+          {
+            "name": "Image Style",
+            "children": [
+              {
+                "name": "Banner Image",
+                "value": "banner-image"
+              }
+            ]
+          }
+        ]
       },
       {
         "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt",
-        "value": ""
+        "name": "title",
+        "label": "Title"
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "text",
-        "label": "Text",
-        "value": ""
+        "component": "multiselect",
+        "name": "titleClass",
+        "label": "Title Class",
+        "options": [
+          {
+            "name": "Title Style",
+            "children": [
+              {
+                "name": "Banner Title",
+                "value": "banner-title"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

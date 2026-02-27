@@ -38,7 +38,30 @@
 //   });
 // }
 export default function decorate(block) {
-  console.log('Bio Cards block loaded!');
-  console.log('Block element:', block);
-  console.log('Children (cards):', block.children);
+
+  const section = block.closest('.section');
+
+  const picture = block.querySelector('picture');
+  const title = block.querySelector('h1, h2, h3, h4, h5, h6, p');
+
+  // Section class
+  if (block.dataset.sectionClass) {
+    section.classList.add(block.dataset.sectionClass);
+  }
+
+  // Block class
+  if (block.dataset.blockClass) {
+    block.classList.add(block.dataset.blockClass);
+  }
+
+  // Image class
+  if (picture && block.dataset.imageClass) {
+    picture.classList.add(block.dataset.imageClass);
+  }
+
+  // Title class
+  if (title && block.dataset.titleClass) {
+    title.classList.add(block.dataset.titleClass);
+  }
+
 }

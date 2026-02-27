@@ -17,7 +17,7 @@
       "columns",
       "fragment",
       "bio-cards",
-      "home-banner"
+      "hero-banner"
     ]
   },
   {
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "id": "home-banner",
+    "id": "hero-banners",
     "components": []
   }
 ]
