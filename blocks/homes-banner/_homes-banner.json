@@ -22,22 +22,27 @@
       "id": "home-banner",
       "fields": [
         {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Classes",
+          "options": [
+            {
+              "name": "Banner Style",
+              "children": [
+                {
+                  "name": "Home Banner Section",
+                  "value": "homeBannerSection"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "component": "reference",
           "valueType": "string",
           "name": "image",
           "label": "Image",
-          "multi": false,
-          "options": [
-                        {
-                            "name": "Banner Style",
-                            "children": [
-                                {
-                                    "name": "Home Banner",
-                                    "value": "homeBannerSection"
-                                }
-                            ]
-                        }
-                    ]
+          "multi": false
         },
         {
           "component": "text",
