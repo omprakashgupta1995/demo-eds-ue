@@ -1,6 +1,12 @@
-.home-banner-container .home-banner-wrapper{
+main > .section.home-banner-container > .home-banner-wrapper{
     max-width: 100%;
     width: 100%;
     height: 400px;
     padding: 0;
 }
+/* .home-banner-container .home-banner-wrapper{
+    max-width: 100%;
+    width: 100%;
+    height: 400px;
+    padding: 0;
+} */
