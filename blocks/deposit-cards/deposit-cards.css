@@ -112,9 +112,14 @@
         display: block;
         width: 100%;
         max-width: 100%;
+        margin: 0;
     }
 
     .card-para>.button-container a {
         font-size: 14px;
+    }
+
+    .button-container{
+        width: 100%;
     }
 }

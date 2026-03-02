@@ -1,0 +1,58 @@
+.card-with-link .button-container {
+    visibility: hidden;
+}
+
+.section.card-with-link-container h3 {
+    color: #25243B;
+    font-size: 26px;
+    font-weight: 500;
+    font-family: roboto, sans-serif;
+    margin-bottom: 20px;
+}
+
+.card-with-link.block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-with-link a.link-cards {
+    display: flex;
+    align-items: center;
+}
+
+div.link-cards {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.link-cards p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #25243B;
+}
+
+@media screen and (max-width:768px) {
+    div.link-cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .link-cards p {
+        text-align: center;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .card-with-link.block {
+        gap: 10px;
+    }
+
+    .link-cards img {
+        max-width: 72px;
+        width: 100%;
+    }
+}
