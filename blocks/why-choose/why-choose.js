@@ -11,7 +11,7 @@ export default function decorate(block) {
     if (!link.querySelector('img')) {
 
       const icon = document.createElement('img');
-      icon.src = '/content/dam/ifiwebsite/icons/arrow-right-circle.png';
+      icon.src = '/content/dam/ron-ifl/arrow-right-circle.png';
       icon.alt = 'arrow';
       icon.className = 'arrow-icon';
 
