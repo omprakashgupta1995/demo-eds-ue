@@ -1,4 +1,4 @@
-.why-choose{
+/* .why-choose{
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
@@ -7,16 +7,20 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
 .why-choose [data-aue-prop="know_more_btn"] {
   margin-top: 20px;
 }
 
-.why-choose [data-aue-prop="know_more_btn"] a {
+.why-choose [data-aue-prop="know_more_btn"] p {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
   color: #221f20;
-  text-decoration: none;
   font-weight: 600;
 }
+.why-choose div:nth-child(2) a{
+    
+} */
