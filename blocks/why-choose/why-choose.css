@@ -24,3 +24,22 @@
 .why-choose div:nth-child(2) a{
     
 } */
+ .whychoosetitlecontent .default-content-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+  .whychoosetitlecontent .default-content-wrapper p{
+    color: #221f20;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.16pc;
+ }
+ @media screen and (max-width:768px) {
+      .whychoosetitlecontent .default-content-wrapper p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: .27in;
+ }   
+ }
