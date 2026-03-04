@@ -7,14 +7,16 @@
     align-items: center;
     justify-content: space-between;
 }
-.why-choose .know-more-wrapper a {
+.why-choose [data-aue-prop="know_more_btn"] {
+  margin-top: 20px;
+}
+
+.why-choose [data-aue-prop="know_more_btn"] a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
-  /* background: transparent; */
+  padding: 10px 20px;
   color: #221f20;
-  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
 }
