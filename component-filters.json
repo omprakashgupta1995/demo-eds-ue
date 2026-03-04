@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "bio-cards",
-      "hero-banner"
+      "hero-banner",
+      "why-choose"
     ]
   },
   {
@@ -50,5 +51,11 @@
   {
     "id": "hero-banners",
     "components": []
+  },
+  {
+    "id": "why-choose",
+    "components": [
+      "why-choose"
+    ]
   }
 ]

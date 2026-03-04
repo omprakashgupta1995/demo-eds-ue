@@ -364,5 +364,40 @@
         ]
       }
     ]
+  },
+  {
+    "id": "why-choose",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Classes",
+        "options": [
+          {
+            "name": "Why Choose Style",
+            "children": [
+              {
+                "name": "Why Choose",
+                "value": "why-choose"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "why_choosetitle",
+        "label": "Why choose title",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "know_more_btn",
+        "value": "",
+        "label": "Know More Btn",
+        "valueType": "string"
+      }
+    ]
   }
 ]
