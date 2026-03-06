@@ -231,9 +231,7 @@ main img {
 main > .section {
   margin: 40px 0;
 }
-main > .section.why-choose-container{
-  margin: 0 auto;
-}
+
 main > .section > div {
   max-width: 1200px;
   margin: auto;
@@ -256,4 +254,27 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main > .section.why-choose-container{
+  margin: 0 auto;
+}
+main > .section.whychoosetitlecontent > div{
+  padding: 0;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width:768px) {
+  main > .section.whychoosetitlecontent > div{
+  padding: 0 16px;
+}
+main > .section.why-choose-container{
+  padding: 0 16px;
+}
+main > .section.whychoosetitlecontent{
+  margin: 0 0 24px 0;
+}
 }

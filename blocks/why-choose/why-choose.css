@@ -1,29 +1,4 @@
-/* .why-choose{
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-
-.why-choose [data-aue-prop="know_more_btn"] {
-  margin-top: 20px;
-}
-
-.why-choose [data-aue-prop="know_more_btn"] p {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  color: #221f20;
-  font-weight: 600;
-}
-.why-choose div:nth-child(2) a{
-    
-} */
  .whychoosetitlecontent .default-content-wrapper{
     display: flex;
     align-items: center;
@@ -59,7 +34,8 @@
     margin: 0;
  }
  .why-choose-container{
-    width: 80pc;
+    max-width: 80pc;
+    width: 100%;
     display: flex;
     margin: 0 auto;
     gap: 24px;
@@ -71,19 +47,17 @@
     width: 23.5%;
     display: flex;
     align-items: center;
+    margin: 0;
  }
  /* card layout */
 .why-choose{
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  grid-template-rows: auto auto;
+  display: flex;
   align-items: center;
-  column-gap: 16px;
+  gap: 16px;
 }
 
 /* icon */
 .why-choose > div:first-child{
-  grid-row: 1 / span 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,34 +67,36 @@
   width: 3pc;
   height: 3pc;
 }
-
-/* title */
-.why-choose > div:nth-child(2){
-  align-self: end;
+.why-choose > div:nth-child(2) div ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
-
-.why-choose > div:nth-child(2) p{
-  margin: 0;
-  color: #221f20;
-  font-family: Gotham Pro, sans-serif;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 2.16pc;
+.why-choose > div:nth-child(2) div ul li{
+    list-style: none;
+      color: #221f20;
+    font-family: Gotham Pro, sans-serif;
+    font-size: .875rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.2px;
+    line-height: 19.6px;
 }
-
-/* subtitle */
-.why-choose > div:nth-child(3){
-  align-self: start;
+.why-choose > div:nth-child(2) div ul li:first-child{
+    color: #221f20;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.16pc;
 }
-
-.why-choose > div:nth-child(3) p{
-  margin-top: 4px;
-  color: #221f20;
-  font-family: Gotham Pro, sans-serif;
-  font-size: .875rem;
-  font-weight: 400;
-  letter-spacing: -.2px;
-  line-height: 19.6px;
+.whychoosetitlecontent:first-child .default-content-wrapper .button-container{
+    display: block;
+}
+.whychoosetitlecontent:last-child .default-content-wrapper .button-container{
+    display: none;
 }
  @media screen and (max-width:768px) {
       .whychoosetitlecontent .default-content-wrapper p:first-child{
@@ -128,4 +104,63 @@
     font-weight: 500;
     line-height: .27in;
  }   
+   .why-choose-container{
+        flex-wrap: wrap;
+        gap: 8px;
+   }
+   .why-choose{
+    flex-direction: column;
+    align-items: start;
+   }
+  .why-choose-container .why-choose-wrapper{
+    background: #f1f3fc;
+    border-radius: 24px;
+    padding:1pc;
+    width: 40%;
+    display: flex;
+    align-items: center;
+ }
+ .why-choose > div:first-child img{
+    width: 2pc;
+    height: 2pc;
+ }
+ .why-choose > div:nth-child(2) div ul li:first-child{
+   font-size: 1.25rem;
+        font-weight: 700;
+        line-height: .27in;
+}
+.why-choose > div:nth-child(2) div ul li{
+    font-size: .75rem;
+    line-height: 1pc;
+}
+.whychoosetitlecontent:first-child .default-content-wrapper .button-container{
+    display: none;
+}
+.whychoosetitlecontent:last-child .default-content-wrapper .button-container{
+    display: block;
+}
+  .whychoosetitlecontent:last-child .default-content-wrapper p a{
+      -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #221f20;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: 10px;
+    line-height: 1.16pc;
+    background-color: transparent;
+    margin: 0;
+    border: none;
+ }
+ .whychoosetitlecontent:last-child .default-content-wrapper .button-container{
+    margin: 31px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
  }
