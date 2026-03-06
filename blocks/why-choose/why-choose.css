@@ -58,6 +58,70 @@
  .whychoosetitlecontent .default-content-wrapper .button-container{
     margin: 0;
  }
+ .why-choose-container{
+    width: 80pc;
+    display: flex;
+    margin: 0 auto;
+    gap: 24px;
+ }
+ .why-choose-container .why-choose-wrapper{
+    background: #f1f3fc;
+    border-radius: 24px;
+    padding: 40px 1pc;
+    width: 23.5%;
+    display: flex;
+    align-items: center;
+ }
+ /* card layout */
+.why-choose{
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 16px;
+}
+
+/* icon */
+.why-choose > div:first-child{
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-choose > div:first-child img{
+  width: 3pc;
+  height: 3pc;
+}
+
+/* title */
+.why-choose > div:nth-child(2){
+  align-self: end;
+}
+
+.why-choose > div:nth-child(2) p{
+  margin: 0;
+  color: #221f20;
+  font-family: Gotham Pro, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.16pc;
+}
+
+/* subtitle */
+.why-choose > div:nth-child(3){
+  align-self: start;
+}
+
+.why-choose > div:nth-child(3) p{
+  margin-top: 4px;
+  color: #221f20;
+  font-family: Gotham Pro, sans-serif;
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: -.2px;
+  line-height: 19.6px;
+}
  @media screen and (max-width:768px) {
       .whychoosetitlecontent .default-content-wrapper p:first-child{
     font-size: 1.5rem;

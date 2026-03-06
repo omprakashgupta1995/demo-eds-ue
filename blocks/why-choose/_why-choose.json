@@ -35,16 +35,11 @@
           "label": "Icon Alt",
           "value": ""
         },
-        {
-          "component": "text",
-          "name": "title",
-          "label": "Title",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "subtitle",
-          "label": "Sub Title",
+       {
+          "component": "richtext",
+          "name": "cardDetails",
+          "value": "",
+          "label": "card Details",
           "valueType": "string"
         }
       ]
