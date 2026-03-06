@@ -17,51 +17,43 @@
       }
     }
   ],
-
   "models": [
     {
       "id": "why-choose",
       "fields": [
         {
-          "component": "multiselect",
-          "name": "classes",
-          "label": "Classes",
-          "options": [
-            {
-              "name": "Why Choose Style",
-              "children": [
-                {
-                  "name": "Why Choose",
-                  "value": "why-choose"
-                }
-              ]
-            }
-          ]
+          "component": "reference",
+          "valueType": "string",
+          "name": "icon",
+          "label": "Icon",
+          "multi": false
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "why_choosetitle",
-          "label": "Why choose title",
+          "name": "iconAlt",
+          "label": "Icon Alt",
           "value": ""
         },
         {
-          "component": "richtext",
-          "name": "know_more_btn",
-          "value": "",
-          "label": "Know More Btn",
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "subtitle",
+          "label": "Sub Title",
           "valueType": "string"
         }
       ]
     }
   ],
-
   "filters": [
     {
       "id": "why-choose",
-      "components": [
-        "why-choose"
-      ]
+      "components": ["why-choose"]
     }
   ]
 }
