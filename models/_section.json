@@ -39,6 +39,10 @@
               "value": "whyChooseTitleContent"
             },
             {
+              "name": "whyChooseTitleMob",
+              "value": "whychoosetitlecontentmob"
+            },
+            {
               "name": "Customer Service Desk",
               "value": "customerservicedesk"
             }
