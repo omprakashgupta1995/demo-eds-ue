@@ -124,6 +124,10 @@
           {
             "name": "Customer Service Desk",
             "value": "customerservicedesk"
+          },
+          {
+            "name": "Most Searched Terms",
+            "value": "mostsearchedterms"
           }
         ]
       }

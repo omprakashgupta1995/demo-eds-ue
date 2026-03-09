@@ -282,9 +282,6 @@ main > .section.why-choose-container{
 main > .section.whychoosetitlecontent{
   margin: 0 0 24px 0;
 }
-.whychoosetitlecontent:first-child .default-content-wrapper .button-container{
-    display: none;
-}
 .whychoosetitlecontentmob .default-content-wrapper .button-container{
      margin-top: 31px;
     display: flex;
