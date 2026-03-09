@@ -18,7 +18,8 @@
       "fragment",
       "bio-cards",
       "hero-banner",
-      "why-choose"
+      "why-choose",
+      "most-searched-card"
     ]
   },
   {
@@ -51,6 +52,12 @@
   {
     "id": "hero-banners",
     "components": []
+  },
+  {
+    "id": "most-searched-terms",
+    "components": [
+      "most-searched-card"
+    ]
   },
   {
     "id": "why-choose",
