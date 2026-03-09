@@ -397,3 +397,58 @@ main > .section.customerservicedesk > div{
     }
 }
 /* customer desk */
+
+/* Most Searched Terms */
+main > .section.mostsearchedterms {
+  
+}
+main > .section.mostsearchedterms > div {
+  max-width: 80pc;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+#most-searched-terms{
+    color: #19417a;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 34px;
+    margin: 0 0 2pc 0;
+}
+.mostsearchedterms ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 24px 1pc;
+  margin: 0;
+}
+.mostsearchedterms ul li{
+  /* color: #00517f; */
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 8px 1pc;
+  list-style-type: none;
+  background: #f1f3fc;
+  border: .5px solid #a1cbf1;
+  border-radius: 45px;
+  /* font-family: Gotham Pro, sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1pc; */
+}
+.mostsearchedterms ul li a{
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+   font-family: Gotham Pro, sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1pc;
+  color: #00517f;
+
+}
+
+/* Most Searched Terms */
