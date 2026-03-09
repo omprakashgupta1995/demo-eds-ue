@@ -137,7 +137,12 @@
     display: none;
 }
 .whychoosetitlecontent:last-child .default-content-wrapper .button-container{
-    display: block;
+     /* margin: 31px auto 0 auto; */
+     margin-top: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
   .whychoosetitlecontent:last-child .default-content-wrapper p a{
       -webkit-box-align: center;
@@ -157,10 +162,5 @@
     margin: 0;
     border: none;
  }
- .whychoosetitlecontent:last-child .default-content-wrapper .button-container{
-    margin: 31px auto 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
+
  }
