@@ -163,4 +163,24 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+ const slider = document.querySelector('.section.nav-tools ul');
+
+if (slider) {
+  setInterval(() => {
+
+    const firstItem = slider.children[0];
+
+    slider.style.transition = "transform 0.4s ease-in-out";
+    slider.style.transform = "translateY(-30px)";
+
+    setTimeout(() => {
+      slider.appendChild(firstItem);
+      slider.style.transition = "none";
+      slider.style.transform = "translateY(0)";
+    }, 400);
+
+  }, 1000);
 }
+}
+
