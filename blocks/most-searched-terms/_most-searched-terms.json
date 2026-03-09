@@ -21,19 +21,20 @@
     {
       "id": "most-searched-terms",
       "fields": [
+       
         {
-          "component": "title",
-          "valueType": "string",
+          "component": "text",
+          "valueType": "string",    
           "name": "title",
           "label": "Title",
           "value": ""
         },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "mostsearchedtermscards",
-          "label": "Most Search Cards",
-          "value": ""
+         {
+          "component": "richtext",
+          "name": "cardDetails",
+          "value": "",
+          "label": "card Details",
+          "valueType": "string"
         },
        {
           "component": "text",
