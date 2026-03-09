@@ -407,37 +407,39 @@
     "fields": [
       {
         "component": "title",
-        "name": "most_searchedterms",
-        "value": "",
-        "label": "Most Searched Terms Title",
-        "valueType": "string"
+        "name": "title",
+        "label": "Most Searched Terms Title"
+      },
+      {
+        "component": "richtext",
+        "name": "terms",
+        "label": "Most Searched Terms List"
       },
       {
         "component": "text",
-        "name": "most_searchedCards",
-        "label": "Text",
-        "valueType": "string"
+        "name": "button_text",
+        "label": "View All Button Text"
       },
       {
         "component": "text",
-        "name": "view_All",
-        "label": "Title"
+        "name": "button_link",
+        "label": "View All Button Link"
       },
       {
         "component": "select",
-        "name": "col2_linkType",
-        "label": "Type",
+        "name": "button_style",
+        "label": "Button Style",
         "options": [
           {
-            "name": "default",
+            "name": "Default",
             "value": ""
           },
           {
-            "name": "primary",
+            "name": "Primary",
             "value": "primary"
           },
           {
-            "name": "secondary",
+            "name": "Secondary",
             "value": "secondary"
           }
         ]
