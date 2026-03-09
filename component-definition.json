@@ -221,21 +221,6 @@
           }
         },
         {
-          "title": "Most Searched Card",
-          "id": "most-searched-card",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Most Searched Card",
-                  "model": "most-searched-card"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Why Choose",
           "id": "why-choose",
           "plugins": {
