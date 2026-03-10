@@ -19,7 +19,8 @@
       "bio-cards",
       "hero-banner",
       "why-choose",
-      "most-searched-terms"
+      "most-searched-terms",
+      "customer-care-details"
     ]
   },
   {
@@ -47,6 +48,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "customer-care-details",
+    "components": [
+      "customer-care-details"
     ]
   },
   {

@@ -267,6 +267,53 @@
     ]
   },
   {
+    "id": "customer-care-cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Classes",
+        "options": [
+          {
+            "name": "Cards Style",
+            "children": [
+              {
+                "name": "Customer Care Cards",
+                "value": "customer-care-cards"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "customer-care-details",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "cust_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cust_imageAlt",
+        "label": "Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "customerCardDetails",
+        "value": "",
+        "label": "card Details",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
