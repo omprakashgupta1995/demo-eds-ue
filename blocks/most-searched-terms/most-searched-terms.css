@@ -47,7 +47,6 @@ main > .section.most-searched-terms-container > div {
 }
 .most-searched-terms div:nth-child(3) p{
     cursor: pointer;
-    /* align-items: center; */
     color: #000;
     display: -webkit-box;
     display: flex;

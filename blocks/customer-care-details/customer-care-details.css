@@ -1,0 +1,95 @@
+main > .section.customer-care-details-container{
+    display: flex;
+    align-items: center;
+    max-width: 80pc;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1pc;
+}
+main > .section.customer-care-details-container > div{
+    /* padding: 0; */
+    margin: 0;
+    border: 1px solid rgba(0, 66, 126, .16);
+    border-radius: 24px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #000;
+    max-width: 26pc;
+    max-width: 32.4%;
+    min-height: 5pc;
+    padding: 20px 1pc;
+    width: 100%;
+}
+.customer-care-details{
+    display: flex;
+    align-items: center;
+    gap: 1pc;
+    max-width: 370px;
+}
+.customer-care-details div:nth-child(2) ul{
+    margin: 0;
+    padding: 0;
+}   
+.customer-care-details div:nth-child(2) ul li{
+    list-style-type: none;
+    color: #4d4d4d;
+    font-family: Gotham Pro, sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+}
+.customer-care-details div:nth-child(2) ul li:nth-child(1){
+    margin-bottom: 8px;
+}
+.customer-care-details div:nth-child(2) ul li a{
+    color: #00427e;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 24px;
+    word-break: break-all;
+    text-decoration: none;
+}
+.customer-care-details > div:nth-child(1) {
+    width: 40px;
+    height: 40px;
+}
+.customer-care-details > div:nth-child(1) div {
+    width: 100%;
+    height: 100%;
+}
+.customer-care-details img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:768px){
+    main > .section.customer-care-details-container{
+        padding: 0 16px;
+    }
+    main > .section.customer-care-details-container > div{
+        max-width: 100%;
+        min-height: unset;
+        padding: 1pc;
+    }
+    .customer-care-details{
+        gap: 24px;
+        max-width: 310px;
+        min-height: 52px;
+    }
+    .customer-care-details div:nth-child(2) ul li{
+        font-size: .75rem;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    .customer-care-details div:nth-child(2) ul li a{
+        color: #00427e;
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 2pc;
+        text-decoration: none;
+    }
+}
