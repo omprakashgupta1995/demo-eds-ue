@@ -1,0 +1,54 @@
+{
+  "definitions": [
+    {
+      "title": "Claim Settlement Ratio",
+      "id": "claim-settlement-ratio",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Claim Settlement Ratio",
+              "model": "claim-settlement-ratio",
+              "filter": "claim-settlement-ratio"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "claim-settlement-ratio",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "claimSettlementRatio",
+          "value": "",
+          "label": "Claim Details",
+          "valueType": "string"
+        },
+       {
+            "component": "reference",
+            "valueType": "string",
+            "name": "cust_image",
+            "label": "Image",
+            "multi": false
+        },
+        {
+            "component": "text",
+            "valueType": "string",
+            "name": "claim_imageAlt",
+            "label": "Image Alt",
+            "value": ""
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "claim-settlement-ratio",
+      "components": ["claim-settlement-ratio"]
+    }
+  ]
+}

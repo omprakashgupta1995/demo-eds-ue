@@ -20,7 +20,8 @@
       "hero-banner",
       "why-choose",
       "most-searched-terms",
-      "customer-care-details"
+      "customer-care-details",
+      "claim-settlement-ratio"
     ]
   },
   {
@@ -33,6 +34,12 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "claim-settlement-ratio",
+    "components": [
+      "claim-settlement-ratio"
     ]
   },
   {

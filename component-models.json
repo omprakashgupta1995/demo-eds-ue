@@ -248,6 +248,32 @@
     ]
   },
   {
+    "id": "claim-settlement-ratio",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "claimSettlementRatio",
+        "value": "",
+        "label": "Claim Details",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "cust_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "claim_imageAlt",
+        "label": "Image Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
