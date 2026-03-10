@@ -19,6 +19,27 @@
   ],
   "models": [
     {
+            "id": "claim-settlement-ratios",
+            "fields": [
+                {
+                    "component": "multiselect",
+                    "name": "classes",
+                    "label": "Classes",
+                    "options": [
+                        {
+                            "name": "Claim ratio",
+                            "children": [
+                                {
+                                    "name": "Claim Settlement Ratios",
+                                    "value": "claim-settlement-ratios"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+    {
       "id": "claim-settlement-ratio",
       "fields": [
         {
