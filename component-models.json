@@ -281,7 +281,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "cust_image",
+        "name": "claim_image",
         "label": "Image",
         "multi": false
       },
