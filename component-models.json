@@ -128,6 +128,10 @@
           {
             "name": "Most Searched Terms",
             "value": "mostsearchedterms"
+          },
+          {
+            "name": "Calci Cards",
+            "value": "calcicards"
           }
         ]
       }
@@ -225,25 +229,6 @@
             "value": "secondary"
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "calci-card",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "calci_title",
-        "label": "Calci Title",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },

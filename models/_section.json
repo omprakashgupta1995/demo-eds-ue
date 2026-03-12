@@ -49,6 +49,10 @@
             {
               "name": "Most Searched Terms",
               "value": "mostsearchedterms"
+            },
+             {
+              "name": "Calci Cards",
+              "value": "calcicards"
             }
           ]
         }
@@ -72,8 +76,7 @@
         "why-choose",
         "most-searched-terms",
         "customer-care-details",
-        "claim-settlement-ratio",
-        "calci-card"
+        "claim-settlement-ratio"
       ]
     }
   ]

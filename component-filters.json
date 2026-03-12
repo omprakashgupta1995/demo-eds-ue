@@ -21,20 +21,13 @@
       "why-choose",
       "most-searched-terms",
       "customer-care-details",
-      "claim-settlement-ratio",
-      "calci-card"
+      "claim-settlement-ratio"
     ]
   },
   {
     "id": "bio-cards",
     "components": [
       "bio-card"
-    ]
-  },
-  {
-    "id": "calci-cards",
-    "components": [
-      "calci-card"
     ]
   },
   {
