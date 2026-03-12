@@ -1,0 +1,58 @@
+main > .section.claim-settlement-ratio-container > div{
+    max-width: 80pc;
+    width: 100%;
+    margin:0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+.claim-settlement-ratio{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: space-between;
+}
+.claim-settlement-ratio div:nth-child(1) ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#achieving-excellence-in-claim-settlement-ratio{
+    color: #221f20;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.16pc;
+    margin: 0 0 40px;
+    max-width: 80%;
+}
+.claim-settlement-ratio div:nth-child(1) ul li:nth-child(2){
+    color: #19417a;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 4.5rem;
+    font-weight: 500;
+    line-height: .81in;
+    margin: 0 0 7px;
+}
+.claim-settlement-ratio div:nth-child(1) ul li:nth-child(3){
+    color: #221f20;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    grid-area: right;
+    line-height: 1.6pc;
+    margin: 0;
+    width: 64%;
+}
+.claim-settlement-ratio div:nth-child(1) ul li:nth-child(4) a{
+    color: #000;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.16pc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.claim-settlement-ratio div:nth-child(2){
+    width: 55%;
+}
