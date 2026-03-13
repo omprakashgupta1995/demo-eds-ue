@@ -34,25 +34,25 @@
   ],
   "models": [
     {
-        "id": "carousel-cards",
-        "fields": [
+      "id": "carousel-cards",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Classes",
+          "options": [
             {
-            "component": "multiselect",
-            "name": "classes",
-            "label": "Classes",
-            "options": [
+              "name": "Carousel card style",
+              "children": [
                 {
-                "name": "Carousel card style",
-                "children": [
-                    {
-                    "name": "Carousel cards",
-                    "value": "carousel-cards"
-                    }
-                ]
+                  "name": "Carousel cards",
+                  "value": "carousel-cards"
                 }
-            ]
+              ]
             }
-        ]
+          ]
+        }
+      ]
     },
     {
       "id": "carousel-card",
