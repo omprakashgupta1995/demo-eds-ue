@@ -33,9 +33,9 @@
     }
   ],
   "models": [
-    {
-  "id": "carousel-cards",
-  "fields": [
+     {
+        "id": "carousel-cards",
+        "fields": [
     {
       "component": "multiselect",
       "name": "classes",
@@ -52,8 +52,8 @@
         }
       ]
     }
-  ]
-},
+                ]
+    },
     {
       "id": "carousel-card",
       "fields": [
