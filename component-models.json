@@ -252,6 +252,46 @@
     ]
   },
   {
+    "id": "carousel-cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Classes",
+        "options": [
+          {
+            "name": "Carousel card style",
+            "children": [
+              {
+                "name": "Carousel cards",
+                "value": "carousel-cards"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "carousel-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "claim-settlement-ratios",
     "fields": [
       {
