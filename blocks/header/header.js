@@ -164,23 +164,25 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 
- const slider = document.querySelector('.section.nav-tools ul');
+ const slider = document.querySelector('.nav-tools .default-content-wrapper ul');
 
 if (slider) {
+
+  const itemHeight = slider.querySelector('li').offsetHeight;
+
   setInterval(() => {
 
-    const firstItem = slider.children[0];
-
     slider.style.transition = "transform 0.4s ease-in-out";
-    slider.style.transform = "translateY(-30px)";
+    slider.style.transform = `translateY(-${itemHeight}px)`;
 
     setTimeout(() => {
-      slider.appendChild(firstItem);
+      slider.appendChild(slider.firstElementChild);
       slider.style.transition = "none";
       slider.style.transform = "translateY(0)";
     }, 400);
 
   }, 1000);
+
 }
 }
 
