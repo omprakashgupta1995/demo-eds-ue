@@ -1,0 +1,367 @@
+.askexpert-open {
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 16;
+}
+.askexpert-open .ask-popup .popup-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    background: #fff;
+    border-radius: 5px;
+    border-radius: 1pc;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1pc;
+    justify-content: center;
+    left: 50%;
+    max-width: 486px;
+    padding: 2pc 24px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 10;
+}
+@media (max-width: 767px) {
+    .askexpert-open .ask-popup .popup-content {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-radius: 24px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        bottom: 0;
+        left: 0;
+        max-width: unset;
+        top: unset;
+        -webkit-transform: unset;
+        transform: unset;
+        width: 100%;
+    }
+    .askexpert-open .ask-popup .popup-content .mobtab-img-wrapper {
+        display: block;
+    }
+}
+.askexpert-open .ask-popup .popup-content .mobtab-img-wrapper .popup-mob-img {
+    display: none;
+    height: 4px;
+    width: 24px;
+}
+@media (max-width: 767px) {
+    .askexpert-open .ask-popup .popup-content .mobtab-img-wrapper .popup-mob-img {
+        display: block;
+        margin: 22px auto 38px;
+    }
+}
+.askexpert-open .ask-popup .popup-content .askTitle-cross {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1pc;
+}
+.askexpert-open .ask-popup .popup-content .askTitle-cross .askpop-title {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1pc;
+}
+.askexpert-open .ask-popup .popup-content .askTitle-cross .askpop-title img {
+    height: 40px;
+    width: 40px;
+}
+@media (max-width: 767px) {
+    .askexpert-open .ask-popup .popup-content .askTitle-cross .askpop-title img {
+        height: 40px;
+        width: 40px;
+    }
+}
+.askexpert-open .ask-popup .popup-content .askTitle-cross .askpop-title span {
+    color: var(--Grays-Black, #221f20);
+    font-family:
+        Gotham Pro,
+        sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    line-height: 2pc;
+}
+@media (max-width: 767px) {
+    .askexpert-open .ask-popup .popup-content .askTitle-cross .popup-wrapper {
+        display: none;
+    }
+}
+.askexpert-open .ask-popup .popup-content .askTitle-cross .popup-wrapper .close-popup-icon {
+    cursor: pointer;
+    height: 2pc;
+    width: 2pc;
+}
+.askexpert-open .ask-popup .popup-content p {
+    color: var(--Grays-Black, #221f20);
+    font-family:
+        Gotham Pro,
+        sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 19.6px;
+    margin-bottom: 2pc;
+}
+@media (max-width: 767px) {
+    .askexpert-open .ask-popup .popup-content p {
+        margin-bottom: 24px;
+    }
+}
+.askexpert-open .ask-popup .popup-content form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.askexpert-open .ask-popup .popup-content form input {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: var(--Grays-White, #fff);
+    border: 1px solid var(--Grays-Gray-100, #dedcdd);
+    border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px;
+    height: 44px;
+    padding: 14px 9pt;
+}
+.askexpert-open .ask-popup .popup-content form input::-webkit-input-placeholder {
+    color: var(--Grays-Black, #221f20);
+    font-family:
+        Gotham Pro,
+        sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    line-height: 16.24px;
+}
+.askexpert-open .ask-popup .popup-content form input::-moz-placeholder {
+    color: var(--Grays-Black, #221f20);
+    font-family:
+        Gotham Pro,
+        sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    line-height: 16.24px;
+}
+.askexpert-open .ask-popup .popup-content form input:-ms-input-placeholder {
+    color: var(--Grays-Black, #221f20);
+    font-family:
+        Gotham Pro,
+        sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    line-height: 16.24px;
+}
+.askexpert-open .ask-popup .popup-content form input::-ms-input-placeholder {
+    color: var(--Grays-Black, #221f20);
+    font-family:
+        Gotham Pro,
+        sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    line-height: 16.24px;
+}
+.askexpert-open .ask-popup .popup-content form input::placeholder {
+    color: var(--Grays-Black, #221f20);
+    font-family:
+        Gotham Pro,
+        sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    line-height: 16.24px;
+}
+.askexpert-open .ask-popup .popup-content form .booknow-btn {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-flex-item-align: stretch;
+    align-items: center;
+    align-self: stretch;
+    background: var(--Brand-Dark-Blue-True-Dark-Blue, #f26522);
+    border: none;
+    border-radius: 75pt;
+    color: var(--Flowkit-White, #fff);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family:
+        Gotham Pro,
+        sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    height: 3pc;
+    justify-content: center;
+    line-height: 1.16pc;
+    margin-top: 1pc;
+    padding: 0 24px;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .askexpert-open .ask-popup .popup-content form .booknow-btn {
+        font-size: 0.875rem;
+        height: 40px;
+        line-height: 16.24px;
+    }
+}
+.askexpert-open .ask-popup .popup-content form .pick-date {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 2pc;
+}
+@media (max-width: 767px) {
+    .askexpert-open .ask-popup .popup-content form .pick-date {
+        margin-bottom: 24px;
+    }
+}
+.askexpert-open .ask-popup .popup-content form .pick-date .pickdate-title {
+    color: var(--Grays-Black, #221f20);
+    font-family:
+        Gotham Pro,
+        sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 19.6px;
+}
+.askexpert-open .ask-popup .popup-content form .pick-date .datecal-wrapper {
+    position: relative;
+    width: 100%;
+}
+.askexpert-open .ask-popup .popup-content form .pick-date .datecal-wrapper:after {
+    content: url(../../../../content/dam/ifliwebsite/icons/calender-24img.svg);
+    height: 24px;
+    position: absolute;
+    right: 2%;
+    top: 9px;
+    width: 24px;
+    z-index: -1;
+}
+.askexpert-open .ask-popup .popup-content form .pick-date .datecal-wrapper input.datecal {
+    background: transparent;
+    color: var(--Grays-Black, #221f20);
+    cursor: pointer;
+    font-family:
+        Gotham Pro,
+        sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    height: 44px;
+    letter-spacing: -0.2px;
+    line-height: 16.24px;
+    width: 100%;
+}
+.askexpert-open .ask-popup .popup-content form .pick-date .datecal-wrapper input.datecal::-webkit-input-placeholder {
+    color: var(--Grays-Gray-500, #898587);
+    font-weight: 400;
+}
+.askexpert-open .ask-popup .popup-content form .pick-date .datecal-wrapper input.datecal::-moz-placeholder {
+    color: var(--Grays-Gray-500, #898587);
+    font-weight: 400;
+}
+.askexpert-open .ask-popup .popup-content form .pick-date .datecal-wrapper input.datecal:-ms-input-placeholder {
+    color: var(--Grays-Gray-500, #898587);
+    font-weight: 400;
+}
+.askexpert-open .ask-popup .popup-content form .pick-date .datecal-wrapper input.datecal::-ms-input-placeholder {
+    color: var(--Grays-Gray-500, #898587);
+    font-weight: 400;
+}
+.askexpert-open .ask-popup .popup-content form .pick-date .datecal-wrapper input.datecal::placeholder {
+    color: var(--Grays-Gray-500, #898587);
+    font-weight: 400;
+}
+.askexpert-open .ask-popup .popup-content form .book-slot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1pc;
+}
+.askexpert-open .ask-popup .popup-content form .book-slot input {
+    cursor: pointer;
+    font-size: 0.875rem;
+    height: 44px;
+    letter-spacing: -0.2px;
+    line-height: 16.24px;
+    max-width: 211px;
+    padding: 1pc 8px;
+    text-align: center;
+    width: 100%;
+}
+@media (max-width: 767px) {
+    .askexpert-open .ask-popup .popup-content form .book-slot input {
+        max-width: 155px;
+        width: 100%;
+    }
+}
+.askexpert-open .ask-popup .popup-content form .book-slot input.expired-time {
+    opacity: 0.5;
+}
+.askexpert-open .ask-popup .popup-content form .book-slot .select {
+    background: var(--Brand-Dark-Blue-True-Dark-Blue, #19417a);
+}
+.askexpert-open .ask-popup .popup-content form .book-slot .select::-webkit-input-placeholder {
+    color: var(--Flowkit-White, #fff);
+}
+.askexpert-open .ask-popup .popup-content form .book-slot .select::-moz-placeholder {
+    color: var(--Flowkit-White, #fff);
+}
+.askexpert-open .ask-popup .popup-content form .book-slot .select:-ms-input-placeholder {
+    color: var(--Flowkit-White, #fff);
+}
+.askexpert-open .ask-popup .popup-content form .book-slot .select::-ms-input-placeholder {
+    color: var(--Flowkit-White, #fff);
+}
+.askexpert-open .ask-popup .popup-content form .book-slot .select::placeholder {
+    color: var(--Flowkit-White, #fff);
+}

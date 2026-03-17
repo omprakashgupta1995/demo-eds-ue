@@ -52,7 +52,48 @@ main > .section.claim-settlement-ratio-container > div{
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
+    margin-top: 2pc;
+}
+.claim-settlement-ratio div:nth-child(1) ul li:nth-child(4) a .icon{
+    width: 2pc;
+    height: 2pc;
 }
 .claim-settlement-ratio div:nth-child(2){
     width: 55%;
+}
+@media screen and (max-width:768px) {
+    main > .section.claim-settlement-ratio-container > div{
+        padding: 0 16px;
+    }
+    .claim-settlement-ratio div:nth-child(2){
+        width: 100%;
+    }
+    .claim-settlement-ratio{
+        flex-direction: column;
+    }
+    #achieving-excellence-in-claim-settlement-ratio{
+        font-size: 1.5rem;
+        line-height: .27in;
+        margin-bottom: 2pc;
+        min-width: 309px;
+        text-align: center;
+    }
+    .claim-settlement-ratio div:nth-child(1) ul li:nth-child(2){
+        font-size: 3rem;
+        line-height: 61.928px;
+        margin: 0 0 10px;
+        text-align: center;
+    }
+    .claim-settlement-ratio div:nth-child(1) ul li:nth-child(3){
+        color: #221f20;
+        font-size: .75rem;
+        line-height: .9pc;
+        text-align: center;
+        width: 100%;
+    }
+    .claim-settlement-ratio div:nth-child(1) ul li:nth-child(4) a{
+        margin-top: 24px;
+        justify-content: center;
+    }
 }

@@ -1,0 +1,1 @@
+export const IFLDomain = 'https://www.indiafirstlife.com';
