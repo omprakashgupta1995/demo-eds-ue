@@ -1,5 +1,10 @@
 @import url('../header/askexpert.css');
-
+.box-container{
+  max-width: 80pc;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
 header .cmp-experiencefragment--header .header{
   visibility: visible;
 }
@@ -994,7 +999,8 @@ header .cmp-experiencefragment--header .header{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999;
+    /* z-index: 999; */
+    z-index: 9;
 }
 .search-search_wrapper > img {
     display: block;
@@ -1363,6 +1369,12 @@ header .cmp-experiencefragment--header .header{
 }
 .header_mobile {
     display: none;
+}
+.dsp-none {
+  display: none;
+}
+header .header[data-block-status="loaded"], footer .footer[data-block-status="loaded"]{
+  visibility: hidden;
 }
 @media (max-width: 1024px) {
     .header_mobile {
