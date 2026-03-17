@@ -4,6 +4,7 @@
   width: 100%;
   margin: 0 auto;
   background-color: #FFFFFF;
+  box-sizing: border-box;
 }
 header .cmp-experiencefragment--header .header{
   visibility: visible;
