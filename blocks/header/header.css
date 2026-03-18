@@ -1374,8 +1374,11 @@ header .cmp-experiencefragment--header .header{
 .dsp-none {
   display: none;
 }
-header .header[data-block-status="loaded"], footer .footer[data-block-status="loaded"]{
+header .header[data-block-status="loaded"]{
   visibility: hidden;
+}
+footer .footer[data-block-status="loaded"]{
+  visibility: visible;
 }
 @media (max-width: 1024px) {
     .header_mobile {
