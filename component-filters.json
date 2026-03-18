@@ -21,7 +21,8 @@
       "why-choose",
       "most-searched-terms",
       "customer-care-details",
-      "claim-settlement-ratio"
+      "claim-settlement-ratio",
+      "carousel"
     ]
   },
   {
@@ -34,6 +35,12 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
     ]
   },
   {
