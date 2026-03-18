@@ -38,12 +38,6 @@
     ]
   },
   {
-    "id": "carousel-cards",
-    "components": [
-      "carousel-card"
-    ]
-  },
-  {
     "id": "claim-settlement-ratio",
     "components": [
       "claim-settlement-ratio"
