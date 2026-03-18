@@ -252,25 +252,6 @@
     ]
   },
   {
-    "id": "carousel-card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "content",
-        "value": "",
-        "label": "Content",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "claim-settlement-ratios",
     "fields": [
       {
