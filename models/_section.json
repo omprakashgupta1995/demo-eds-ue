@@ -73,6 +73,10 @@
             {
               "name": "new-insurance-plan-section",
               "value": "newinsuranceplansection"
+            },
+            {
+              "name": "benefit-light-orange-container",
+              "value": "benefitlightorangecontainer"
             }
           ]
         }
