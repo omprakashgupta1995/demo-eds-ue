@@ -61,9 +61,14 @@
             {
               "name": "how to buyspacing",
               "value": "howtobuyspacing"
-            },{
+            },
+            {
               "name": "Customer Reviews",
               "value": "customerreviews"
+            },
+            {
+              "name": "talk to advisory",
+              "value": "talktoadvisory"
             }
           ]
         }
