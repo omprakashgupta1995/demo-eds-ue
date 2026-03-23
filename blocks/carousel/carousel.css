@@ -186,3 +186,57 @@ main > .section > .carousel-wrapper{
     width: 8px;
 }
 }
+
+/* buy */
+main > .section.howtobuyspacing{
+    background-color: #ffd0af;
+    padding: 40px 0;
+}
+.howtobuyspacing .carousel-wrapper div div:nth-child(2) ul{
+    background-color: #ffefe4;
+}
+.howtobuyspacing .carousel-wrapper div div:nth-child(2) ul li:nth-child(2){
+    color: var(--grays-gray-800, #4d4b4c);
+    font-family: Gotham Pro, sans-serif;
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: -.1px;
+    line-height: 1pc;
+    margin-bottom: 8px;
+}
+.howtobuyspacing .carousel-wrapper div div:nth-child(2) ul li:nth-child(3){
+        color: #221f20;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 23.2px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border-radius: unset;
+    padding: 0;
+}
+.howtobuyspacing .carousel-wrapper div div:nth-child(2) ul li:nth-child(4){
+    color: var(--grays-gray-800, #4d4b4c);
+    font-family: Gotham Pro, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: -.2px;
+    line-height: 19.6px;
+
+}
+
+@media screen and (max-width:768px) {
+        .howtobuyspacing .carousel-wrapper div div:nth-child(2) ul li:nth-child(3){
+        font-size: 1rem;
+        line-height: 22px;
+        margin-bottom: 9pt;
+        }
+        .howtobuyspacing .carousel-wrapper div div:nth-child(2) ul li:nth-child(4){
+        color: #221f20;
+        font-size: 1rem;
+        line-height: 24px;
+    
+
+}
+}
+/* buy */

@@ -47,6 +47,20 @@ paginationEl.className = 'swiper-pagination';
 // append inside slider
 block.appendChild(paginationEl);
   /* ---------------- SWIPER INIT ---------------- */
+const sliderConfigs = [
+    // { className: 'howtobuyspacing', mobileSlides: 1.25 },
+    // { className: 'carousel-container', mobileSlides: 1.5 },
+    { className: 'howtobuyspacing', mobileSlides: 1.2 }
+  ];
+
+  let mobileSlides = 1.75; // default
+
+  for (const config of sliderConfigs) {
+    if (block.closest(`.${config.className}`)) {
+      mobileSlides = config.mobileSlides;
+      break; // stop at first match
+    }
+  }
 
   new Swiper(block, {
     slidesPerView: 4,
@@ -64,7 +78,7 @@ block.appendChild(paginationEl);
   },
      breakpoints: {
     0: {
-      slidesPerView: 1.75,  
+      slidesPerView: mobileSlides,  
       spaceBetween: 16,
       pagination: {
         enabled: true,   // ✅ mobile ON
@@ -78,7 +92,7 @@ block.appendChild(paginationEl);
       },
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 24,
       pagination: {
         enabled: false,   
