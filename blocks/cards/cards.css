@@ -115,3 +115,152 @@ main > .section.termpolicyworkcontainer:first-of-type{
     }
 }
 /* terms policy */
+/* talktoadv5isory  */
+main > .section.talktoadvisory > div{
+  max-width: 80pc;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+.talktoadvisory .cards > ul{
+  display: initial;
+}
+.talktoadvisory .cards-wrapper .cards-card-image{
+  display: initial;
+  padding: 40px 5pc;
+
+}
+.talktoadvisory .cards .cards-card-body{
+  margin: 0;
+  padding: 90px 13.1% 90px 0;
+  width: 60%;
+}
+.talktoadvisory .cards > ul > li {
+  display: flex;
+  /* justify-content: space-between; */
+  border: unset;
+  background-color: #edf4fd;
+  border-radius: 1pc;
+  align-items: center;
+}
+.talktoadvisory .cards-card-body ul li:nth-child(1) {
+      color: #221f20;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 160%;
+    padding-bottom: 1pc;
+}
+.talktoadvisory .cards-card-body ul li:nth-child(2){
+    color: #221f20;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 108%;
+    padding-bottom: 1pc;
+}
+.talktoadvisory .cards-card-body ul li:nth-child(3){
+    color: #221f20;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 160%;
+    padding-bottom: 1pc;
+}
+.talktoadvisory .cards-card-body ul:nth-child(2){
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.talktoadvisory .cards-card-body ul:nth-child(2) li:nth-child(1),
+.talktoadvisory .cards-card-body ul:nth-child(2) li:nth-child(2){
+  width: 100%;
+}
+.talktoadvisory .cards-card-body ul:nth-child(2) li:nth-child(1) a{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: var(--brand-dark-blue-true-dark-blue, #19417a);
+    border-radius: 75pt;
+    color:  #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: Gotham Pro, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    height: 4pc;
+    justify-content: center;
+    line-height: 18px;
+    padding: 0 24px;
+    width: 100%;
+    text-decoration: none;
+}
+.talktoadvisory .cards-card-body ul:nth-child(2) li:nth-child(2) a{
+  -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: .4px solid var(--grays-gray-600, #757172);
+    border-radius: 75pt;
+    color: var(--brand-dark-blue-dark-blue-1000, #1c2945);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: Gotham Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    height: 4pc;
+    justify-content: center;
+    line-height: 1.16pc;
+    padding: 0 24px;
+    width: 100%;
+    text-decoration: none;
+}
+@media screen and (max-width:768px) {
+  main > .section.talktoadvisory > div{
+    padding: 0 16px;
+  }
+    .talktoadvisory .cards > ul > li{
+      flex-direction: column;
+      align-items: start;
+    }
+    .talktoadvisory .cards-wrapper .cards-card-image{
+      padding: 24px 1pc;
+    }
+    .talktoadvisory .cards .cards-card-body{
+      padding: 1pc;
+      width: 100%;
+    }
+    .talktoadvisory .cards-card-body ul li:nth-child(1){
+      color: #221f20;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 160%;
+    padding-bottom: 1pc;
+    }
+    .talktoadvisory .cards-card-body ul li:nth-child(2){
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .talktoadvisory .cards-card-body ul:nth-child(2){
+      flex-direction: column;
+    }
+    .talktoadvisory .cards-card-body ul:nth-child(2) li:nth-child(1) a{
+      font-size: .875rem;
+        height: 40px;
+        line-height: 1pc;
+    }
+    .talktoadvisory .cards-card-body ul:nth-child(2) li:nth-child(2) a{
+        font-size: .875rem;
+        height: 40px;
+        line-height: 1pc;
+    }
+}
+/* talktoadvisory  */
