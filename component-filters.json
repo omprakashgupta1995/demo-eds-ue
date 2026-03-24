@@ -22,13 +22,20 @@
       "most-searched-terms",
       "customer-care-details",
       "claim-settlement-ratio",
-      "carousel"
+      "carousel",
+      "cards-describing-point"
     ]
   },
   {
     "id": "bio-cards",
     "components": [
       "bio-card"
+    ]
+  },
+  {
+    "id": "cards-describing-points",
+    "components": [
+      "cards-describing-point"
     ]
   },
   {
