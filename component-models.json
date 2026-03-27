@@ -289,5 +289,53 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "insuranceCardItems",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false,
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Image Alt",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_pretitle",
+        "value": "",
+        "label": "Pretitle",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "col2_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "col2_linkText",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "col2_linkTitle",
+        "label": "Title"
+      }
+    ]
   }
 ]
