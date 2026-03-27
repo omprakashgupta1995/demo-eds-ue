@@ -55,7 +55,8 @@
         "cards",
         "columns",
         "fragment",
-        "bio-cards"
+        "bio-cards",
+        "insuranceCards"
       ]
     }
   ]
