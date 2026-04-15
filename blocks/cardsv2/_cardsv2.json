@@ -1,0 +1,48 @@
+{
+  "definitions": [
+    {
+      "title": "CardsV2",
+      "id": "cardsv2",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "cardsv2",
+              "filter": "cardsv2"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "cardsv2",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "cardsv2",
+      "components": [
+        "card"
+      ]
+    }
+  ]
+}
