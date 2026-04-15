@@ -9,6 +9,24 @@
       }
     ]
   },
+
+  {
+    "id": "cardv2",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "text",
+        "valueType": "string"
+      }
+    ]
+  },
   {
     "id": "image",
     "fields": [
