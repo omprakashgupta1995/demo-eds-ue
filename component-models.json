@@ -10,22 +10,22 @@
     ]
   },
    {
-      "id": "cardsv2",
-      "fields": [
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image"
-        },
-        {
-          "component": "richtext",
-          "name": "text",
-          "label": "Text",
-          "valueType": "string"
-        }
-      ]
-    },
+    "id": "cardv2",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
   {
     "id": "image",
     "fields": [
