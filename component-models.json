@@ -16,7 +16,7 @@
       {
         "component": "reference",
         "name": "image",
-        "label": "Image",
+        "label": "image",
         "valueType": "string"
       },
       {
