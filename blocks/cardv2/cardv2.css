@@ -1,9 +1,16 @@
 .cardv2.block {
-    height: 80px;
-    width: 150px;
-    border: 1px solid red;
+    height: 100px;
+    width: 250px;
+    border: 1px solid #ddd;
     border-radius: 25px;
 }
 .cardv2.block > div {
     display: flex;
+}
+.cardv2.block > div > div > picture {
+    height: 50px;
+    width: 50px;
+}
+.cardv2.block > div > div > p {
+    color: red;
 }
