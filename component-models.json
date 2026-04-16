@@ -10,6 +10,30 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multifield",
+        "name": "items",
+        "label": "Accordion Items",
+        "fields": [
+          {
+            "component": "text",
+            "name": "question",
+            "label": "Question",
+            "valueType": "string"
+          },
+          {
+            "component": "richtext",
+            "name": "answer",
+            "label": "Answer",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
