@@ -32,15 +32,14 @@
       "component":"text",
       "name":"title",
       "label":"Title",
-      "valueType":"string",
-      "multi":true
+      "valueType":"string"
+     
      },
      {
       "component":"richtext",
       "name":"description",
       "label":"Description",
-      "valueType":"string",
-      "multi":true
+      "valueType":"string"
      }
     ]
   },
