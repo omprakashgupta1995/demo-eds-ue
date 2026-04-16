@@ -28,19 +28,18 @@
     ]
   },
   {
-    "id": "accordion",
-    "type": "block",
-    "label": "Accordion",
-    "definition": "accordion",
-    "plugins": [],
-    "styles": [
-      {
-        "id": "default",
-        "label": "Default"
+    "id":"accordion",
+    "fields":[{
+      "component":"text",
+      "name":"title",
+      "label":"Title",
+      "valueType":"string"
       },
       {
-        "id": "single-open",
-        "label": "Single Open (Only one item expanded)"
+      "component":"richtext",
+      "name":"description",
+      "label":"Description",
+      "valueType":"string"
       }
     ]
   },
