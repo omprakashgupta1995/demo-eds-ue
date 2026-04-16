@@ -32,6 +32,37 @@
           }
         },
         {
+          "title": "Accordion",
+          "id": "accordion",
+          "fields": [
+            {
+              "name": "items",
+              "label": "Accordion Items",
+              "type": "array",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "text",
+                  "required": true
+                },
+                {
+                  "name": "content",
+                  "label": "Content",
+                  "type": "richtext",
+                  "required": true
+                },
+                {
+                  "name": "openByDefault",
+                  "label": "Open by Default",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "Title",
           "id": "title",
           "plugins": {

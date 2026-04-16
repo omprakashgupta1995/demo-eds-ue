@@ -28,6 +28,23 @@
     ]
   },
   {
+    "id": "accordion",
+    "type": "block",
+    "label": "Accordion",
+    "definition": "accordion",
+    "plugins": [],
+    "styles": [
+      {
+        "id": "default",
+        "label": "Default"
+      },
+      {
+        "id": "single-open",
+        "label": "Single Open (Only one item expanded)"
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
