@@ -1,23 +1,25 @@
-/*
- * Accordion Block
- * Recreate an accordion
- * https://www.hlx.live/developer/block-collection/accordion
- */
-
 export default function decorate(block) {
-  [...block.children].forEach((row) => {
-    // decorate accordion item label
-    const label = row.children[0];
-    const summary = document.createElement('summary');
-    summary.className = 'accordion-item-label';
-    summary.append(...label.childNodes);
-    // decorate accordion item body
-    const body = row.children[1];
-    body.className = 'accordion-item-body';
-    // decorate accordion item
-    const details = document.createElement('details');
-    details.className = 'accordion-item';
+  // Get all title and description pairs
+  const titles = block.querySelectorAll('[data-field="title"]');
+  const descriptions = block.querySelectorAll('[data-field="description"]');
+
+  // Clear the block
+  block.innerHTML = "";
+
+  // Create accordion items
+  for (let i = 0; i < titles.length; i++) {
+    const details = document.createElement("details");
+    details.className = "accordion-item";
+
+    const summary = document.createElement("summary");
+    summary.className = "accordion-item-label";
+    summary.textContent = titles[i].textContent;
+
+    const body = document.createElement("div");
+    body.className = "accordion-item-body";
+    body.innerHTML = descriptions[i].innerHTML;
+
     details.append(summary, body);
-    row.replaceWith(details);
-  });
+    block.append(details);
+  }
 }
