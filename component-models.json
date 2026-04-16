@@ -38,7 +38,7 @@
     "id": "accordion",
     "fields": [
       {
-        "component": "group",
+        "component": "container",
         "name": "items",
         "label": "Accordion Items",
         "multi": true,
