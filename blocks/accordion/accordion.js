@@ -5,6 +5,7 @@
  */
 
 export default function decorate(block) {
+  console.log(block.outerHTML);
   [...block.children].forEach((row) => {
     // decorate accordion item label
     const label = row.children[0];
