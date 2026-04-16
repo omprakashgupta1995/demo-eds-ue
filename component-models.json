@@ -31,7 +31,8 @@
     "fields":[{
       "component":"text",
       "name":"title",
-      "label":"Title"
+      "label":"Title",
+      "valueType":"string"
      },
      {
       "component":"richtext",
