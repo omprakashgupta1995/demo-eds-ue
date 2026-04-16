@@ -35,6 +35,31 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "group",
+        "name": "items",
+        "label": "Accordion Items",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "title",
+            "label": "Title",
+            "valueType": "string"
+          },
+          {
+            "component": "richtext",
+            "name": "description",
+            "label": "Description",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
