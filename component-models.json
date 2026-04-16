@@ -13,14 +13,16 @@
     "id": "accordion",
     "fields": [
       {
-        "name": "question",
+        "component": "text",
+        "name": "text",
         "label": "Question",
-        "type": "text"
+        "valueType": "string"
       },
       {
-        "name": "answer",
+        "component": "text",
+        "name": "text",
         "label": "Answer",
-        "type": "richtext"
+        "valueType": "string"
       }
     ]
   },
