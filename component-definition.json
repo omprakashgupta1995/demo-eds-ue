@@ -32,12 +32,12 @@
           }
         },
         {
-          "title":"Accordion",
+          "title": "Accordion",
           "id": "accordion",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/accordion/v1/accordion",
                 "template": {
                   "name": "accordion",
                   "model": "accordion"
