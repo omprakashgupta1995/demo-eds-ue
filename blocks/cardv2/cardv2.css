@@ -7,7 +7,7 @@
 .cardv2.block > div {
     display: flex;
 }
-.cardv2.block > div > div > picture {
+.cardv2.block > div > div > picture > img {
     height: 50px;
     width: 50px;
 }
