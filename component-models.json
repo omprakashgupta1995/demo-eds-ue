@@ -14,14 +14,14 @@
     "fields": [
       {
         "component": "text",
-        "name": "text",
-        "label": "Question",
+        "name": "title",
+        "label": "Title",
         "valueType": "string"
       },
       {
-        "component": "text",
-        "name": "text",
-        "label": "Answer",
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
         "valueType": "string"
       }
     ]
