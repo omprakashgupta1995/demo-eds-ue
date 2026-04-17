@@ -40,12 +40,53 @@
                     "label":"Image",
                     "name":"col1_image",
                     "valueType":"string"   
+                },{
+                    "component":"text",
+                    "label":"Image Alt Text",
+                    "name":"col1_image_alt",
+                    "valueType":"string"
                 },
                 {
                     "component":"text",
                     "label":"Title",
                     "name":"col2_title",
                     "valueType":"string"
+                },
+                {
+                    "component":"select",
+                    "label":"Title Type",
+                    "name":"col2_title_type",
+                    "valueType":"string",
+                    "options":[
+                        {
+                            "name":"Heading 1",
+                            "value":"h1"
+                        },
+                        {
+                            "name":"Heading 2",
+                            "value":"h2"
+                        },
+                        {
+                            "name":"Heading 3",
+                            "value":"h3"
+                        },
+                        {
+                            "name":"Heading 4",
+                            "value":"h4"
+                        },
+                        {
+                            "name":"Heading 5",
+                            "value":"h5"
+                        },
+                        {
+                            "name":"Heading 6",
+                            "value":"h6"
+                        },
+                        {
+                            "name":"Paragraph",
+                            "value":"p"
+                        }
+                    ]
                 },{
                     "component":"richtext",
                     "label":"Description",
