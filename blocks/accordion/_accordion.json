@@ -45,7 +45,7 @@
         },
         {
           "component": "richtext",
-          "name": "col1_description",
+          "name": "col2_description",
           "label": "Description",
           "valueType": "string"
           
