@@ -43,7 +43,7 @@
                 },{
                     "component":"text",
                     "label":"Image Alt Text",
-                    "name":"col1_image_alt",
+                    "name":"col1_imageAlt",
                     "valueType":"string"
                 },
                 {
