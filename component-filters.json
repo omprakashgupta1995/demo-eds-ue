@@ -27,7 +27,7 @@
   {
     "id": "carousel-item",
     "components": [
-      ""
+      "carousel-item"
     ]
   },
   {
