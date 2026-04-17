@@ -16,4 +16,5 @@ export default function decorate(block) {
       el: ".swiper-pagination",
     },
   });
+  console.log(block.outerHTML);
 }
