@@ -51,6 +51,7 @@
         "cards",
         "columns",
         "carousel",
+        "accordion",
         "fragment"
       ]
     }
