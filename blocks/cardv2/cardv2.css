@@ -1,0 +1,16 @@
+.cardv2.block{
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardv2.block .card-image img{
+    width: 100px;
+    height: 100px;
+
+}
+
+.cardv2.block .card-text{
+    margin: 0;
+}
