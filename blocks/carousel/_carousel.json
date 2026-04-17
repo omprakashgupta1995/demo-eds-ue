@@ -50,6 +50,12 @@
                     "multi": false
                 },
                 {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "col2_title",
+                    "label": "Title"
+                },
+                {
                     "component": "select",
                     "name": "titleType",
                     "label": "Title Type",
