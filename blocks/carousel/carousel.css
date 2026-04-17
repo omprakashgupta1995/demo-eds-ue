@@ -1,0 +1,31 @@
+.carousel.block {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel.block > div {
+    position: relative;
+}
+
+.carousel.block img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel.block > div > div:last-child {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: #fff;
+    max-width: 400px;
+}
+
+.carousel.block > div::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
