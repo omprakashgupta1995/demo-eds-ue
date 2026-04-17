@@ -21,7 +21,7 @@
       },
       {
         "component": "text",
-        "name": "col2_text",
+        "name": "col1_text",
         "label": "text",
         "valueType": "string"
       }
