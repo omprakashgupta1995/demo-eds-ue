@@ -15,13 +15,13 @@
     "fields": [
       {
         "component": "reference",
-        "name": "row1_image",
+        "name": "col1_image",
         "label": "image",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "row1_text",
+        "name": "col2_text",
         "label": "text",
         "valueType": "string"
       }
