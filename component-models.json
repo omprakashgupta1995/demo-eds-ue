@@ -118,21 +118,19 @@
     ]
   },
   {
-    "id": "accordion",
+    "id": "accordion-item",
     "fields": [
       {
         "component": "text",
-        "name": "title",
+        "name": "col1_title",
         "label": "Title",
-        "valueType": "string",
-        "multi": true
+        "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "description",
+        "name": "col1_description",
         "label": "Description",
-        "valueType": "string",
-        "multi": true
+        "valueType": "string"
       }
     ]
   },
