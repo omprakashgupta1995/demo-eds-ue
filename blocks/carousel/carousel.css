@@ -1,1 +1,14 @@
 @import "./swiper.min.css";
+@import "./swiper.min.css";
+
+.swiper-slide img {
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+.swiper-slide h2 {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+}

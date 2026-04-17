@@ -15,5 +15,8 @@ export default function decorate(block) {
     pagination: {
       el: ".swiper-pagination",
     },
+    autoplay: {
+      delay: 5000,
+    },
   });
 }
