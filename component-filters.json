@@ -14,32 +14,9 @@
       "title",
       "hero",
       "cards",
+      "carousel",
       "columns",
-      "quote",
-      "byline",
-      "product",
-      "swiper",
-      "tab",
-      "form",
-      "banner-container",
-      "product-1",
-      "teaser-cards",
-      "faq",
-      "fragment",
-      "cardv2",
-      "accordion"
-    ]
-  },
-  {
-    "id": "teaser-cards",
-    "components": [
-      "teaser-card"
-    ]
-  },
-  {
-    "id": "banner-container",
-    "components": [
-      "banner"
+      "fragment"
     ]
   },
   {
@@ -49,15 +26,9 @@
     ]
   },
   {
-    "id": "swiper",
+    "id": "carousel",
     "components": [
-      "swiper-item"
-    ]
-  },
-  {
-    "id": "tab",
-    "components": [
-      "tab-item"
+      "carousel-item"
     ]
   },
   {
