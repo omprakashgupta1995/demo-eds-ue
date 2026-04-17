@@ -33,6 +33,49 @@
   ],
   "models": [
     {
+      "id": "carousel",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Primary",
+              "value": "primary"
+            },
+            {
+              "name": "Secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "Tertiary",
+              "value": "tertiary"
+            },
+            {
+              "name": "Quaternary",
+              "value": "quaternary"
+            },
+            {
+              "name": "Quinary",
+              "value": "quinary"
+            },
+            {
+              "name": "Senary",
+              "value": "senary"
+            }
+          ]
+        },
+        {
+          "component": "richtext",
+          "name": "col2_text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
+        }
+      ]
+    },
+    {
       "id": "carousel-item",
       "fields": [
         {
