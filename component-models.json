@@ -56,13 +56,13 @@
     "fields": [
       {
         "component": "reference",
-        "name": "image",
+        "name": "col1_image",
         "label": "Image",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "text",
+        "name": "col2_text",
         "label": "Text",
         "valueType": "string"
       }
