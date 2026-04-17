@@ -1,0 +1,66 @@
+{
+    "definitions":[{
+        "id":"carousel",
+        "title":"Carousel",
+        "description":"A carousel block to display multiple items in a sliding format.",
+        "plugins": {
+            "xwalk": {
+                "page": {
+                    "resourceType": "core/franklin/components/block/v1/block",
+                    "template": {
+                        "name": "Carousel",
+                        "filter": "carousel"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id":"carousel-item",
+        "title":"Carousel Item",
+        "description":"An item within the carousel, which can contain an image and text.",
+        "plugins": {
+            "xwalk": {
+                "page": {
+                    "resourceType": "core/franklin/components/block/v1/block/item",
+                    "template": {
+                        "name": "Carousel Item",
+                        "model": "carousel-item"
+                    }
+                }
+            }
+        }
+    }],
+    "models":[
+        {
+            "id" : "carousel-item",
+            "fields" :[
+                {
+                    "component":"reference",
+                    "label":"Image",
+                    "name":"col1_image",
+                    "valueType":"string"   
+                },
+                {
+                    "component":"text",
+                    "label":"Title",
+                    "name":"col2_title",
+                    "valueType":"string"
+                },{
+                    "component":"richtext",
+                    "label":"Description",
+                    "name":"col2_description",
+                    "valueType":"string"
+                }
+            ]
+        }
+    ],
+    "filters":[
+        {
+            "id":"carousel",
+            "components":[
+                "carousel-item"
+            ]
+        }
+    ]
+}
