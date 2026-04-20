@@ -1,14 +1,20 @@
 @import "./swiper.min.css";
 @import "./swiper.min.css";
 
+main > .section > div {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+}
 .swiper-slide img {
     width: 100%;
     object-fit: contain;
     position: relative;
 }
 
-.swiper-slide h1 {
+.swiper-slide div:nth-child(2) {
     position: absolute;
+    color: #fff;
     left: 50px;
     top: 50%;
 }
