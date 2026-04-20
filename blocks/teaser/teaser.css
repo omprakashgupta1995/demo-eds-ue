@@ -1,3 +1,7 @@
+.teaser.block {
+    background-color: #e1f5e7;
+}
+
 .teaser.block > div {
     display: flex;
 }
