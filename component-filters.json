@@ -60,5 +60,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "teaser",
+    "components": [
+      "teaser-item"
+    ]
   }
 ]

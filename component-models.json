@@ -297,7 +297,7 @@
     ]
   },
   {
-    "id": "teaser",
+    "id": "teaser-item",
     "fields": [
       {
         "component": "richtext",
