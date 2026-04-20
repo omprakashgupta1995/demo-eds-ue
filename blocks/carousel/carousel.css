@@ -12,9 +12,9 @@ main > .section > div {
     position: relative;
 }
 
-/* .swiper-slide div:nth-child(2) {
+.swiper-slide div:nth-child(2) {
     position: absolute;
     color: #fff;
     left: 50px;
     top: 50%;
-} */
+}
