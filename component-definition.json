@@ -250,6 +250,7 @@
         {
           "title": "Teaser",
           "id": "teaser",
+          "model": "teaser",
           "plugins": {
             "xwalk": {
               "page": {
