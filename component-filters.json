@@ -17,6 +17,7 @@
       "columns",
       "carousel",
       "accordion",
+      "contact-cards",
       "contact-hero",
       "fragment"
     ]
@@ -58,6 +59,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "contact-cards",
+    "components": [
+      "contact-card"
     ]
   }
 ]

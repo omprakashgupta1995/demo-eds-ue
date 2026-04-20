@@ -8,7 +8,12 @@
     padding: 0 40px;
 }
 
-.contact-hero-image img{
+.contact-hero-imagewrapper{
     height: 124px;
     width: 124px;
+}
+.contact-hero-title{
+    font-size: 32px;
+    margin-bottom: 8px;
+    font-weight: 700;
 }
