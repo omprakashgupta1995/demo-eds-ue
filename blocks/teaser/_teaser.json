@@ -49,9 +49,5 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "teaser"
-    }
-  ]
+  "filters": []
 }
