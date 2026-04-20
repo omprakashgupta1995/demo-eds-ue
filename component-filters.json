@@ -19,19 +19,13 @@
       "carousel",
       "accordion",
       "cardv2",
-      "banner"
+      "teaser"
     ]
   },
   {
     "id": "accordion",
     "components": [
       "accordion-item"
-    ]
-  },
-  {
-    "id": "banner",
-    "components": [
-      "banner-item"
     ]
   },
   {
@@ -59,6 +53,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "teaser",
+    "components": [
+      "teaser-item"
     ]
   }
 ]
