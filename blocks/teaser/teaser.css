@@ -1,17 +1,17 @@
-main > .section > div {
+.teaser-container {
     max-width: 100%;
-    margin: auto;
-    padding: 0;
-}
-.teaser.block {
-    background-color: #e1f5e7;
-    padding: 44px 150px 92px 150px;
+    background-color: #e3f6e9;
 }
 
 .teaser.block > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 44px;
+    padding-bottom: 92px;
+}
+.teaser.block p {
+    color: #666666;
 }
 .teaser.block picture > img {
     height: 124px;

@@ -35,6 +35,12 @@
     ]
   },
   {
+    "id": "cardsp",
+    "components": [
+      "cardsp-item"
+    ]
+  },
+  {
     "id": "carousel",
     "components": [
       "carousel-item"
@@ -56,9 +62,6 @@
     ]
   },
   {
-    "id": "teaser",
-    "components": [
-      "teaser-item"
-    ]
+    "id": "teaser"
   }
 ]

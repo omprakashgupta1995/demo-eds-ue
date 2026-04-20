@@ -14,26 +14,11 @@
           }
         }
       }
-    },
-    {
-      "title": "Teaser Item",
-      "id": "teaser-item",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Teaser Item",
-              "model": "teaser-item"
-            }
-          }
-        }
-      }
     }
   ],
   "models": [
     {
-      "id": "teaser-item",
+      "id": "teaser",
       "fields": [
         {
           "component": "richtext",
@@ -66,8 +51,7 @@
   ],
   "filters": [
     {
-      "id": "teaser",
-      "components": ["teaser-item"]
+      "id": "teaser"
     }
   ]
 }
