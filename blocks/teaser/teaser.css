@@ -1,13 +1,19 @@
+main > .section > div {
+    max-width: 100%;
+    margin: auto;
+    padding: 0;
+}
 .teaser.block {
     background-color: #e1f5e7;
+    padding: 44px 92px;
 }
 
 .teaser.block > div {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-picture > img {
-    height: 100px;
-    width: 100px;
+.teaser.block picture > img {
+    height: 124px;
+    width: 124px;
 }

@@ -272,7 +272,7 @@
     ]
   },
   {
-    "id": "teaser-item",
+    "id": "teaser",
     "fields": [
       {
         "component": "richtext",
