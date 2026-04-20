@@ -51,7 +51,8 @@
         "cards",
         "carousel",
         "columns",
-        "fragment"
+        "fragment",
+        "banner"
       ]
     }
   ]

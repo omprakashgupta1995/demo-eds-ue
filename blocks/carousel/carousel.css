@@ -1,0 +1,28 @@
+@import "./swiper.min.css";
+
+/* .swiper{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-slide .swiper-slide-active{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+} */
+main > .section > div{
+    max-width: 1200px;
+    margin:auto;
+    padding:0;
+}
+.swiper-slide img {
+    width: 100%;
+    
+}
+
+.swiper-slide h2{
+    position: absolute;
+    left: 50px;
+    top: 50%;
+}

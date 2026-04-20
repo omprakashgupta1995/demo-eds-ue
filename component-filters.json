@@ -16,7 +16,20 @@
       "cards",
       "carousel",
       "columns",
-      "fragment"
+      "fragment",
+      "banner"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
+    ]
+  },
+  {
+    "id": "banner",
+    "components": [
+      "banner"
     ]
   },
   {
