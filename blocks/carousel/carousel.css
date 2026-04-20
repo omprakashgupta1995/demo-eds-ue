@@ -1,0 +1,15 @@
+@import './swiper.min.css';
+
+.swiper-slide img{
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+main > .section > div{
+    max-width: 100%;
+    margin:0;
+    padding:0;
+}
+
+
+

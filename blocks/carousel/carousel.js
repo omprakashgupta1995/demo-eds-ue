@@ -1,14 +1,18 @@
-export default function carousel(block) {
-    const rows = [...block.children];
-    const carousel = document.createElement('div');
-    carousel.className = 'carousel-container';
-    rows.forEach((row)=>{
-        const cols =[...row.children];
-        
-        const item =document.createElement('div');
-        item.className = 'carousel-item';
-        while(row.firstElementChild) item.append(row.firstElementChild);
-        carousel.append(item);
+import swiper from "./swiper.min.js";
+export default function decorate(block) {
+    block.parentElement.classList.add('swiper');
+    let blockParent = block.parentElement;
+    block.classList.add('swiper-wrapper');
+    Array.from([...block.children]).forEach((item)=>{
+        item.classList.add('swiper-slide');
     })
-    block.appendChild(carousel);
+    let swiperPagination = document.createElement('div');
+    swiperPagination.classList.add('swiper-pagination');
+    blockParent.appendChild(swiperPagination);
+    swiper(blockParent,{
+        pagination: {
+            el: '.swiper-pagination'
+            
+        }
+    })
 }
