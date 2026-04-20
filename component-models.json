@@ -260,30 +260,30 @@
     "id": "contact-hero",
     "fields": [
       {
+        "component": "text",
+        "name": "col1_title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "label": "description",
+        "valueType": "string"
+      },
+      {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_image",
+        "name": "col2_image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_imageAlt",
+        "name": "col2_imageAlt",
         "label": "Alt",
         "value": ""
-      },
-      {
-        "component": "text",
-        "name": "col2_title",
-        "label": "Title",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "col2_text",
-        "label": "description",
-        "valueType": "string"
       }
     ]
   },
