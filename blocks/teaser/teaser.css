@@ -5,7 +5,7 @@ main > .section > div {
 }
 .teaser.block {
     background-color: #e1f5e7;
-    padding: 44px 92px;
+    padding: 44px 150px 92px 150px;
 }
 
 .teaser.block > div {
