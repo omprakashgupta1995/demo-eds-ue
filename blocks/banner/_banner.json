@@ -37,14 +37,14 @@
                 {
                     "component": "reference",
                     "valueType": "string",
-                    "name": "col1_image",
+                    "name": "col2_image",
                     "label": "Image",
                     "multi": false
                 },
                 {
                     "component": "text",
                     "valueType": "string",
-                    "name": "col1_imageAlt",
+                    "name": "col2_imageAlt",
                     "label": "Image Alt Text",
                     "multi": false
                 }
