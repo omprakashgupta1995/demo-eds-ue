@@ -122,15 +122,15 @@
     "fields": [
       {
         "component": "text",
-        "valueType": "string",
         "name": "col1_title",
-        "label": "Title"
+        "label": "Title",
+        "valueType": "string"
       },
       {
         "component": "richtext",
-        "valueType": "string",
         "name": "col2_description",
-        "label": "Description"
+        "label": "Description",
+        "valueType": "string"
       }
     ]
   },
