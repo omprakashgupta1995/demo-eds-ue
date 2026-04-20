@@ -100,7 +100,6 @@
         {
           "title": "Accordion Item",
           "id": "accordion-item",
-          "description": "An item within the accordion, which can contain a title and description.",
           "plugins": {
             "xwalk": {
               "page": {
