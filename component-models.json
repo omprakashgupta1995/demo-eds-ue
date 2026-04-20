@@ -135,6 +135,23 @@
     ]
   },
   {
+    "id": "banner-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "col1_title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_description",
+        "label": "Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
