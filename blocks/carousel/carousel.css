@@ -2,7 +2,7 @@
 @import "./swiper.min.css";
 
 main > .section > div {
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     padding: 0;
 }
