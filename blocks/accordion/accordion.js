@@ -3,8 +3,10 @@
  * Recreate an accordion
  * https://www.hlx.live/developer/block-collection/accordion
  */
+console.log("accordion block loaded",block);
 
 export default function decorate(block) {
+  if(window.location.href.includes('/author')) return true;
   [...block.children].forEach((row) => {
     // decorate accordion item label
     const label = row.children[0];
