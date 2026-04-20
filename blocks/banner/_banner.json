@@ -22,15 +22,13 @@
             "fields": [
                 {
                     "component": "richtext",
-                    "valueType": "string",
-                    "name": "col1_text",
-                    "label": "Heading",
-                    "value": ""
+                    "name": "col1_title",
+                    "label": "Title",
+                    "valueType": "string"
                 },
                 {
                     "component": "richtext",
                     "name": "col1_description",
-                    "value": "",
                     "label": "Description",
                     "valueType": "string"
                 },
@@ -45,8 +43,8 @@
                     "component": "text",
                     "valueType": "string",
                     "name": "col2_imageAlt",
-                    "label": "Image Alt Text",
-                    "multi": false
+                    "label": "Alt",
+                    "value": ""
                 }
             ]
         }
