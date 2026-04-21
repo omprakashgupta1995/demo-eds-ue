@@ -25,7 +25,7 @@
                         "template": {
                             "name": "Contact Cards Item",
                             "model": "contact-cards-item"
-                        }
+                        }   
                     }
                 }
             }
@@ -63,7 +63,7 @@
         {
             "id": "contact-cards",
             "components": [
-                "contact-cards"
+                "contact-cards-item"
             ]
         }
     ]
