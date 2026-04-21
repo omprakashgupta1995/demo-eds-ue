@@ -311,6 +311,43 @@
     ]
   },
   {
+    "id": "download-qr-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Banner Image",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_title",
+        "label": "Banner Title",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": " QR Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col2_description",
+        "label": "QR Description"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
