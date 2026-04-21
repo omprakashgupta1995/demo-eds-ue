@@ -267,7 +267,7 @@
     ]
   },
   {
-    "id": "contact-cards",
+    "id": "contact-cards-item",
     "fields": [
       {
         "component": "reference",
