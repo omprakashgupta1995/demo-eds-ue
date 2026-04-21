@@ -7,6 +7,7 @@
     padding-top: 44px;
     padding-bottom: 96px;
 }
+
 .contact-hero-imagewrapper{
     max-width: 250px;
     width: 100%;
@@ -15,20 +16,24 @@
     align-items: center;
     margin: 0;
 }
+
 .contact-hero-imagewrapper img{
     height: 124px;
     width: 124px;
 }
+
 .contact-hero-textwrapper{
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
+
 .contact-hero-title{
     font-size: 2rem;
     font-weight: 700;
     margin: 0;
 }
+
 .contact-hero-description{
     margin: 0;
 }
@@ -36,11 +41,13 @@
 .contact-hero-container{
      background-color:#e1ffeb;
 }
+
 @media (width >= 900px) {
     main > .section > div {
         padding: 0;
     }
 }
+
 main > section > div{
     padding: 0;
 }

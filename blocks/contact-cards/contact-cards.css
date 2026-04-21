@@ -7,9 +7,11 @@ h6{
     margin: 0;
     padding: 0;
 }
+
 .contact-cards-container{
     height: 100%;
 }
+
 .section .contact-cards-wrapper .contact-cards{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -17,6 +19,7 @@ h6{
     height: auto;
     
 }
+
 .section .contact-cards-wrapper{
     margin: 0 auto;
 }
@@ -42,6 +45,7 @@ h6{
     height: 54px;
     
 }
+
 .section .contact-cards-wrapper .contact-cards .contact-card .contact-card-textwrapper ul{
     display: flex;
     flex-direction: column;
@@ -52,14 +56,15 @@ h6{
     height: fit-content;
     font-size: 16px;
 }
+
 .section .contact-cards-wrapper .contact-cards .contact-card .contact-card-textwrapper ul li h5{
-  
    font-size: 1rem;
 }
-.section .contact-cards-wrapper .contact-cards .contact-card .contact-card-textwrapper ul li h3{
 
+.section .contact-cards-wrapper .contact-cards .contact-card .contact-card-textwrapper ul li h3{
    font-size: 12px;
 }
+
 .section .contact-cards-wrapper .contact-cards .contact-card .contact-card-textwrapper ul li h4{
    font-size: 12px;
    font-weight: 400;

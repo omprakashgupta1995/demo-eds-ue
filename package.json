@@ -4,10 +4,10 @@
   "version": "1.3.0",
   "description": "Starter project for Adobe Helix",
   "scripts": {
-    "fix-css": "stylelint --fix **/**/*.css",
+    "fix-css": "stylelint --fix **/**/*.css --ignore-pattern \"**/*.min.css\"",
     "fix-js": "eslint --fix **/**/*.js",
     "lint:js": "eslint . --ext .json,.js,.mjs",
-    "lint:css": "stylelint blocks/**/*.css styles/*.css",
+    "lint:css": "stylelint blocks/**/*.css styles/*.css --ignore-pattern \"**/*.min.css\"",
     "lint": "npm run lint:js && npm run lint:css",
     "build:json": "npm-run-all -p build:json:models build:json:definitions build:json:filters",
     "build:json:models": "merge-json-cli -i \"models/_component-models.json\" -o \"component-models.json\"",
