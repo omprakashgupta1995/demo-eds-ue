@@ -58,5 +58,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "contact-cards",
+    "components": [
+      "contact-cards"
+    ]
   }
 ]

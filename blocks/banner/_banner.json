@@ -34,7 +34,6 @@
                 },
                 {
                     "component": "reference",
-                    "valueType": "string",
                     "name": "col2_image",
                     "label": "Image",
                     "multi": false
