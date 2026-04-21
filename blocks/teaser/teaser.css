@@ -3,16 +3,18 @@
     background-color: #e3f6e9;
 }
 
-.teaser.block > div {
+.teaser.block {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 44px;
     padding-bottom: 92px;
 }
+
 .teaser.block p {
     color: #666666;
 }
+
 .teaser.block picture > img {
     height: 124px;
     width: 124px;
