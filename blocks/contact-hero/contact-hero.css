@@ -1,19 +1,45 @@
 .contact-hero{
     display: flex;
-    height: 200px;
+    height: fit-content;
     justify-content: space-between;
     width: 100%;
-    background-color:#e1ffeb;
     align-items: center;
-    padding: 0 40px;
+    padding: 40px 0px;
 }
-
 .contact-hero-imagewrapper{
+    max-width: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.contact-hero-imagewrapper img{
     height: 124px;
     width: 124px;
 }
+.contact-hero-textwrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 .contact-hero-title{
-    font-size: 32px;
-    margin-bottom: 8px;
+    font-size: 2rem;
     font-weight: 700;
+    margin: 0;
+}
+.contact-hero-description{
+    margin: 0;
+}
+
+.contact-hero-container{
+     background-color:#e1ffeb;
+}
+@media (width >= 900px) {
+    main > .section > div {
+        padding: 0;
+    }
+}
+main > section > div{
+    padding: 0;
 }
