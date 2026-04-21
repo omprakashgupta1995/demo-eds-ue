@@ -15,10 +15,10 @@ export default function decorate(block) {
     pagination: {
       el: ".swiper-pagination",
     },
-    autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-    }
+    // autoplay: {
+    //     delay: 1500,
+    //     disableOnInteraction: false,
+    // }
   });
   console.log(block.outerHTML);
 }
