@@ -1,0 +1,18 @@
+.teaser-container {
+    max-width: 100%;
+    background-color: #E3F6E9;
+}
+.teaser.block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 44px;
+    padding-bottom: 92px;
+}
+.teaser.block p {
+    color: #666666;
+}
+.teaser.block picture > img {
+    height: 124px;
+    width: 124px;
+}

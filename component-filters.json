@@ -17,13 +17,20 @@
       "columns",
       "fragment",
       "carousel",
-      "teaser"
+      "teaser",
+      "cardsp"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "cardsp",
+    "components": [
+      "cardsp-item"
     ]
   },
   {

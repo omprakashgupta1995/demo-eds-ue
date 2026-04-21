@@ -137,6 +137,37 @@
     ]
   },
   {
+    "id": "cardsp-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Image",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Image Alt",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "col2_carddata",
+        "label": "Card Data",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col3_link",
+        "label": "Link",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "carousel-item",
     "fields": [
       {
