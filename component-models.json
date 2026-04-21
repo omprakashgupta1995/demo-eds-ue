@@ -262,9 +262,15 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
+        "name": "col1_image",
         "label": "Image",
         "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "label": "Image Alt Text",
+        "name": "col1_imageAlt"
       },
       {
         "component": "richtext",
