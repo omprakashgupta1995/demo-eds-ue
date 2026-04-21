@@ -16,15 +16,15 @@
             }
         },
         {
-            "title": "Contact Cards",
-            "id": "contact-cards",
+            "title": "Contact Cards Item",
+            "id": "contact-cards-item",
             "plugins": {
                 "xwalk": {
                     "page": {
                         "resourceType": "core/franklin/components/block/v1/block/item",
                         "template": {
-                            "name": "Contact Cards",
-                            "model": "contact-cards"
+                            "name": "Contact Cards Item",
+                            "model": "contact-cards-item"
                         }
                     }
                 }
