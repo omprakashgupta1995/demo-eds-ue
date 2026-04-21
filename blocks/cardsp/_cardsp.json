@@ -52,7 +52,13 @@
         {
           "component": "richtext",
           "name": "col2_carddata",
-          "label": "carddata",
+          "label": "Card Data",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "col3_link",
+          "label": "Link",
           "valueType": "string"
         }
       ]
