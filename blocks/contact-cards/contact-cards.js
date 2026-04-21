@@ -1,5 +1,5 @@
 export default function decorate(block) {
-    console.log(block);
+    
     let rows =[...block.children];
     rows.forEach((row)=>{
         row.classList.add('contact-card');
