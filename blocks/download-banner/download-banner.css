@@ -12,14 +12,12 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    min-height: 250px;
+    min-height: 280px;
 }
 .banner-image-wrapper img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  
-  
 }
 .banner-content{
    padding: 20px;
@@ -44,4 +42,17 @@
     color: white;
     position: relative;
     z-index: 1;
+}
+.banner-qr-image-wrapper img{
+    display: block;
+    height: 81px;
+    border-radius: 20px;
+    width: 81px;
+}
+.banner-qr-content{
+    margin-left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
 }
