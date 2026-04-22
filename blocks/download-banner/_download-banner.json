@@ -21,6 +21,17 @@
       "id": "download-banner",
       "fields": [
         {
+          "component": "multiselect",
+          "name": "style",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Downloads",
+              "value": "downloads"
+            }
+          ]
+        },
+        {
           "component": "reference",
           "valueType": "string",
           "name": "col1_image",
