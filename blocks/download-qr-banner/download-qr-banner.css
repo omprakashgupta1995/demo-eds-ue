@@ -1,4 +1,69 @@
-h1{
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.download-qr-banner {
+  width: 100%;
+}
+
+.download-qr-banner-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.download-qr-banner-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.download-qr-banner-col.col-image {
+  align-items: center;
+  justify-content: center;
+}
+
+.download-qr-banner-col.col-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.download-qr-banner-col.col-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.download-qr-banner-col.col-content h1,
+.download-qr-banner-col.col-content h2,
+.download-qr-banner-col.col-content h3 {
+  margin-bottom: 16px;
+}
+
+.download-qr-banner-col.col-content img {
+  max-width: 200px;
+  height: auto;
+  margin: 16px 0;
+}
+
+.download-qr-banner-col.col-content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .download-qr-banner-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 0;
+  }
 }
