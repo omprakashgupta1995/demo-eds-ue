@@ -299,19 +299,19 @@
       },
       {
         "component": "reference",
-        "name": "col1_qr",
+        "name": "col2_qr",
         "label": "QR Image",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "col1_qrAlt",
+        "name": "col2_qrAlt",
         "label": "QR Alt",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "col1_qrtext",
+        "name": "col2_qrtext",
         "label": "QR Text",
         "valueType": "string"
       }
