@@ -284,6 +284,24 @@
         "value": ""
       },
       {
+        "component": "reference",
+        "name": "col1_qr",
+        "label": "QR Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col1_qrAlt",
+        "label": "QR Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_qrtext",
+        "label": "QR Text",
+        "valueType": "string"
+      },
+      {
         "component": "richtext",
         "name": "col2_heading",
         "value": "",
@@ -348,24 +366,6 @@
         "component": "richtext",
         "name": "col1_description",
         "label": "Description",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "col1_qr",
-        "label": "QR Image",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "col1_qrAlt",
-        "label": "QR Alt",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "col1_qrtext",
-        "label": "QR Text",
         "valueType": "string"
       },
       {
