@@ -1,22 +1,25 @@
-.-container .hero-wrapper {
-    max-width: unset;
+.download-banner-container .hero-wrapper {
     padding: 0;
 }
 
-.hero {
+.download-banner {
     position: relative;
     padding: 40px 24px;
     min-height: 300px;
+    color: #fff;
 }
-
-.hero h1 {
+.downloads {
+    border-radius: 25px;
+    overflow: hidden;
+}
+.download-banner h1 {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     color: var(--background-color);
 }
 
-.hero picture {
+.download-banner picture {
     position: absolute;
     z-index: -1;
     inset: 0;
@@ -24,14 +27,14 @@
     box-sizing: border-box;
 }
 
-.hero img {
+.download-banner img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
 @media (width >= 900px) {
-    .hero {
+    .download-banner {
         padding: 40px 32px;
     }
 }
