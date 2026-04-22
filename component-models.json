@@ -296,22 +296,10 @@
     "id": "download-banner",
     "fields": [
       {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Downloads",
-            "value": "downloads"
-          }
-        ]
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "col1_image",
-        "label": "Image",
-        "multi": false
+        "label": "Image"
       },
       {
         "component": "text",
@@ -322,34 +310,37 @@
       },
       {
         "component": "richtext",
-        "name": "col2_heading",
+        "name": "col1_heading",
         "value": "",
-        "label": "Heading",
+        "label": "Text",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "col2_text",
+        "name": "col1_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
       },
       {
         "component": "reference",
+        "valueType": "string",
         "name": "col2_qr",
-        "label": "QR Image",
-        "valueType": "string"
+        "label": "Image",
+        "multi": false
       },
       {
         "component": "text",
+        "valueType": "string",
         "name": "col2_qrAlt",
-        "label": "QR Alt",
-        "valueType": "string"
+        "label": "Alt",
+        "value": ""
       },
       {
         "component": "richtext",
         "name": "col2_qrtext",
-        "label": "QR Text",
+        "value": "",
+        "label": "Text",
         "valueType": "string"
       }
     ]
