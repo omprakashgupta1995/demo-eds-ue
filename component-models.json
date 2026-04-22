@@ -311,7 +311,7 @@
       },
       {
         "component": "richtext",
-        "name": "col1_text",
+        "name": "col1_heading",
         "value": "",
         "label": "Text",
         "valueType": "string"
