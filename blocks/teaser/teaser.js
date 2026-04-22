@@ -1,3 +1,3 @@
 export default function decorate(block) {
-  console.log(block.outerHTML);
+  // console.log(block.outerHTML);
 }
