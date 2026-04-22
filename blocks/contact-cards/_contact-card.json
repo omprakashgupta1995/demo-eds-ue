@@ -50,7 +50,7 @@
                     "multi": false
                 },
                 {
-                    "component": "richtext",
+                    "component": "richtext", 
                     "name": "col2_text",
                     "value": "",
                     "label": "Text",
