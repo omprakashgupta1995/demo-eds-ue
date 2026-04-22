@@ -331,7 +331,7 @@
       },
       {
         "component": "richtext",
-        "name": "col1_qrText",
+        "name": "col1_qrtext",
         "label": "QR Text",
         "valueType": "string"
       },
