@@ -20,7 +20,7 @@
       "accordion",
       "cardv2",
       "teaser",
-      "cardsp",
+      "card",
       "download-banner"
     ]
   },
@@ -31,15 +31,15 @@
     ]
   },
   {
-    "id": "cards",
+    "id": "card",
     "components": [
-      "card"
+      "card-item"
     ]
   },
   {
-    "id": "cardsp",
+    "id": "cards",
     "components": [
-      "cardsp-item"
+      "card"
     ]
   },
   {
