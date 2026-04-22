@@ -1,0 +1,47 @@
+/* Image Wrapper - make it full background */
+.banner-image-wrapper {
+  position: absolute;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  z-index: 0;
+  margin: 0;
+}
+.banner-content-wrapper{
+    width: 100%;
+}
+.download-banner-wrapper{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 250px;
+}
+.banner-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  
+  
+}
+.banner-content{
+   padding: 20px;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 40px;
+    color: white;
+   
+}
+.banner-heading {
+    position: relative;
+    z-index: 1;
+}
+.banner-description {
+    position: relative;
+    z-index: 1;
+}
+.download-banner{
+    width: 100%;
+}
+.banner-qr-wrapper{
+    color: white;
+    position: relative;
+    z-index: 1;
+}
