@@ -53,7 +53,8 @@
         "columns",
         "fragment",
         "banner",
-        "contact-cards"
+        "contact-cards",
+        "download-banner"
       ]
     }
   ]
