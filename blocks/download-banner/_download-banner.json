@@ -21,6 +21,17 @@
             "id": "download-banner",
             "fields": [
                 {
+                    "component": "multiselect",
+                    "name": "classes",
+                    "label": "Style",
+                    "options": [
+                        {
+                            "name": "Downloads",
+                            "value": "downloads"
+                        }
+                    ]
+                },
+                {
                     "component": "reference",
                     "valueType": "string",
                     "name": "col1_image",
@@ -36,31 +47,10 @@
                 },
                 {
                     "component": "richtext",
-                    "name": "col1_heading",
+                    "name": "col2_heading",
                     "value": "",
-                    "label": "Text",
+                    "label": "Heading",
                     "valueType": "string"
-                },
-                {
-                    "component": "richtext",
-                    "name": "col1_text",
-                    "value": "",
-                    "label": "Text",
-                    "valueType": "string"
-                },
-                {
-                    "component": "reference",
-                    "valueType": "string",
-                    "name": "col2_qr",
-                    "label": "Image",
-                    "multi": false
-                },
-                {
-                    "component": "text",
-                    "valueType": "string",
-                    "name": "col2_qrAlt",
-                    "label": "Alt",
-                    "value": ""
                 },
                 {
                     "component": "richtext",
@@ -68,9 +58,28 @@
                     "value": "",
                     "label": "Text",
                     "valueType": "string"
+                },
+                {
+                    "component": "reference",
+                    "name": "col2_qr",
+                    "label": "QR Image",
+                    "valueType": "string"
+                },
+                {
+                    "component": "text",
+                    "name": "col2_qrAlt",
+                    "label": "QR Alt",
+                    "valueType": "string"
+                },
+                {
+                    "component": "richtext",
+                    "name": "col2_qrtext",
+                    "label": "QR Text",
+                    "valueType": "string"
                 }
             ]
         }
     ],
-    "filters": []
+    "filters": [
+    ]
 }
