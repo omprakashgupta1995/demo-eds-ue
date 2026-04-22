@@ -1,5 +1,5 @@
 export default function decorate(block) {
-    if(window.location.pathname.includes('/mahesh/contact-us')) {
+    
     let rows = [...block.children];
     let bannerContentWrapper = rows[0];
     bannerContentWrapper.classList.add('banner-content-wrapper');
@@ -14,6 +14,6 @@ export default function decorate(block) {
     bannerQRContent.classList.add('banner-qr-content');
     bannerQRContent.children[0].classList.add('banner-qr-image-wrapper');
     bannerQRContent.children[1].classList.add('banner-qr-description');
-}
+
    
 }
