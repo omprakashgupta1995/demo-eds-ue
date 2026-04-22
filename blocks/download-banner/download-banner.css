@@ -16,7 +16,7 @@
   color: var(--background-color);
 }
 
-.hero picture {
+.hero  {
   position: absolute;
   z-index: -1;
   inset: 0;
