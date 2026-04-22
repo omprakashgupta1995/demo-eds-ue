@@ -178,7 +178,7 @@
       },
       {
         "component": "richtext",
-        "name": "col3_link",
+        "name": "col2_link",
         "label": "Link",
         "valueType": "string"
       }
