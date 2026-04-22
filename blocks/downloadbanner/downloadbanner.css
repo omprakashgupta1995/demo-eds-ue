@@ -1,0 +1,39 @@
+.downloadbanner-container .downloadbanner-wrapper {
+    padding: 0;
+}
+
+.downloadbanner {
+    position: relative;
+    padding: 40px 24px;
+    min-height: 250px;
+}
+.downloadbanner.block {
+    border-radius: 25px;
+}
+
+.downloadbanner h1 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--background-color);
+}
+
+.downloadbanner picture {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.downloadbanner img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media (width >= 900px) {
+    .downloadbanner {
+        padding: 40px 32px;
+    }
+}
