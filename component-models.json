@@ -315,7 +315,7 @@
     ]
   },
   {
-    "id": "downloadBanner",
+    "id": "download-banner",
     "fields": [
       {
         "component": "multiselect",
