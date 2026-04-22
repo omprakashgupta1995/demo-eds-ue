@@ -135,37 +135,6 @@
     ]
   },
   {
-    "id": "card-item",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "col1_image",
-        "label": "Image",
-        "valueType": "string",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "col1_imageAlt",
-        "label": "Image Alt",
-        "valueType": "string",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "col2_carddata",
-        "label": "Card Data",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "col2_link",
-        "label": "Link",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "card",
     "fields": [
       {
@@ -263,6 +232,37 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "contact-card-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Image",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Image Alt",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "col2_carddata",
+        "label": "Card Data",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_link",
+        "label": "Link",
+        "valueType": "string"
       }
     ]
   },

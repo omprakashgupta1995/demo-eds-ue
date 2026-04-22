@@ -18,7 +18,7 @@
     position: relative;
 }
 
-.cardsp.block > div > div:first-child {
+.card.block > div > div:first-child {
     margin-right: 20px;
 }
 

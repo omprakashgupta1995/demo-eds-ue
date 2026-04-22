@@ -31,12 +31,6 @@
     ]
   },
   {
-    "id": "card",
-    "components": [
-      "card-item"
-    ]
-  },
-  {
     "id": "cards",
     "components": [
       "card"
@@ -63,5 +57,10 @@
       "title"
     ]
   },
-  "card"
+  {
+    "id": "contact-card",
+    "components": [
+      "contact-card-item"
+    ]
+  }
 ]
