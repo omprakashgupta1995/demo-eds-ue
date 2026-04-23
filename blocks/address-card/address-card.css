@@ -6,6 +6,7 @@
 .address-card-wrapper:first-child {
     margin-top: 0;
     line-height: 20px;
+    font-size: 14px;
 }
 
 /* Card styling */
