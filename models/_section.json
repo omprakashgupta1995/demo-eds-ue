@@ -54,7 +54,8 @@
         "fragment",
         "banner",
         "contact-cards",
-        "download-banner"
+        "download-banner",
+        "info-block"
       ]
     }
   ]
