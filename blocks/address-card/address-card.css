@@ -1,15 +1,32 @@
-/* All address cards */
-.address-card {
+/* Spacing between cards */
+.address-card-wrapper {
+    margin-top: 32px;
+}
+
+.address-card-wrapper:first-child {
+    margin-top: 0;
+    line-height: 20px;
+}
+
+/* Card styling */
+.address-card.block {
     border-radius: 24px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    background-color: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-/* 2nd card font size */
-.address-card-container .address-card-wrapper:nth-child(2) .address-card {
-    font-size: 14px;
+/* Second card font size */
+.address-card-wrapper:nth-child(2) .address-card.block h2 {
+    font-size: 20px;
+}
+.address-card-wrapper:nth-child(2) .address-card.block {
+    margin-top: 32px;
 }
 
-/* 3rd card font size */
-.address-card-container .address-card-wrapper:nth-child(3) .address-card {
-    font-size: 12px;
+/* Third card font size */
+.address-card-wrapper:nth-child(3) .address-card.block {
+    font-size: 13px;
+    margin-top: 32px;
 }
