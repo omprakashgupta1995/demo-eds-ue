@@ -135,6 +135,28 @@
     ]
   },
   {
+    "id": "address-card",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Address",
+            "value": "address"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_text",
+        "label": "Text"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
