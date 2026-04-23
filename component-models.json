@@ -251,6 +251,17 @@
     ]
   },
   {
+    "id": "contact-section",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Card Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "download-banner",
     "fields": [
       {

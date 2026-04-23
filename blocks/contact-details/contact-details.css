@@ -1,0 +1,57 @@
+/* Container for the block */
+.contact-details-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #fcfcfc; /* Very light background */
+}
+
+/* Individual Card Styling */
+.contact-details > div {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Typography basics */
+.contact-details p {
+    margin: 12px 0;
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.contact-details strong {
+    color: #1a202c;
+}
+
+/* Specific Section 1: Customer Behavior Link (Orange) */
+.contact-details > div:first-child a {
+    color: #ff4d00;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Specific Section 2: Need Assistance Link (Blue/Header Style) */
+.contact-details > div:nth-child(2) a {
+    color: #0052cc;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Specific Section 3: Nodal Officer details */
+.contact-details > div:last-child {
+    border-top: 4px solid #f0f0f0; /* Slight visual distinction for grievance */
+}
+
+.contact-details a[href^="mailto:"], 
+.contact-details a[href^="tel:"] {
+    color: #0052cc;
+    text-decoration: underline;
+    font-weight: 500;
+}

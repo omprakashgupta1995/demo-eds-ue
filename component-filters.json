@@ -19,7 +19,8 @@
       "carousel",
       "teaser",
       "cardsp",
-      "download-banner"
+      "download-banner",
+      "contact-details"
     ]
   },
   {
@@ -53,6 +54,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "contact-details",
+    "components": [
+      "contact-section"
     ]
   }
 ]
