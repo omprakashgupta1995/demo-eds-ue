@@ -45,7 +45,7 @@
 .banner-qr-image-wrapper img{
     display: block;
     height: 81px;
-    border-radius: 20px;
+    border-radius: 2px;
     width: 81px;
 }
 .banner-qr-content{

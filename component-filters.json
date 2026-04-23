@@ -20,7 +20,8 @@
       "banner",
       "contact-cards",
       "download-banner",
-      "info-block"
+      "info-block",
+      "menu-list"
     ]
   },
   {
@@ -66,6 +67,12 @@
     "id": "contact-cards",
     "components": [
       "contact-cards-item"
+    ]
+  },
+  {
+    "id": "menu-list",
+    "components": [
+      "menu-item"
     ]
   }
 ]

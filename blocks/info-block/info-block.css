@@ -1,0 +1,16 @@
+.info-block{
+    border-radius: 12px;
+    box-shadow: 0 8px 24px -6px #00000014, 0 0 1px #0006;
+    padding: 24px 24px 0;
+    padding-bottom: 24px;
+
+}
+
+.info-block p{
+    margin-bottom: 12px;
+}
+a:any-link {
+    /* color: black; */
+    color: #035fe6;
+}
+

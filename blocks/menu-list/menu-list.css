@@ -1,0 +1,111 @@
+.menu-list-wrapper {
+  background: #f5f6f8;
+  padding: 30px 0;
+}
+
+/* Card container */
+.menu-list {
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  
+}
+
+/* Each item */
+.menu-list-item {
+  display: flex;
+  padding: 18px 20px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Remove last border */
+.menu-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect */
+.menu-list-item:hover {
+  background: #f9fafb;
+}
+
+/* Left side (icon + text) */
+.menu-list-item > .menu-image-wrapper,
+.menu-list-item > .menu-content-wrapper {
+  display: flex;
+}
+
+/* Icon */
+.menu-image-wrapper {
+  margin-right: 14px;
+  
+}
+
+.menu-image-wrapper img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Content wrapper */
+.menu-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+/* Title */
+.menu-content-wrapper h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Subtitle (second h4) */
+.menu-content-wrapper p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* Links */
+.menu-content-wrapper a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Right arrow */
+.menu-list-item::after {
+  content: "›";
+  font-size: 20px;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+/* Button style (last item) */
+.button-container {
+  margin: 0;
+}
+
+.button.primary {
+  background: transparent;
+  color: #222;
+  padding: 0;
+  font-weight: 600;
+  border: none;
+}
+
+/* Fix alignment when button is used */
+.menu-list-item:last-child .menu-content-wrapper {
+  flex-direction: row;
+  align-items: center;
+}
