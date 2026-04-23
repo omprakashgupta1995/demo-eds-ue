@@ -1,6 +1,6 @@
 .teaser-container {
     max-width: 100%;
-    background-color: #E3F6E9;
+    /* background-color: #E3F6E9; */
 }
 .teaser.block {
     display: flex;
@@ -8,6 +8,16 @@
     align-items: center;
     padding-top: 44px;
     padding-bottom: 92px;
+    width: 1200px;
+}
+.teaser-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3f6e9;
+    gap: 50px;
+    margin: 0 !important;
+    max-width: 100% !important;
 }
 .teaser.block p {
     color: #666666;
