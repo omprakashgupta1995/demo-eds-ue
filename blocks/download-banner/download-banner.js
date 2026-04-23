@@ -1,27 +1,21 @@
 export default function decorate(block) {
-  // QR image wrapper (currently inside a <p>)
-  const qrImage = block
-    .querySelector('[data-aue-prop="col2_qr"]')
-    ?.closest("p");
+  // second column inner wrapper
+  const contentInner = block.querySelector(":scope > div:nth-child(2) > div");
 
-  // QR text wrapper (richtext div)
-  const qrText = block
-    .querySelector('[data-aue-prop="col2_qrtext"]')
-    ?.closest("div");
+  if (!contentInner) return;
 
-  if (qrImage && qrText) {
-    // Create wrapper
-    const qrRow = document.createElement("div");
-    qrRow.classList.add("qr-row");
+  const paragraphs = contentInner.querySelectorAll("p");
 
-    // Move both into wrapper
-    qrRow.append(qrImage, qrText);
+  if (paragraphs.length < 3) return;
 
-    // Append at correct place (after main text)
-    const contentWrapper = block
-      .querySelector('[data-aue-prop="col2_text"]')
-      ?.closest("div");
+  const qrImagePara = paragraphs[1]; // second <p> → contains QR picture
+  const qrTextPara = paragraphs[2]; // third <p> → QR text
 
-    contentWrapper?.after(qrRow);
-  }
+  // Create wrapper
+  const qrRow = document.createElement("div");
+  qrRow.classList.add("qr-row");
+
+  qrRow.append(qrImagePara, qrTextPara);
+
+  contentInner.append(qrRow);
 }
