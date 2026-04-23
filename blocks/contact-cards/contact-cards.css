@@ -40,7 +40,11 @@ a:any-link{
     height: 54px;
 }
 
-.contact-card p{
+.contact-card ul{
+    padding: 0;
+    margin: 0;
+}
+.contact-card ul li{
     list-style: none;
-    text-decoration:none;
+    text-decoration: none;
 }
