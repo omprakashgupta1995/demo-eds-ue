@@ -75,5 +75,11 @@
     "components": [
       "content-text"
     ]
+  },
+  {
+    "id": "menu-list",
+    "components": [
+      "menu-item"
+    ]
   }
 ]
