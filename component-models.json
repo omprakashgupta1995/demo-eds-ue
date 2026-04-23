@@ -441,10 +441,11 @@
         "multi": true,
         "fields": [
           {
-            "component": "richtext",
+            "component": "reference",
             "name": "icon",
             "label": "Icon ",
-            "valueType": "string"
+            "valueType": "string",
+            "multi": false
           },
           {
             "component": "richtext",
