@@ -22,7 +22,8 @@
       "teaser",
       "contact-card",
       "download-banner",
-      "address-card"
+      "address-card",
+      "list"
     ]
   },
   {
@@ -62,6 +63,12 @@
     "id": "contact-card",
     "components": [
       "contact-card-item"
+    ]
+  },
+  {
+    "id": "list",
+    "components": [
+      "list-item"
     ]
   }
 ]

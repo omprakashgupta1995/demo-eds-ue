@@ -57,7 +57,8 @@
         "teaser",
         "contact-card",
         "download-banner",
-        "address-card"
+        "address-card",
+        "list"
       ]
     }
   ]
