@@ -1,0 +1,21 @@
+.content-block{
+    display: flex;
+    flex-direction: column; 
+    gap : 32px;
+    font-size: 16px;
+}
+.content-text-wrapper {
+    display: flex;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 16px;
+}
+.content-text{
+    width: 65%;
+}
+.content-text ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

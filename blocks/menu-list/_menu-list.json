@@ -1,0 +1,49 @@
+{
+  "definitions": [
+    {
+      "title": "Menu List",
+      "id": "menu-list",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Menu List",
+              "model": "menu-list"
+            }
+          }
+        }
+      }
+    }
+  ],
+
+  "models": [
+    {
+      "id": "menu-list",
+      "fields": [
+        {
+          "component": "container",
+          "name": "items",
+          "label": "Menu Items",
+          "multi": true,
+          "fields": [
+            {
+              "component": "richtext",
+              "name": "icon",
+              "label": "Icon ",
+              "valueType": "string"
+            },
+            {
+              "component": "richtext",
+              "name": "link",
+              "label": "Menu Content",
+              "valueType": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+   "filters": []
+  
+}
