@@ -1,40 +1,11 @@
-.download-banner-container {
-    padding: 0;
-}
-
-.download-banner {
+.download-banner-wrapper{
     position: relative;
-    padding: 40px 24px;
-    min-height: 300px;
-    color: #fff;
-}
-.downloads {
-    border-radius: 25px;
-    overflow: hidden;
-}
-.download-banner h1 {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--background-color);
-}
-
-.download-banner picture {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    object-fit: cover;
-    box-sizing: border-box;
-}
-
-.download-banner img {
-    object-fit: cover;
     width: 100%;
-    height: 100%;
+    overflow: hidden;
+    min-height: 280px;
 }
 
-@media (width >= 900px) {
-    .download-banner {
-        padding: 40px 32px;
-    }
+.download-image img{
+    width: 100%;
+    border-radius: 20px;
 }
