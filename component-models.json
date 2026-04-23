@@ -435,25 +435,17 @@
     "id": "menu-item",
     "fields": [
       {
-        "component": "container",
-        "name": "items",
-        "label": "Menu Items",
-        "multi": true,
-        "fields": [
-          {
-            "component": "reference",
-            "name": "icon",
-            "label": "Icon ",
-            "valueType": "string",
-            "multi": false
-          },
-          {
-            "component": "richtext",
-            "name": "link",
-            "label": "Menu Content",
-            "valueType": "string"
-          }
-        ]
+        "component": "reference",
+        "name": "icon",
+        "label": "Icon ",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "link",
+        "label": "Menu Content",
+        "valueType": "string"
       }
     ]
   }
