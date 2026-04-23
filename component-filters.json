@@ -67,5 +67,11 @@
     "components": [
       "contact-card"
     ]
+  },
+  {
+    "id": "content-block",
+    "components": [
+      "content-text"
+    ]
   }
 ]

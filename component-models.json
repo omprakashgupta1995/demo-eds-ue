@@ -315,6 +315,18 @@
     ]
   },
   {
+    "id": "content-text",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Content Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "download-banner",
     "fields": [
       {
