@@ -8,8 +8,8 @@ export default function decorate(block) {
 
   if (paragraphs.length < 3) return;
 
-  const qrImagePara = paragraphs[1]; // second <p> → contains QR picture
-  const qrTextPara = paragraphs[2]; // third <p> → QR text
+  const qrImagePara = paragraphs[1];
+  const qrTextPara = paragraphs[2];
 
   // Create wrapper
   const qrRow = document.createElement("div");

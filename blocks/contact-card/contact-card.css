@@ -32,7 +32,7 @@
     margin: 4px 0;
 }
 
-.contact-card.block > div:nth-child(4) > div:last-child p:last-child {
+.contact-card.block > div:nth-child(4) > div:last-child p:nth-of-type(5) {
     position: absolute;
     top: 8px;
     right: 20px;
