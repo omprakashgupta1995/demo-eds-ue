@@ -38,21 +38,6 @@
       "id": "hero-carousel-item",
       "fields": [
         {
-          "component": "multiselect",
-          "name": "classes",
-          "label": "Style",
-          "options": [
-            {
-              "name": "Image",
-              "value": "media-image"
-            },
-            {
-              "name": "Video",
-              "value": "media-video"
-            }
-          ]
-        },
-        {
           "component": "text",
           "name": "col1_media",
           "label": "Image / Video URL",
