@@ -410,5 +410,43 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "nav-icons",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_cartimage",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_cartimageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "reference",
+        "name": "col1_flagimage",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_flagimageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "reference",
+        "name": "col1_profileimage",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_profileimageAlt",
+        "label": "Alt Text"
+      }
+    ]
   }
 ]
