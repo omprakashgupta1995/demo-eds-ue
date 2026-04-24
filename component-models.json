@@ -406,7 +406,7 @@
       {
         "component": "text",
         "label": "Image Alt Text",
-        "name": "col1_imageAlt",
+        "name": "col1_mediaAlt",
         "valueType": "string"
       },
       {
