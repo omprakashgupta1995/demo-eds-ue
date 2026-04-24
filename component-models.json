@@ -414,6 +414,7 @@
       {
         "component": "file",
         "name": "col1_image",
+        "label": "Image",
         "showIf": {
           "field": "col1_mediaType",
           "equals": "image"
@@ -422,6 +423,7 @@
       {
         "component": "file",
         "name": "col1_video",
+        "label": "Video",
         "showIf": {
           "field": "col1_mediaType",
           "equals": "video"
@@ -431,7 +433,11 @@
         "component": "text",
         "label": "Image Alt Text",
         "name": "col1_imageAlt",
-        "valueType": "string"
+        "valueType": "string",
+        "showIf": {
+          "field": "col1_mediaType",
+          "equals": "image"
+        }
       },
       {
         "component": "text",
