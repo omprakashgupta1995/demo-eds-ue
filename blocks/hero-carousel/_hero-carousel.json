@@ -37,32 +37,18 @@
     {
       "id": "hero-carousel-item",
       "fields": [
-      {
-        "component": "select",
+      { 
+        "component": "reference",
         "name": "col1_mediaType",
-        "options": [
-          { "label": "Image", "value": "image" },
-          { "label": "Video", "value": "video" }
-        ]
-      },
-      {
-        "component": "file",
-        "name": "col1_image",
         "label": "Image",
-        "showIf": { "field": "col1_mediaType", "equals": "image" }
-      },
-      {
-        "component": "file",
-        "name": "col1_video",
-        "label": "Video",
-        "showIf": { "field": "col1_mediaType", "equals": "video" }
+        "valueType": "string"
       },
        {
         "component": "text",
         "label": "Image Alt Text",
         "name": "col1_imageAlt",
-        "valueType": "string",
-        "showIf": { "field": "col1_mediaType", "equals": "image" }
+        "valueType": "string"
+        
        },
         {
           "component": "text",
