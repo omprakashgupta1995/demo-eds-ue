@@ -395,6 +395,54 @@
     ]
   },
   {
+    "id": "hero-caraousel-item",
+    "fields": [
+      {
+        "component": "select",
+        "name": "col1_mediaType",
+        "label": "Media Type",
+        "options": [
+          {
+            "label": "Image",
+            "value": "image"
+          },
+          {
+            "label": "Video",
+            "value": "video"
+          }
+        ]
+      },
+      {
+        "component": "file",
+        "name": "col1_image",
+        "label": "Image",
+        "showIf": {
+          "field": "col1_mediaType",
+          "equals": "image"
+        }
+      },
+      {
+        "component": "file",
+        "name": "col1_video",
+        "label": "Video",
+        "showIf": {
+          "field": "col1_mediaType",
+          "equals": "video"
+        }
+      },
+      {
+        "component": "text",
+        "name": "col2_ctaText",
+        "label": "CTA Text"
+      },
+      {
+        "component": "text",
+        "name": "col2_ctaLink",
+        "label": "CTA Link"
+      }
+    ]
+  },
+  {
     "id": "content-text",
     "fields": [
       {
