@@ -38,7 +38,7 @@
       "id": "hero-carousel-item",
       "fields": [
        {
-        "component": "file",
+        "component": "reference",
         "label": "Image",
         "name": "col1_image",
         "valueType": "string"
