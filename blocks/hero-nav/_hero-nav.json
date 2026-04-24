@@ -1,0 +1,56 @@
+{
+  "definitions": [
+    {
+      "title": "Hero Navigation",
+      "id": "hero-nav",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Hero Navigation",
+              "filter": "hero-nav"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Content Text",
+      "id": "content-text",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Content Text",
+              "model": "content-text"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "content-text",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Content Text",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "hero-nav",
+      "components": [
+        "content-text"
+      ]
+    }
+  ]
+}

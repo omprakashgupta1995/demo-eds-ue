@@ -77,6 +77,12 @@
     ]
   },
   {
+    "id": "hero-nav",
+    "components": [
+      "content-text"
+    ]
+  },
+  {
     "id": "menu-list",
     "components": [
       "menu-item"
