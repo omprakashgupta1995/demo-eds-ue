@@ -327,7 +327,7 @@
           }
         },
         {
-          "id": "hero-caousel-item",
+          "id": "hero-carousel-item",
           "title": "Hero Carousel Item",
           "description": "An item within the hero carousel, which can contain an image and text.",
           "plugins": {
