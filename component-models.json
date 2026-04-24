@@ -395,12 +395,13 @@
     ]
   },
   {
-    "id": "hero-caraousel-item",
+    "id": "hero-carousel-item",
     "fields": [
       {
         "component": "select",
         "name": "col1_mediaType",
         "label": "Media Type",
+        "valueType": "string",
         "options": [
           {
             "label": "Image",
@@ -416,6 +417,7 @@
         "component": "file",
         "name": "col1_image",
         "label": "Image",
+        "valueType": "string",
         "showIf": {
           "field": "col1_mediaType",
           "equals": "image"
@@ -425,6 +427,7 @@
         "component": "file",
         "name": "col1_video",
         "label": "Video",
+        "valueType": "string",
         "showIf": {
           "field": "col1_mediaType",
           "equals": "video"
@@ -433,12 +436,14 @@
       {
         "component": "text",
         "name": "col2_ctaText",
-        "label": "CTA Text"
+        "label": "CTA Text",
+        "valueType": "string"
       },
       {
         "component": "text",
         "name": "col2_ctaLink",
-        "label": "CTA Link"
+        "label": "CTA Link",
+        "valueType": "string"
       }
     ]
   },

@@ -78,9 +78,9 @@
     ]
   },
   {
-    "id": "hero-caraousel",
+    "id": "hero-carousel",
     "components": [
-      "hero-caraousel-item"
+      "hero-carousel-item"
     ]
   },
   {
