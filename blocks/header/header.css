@@ -263,6 +263,10 @@ header nav .nav-sections ul > li > ul > li {
 }
 
 /* tools */
-header nav .nav-tools {
+header nav ,.nav-tools {
   grid-area: tools;
+}
+.nav-tools div{
+  display: flex;
+  gap: 16px;
 }
