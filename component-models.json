@@ -398,7 +398,7 @@
     "id": "hero-carousel-item",
     "fields": [
       {
-        "component": "select",
+        "component": "multiselect",
         "name": "classes",
         "label": "Style",
         "options": [
@@ -413,9 +413,9 @@
         ]
       },
       {
-        "component": "reference",
-        "name": "col1_mediaType",
-        "label": "Image",
+        "component": "text",
+        "name": "col1_media",
+        "label": "Image / Video URL",
         "valueType": "string"
       },
       {
