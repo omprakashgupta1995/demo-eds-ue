@@ -18,7 +18,7 @@ header nav {
   max-width: 1248px;
   height: var(--nav-height);
   padding: 0 24px;
-  font-family: var(--body-font-family);
+  font-family: var(--hero-font-family);
 }
 
 header nav[aria-expanded='true'] {
@@ -190,6 +190,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav[aria-expanded='true'] .nav-sections {
     align-self: unset;
+    
   }
 
   header nav .nav-sections .nav-drop {
@@ -220,6 +221,8 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 24px;
     margin: 0;
   }
