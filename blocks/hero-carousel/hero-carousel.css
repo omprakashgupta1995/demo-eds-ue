@@ -11,6 +11,7 @@ main > .section > .hero-carousel-wrapper {
     margin: 0;
 }
 .hero-carousel-wrapper{
+    position: relative;
     width: 100%;
     
 }
@@ -21,12 +22,12 @@ main > .section > .hero-carousel-wrapper {
     width: 100%;
     min-height: 600px;
 }
-.swiper-slide img{
+.hero-carousel-image{
     width: 100%;
-    min-height: 600px;
+    height: auto;
     display: block;
 }
-.swiper-slide video{
+.hero-carousel-video{
     width: 100%;
    min-height: 550px;
     display: block;
@@ -34,4 +35,26 @@ main > .section > .hero-carousel-wrapper {
 main > .section > div {
    width: 100%;
    max-width: max-content;
+}
+.hero-thumbs-swiper{
+    position: absolute;
+    width: 50%;
+    bottom: 200px;
+    right: 10px;
+}
+.thumbs-swiper-wrapper{
+    display: flex;
+    align-items: flex-end;
+    /* width: 50%; */
+    gap: 20px;
+    
+}
+.hero-thumb-swiper-slide{
+  width: 160px;      /* MUST be defined */
+  flex-shrink: 0;
+   cursor: pointer;
+}
+.hero-thumb-image{
+  
+    object-fit: cover;
 }
