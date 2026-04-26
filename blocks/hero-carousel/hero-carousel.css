@@ -42,7 +42,7 @@ main > .section > div {
 .hero-thumbs-swiper{
     position: absolute;
     width: 50%;
-    bottom: 200px;
+    bottom: 150px;
     right: 10px;
     z-index: 3;
 }
