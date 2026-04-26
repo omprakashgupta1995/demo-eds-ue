@@ -19,13 +19,13 @@
 }
 .hero-carousel-image{
     width: 100%;
-    height: 110vh;
+    height: 120vh;
     display: block;
     object-fit: cover;
 }
 .hero-carousel-video{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     display: block;
 }
 main > .section > div {
