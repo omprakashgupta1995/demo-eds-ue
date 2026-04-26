@@ -48,7 +48,6 @@ export default async function decorate(block) {
     if (type === 'image') {
       mediaElement = document.createElement('img');
       mediaElement.src = url;
-      mediaElement.loading = 'lazy'; // ✅ perf boost
       mediaElement.classList.add('hero-carousel-image');
     } else if (type === 'video') {
       mediaElement = document.createElement('video');

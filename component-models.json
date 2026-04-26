@@ -398,7 +398,7 @@
     "id": "hero-carousel-item",
     "fields": [
       {
-        "component": "text",
+        "component": "reference",
         "name": "col1_media",
         "label": "Image / Video URL",
         "valueType": "string"
