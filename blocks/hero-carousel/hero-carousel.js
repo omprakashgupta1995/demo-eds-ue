@@ -58,7 +58,14 @@ export default async function decorate(block) {
     rows.map(async (row) => {
       row.classList.add("hero-carousel-slide", "swiper-slide");
 
-      const wrapper = row.children[0];
+      const wrapper = row.children?.[0];
+      const ctaWrapper = row.children?.[1];
+      ctaWrapper.classList.add('ctaWrapper');
+      if(ctaWrapper.querySelector('p')){
+          let ctaButton =ctaWrapper?.children?.[0];
+          ctaButton.classList.add('cta-button');
+      }
+      
       const thumbnailNode = row.children?.[2]; // your 3rd column
       const thumbNail_img = thumbnailNode?.querySelector("img");
       if (thumbNail_img) {

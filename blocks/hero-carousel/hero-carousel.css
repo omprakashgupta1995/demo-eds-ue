@@ -15,6 +15,7 @@
     width: 100%;
 }
 .hero-carousel-slide{
+    
     width: 100%;
 }
 .slide-image-wrapper{
@@ -59,4 +60,29 @@ main > .section > div {
 }
 .hero-thumb-image{
     object-fit: cover;
+}
+.ctaWrapper {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 0; /* Always good practice to define top/left for absolute 100% wrappers */
+    left: 0;
+    pointer-events: none; /* Let swipes and clicks pass through the invisible wrapper */
+}
+.cta-button{
+    color:white;
+    font-family: var(--hero-font-family);
+    border: 1px solid white;
+    background: none;
+    padding: 10px 80px;
+
+}
+
+/* Assuming your actual button/link inside has a class like .cta-button */
+.ctaWrapper .cta-button {
+    pointer-events: auto; /* Make the actual button clickable again */
 }
