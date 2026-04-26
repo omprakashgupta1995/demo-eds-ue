@@ -1,4 +1,17 @@
 import swiper from "./swiper.min.js";
+function resolveDamUrl(path) {
+  try {
+    const url = new URL(path, window.location.origin);
+
+    // Only keep the DAM path
+    if (url.pathname.startsWith('/content/dam')) {
+      return `https://author-p48457-e1275402.adobeaemcloud.com${url.pathname}`;
+    }
+    return path;
+  } catch (e) {
+    return path;
+  }
+}
 
 async function getMediaTypeFromUrl(url) {
   try {
@@ -39,8 +52,8 @@ export default async function decorate(block) {
     const anchor = wrapper.querySelector('a');
     if (!anchor) return;
 
-    const url = anchor.href;
-
+    const url = resolveDamUrl(anchor.href);
+    console.log('Resolved media URL:', url);
     const type = await getMediaTypeFromUrl(url);
 
     let mediaElement;
@@ -60,8 +73,9 @@ export default async function decorate(block) {
     } else {
       return;
     }
-
-    anchor.replaceWith(mediaElement);
+    anchor.parentNode.insertBefore(mediaElement, anchor);
+    anchor.remove();
+    // anchor.replaceWith(mediaElement);
   }));
 
   // 🔥 init swiper after DOM is ready
