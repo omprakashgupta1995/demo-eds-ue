@@ -66,6 +66,12 @@
     ]
   },
   {
+    "id": "hero-carousel",
+    "components": [
+      "hero-carousel-item"
+    ]
+  },
+  {
     "id": "list",
     "components": [
       "list-item"

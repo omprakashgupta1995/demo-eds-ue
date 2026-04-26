@@ -361,6 +361,83 @@
     ]
   },
   {
+    "id": "hero-carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Carousel",
+            "value": "carousel"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hero-carousel-item",
+    "fields": [
+      {
+        "component": "image",
+        "valueType": "string",
+        "name": "col1_backgroundImage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_bgImageAlt",
+        "label": "Background Image Alt",
+        "value": ""
+      },
+      {
+        "component": "video",
+        "valueType": "string",
+        "name": "col1_backgroundVideo",
+        "label": "Background Video",
+        "multi": false
+      },
+      {
+        "component": "image",
+        "valueType": "string",
+        "name": "col1_thumbnailImage",
+        "label": "Thumbnail Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_thumbnailAlt",
+        "label": "Thumbnail Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_centerText",
+        "label": "Center Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_linkUrl",
+        "label": "Text Link",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
