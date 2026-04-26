@@ -5,11 +5,7 @@
     }
 }
 
-/* You might also want to remove the base 24px padding for mobile */
-main > .section > .hero-carousel-wrapper {
-    padding: 0; 
-    margin: 0;
-}
+
 .hero-carousel-wrapper{
     position: relative;
     width: 100%;
@@ -20,16 +16,17 @@ main > .section > .hero-carousel-wrapper {
 }
 .hero-carousel-slide{
     width: 100%;
-    min-height: 600px;
 }
 .hero-carousel-image{
     width: 100%;
-    height: auto;
+    height: 100vh;
     display: block;
+    object-fit: cover;
 }
 .hero-carousel-video{
     width: 100%;
-   min-height: 550px;
+    
+    height: 100vh;
     display: block;
 }
 main > .section > div {
@@ -41,6 +38,7 @@ main > .section > div {
     width: 50%;
     bottom: 200px;
     right: 10px;
+    z-index: 3;
 }
 .thumbs-swiper-wrapper{
     display: flex;
@@ -55,6 +53,5 @@ main > .section > div {
    cursor: pointer;
 }
 .hero-thumb-image{
-  
     object-fit: cover;
 }

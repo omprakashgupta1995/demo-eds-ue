@@ -274,3 +274,8 @@ header nav ,.nav-tools {
   gap: 16px;
   padding: 2px;
 }
+.icon-flag{
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 0 10px;
+}
