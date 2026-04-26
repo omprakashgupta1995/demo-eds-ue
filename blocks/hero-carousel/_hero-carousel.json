@@ -40,7 +40,7 @@
         {
           "component": "reference",
           "name": "col1_media",
-          "label": "Image / Video URL",
+          "label": "Image / Video ",
           "valueType": "string"
         },
         {
@@ -59,6 +59,11 @@
           "component": "text",
           "name": "col2_ctaLink",
           "label": "CTA Link",
+          "valueType": "string"
+        },{
+          "component":"reference",
+          "name":"col3_thumbnailImage",
+          "label": "Thumbnail Image",
           "valueType": "string"
         }
       ]
