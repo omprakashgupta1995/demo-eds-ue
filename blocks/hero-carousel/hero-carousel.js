@@ -1,0 +1,75 @@
+import swiper from "./swiper.min.js";
+
+async function getMediaTypeFromUrl(url) {
+  try {
+    const response = await fetch(url, { method: 'HEAD' });
+    const contentType = response.headers.get('content-type');
+
+    if (contentType?.startsWith('image/')) return 'image';
+    if (contentType?.startsWith('video/')) return 'video';
+  } catch (e) {
+    // silent fail → fallback below
+  }
+
+  // 🔥 fallback to extension check
+  const ext = url.split('.').pop().toLowerCase().split('?')[0];
+  if (['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(ext)) return 'image';
+  if (['mp4', 'webm', 'ogg', 'mov'].includes(ext)) return 'video';
+
+  return 'unknown';
+}
+
+export default async function decorate(block) {
+  const rows = [...block.children];
+  if (!rows.length) return;
+
+  block.parentElement.classList.add('swiper');
+  const blockParent = block.parentElement;
+  block.classList.add('swiper-wrapper');
+
+  // 🔥 process all rows in parallel
+  await Promise.all(rows.map(async (row) => {
+    row.classList.add('hero-carousel-slide', 'swiper-slide');
+
+    const wrapper = row.children[0];
+    if (!wrapper) return;
+
+    wrapper.classList.add('slide-image-wrapper');
+
+    const anchor = wrapper.querySelector('a');
+    if (!anchor) return;
+
+    const url = anchor.href;
+
+    const type = await getMediaTypeFromUrl(url);
+
+    let mediaElement;
+
+    if (type === 'image') {
+      mediaElement = document.createElement('img');
+      mediaElement.src = url;
+      mediaElement.loading = 'lazy'; // ✅ perf boost
+      mediaElement.classList.add('hero-carousel-image');
+    } else if (type === 'video') {
+      mediaElement = document.createElement('video');
+      mediaElement.src = url;
+      mediaElement.classList.add('hero-carousel-video');
+      mediaElement.autoplay = true;
+      mediaElement.loop = true;
+      mediaElement.muted = true;
+      mediaElement.playsInline = true;
+    } else {
+      return;
+    }
+
+    anchor.replaceWith(mediaElement);
+  }));
+
+  // 🔥 init swiper after DOM is ready
+  swiper(blockParent, {
+    loop: true,
+    autoplay: {
+      delay: 10000,
+    },
+  });
+}
