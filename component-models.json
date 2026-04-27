@@ -161,6 +161,17 @@
     "id": "cardv3-item-1",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Cut Corner",
+            "value": "cut-corner-card"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "col1_image",
@@ -192,6 +203,17 @@
   {
     "id": "cardv3-item-2",
     "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Cut Corner",
+            "value": "cut-corner-card"
+          }
+        ]
+      },
       {
         "component": "reference",
         "valueType": "string",
