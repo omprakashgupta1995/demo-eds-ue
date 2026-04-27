@@ -55,7 +55,8 @@
         "teaser",
         "cardsp",
         "download-banner",
-        "contact-details"
+        "contact-details" ,
+        "hero-carousel"
       ]
     }
   ]

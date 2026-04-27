@@ -1,0 +1,61 @@
+{
+  "definitions": [
+    {
+      "title": "Hero Carousel",
+      "id": "hero-carousel",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Hero Carousel",
+              "model": "hero-carousel"
+            }
+          }
+        }
+      }
+    }
+  ],
+    "models": [
+    {
+      "id": "hero-carousel",
+      "fields": [
+        {
+          "component": "select",
+          "name": "type",
+          "label": "Slide Type",
+          "options": [
+            { "name": "Image", "value": "image" },
+            { "name": "Video", "value": "video" }
+          ]
+        },
+        {
+          "component": "image",
+          "name": "thumbnail",
+          "label": "Thumbnail (for preview)"
+        },
+        {
+          "component": "image",
+          "name": "image",
+          "label": "Image (for image slide)"
+        },
+        {
+          "component": "text",
+          "name": "videoUrl",
+          "label": "Video URL"
+        },
+        {
+          "component": "text",
+          "name": "ctaText",
+          "label": "Button Text"
+        },
+        {
+          "component": "text",
+          "name": "ctaLink",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
