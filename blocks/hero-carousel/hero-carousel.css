@@ -1,0 +1,111 @@
+@import url(swiper.min.css);
+
+/* 1. Make the Carousel Full Screen */
+.hero-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Forces full screen height */
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    height: 100% !important;
+}
+
+/* 2. Slide Layout (Flexbox to center text) */
+.swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100% !important;
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+}
+
+/* 3. Background Image/Video (Pinned & Covering) */
+.hero-bg-col {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-col picture,
+.hero-bg-col img,
+.hero-bg-col video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the image/video fill the screen perfectly */
+    display: block;
+    margin: 0;
+}
+
+/* 4. Center Text Styling */
+.hero-content-col {
+    position: relative;
+    z-index: 2; /* Keeps text above the background */
+}
+
+.hero-content-col p {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Helps text stand out */
+}
+
+/* 5. Pinned Thumbnails (Bottom Right) */
+.hero-thumbnails-container {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 10; /* Keeps thumbnails above everything */
+    display: flex;
+    gap: 15px; /* Space between the 4 thumbnails */
+}
+
+/* 6. Individual Thumbnail Styling */
+.hero-thumb-btn {
+    width: 120px;
+    height: 75px;
+    position: relative;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: #000;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.hero-thumb-btn.active {
+    border-color: #ffffff; /* Highlights the active thumbnail */
+}
+
+.hero-thumb-btn picture,
+.hero-thumb-btn img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 7. Pagination Text (1/4) */
+.hero-pagination {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 10;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
