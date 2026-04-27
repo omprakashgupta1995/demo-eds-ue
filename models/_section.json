@@ -58,7 +58,8 @@
         "contact-card",
         "download-banner",
         "address-card",
-        "list"
+        "list",
+        "hero-carousel"
       ]
     }
   ]
