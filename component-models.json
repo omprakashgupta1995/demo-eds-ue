@@ -248,61 +248,6 @@
     ]
   },
   {
-    "id": "carouselv2-item",
-    "fields": [
-      {
-        "component": "select",
-        "name": "mediaType",
-        "label": "Media Type",
-        "options": [
-          {
-            "name": "Image",
-            "value": "image"
-          },
-          {
-            "name": "Video",
-            "value": "video"
-          }
-        ]
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "videoUrl",
-        "label": "Video URL (MP4 / YouTube embed)"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "thumbnail",
-        "label": "Thumbnail (for pagination / preview)"
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "label": "Text"
-      }
-    ]
-  },
-  {
     "id": "columns",
     "fields": [
       {
@@ -407,6 +352,106 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero-item-1",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "col1_style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Image",
+            "value": "Image"
+          },
+          {
+            "name": "Video",
+            "value": "Video"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_mob-image",
+        "label": "Mobile Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_mob-imageAlt",
+        "label": "Mobile Image Alt"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Image Alt"
+      }
+    ]
+  },
+  {
+    "id": "hero-item-2",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "col1_style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Image",
+            "value": "Image"
+          },
+          {
+            "name": "Video",
+            "value": "Video"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_video",
+        "label": "Video"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_thumbnail",
+        "label": "Thumbnail Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_thumbnailAlt",
+        "label": "Thumbnail Image Alt"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "col2_link",
+        "label": "Select Page"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_linkText",
+        "label": "Link Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_linkTitle",
+        "label": "Link Title"
       }
     ]
   },

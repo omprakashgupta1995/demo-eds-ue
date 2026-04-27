@@ -1,4 +1,4 @@
-import swiper from "../shared/swiper.min.js";
+import swiper from "./swiper.min.js";
 
 export default function decorate(block) {
     block.parentElement.classList.add("swiper");

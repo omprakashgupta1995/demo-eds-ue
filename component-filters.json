@@ -51,12 +51,6 @@
     ]
   },
   {
-    "id": "carouselv2",
-    "components": [
-      "carouselv2-item"
-    ]
-  },
-  {
     "id": "columns",
     "components": [
       "column"
@@ -75,6 +69,13 @@
     "id": "contact-cards",
     "components": [
       "contact-cards-item"
+    ]
+  },
+  {
+    "id": "hero-1",
+    "components": [
+      "hero-item-1",
+      "hero-item-2"
     ]
   },
   {

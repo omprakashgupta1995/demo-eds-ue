@@ -34,7 +34,7 @@
     "models": [
         {
             "id": "contact-cards-item",
-            "fields": [
+            "fields": [ 
                 {
                     "component": "reference",
                     "valueType": "string",
