@@ -45,5 +45,12 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "hero-1",
+    "components": [
+      "hero-item-1",
+      "hero-item-2"
+    ]
   }
 ]
