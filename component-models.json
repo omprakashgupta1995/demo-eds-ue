@@ -382,21 +382,21 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_bgImage",
+        "name": "col1_bgimage",
         "label": "Background Image/Video",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_bgImageAlt",
+        "name": "col1_bgimageAlt",
         "label": "Background Image Alt",
         "value": ""
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_thumbnailImage",
+        "name": "col1_thumbnail",
         "label": "Thumbnail Image",
         "multi": false
       },
