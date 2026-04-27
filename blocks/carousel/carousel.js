@@ -1,4 +1,4 @@
-import swiper from "./swiper.min.js";
+import swiper from "../shared/swiper.min.js";
 
 export default function decorate(block) {
     block.parentElement.classList.add("swiper");
@@ -15,9 +15,9 @@ export default function decorate(block) {
         pagination: {
             el: ".swiper-pagination",
         },
-        autoplay:{
-            delay:3000,
-        }
+        // autoplay:{
+        //     delay:3000,
+        // }
     });
 }
 

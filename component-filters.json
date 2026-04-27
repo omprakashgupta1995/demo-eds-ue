@@ -50,6 +50,12 @@
     ]
   },
   {
+    "id": "carouselv2",
+    "components": [
+      "carouselv2-item"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
