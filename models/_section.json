@@ -57,7 +57,8 @@
         "download-banner",
         "info-block",
         "menu-list",
-        "nav-icons"
+        "nav-icons",
+        "carouselv2"
       ]
     }
   ]
