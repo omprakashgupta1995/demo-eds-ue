@@ -56,7 +56,7 @@
           "component": "reference",
           "valueType": "string",
           "name": "col1_backgroundImage",
-          "label": "Background Image",
+          "label": "Background Image/Video",
           "multi": false
         },
         {
@@ -65,13 +65,6 @@
           "name": "col1_bgImageAlt",
           "label": "Background Image Alt",
           "value": ""
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "col1_backgroundVideo",
-          "label": "Background Video",
-          "multi": false
         },
         {
           "component": "reference",
@@ -90,7 +83,7 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "col2_centerText",
+          "name": "col2_Text",
           "label": "Center Text",
           "value": ""
         },
@@ -100,13 +93,6 @@
           "name": "col2_linkUrl",
           "label": "Text Link",
           "value": ""
-        },
-        {
-          "component": "richtext",
-          "name": "col2_description",
-          "value": "",
-          "label": "Description",
-          "valueType": "string"
         }
       ]
     }
