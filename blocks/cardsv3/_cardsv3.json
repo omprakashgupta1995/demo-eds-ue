@@ -52,7 +52,7 @@
       "fields": [
          {
           "component": "multiselect",
-          "name": "classes",
+          "name": "style",
           "label": "Style",
           "options": [
             {
@@ -95,7 +95,7 @@
       "fields": [
          {
           "component": "multiselect",
-          "name": "classes",
+          "name": "style",
           "label": "Style",
           "options": [
             {
@@ -114,7 +114,7 @@
           "component": "text",
           "name": "col1_imageAlt",
           "value": "",
-          "label": "Text",
+          "label": "Image Alt",
           "valueType": "string"
         },
         {
