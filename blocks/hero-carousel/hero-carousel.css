@@ -54,10 +54,10 @@
 .hero-content-col p {
     font-size: 2rem;
     font-weight: bold;
-    color: red;
+    color: white;
     margin: 0;
-    padding: 2px 32px;
-    border: 2px solid red;
+    padding: 0 60px;
+    border: 2px solid white;
 }
 
 /* 5. Pinned Thumbnails (Bottom Right) */
