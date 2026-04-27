@@ -75,9 +75,7 @@
     height: 75px;
     position: relative;
     padding: 0;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    background: #000;
+    border-radius: 0;
     cursor: pointer;
     overflow: hidden;
     transition: border-color 0.3s ease;
