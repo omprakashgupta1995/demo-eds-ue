@@ -337,9 +337,20 @@
     "id": "hero-carousel",
     "fields": [
       {
+        "component": "container",
+        "name": "slides",
+        "label": "Slides",
+        "model": "hero-carousel-item"
+      }
+    ]
+  },
+  {
+    "id": "hero-carousel-item",
+    "fields": [
+      {
         "component": "select",
-        "name": "type",
-        "label": "Slide Type",
+        "name": "mediaType",
+        "label": "Media Type",
         "options": [
           {
             "name": "Image",
@@ -353,13 +364,8 @@
       },
       {
         "component": "image",
-        "name": "thumbnail",
-        "label": "Thumbnail (for preview)"
-      },
-      {
-        "component": "image",
-        "name": "image",
-        "label": "Image (for image slide)"
+        "name": "backgroundImage",
+        "label": "Background Image"
       },
       {
         "component": "text",
@@ -367,14 +373,24 @@
         "label": "Video URL"
       },
       {
+        "component": "image",
+        "name": "thumbnail",
+        "label": "Thumbnail"
+      },
+      {
+        "component": "text",
+        "name": "altText",
+        "label": "Alt Text"
+      },
+      {
         "component": "text",
         "name": "ctaText",
-        "label": "Button Text"
+        "label": "CTA Text"
       },
       {
         "component": "text",
         "name": "ctaLink",
-        "label": "Button Link"
+        "label": "CTA Link"
       }
     ]
   },
