@@ -334,68 +334,6 @@
     ]
   },
   {
-    "id": "hero-carousel",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Carousel",
-            "value": "carousel"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "hero-carousel-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col1_bgimage",
-        "label": "Background Image/Video"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_bgimageAlt",
-        "label": "Background Image Alt",
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col1_thumbnail",
-        "label": "Thumbnail Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col1_thumbnailAlt",
-        "label": "Thumbnail Alt",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col2_Text",
-        "label": "Center Text",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col2_linkUrl",
-        "label": "Text Link",
-        "value": ""
-      }
-    ]
-  },
-  {
     "id": "hero",
     "fields": [
       {
