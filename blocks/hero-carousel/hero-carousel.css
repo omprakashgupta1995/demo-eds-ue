@@ -67,13 +67,14 @@ main > .section > div {
 }
 .hero-carousel-container .hero-carousel-wrapper .hero-thumbs-swiper .thumbs-swiper-wrapper .hero-thumb-swiper-slide{
   width: 160px;      /* MUST be defined */
-  flex-shrink: 0;
+  height: 100px;  
    cursor: pointer;
 }
 .hero-carousel-container .hero-carousel-wrapper .hero-thumbs-swiper .thumbs-swiper-wrapper .hero-thumb-swiper-slide .hero-thumb-image{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    display: block;
+    object-fit: fill;
 }
 .ctaWrapper {
     position: absolute;
