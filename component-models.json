@@ -334,63 +334,42 @@
     ]
   },
   {
-    "id": "hero-carousel",
-    "fields": [
-      {
-        "component": "container",
-        "name": "slides",
-        "label": "Slides",
-        "model": "hero-carousel-item"
-      }
-    ]
-  },
-  {
     "id": "hero-carousel-item",
     "fields": [
       {
-        "component": "select",
-        "name": "mediaType",
-        "label": "Media Type",
-        "options": [
-          {
-            "name": "Image",
-            "value": "image"
-          },
-          {
-            "name": "Video",
-            "value": "video"
-          }
-        ]
-      },
-      {
-        "component": "image",
-        "name": "backgroundImage",
-        "label": "Background Image"
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image / Video",
+        "multi": false
       },
       {
         "component": "text",
-        "name": "videoUrl",
-        "label": "Video URL"
+        "name": "col1_imageAlt",
+        "value": "",
+        "label": "Image / Video Alt text",
+        "valueType": "string"
       },
       {
-        "component": "image",
-        "name": "thumbnail",
-        "label": "Thumbnail"
-      },
-      {
-        "component": "text",
-        "name": "altText",
-        "label": "Alt Text"
-      },
-      {
-        "component": "text",
-        "name": "ctaText",
-        "label": "CTA Text"
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Thumbnail",
+        "multi": false
       },
       {
         "component": "text",
-        "name": "ctaLink",
-        "label": "CTA Link"
+        "name": "col2_linktext",
+        "value": "",
+        "label": "Link Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_link",
+        "value": "",
+        "label": "Link",
+        "valueType": "string"
       }
     ]
   },

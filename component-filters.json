@@ -62,5 +62,11 @@
     "components": [
       "contact-section"
     ]
+  },
+  {
+    "id": "hero-carousel",
+    "components": [
+      "hero-carousel-item"
+    ]
   }
 ]
