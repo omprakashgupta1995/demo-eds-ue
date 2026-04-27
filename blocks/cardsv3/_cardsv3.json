@@ -31,7 +31,7 @@
       }
     },
     {
-      "title": "Card V3 (With Description)",
+      "title": "Card V3 - With Description",
       "id": "cardv3-item-2",
       "plugins": {
         "xwalk": {
@@ -71,7 +71,7 @@
           "component": "text",
           "name": "col1_imageAlt",
           "value": "",
-          "label": "Text",
+          "label": "Image Alt",
           "valueType": "string"
         },
         {

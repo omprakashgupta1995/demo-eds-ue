@@ -174,7 +174,7 @@
           }
         },
         {
-          "title": "Card V3 (With Description)",
+          "title": "Card V3 - With Description",
           "id": "cardv3-item-2",
           "plugins": {
             "xwalk": {
