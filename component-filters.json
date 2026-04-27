@@ -23,6 +23,7 @@
       "content-block",
       "menu-list",
       "hero-carousel",
+      "cardsv3",
       "fragment"
     ]
   },
@@ -36,6 +37,13 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "cardsv3",
+    "components": [
+      "cardv3-item-1",
+      "cardv3-item-2"
     ]
   },
   {

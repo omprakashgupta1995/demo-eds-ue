@@ -158,6 +158,77 @@
     ]
   },
   {
+    "id": "cardv3-item-1",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "label": "Card Title",
+        "value": "",
+        "valueType": "string",
+        "name": "col1_title"
+      },
+      {
+        "component": "richtext",
+        "label": "Card CTA",
+        "value": "",
+        "valueType": "string",
+        "name": "col2_ctaText"
+      }
+    ]
+  },
+  {
+    "id": "cardv3-item-2",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "label": "Card Title",
+        "value": "",
+        "valueType": "string",
+        "name": "col1_title"
+      },
+      {
+        "component": "richtext",
+        "label": "Card Description",
+        "value": "",
+        "valueType": "string",
+        "name": "col1_description"
+      },
+      {
+        "component": "richtext",
+        "label": "Card CTA",
+        "value": "",
+        "valueType": "string",
+        "name": "col2_ctaText"
+      }
+    ]
+  },
+  {
     "id": "cardsv2",
     "fields": [
       {

@@ -6,7 +6,7 @@ function resolveDamUrl(path) {
     // Only keep the DAM path
     if (url.pathname.startsWith("/content/dam")) {
       
-      return `https://author-p48457-e1275402.adobeaemcloud.com${url.pathname}`;
+      return `https://publish-p48457-e1275402.adobeaemcloud.com${url.pathname}`;
      
     }
     return path;
