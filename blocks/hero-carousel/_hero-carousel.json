@@ -55,7 +55,7 @@
         {
           "component": "reference",
           "valueType": "string",
-          "name": "col1_backgroundImage",
+          "name": "col1_bgImage",
           "label": "Background Image/Video",
           "multi": false
         },
