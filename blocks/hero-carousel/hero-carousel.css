@@ -57,7 +57,7 @@ main > .section > div {
     width: 50%;
     bottom: 150px;
     right: 10px;
-    z-index: 3;
+    z-index: 5;
 }
 .hero-carousel-container .hero-carousel-wrapper .hero-thumbs-swiper .thumbs-swiper-wrapper{
     display: flex;
