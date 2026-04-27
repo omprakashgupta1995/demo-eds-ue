@@ -380,7 +380,7 @@
     "id": "hero-carousel-item",
     "fields": [
       {
-        "component": "image",
+        "component": "reference",
         "valueType": "string",
         "name": "col1_backgroundImage",
         "label": "Background Image",
@@ -394,14 +394,14 @@
         "value": ""
       },
       {
-        "component": "video",
+        "component": "reference",
         "valueType": "string",
         "name": "col1_backgroundVideo",
         "label": "Background Video",
         "multi": false
       },
       {
-        "component": "image",
+        "component": "reference",
         "valueType": "string",
         "name": "col1_thumbnailImage",
         "label": "Thumbnail Image",
