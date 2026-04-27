@@ -10,7 +10,7 @@
             "template": {
               "name": "Hero Carousel",
               "model": "hero-carousel",
-            "filter": "hero-carousel"
+              "filter": "hero-carousel"
             }
           }
         }
@@ -32,16 +32,20 @@
       }
     }
   ],
-
   "models": [
     {
       "id": "hero-carousel",
       "fields": [
         {
-          "component": "container",
-          "name": "items",
-          "label": "Slides",
-          "model": "hero-carousel-item"
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Carousel",
+              "value": "carousel"
+            }
+          ]
         }
       ]
     },
@@ -50,36 +54,53 @@
       "fields": [
         {
           "component": "reference",
-          "name": "media",
-          "label": "Image / Video"
+          "valueType": "string",
+          "name": "col1_bgimage",
+          "label": "Background Image/Video",
+          "multi": false
         },
         {
           "component": "text",
-          "name": "mediaAlt",
-          "label": "Alt text"
+          "valueType": "string",
+          "name": "col1_bgimageAlt",
+          "label": "Background Image Alt",
+          "value": ""
         },
         {
           "component": "reference",
-          "name": "thumbnail",
-          "label": "Thumbnail"
+          "valueType": "string",
+          "name": "col1_thumbnail",
+          "label": "Thumbnail Image",
+          "multi": false
         },
         {
           "component": "text",
-          "name": "ctaText",
-          "label": "CTA Text"
+          "valueType": "string",
+          "name": "col1_thumbnailAlt",
+          "label": "Thumbnail Alt",
+          "value": ""
         },
         {
           "component": "text",
-          "name": "ctaLink",
-          "label": "CTA Link"
+          "valueType": "string",
+          "name": "col2_Text",
+          "label": "Center Text",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "col2_linkUrl",
+          "label": "Text Link",
+          "value": ""
         }
       ]
     }
   ],
   "filters": [
-  {
-    "id": "hero-carousel",
-    "components": ["hero-carousel-item"]
-  }
-]
+    {
+      "id": "hero-carousel",
+      "components": ["hero-carousel-item"]
+    }
+  ]
 }
