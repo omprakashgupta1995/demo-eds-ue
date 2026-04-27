@@ -15,7 +15,7 @@ header nav {
   align-items: center;
   gap: 0 24px;
   margin: auto;
-  max-width: 1248px;
+  /* max-width: 1248px; */
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
@@ -35,7 +35,7 @@ header nav[aria-expanded='true'] {
     display: flex;
     justify-content: space-between;
     gap: 0 32px;
-    max-width: 1264px;
+    /* max-width: 1264px; */
     padding: 0 32px;
   }
 
@@ -127,6 +127,14 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   bottom: 3px;
   transform: rotate(-45deg);
 }
+.nav-brand img{
+  width: 50px;
+}
+.default-content-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 @media (width >= 900px) {
   header nav .nav-hamburger {
@@ -145,14 +153,13 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 100px;
   height: auto;
 }
 
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
-  flex: 1 1 auto;
   display: none;
   visibility: hidden;
 }

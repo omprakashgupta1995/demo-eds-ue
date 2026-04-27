@@ -118,6 +118,106 @@
     ]
   },
   {
+    "id": "hero-item-1",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "col1_style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Image",
+            "value": "Image"
+          },
+          {
+            "name": "Video",
+            "value": "Video"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_mob-image",
+        "label": "Mobile Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_mob-imageAlt",
+        "label": "Mobile Image Alt"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Image Alt"
+      }
+    ]
+  },
+  {
+    "id": "hero-item-2",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "col1_style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Image",
+            "value": "Image"
+          },
+          {
+            "name": "Video",
+            "value": "Video"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_video",
+        "label": "Video"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_thumbnail",
+        "label": "Thumbnail Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_thumbnailAlt",
+        "label": "Thumbnail Image Alt"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "col2_link",
+        "label": "Select Page"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_linkText",
+        "label": "Link Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_linkTitle",
+        "label": "Link Title"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
