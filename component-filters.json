@@ -21,7 +21,8 @@
       "cardsp",
       "download-banner",
       "contact-details",
-      "hero-1"
+      "hero-1",
+      "help-card"
     ]
   },
   {
@@ -61,6 +62,18 @@
     "id": "contact-details",
     "components": [
       "contact-section"
+    ]
+  },
+  {
+    "id": "help-cards",
+    "components": [
+      "help-card"
+    ]
+  },
+  {
+    "id": "help",
+    "components": [
+      "help-card"
     ]
   },
   {
