@@ -88,12 +88,14 @@ export default async function decorate(block) {
     }
 
     // CTA BUTTON
+    if (type === 'Video') {
     const btn = document.createElement('a');
     btn.className = 'cta';
     btn.textContent = 'EXPLORE NOW';
     btn.href = '#';
 
     slide.appendChild(btn);
+  }
 
     wrapper.appendChild(slide);
 

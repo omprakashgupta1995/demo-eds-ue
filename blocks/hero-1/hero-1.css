@@ -5,11 +5,18 @@
   width: 100%;
   height: 100%;
 }
+body.author .swiper {
+  height: auto;
+}
 .hero-1 {
   height: 100%;
 }
-.hero-1-wrapper{
-  height: 90vh;
+.hero-1-wrapper {
+  min-height: 500px; /* fallback for author */
+}
+
+body:not(.author) .hero-1-wrapper {
+  height: 91vh;
 }
 .hero-1-container{
   height: 100%;
