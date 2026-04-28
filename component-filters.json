@@ -34,6 +34,12 @@
     ]
   },
   {
+    "id": "card-1",
+    "components": [
+      "card-item"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
