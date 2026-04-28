@@ -38,20 +38,20 @@
         {
           "component": "reference",
           "valueType": "string",
-          "name": "image",
+          "name": "col1_image",
           "label": "Image",
           "multi": false
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "imageAlt",
+          "name": "col1_imageAlt",
           "label": "Image Alt",
           "multi": false
         },
         {
           "component": "richtext",
-          "name": "text",
+          "name": "col2_text",
           "value": "",
           "label": "Text",
           "valueType": "string"
