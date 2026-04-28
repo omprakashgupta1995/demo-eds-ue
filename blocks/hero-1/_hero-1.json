@@ -89,6 +89,18 @@
           "valueType": "string",
           "name": "col1_imageAlt",
           "label": "Image Alt"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col1_thumbnail",
+          "label": "Thumbnail Image"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "col1_thumbnailAlt",
+          "label": "Thumbnail Image Alt"
         }
       ]
     },
