@@ -74,6 +74,17 @@ export default async function decorate(block) {
     const slide = document.createElement('div');
     slide.className = 'swiper-slide';
 
+    // IMAGE
+    if (type === 'Image') {
+      const img = document.createElement('img');
+      img.src = mediaSrc;
+      img.alt = mediaEl.querySelector('img')?.alt || '';
+      img.loading = 'eager'; // hero image
+
+      slide.appendChild(img);
+    }
+
+    // VIDEO
     if (type === 'Video') {
       const video = document.createElement('video');
       video.src = mediaSrc;
@@ -83,19 +94,15 @@ export default async function decorate(block) {
       video.preload = 'none';
 
       slide.appendChild(video);
-    } else {
-      slide.style.backgroundImage = `url(${mediaSrc})`;
+
+      // CTA ONLY FOR VIDEO
+      const btn = document.createElement('a');
+      btn.className = 'cta';
+      btn.textContent = 'EXPLORE NOW';
+      btn.href = '#';
+
+      slide.appendChild(btn);
     }
-
-    // CTA BUTTON
-    if (type === 'Video') {
-    const btn = document.createElement('a');
-    btn.className = 'cta';
-    btn.textContent = 'EXPLORE NOW';
-    btn.href = '#';
-
-    slide.appendChild(btn);
-  }
 
     wrapper.appendChild(slide);
 

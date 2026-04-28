@@ -5,24 +5,25 @@
   width: 100%;
   height: 100%;
 }
-body.author .swiper {
-  height: auto;
-}
 .hero-1 {
   height: 100%;
 }
 .hero-1-wrapper {
   height: 500px;
-  min-height: 500px; /* fallback for author */
+  min-height: 500px; 
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 
-body:not(.author) .hero-1-wrapper {
-  height: 91vh;
-}
 .hero-1-container{
   height: 100%;
 }
 .swiper-slide{
+    position: relative;
+  overflow: hidden;
   background-size: cover;   
   background-position: center;
   background-repeat: no-repeat;
