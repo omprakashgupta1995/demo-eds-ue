@@ -114,8 +114,12 @@
             "value": "highlight"
           },
           {
-            "name": "Highlight2",
-            "value": "highlight2"
+            "name": "BackGround Black",
+            "value": "bg-black"
+          },
+          {
+            "name": "Background Edge",
+            "value": "bg-edge"
           }
         ]
       }
@@ -134,25 +138,6 @@
         "component": "richtext",
         "name": "col2_description",
         "label": "Description",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
         "valueType": "string"
       }
     ]
@@ -247,6 +232,25 @@
         "value": "",
         "valueType": "string",
         "name": "col2_ctaText"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },

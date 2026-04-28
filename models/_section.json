@@ -35,8 +35,11 @@
               "value": "highlight"
             },
             {
-              "name": "Highlight2",
-              "value": "highlight2"
+              "name": "BackGround Black",
+              "value": "bg-black"
+            },{
+              "name":"Background Edge",
+              "value":"bg-edge"
             }
           ]
         }

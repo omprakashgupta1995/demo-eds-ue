@@ -4,7 +4,6 @@
         padding: 0; /* Removes the 32px padding just for this block */
     }
 }
-
 .hero-carousel-container .hero-carousel-wrapper .hero-carousel .hero-carousel-slide .slide-image-wrapper .button-container{
     height: 100%;
     width: 100%;
@@ -41,7 +40,6 @@ main > .section {
     object-fit: cover;
 }
 .hero-carousel-container .hero-carousel-wrapper .hero-carousel .hero-carousel-slide .slide-image-wrapper .button-container .hero-carousel-video{
-    background-color: bisque;
     width: 100%; 
     height: 100%;
     display: block;
@@ -62,11 +60,10 @@ main > .section > div {
 .hero-carousel-container .hero-carousel-wrapper .hero-thumbs-swiper .thumbs-swiper-wrapper{
     display: flex;
     align-items: flex-end;
-    gap: 20px;
-    
+    gap: 20px;  
 }
 .hero-carousel-container .hero-carousel-wrapper .hero-thumbs-swiper .thumbs-swiper-wrapper .hero-thumb-swiper-slide{
-  width: 160px;      /* MUST be defined */
+  width: 160px; 
   height: 100px;  
    cursor: pointer;
 }
@@ -84,9 +81,9 @@ main > .section > div {
     width: 100%;
     justify-content: center;
     align-items: center;
-    top: 0; /* Always good practice to define top/left for absolute 100% wrappers */
+    top: 0; 
     left: 0;
-    pointer-events: none; /* Let swipes and clicks pass through the invisible wrapper */
+    pointer-events: none; 
 }
 .cta-button{
     color:white;
@@ -96,8 +93,6 @@ main > .section > div {
     padding: 10px 80px;
 
 }
-
-/* Assuming your actual button/link inside has a class like .cta-button */
 .ctaWrapper .cta-button {
     pointer-events: auto; /* Make the actual button clickable again */
 }
