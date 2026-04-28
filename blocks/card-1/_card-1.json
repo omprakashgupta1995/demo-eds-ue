@@ -40,7 +40,7 @@
           "component": "richtext",
           "valueType": "string",
           "name": "text",
-          "label": "Image"
+          "label": "Text"
         }
       ]
     },
