@@ -148,7 +148,6 @@ export default async function decorate(block) {
       t.classList.toggle('active', i === realIndex);
     });
   }
-
   swiper.on('slideChange', updateUI);
   updateUI();
 }
