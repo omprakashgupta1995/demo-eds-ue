@@ -157,6 +157,17 @@
     ]
   },
   {
+    "id": "card-1",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "label": "Image"
+      }
+    ]
+  },
+  {
     "id": "card-item",
     "fields": [
       {
