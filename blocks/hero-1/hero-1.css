@@ -1,11 +1,16 @@
 @import "./swiper-bundle.min.css";
 
 .swiper {
-    position: relative; 
+  position: relative; 
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
-
+.hero-1-wrapper{
+  height: 90vh;
+}
+.hero-1-container{
+  height: 100%;
+}
 .swiper-slide{
   background-size: cover;   
   background-position: center;
