@@ -15,6 +15,10 @@ export default function decorate(block) {
   slides.forEach((slide, index) => {
     slide.classList.add("swiper-slide");
 
+    // NEW: Create the wrapper you requested
+    const itemWrapper = document.createElement("div");
+    itemWrapper.classList.add("hero-carousel-item");
+
     const col1 = slide.children[0];
     const col2 = slide.children[1];
 
@@ -31,7 +35,14 @@ export default function decorate(block) {
     if (videoLink) {
       // It's a video background
       bgMedia = document.createElement("video");
-      bgMedia.src = videoLink.href;
+
+      // FIX: Use getAttribute to grab the relative path so it works on author, publish, and local
+      const relativePath = videoLink.getAttribute("href");
+      // Fallback to URL parsing just in case it's an absolute external URL
+      bgMedia.src = relativePath.startsWith("http")
+        ? new URL(relativePath).pathname
+        : relativePath;
+
       bgMedia.autoplay = true;
       bgMedia.loop = true;
       bgMedia.muted = true;
@@ -57,6 +68,11 @@ export default function decorate(block) {
     // 3. Clean up the background column so it ONLY contains the video/image
     col1.innerHTML = "";
     if (bgMedia) col1.appendChild(bgMedia);
+
+    // NEW: Append your columns into the item wrapper, then into the slide
+    itemWrapper.appendChild(col1);
+    if (col2) itemWrapper.appendChild(col2);
+    slide.appendChild(itemWrapper);
   });
 
   swiperContainer.appendChild(paginationEl);
