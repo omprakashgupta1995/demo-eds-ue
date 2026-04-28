@@ -25,13 +25,6 @@
     ]
   },
   {
-    "id": "hero-1",
-    "components": [
-      "hero-item-1",
-      "hero-item-2"
-    ]
-  },
-  {
     "id": "cards",
     "components": [
       "card"
@@ -68,6 +61,13 @@
     "id": "contact-details",
     "components": [
       "contact-section"
+    ]
+  },
+  {
+    "id": "hero-1",
+    "components": [
+      "hero-item-1",
+      "hero-item-2"
     ]
   }
 ]
