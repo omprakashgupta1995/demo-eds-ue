@@ -153,17 +153,6 @@ button {
   font: inherit;
 }
 
-/* links */
-a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
-  word-break: break-word;
-}
-
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
-}
 
 /* buttons */
 a.button:any-link,
@@ -231,22 +220,10 @@ main img {
 main > .section {
   margin: 40px 0;
 }
-
-main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
-}
-
 main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 50px 32px;
-  }
-}
 
 /* section metadata */
 main .section.light,

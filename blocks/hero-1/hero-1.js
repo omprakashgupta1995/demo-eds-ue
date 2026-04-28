@@ -94,8 +94,11 @@ export default async function decorate(block) {
 
   swiperEl.appendChild(wrapper);
 
+  swiperEl.appendChild(thumbsWrapper);
+  swiperEl.appendChild(counter);
+
   block.innerHTML = '';
-  block.append(swiperEl, thumbsWrapper, counter);
+  block.append(swiperEl);
 
   const swiper = new Swiper(swiperEl, {
     loop: true,
@@ -110,7 +113,7 @@ export default async function decorate(block) {
     counter.textContent = `${realIndex + 1}/${total}`;
 
     // Pause all videos
-    document.querySelectorAll('.swiper-slide video').forEach((v) => {
+    swiperEl.querySelectorAll('video').forEach((v) => {
       v.pause();
       v.currentTime = 0;
     });
