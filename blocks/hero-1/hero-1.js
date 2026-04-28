@@ -1,112 +1,104 @@
 import { loadCSS, loadScript } from "../../scripts/aem.js";
 
+// Prevent multiple initializations
+const SWIPER_CDN =
+  "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
+const SWIPER_CSS =
+  "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css";
+
 // IMAGE
 function resolveDamUrl(path) {
   try {
     const url = new URL(path, window.location.origin);
-
-    // Only keep the DAM path
     if (url.pathname.startsWith("/content/dam")) {
       return `https://publish-p48457-e1275402.adobeaemcloud.com${url.pathname}`;
     }
     return path;
-  } catch (e) {
+  } catch {
     return path;
   }
 }
+
+// Wait for Swiper safely
+async function ensureSwiper() {
+  if (window.Swiper) return;
+
+  await loadCSS(SWIPER_CSS);
+  await loadScript(SWIPER_CDN);
+
+  if (!window.Swiper) {
+    throw new Error("Swiper failed to load");
+  }
+}
+
 export default async function decorate(block) {
-  // 1. Load Swiper Bundle directly from CDN (Guaranteed to work)
+  // Avoid re-initialization
+  if (block.dataset.swiperInitialized === "true") return;
+  block.dataset.swiperInitialized = "true";
 
-  await loadCSS("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+  try {
+    await ensureSwiper();
+  } catch (e) {
+    console.error("🚨 Swiper load failed:", e);
+    return;
+  }
 
-  await loadScript(
-    "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
-  );
+  const rows = [...block.children];
+  if (!rows.length) return;
+
+  // Wrapper (do NOT destroy original content yet)
+  const wrapper = document.createElement("div");
+  wrapper.className = "hero-swiper-wrapper";
 
   const swiperContainer = document.createElement("div");
-
   swiperContainer.className = "swiper hero-swiper";
 
   const swiperWrapper = document.createElement("div");
-
   swiperWrapper.className = "swiper-wrapper";
 
   const thumbnails = [];
 
-  // 2. Clone the original rows so we can safely manipulate them
-
-  const rows = [...block.children];
-
-  block.textContent = ""; // Clear the original block HTML
-
   rows.forEach((row, index) => {
     const slide = document.createElement("div");
-
     slide.className = "swiper-slide";
-
-    // Set a fallback thumbnail just in case authoring is missing
 
     let thumbSrc = `https://via.placeholder.com/120x70?text=Slide+${index + 1}`;
 
-    // Find the video link (ends in .mp4) and any pictures in this row
-
     const videoLink = row.querySelector('a[href$=".mp4"]');
-
     const pictures = row.querySelectorAll("picture");
 
+    // ---- VIDEO ----
     if (videoLink) {
-      // --- HANDLE VIDEO SLIDE ---
-
       const videoEl = document.createElement("video");
-
-      let video_url = resolveDamUrl(videoLink.href);
-      videoEl.src = video_url;
-
+      videoEl.src = resolveDamUrl(videoLink.href);
       videoEl.autoplay = true;
-
       videoEl.loop = true;
-
       videoEl.muted = true;
-
       videoEl.playsInline = true;
 
       slide.appendChild(videoEl);
 
-      // Extract authored thumbnail (first picture authored with the video)
+      const img = pictures[0]?.querySelector("img");
+      if (img) thumbSrc = img.currentSrc || img.src;
+    }
 
-      if (pictures.length > 0) {
-        const img = pictures[0].querySelector("img");
+    // ---- IMAGE ----
+    else if (pictures.length > 0) {
+      const mainPic = pictures[0].cloneNode(true);
+      slide.appendChild(mainPic);
 
-        if (img) thumbSrc = img.currentSrc || img.src;
-      }
-    } else if (pictures.length > 0) {
-      // --- HANDLE IMAGE SLIDE ---
-
-      const mainPic = pictures[0];
-
-      slide.appendChild(mainPic.cloneNode(true));
-
-      // Use the main image as the thumbnail
-
-      const img = mainPic.querySelector("img");
-
+      const img = pictures[0].querySelector("img");
       if (img) thumbSrc = img.currentSrc || img.src;
     }
 
     thumbnails.push(thumbSrc);
 
-    // --- HANDLE "EXPLORE NOW" BUTTON ---
-
-    // Look for any link in the row that is NOT the video link
-
+    // ---- CTA BUTTON ----
     const btn = row.querySelector('a:not([href$=".mp4"])');
-
     if (btn) {
-      btn.className = "explore-btn button primary";
-
-      // If AEM wrapped it in a paragraph, just extract the <a> tag cleanly
-
-      slide.appendChild(btn.cloneNode(true));
+      const btnClone = btn.cloneNode(true);
+      btnClone.classList.add("explore-btn", "button", "primary");
+      slide.appendChild(btnClone);
     }
 
     swiperWrapper.appendChild(slide);
@@ -114,73 +106,59 @@ export default async function decorate(block) {
 
   swiperContainer.appendChild(swiperWrapper);
 
-  // 3. Build the Overlay and Pagination
+  // ---- OVERLAY ----
+  const overlay = document.createElement("div");
+  overlay.className = "hero-overlay-container";
 
-  const overlayContainer = document.createElement("div");
+  const fraction = document.createElement("div");
+  fraction.className = "hero-fraction";
+  fraction.innerHTML = `
+    <span class="current">1</span>
+    <span class="divider">/</span>
+    <span class="total">${thumbnails.length}</span>
+  `;
 
-  overlayContainer.className = "hero-overlay-container";
+  const pagination = document.createElement("div");
+  pagination.className = "hero-thumbs-pagination swiper-pagination";
 
-  const fractionEl = document.createElement("div");
+  overlay.appendChild(fraction);
+  overlay.appendChild(pagination);
+  swiperContainer.appendChild(overlay);
 
-  fractionEl.className = "hero-fraction";
+  wrapper.appendChild(swiperContainer);
 
-  fractionEl.innerHTML = `<span class="current">1</span><span class="divider">/</span><span class="total">${thumbnails.length}</span>`;
+  // Replace ONLY after everything is ready (safe for Universal Editor)
+  block.innerHTML = "";
+  block.appendChild(wrapper);
 
-  const thumbsEl = document.createElement("div");
+  // ---- INIT SWIPER ----
+  try {
+    new window.Swiper(swiperContainer, {
+      slidesPerView: 1,
+      loop: thumbnails.length > 1,
 
-  thumbsEl.className = "hero-thumbs-pagination swiper-pagination";
+      pagination: {
+        el: pagination,
+        clickable: true,
+        renderBullet: (index, className) => `
+          <button class="${className} custom-thumb" aria-label="Go to slide ${index + 1}">
+            <img src="${thumbnails[index]}" alt="Thumbnail ${index + 1}" />
+          </button>
+        `,
+      },
 
-  overlayContainer.appendChild(fractionEl);
-
-  overlayContainer.appendChild(thumbsEl);
-
-  swiperContainer.appendChild(overlayContainer);
-
-  // Attach the whole structure to the block
-
-  block.appendChild(swiperContainer);
-
-  // 4. Initialize Swiper safely after the DOM is fully painted
-
-  setTimeout(() => {
-    if (typeof window.Swiper !== "undefined") {
-      new window.Swiper(swiperContainer, {
-        slidesPerView: 1,
-
-        loop: true,
-
-        // Optional: Add auto-play if you want the carousel to move on its own
-
-        // autoplay: { delay: 5000, disableOnInteraction: false },
-
-        pagination: {
-          el: thumbsEl,
-
-          clickable: true,
-
-          renderBullet: function (index, className) {
-            return `<button class="${className} custom-thumb" aria-label="Go to slide ${index + 1}">
-
-                      <img src="${thumbnails[index]}" alt="Thumbnail ${index + 1}" />
-
-                    </button>`;
-          },
+      on: {
+        slideChange() {
+          const currentEl = fraction.querySelector(".current");
+          if (currentEl) {
+            currentEl.textContent = this.realIndex + 1;
+          }
         },
+      },
+    });
 
-        on: {
-          slideChange: function () {
-            // Update the 1/4 text counter
-
-            const currentEl = fractionEl.querySelector(".current");
-
-            if (currentEl) currentEl.textContent = this.realIndex + 1;
-          },
-        },
-      });
-
-      console.log("✅ Swiper Initialized Successfully");
-    } else {
-      console.error("🚨 Swiper library did not load from CDN.");
-    }
-  }, 150); // 150ms delay to ensure EDS has painted the DOM
+    console.log("✅ Swiper initialized");
+  } catch (e) {
+    console.error("🚨 Swiper init error:", e);
+  }
 }
