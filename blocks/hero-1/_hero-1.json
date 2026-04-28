@@ -137,18 +137,19 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "col2_linkText",
+          "name": "col2_ctaText",
           "label": "Link Text"
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "col2_linkTitle",
+          "name": "col2_ctaTitle",
           "label": "Link Title"
         }
       ]
     }
   ],
+  
   "filters": [
     {
       "id": "hero-1",
