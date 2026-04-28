@@ -8,7 +8,7 @@ main > .section > div{
     margin:auto;
     padding:0;
 }
-
+    
 .hero-1.block {
     width: 100%;
     position: relative;
@@ -137,7 +137,11 @@ main > .section > div{
     opacity: 1;
 }
 
-
+/* Hide the authored thumbnail image from the main view if a video is playing */
+/* Force the video to visually sit above the thumbnail image */
+.hero-swiper .swiper-slide video {
+    z-index: 2; 
+}
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {

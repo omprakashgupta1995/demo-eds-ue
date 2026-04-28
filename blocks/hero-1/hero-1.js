@@ -1,107 +1,186 @@
-import { loadCSS, loadScript } from '../../scripts/aem.js'; 
+import { loadCSS, loadScript } from "../../scripts/aem.js";
 
-export default function decorate(block) {
-  // Notice: The function is no longer "async". We do not block AEM from loading.
+// IMAGE
+function resolveDamUrl(path) {
+  try {
+    const url = new URL(path, window.location.origin);
 
-  // 1. Build Swiper structure
-  const swiperContainer = document.createElement('div');
-  swiperContainer.className = 'swiper hero-swiper';
-  
-  const swiperWrapper = document.createElement('div');
-  swiperWrapper.className = 'swiper-wrapper';
+    // Only keep the DAM path
+    if (url.pathname.startsWith("/content/dam")) {
+      return `https://publish-p48457-e1275402.adobeaemcloud.com${url.pathname}`;
+    }
+    return path;
+  } catch (e) {
+    return path;
+  }
+}
+export default async function decorate(block) {
+  // 1. Load Swiper Bundle directly from CDN (Guaranteed to work)
+
+  await loadCSS("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+
+  await loadScript(
+    "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
+  );
+
+  const swiperContainer = document.createElement("div");
+
+  swiperContainer.className = "swiper hero-swiper";
+
+  const swiperWrapper = document.createElement("div");
+
+  swiperWrapper.className = "swiper-wrapper";
 
   const thumbnails = [];
 
-  // 2. PRESERVE AEM INSTRUMENTATION
-  // Instead of destroying the original rows, we will convert the authored rows directly into slides.
-  // This keeps all data-aue-* attributes intact for the Content Tree.
+  // 2. Clone the original rows so we can safely manipulate them
+
   const rows = [...block.children];
 
+  block.textContent = ""; // Clear the original block HTML
+
   rows.forEach((row, index) => {
-    // Turn the authored row itself into the slide
-    row.classList.add('swiper-slide');
+    const slide = document.createElement("div");
 
-    let thumbSrc = `https://via.placeholder.com/120x70?text=Slide+${index + 1}`; 
+    slide.className = "swiper-slide";
+
+    // Set a fallback thumbnail just in case authoring is missing
+
+    let thumbSrc = `https://via.placeholder.com/120x70?text=Slide+${index + 1}`;
+
+    // Find the video link (ends in .mp4) and any pictures in this row
+
     const videoLink = row.querySelector('a[href$=".mp4"]');
-    const pictures = row.querySelectorAll('picture');
 
-    // Extract thumbnail
-    if (pictures.length > 0) {
-      const img = pictures[0].querySelector('img');
-      if (img) thumbSrc = img.currentSrc || img.src || img.getAttribute('src'); 
-    }
-    thumbnails.push(thumbSrc);
+    const pictures = row.querySelectorAll("picture");
 
     if (videoLink) {
-      // Replace the text link with the actual video player safely
-      const videoEl = document.createElement('video');
-      videoEl.src = videoLink.href;
+      // --- HANDLE VIDEO SLIDE ---
+
+      const videoEl = document.createElement("video");
+
+      let video_url = resolveDamUrl(videoLink.href);
+      videoEl.src = video_url;
+
       videoEl.autoplay = true;
+
       videoEl.loop = true;
+
       videoEl.muted = true;
+
       videoEl.playsInline = true;
-      videoEl.poster = thumbSrc; 
-      
-      videoLink.replaceWith(videoEl);
+
+      slide.appendChild(videoEl);
+
+      // Extract authored thumbnail (first picture authored with the video)
+
+      if (pictures.length > 0) {
+        const img = pictures[0].querySelector("img");
+
+        if (img) thumbSrc = img.currentSrc || img.src;
+      }
+    } else if (pictures.length > 0) {
+      // --- HANDLE IMAGE SLIDE ---
+
+      const mainPic = pictures[0];
+
+      slide.appendChild(mainPic.cloneNode(true));
+
+      // Use the main image as the thumbnail
+
+      const img = mainPic.querySelector("img");
+
+      if (img) thumbSrc = img.currentSrc || img.src;
     }
 
-    // Safely style the button without removing it from its AEM container
+    thumbnails.push(thumbSrc);
+
+    // --- HANDLE "EXPLORE NOW" BUTTON ---
+
+    // Look for any link in the row that is NOT the video link
+
     const btn = row.querySelector('a:not([href$=".mp4"])');
+
     if (btn) {
-      btn.classList.add('explore-btn', 'button', 'primary');
+      btn.className = "explore-btn button primary";
+
+      // If AEM wrapped it in a paragraph, just extract the <a> tag cleanly
+
+      slide.appendChild(btn.cloneNode(true));
     }
 
-    // Move the intact row into the Swiper wrapper
-    swiperWrapper.appendChild(row);
+    swiperWrapper.appendChild(slide);
   });
 
-  // 3. Build the Overlay and Pagination
-  const overlayContainer = document.createElement('div');
-  overlayContainer.className = 'hero-overlay-container';
+  swiperContainer.appendChild(swiperWrapper);
 
-  const fractionEl = document.createElement('div');
-  fractionEl.className = 'hero-fraction';
+  // 3. Build the Overlay and Pagination
+
+  const overlayContainer = document.createElement("div");
+
+  overlayContainer.className = "hero-overlay-container";
+
+  const fractionEl = document.createElement("div");
+
+  fractionEl.className = "hero-fraction";
+
   fractionEl.innerHTML = `<span class="current">1</span><span class="divider">/</span><span class="total">${thumbnails.length}</span>`;
 
-  const thumbsEl = document.createElement('div');
-  thumbsEl.className = 'hero-thumbs-pagination swiper-pagination';
+  const thumbsEl = document.createElement("div");
 
-  // Assemble the DOM nodes
-  overlayContainer.append(fractionEl, thumbsEl);
-  swiperContainer.append(swiperWrapper, overlayContainer);
-  
-  // Append to block. Because we used appendChild on the rows earlier, 
-  // they were safely moved here without destroying their AEM data attributes.
+  thumbsEl.className = "hero-thumbs-pagination swiper-pagination";
+
+  overlayContainer.appendChild(fractionEl);
+
+  overlayContainer.appendChild(thumbsEl);
+
+  swiperContainer.appendChild(overlayContainer);
+
+  // Attach the whole structure to the block
+
   block.appendChild(swiperContainer);
 
-  // 4. Load Swiper Asynchronously (Does not crash AEM if it 404s)
-  Promise.all([
-    loadCSS('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'),
-    loadScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
-  ]).then(() => {
-    // Only initialize if Swiper successfully downloaded
-    if (typeof window.Swiper !== 'undefined') {
+  // 4. Initialize Swiper safely after the DOM is fully painted
+
+  setTimeout(() => {
+    if (typeof window.Swiper !== "undefined") {
       new window.Swiper(swiperContainer, {
         slidesPerView: 1,
+
         loop: true,
+
+        // Optional: Add auto-play if you want the carousel to move on its own
+
+        // autoplay: { delay: 5000, disableOnInteraction: false },
+
         pagination: {
           el: thumbsEl,
+
           clickable: true,
-          renderBullet: (index, className) => {
+
+          renderBullet: function (index, className) {
             return `<button class="${className} custom-thumb" aria-label="Go to slide ${index + 1}">
-                      <img src="${thumbnails[index]}" alt="Thumbnail ${index + 1}" loading="lazy" />
+
+                      <img src="${thumbnails[index]}" alt="Thumbnail ${index + 1}" />
+
                     </button>`;
           },
         },
+
         on: {
           slideChange: function () {
-            const currentEl = fractionEl.querySelector('.current');
+            // Update the 1/4 text counter
+
+            const currentEl = fractionEl.querySelector(".current");
+
             if (currentEl) currentEl.textContent = this.realIndex + 1;
-          }
-        }
+          },
+        },
       });
+
+      console.log("✅ Swiper Initialized Successfully");
+    } else {
+      console.error("🚨 Swiper library did not load from CDN.");
     }
-  }).catch((err) => {
-    console.warn('🚨 Swiper failed to load, but the AEM Content Tree will remain intact.', err);
-  });
+  }, 150); // 150ms delay to ensure EDS has painted the DOM
 }
