@@ -12,6 +12,7 @@ body.author .swiper {
   height: 100%;
 }
 .hero-1-wrapper {
+  height: 500px;
   min-height: 500px; /* fallback for author */
 }
 
