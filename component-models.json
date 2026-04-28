@@ -444,13 +444,13 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2_ctaText",
+        "name": "col2_linkText",
         "label": "Link Text"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2_ctaTitle",
+        "name": "col2_linkTitle",
         "label": "Link Title"
       }
     ]
