@@ -1,5 +1,20 @@
 import Swiper from "./swiper.min.js";
 
+// 1. Added your reference function to route DAM videos to the publish instance
+function resolveDamUrl(path) {
+  if (!path) return path;
+  try {
+    const url = new URL(path, window.location.origin);
+    // Only keep the DAM path
+    if (url.pathname.startsWith("/content/dam")) {
+      return `https://publish-p48457-e1275402.adobeaemcloud.com${url.pathname}`;
+    }
+    return path;
+  } catch (e) {
+    return path;
+  }
+}
+
 export default function decorate(block) {
   const swiperContainer = block.parentElement;
   swiperContainer.classList.add("swiper");
@@ -15,10 +30,7 @@ export default function decorate(block) {
   slides.forEach((slide, index) => {
     slide.classList.add("swiper-slide");
 
-    // NEW: Create the wrapper you requested
-    const itemWrapper = document.createElement("div");
-    itemWrapper.classList.add("hero-carousel-item");
-
+    // REVERTED: Removed the itemWrapper layout changes to keep your original DOM
     const col1 = slide.children[0];
     const col2 = slide.children[1];
 
@@ -36,12 +48,9 @@ export default function decorate(block) {
       // It's a video background
       bgMedia = document.createElement("video");
 
-      // FIX: Use getAttribute to grab the relative path so it works on author, publish, and local
-      const relativePath = videoLink.getAttribute("href");
-      // Fallback to URL parsing just in case it's an absolute external URL
-      bgMedia.src = relativePath.startsWith("http")
-        ? new URL(relativePath).pathname
-        : relativePath;
+      // 2. FIX: Apply the resolveDamUrl function so the video works locally
+      const rawPath = videoLink.getAttribute("href") || videoLink.href;
+      bgMedia.src = resolveDamUrl(rawPath);
 
       bgMedia.autoplay = true;
       bgMedia.loop = true;
@@ -68,11 +77,6 @@ export default function decorate(block) {
     // 3. Clean up the background column so it ONLY contains the video/image
     col1.innerHTML = "";
     if (bgMedia) col1.appendChild(bgMedia);
-
-    // NEW: Append your columns into the item wrapper, then into the slide
-    itemWrapper.appendChild(col1);
-    if (col2) itemWrapper.appendChild(col2);
-    slide.appendChild(itemWrapper);
   });
 
   swiperContainer.appendChild(paginationEl);
