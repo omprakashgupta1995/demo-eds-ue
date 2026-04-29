@@ -17,15 +17,30 @@
       }
     },
     {
-      "title": "Product Item",
-      "id": "product-item",
+      "title": "Product Item 1",
+      "id": "product-item-1",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Product Item",
-              "model": "product-item"
+              "name": "Product Item 1",
+              "model": "product-item-1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Product Item 2",
+      "id": "product-item-2",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Product Item 2",
+              "model": "product-item-2"
             }
           }
         }
@@ -34,7 +49,7 @@
   ],
   "models": [
     {
-      "id": "product",
+      "id": "product-item-1",
       "fields": [
         {
           "component": "richtext",
@@ -57,7 +72,7 @@
       ]
     },
     {
-      "id": "product-item",
+      "id": "product-item-2",
       "fields": [
         {
           "component": "reference",
@@ -92,7 +107,7 @@
   "filters": [
     {
       "id": "product",
-      "components": ["product-item"]
+      "components": ["product-item-1", "product-item-2"]
     }
   ]
 }

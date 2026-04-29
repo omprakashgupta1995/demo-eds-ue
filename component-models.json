@@ -505,7 +505,7 @@
     ]
   },
   {
-    "id": "product",
+    "id": "product-item-1",
     "fields": [
       {
         "component": "richtext",
@@ -528,7 +528,7 @@
     ]
   },
   {
-    "id": "product-item",
+    "id": "product-item-2",
     "fields": [
       {
         "component": "reference",

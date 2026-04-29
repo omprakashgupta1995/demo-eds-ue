@@ -89,7 +89,8 @@
   {
     "id": "product",
     "components": [
-      "product-item"
+      "product-item-1",
+      "product-item-2"
     ]
   }
 ]
