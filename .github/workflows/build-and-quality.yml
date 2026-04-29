@@ -1,0 +1,946 @@
+# ============================================================================
+# AEM Edge Delivery Services - CI/CD Pipeline with Code Quality Analysis
+# ============================================================================
+# Based on: https://www.aem.live/docs/dev-collab-and-good-practices
+#
+# Code Quality Checks:
+# ✓ CSS Best Practices (isolation, mobile-first, breakpoints, complexity)
+# ✓ JavaScript Best Practices (no frameworks in head, lazy loading)
+# ✓ Performance (file sizes, 3rd party scripts, head.html)
+# ✓ Accessibility (ARIA usage)
+# ✓ General (console.log, debugger, dependencies)
+# ============================================================================
+
+name: Build & Code Quality
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '20'
+  SITE_NAME: 'demo-eds-ue'
+  ORG_NAME: 'dept'
+
+jobs:
+  # ============================================
+  # Job 1: Build & Lint
+  # ============================================
+  build:
+    name: 🔨 Build & Lint
+    runs-on: ubuntu-latest
+    outputs:
+      preview-url: ${{ steps.urls.outputs.preview }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run ESLint
+        run: npm run lint
+      - name: Run Stylelint
+        # TODO(devops): make blocking once legacy CSS violations are cleaned up
+        run: npm run lint:css
+        continue-on-error: true
+      - name: Generate Preview URL
+        id: urls
+        run: |
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            BRANCH="${{ github.head_ref }}"
+          else
+            BRANCH="${{ github.ref_name }}"
+          fi
+          # Sanitize: lowercase, replace any non [a-z0-9-] run with '-', trim leading/trailing '-'
+          SAFE_BRANCH=$(echo "$BRANCH" \
+            | tr '[:upper:]' '[:lower:]' \
+            | sed -E 's#[^a-z0-9-]+#-#g' \
+            | sed -E 's#^-+|-+$##g')
+          SAFE_SITE=$(echo "${{ env.SITE_NAME }}" | tr '[:upper:]' '[:lower:]')
+          SAFE_ORG=$(echo "${{ env.ORG_NAME }}"  | tr '[:upper:]' '[:lower:]')
+          echo "preview=https://${SAFE_BRANCH}--${SAFE_SITE}--${SAFE_ORG}.aem.page" >> "$GITHUB_OUTPUT"
+
+  # ============================================
+  # Job 2: Comprehensive Code Quality Analysis
+  # ============================================
+  code-quality:
+    name: 📊 Code Quality Analysis
+    runs-on: ubuntu-latest
+    needs: build
+    outputs:
+      score: ${{ steps.score.outputs.score }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Initialize Report
+        run: |
+          echo "# 📊 AEM EDS Code Quality Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Based on [AEM Best Practices](https://www.aem.live/docs/dev-collab-and-good-practices)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Initialize score
+          echo "100" > $RUNNER_TEMP/score.txt
+          echo "" > $RUNNER_TEMP/issues.txt
+          echo "" > $RUNNER_TEMP/warnings.txt
+
+      # ----------------------------------------
+      # JavaScript Quality Checks
+      # ----------------------------------------
+      - name: 🟨 JavaScript Quality Checks
+        run: |
+          echo "## 🟨 JavaScript Quality" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 1. Check for console.log
+          CONSOLE_COUNT=$(grep -rn "console\.log" --include="*.js" blocks/ scripts/ 2>/dev/null | grep -v "eslint-disable" | wc -l || echo "0")
+          if [ "$CONSOLE_COUNT" -gt 0 ]; then
+            echo "⚠️ **console.log statements:** ${CONSOLE_COUNT} found" >> $GITHUB_STEP_SUMMARY
+            grep -rn "console\.log" --include="*.js" blocks/ scripts/ 2>/dev/null | grep -v "eslint-disable" | head -5 >> $GITHUB_STEP_SUMMARY
+            echo "console.log: ${CONSOLE_COUNT} found" >> $RUNNER_TEMP/warnings.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 5)) > $RUNNER_TEMP/score.txt
+          else
+            echo "✅ No console.log statements" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 2. Check for debugger
+          DEBUGGER_COUNT=$(grep -rn "debugger" --include="*.js" blocks/ scripts/ 2>/dev/null | wc -l || echo "0")
+          if [ "$DEBUGGER_COUNT" -gt 0 ]; then
+            echo "❌ **debugger statements:** ${DEBUGGER_COUNT} found" >> $GITHUB_STEP_SUMMARY
+            echo "debugger: ${DEBUGGER_COUNT} found" >> $RUNNER_TEMP/issues.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 10)) > $RUNNER_TEMP/score.txt
+          else
+            echo "✅ No debugger statements" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 3. Check for alert()
+          ALERT_COUNT=$(grep -rn "alert(" --include="*.js" blocks/ scripts/ 2>/dev/null | wc -l || echo "0")
+          if [ "$ALERT_COUNT" -gt 0 ]; then
+            echo "⚠️ **alert() calls:** ${ALERT_COUNT} found" >> $GITHUB_STEP_SUMMARY
+            echo "alert(): ${ALERT_COUNT} found" >> $RUNNER_TEMP/warnings.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 5)) > $RUNNER_TEMP/score.txt
+          else
+            echo "✅ No alert() calls" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 4. Check for eval() - Security risk
+          EVAL_COUNT=$(grep -rn "eval(" --include="*.js" blocks/ scripts/ 2>/dev/null | wc -l || echo "0")
+          if [ "$EVAL_COUNT" -gt 0 ]; then
+            echo "❌ **eval() usage:** ${EVAL_COUNT} found (security risk)" >> $GITHUB_STEP_SUMMARY
+            echo "eval(): ${EVAL_COUNT} found - SECURITY RISK" >> $RUNNER_TEMP/issues.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 15)) > $RUNNER_TEMP/score.txt
+          else
+            echo "✅ No eval() usage" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 5. Check for framework imports (React, Vue, Angular, jQuery)
+          FRAMEWORK_COUNT=$(grep -rn "from 'react'\|from 'vue'\|from '@angular'\|jquery\|from 'svelte'" --include="*.js" blocks/ scripts/ 2>/dev/null | wc -l || echo "0")
+          if [ "$FRAMEWORK_COUNT" -gt 0 ]; then
+            echo "⚠️ **Framework imports:** ${FRAMEWORK_COUNT} found" >> $GITHUB_STEP_SUMMARY
+            echo "> Best Practice: Frameworks often introduce performance issues. Keep simple things simple." >> $GITHUB_STEP_SUMMARY
+            grep -rn "from 'react'\|from 'vue'\|from '@angular'\|jquery" --include="*.js" blocks/ scripts/ 2>/dev/null | head -3 >> $GITHUB_STEP_SUMMARY
+            echo "Framework imports: ${FRAMEWORK_COUNT}" >> $RUNNER_TEMP/warnings.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 5)) > $RUNNER_TEMP/score.txt
+          else
+            echo "✅ No heavy framework dependencies" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------
+      # Head.html Checks
+      # ----------------------------------------
+      - name: 📄 Head.html Analysis
+        run: |
+          echo "## 📄 Head.html Analysis" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f "head.html" ]; then
+            # Check for 3rd party scripts in head
+            THIRD_PARTY=$(grep -E "script.*src=.*(gtm|analytics|tag|sdk|cdn)" head.html 2>/dev/null | wc -l || echo "0")
+            if [ "$THIRD_PARTY" -gt 0 ]; then
+              echo "❌ **3rd party scripts in head.html:** ${THIRD_PARTY} found" >> $GITHUB_STEP_SUMMARY
+              echo "> Best Practice: Don't add 3rd party libraries to head.html as they will be in the critical path." >> $GITHUB_STEP_SUMMARY
+              echo "3rd party scripts in head: ${THIRD_PARTY}" >> $RUNNER_TEMP/issues.txt
+              SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 10)) > $RUNNER_TEMP/score.txt
+            else
+              echo "✅ No 3rd party scripts in head.html" >> $GITHUB_STEP_SUMMARY
+            fi
+            
+            # Check for inline scripts
+            INLINE_SCRIPTS=$(grep -c "<script>" head.html 2>/dev/null || echo "0")
+            if [ "$INLINE_SCRIPTS" -gt 0 ]; then
+              echo "⚠️ **Inline scripts in head.html:** ${INLINE_SCRIPTS} found" >> $GITHUB_STEP_SUMMARY
+              echo "> Best Practice: Adding inline scripts to head is not advisable for performance." >> $GITHUB_STEP_SUMMARY
+              echo "Inline scripts in head: ${INLINE_SCRIPTS}" >> $RUNNER_TEMP/warnings.txt
+              SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 5)) > $RUNNER_TEMP/score.txt
+            else
+              echo "✅ No inline scripts in head.html" >> $GITHUB_STEP_SUMMARY
+            fi
+            
+            # Check for inline styles
+            INLINE_STYLES=$(grep -c "<style>" head.html 2>/dev/null || echo "0")
+            if [ "$INLINE_STYLES" -gt 0 ]; then
+              echo "⚠️ **Inline styles in head.html:** ${INLINE_STYLES} found" >> $GITHUB_STEP_SUMMARY
+              echo "Inline styles in head: ${INLINE_STYLES}" >> $RUNNER_TEMP/warnings.txt
+              SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 3)) > $RUNNER_TEMP/score.txt
+            else
+              echo "✅ No inline styles in head.html" >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "ℹ️ No head.html file found (using default)" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------
+      # CSS Quality Checks
+      # ----------------------------------------
+      - name: 🎨 CSS Quality Checks
+        run: |
+          echo "## 🎨 CSS Quality" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 1. Check for !important usage
+          IMPORTANT_COUNT=$(grep -rn "!important" --include="*.css" blocks/ styles/ 2>/dev/null | wc -l || echo "0")
+          if [ "$IMPORTANT_COUNT" -gt 5 ]; then
+            echo "⚠️ **!important usage:** ${IMPORTANT_COUNT} found (excessive)" >> $GITHUB_STEP_SUMMARY
+            echo "> Best Practice: Avoid !important, use proper CSS specificity instead." >> $GITHUB_STEP_SUMMARY
+            echo "!important: ${IMPORTANT_COUNT} (excessive)" >> $RUNNER_TEMP/warnings.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 3)) > $RUNNER_TEMP/score.txt
+          elif [ "$IMPORTANT_COUNT" -gt 0 ]; then
+            echo "ℹ️ **!important usage:** ${IMPORTANT_COUNT} found" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ No !important usage" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 2. Check for mobile-first approach (max-width vs min-width)
+          MAX_WIDTH=$(grep -rn "max-width" --include="*.css" blocks/ styles/ 2>/dev/null | grep "@media" | wc -l || echo "0")
+          MIN_WIDTH=$(grep -rn "min-width" --include="*.css" blocks/ styles/ 2>/dev/null | grep "@media" | wc -l || echo "0")
+          
+          if [ "$MAX_WIDTH" -gt "$MIN_WIDTH" ] && [ "$MAX_WIDTH" -gt 0 ]; then
+            echo "⚠️ **Mobile-first:** Using more max-width (${MAX_WIDTH}) than min-width (${MIN_WIDTH})" >> $GITHUB_STEP_SUMMARY
+            echo "> Best Practice: Use mobile-first approach with min-width media queries." >> $GITHUB_STEP_SUMMARY
+            echo "Not mobile-first: max-width(${MAX_WIDTH}) > min-width(${MIN_WIDTH})" >> $RUNNER_TEMP/warnings.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 5)) > $RUNNER_TEMP/score.txt
+          else
+            echo "✅ Mobile-first approach: min-width (${MIN_WIDTH}) / max-width (${MAX_WIDTH})" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 3. Check for non-standard breakpoints
+          echo "### Breakpoint Analysis" >> $GITHUB_STEP_SUMMARY
+          STANDARD_BP=$(grep -rE "@media.*min-width:\s*(600|900|1200)px" --include="*.css" blocks/ styles/ 2>/dev/null | wc -l || echo "0")
+          NON_STANDARD_BP=$(grep -rE "@media.*min-width:\s*[0-9]+px" --include="*.css" blocks/ styles/ 2>/dev/null | grep -vE "(600|900|1200)px" | wc -l || echo "0")
+          
+          if [ "$NON_STANDARD_BP" -gt 0 ]; then
+            echo "⚠️ Non-standard breakpoints: ${NON_STANDARD_BP} found" >> $GITHUB_STEP_SUMMARY
+            echo "> Best Practice: Use 600px, 900px, and 1200px breakpoints." >> $GITHUB_STEP_SUMMARY
+            grep -rE "@media.*min-width:\s*[0-9]+px" --include="*.css" blocks/ styles/ 2>/dev/null | grep -vE "(600|900|1200)px" | head -3 >> $GITHUB_STEP_SUMMARY
+            echo "Non-standard breakpoints: ${NON_STANDARD_BP}" >> $RUNNER_TEMP/warnings.txt
+          else
+            echo "✅ Using standard breakpoints (600px, 900px, 1200px)" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 4. Check for complex selectors (more than 4 levels deep)
+          COMPLEX_SELECTORS=$(grep -rE "^[^{]+\s+[^{]+\s+[^{]+\s+[^{]+\s+[^{]+\{" --include="*.css" blocks/ 2>/dev/null | wc -l || echo "0")
+          if [ "$COMPLEX_SELECTORS" -gt 5 ]; then
+            echo "⚠️ **Complex selectors:** ${COMPLEX_SELECTORS} found (5+ levels deep)" >> $GITHUB_STEP_SUMMARY
+            echo "> Best Practice: Don't let CSS selectors become complex. Add classes instead." >> $GITHUB_STEP_SUMMARY
+            echo "Complex CSS selectors: ${COMPLEX_SELECTORS}" >> $RUNNER_TEMP/warnings.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 3)) > $RUNNER_TEMP/score.txt
+          else
+            echo "✅ CSS selector complexity is acceptable" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 5. Check for CSS preprocessor usage
+          SCSS_FILES=$(find . -name "*.scss" -not -path "./node_modules/*" 2>/dev/null | wc -l || echo "0")
+          LESS_FILES=$(find . -name "*.less" -not -path "./node_modules/*" 2>/dev/null | wc -l || echo "0")
+          
+          if [ "$SCSS_FILES" -gt 0 ] || [ "$LESS_FILES" -gt 0 ]; then
+            echo "⚠️ **CSS Preprocessors:** SCSS(${SCSS_FILES}), LESS(${LESS_FILES})" >> $GITHUB_STEP_SUMMARY
+            echo "> Best Practice: Rely on native CSS features supported by browsers." >> $GITHUB_STEP_SUMMARY
+            echo "CSS preprocessors found: SCSS(${SCSS_FILES}), LESS(${LESS_FILES})" >> $RUNNER_TEMP/warnings.txt
+          else
+            echo "✅ No CSS preprocessors (using native CSS)" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------
+      # Block Isolation Check
+      # ----------------------------------------
+      - name: 🧱 Block CSS Isolation Check
+        run: |
+          echo "## 🧱 Block CSS Isolation" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          ISOLATION_ISSUES=0
+          
+          for block_css in $(find blocks -name "*.css" 2>/dev/null); do
+            BLOCK_NAME=$(basename $(dirname "$block_css"))
+            
+            # Check if CSS selectors start with block name or .block
+            UNSCOPED=$(grep -E "^[a-z]|^\*|^body|^html|^main|^header|^footer" "$block_css" 2>/dev/null | grep -v "^/\*" | grep -v "^\s*/\*" | wc -l || echo "0")
+            
+            if [ "$UNSCOPED" -gt 0 ]; then
+              echo "⚠️ **${BLOCK_NAME}:** ${UNSCOPED} potentially unscoped selectors" >> $GITHUB_STEP_SUMMARY
+              ISOLATION_ISSUES=$((ISOLATION_ISSUES + UNSCOPED))
+            fi
+          done
+          
+          if [ "$ISOLATION_ISSUES" -eq 0 ]; then
+            echo "✅ Block CSS appears properly isolated" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "> Best Practice: Every CSS selector in a block .css should only apply to that block." >> $GITHUB_STEP_SUMMARY
+            echo "Block CSS isolation issues: ${ISOLATION_ISSUES}" >> $RUNNER_TEMP/warnings.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 5)) > $RUNNER_TEMP/score.txt
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------
+      # File Size Checks
+      # ----------------------------------------
+      - name: 📦 File Size Analysis
+        run: |
+          echo "## 📦 File Size Analysis" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "> Best Practice: Files should be small. Minification typically isn't needed with AEM EDS." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # JavaScript files
+          echo "### JavaScript Files" >> $GITHUB_STEP_SUMMARY
+          LARGE_JS=0
+          for file in $(find blocks scripts -name "*.js" 2>/dev/null | head -20); do
+            if [ -f "$file" ]; then
+              SIZE=$(wc -c < "$file")
+              SIZE_KB=$((SIZE / 1024))
+              if [ "$SIZE" -gt 50000 ]; then
+                echo "❌ \`${file}\`: ${SIZE_KB}KB (>50KB)" >> $GITHUB_STEP_SUMMARY
+                LARGE_JS=$((LARGE_JS + 1))
+              elif [ "$SIZE" -gt 30000 ]; then
+                echo "⚠️ \`${file}\`: ${SIZE_KB}KB (>30KB)" >> $GITHUB_STEP_SUMMARY
+              fi
+            fi
+          done
+          
+          if [ "$LARGE_JS" -gt 0 ]; then
+            echo "Large JS files: ${LARGE_JS}" >> $RUNNER_TEMP/warnings.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 5)) > $RUNNER_TEMP/score.txt
+          else
+            echo "✅ All JS files within acceptable size" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # CSS files
+          echo "### CSS Files" >> $GITHUB_STEP_SUMMARY
+          LARGE_CSS=0
+          for file in $(find blocks styles -name "*.css" 2>/dev/null | head -20); do
+            if [ -f "$file" ]; then
+              SIZE=$(wc -c < "$file")
+              SIZE_KB=$((SIZE / 1024))
+              if [ "$SIZE" -gt 30000 ]; then
+                echo "❌ \`${file}\`: ${SIZE_KB}KB (>30KB)" >> $GITHUB_STEP_SUMMARY
+                LARGE_CSS=$((LARGE_CSS + 1))
+              elif [ "$SIZE" -gt 20000 ]; then
+                echo "⚠️ \`${file}\`: ${SIZE_KB}KB (>20KB)" >> $GITHUB_STEP_SUMMARY
+              fi
+            fi
+          done
+          
+          if [ "$LARGE_CSS" -gt 0 ]; then
+            echo "Large CSS files: ${LARGE_CSS}" >> $RUNNER_TEMP/warnings.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 5)) > $RUNNER_TEMP/score.txt
+          else
+            echo "✅ All CSS files within acceptable size" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------
+      # Lazy Loading Check
+      # ----------------------------------------
+      - name: ⏳ Lazy Loading Analysis
+        run: |
+          echo "## ⏳ Lazy Loading Analysis" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Check for loadScript usage (good practice)
+          LOAD_SCRIPT=$(grep -rn "loadScript" --include="*.js" blocks/ 2>/dev/null | wc -l || echo "0")
+          if [ "$LOAD_SCRIPT" -gt 0 ]; then
+            echo "✅ Using loadScript() for lazy loading: ${LOAD_SCRIPT} usages" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Check for IntersectionObserver (good for large libraries)
+          INTERSECTION=$(grep -rn "IntersectionObserver" --include="*.js" blocks/ scripts/ 2>/dev/null | wc -l || echo "0")
+          if [ "$INTERSECTION" -gt 0 ]; then
+            echo "✅ Using IntersectionObserver: ${INTERSECTION} usages" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Check for direct script tags in block JS (bad practice)
+          DIRECT_SCRIPT=$(grep -rn "document.createElement.*script\|appendChild.*script" --include="*.js" blocks/ 2>/dev/null | grep -v "loadScript" | wc -l || echo "0")
+          if [ "$DIRECT_SCRIPT" -gt 0 ]; then
+            echo "⚠️ Direct script injection: ${DIRECT_SCRIPT} found (consider using loadScript)" >> $GITHUB_STEP_SUMMARY
+            echo "Direct script injection: ${DIRECT_SCRIPT}" >> $RUNNER_TEMP/warnings.txt
+          fi
+          
+          if [ "$LOAD_SCRIPT" -eq 0 ] && [ "$INTERSECTION" -eq 0 ]; then
+            echo "ℹ️ No lazy loading patterns detected" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------
+      # Accessibility Check
+      # ----------------------------------------
+      - name: ♿ Accessibility Patterns
+        run: |
+          echo "## ♿ Accessibility Patterns" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Check for ARIA usage
+          ARIA_JS=$(grep -rn "aria-" --include="*.js" blocks/ 2>/dev/null | wc -l || echo "0")
+          ARIA_CSS=$(grep -rn "\[aria-" --include="*.css" blocks/ 2>/dev/null | wc -l || echo "0")
+          
+          echo "### ARIA Usage" >> $GITHUB_STEP_SUMMARY
+          echo "- JavaScript: ${ARIA_JS} ARIA attributes" >> $GITHUB_STEP_SUMMARY
+          echo "- CSS selectors using ARIA: ${ARIA_CSS}" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "$ARIA_CSS" -gt 0 ]; then
+            echo "✅ Using ARIA attributes for styling (good practice)" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Check for role attributes
+          ROLE_COUNT=$(grep -rn "role=" --include="*.js" blocks/ 2>/dev/null | wc -l || echo "0")
+          echo "- Role attributes: ${ROLE_COUNT}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------
+      # Dependency Check
+      # ----------------------------------------
+      - name: 📚 Dependency Analysis
+        run: |
+          echo "## 📚 Dependency Analysis" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f "package.json" ]; then
+            # Count dependencies
+            DEPS=$(cat package.json | grep -c '"dependencies"' || echo "0")
+            DEV_DEPS=$(cat package.json | grep -c '"devDependencies"' || echo "0")
+            
+            TOTAL_DEPS=$(cat package.json | python3 -c "import sys,json; d=json.load(sys.stdin); print(len(d.get('dependencies',{}))+len(d.get('devDependencies',{})))" 2>/dev/null || echo "0")
+            
+            echo "Total dependencies: ${TOTAL_DEPS}" >> $GITHUB_STEP_SUMMARY
+            
+            if [ "$TOTAL_DEPS" -gt 20 ]; then
+              echo "⚠️ High dependency count (${TOTAL_DEPS})" >> $GITHUB_STEP_SUMMARY
+              echo "> Best Practice: Keep dependencies minimal. AEM EDS is designed to be build-less." >> $GITHUB_STEP_SUMMARY
+              echo "High dependency count: ${TOTAL_DEPS}" >> $RUNNER_TEMP/warnings.txt
+            else
+              echo "✅ Dependency count is reasonable" >> $GITHUB_STEP_SUMMARY
+            fi
+            
+            # Check for outdated linting deps
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "> Reminder: Keep dependencies up to date. Consider using Renovate." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ No package.json found" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------
+      # AEM.js Modification Check
+      # ----------------------------------------
+      - name: 🔧 AEM Library Check
+        run: |
+          echo "## 🔧 AEM Library Check" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Check if aem.js or lib-franklin.js has been modified
+          if [ -f "scripts/aem.js" ]; then
+            # Check file size (standard is around 10-15KB)
+            SIZE=$(wc -c < "scripts/aem.js")
+            echo "aem.js size: ${SIZE} bytes" >> $GITHUB_STEP_SUMMARY
+            
+            # Check for custom modifications marker
+            if grep -q "CUSTOM\|MODIFIED\|PROJECT" scripts/aem.js 2>/dev/null; then
+              echo "⚠️ aem.js appears to have custom modifications" >> $GITHUB_STEP_SUMMARY
+              echo "> Best Practice: Keep project-specific extensions outside the AEM library." >> $GITHUB_STEP_SUMMARY
+              echo "aem.js has custom modifications" >> $RUNNER_TEMP/warnings.txt
+            else
+              echo "✅ aem.js appears unmodified" >> $GITHUB_STEP_SUMMARY
+            fi
+          elif [ -f "scripts/lib-franklin.js" ]; then
+            echo "ℹ️ Using lib-franklin.js (consider updating to aem.js)" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------
+      # JSON Validation
+      # ----------------------------------------
+      - name: 📋 JSON Validation
+        run: |
+          echo "## 📋 JSON Validation" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          JSON_ERRORS=0
+          for file in $(find . -name "*.json" -not -path "./node_modules/*" 2>/dev/null); do
+            if ! python3 -m json.tool "$file" > /dev/null 2>&1; then
+              echo "❌ Invalid JSON: \`${file}\`" >> $GITHUB_STEP_SUMMARY
+              JSON_ERRORS=$((JSON_ERRORS + 1))
+            fi
+          done
+          
+          if [ "$JSON_ERRORS" -gt 0 ]; then
+            echo "Invalid JSON files: ${JSON_ERRORS}" >> $RUNNER_TEMP/issues.txt
+            SCORE=$(cat $RUNNER_TEMP/score.txt); echo $((SCORE - 10)) > $RUNNER_TEMP/score.txt
+          else
+            echo "✅ All JSON files are valid" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------
+      # Final Score
+      # ----------------------------------------
+      - name: 📊 Calculate Final Score
+        id: score
+        run: |
+          SCORE=$(cat $RUNNER_TEMP/score.txt)
+          ISSUES=$(cat $RUNNER_TEMP/issues.txt | grep -v "^$" | wc -l || echo "0")
+          WARNINGS=$(cat $RUNNER_TEMP/warnings.txt | grep -v "^$" | wc -l || echo "0")
+          
+          # Ensure score doesn't go below 0
+          if [ "$SCORE" -lt 0 ]; then
+            SCORE=0
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "# 🎯 Final Score: ${SCORE}/100" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "$SCORE" -ge 90 ]; then
+            echo "🟢 **Excellent!** Code quality is great." >> $GITHUB_STEP_SUMMARY
+          elif [ "$SCORE" -ge 70 ]; then
+            echo "🟡 **Good.** Some improvements recommended." >> $GITHUB_STEP_SUMMARY
+          elif [ "$SCORE" -ge 50 ]; then
+            echo "🟠 **Fair.** Several issues need attention." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "🔴 **Needs Work.** Please address the issues above." >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Count |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| ❌ Issues | ${ISSUES} |" >> $GITHUB_STEP_SUMMARY
+          echo "| ⚠️ Warnings | ${WARNINGS} |" >> $GITHUB_STEP_SUMMARY
+          
+          echo "score=${SCORE}" >> $GITHUB_OUTPUT
+          
+          # Fail if critical issues
+          if [ "$ISSUES" -gt 0 ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### ❌ Critical Issues (must fix)" >> $GITHUB_STEP_SUMMARY
+            cat $RUNNER_TEMP/issues.txt >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+
+  # ============================================================================
+  # Job 2.5: AEM EDS Quality Gates (deterministic checks)
+  # ----------------------------------------------------------------------------
+  # Implements the automatable subset of aem_eds_quality_gates.yaml.
+  # Each finding is annotated with its gate_id / check_id / source_id so
+  # output is traceable back to the rubric used by the AI review agent.
+  # Judgment-based gates (semantic_structure_preserved, integration_pattern_
+  # classified, backward_compatibility_considered, etc.) are intentionally
+  # excluded — they belong to the LLM PR-review agent that consumes the YAML
+  # rubric directly, not to CI regex.
+  # ============================================================================
+  aem-eds-gates:
+    name: 🧱 AEM EDS Quality Gates
+    runs-on: ubuntu-latest
+    needs: build
+    outputs:
+      gate-issues: ${{ steps.eds-final.outputs.issues }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Init gate counters
+        run: |
+          echo "0" > $RUNNER_TEMP/eds_critical.txt
+          echo "0" > $RUNNER_TEMP/eds_major.txt
+          echo "## 🧱 AEM EDS Quality Gates" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Rules: \`aem_eds_quality_gates.yaml\` · Authority: AEM.live + Adobe Experience League" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Severity | Gate · Check | Source |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|--------------|--------|" >> $GITHUB_STEP_SUMMARY
+
+      # ----------------------------------------------------------------
+      # GATE: block_implementation
+      # CHECK: block_folder_file_naming  (severity: major)
+      # SOURCE: aem_project_anatomy
+      # ----------------------------------------------------------------
+      - name: 🧩 block_folder_file_naming
+        run: |
+          MISSING=0
+          if [ -d blocks ]; then
+            while IFS= read -r -d '' dir; do
+              name=$(basename "$dir")
+              if [ ! -f "$dir/$name.js" ] || [ ! -f "$dir/$name.css" ]; then
+                echo "| 🟠 major | block_implementation · block_folder_file_naming → \`blocks/$name/\` missing \`$name.js\` or \`$name.css\` | aem_project_anatomy |" >> $GITHUB_STEP_SUMMARY
+                MISSING=$((MISSING + 1))
+              fi
+            done < <(find blocks -mindepth 1 -maxdepth 1 -type d -print0)
+          fi
+          if [ "$MISSING" -eq 0 ]; then
+            echo "| ✅ pass | block_implementation · block_folder_file_naming | aem_project_anatomy |" >> $GITHUB_STEP_SUMMARY
+          else
+            CUR=$(cat $RUNNER_TEMP/eds_major.txt); echo $((CUR + MISSING)) > $RUNNER_TEMP/eds_major.txt
+          fi
+
+      # ----------------------------------------------------------------
+      # GATE: block_implementation
+      # CHECK: block_js_default_export  (severity: critical)
+      # SOURCE: aem_project_anatomy
+      # ----------------------------------------------------------------
+      - name: 🧩 block_js_default_export
+        run: |
+          MISSING=0
+          if [ -d blocks ]; then
+            while IFS= read -r -d '' dir; do
+              name=$(basename "$dir")
+              js="$dir/$name.js"
+              if [ -f "$js" ] && ! grep -qE "export\s+default" "$js"; then
+                echo "| 🔴 critical | block_implementation · block_js_default_export → \`$js\` has no default export | aem_project_anatomy |" >> $GITHUB_STEP_SUMMARY
+                MISSING=$((MISSING + 1))
+              fi
+            done < <(find blocks -mindepth 1 -maxdepth 1 -type d -print0)
+          fi
+          if [ "$MISSING" -eq 0 ]; then
+            echo "| ✅ pass | block_implementation · block_js_default_export | aem_project_anatomy |" >> $GITHUB_STEP_SUMMARY
+          else
+            CUR=$(cat $RUNNER_TEMP/eds_critical.txt); echo $((CUR + MISSING)) > $RUNNER_TEMP/eds_critical.txt
+          fi
+
+      # ----------------------------------------------------------------
+      # GATE: security
+      # CHECK: no_unsanitized_inner_html  (severity: critical)
+      # SOURCE: aem_csp
+      # Heuristic: innerHTML = <something not a quoted string literal>
+      # ----------------------------------------------------------------
+      - name: 🔐 no_unsanitized_inner_html
+        run: |
+          # Match `innerHTML = X` where X does NOT start with quote/backtick.
+          HITS=$(grep -rnE "\.innerHTML\s*=\s*[^'\"\`/]" --include="*.js" blocks/ scripts/ 2>/dev/null | grep -v "eslint-disable" | wc -l | tr -d ' ')
+          if [ "${HITS:-0}" -gt 0 ]; then
+            echo "| 🔴 critical | security · no_unsanitized_inner_html → ${HITS} potentially unsanitized \`innerHTML\` assignment(s) | aem_csp |" >> $GITHUB_STEP_SUMMARY
+            grep -rnE "\.innerHTML\s*=\s*[^'\"\`/]" --include="*.js" blocks/ scripts/ 2>/dev/null | grep -v "eslint-disable" | head -5 >> $GITHUB_STEP_SUMMARY
+            CUR=$(cat $RUNNER_TEMP/eds_critical.txt); echo $((CUR + HITS)) > $RUNNER_TEMP/eds_critical.txt
+          else
+            echo "| ✅ pass | security · no_unsanitized_inner_html | aem_csp |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # ----------------------------------------------------------------
+      # GATE: security
+      # CHECK: no_user_controlled_dynamic_import  (severity: critical)
+      # SOURCE: aem_csp
+      # Heuristic: dynamic import() or script.src assigned from a non-literal
+      # ----------------------------------------------------------------
+      - name: 🔐 no_user_controlled_dynamic_import
+        run: |
+          DYN=$(grep -rnE "\bimport\(\s*[a-zA-Z_\$]" --include="*.js" blocks/ scripts/ 2>/dev/null | wc -l | tr -d ' ')
+          SRC=$(grep -rnE "\.src\s*=\s*[a-zA-Z_\$][a-zA-Z0-9_\$.]*\s*[;,)]" --include="*.js" blocks/ scripts/ 2>/dev/null | wc -l | tr -d ' ')
+          TOTAL=$((${DYN:-0} + ${SRC:-0}))
+          if [ "$TOTAL" -gt 0 ]; then
+            echo "| 🔴 critical | security · no_user_controlled_dynamic_import → ${DYN} dynamic import(), ${SRC} non-literal \`.src\` | aem_csp |" >> $GITHUB_STEP_SUMMARY
+            CUR=$(cat $RUNNER_TEMP/eds_critical.txt); echo $((CUR + TOTAL)) > $RUNNER_TEMP/eds_critical.txt
+          else
+            echo "| ✅ pass | security · no_user_controlled_dynamic_import | aem_csp |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # ----------------------------------------------------------------
+      # GATE: accessibility_and_seo
+      # CHECK: image_alt_text  (severity: critical)
+      # SOURCE: aem_block_collection
+      # Heuristic: <img ...> string literals in JS without alt=
+      # ----------------------------------------------------------------
+      - name: ♿ image_alt_text
+        run: |
+          HITS=$(grep -rnoE "<img\b[^>]*>" --include="*.js" --include="*.html" blocks/ scripts/ head.html 2>/dev/null | grep -vE "alt\s*=" | wc -l | tr -d ' ')
+          if [ "${HITS:-0}" -gt 0 ]; then
+            echo "| 🔴 critical | accessibility_and_seo · image_alt_text → ${HITS} \`<img>\` literal(s) without \`alt\` | aem_block_collection |" >> $GITHUB_STEP_SUMMARY
+            CUR=$(cat $RUNNER_TEMP/eds_critical.txt); echo $((CUR + HITS)) > $RUNNER_TEMP/eds_critical.txt
+          else
+            echo "| ✅ pass | accessibility_and_seo · image_alt_text | aem_block_collection |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # ----------------------------------------------------------------
+      # GATE: third_party_api_integration
+      # CHECK: mustache_output_escaped  (severity: critical)
+      # SOURCE: aem_json2html
+      # Heuristic: triple-mustache `{{{ ... }}}` in any .mustache/.hbs/.html
+      # template under templates/ implies raw HTML output — must be reviewed.
+      # ----------------------------------------------------------------
+      - name: 🧪 mustache_output_escaped
+        run: |
+          if [ -d templates ]; then
+            HITS=$(grep -rnE "\{\{\{[^}]+\}\}\}" templates/ 2>/dev/null | wc -l | tr -d ' ')
+            if [ "${HITS:-0}" -gt 0 ]; then
+              echo "| 🔴 critical | third_party_api_integration · mustache_output_escaped → ${HITS} triple-mustache (raw HTML) usage(s) | aem_json2html |" >> $GITHUB_STEP_SUMMARY
+              CUR=$(cat $RUNNER_TEMP/eds_critical.txt); echo $((CUR + HITS)) > $RUNNER_TEMP/eds_critical.txt
+            else
+              echo "| ✅ pass | third_party_api_integration · mustache_output_escaped | aem_json2html |" >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "| ➖ n/a  | third_party_api_integration · mustache_output_escaped (no \`templates/\`) | aem_json2html |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # ----------------------------------------------------------------
+      # GATE: security
+      # CHECK: csp_changes_are_minimal  (severity: major)
+      # SOURCE: aem_csp
+      # Flags any CSP edit in head.html so a security reviewer is alerted.
+      # ----------------------------------------------------------------
+      - name: 🔐 csp_changes_are_minimal
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch --no-tags --depth=1 origin "${{ github.base_ref }}" 2>/dev/null || true
+          DIFF=$(git diff "origin/${{ github.base_ref }}"...HEAD -- head.html 2>/dev/null | grep -iE "Content-Security-Policy" | wc -l | tr -d ' ')
+          if [ "${DIFF:-0}" -gt 0 ]; then
+            echo "| 🟠 major | security · csp_changes_are_minimal → CSP modified in \`head.html\` (needs security review) | aem_csp |" >> $GITHUB_STEP_SUMMARY
+            CUR=$(cat $RUNNER_TEMP/eds_major.txt); echo $((CUR + 1)) > $RUNNER_TEMP/eds_major.txt
+          else
+            echo "| ✅ pass | security · csp_changes_are_minimal | aem_csp |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # ----------------------------------------------------------------
+      # GATE: performance
+      # CHECK: defer_noncritical_logic  (severity: major)
+      # SOURCE: aem_project_anatomy
+      # ----------------------------------------------------------------
+      - name: ⏳ defer_noncritical_logic
+        run: |
+          if [ -f scripts/delayed.js ] && grep -q "delayed" scripts/scripts.js 2>/dev/null; then
+            echo "| ✅ pass | performance · defer_noncritical_logic | aem_project_anatomy |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| 🟠 major | performance · defer_noncritical_logic → \`scripts/delayed.js\` missing or not referenced from \`scripts.js\` | aem_project_anatomy |" >> $GITHUB_STEP_SUMMARY
+            CUR=$(cat $RUNNER_TEMP/eds_major.txt); echo $((CUR + 1)) > $RUNNER_TEMP/eds_major.txt
+          fi
+
+      # ----------------------------------------------------------------
+      # GATE: security
+      # CHECK: dangerous JS APIs (document.write / new Function)
+      # SOURCE: aem_csp  (companion to existing eval() check)
+      # ----------------------------------------------------------------
+      - name: 🔐 dangerous_js_apis
+        run: |
+          DW=$(grep -rnE "document\.write\(" --include="*.js" blocks/ scripts/ 2>/dev/null | wc -l | tr -d ' ')
+          NF=$(grep -rnE "new\s+Function\(" --include="*.js" blocks/ scripts/ 2>/dev/null | wc -l | tr -d ' ')
+          TOTAL=$((${DW:-0} + ${NF:-0}))
+          if [ "$TOTAL" -gt 0 ]; then
+            echo "| 🔴 critical | security · dangerous_js_apis → ${DW} \`document.write\`, ${NF} \`new Function()\` | aem_csp |" >> $GITHUB_STEP_SUMMARY
+            CUR=$(cat $RUNNER_TEMP/eds_critical.txt); echo $((CUR + TOTAL)) > $RUNNER_TEMP/eds_critical.txt
+          else
+            echo "| ✅ pass | security · dangerous_js_apis | aem_csp |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # ----------------------------------------------------------------
+      # Final gate verdict — fail on any critical
+      # ----------------------------------------------------------------
+      - name: 🎯 EDS Gates Verdict
+        id: eds-final
+        run: |
+          CRIT=$(cat $RUNNER_TEMP/eds_critical.txt)
+          MAJ=$(cat $RUNNER_TEMP/eds_major.txt)
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Critical:** ${CRIT} · **Major:** ${MAJ}" >> $GITHUB_STEP_SUMMARY
+          echo "issues=critical=${CRIT};major=${MAJ}" >> $GITHUB_OUTPUT
+          if [ "$CRIT" -gt 0 ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "❌ Critical EDS gate failures — see table above." >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+
+  # ============================================
+  # Job 3: Security Audit (npm audit + Grype)
+  # ============================================
+  security:
+    name: 🔒 Security
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      security-events: write   # required to upload SARIF to GitHub Code Scanning
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      - run: npm ci
+
+      # ----------------------------------------
+      # Policy: vulnerabilities are BLOCKING for pushes/PRs targeting main,
+      # advisory-only on feature branches so devs aren't blocked mid-flight.
+      # Adjust IS_BLOCKING below if DevOps wants a different policy.
+      # ----------------------------------------
+      - name: Determine enforcement mode
+        id: policy
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ] \
+             || [ "${{ github.base_ref }}" = "main" ]; then
+            echo "is_blocking=true"  >> "$GITHUB_OUTPUT"
+          else
+            echo "is_blocking=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ----------------------------------------
+      # Gitleaks — hard-coded secrets / API keys in source
+      # GATE: security · secrets_not_exposed_client_side
+      # SOURCE: aem_csp / aem_integrations
+      # ----------------------------------------
+      - name: 🔑 Gitleaks Secret Scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Don't fail on existing baseline secrets; flip to false to enforce.
+          GITLEAKS_ENABLE_UPLOAD_ARTIFACT: true
+
+      # ----------------------------------------
+      # npm audit — known advisories in packages
+      # ----------------------------------------
+      - name: Run npm audit
+        run: |
+          if [ "${{ steps.policy.outputs.is_blocking }}" = "true" ]; then
+            npm audit --audit-level=high
+          else
+            npm audit --audit-level=high || true
+          fi
+
+      # ----------------------------------------
+      # Grype — deep vulnerability scan (filesystem/npm)
+      # Scans JS packages, transitive deps & OS-level artifacts
+      # ----------------------------------------
+      - name: 🛡️ Grype Vulnerability Scan
+        id: grype
+        uses: anchore/scan-action@v7
+        with:
+          path: "."
+          output-format: sarif
+          severity-cutoff: high
+          # Blocking on main / PRs to main, advisory on other branches
+          fail-build: ${{ steps.policy.outputs.is_blocking }}
+          only-fixed: false
+          cache-db: true
+
+      # ----------------------------------------
+      # Upload SARIF → GitHub Security / Code Scanning tab
+      # Skipped on PRs from forks (token is read-only there).
+      # ----------------------------------------
+      - name: 📤 Upload Grype SARIF to GitHub Security
+        if: always() && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: ${{ steps.grype.outputs.sarif }}
+          category: grype
+
+      # ----------------------------------------
+      # Grype Security Summary in Step Summary
+      # ----------------------------------------
+      - name: 📊 Security Summary
+        if: always()
+        run: |
+          echo "## 🛡️ Grype Vulnerability Scan" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Scan results uploaded to **GitHub Security → Code Scanning** tab." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Setting | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|---------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Scan target | Repository filesystem + npm packages |" >> $GITHUB_STEP_SUMMARY
+          echo "| Severity cutoff | \`high\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Enforcement | ${{ steps.policy.outputs.is_blocking == 'true' && 'Blocking (high/critical fail the build)' || 'Advisory (report-only on feature branches)' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| SARIF output | Uploaded to Code Scanning |" >> $GITHUB_STEP_SUMMARY
+
+  # ============================================
+  # Job 4: PR Comment
+  # ============================================
+  pr-comment:
+    name: 📝 PR Comment
+    runs-on: ubuntu-latest
+    needs: [build, code-quality, aem-eds-gates, security]
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Add PR Comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const previewUrl = '${{ needs.build.outputs.preview-url }}';
+            const score = '${{ needs.code-quality.outputs.score }}' || 'N/A';
+            
+            const scoreEmoji = score >= 90 ? '🟢' : score >= 70 ? '🟡' : score >= 50 ? '🟠' : '🔴';
+            
+            const body = `## 🔗 Preview Environment
+            | Environment | URL |
+            |-------------|-----|
+            | 🌐 Preview | [${previewUrl}](${previewUrl}) |
+            
+            ### 📊 Code Quality Score: ${scoreEmoji} ${score}/100
+            
+            View the **Actions** tab → **Code Quality Analysis** job for detailed report.
+            
+            ### Automated Checks
+            
+            | Check | Status |
+            |-------|--------|
+            | 🔍 Linting | ${{ needs.build.result == 'success' && '✅ Passed' || '❌ Failed' }} |
+            | 📊 Code Quality | ${score >= 70 ? '✅ Good' : '⚠️ Review Needed'} |
+            | 🧱 AEM EDS Gates | ${{ needs.aem-eds-gates.result == 'success' && '✅ Passed' || needs.aem-eds-gates.result == 'failure' && '❌ Critical Failures' || '⚠️ Review Required' }} |
+            | 🛡️ Grype Scan | ${{ needs.security.result == 'success' && '✅ Passed' || needs.security.result == 'failure' && '❌ Vulnerabilities Found' || '⚠️ Check Security Tab' }} |
+
+            > ℹ️ AEM PSI / Lighthouse is handled by the aem-code-sync plugin (preview environment).
+
+            ---
+            *🤖 Updated automatically on each push*`;
+            
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            const botComment = comments.find(c => 
+              c.user.type === 'Bot' && 
+              c.body.includes('Preview Environment')
+            );
+            
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body
+              });
+            }
+

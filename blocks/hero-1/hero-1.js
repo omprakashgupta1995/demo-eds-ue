@@ -41,6 +41,10 @@ export default function decorate(block) {
     row.classList.add("swiper-slide");
     let image_wrapper = row.children?.[0];
     image_wrapper.classList.add("slide-image-wrapper");
+    let main_slide_content = image_wrapper?.children[0];
+    main_slide_content?.classList.add("main-slide-content");
+    let bannerImage = main_slide_content.querySelector("img");
+    bannerImage?.classList.add("hero-carousel-image");
     const anchor = image_wrapper.querySelector("a");
     if (anchor) {
       const url = resolveDamUrl(anchor.href);
