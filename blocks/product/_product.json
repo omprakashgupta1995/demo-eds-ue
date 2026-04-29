@@ -39,20 +39,20 @@
         {
           "component": "richtext",
           "valueType": "string",
-          "name": "text",
-          "label": "Text"
+          "name": "text1",
+          "label": "Heading"
         },
         {
           "component": "richtext",
           "valueType": "string",
-          "name": "text",
-          "label": "Text"
+          "name": "text2",
+          "label": "Subheading"
         },
         {
           "component": "button",
           "valueType": "string",
-          "name": "text",
-          "label": "Text"
+          "name": "text3",
+          "label": "Button "
         }
       ]
     },
