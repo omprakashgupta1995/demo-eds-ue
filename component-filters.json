@@ -22,7 +22,8 @@
       "download-banner",
       "contact-details",
       "hero-1",
-      "help"
+      "help",
+      "product"
     ]
   },
   {
@@ -75,6 +76,12 @@
     "components": [
       "hero-item-1",
       "hero-item-2"
+    ]
+  },
+  {
+    "id": "product",
+    "components": [
+      "product-item"
     ]
   }
 ]
