@@ -1,6 +1,6 @@
-export default function decorate(block){
-    document.querySelectorAll('.contact-cards.block > div')
-    .forEach((card) => {
-        card.classList.add('contact-card');
-    });
+export default function decorate(block) {
+  const cards = block.querySelectorAll(":scope > div");
+  cards.forEach((card) => {
+    card.classList.add("contact-card");
+  });
 }

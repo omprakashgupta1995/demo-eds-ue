@@ -1,5 +1,6 @@
-export default function decorate(block){
-    console.log(block)
-    const rows = [...block.children];
-    
+export default function decorate(block) {
+  const rows = [...block.children];
+  rows.forEach((row) => {
+    row.classList.add("nav-icon-item");
+  });
 }
