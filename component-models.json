@@ -534,8 +534,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "col1_image",
-        "label": "Image",
-        "multi": false
+        "label": "Image"
       },
       {
         "component": "text",
