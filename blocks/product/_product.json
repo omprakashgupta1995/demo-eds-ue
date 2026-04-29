@@ -1,100 +1,113 @@
 {
-"definitions": [
+  "definitions": [
     {
-        "title": "Product",
-        "id": "product",
-        "plugins": {
-            "xwalk": {
-                "page": {
-                    "resourceType": "core/franklin/components/block/v1/block",
-                    "template": {
-                        "name": "Product",
-                        "filter": "product",
-                        "model": "product"
-                    }
-                }
+      "title": "Product",
+      "id": "product",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Product",
+              "filter": "product",
+              "model": "product"
             }
+          }
         }
+      }
     },
     {
-        "title": "Product Item",
-        "id": "product-item",
-        "plugins": {
-            "xwalk": {
-                "page": {
-                    "resourceType": "core/franklin/components/block/v1/block/item",
-                    "template": {
-                        "name": "Product Item",
-                        "model": "product-item"
-                    }
-                }
+      "title": "Product Item 1",
+      "id": "product-item-1",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Product Item 1",
+              "model": "product-item-1"
             }
+          }
         }
-    }
-],
-"models": [
-    {
-        "id": "product",
-        "fields": [
-            {
-                "component": "richtext",
-                "valueType": "string",
-                "name": "text1",
-                "label": "Heading"
-            },
-            {
-                "component": "richtext",
-                "valueType": "string",
-                "name": "text2",
-                "label": "Subheading"
-            },
-            {
-                "component": "richtext",
-                "valueType": "string",
-                "name": "text3",
-                "label": "Button "
-            }
-        ]
+      }
     },
     {
-        "id": "product-item",
-        "fields": [
-            {
-                "component": "reference",
-                "valueType": "string",
-                "name": "col1_image",
-                "label": "Image"
-            },
-            {
-                "component": "text",
-                "valueType": "string",
-                "name": "col1_imageAlt",
-                "label": "Image Alt",
-                "multi": false
-            },
-            {
-                "component": "richtext",
-                "name": "col2_text",
-                "value": "",
-                "label": "Text",
-                "valueType": "string"
-            },
-            {
-                "component": "richtext",
-                "name": "col2_button",
-                "value": "",
-                "label": "Button",
-                "valueType": "string"
+      "title": "Product Item 2",
+      "id": "product-item-2",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Product Item 2",
+              "model": "product-item-2"
             }
-        ]
+          }
+        }
+      }
     }
-],
-"filters": [
+  ],
+  "models": [
     {
-        "id": "product",
-        "components": [
-            "product-item"
-        ]
+      "id": "product-item-1",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "text1",
+          "label": "Heading"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "text2",
+          "label": "Subheading"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "text3",
+          "label": "Button "
+        }
+      ]
+    },
+    {
+      "id": "product-item-2",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col1_image",
+          "label": "Image"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "col1_imageAlt",
+          "label": "Image Alt",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "col2_text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "col2_button",
+          "value": "",
+          "label": "Button",
+          "valueType": "string"
+        }
+      ]
     }
-]
+  ],
+  "filters": [
+    {
+      "id": "product",
+      "components": ["product-item-1", "product-item-2"]
+    }
+  ]
 }

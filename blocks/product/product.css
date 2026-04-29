@@ -1,0 +1,6 @@
+.section.product-container{
+    background-color: white;
+    position: relative;
+    z-index: 10;
+    margin: 0;
+}
