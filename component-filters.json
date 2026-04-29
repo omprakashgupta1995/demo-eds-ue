@@ -84,5 +84,11 @@
     "components": [
       "list-item"
     ]
+  },
+  {
+    "id": "product",
+    "components": [
+      "product-item"
+    ]
   }
 ]
