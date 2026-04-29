@@ -49,7 +49,7 @@
           "label": "Subheading"
         },
         {
-          "component": "button",
+          "component": "richtext",
           "valueType": "string",
           "name": "text3",
           "label": "Button "
@@ -80,7 +80,7 @@
           "valueType": "string"
         },
         {
-          "component": "button",
+          "component": "richtext",
           "name": "col2_button",
           "value": "",
           "label": "Button",
