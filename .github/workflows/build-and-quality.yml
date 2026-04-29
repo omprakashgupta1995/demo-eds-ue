@@ -16,10 +16,10 @@ name: Build & Code Quality
 on:
   push:
     branches:
-      - main
+      - tushar-01
   pull_request:
     branches:
-      - main
+      - tushar-01
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
