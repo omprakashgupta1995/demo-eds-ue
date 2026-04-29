@@ -54,7 +54,7 @@ export default async function decorate(block) {
     let mediaSrc = '';
     let thumbSrc = '';
 
-    // IMAGE
+    // IMAGEx
     if (type === 'Image') {
       const rawImg = mediaEl.querySelector('img')?.getAttribute('src');
       mediaSrc = resolveMediaUrl(rawImg);

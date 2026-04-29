@@ -1,0 +1,88 @@
+.help-container {
+  background: #000;
+  padding: 60px 80px;
+  color: #fff;
+  clip-path: polygon(0px 0px, calc(15% + 300px) 0px, calc(15% + 400px) 72px, 100% 72px, 100% 0px, 100% 0px, 100% 100%, 0px 100%);
+}
+.section.help-container{
+    position: relative;
+    z-index: 6;
+    margin-top: -100px;
+}
+/* TITLE */
+.help-container h2,
+.help-container p:first-child {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* GRID LAYOUT */
+.help.block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* FIRST ROW (HEADING) FULL WIDTH */
+.help.block > div:first-child {
+  grid-column: 1 / -1;
+}
+
+/* CARD */
+.help.block > div:not(:first-child) {
+  background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+  padding: 30px 20px;
+  position: relative;
+  text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  /* angled cut */
+  clip-path: polygon(
+    10% 0%,
+    100% 0%,
+    100% 70%,
+    90% 100%,
+    0% 100%,
+    0% 30%
+  );
+}
+
+/* HOVER EFFECT */
+.help.block > div:not(:first-child):hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #333, #222);
+}
+
+/* ICON */
+.help.block img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.help.block p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .help.block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .help-container {
+    padding: 40px 20px;
+  }
+
+  .help.block {
+    grid-template-columns: 1fr;
+  }
+}
