@@ -1,25 +1,65 @@
-/* Base container styling */
+/* --------------------------------------
+   1. MAIN CONTAINER
+--------------------------------------- */
+/* Replace your existing .card-1-container block with this: */
+.section.card-1-container {
+    position: relative;
+    margin-top: -80px;
+    z-index: 5;
+}
 .card-1-container {
-    background-color: #000000; /* Matches the black background in your screenshot */
-    padding: 40px;
-    font-family: sans-serif; /* Fallback, adjust to your specific font */
+    background-color: #000000;
+
+    /* The correct shape: high on the left, slanting down toward the middle */
+    clip-path: polygon(
+        0% 0%,
+        /* 1. Top-left corner */ 30% 0%,
+        /* 2. Top edge stays flat until 30% of the screen width */ 40% 80px,
+        /* 3. Slants down and to the right */ 100% 80px,
+        /* 4. Continues flat to the top-right edge (now lowered) */ 100% 100%,
+        /* 5. Bottom-right corner */ 0% 100% /* 6. Bottom-left corner */
+    );
+
+    /* Pushed the padding down a bit so your cards on the right don't get clipped by the lowered edge */
+    padding: 60px 40px 40px 40px;
+    font-family: Arial, sans-serif;
 }
 
-/* Flexbox layout for the row of cards */
+/* --------------------------------------
+   2. FLEXBOX LAYOUT (Rows & Columns)
+--------------------------------------- */
 .card-1.block {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    gap: 16px; /* Space between cards */
-    align-items: center;
+    gap: 16px;
     justify-content: center;
+    max-width: 1200px; /* Optional: keeps cards from stretching too far on wide screens */
+    margin: 0 auto;
 }
 
-/* Individual Card Styling */
-.card-1.block > div {
-    background-color: #2b2b2b; /* Dark grey background */
-    width: 260px; /* Adjust width as needed */
-    height: 140px; /* Adjust height as needed */
+/* --------------------------------------
+   3. TITLE STYLING (The 1st Div)
+--------------------------------------- */
+.card-1.block > div:first-child {
+    width: 100%; /* Forces title to its own row */
+    margin-bottom: 12px;
+}
+
+.card-1.block > div:first-child p {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    font-family: var(--transducer-font-family);
+}
+
+/* --------------------------------------
+   4. CARD STYLING (The remaining Divs)
+--------------------------------------- */
+.card-1.block > div:not(:first-child) {
+    background-color: #2b2b2b; /* Dark grey */
+    width: 260px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +68,7 @@
     cursor: pointer;
     transition: background-color 0.2s ease;
 
-    /* This creates the chamfered (cut) corners on top-left and bottom-right */
+    /* Small chamfered cuts on the top-left and bottom-right corners */
     clip-path: polygon(
         20px 0%,
         100% 0%,
@@ -39,26 +79,25 @@
     );
 }
 
-/* Optional hover effect to make it interactive */
-.card-1.block > div:hover {
-    background-color: #363636;
+/* Card Hover Effect */
+.card-1.block > div:not(:first-child):hover {
+    background-color: #383838;
 }
 
-/* Center the image and ensure it respects container bounds */
-.card-1.block > div picture {
+/* Image Positioning Inside Cards */
+.card-1.block > div:not(:first-child) picture {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card-1.block > div img {
+.card-1.block > div:not(:first-child) img {
     display: block;
-    /* Adjusting to the white/red icons in the screenshot */
     object-fit: contain;
 }
 
-/* Typography for the text */
-.card-1.block > div p {
+/* Text Typography Inside Cards */
+.card-1.block > div:not(:first-child) p {
     color: #ffffff;
     margin: 0;
     font-size: 16px;

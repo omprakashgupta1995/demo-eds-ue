@@ -1,5 +1,10 @@
 @import url(swiper.min.css);
 
+.section.hero-carousel-container {
+    position: sticky;
+    top: 0;
+}
+
 /* 1. Make the Carousel Full Screen */
 .hero-carousel-wrapper {
     position: relative;
