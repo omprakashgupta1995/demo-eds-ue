@@ -158,6 +158,51 @@
           }
         },
         {
+          "title": "Card v3",
+          "id": "cardv3",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Card v3",
+                  "filter": "cardv3"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card v3 Item 1",
+          "id": "cardv3-item-1",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Card v3 Item 1",
+                  "model": "cardv3-item-1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card v3 Item 2",
+          "id": "cardv3-item-2",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Card v3 Item 1",
+                  "model": "cardv3-item-2"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Carousel",
           "id": "carousel",
           "plugins": {

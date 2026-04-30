@@ -61,6 +61,10 @@ export default function decorate(block) {
   thumbnailsBar.classList.add("hero-1-thumbnails");
   blockParent.appendChild(thumbnailsBar);
 
+  const swiperPagination = document.createElement("div");
+  swiperPagination.classList.add("swiper-pagination");
+  blockParent.appendChild(swiperPagination);
+
   rows.forEach((row, index) => {
     row.classList.add("swiper-slide");
     row.dataset.slideIndex = index;
@@ -138,6 +142,11 @@ export default function decorate(block) {
 
   swiper = new Swiper(blockParent, {
     slideToClickedSlide: true,
+    pagination: {
+      el: swiperPagination,
+      type: "fraction",
+      clickable: true,
+    },
   });
 
   swiper.on("slideChange", () =>
