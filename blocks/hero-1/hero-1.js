@@ -15,17 +15,6 @@ function resolveDamUrl(path) {
 }
 
 function getMediaTypeFromUrl(url) {
-  // try {
-  //   const response = await fetch(url, { method: 'HEAD' });
-  //   const contentType = response.headers.get('content-type');
-
-  //   if (contentType?.startsWith('image/')) return 'image';
-  //   if (contentType?.startsWith('video/')) return 'video';
-  // } catch (e) {
-  //   // silent fail → fallback below
-  // }
-
-  // :fire: fallback to extension check
   const ext = url.split(".").pop().toLowerCase().split("?")[0];
   if (["jpg", "jpeg", "png", "gif", "webp", "svg"].includes(ext)) {
     return "image";
@@ -34,19 +23,55 @@ function getMediaTypeFromUrl(url) {
 
   return "unknown";
 }
+
+function updateSlideState(swiper, thumbnails, exploreButtons) {
+  const activeIndex = swiper.activeIndex || 0;
+  thumbnails.forEach((thumb, index) => {
+    if (!thumb) return;
+    thumb.classList.toggle("active", index === activeIndex);
+  });
+  exploreButtons.forEach((button, index) => {
+    if (!button) return;
+    button.style.display =
+      index > 0 && index === activeIndex ? "inline-flex" : "none";
+  });
+}
+
+function getExistingThumbnailElement(row, bannerImage) {
+  const images = Array.from(row.querySelectorAll("img")).filter(
+    (img) => img !== bannerImage,
+  );
+  if (!images.length) return null;
+  const thumbnailImage = images[0];
+  const thumbnailAnchor = thumbnailImage.closest("a");
+  return thumbnailAnchor || thumbnailImage.parentElement || thumbnailImage;
+}
+
 export default function decorate(block) {
   const blockParent = block.parentElement;
-  blockParent.classList.add("swiper");
+  blockParent.classList.add("swiper", "hero-1-swiper");
   block.classList.add("swiper-wrapper");
+
   const rows = [...block.children];
-  rows.forEach((row) => {
+  const thumbnails = [];
+  const exploreButtons = [];
+  let swiper = null;
+
+  const thumbnailsBar = document.createElement("div");
+  thumbnailsBar.classList.add("hero-1-thumbnails");
+  blockParent.appendChild(thumbnailsBar);
+
+  rows.forEach((row, index) => {
     row.classList.add("swiper-slide");
+    row.dataset.slideIndex = index;
+
     const imageWrapper = row.children?.[0];
     imageWrapper?.classList.add("slide-image-wrapper");
     const mainSlideContent = imageWrapper?.children[0];
     mainSlideContent?.classList.add("main-slide-content");
     const bannerImage = mainSlideContent?.querySelector("img");
     bannerImage?.classList.add("hero-carousel-image");
+
     const anchor = imageWrapper?.querySelector("a");
     if (anchor) {
       const url = resolveDamUrl(anchor.href);
@@ -65,17 +90,60 @@ export default function decorate(block) {
         mediaElement.loop = true;
         mediaElement.muted = true;
         mediaElement.playsInline = true;
-      } else {
-        return;
       }
-      anchor.parentNode.insertBefore(mediaElement, anchor);
-      anchor.remove();
+
+      if (mediaElement) {
+        anchor.parentNode.insertBefore(mediaElement, anchor);
+        anchor.remove();
+      }
+    }
+
+    const thumbnailElement = getExistingThumbnailElement(row, bannerImage);
+    if (thumbnailElement) {
+      thumbnailElement.classList.add("hero-carousel-thumb");
+      thumbnailElement.dataset.slideIndex = index;
+      thumbnailElement.setAttribute("role", "button");
+      thumbnailElement.style.cursor = "pointer";
+      thumbnailElement.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (swiper) swiper.slideTo(index);
+      });
+      thumbnailsBar.appendChild(thumbnailElement);
+      thumbnails.push(thumbnailElement);
+    } else {
+      thumbnails.push(null);
+    }
+
+    const allAnchors = Array.from(row.querySelectorAll("a"));
+    const ctaAnchor = allAnchors.find(
+      (anchorElement) => !anchorElement.closest(".hero-carousel-thumb"),
+    );
+    if (ctaAnchor && index > 0) {
+      const exploreButton = document.createElement("a");
+      exploreButton.href = ctaAnchor.href;
+      exploreButton.textContent = "EXPLORE NOW";
+      exploreButton.classList.add("hero-explore-button");
+      exploreButton.target = ctaAnchor.target || "_self";
+      exploreButton.setAttribute(
+        "aria-label",
+        ctaAnchor.textContent.trim() || "Explore now",
+      );
+      row.appendChild(exploreButton);
+      ctaAnchor.remove();
+      exploreButtons.push(exploreButton);
+    } else {
+      exploreButtons.push(null);
     }
   });
 
-  return new Swiper(blockParent, {
-    // autoplay:{
-    //     delay:3000,
-    // }
+  swiper = new Swiper(blockParent, {
+    slideToClickedSlide: true,
   });
+
+  swiper.on("slideChange", () =>
+    updateSlideState(swiper, thumbnails, exploreButtons),
+  );
+  updateSlideState(swiper, thumbnails, exploreButtons);
+
+  return swiper;
 }

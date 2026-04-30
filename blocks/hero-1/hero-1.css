@@ -1,16 +1,123 @@
 @import url("../carousel/swiper.min.css");
 
+main > .section {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
 .hero-1-wrapper {
     width: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
+    position: fixed;
 }
 
+.hero-1-swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-1-swiper .swiper-wrapper,
+.hero-1-swiper .swiper-slide,
+.hero-1-swiper .slide-image-wrapper {
+    height: 100%;
+}
+a:any-link {
+    color: white;
+}
 main > .section > div {
     max-width: 100%;
+    width: 100%;
     margin: auto;
     padding: 0;
 }
-.hero-carousel-image {
+
+.hero-carousel-image,
+.hero-carousel-video {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-1-thumbnails {
+    margin-bottom: 24px;
+    position: absolute;
+    right: -10%;
+    transform: translateX(-35%);
+    bottom: 28px;
+    z-index: 20;
+    display: flex;
+    gap: 16px;
+    padding: 8px 12px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    /* max-width: calc(100% - 40px); */
+}
+
+.hero-carousel-thumb,
+.hero-1-thumbnails a.hero-carousel-thumb {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    opacity: 1;
+    transition:
+        opacity 180ms ease,
+        transform 180ms ease,
+        box-shadow 180ms ease;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-carousel-thumb:hover,
+.hero-carousel-thumb.active,
+.hero-1-thumbnails a.hero-carousel-thumb:hover,
+.hero-1-thumbnails a.hero-carousel-thumb.active {
+    border-bottom: 4px solid #fff;
+}
+
+.hero-carousel-thumb img,
+.hero-1-thumbnails a.hero-carousel-thumb img {
+    width: 160px;
+    height: 96px;
+    object-fit: fill;
+    display: block;
+}
+
+.hero-explore-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    font-weight: lighter;
+
+    font-weight: 700;
+    padding: 0.5rem 6rem;
+    width: max-content;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #fff;
+    font-family: var(--font-tstar-regular);
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero-explore-button:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(-50%) scale(1.02);
+}
+
+.slide-image-wrapper,
+.main-slide-content {
+    position: relative;
 }
