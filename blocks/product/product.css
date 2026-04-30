@@ -1,0 +1,189 @@
+/* Base Container */
+.product-container {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%; /* Ensures it tries to take full width */
+    max-width: 1400px; /* Increased to give it more breathing room */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Main Flex Container */
+.product.block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Hide the first two empty placeholder divs */
+.product.block > div:nth-child(1),
+.product.block > div:nth-child(2) {
+    display: none;
+}
+
+/* =========================================
+   HEADER SECTION 
+   ========================================= */
+.product.block > div:nth-child(3) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "subtitle button"
+        "title button";
+    align-items: end;
+    padding-bottom: 24px;
+}
+
+/* "OUR RANGE" */
+.product.block > div:nth-child(3) > div:nth-child(1) {
+    grid-area: subtitle;
+}
+.product.block > div:nth-child(3) > div:nth-child(1) h3 {
+    color: #e31837;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+}
+
+/* "Discover Your Hero" */
+.product.block > div:nth-child(3) > div:nth-child(2) {
+    grid-area: title;
+}
+.product.block > div:nth-child(3) > div:nth-child(2) h3 {
+    font-size: 46px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+}
+
+/* "EXPLORE ALL PRODUCTS" Button */
+.product.block > div:nth-child(3) > div:nth-child(3) {
+    grid-area: button;
+}
+.product.block > div:nth-child(3) > div:nth-child(3) p {
+    border: 1px solid #b50015;
+    color: #b50015;
+    padding: 10px 18px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* FIX: Prevents text from wrapping to a new line */
+}
+
+.product.block > div:nth-child(3) > div:nth-child(3) p::after {
+    content: "\2197";
+    margin-left: 8px;
+    font-size: 13px;
+}
+
+/* =========================================
+   IMAGE CARDS SECTION 
+   ========================================= */
+/* Target 4th, 5th, and 6th divs */
+.product.block > div:nth-child(n + 4) {
+    flex: 1 1 0; /* FIX: Bulletproof equal width columns */
+    min-width: 0; /* FIX: Prevents flex items from overflowing */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Image styling */
+.product.block > div:nth-child(n + 4) picture,
+.product.block > div:nth-child(n + 4) img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 5; /* FIX: Adjusted ratio to make images wider */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Zoom Image on Hover */
+.product.block > div:nth-child(n + 4):hover img {
+    transform: scale(1.08);
+}
+
+/* Dark Gradient */
+.product.block > div:nth-child(n + 4):::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* The Text inside the image */
+.product.block > div:nth-child(n + 4) > div:nth-child(2) {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.product.block > div:nth-child(n + 4) > div:nth-child(2) p {
+    font-size: 26px;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Text turns Red on Hover */
+.product.block > div:nth-child(n + 4):hover > div:nth-child(2) p {
+    color: #e31837;
+}
+
+/* =========================================
+   JS-INJECTED HOVER ARROW
+   ========================================= */
+.hover-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e31837;
+    color: #fff;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show Arrow on Hover */
+.product.block > div:nth-child(n + 4):hover .hover-arrow {
+    opacity: 1;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 768px) {
+    .product.block > div:nth-child(n + 4) {
+        flex: 1 1 100%; /* Stack images on mobile */
+    }
+    .product.block > div:nth-child(3) {
+        grid-template-areas:
+            "subtitle subtitle"
+            "title title"
+            "button button";
+        gap: 12px;
+    }
+}
