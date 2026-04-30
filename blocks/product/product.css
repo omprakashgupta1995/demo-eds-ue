@@ -1,8 +1,7 @@
 /* Base Container */
 .product-container {
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%; /* Ensures it tries to take full width */
-    max-width: 1400px; /* Increased to give it more breathing room */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
@@ -24,6 +23,8 @@
 /* =========================================
    HEADER SECTION 
    ========================================= */
+/* The 3rd div takes 100% width. We use CSS Grid internally just 
+   to perfectly stack the titles on the left and button on the right */
 .product.block > div:nth-child(3) {
     width: 100%;
     display: grid;
@@ -41,7 +42,7 @@
 }
 .product.block > div:nth-child(3) > div:nth-child(1) h3 {
     color: #e31837;
-    font-size: 20px;
+    font-size: 20px; /* Made bigger as requested */
     font-weight: 800;
     text-transform: uppercase;
     margin: 0 0 5px 0;
@@ -73,7 +74,6 @@
     display: inline-block;
     cursor: pointer;
     letter-spacing: 0.5px;
-    white-space: nowrap; /* FIX: Prevents text from wrapping to a new line */
 }
 
 .product.block > div:nth-child(3) > div:nth-child(3) p::after {
@@ -87,22 +87,20 @@
    ========================================= */
 /* Target 4th, 5th, and 6th divs */
 .product.block > div:nth-child(n + 4) {
-    flex: 1 1 0; /* FIX: Bulletproof equal width columns */
-    min-width: 0; /* FIX: Prevents flex items from overflowing */
+    width: 33.333%; /* Exactly one third of the row */
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Keeps zoom inside the box */
     cursor: pointer;
 }
 
-/* Image styling */
+/* Image Fix: Using aspect-ratio prevents images from collapsing to 0 height */
 .product.block > div:nth-child(n + 4) picture,
 .product.block > div:nth-child(n + 4) img {
     width: 100%;
-    height: 100%;
-    aspect-ratio: 4 / 5; /* FIX: Adjusted ratio to make images wider */
+    aspect-ratio: 361 / 679; /* Ratio matching your HTML attributes */
     object-fit: cover;
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease; /* Smooth zoom */
 }
 
 /* Zoom Image on Hover */
@@ -110,8 +108,8 @@
     transform: scale(1.08);
 }
 
-/* Dark Gradient */
-.product.block > div:nth-child(n + 4):::before {
+/* Dark Gradient to make text readable */
+.product.block > div:nth-child(n + 4)::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -123,7 +121,7 @@
     pointer-events: none;
 }
 
-/* The Text inside the image */
+/* The Text inside the image (Starts White) */
 .product.block > div:nth-child(n + 4) > div:nth-child(2) {
     position: absolute;
     bottom: 20px;
@@ -135,10 +133,10 @@
     font-size: 26px;
     font-weight: 900;
     font-style: italic;
-    color: #fff;
+    color: #fff; /* Starts pure white */
     margin: 0;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth color change */
 }
 
 /* Text turns Red on Hover */
@@ -163,7 +161,7 @@
     font-size: 16px;
     font-weight: bold;
     z-index: 5;
-    opacity: 0;
+    opacity: 0; /* Hidden normally */
     transition: opacity 0.3s ease;
 }
 
@@ -177,7 +175,7 @@
    ========================================= */
 @media (max-width: 768px) {
     .product.block > div:nth-child(n + 4) {
-        flex: 1 1 100%; /* Stack images on mobile */
+        width: 100%; /* Stack images on mobile */
     }
     .product.block > div:nth-child(3) {
         grid-template-areas:
