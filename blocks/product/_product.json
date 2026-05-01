@@ -54,20 +54,20 @@
         {
           "component": "richtext",
           "valueType": "string",
-          "name": "col1_text1",
+          "name": "col1_heading",
           "label": "Heading"
         },
         {
           "component": "richtext",
           "valueType": "string",
-          "name": "text2",
+          "name": "col1_subheading",
           "label": "Subheading"
         },
         {
           "component": "richtext",
           "valueType": "string",
-          "name": "col2_text3",
-          "label": "Button "
+          "name": "col2_exploreButton",
+          "label": "Button Text"
         }
       ]
     },
@@ -90,7 +90,6 @@
         {
           "component": "richtext",
           "name": "col2_text",
-          "value": "",
           "label": "Text",
           "valueType": "string"
         },
