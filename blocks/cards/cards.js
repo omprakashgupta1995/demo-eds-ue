@@ -1,47 +1,42 @@
-import { createOptimizedPicture } from "../../scripts/aem.js";
-import { moveInstrumentation } from "../../scripts/scripts.js";
-
 export default function decorate(block) {
-  /* change to ul, li */
-  // const ul = document.createElement('ul');
-  // [...block.children].forEach((row) => {
-  //   const li = document.createElement('li');
-  //   moveInstrumentation(row, li);
-  //   while (row.firstElementChild) li.append(row.firstElementChild);
-  //   [...li.children].forEach((div) => {
-  //     if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-  //     else div.className = 'cards-card-body';
-  //   });
-  //   ul.append(li);
-  // });
-  // ul.querySelectorAll('picture > img').forEach((img) => {
-  //   const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
-  //   moveInstrumentation(img, optimizedPic.querySelector('img'));
-  //   img.closest('picture').replaceWith(optimizedPic);
-  // });
-  // block.textContent = '';
-  // block.append(ul);
+  // 1. Guard clause: Exit immediately if the block or its parents don't exist
+  if (!block || !block.parentElement || !block.parentElement.parentElement) {
+    return;
+  }
 
-  let cards_wrapper = block.parentElement;
-  let cards_section = cards_wrapper.parentElement;
+  const cards_wrapper = block.parentElement;
+  const cards_section = cards_wrapper.parentElement;
 
+  // 2. Verify we are in the correct section
   if (
-    cards_section?.classList.contains("bg-black") &&
-    cards_section?.classList.contains("bg-edge")
+    cards_section.classList.contains("bg-black") &&
+    cards_section.classList.contains("bg-edge")
   ) {
-    let hero_card_wrapper = cards_section?.children?.[0];
-    let hero_card_block = hero_card_wrapper?.children?.[0];
+    const hero_card_wrapper = cards_section.children[1];
+    const hero_card_block = hero_card_wrapper?.children?.[0];
 
-    // let card_list = hero_card_block?.children[0];
-    // card_list.classList.add("card-wrapper");
+    // Verify the block and its children exist
     if (hero_card_block && hero_card_block.children) {
-      Array.from(hero_card_block.children).forEach((row) => {
-        let card = row;
+      
+      Array.from(hero_card_block.children).forEach((card) => {
         card.classList.add("card");
-        if(card){
-          card.children?.[0].classList.add('card-image-wrapper');
-          card.children?.[1].classList.add('card-text-wrapper');
-          let cardImage = card.querySelector('img');
+
+        // 3. Safely target wrappers by saving them to variables first
+        const imageWrapper = card.children[0];
+        const textWrapper = card.children[1];
+
+        // Only add classes if those specific children actually exist
+        if (imageWrapper) {
+          imageWrapper.classList.add('card-image-wrapper');
+        }
+        
+        if (textWrapper) {
+          textWrapper.classList.add('card-text-wrapper');
+        }
+
+        // 4. Safely check for the image before adding the class
+        const cardImage = card.querySelector('img');
+        if (cardImage) {
           cardImage.classList.add('card-image');
         }
       });
