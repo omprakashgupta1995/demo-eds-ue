@@ -24,7 +24,8 @@
     --heading-font-family:
         roboto-condensed, roboto-condensed-fallback, sans-serif;
     --transducer-font-family: transducer, sans-serif;
-
+    --tstar-light-font: tstar-light, sans-serif;
+    --tstar-heavy-font: tstar-heavy, sans-serif;
     /* body sizes */
     --body-font-size-m: 22px;
     --body-font-size-s: 19px;

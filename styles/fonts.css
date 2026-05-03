@@ -30,7 +30,20 @@
     font-display: swap;
     src: url("../fonts/transducer-regular.otf") format("opentype");
 }
-
+@font-face {
+    font-family: tstar-light;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/tstar-light.otf") format("opentype");
+}
+@font-face {
+    font-family: tstar-heavy;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/tstar-heavy.otf") format("opentype");
+}
 @font-face {
     font-family: roboto;
     font-style: normal;
