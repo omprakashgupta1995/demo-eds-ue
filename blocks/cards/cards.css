@@ -9,11 +9,15 @@
   height: fit-content;
   padding: 0;
   z-index: 4;
-  margin-top:calc( 750px - 170px);
+  margin-top:calc( 750px - 180px);
   display: flex;
   flex-direction: column;
   color: white;
 } 
+
+main > .section > div{
+  margin: 0;
+}
 
 .section.bg-black.bg-edge .cards-wrapper{
   display: flex;
@@ -22,11 +26,15 @@
   justify-content: center;
   align-items: center;
 } 
+.section.bg-black.bg-edge .default-content-wrapper {
+  width: fit-content;
+}
 @media (width >= 900px){
-  .section.bg-black.bg-edge .default-content-wrapper{
+  .section.bg-black.bg-edge .default-content-wrapper p{
     padding-top: 10px;
     padding-bottom:10px ;
     padding-left: 16rem;
+     width: fit-content;
   }
 }
 
