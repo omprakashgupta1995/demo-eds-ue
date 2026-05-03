@@ -1,6 +1,7 @@
 export default function decorate(block) {
   // 1. Guard clause: Exit immediately if the block or its parents don't exist
   if (!block || !block.parentElement || !block.parentElement.parentElement) {
+     console.error('block parent elements or block does not exist ');
     return;
   }
 
