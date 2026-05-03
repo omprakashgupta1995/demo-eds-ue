@@ -31,3 +31,11 @@
     order: unset;
   }
 }
+.section.columns-container{
+  position: relative;
+ 
+  background-color: white;
+}
+main > .section {
+    margin: 0;
+}

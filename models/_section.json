@@ -40,6 +40,9 @@
             },{
               "name":"Background Edge",
               "value":"bg-edge"
+            },{
+              "name":"Our Range Header ",
+              "value": "our-range-h"
             }
           ]
         }
