@@ -1,8 +1,15 @@
 @import url('./swiper.min.css');
 @media (width >= 900px) {
     main > .section > .hero-carousel-wrapper {
+        margin: 0;
         padding: 0; /* Removes the 32px padding just for this block */
     }
+}
+.hero-carousel-container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 10px;
 }
 .hero-carousel-container .hero-carousel-wrapper .hero-carousel .hero-carousel-slide .slide-image-wrapper .button-container{
     height: 100%;
@@ -15,10 +22,10 @@
     height: 100%;
     overflow: hidden;
 }
-main > .section {
+/* main > .section {
   height: 100%;
   margin: 40px 0;
-}
+} */
 .hero-carousel-container .hero-carousel-wrapper{
     position: relative;
     width: 100%;
@@ -26,6 +33,7 @@ main > .section {
     
 }
 .hero-carousel-container .hero-carousel-wrapper .hero-carousel{
+    /* position: fixed; */
     width: 100%;
     height: 100%;
 }

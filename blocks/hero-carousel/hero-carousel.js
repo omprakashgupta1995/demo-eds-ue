@@ -45,7 +45,7 @@ export default async function decorate(block) {
   blockParent.appendChild(thumbsContainer);
   block.classList.add("swiper-wrapper");
 
-  //  process all rows in parallel
+//  process all rows in parallel
   await Promise.all(
     rows.map(async (row) => {
       row.classList.add("hero-carousel-slide", "swiper-slide");
