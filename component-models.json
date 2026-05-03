@@ -559,6 +559,60 @@
     ]
   },
   {
+    "id": "product-item-1",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_heading",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_subheading",
+        "label": "Subheading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col2_exploreButton",
+        "label": "Button Text"
+      }
+    ]
+  },
+  {
+    "id": "product-item-2",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Image Alt",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_button",
+        "value": "",
+        "label": "Button",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "teaser",
     "fields": [
       {

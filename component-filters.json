@@ -87,6 +87,13 @@
     ]
   },
   {
+    "id": "product-1",
+    "components": [
+      "product-item-1",
+      "product-item-2"
+    ]
+  },
+  {
     "id": "product",
     "components": [
       "product-item-1",
