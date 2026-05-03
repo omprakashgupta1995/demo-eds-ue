@@ -9,7 +9,7 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    top: 10px;
+    top: 0;
 }
 .hero-carousel-container .hero-carousel-wrapper .hero-carousel .hero-carousel-slide .slide-image-wrapper .button-container{
     height: 100%;
