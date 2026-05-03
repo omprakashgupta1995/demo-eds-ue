@@ -1,3 +1,99 @@
-.section{
-    background-color: red;
+/* SECTION BACKGROUND */
+.section.card-v3-container {
+    background: linear-gradient(#000 100%, #3c3c3c 100%);
+    padding: 60px 120px;
+    color: #fff;
+    position: relative;
+
+    clip-path: polygon(
+        0 0,
+        calc(15% + 280px) 0,
+        calc(15% + 380px) 80px,
+        100% 80px,
+        100% 100%,
+        0 100%
+    );
+}
+
+/* MAIN BLOCK */
+.card-v3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* HEADING (force full row) */
+.card-v3-heading {
+    flex: 0 0 100%;
+}
+
+.card-v3-heading h4 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-left: 60px;
+}
+
+/* CARD ITEM */
+.card-v3-item {
+    width: 260px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: linear-gradient(#2a2a2a 0, #2a2a2a 50%);
+
+    clip-path: polygon(
+        0 20px,
+        20px 0,
+        100% 0,
+        100% calc(100% - 20px),
+        calc(100% - 20px) 100%,
+        0 100%
+    );
+
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER */
+.card-v3-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* ICON */
+.card-v3-icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+/* TEXT */
+.card-v3-text p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .section.card-v3-container {
+        padding: 40px;
+        clip-path: none;
+    }
+
+    .card-v3-heading h4 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .card-v3 {
+        justify-content: center;
+    }
 }
