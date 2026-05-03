@@ -90,8 +90,8 @@
   {
     "id": "product-1",
     "components": [
-      "product-item-1",
-      "product-item-2"
+      "productv1",
+      "productv2"
     ]
   },
   {

@@ -386,30 +386,30 @@
           }
         },
         {
-          "title": "Product Item 1",
-          "id": "product-item-1",
+          "title": "Product v1",
+          "id": "productv1",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Product Item 1",
-                  "model": "product-item-1"
+                  "name": "Product v1",
+                  "model": "productv1"
                 }
               }
             }
           }
         },
         {
-          "title": "Product Item 2",
-          "id": "product-item-2",
+          "title": "Product v2",
+          "id": "productv2",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Product Item 2",
-                  "model": "product-item-2"
+                  "name": "Product v2",
+                  "model": "productv2"
                 }
               }
             }
