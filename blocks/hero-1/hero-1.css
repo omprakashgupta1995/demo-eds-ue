@@ -8,32 +8,22 @@ p {
     margin: 0;
 }
 
-.hero-1-container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
 
-/* ✅ Only outer container controls height */
 .hero-1-swiper {
     width: 100%;
-    height: 100vh;
-    max-height: 100vh;
+    height: 100%;
+    max-height: 100%;
     overflow: hidden;
 }
 
-/* ✅ FIX: remove nested 100vh stacking */
 .hero-1-swiper .swiper-wrapper,
 .hero-1-swiper .swiper-slide,
 .hero-1-swiper .slide-image-wrapper {
     height: 100%;
 }
-
 a:any-link {
     color: white;
 }
-
 main > .section > div {
     max-width: 100%;
     width: 100%;
@@ -41,16 +31,14 @@ main > .section > div {
     padding: 0;
 }
 
-/* ✅ FIX: avoid conflict with vh layout */
 .hero-carousel-image,
 .hero-carousel-video {
     width: 100%;
-    height: 100%;
+    height: 680px;
     object-fit: cover;
     display: block;
 }
 
-/* Thumbnails */
 .hero-1-thumbnails {
     margin-bottom: 24px;
     position: absolute;
@@ -64,9 +52,9 @@ main > .section > div {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    /* max-width: calc(100% - 40px); */
 }
 
-/* Pagination */
 .hero-1-swiper .swiper-pagination {
     position: absolute;
     left: 50%;
@@ -84,7 +72,6 @@ main > .section > div {
     color: #fff;
 }
 
-/* Thumbnails styling */
 .hero-carousel-thumb,
 .hero-1-thumbnails a.hero-carousel-thumb {
     border: none;
@@ -113,17 +100,18 @@ main > .section > div {
 .hero-1-thumbnails a.hero-carousel-thumb img {
     width: 160px;
     height: 96px;
-    object-fit: cover;
+    object-fit: fill;
     display: block;
 }
 
-/* Explore button */
 .hero-explore-button {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translateX(-50%);
     z-index: 15;
+    font-weight: lighter;
+
     font-weight: 700;
     padding: 0.5rem 6rem;
     width: max-content;
@@ -143,14 +131,4 @@ main > .section > div {
 .slide-image-wrapper,
 .main-slide-content {
     position: relative;
-}
-
-/* ✅ CRITICAL: Fix AEM Author infinite height issue */
-.aem-AuthorLayer-Edit .hero-1-swiper,
-.aem-AuthorLayer-Edit .hero-1-swiper .swiper-wrapper,
-.aem-AuthorLayer-Edit .hero-1-swiper .swiper-slide,
-.aem-AuthorLayer-Edit .hero-1-swiper .slide-image-wrapper {
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
 }
