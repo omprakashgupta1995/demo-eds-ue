@@ -195,7 +195,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Card v3 Item 1",
+                  "name": "Card v3 Item 2",
                   "model": "cardv3-item-2"
                 }
               }
