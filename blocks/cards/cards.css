@@ -9,7 +9,7 @@
   height: fit-content;
   padding: 0;
   z-index: 4;
-  margin-top:calc( 700px - 120px);
+  margin-top: 580px;
   display: flex;
   flex-direction: column;
   color: white;
