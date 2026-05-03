@@ -33,7 +33,7 @@ main > .section > div{
   .section.bg-black.bg-edge .default-content-wrapper p{
     padding-top: 10px;
     padding-bottom:10px ;
-    padding-left: 16rem;
+    padding-left: 12rem;
      width: fit-content;
   }
 }
