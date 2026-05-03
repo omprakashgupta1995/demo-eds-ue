@@ -41,16 +41,16 @@
     ]
   },
   {
-    "id": "cards",
+    "id": "card-v3",
     "components": [
-      "card"
+      "card-v3-item-1",
+      "card-v3-item-2"
     ]
   },
   {
-    "id": "cardv3",
+    "id": "cards",
     "components": [
-      "cardv3-item-1",
-      "cardv3-item-2"
+      "card"
     ]
   },
   {

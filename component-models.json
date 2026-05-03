@@ -166,26 +166,7 @@
     ]
   },
   {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "cardv3-item-1",
+    "id": "card-v3-item-1",
     "fields": [
       {
         "component": "richtext",
@@ -197,7 +178,7 @@
     ]
   },
   {
-    "id": "cardv3-item-2",
+    "id": "card-v3-item-2",
     "fields": [
       {
         "component": "reference",
@@ -214,6 +195,25 @@
       {
         "component": "richtext",
         "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
