@@ -40,7 +40,7 @@
 .swiper-wrapper {
     box-sizing: initial;
     display: flex;
-    height: 100%;
+    height: 100vh;
     position: relative;
     transition-property: transform;
     transition-timing-function: var(
@@ -68,7 +68,7 @@
 .swiper-slide {
     display: block;
     flex-shrink: 0;
-    height: 100%;
+    height: 100vh;
     position: relative;
     transition-property: transform;
     width: 100%;
@@ -184,7 +184,7 @@
         }
 
         > .swiper-wrapper:before {
-            height: 100%;
+            height: 100vh;
             min-height: 1px;
             width: var(--swiper-centered-offset-after);
         }
@@ -209,7 +209,7 @@
     .swiper-slide-shadow-left,
     .swiper-slide-shadow-right,
     .swiper-slide-shadow-top {
-        height: 100%;
+        height: 100vh;
         left: 0;
         pointer-events: none;
         position: absolute;
@@ -343,7 +343,7 @@
 
     ::slotted(svg),
     svg {
-        height: 100%;
+        height: 100vh;
         object-fit: contain;
         transform-origin: center;
         width: 100%;
@@ -688,7 +688,7 @@
 .swiper-scrollbar-drag {
     background: var(--swiper-scrollbar-drag-bg-color, #00000080);
     border-radius: var(--swiper-scrollbar-border-radius, 10px);
-    height: 100%;
+    height: 100vh;
     left: 0;
     position: relative;
     top: 0;
