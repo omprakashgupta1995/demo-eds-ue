@@ -8,6 +8,11 @@ p {
     margin: 0;
 }
 
+.hero-1-container{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 
 .hero-1-swiper {
     width: 100%;

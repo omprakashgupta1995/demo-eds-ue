@@ -1,3 +1,10 @@
+header, .nav, .navbar {
+    position: sticky; /* or fixed if already */
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+}
+
 header and nav layout header .nav-wrapper {
     background-color: var(--background-color);
     width: 100%;
