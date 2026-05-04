@@ -31,6 +31,8 @@
     order: unset;
   }
 }
+
+
 .section.our-range-h.columns-container{
   position: relative;
   background-color: white;
@@ -38,8 +40,11 @@
 }
 .section.our-range-h.columns-container .columns-wrapper .columns .homepage-our-range .ourRange-text-wrapper .our-range-title{
   color: red;
-
 }
+.section.our-range-h.columns-container .columns-wrapper .columns .homepage-our-range{
+  padding: 0 100px;
+}
+
 
 .section.our-range-h.columns-container .columns-wrapper .columns .homepage-our-range .ourRange-text-wrapper .our-range-heading{
   font-family: var(--hero-font-family);
@@ -57,8 +62,8 @@
 }
 .section.our-range-h.columns-container .columns-wrapper .columns .homepage-our-range .ourRange-button-wrapper .button-container {
   display: flex;
-  
   justify-content: end;
+ 
 }
 main > .section {
     margin: 0;

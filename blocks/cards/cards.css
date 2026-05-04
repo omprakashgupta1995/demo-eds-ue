@@ -1,6 +1,6 @@
-*{
+/* *{
   box-sizing: border-box;
-}
+} */
 .section.bg-black.bg-edge {
   position: relative;
   font-family: var(--hero-font-family);
@@ -38,6 +38,11 @@ main > .section > div{
   }
 }
 
+main > .section > div {
+    
+    padding: 0;
+}
+
 .section.bg-black.bg-edge .cards-wrapper .cards{
   display: flex;
   gap: 2.5rem;
@@ -48,6 +53,7 @@ main > .section > div{
 
 .section.bg-black.bg-edge .cards-wrapper .cards .card{
     text-align: center;
+    font-size: 16px;
     padding: 1.25rem .5rem;
     background: linear-gradient(#2a2a2a 0, #2a2a2a 50%);
     clip-path: polygon(11% 0, 100% 0, 100% 79%, 88% 100%, 0 100%, 0 21%);
@@ -55,6 +61,8 @@ main > .section > div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 120px;
+    width: 260px;
 
 }
 .section.bg-black.bg-edge .cards-wrapper .cards .card .card-text-wrapper p{
