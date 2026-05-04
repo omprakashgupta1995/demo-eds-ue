@@ -76,16 +76,10 @@
 .product-cta-arrow img {
   width: 14px;
   height: 14px;
-
   object-fit: contain;
 }
 
 /* Hover Effect */
-
-.product-cta:hover {
-  background: #ff0000;
-  color: #fff;
-}
 
 .product-cta:hover .product-cta-arrow {
   transform: translate(4px, -4px);
