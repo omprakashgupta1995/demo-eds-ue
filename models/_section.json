@@ -33,6 +33,10 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Our Range Header",
+              "value": "our-range-h"
             }
           ]
         }

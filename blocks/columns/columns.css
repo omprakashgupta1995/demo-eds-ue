@@ -19,6 +19,41 @@
   display: block;
 }
 
+.section.our-range-h.columns-container{
+  position: relative;
+  background-color: white;
+  font-family: var(--hero-font-family);
+}
+.section.our-range-h.columns-container .columns-wrapper .columns .homepage-our-range .ourRange-text-wrapper .our-range-title{
+  color: red;
+}
+.section.our-range-h.columns-container .columns-wrapper .columns .homepage-our-range .ourRange-text-wrapper{
+  padding-left: 40px;
+}
+
+.section.our-range-h.columns-container .columns-wrapper .columns .homepage-our-range .ourRange-text-wrapper .our-range-heading{
+  font-family: var(--hero-font-family);
+  font-weight: 400;
+  margin: 0;
+}
+.section.our-range-h.columns-container .columns-wrapper{
+  padding-top: 4rem;
+}
+.section.our-range-h.columns-container .columns-wrapper .columns .homepage-our-range .ourRange-button-wrapper .button-container .button{
+  border: 1px solid red;
+  padding: 10px;
+  font-weight: 600;
+  color: red;
+}
+.section.our-range-h.columns-container .columns-wrapper .columns .homepage-our-range .ourRange-button-wrapper .button-container {
+  display: flex;
+  justify-content: end;
+  padding-right:40px ;
+}
+main > .section {
+    margin: 0;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
