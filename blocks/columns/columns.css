@@ -23,6 +23,7 @@
   position: relative;
   background-color: white;
   font-family: var(--hero-font-family);
+  z-index: 1;
 }
 .section.our-range-h.columns-container .columns-wrapper .columns .homepage-our-range .ourRange-text-wrapper .our-range-title{
   color: red;

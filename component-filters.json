@@ -25,7 +25,8 @@
       "nav-icons",
       "carouselv2",
       "hero-1",
-      "card-v3"
+      "card-v3",
+      "product"
     ]
   },
   {
@@ -91,6 +92,13 @@
     "id": "menu-list",
     "components": [
       "menu-item"
+    ]
+  },
+  {
+    "id": "product",
+    "components": [
+      "product-item-1",
+      "product-item-2"
     ]
   }
 ]

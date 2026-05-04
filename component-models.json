@@ -600,5 +600,60 @@
         "label": "Alt Text"
       }
     ]
+  },
+  {
+    "id": "product-item-1",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text1",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text2",
+        "label": "Subheading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text3",
+        "label": "Button"
+      }
+    ]
+  },
+  {
+    "id": "product-item-2",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Image Alt",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_button",
+        "value": "",
+        "label": "Button",
+        "valueType": "string"
+      }
+    ]
   }
 ]
