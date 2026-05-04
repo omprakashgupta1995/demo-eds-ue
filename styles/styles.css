@@ -242,6 +242,11 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
+.section:not(.hero-1-container) {
+    position: relative;
+    z-index: 2;
+}
+
 @media (width >= 900px) {
   main > .section > div {
     padding: 0 32px;
