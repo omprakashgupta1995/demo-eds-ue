@@ -11,7 +11,7 @@
     align-items: start;
 }
 
-/* ── Header row (row 1) ── */
+/* ── Header row ── */
 .product.block > div:nth-child(1) {
     grid-column: 1 / -1;
     grid-row: 1;
@@ -21,7 +21,7 @@
     padding: 24px 120px 40px;
 }
 
-/* Eyebrow */
+/* Eyebrow — local: > div:first-child > p:first-child | author: > div:first-child > div:first-child > p */
 .product.block > div:nth-child(1) > div:first-child p:first-child {
     font-size: 25px;
     font-weight: 700;
@@ -92,7 +92,7 @@
     cursor: pointer;
 }
 
-/* Image */
+/* Image wrapper — works for both local (div > picture) and author (div > div > picture) */
 .product.block > div:nth-child(n + 2) > div:first-child {
     width: 100%;
     height: 100%;
@@ -113,7 +113,18 @@
     transform: scale(1.1);
 }
 
-.product.block > div:nth-child(n + 2) > div:last-child p:first-child {
+/* ── Label overlay — covers both local and author ── */
+/* In author, last-child is a div > div > p. We position the outer div absolutely. */
+.product.block > div:nth-child(n + 2) > div:last-child {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+/* Label text — targets p whether direct or nested inside author's extra div */
+.product.block > div:nth-child(n + 2) > div:last-child p:first-of-type {
     font-size: 36px;
     font-family: transducer, sans-serif;
     font-weight: 900;
@@ -124,13 +135,17 @@
 }
 
 /* Label text — red on hover */
-.product.block > div:nth-child(n + 2):hover > div:last-child p:first-child {
+.product.block > div:nth-child(n + 2):hover > div:last-child p:first-of-type {
     color: #ee2326;
 }
 
-/* Arrow icon — top right, hidden by default */
-.product.block > div:nth-child(n + 2) > div:last-child p:last-child {
+/* Arrow icon box — hidden by default */
+.product.block > div:nth-child(n + 2) > div:last-child p:last-of-type {
     position: absolute;
+    top: -14px;
+    right: 0;
+    bottom: auto;
+    left: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,27 +156,8 @@
     transition: opacity 0.3s ease;
 }
 
-/* Reposition arrow to top-right of the card */
-.product.block > div:nth-child(n + 2) > div:last-child {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-}
-
-.product.block > div:nth-child(n + 2) > div:last-child p:last-child {
-    position: absolute;
-    top: -14px;
-    right: 0;
-    bottom: auto;
-    left: auto;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
 /* Show arrow on hover */
-.product.block > div:nth-child(n + 2):hover > div:last-child p:last-child {
+.product.block > div:nth-child(n + 2):hover > div:last-child p:last-of-type {
     opacity: 1;
 }
 
