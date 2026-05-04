@@ -1,0 +1,26 @@
+.section.heading-container {
+    background-color: white;
+    padding: 100px 140px 60px;
+}
+
+.section.heading-container p {
+    margin: 0;
+}
+
+/* First line: EXPLORE SPECIAL PROGRAMS */
+.section.heading-container .heading.block > div:first-child p {
+    font-size: 25px;
+    font-weight: 700;
+    color: #ee2326;
+    letter-spacing: -1px;
+    margin-bottom: 4px;
+}
+
+/* Second line: Make The Most Of Hero */
+.section.heading-container .heading.block > div:last-child p {
+    font-size: clamp(36px, 5vw, 56px);
+    font-family: transducer, sans-serif;
+    font-weight: 400;
+    color: #111;
+    line-height: 1.05;
+}
