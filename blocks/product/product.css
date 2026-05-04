@@ -61,11 +61,12 @@
     gap: 8px;
     flex-shrink: 0;
     align-self: flex-end;
-    border: 1px solid #ee2326;
     padding: 5px 16px;
     color: #ee2326;
 }
-
+.product.block > div:nth-child(1) > div:last-child {
+    border: 1px solid #ee2326;
+}
 /* "EXPLORE ALL PRODUCTS" text
    works for both via descendant p:first-of-type */
 .product.block > div:nth-child(1) > div:last-child p:first-of-type {
