@@ -398,6 +398,23 @@
     ]
   },
   {
+    "id": "heading",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "subheading",
+        "label": "Subheading"
+      }
+    ]
+  },
+  {
     "id": "hero-carousel",
     "fields": [
       {
