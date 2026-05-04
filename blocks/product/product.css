@@ -1,206 +1,295 @@
-.product-container {
-    background: #fff;
-    padding-top: 60px;
-}
-
-/* ── Layout ── */
-.product.block {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    align-items: start;
-}
-
-/* ── Header row ── */
-.product.block > div:nth-child(1) {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 24px 120px 40px;
-}
-
-.product.block > div:nth-child(1) > div:first-child {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Eyebrow — works for both local (p direct) and author (div > p) */
-.product.block > div:nth-child(1) > div:first-child p:first-of-type {
-    font-size: 25px;
-    font-weight: 700;
-    color: #ee2326;
-    letter-spacing: -1px;
-    margin: 0 0 4px;
-}
-
-/* Headline */
-.product.block > div:nth-child(1) > div:first-child p:last-of-type {
-    font-size: clamp(36px, 5vw, 56px);
-    font-family: transducer, sans-serif;
-    font-weight: 400;
-    color: #111;
-    margin: 0;
-    line-height: 1.05;
-}
-
-/* Explore button — right side */
-.product.block > div:nth-child(1) > div:last-child {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-    align-self: flex-end;
-    border: 1px solid #ee2326;
-    padding: 5px 16px;
-    color: #ee2326;
-}
-
-.product.block > div:nth-child(1) > div:last-child p:first-of-type {
-    font-size: 16px;
-    font-weight: 700;
-    padding: 6px 14px;
-    margin: 0;
-    cursor: pointer;
-}
-
-.product.block > div:nth-child(1) > div:last-child p:last-of-type {
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-
-.product.block > div:nth-child(1) > div:last-child .icon-arrow img {
-    width: 16px;
-    height: 16px;
-}
-
-/* ── Card grid placement ── */
-.product.block > div:nth-child(2) {
-    grid-column: 1;
-    grid-row: 2;
-}
-.product.block > div:nth-child(3) {
-    grid-column: 2;
-    grid-row: 2;
-}
-.product.block > div:nth-child(4) {
-    grid-column: 3;
-    grid-row: 2;
-}
-
-/* ── Each card ── */
-.product.block > div:nth-child(n + 2) {
+/* =========================================
+   PRODUCT BLOCK
+========================================= */
+.section.product-container {
     position: relative;
-    overflow: hidden;
-    cursor: pointer;
+    margin: 0;
 }
-
-/* Image wrapper */
-.product.block > div:nth-child(n + 2) > div:first-child {
+.product {
     width: 100%;
-    height: 100%;
+    padding: 80px 0;
+    background: #f3f3f3;
 }
 
-.product.block > div:nth-child(n + 2) > div:first-child picture,
-.product.block > div:nth-child(n + 2) > div:first-child img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    aspect-ratio: 361 / 480;
-    transition: transform 0.4s ease;
-}
+/* =========================================
+   HEADER
+========================================= */
 
-/* Image zoom on hover */
-.product.block > div:nth-child(n + 2):hover > div:first-child img {
-    transform: scale(1.1);
-}
-
-/* ── Overlay div ── */
-.product.block > div:nth-child(n + 2) > div:last-child {
-    position: absolute;
-    inset: 0;
+.product-header {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* push label to bottom */
-    padding: 20px;
-    pointer-events: none;
+    gap: 12px;
+    padding: 0 80px;
+    margin-bottom: 40px;
 }
 
-/* Flatten author's extra data-aue-prop wrapper divs */
-.product.block > div:nth-child(n + 2) > div:last-child > div {
-    display: contents;
-}
-
-/* ── Label text (first p in overlay) ── */
-.product.block > div:nth-child(n + 2) > div:last-child p:first-of-type {
-    font-size: 36px;
-    font-family: transducer, sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    color: #fff;
+.product-tagline {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff0000;
+    text-transform: uppercase;
     margin: 0;
-    transition: color 0.3s ease;
-    pointer-events: auto;
+    line-height: 1;
 }
 
-/* Label red on hover */
-.product.block > div:nth-child(n + 2):hover > div:last-child p:first-of-type {
-    color: #ee2326;
+.product-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-/* ── Arrow box (last p in overlay) ── */
-.product.block > div:nth-child(n + 2) > div:last-child p:last-of-type {
-    position: absolute;
-    top: 0;
-    right: 0;
+.product-title p {
+    margin: 0;
+    font-size: clamp(42px, 6vw, 88px);
+    font-weight: normal;
+    line-height: 1;
+    font-size: 65px;
+    color: #000;
+}
+
+.product-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 28px;
+    border: 1px solid #ff0000;
+
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+}
+
+.product-cta-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    background-color: #ee2326;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    margin: 0;
-    pointer-events: auto;
+
+    transition: transform 0.3s ease;
 }
 
-/* Show arrow on hover */
-.product.block > div:nth-child(n + 2):hover > div:last-child p:last-of-type {
-    opacity: 1;
+.product-cta-arrow img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
 }
 
-/* Arrow SVG — always white */
-.product.block > div:nth-child(n + 2) .icon-arrow img {
-    width: 16px;
-    height: 16px;
+/* Hover Effect */
+
+.product-cta:hover .product-cta-arrow {
+    transform: translate(4px, -4px);
+}
+
+.product-cta:hover img {
     filter: brightness(0) invert(1);
 }
 
-/* ── Responsive ── */
-@media (max-width: 768px) {
-    .product.block {
+/* =========================================
+   CARD CONTAINER
+========================================= */
+
+.product-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    height: 90vh;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 620px;
+    cursor: pointer;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.product-image {
+    width: 100%;
+    height: 100%;
+}
+
+.product-image picture,
+.product-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.product-image img {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.product-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.15)
+    );
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.product-content {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    z-index: 2;
+}
+
+.product-label {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/* =========================================
+   ARROW
+========================================= */
+
+.product-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    /* width: 52px; */
+    height: 30px;
+    background: #ff0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* Show arrow on hover */
+.product-card:hover .product-arrow {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.product-arrow .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-arrow img {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+/* =========================================
+   LABEL HOVER
+========================================= */
+
+.product-label {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1;
+
+    transition: color 0.3s ease;
+}
+
+/* Text becomes red on hover */
+.product-card:hover .product-label {
+    color: #ff0000;
+}
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+    .product-header {
+        padding: 0 40px;
+    }
+
+    .product-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-card-container {
         grid-template-columns: 1fr;
     }
 
-    .product.block > div:nth-child(1) {
-        grid-column: 1;
-        flex-direction: column;
-        gap: 12px;
-        padding: 20px 16px 16px;
+    .product-card {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        padding: 60px 0;
     }
 
-    .product.block > div:nth-child(2),
-    .product.block > div:nth-child(3),
-    .product.block > div:nth-child(4) {
-        grid-column: 1;
-        grid-row: auto;
+    .product-header {
+        padding: 0 20px;
+        margin-bottom: 24px;
     }
 
-    .product.block > div:nth-child(n + 2) > div:first-child img {
-        aspect-ratio: 4 / 3;
+    .product-tagline {
+        font-size: 14px;
+    }
+
+    .product-title p {
+        font-size: 48px;
+    }
+
+    .product-cta {
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    .product-card {
+        min-height: 420px;
+    }
+
+    .product-content {
+        left: 16px;
+        bottom: 16px;
+    }
+
+    .product-arrow {
+        width: 44px;
+        height: 44px;
     }
 }
