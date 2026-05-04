@@ -143,7 +143,6 @@
 //   block.append(cardContainer);
 // }
 
-
 export default function decorate(block) {
   // =========================================
   // GET VALID ROWS
@@ -152,10 +151,7 @@ export default function decorate(block) {
   const rows = [...block.children];
 
   const validRows = rows.filter((row) => {
-    return (
-      row.textContent.trim() !== '' ||
-      row.querySelector('picture')
-    );
+    return row.textContent.trim() !== '' || row.querySelector('picture');
   });
 
   // =========================================
@@ -167,15 +163,10 @@ export default function decorate(block) {
   if (headerRow) {
     headerRow.classList.add('product-header');
 
-    // Authored columns
-    const taglineWrapper =
-      headerRow.children[0];
-
-    const titleWrapper =
-      headerRow.children[1];
-
-    const ctaWrapper =
-      headerRow.children[2];
+    // Existing authored columns
+    const taglineWrapper = headerRow.children[0];
+    const titleWrapper = headerRow.children[1];
+    const ctaWrapper = headerRow.children[2];
 
     // =========================================
     // TAGLINE
@@ -185,77 +176,73 @@ export default function decorate(block) {
       taglineWrapper?.querySelector('p');
 
     if (tagline) {
-      tagline.classList.add(
-        'product-tagline'
-      );
+      tagline.classList.add('product-tagline');
     }
 
     // =========================================
-    // PRODUCT TITLE WRAPPER
+    // TITLE CONTAINER
     // =========================================
 
     const productTitleWrapper =
       document.createElement('div');
 
-    productTitleWrapper.classList.add(
-      'product-title'
-    );
+    productTitleWrapper.classList.add('product-title');
 
-    // =========================================
-    // TITLE
-    // =========================================
-
+    // Title text
     const title =
       titleWrapper?.querySelector('p');
 
     if (title) {
-      productTitleWrapper.appendChild(
-        title
+      productTitleWrapper.appendChild(title);
+    }
+
+    // =========================================
+    // CTA
+    // =========================================
+
+    const ctaText =
+      ctaWrapper?.querySelector('p');
+
+    if (ctaText) {
+      const cta = document.createElement('a');
+
+      cta.classList.add('product-cta');
+
+      // CTA Text
+      const ctaLabel =
+        document.createElement('span');
+
+      ctaLabel.classList.add('product-cta-text');
+
+      ctaLabel.textContent =
+        ctaText.textContent;
+
+      // CTA Arrow
+      const ctaArrow =
+        document.createElement('span');
+
+      ctaArrow.classList.add('product-cta-arrow');
+
+      const arrowImg =
+        document.createElement('img');
+
+      arrowImg.src = '/icons/arrow.svg';
+      arrowImg.alt = 'arrow';
+
+      ctaArrow.appendChild(arrowImg);
+
+      // Assemble CTA
+      cta.append(
+        ctaLabel,
+        ctaArrow
       );
+
+      // Add CTA to title wrapper
+      productTitleWrapper.appendChild(cta);
     }
 
     // =========================================
-    // CTA (FULLY AUTHORED)
-    // =========================================
-
-    if (ctaWrapper) {
-      const cta =
-        ctaWrapper.querySelector('a');
-
-      if (cta) {
-        cta.classList.add(
-          'product-cta'
-        );
-
-        // CTA Text
-        const ctaText =
-          cta.querySelector('p');
-
-        if (ctaText) {
-          ctaText.classList.add(
-            'product-cta-text'
-          );
-        }
-
-        // CTA Icon
-        const ctaIcon =
-          cta.querySelector('.icon');
-
-        if (ctaIcon) {
-          ctaIcon.classList.add(
-            'product-cta-arrow'
-          );
-        }
-
-        // Append authored CTA
-        productTitleWrapper.appendChild(
-          cta
-        );
-      }
-    }
-
-    // =========================================
-    // REPLACE TITLE CONTENT
+    // CLEAN TITLE WRAPPER
     // =========================================
 
     if (titleWrapper) {
@@ -264,7 +251,7 @@ export default function decorate(block) {
       );
     }
 
-    // Remove old CTA column
+    // Remove empty CTA column safely
     ctaWrapper?.remove();
   }
 
@@ -286,15 +273,10 @@ export default function decorate(block) {
   const cards = validRows.slice(1);
 
   cards.forEach((card) => {
-    card.classList.add(
-      'product-card'
-    );
+    card.classList.add('product-card');
 
-    const imageWrapper =
-      card.children[0];
-
-    const contentWrapper =
-      card.children[1];
+    const imageWrapper = card.children[0];
+    const contentWrapper = card.children[1];
 
     // =========================================
     // IMAGE
@@ -305,7 +287,7 @@ export default function decorate(block) {
     );
 
     // =========================================
-    // CONTENT WRAPPER
+    // CONTENT
     // =========================================
 
     const newContentWrapper =
@@ -315,10 +297,7 @@ export default function decorate(block) {
       'product-content'
     );
 
-    // =========================================
-    // LABEL
-    // =========================================
-
+    // Label
     const label =
       contentWrapper?.querySelector(
         'p:first-child'
@@ -329,19 +308,15 @@ export default function decorate(block) {
         'product-label'
       );
 
-      newContentWrapper.appendChild(
-        label
-      );
+      newContentWrapper.appendChild(label);
     }
 
     // =========================================
-    // ARROW (AUTHORED)
+    // ARROW
     // =========================================
 
     const arrow =
-      contentWrapper?.querySelector(
-        '.icon'
-      );
+      contentWrapper?.querySelector('.icon');
 
     if (arrow) {
       const arrowWrapper =
@@ -351,21 +326,17 @@ export default function decorate(block) {
         'product-arrow'
       );
 
-      arrowWrapper.appendChild(
-        arrow
-      );
+      arrowWrapper.appendChild(arrow);
 
-      card.appendChild(
-        arrowWrapper
-      );
+      card.appendChild(arrowWrapper);
     }
 
-    // Replace old content wrapper
+    // Replace old content wrapper safely
     contentWrapper?.replaceWith(
       newContentWrapper
     );
 
-    // Add card to container
+    // Add card into container
     cardContainer.appendChild(card);
   });
 
@@ -374,4 +345,9 @@ export default function decorate(block) {
   // =========================================
 
   block.appendChild(cardContainer);
+
+  // Move cards into container
+  cards.forEach((card) => {
+    cardContainer.appendChild(card);
+  });
 }
