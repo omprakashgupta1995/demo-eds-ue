@@ -26,8 +26,11 @@
     flex-direction: column;
 }
 
-/* Eyebrow — local: p:first-child | author: div:first-child > p */
-.product.block > div:nth-child(1) > div:first-child p:first-of-type {
+/* Eyebrow
+   local:  > div:first-child > p:first-child
+   author: > div:first-child > div:first-child > p */
+.product.block > div:nth-child(1) > div:first-child > p:first-child,
+.product.block > div:nth-child(1) > div:first-child > div:first-child p {
     font-size: 25px;
     font-weight: 700;
     color: #ee2326;
@@ -35,8 +38,11 @@
     margin: 0 0 4px;
 }
 
-/* Headline — local: p:last-child | author: div:last-child > p */
-.product.block > div:nth-child(1) > div:first-child p:last-of-type {
+/* Headline
+   local:  > div:first-child > p:last-child
+   author: > div:first-child > div:last-child > p */
+.product.block > div:nth-child(1) > div:first-child > p:last-child,
+.product.block > div:nth-child(1) > div:first-child > div:last-child p {
     font-size: clamp(36px, 5vw, 56px);
     font-family: transducer, sans-serif;
     font-weight: 400;
@@ -45,8 +51,11 @@
     line-height: 1.05;
 }
 
-/* Explore button — right side */
-.product.block > div:nth-child(1) > div:last-child {
+/* Explore button wrapper
+   local:  > div:last-child
+   author: > div:last-child > div */
+.product.block > div:nth-child(1) > div:last-child,
+.product.block > div:nth-child(1) > div:last-child > div {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -57,6 +66,8 @@
     color: #ee2326;
 }
 
+/* "EXPLORE ALL PRODUCTS" text
+   works for both via descendant p:first-of-type */
 .product.block > div:nth-child(1) > div:last-child p:first-of-type {
     font-size: 16px;
     font-weight: 700;
@@ -65,6 +76,7 @@
     cursor: pointer;
 }
 
+/* Arrow p */
 .product.block > div:nth-child(1) > div:last-child p:last-of-type {
     margin: 0;
     display: flex;
@@ -125,25 +137,24 @@
     pointer-events: none;
 }
 
-/* Author's inner wrapper divs — reset them */
+/* Reset author's inner wrapper divs */
 .product.block > div:nth-child(n + 2) > div:last-child > div {
     all: unset;
 }
 
-/* ── Label text ──
-   local:  > div:last-child > p
-   author: > div:last-child > div:first-child > p
-   Both covered by this: */
-.product.block > div:nth-child(n + 2) > div:last-child > div:first-child,
-.product.block > div:nth-child(n + 2) > div:last-child > p:first-of-type {
+/* Label text
+   local:  > div:last-child > p:first-of-type
+   author: > div:last-child > div:first-child > p */
+.product.block > div:nth-child(n + 2) > div:last-child > p:first-of-type,
+.product.block > div:nth-child(n + 2) > div:last-child > div:first-child {
     position: absolute;
     bottom: 20px;
     left: 20px;
     pointer-events: auto;
 }
 
-.product.block > div:nth-child(n + 2) > div:last-child > div:first-child p,
-.product.block > div:nth-child(n + 2) > div:last-child > p:first-of-type {
+.product.block > div:nth-child(n + 2) > div:last-child > p:first-of-type,
+.product.block > div:nth-child(n + 2) > div:last-child > div:first-child p {
     font-size: 36px;
     font-family: transducer, sans-serif;
     font-weight: 900;
@@ -154,20 +165,20 @@
 }
 
 /* Label red on hover */
+.product.block > div:nth-child(n + 2):hover > div:last-child > p:first-of-type,
 .product.block
     > div:nth-child(n + 2):hover
     > div:last-child
     > div:first-child
-    p,
-.product.block > div:nth-child(n + 2):hover > div:last-child > p:first-of-type {
+    p {
     color: #ee2326;
 }
 
-/* ── Arrow box ──
+/* Arrow box
    local:  > div:last-child > p:last-of-type
-   author: > div:last-child > div:last-child > p */
-.product.block > div:nth-child(n + 2) > div:last-child > div:last-child,
-.product.block > div:nth-child(n + 2) > div:last-child > p:last-of-type {
+   author: > div:last-child > div:last-child */
+.product.block > div:nth-child(n + 2) > div:last-child > p:last-of-type,
+.product.block > div:nth-child(n + 2) > div:last-child > div:last-child {
     position: absolute;
     top: 0;
     right: 0;
@@ -183,7 +194,7 @@
     margin: 0;
 }
 
-/* Author: the p inside arrow div needs to also be flex */
+/* Author: p inside arrow div */
 .product.block > div:nth-child(n + 2) > div:last-child > div:last-child p {
     display: flex;
     align-items: center;
@@ -192,8 +203,8 @@
 }
 
 /* Show arrow on hover */
-.product.block > div:nth-child(n + 2):hover > div:last-child > div:last-child,
-.product.block > div:nth-child(n + 2):hover > div:last-child > p:last-of-type {
+.product.block > div:nth-child(n + 2):hover > div:last-child > p:last-of-type,
+.product.block > div:nth-child(n + 2):hover > div:last-child > div:last-child {
     opacity: 1;
 }
 
