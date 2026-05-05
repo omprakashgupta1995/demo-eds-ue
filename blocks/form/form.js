@@ -1,7 +1,6 @@
 import createField from "./form-fields.js";
 
 async function createForm(formHref, submitHref) {
-  // Use the full URL to prevent the constructor from crashing
   const url = new URL(formHref, window.location.origin);
   const resp = await fetch(url.pathname);
   if (!resp.ok) return null;
@@ -15,18 +14,21 @@ async function createForm(formHref, submitHref) {
   );
 
   fields.forEach((field) => {
-    if (field) form.append(field);
+    if (field) {
+      form.append(field);
+    }
   });
 
   // group fields into fieldsets
   const fieldsets = form.querySelectorAll("fieldset");
   fieldsets.forEach((fieldset) => {
-    // Corrected the missing bracket in the attribute selector below
-    form
-      .querySelectorAll(`[data-fieldset="${fieldset.name}"]`)
-      .forEach((field) => {
-        fieldset.append(field);
-      });
+    if (fieldset.name) {
+      form
+        .querySelectorAll(`[data-fieldset="${fieldset.name}"]`)
+        .forEach((field) => {
+          fieldset.append(field);
+        });
+    }
   });
 
   return form;
@@ -34,7 +36,6 @@ async function createForm(formHref, submitHref) {
 
 function generatePayload(form) {
   const payload = {};
-
   [...form.elements].forEach((field) => {
     if (field.name && field.type !== "submit" && !field.disabled) {
       if (field.type === "radio") {
@@ -54,13 +55,11 @@ function generatePayload(form) {
 
 async function handleSubmit(form) {
   if (form.getAttribute("data-submitting") === "true") return;
-
   const submit = form.querySelector('button[type="submit"]');
   try {
     form.setAttribute("data-submitting", "true");
-    submit.disabled = true;
+    if (submit) submit.disabled = true;
 
-    // create payload
     const payload = generatePayload(form);
     const response = await fetch(form.dataset.action, {
       method: "POST",
@@ -78,11 +77,10 @@ async function handleSubmit(form) {
       throw new Error(error);
     }
   } catch (e) {
-    // eslint-disable-next-line no-console
     console.error(e);
   } finally {
     form.setAttribute("data-submitting", "false");
-    submit.disabled = false;
+    if (submit) submit.disabled = false;
   }
 }
 
@@ -93,24 +91,26 @@ export default async function decorate(block) {
 
   if (!formLink) return;
 
-  const form = await createForm(formLink, submitLink);
+  try {
+    const form = await createForm(formLink, submitLink);
+    if (form) {
+      block.replaceChildren(form);
 
-  if (form) {
-    block.replaceChildren(form); // This removes the links and adds the form
-  } else {
-    console.error(
-      "Form could not be created. Check JSON path and field-scripts.",
-    );
-  }
-
-  form?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (form.checkValidity()) {
-      handleSubmit(form);
-    } else {
-      const firstInvalidEl = form.querySelector(":invalid:not(fieldset)");
-      firstInvalidEl?.focus();
-      firstInvalidEl?.scrollIntoView({ behavior: "smooth" });
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const valid = form.checkValidity();
+        if (valid) {
+          handleSubmit(form);
+        } else {
+          const firstInvalidEl = form.querySelector(":invalid:not(fieldset)");
+          if (firstInvalidEl) {
+            firstInvalidEl.focus();
+            firstInvalidEl.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      });
     }
-  });
+  } catch (e) {
+    console.error("Form block decoration failed:", e);
+  }
 }
