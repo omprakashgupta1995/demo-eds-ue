@@ -1,15 +1,123 @@
-/* Target the form block links properly */
-.form-container .form.block a.button {
-    color: #000; /* change to whatever you want */
-    background-color: #fff; /* optional */
+/* Container Spacing */
+.form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-/* If default Franklin button styles override it */
-.form-container .form.block a.button {
-    color: #000 !important;
+.form.block {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Optional: hover */
-.form-container .form.block a.button:hover {
+/* Form Layout */
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Field Wrapper */
+.field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Labels */
+.field-wrapper label {
+    font-weight: 600;
+    font-size: 0.9rem;
     color: #333;
+}
+
+.field-wrapper label[data-required="true"]::after {
+    content: " *";
+    color: #e63946;
+}
+
+/* Inputs & Textareas */
+.field-wrapper input[type="text"],
+.field-wrapper input[type="email"],
+.field-wrapper input[type="tel"],
+.field-wrapper select,
+.field-wrapper textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.field-wrapper input:focus,
+.field-wrapper select:focus,
+.field-wrapper textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+}
+
+/* Submit Button Wrapper */
+.submit-wrapper {
+    margin-top: 1rem;
+}
+
+.form button.button {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: fit-content;
+}
+
+.form button.button:hover {
+    background-color: #004a99;
+}
+
+.form button.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Fieldsets (if used) */
+.form fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.form legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+/* Error States */
+.field-wrapper input:invalid:not(:placeholder-shown) {
+    border-color: #e63946;
+}
+
+/* Responsive Grid Option */
+/* If you want two columns on larger screens, add this: */
+@media (min-width: 600px) {
+    .form form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .field-wrapper.submit-wrapper,
+    .field-wrapper.heading-wrapper,
+    .field-wrapper.plaintext-wrapper {
+        grid-column: span 2;
+    }
 }
