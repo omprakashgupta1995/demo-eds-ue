@@ -1,8 +1,8 @@
 {
   "definitions": [
     {
-      "title": "Columns",
-      "id": "columns",
+      "title": "Columns V2",
+      "id": "columnsV2",
       "plugins": {
         "xwalk": {
           "page": {
@@ -18,7 +18,7 @@
   ],
   "models": [
     {
-      "id": "columns",
+      "id": "columnsV2",
       "fields": [
         {
           "component": "text",
@@ -33,7 +33,8 @@
           "name": "rows",
           "value": "",
           "label": "Rows"
-        },{
+        },
+        {
           "component": "select",
           "name": "classes",
           "value": "",
@@ -59,7 +60,7 @@
   ],
   "filters": [
     {
-      "id": "columns",
+      "id": "columnsV2",
       "components": [
         "column"
       ]
@@ -70,8 +71,7 @@
         "text",
         "image",
         "button",
-        "title",
-        "product-item-2"
+        "title"
       ]
     }
   ]

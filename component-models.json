@@ -343,6 +343,46 @@
     ]
   },
   {
+    "id": "columnsV2",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      },
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Block Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default (None)",
+            "value": ""
+          },
+          {
+            "name": "Our Range Header",
+            "value": "our-range-h"
+          },
+          {
+            "name": "Alternate Style",
+            "value": "alt-style"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -358,6 +398,27 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      },
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Block Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default (None)",
+            "value": ""
+          },
+          {
+            "name": "Our Range Header",
+            "value": "our-range-h"
+          },
+          {
+            "name": "Alternate Style",
+            "value": "alt-style"
+          }
+        ]
       }
     ]
   },
