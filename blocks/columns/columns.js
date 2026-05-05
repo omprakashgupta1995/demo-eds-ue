@@ -65,4 +65,76 @@ export default function decorate(block) {
     }
   }
 
+  if(block && block.classList.contains('auto-scroll-h') && block.classList.contains('carousel-primary')){
+      const carouselCardWrapper = block.children?.[0];
+      if(carouselCardWrapper){
+        carouselCardWrapper.classList.add('carousel-card-wrapper');
+        [...carouselCardWrapper.children].forEach((row,index)=>{
+          const carouselCard = row;
+          if(carouselCard){
+            carouselCard.classList.add(`carousel-card-${index+1}`);
+          }
+          const carouselCardImage = carouselCard.querySelector('img');
+          if(carouselCardImage){
+            carouselCardImage.classList.add('card-image');
+          const carouselImageWrapper  = carouselCardImage.closest('p');
+          carouselImageWrapper?.classList.add('card-image-wrapper');
+
+          }
+          
+          const carouselButton = carouselCard.querySelector('a');
+          if(carouselButton){
+            carouselButton?.classList.add('card-button');
+            const buttonContainer = carouselButton.parentElement;
+            buttonContainer?.classList.add('card-button-container');
+          }
+
+          const textParagraphs = carouselCard.querySelectorAll('p:not(.card-image-wrapper):not(.card-button-container)');
+          
+          textParagraphs.forEach((textElement, textIndex) => {
+            // Add a general class to all text
+            textElement?.classList.add('card-text');
+            
+            // Differentiate between the first and second text blocks (like in Card 3)
+            if (textIndex === 0) {
+              textElement?.classList.add('card-text-primary'); 
+            } else if (textIndex === 1) {
+              textElement?.classList.add('card-text-secondary');
+            }
+          });
+
+        })
+        
+        // --- THE BULLETPROOF INFINITE CLONE SETUP ---
+      const track = document.createElement('div');
+      track.classList.add('carousel-track');
+      
+      block.appendChild(track);
+      track.appendChild(carouselCardWrapper); // Add original
+
+      // Helper function to safely clone and strip EDS Universal Editor attributes
+      const createCleanClone = () => {
+        const clone = carouselCardWrapper.cloneNode(true);
+        clone.classList.add('carousel-card-wrapper-clone');
+        
+        const aueElements = clone.querySelectorAll('[data-aue-resource], [data-aue-type], [data-aue-prop], [data-aue-behavior], [data-aue-filter]');
+        aueElements.forEach((el) => {
+          el.removeAttribute('data-aue-resource');
+          el.removeAttribute('data-aue-type');
+          el.removeAttribute('data-aue-prop');
+          el.removeAttribute('data-aue-behavior');
+          el.removeAttribute('data-aue-filter');
+        });
+        
+        return clone;
+      };
+
+      // Append Clone 1
+      track.appendChild(createCleanClone());
+      
+      // Append Clone 2 (The Buffer)
+      track.appendChild(createCleanClone());
+      }
+  }
+
 }
