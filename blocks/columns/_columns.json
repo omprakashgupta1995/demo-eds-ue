@@ -34,7 +34,7 @@
           "value": "",
           "label": "Rows"
         },{
-          "component": "select",
+          "component": "multiselect",
           "name": "classes",
           "value": "",
           "label": "Block Style",
@@ -55,6 +55,12 @@
             {
               "name": "Alternate Style",
               "value": "alt-style"
+            },{
+              "name":"Carousel Primary",
+              "value":"carousel-primary"
+            },{
+              "name":"Auto Scroll Horizontal",
+              "value":"auto-scroll-h"
             }
           ]
         }
