@@ -23,7 +23,8 @@
       "contact-details",
       "hero-1",
       "help",
-      "product"
+      "product",
+      "form"
     ]
   },
   {
@@ -64,6 +65,10 @@
     "components": [
       "contact-section"
     ]
+  },
+  {
+    "id": "form",
+    "components": []
   },
   {
     "id": "help",

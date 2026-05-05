@@ -328,6 +328,23 @@
     ]
   },
   {
+    "id": "form",
+    "fields": [
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "formurl",
+        "label": "Form Url"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "apiurl",
+        "label": "API url"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
