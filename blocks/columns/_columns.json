@@ -41,8 +41,8 @@
           "valueType": "string",
           "options": [
             {
-              "name": "Default (None)",
-              "value": ""
+              "name": "Our Range Cards",
+              "value": "our-range-cards"
             },
             {
               "name": "Our Range Header",

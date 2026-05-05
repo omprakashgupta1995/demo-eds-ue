@@ -60,18 +60,19 @@
     ]
   },
   {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
     "id": "column",
     "components": [
       "text",
       "image",
       "button",
-      "title"
-    ]
-  },
-  {
-    "id": "columns",
-    "components": [
-      "column"
+      "title",
+      "product-item-2"
     ]
   },
   {
