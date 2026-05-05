@@ -25,9 +25,11 @@
     "/content/demo-ue-022/yashkudve/nerolac/form/lead-form:/yashkudve/lead-form.json",
     "/content/demo-ue-022/harshnachane/nerolac/form/lead-form:/harshnachane/lead-form.json",
     "/content/demo-ue-022/harshpatil/nerolac/form/lead-form:/harshpatil/lead-form.json",
-    "/content/demo-ue-022/nihar/nerolac/form/lead-form:/nihar/lead-form.json"
+    "/content/demo-ue-022/nihar/nerolac/form/lead-form:/nihar/lead-form.json",
+    "/content/demo-ue-022/nandani/form/contact-form:/nandani/contact-form.json",
+    "/content/demo-ue-022/mahesh/form/contact-form:/mahesh/contact-form.json",
+    "/content/demo-ue-022/dhruv/form/contact-form:/dhruv/contact-form.json",
+    "/content/demo-ue-022/tushar/form/contact-form:/tushar/contact-form.json"
   ],
-  "includes": [
-    "/content/demo-ue-022/"
-  ]
+  "includes": ["/content/demo-ue-022/"]
 }
