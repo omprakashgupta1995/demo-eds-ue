@@ -36,6 +36,11 @@ export default function decorate(block) {
     ourRangeTextWrapper.classList.add('ourRange-text-wrapper');
     ourRangeTextWrapper?.children?.[0].classList.add('our-range-title');
     ourRangeTextWrapper?.children?.[1].classList.add('our-range-heading');
-    ourRangeButtonWrpper.classList.add('ourRange-button-wrapper');
+    if(ourRangeButtonWrpper && ourRangeButtonWrpper.children.length > 0){
+      ourRangeButtonWrpper.classList.add('ourRange-button-wrapper');
+    }else{
+      ourRangeButtonWrpper.remove();
+    }
+    
   }
 }
