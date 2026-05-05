@@ -112,6 +112,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Background Red",
+            "value": "bg-red"
           }
         ]
       }
