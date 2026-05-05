@@ -9,7 +9,7 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Form",
-              "model": "form"
+              "filter": "form"
             }
           }
         }
@@ -24,7 +24,7 @@
           "component": "aem-content",
           "valueType": "string",
           "name": "formurl",
-          "label": "Form url"
+          "label": "Form Url"
         },
         {
           "component": "text",
@@ -35,5 +35,10 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "form",
+      "components": []
+    }
+  ]
 }

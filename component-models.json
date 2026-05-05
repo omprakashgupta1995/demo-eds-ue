@@ -394,7 +394,7 @@
         "component": "aem-content",
         "valueType": "string",
         "name": "formurl",
-        "label": "Form url"
+        "label": "Form Url"
       },
       {
         "component": "text",
