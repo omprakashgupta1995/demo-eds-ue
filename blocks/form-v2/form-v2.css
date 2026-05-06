@@ -1,0 +1,180 @@
+/* --- Base Theme & Container --- */
+.form-v2-container {
+    position: relative;
+  background-color: #1a1a1a; /* Dark background from the image */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+   /* Constrain width to match the left-side layout */
+}
+
+.form-v2-container p {
+  margin: 0;
+}
+
+/* --- Tabs --- */
+.form-v2-tabs {
+  display: inline-flex; /* Keeps tabs compact instead of stretching full width */
+  margin-bottom: 40px;
+}
+
+.form-tab-btn {
+  background-color: #999999;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-tab-btn.active {
+  background-color: #ed1c24; /* Brand Red */
+}
+
+/* --- Panels --- */
+.form-tab-panel {
+  display: none;
+}
+
+.form-tab-panel.active {
+  display: block;
+}
+
+/* --- Typography & Labels --- */
+.form-tab-panel form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide the max labels since we only need the main title (Engine/Price) */
+label[for$="-max"], 
+label[for$="-max-1"] {
+  display: none;
+}
+
+/* Style the main headings (Engine, Price) */
+label[for$="-min"], 
+label[for$="-min-1"] {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 25px; /* Space above the slider */
+}
+
+/* --- Dual Range Sliders Trick --- */
+.field-wrapper.range-wrapper {
+  position: relative;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+/* Pull the MAX wrapper up to perfectly overlap the MIN wrapper */
+.field-wrapper.range-wrapper:nth-of-type(2),
+.field-wrapper.range-wrapper:nth-of-type(4) {
+  margin-top: -50px; /* Accounts for the 30px height + 20px margin */
+}
+
+/* Standardize Range Inputs */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Let clicks pass through the track */
+}
+
+/* Disable focus outline */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/* --- Slider Tracks --- */
+/* Only show the track on the MIN slider so they don't double up */
+input[name="engine_min"]::-webkit-slider-runnable-track,
+input[name="price_min"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  background: #555555;
+  border-radius: 2px;
+}
+
+input[name="engine_max"]::-webkit-slider-runnable-track,
+input[name="price_max"]::-webkit-slider-runnable-track {
+  background: transparent;
+  height: 4px;
+}
+
+/* --- Slider Thumbs (Handles) --- */
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto; /* Re-enable clicks for the thumb */
+  -webkit-appearance: none;
+  height: 22px;
+  width: 12px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: -9px; /* Centering against the 4px track */
+  
+  /* Draw the two red vertical lines inside the thumb */
+  background-image: linear-gradient(
+    to right, 
+    transparent 3px, 
+    #ed1c24 3px, 
+    #ed1c24 4px, 
+    transparent 4px, 
+    transparent 8px, 
+    #ed1c24 8px, 
+    #ed1c24 9px, 
+    transparent 9px
+  );
+}
+
+/* Firefox Support for Thumbs */
+input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  height: 22px;
+  width: 12px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right, 
+    transparent 3px, 
+    #ed1c24 3px, 
+    #ed1c24 4px, 
+    transparent 4px, 
+    transparent 8px, 
+    #ed1c24 8px, 
+    #ed1c24 9px, 
+    transparent 9px
+  );
+}
+
+/* --- Submit Button --- */
+.button-wrapper {
+  margin-top: 40px;
+}
+
+.button.primary {
+  background-color: #ed1c24;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.button.primary:hover {
+  background-color: #c9161e; /* Slightly darker red on hover */
+}

@@ -539,6 +539,27 @@
     "id": "form",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Form Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default ",
+            "value": ""
+          },
+          {
+            "name": "MotorCycles",
+            "value": "motorcycle"
+          },
+          {
+            "name": "Scooter",
+            "value": "scooter"
+          }
+        ]
+      },
+      {
         "component": "aem-content",
         "valueType": "string",
         "name": "formurl",
