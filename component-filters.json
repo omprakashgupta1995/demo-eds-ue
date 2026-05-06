@@ -24,7 +24,9 @@
       "hero-1",
       "help",
       "product",
-      "form"
+      "form",
+      "product-details",
+      "project-hero"
     ]
   },
   {
@@ -88,6 +90,18 @@
     "components": [
       "product-item-1",
       "product-item-2"
+    ]
+  },
+  {
+    "id": "project-details",
+    "components": [
+      "detail-item"
+    ]
+  },
+  {
+    "id": "project-hero",
+    "components": [
+      "hero-slide"
     ]
   }
 ]

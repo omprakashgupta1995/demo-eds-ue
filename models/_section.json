@@ -63,7 +63,9 @@
         "hero-1",
         "help",
         "product",
-        "form"
+        "form",
+        "product-details",
+        "project-hero"
       ]
     }
   ]
