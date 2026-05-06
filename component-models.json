@@ -116,6 +116,10 @@
           {
             "name": "Our Range Header",
             "value": "our-range-h"
+          },
+          {
+            "name": "Background edge",
+            "value": "bg-edge"
           }
         ]
       }
