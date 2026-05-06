@@ -294,7 +294,7 @@ main .section.highlight {
 /* ====================================================================== */
 
 /* Main Section Container */
-.section.bg-edge {
+.section.bg-edge2 {
     clip-path: polygon(
         47% 0px,
         54% 9%,
@@ -322,7 +322,7 @@ main .section.highlight {
 }
 
 /* The Grey Angled Header Background */
-.section.bg-edge::before {
+.section.bg-edge2::before {
     content: "";
     position: absolute;
     top: 0;
