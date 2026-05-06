@@ -1,116 +1,76 @@
-import createField from "./form-fields.js";
+import createField, { createDualRangeField } from "./form-fields.js";
 
 async function createForm(formHref, submitHref) {
-  const url = new URL(formHref, window.location.origin);
-  const resp = await fetch(url.pathname);
+  const resp = await fetch(formHref);
   if (!resp.ok) return null;
 
   const json = await resp.json();
   const form = document.createElement("form");
-  form.dataset.action = submitHref;
+  form.dataset.action = submitHref || "";
 
-  const fields = await Promise.all(
-    json.data.map((fd) => createField(fd, form)),
-  );
-
-  fields.forEach((field) => {
-    if (field) {
-      form.append(field);
-    }
+  const dataMap = {};
+  json.data.forEach((fd) => {
+    const name = (fd.Name || "").trim();
+    if (name) dataMap[name] = fd;
   });
 
-  // group fields into fieldsets
-  const fieldsets = form.querySelectorAll("fieldset");
-  fieldsets.forEach((fieldset) => {
-    if (fieldset.name) {
-      form
-        .querySelectorAll(`[data-fieldset="${fieldset.name}"]`)
-        .forEach((field) => {
-          fieldset.append(field);
-        });
+  const processed = new Set();
+
+  for (const fd of json.data) {
+    const name = (fd.Name || "").trim();
+    if (processed.has(name)) continue;
+
+    // Detect Range Pairs (_min and _max)
+    if (name.endsWith("_min") && fd.Type === "range") {
+      const baseName = name.replace("_min", "");
+      const maxName = `${baseName}_max`;
+
+      if (dataMap[maxName]) {
+        const dualRange = await createDualRangeField(
+          baseName,
+          fd,
+          dataMap[maxName],
+        );
+        form.append(dualRange);
+        processed.add(name);
+        processed.add(maxName);
+        continue;
+      }
     }
-  });
+
+    // Skip isolated max fields that were already processed
+    if (name.endsWith("_max") && processed.has(name.replace("_max", "_min")))
+      continue;
+
+    const fieldEl = await createField(fd, form);
+    if (fieldEl) form.append(fieldEl);
+    processed.add(name);
+  }
 
   return form;
 }
 
-function generatePayload(form) {
-  const payload = {};
-  [...form.elements].forEach((field) => {
-    if (field.name && field.type !== "submit" && !field.disabled) {
-      if (field.type === "radio") {
-        if (field.checked) payload[field.name] = field.value;
-      } else if (field.type === "checkbox") {
-        if (field.checked)
-          payload[field.name] = payload[field.name]
-            ? `${payload[field.name]},${field.value}`
-            : field.value;
-      } else {
-        payload[field.name] = field.value;
-      }
-    }
-  });
-  return payload;
-}
-
-async function handleSubmit(form) {
-  if (form.getAttribute("data-submitting") === "true") return;
-  const submit = form.querySelector('button[type="submit"]');
-  try {
-    form.setAttribute("data-submitting", "true");
-    if (submit) submit.disabled = true;
-
-    const payload = generatePayload(form);
-    const response = await fetch(form.dataset.action, {
-      method: "POST",
-      body: JSON.stringify({ data: payload }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    if (response.ok) {
-      if (form.dataset.confirmation) {
-        window.location.href = form.dataset.confirmation;
-      }
-    } else {
-      const error = await response.text();
-      throw new Error(error);
-    }
-  } catch (e) {
-    console.error(e);
-  } finally {
-    form.setAttribute("data-submitting", "false");
-    if (submit) submit.disabled = false;
-  }
-}
-
 export default async function decorate(block) {
-  const links = [...block.querySelectorAll("a")].map((a) => a.href);
-  const formLink = links.find((link) => link.endsWith(".json"));
-  const submitLink = links.find((link) => link !== formLink);
+  const links = [...block.querySelectorAll("a")];
+  const formLinkEl = links.find((a) => a.href.includes(".json"));
 
-  if (!formLink) return;
+  if (!formLinkEl) return;
 
-  try {
-    const form = await createForm(formLink, submitLink);
-    if (form) {
-      block.replaceChildren(form);
+  const submitLinkEl = links.find((a) => a !== formLinkEl);
+  const form = await createForm(
+    formLinkEl.href,
+    submitLinkEl ? submitLinkEl.href : "",
+  );
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const valid = form.checkValidity();
-        if (valid) {
-          handleSubmit(form);
-        } else {
-          const firstInvalidEl = form.querySelector(":invalid:not(fieldset)");
-          if (firstInvalidEl) {
-            firstInvalidEl.focus();
-            firstInvalidEl.scrollIntoView({ behavior: "smooth" });
-          }
-        }
-      });
-    }
-  } catch (e) {
-    console.error("Form block decoration failed:", e);
+  if (form) {
+    block.replaceChildren(form);
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+      console.log("Calculator Search:", payload);
+      // Add logic here to filter your carousel/results based on payload
+    });
   }
 }
