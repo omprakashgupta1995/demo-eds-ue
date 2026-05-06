@@ -678,7 +678,7 @@
     ]
   },
   {
-    "id": "vehical-carousel-item",
+    "id": "vehicle-carousel-item",
     "fields": [
       {
         "component": "richtext",

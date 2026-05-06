@@ -30,7 +30,7 @@
       "product-1",
       "heading",
       "form",
-      "vehical-carousel"
+      "vehicle-carousel"
     ]
   },
   {
@@ -109,9 +109,9 @@
     ]
   },
   {
-    "id": "vehical-carousel",
+    "id": "vehicle-carousel",
     "components": [
-      "vehical-carousel-item"
+      "vehicle-carousel-item"
     ]
   }
 ]
