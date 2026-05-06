@@ -89,6 +89,12 @@
     ]
   },
   {
+    "id": "formV2",
+    "components": [
+      "formV2-item"
+    ]
+  },
+  {
     "id": "form",
     "components": []
   },

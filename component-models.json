@@ -519,6 +519,23 @@
     ]
   },
   {
+    "id": "formV2-item",
+    "fields": [
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "formurl",
+        "label": "Form Url"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "apiurl",
+        "label": "API url"
+      }
+    ]
+  },
+  {
     "id": "form",
     "fields": [
       {
