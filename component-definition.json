@@ -445,10 +445,7 @@
                 }
               }
             }
-          },
-          "allowedComponents": [
-            "hero-slide"
-          ]
+          }
         },
         {
           "title": "Hero Slide",

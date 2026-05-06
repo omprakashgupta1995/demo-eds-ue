@@ -13,8 +13,7 @@
             }
           }
         }
-      },
-      "allowedComponents": ["hero-slide"]
+      }
     },
     {
       "title": "Hero Slide",
@@ -88,7 +87,7 @@
       ]
     }
   ],
-   "filters": [
+ "filters": [
     {
       "id": "project-hero",
       "components": ["hero-slide"]
