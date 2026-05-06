@@ -81,6 +81,7 @@ body {
     font-family: var(--body-font-family);
     font-size: var(--body-font-size-m);
     line-height: 1.6;
+    background-color: white;
 }
 
 body.appear {
@@ -263,8 +264,12 @@ main .section.highlight {
     margin: 0;
     padding: 40px 0;
 }
-/* Main Section Container */
 .section.bg-edge {
+    background-color: white;
+}
+/* Main Section Container */
+.carousel-wrapper {
+    background-color: white;
     clip-path: polygon(
         47% 0px,
         54% 9%,
@@ -282,7 +287,7 @@ main .section.highlight {
     );
     display: flex;
     justify-content: space-between;
-    min-height: 700px;
+    min-height: 500px;
     width: 80%;
     padding: 50px;
     position: relative;
@@ -292,7 +297,7 @@ main .section.highlight {
 }
 
 /* The Grey Angled Header Background */
-.section.bg-edge::before {
+.carousel-wrapper::before {
     content: "";
     position: absolute;
     top: 0;
@@ -360,4 +365,8 @@ main .section.highlight {
     font-weight: bold;
     cursor: pointer;
     width: fit-content;
+}
+.section:not(.bg-edge) {
+    position: relative;
+    z-index: 2;
 }
