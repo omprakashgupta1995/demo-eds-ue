@@ -88,6 +88,10 @@
     ]
   },
   {
+    "id": "form",
+    "components": []
+  },
+  {
     "id": "hero-carousel",
     "components": [
       "hero-carousel-item"

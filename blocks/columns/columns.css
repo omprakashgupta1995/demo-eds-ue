@@ -177,20 +177,19 @@ main > .section {
  
 }
 /* -----------card 1------------------------- */
-.carousel-card-1 .card-image{
+.carousel-primary.auto-scroll-h .carousel-card-1 .card-image{
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-.carousel-card-1 .card-image-wrapper{
+.carousel-primary.auto-scroll-h .carousel-card-1 .card-image-wrapper{
   position: relative;
   overflow: hidden;
   height: 100%;
   width: 100%;
 }
-
-.carousel-card-1 .card-text{
+.carousel-primary.auto-scroll-h .carousel-card-1 .card-text{
  font-size: 14px;
   position: absolute;
   color: #fff;
@@ -202,7 +201,7 @@ main > .section {
   padding-left: 20px;
   
 }
-.carousel-card-1 .card-button{
+.carousel-primary.auto-scroll-h .carousel-card-1 .card-button{
  font-size: 14px;
   position: absolute;
   border: 1px solid white;
@@ -216,10 +215,10 @@ main > .section {
   padding: 10px;
   
 }
-.carousel-card-1 .card-button-container{
+.carousel-primary.auto-scroll-h .carousel-card-1 .card-button-container{
   padding: 20px;
 }
-.carousel-card-1 {
+.carousel-primary.auto-scroll-h .carousel-card-1 {
   box-sizing: border-box;
   position: relative;
   width: 100%;
@@ -228,7 +227,7 @@ main > .section {
   grid-row: 1 / 3;    /* Starts row 1, ends line 3 (spans 2 rows) */
   }
 /* -------------------card 2 _----------------------   */
-.carousel-card-2 {
+.carousel-primary.auto-scroll-h .carousel-card-2 {
   box-sizing: border-box;
   position: relative;
     width: 100%;
@@ -237,20 +236,20 @@ main > .section {
     grid-row: 1 / 2;    /* Starts row 1, ends line 3 (spans 2 rows) */
 }
 
-.carousel-card-2 .card-image{
+.carousel-primary.auto-scroll-h .carousel-card-2 .card-image{
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-.carousel-card-2 .card-image-wrapper{
+.carousel-primary.auto-scroll-h .carousel-card-2 .card-image-wrapper{
   position: relative;
   overflow: hidden;
   height: 100%;
   width: 100%;
 }
 
-.carousel-card-2 .card-text{
+.carousel-primary.auto-scroll-h .carousel-card-2 .card-text{
  font-size: 12px;
   position: absolute;
   color: #fff;
@@ -262,7 +261,7 @@ main > .section {
   padding-left: 20px;
   
 }
-.carousel-card-2 .card-button{
+.carousel-primary.auto-scroll-h .carousel-card-2 .card-button{
  font-size: 12px;
   position: absolute;
   border: 1px solid red;
@@ -277,11 +276,11 @@ main > .section {
   background-color: red;
   
 }
-.carousel-card-2 .card-button-container{
+.carousel-primary.auto-scroll-h .carousel-card-2 .card-button-container{
   padding: 20px;
 }
 /* -------------------card 3 ------------------------- */
-  .carousel-card-3{
+.carousel-primary.auto-scroll-h .carousel-card-3{
     box-sizing: border-box;
     position: relative;
     width: 100%;
@@ -291,14 +290,14 @@ main > .section {
     background-color: black;
   }
 
-.carousel-card-3 .card-image{
+.carousel-primary.auto-scroll-h .carousel-card-3 .card-image{
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
 
-.carousel-card-3 .card-image-wrapper{
+.carousel-primary.auto-scroll-h .carousel-card-3 .card-image-wrapper{
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -306,7 +305,7 @@ main > .section {
   width: 100%;  
   margin: 0;
 }
-.carousel-card-3 .card-text-secondary{
+.carousel-primary.auto-scroll-h .carousel-card-3 .card-text-secondary{
  font-size: 12px;
   position: absolute;
   color: #fff;
@@ -319,7 +318,7 @@ main > .section {
   padding: 20px;
 }
 
-.carousel-card-3 .card-text-primary{
+.carousel-primary.auto-scroll-h .carousel-card-3 .card-text-primary{
  font-size: 14px;
   position: absolute;
   color: #fff;
@@ -333,28 +332,28 @@ main > .section {
 }
 
 /* ---------------------card - 4------------------------- */
-  .carousel-card-4{
+.carousel-primary.auto-scroll-h .carousel-card-4{
     position: relative;
    width: 100%;
     height: 100%;
     grid-column: 3/4;
     grid-row: 1/2;
   }
-  .carousel-card-4 .card-image{
+ .carousel-primary.auto-scroll-h .carousel-card-4 .card-image{
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
 
-.carousel-card-4 .card-image-wrapper{
+.carousel-primary.auto-scroll-h .carousel-card-4 .card-image-wrapper{
   position: relative;
   overflow: hidden;
   height: 100%;
   width: 100%;
   
 }
-.carousel-card-4 .card-text-primary{
+.carousel-primary.auto-scroll-h .carousel-card-4 .card-text-primary{
  
   position: absolute;
   color:red;
@@ -365,7 +364,7 @@ main > .section {
   padding-left: 20px;
   
 }
-.carousel-card-4 .card-text-secondary{
+.carousel-primary.auto-scroll-h .carousel-card-4 .card-text-secondary{
  
   position: absolute;
   color: #fff;
@@ -377,29 +376,28 @@ main > .section {
   
 }
 /* ------------------card 5----------------------- */
-
-  .carousel-card-5{
+.carousel-primary.auto-scroll-h .carousel-card-5{
     position: relative;
      width: 100%;
     height: 100%;
      grid-column: 3/4;
      grid-row: 2/3;
   }
-   .carousel-card-5 .card-image{
+.carousel-primary.auto-scroll-h .carousel-card-5 .card-image{
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
 
-.carousel-card-5 .card-image-wrapper{
+.carousel-primary.auto-scroll-h .carousel-card-5 .card-image-wrapper{
   position: relative;
   overflow: hidden;
   height: 100%;
   width: 100%;
   
 }
-.carousel-card-5 .card-text{
+.carousel-primary.auto-scroll-h .carousel-card-5 .card-text{
  font-size: 24px;
   position: absolute;
   color: #fff;
@@ -411,7 +409,7 @@ main > .section {
   
 }
 
-.carousel-card-5 .card-button{
+.carousel-primary.auto-scroll-h .carousel-card-5 .card-button{
   position: absolute;
   background-color: red;
   height: 20px;
@@ -426,7 +424,7 @@ main > .section {
 /* --------------------carousel slider------------------ */
 /* The new track holds both grid wrappers side-by-side */
 /* 2. The Track: Holds both wrappers side-by-side and animates */
-.carousel-track {
+.carousel-primary.auto-scroll-h .carousel-track {
   display: flex;
   width: 3300px; /* 200% because it holds exactly 2 grids (original + clone) */
   
