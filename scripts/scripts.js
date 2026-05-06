@@ -152,7 +152,7 @@ loadPage();
 // ===============================================================================
 
 
-document.querySelectorAll(".section.bg-edge").forEach((container) => {
+document.querySelectorAll(".section.bg-edge2").forEach((container) => {
   // 1. Tag wrappers by index
   const forms = container.querySelectorAll(".form-wrapper");
   const carousels = container.querySelectorAll(".vehicle-carousel-wrapper");

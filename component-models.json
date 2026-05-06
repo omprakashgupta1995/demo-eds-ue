@@ -124,6 +124,10 @@
           {
             "name": "Our Range Header ",
             "value": "our-range-h"
+          },
+          {
+            "name": "Background Edge Calculator",
+            "value": "bg-edge2"
           }
         ]
       }
