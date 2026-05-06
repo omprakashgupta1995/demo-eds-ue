@@ -15,47 +15,21 @@
       "hero",
       "cards",
       "columns",
-      "quote",
-      "byline",
-      "product",
-      "swiper",
-      "tab",
-      "form",
-      "banner-container",
-      "product-1",
-      "teaser-cards",
-      "faq",
-      "fragment"
+      "fragment",
+      "bio-cards",
+      "insuranceCards"
     ]
   },
   {
-    "id": "teaser-cards",
+    "id": "bio-cards",
     "components": [
-      "teaser-card"
-    ]
-  },
-  {
-    "id": "banner-container",
-    "components": [
-      "banner"
+      "bio-card"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
-    ]
-  },
-  {
-    "id": "swiper",
-    "components": [
-      "swiper-item"
-    ]
-  },
-  {
-    "id": "tab",
-    "components": [
-      "tab-item"
     ]
   },
   {
@@ -71,6 +45,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "insuranceCards",
+    "components": [
+      "insuranceCardItems"
     ]
   }
 ]
