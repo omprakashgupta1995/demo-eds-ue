@@ -146,3 +146,50 @@ async function loadPage() {
 }
 
 loadPage();
+
+document.querySelectorAll(".section.bg-edge").forEach((container) => {
+  // 1. Tag wrappers by index
+  const forms = container.querySelectorAll(".form-wrapper");
+  const carousels = container.querySelectorAll(".vehicle-carousel-wrapper");
+
+  forms.forEach((f, i) =>
+    f.classList.add(i === 0 ? "motorcycle-view" : "scooter-view"),
+  );
+  carousels.forEach((c, i) =>
+    c.classList.add(i === 0 ? "motorcycle-view" : "scooter-view"),
+  );
+
+  // 2. Inject Tabs inside EACH form wrapper for perfect alignment
+  forms.forEach((formWrap) => {
+    if (!formWrap.querySelector(".tab-nav")) {
+      const tabNav = document.createElement("div");
+      tabNav.className = "tab-nav";
+      tabNav.innerHTML = `
+                <button class="tab-btn btn-moto" data-type="motorcycles">Motorcycles</button>
+                <button class="tab-btn btn-scoot" data-type="scooters">Scooters</button>
+            `;
+      formWrap.prepend(tabNav);
+    }
+  });
+
+  // 3. Tab Click Logic
+  container.addEventListener("click", (e) => {
+    if (e.target.classList.contains("tab-btn")) {
+      const type = e.target.getAttribute("data-type");
+      container.setAttribute("data-active-tab", type);
+
+      // Sync active class across all tabs (for both hidden and visible forms)
+      container.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.classList.toggle("active", btn.getAttribute("data-type") === type);
+      });
+
+      window.dispatchEvent(new Event("resize"));
+    }
+  });
+
+  // Set Initial State
+  container.setAttribute("data-active-tab", "motorcycles");
+  container
+    .querySelectorAll('.tab-btn[data-type="motorcycles"]')
+    .forEach((b) => b.classList.add("active"));
+});

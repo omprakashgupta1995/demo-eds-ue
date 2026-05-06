@@ -672,5 +672,22 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "vehicle-carousel-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_modelname",
+        "label": "Model Name"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": "Image"
+      }
+    ]
   }
 ]

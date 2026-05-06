@@ -27,7 +27,8 @@
       "hero-1",
       "card-v3",
       "product",
-      "form"
+      "form",
+      "vehicle-carousel"
     ]
   },
   {
@@ -104,6 +105,12 @@
     "components": [
       "product-item-1",
       "product-item-2"
+    ]
+  },
+  {
+    "id": "vehicle-carousel",
+    "components": [
+      "vehicle-carousel-item"
     ]
   }
 ]
