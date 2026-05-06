@@ -188,7 +188,6 @@ button {
     max-width: 100%;
     margin: 12px 0;
     border: none;
-    border-radius: 2.4em;
     padding: 0.5em 1.2em;
     font-family: var(--body-font-family);
     font-style: normal;
@@ -263,4 +262,102 @@ main .section.highlight {
     background-color: var(--light-color);
     margin: 0;
     padding: 40px 0;
+}
+/* Main Section Container */
+.section.bg-edge {
+    clip-path: polygon(
+        47% 0px,
+        54% 9%,
+        100% 9%,
+        100% 70%,
+        100% 100%,
+        6% 100%,
+        0px 94%,
+        0px 0px
+    );
+    background: linear-gradient(
+        0deg,
+        rgb(0, 0, 0) 39.26%,
+        rgb(102, 102, 102) 128.14%
+    );
+    display: flex;
+    justify-content: space-between;
+    min-height: 700px;
+    width: 80%;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    margin: 0 auto;
+}
+
+/* The Grey Angled Header Background */
+.section.bg-edge::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 120px;
+    z-index: 1;
+}
+
+/* Tab Navigation Placement */
+.tab-nav {
+    grid-column: 1 / -1;
+    z-index: 2;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.tab-btn {
+    padding: 8px 25px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #555;
+    color: #fff;
+}
+
+.tab-btn.active {
+    background: #e11b22;
+}
+
+/* Conditional Visibility */
+.motorcycle-view,
+.scooter-view {
+    display: none !important;
+}
+
+[data-active-tab="motorcycles"] .motorcycle-view {
+    display: flex !important;
+}
+[data-active-tab="scooters"] .scooter-view {
+    display: flex !important;
+}
+
+/* Form Styling */
+.form-wrapper {
+    width: 80%;
+    flex-direction: column;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.range-group-label {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Button Styling (Targeting the second form button correctly) */
+.custom-submit-btn {
+    background: #e11b22;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
 }

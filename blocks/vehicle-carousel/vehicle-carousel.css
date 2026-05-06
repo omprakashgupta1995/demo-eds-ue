@@ -1,13 +1,5 @@
 @import url(swiper.min.css);
 
-/* 1. Resetting Section and Block Backgrounds */
-.section.vehicle-carousel-container,
-.section.vehicle-carousel-container > div,
-.vehicle-carousel.block {
-    background: none;
-    background-color: transparent;
-}
-
 .vehicle-carousel-wrapper.swiper {
     position: relative;
     width: 100%;
@@ -35,12 +27,14 @@
 /* 3. Image & Reflection */
 .vehicle-carousel-wrapper.swiper .vehicle-image-col {
     width: 100%;
-    max-width: 850px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
 }
 
 .vehicle-carousel-wrapper.swiper .vehicle-image-col picture img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     -webkit-box-reflect: below -15px
         linear-gradient(transparent, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.5));

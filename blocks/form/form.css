@@ -138,7 +138,8 @@
     display: none;
 }
 
-#form-field {
+#form-field,
+#form-field-1 {
     font: inherit;
     text-decoration: none;
     text-transform: uppercase;
