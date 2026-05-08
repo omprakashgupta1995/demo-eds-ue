@@ -287,8 +287,8 @@ main .section.highlight {
     );
     display: flex;
     justify-content: space-between;
-    min-height: 500px;
     width: 80%;
+    height: 550px;
     padding: 50px;
     position: relative;
     overflow: hidden;
@@ -365,8 +365,4 @@ main .section.highlight {
     font-weight: bold;
     cursor: pointer;
     width: fit-content;
-}
-.section:not(.bg-edge) {
-    position: relative;
-    z-index: 2;
 }
