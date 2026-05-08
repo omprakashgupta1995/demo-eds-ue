@@ -84,12 +84,6 @@
     "components": []
   },
   {
-    "id": "fund-chart",
-    "components": [
-      "fund-chart-item"
-    ]
-  },
-  {
     "id": "hero-carousel",
     "components": [
       "hero-carousel-item"

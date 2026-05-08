@@ -419,7 +419,7 @@
     ]
   },
   {
-    "id": "fund-chart-item",
+    "id": "fund-chart",
     "fields": [
       {
         "component": "text",
