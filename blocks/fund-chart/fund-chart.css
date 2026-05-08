@@ -7,17 +7,55 @@
     font-family: inherit;
 }
 
-.fund-chart .chart-header {
+/* Header layout: Tabs on left, CAGR on right */
+.fund-chart .chart-top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap; /* Helps on smaller screens */
+    gap: 15px;
 }
 
-.fund-chart h3 {
+/* The Filter Tabs */
+.fund-chart .filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
     margin: 0;
-    font-size: 1.25rem;
-    color: #333;
+}
+
+.fund-chart .filter-tabs li {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #d1d5db;
+    color: #4b5563;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.fund-chart .filter-tabs li:hover {
+    background-color: #f3f4f6;
+}
+
+.fund-chart .filter-tabs li.active {
+    border-color: #4a68f6;
+    color: #4a68f6;
+    background-color: #eef2ff;
+}
+
+/* CAGR Text Styling */
+.fund-chart .cagr-display {
+    font-size: 1rem;
+    color: #2e2a94;
+}
+
+.fund-chart .cagr-display span {
+    font-weight: bold;
 }
 
 /* CRITICAL: amCharts must have a defined height */

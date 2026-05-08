@@ -9,7 +9,23 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Fund Chart",
+              "filter": "fund-chart",
               "model": "fund-chart"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Fund Chart Item",
+      "id": "fund-chart-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Fund Chart Item",
+              "model": "fund-chart-item"
             }
           }
         }
@@ -21,11 +37,16 @@
       "id": "fund-chart",
       "fields": [
         {
-          "component": "text",
-          "name": "title",
-          "label": "Chart Title (Optional)",
+          "component": "richtext",
+          "name": "filter",
+          "label": "Year Filter",
           "valueType": "string"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fund-chart-item",
+      "fields": [
         {
           "component": "text",
           "name": "dataSource",
@@ -35,5 +56,10 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "fund-chart",
+      "components": ["fund-chart-item"]
+    }
+  ]
 }

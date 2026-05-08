@@ -422,11 +422,16 @@
     "id": "fund-chart",
     "fields": [
       {
-        "component": "text",
-        "name": "title",
-        "label": "Chart Title (Optional)",
+        "component": "richtext",
+        "name": "filter",
+        "label": "Year Filter",
         "valueType": "string"
-      },
+      }
+    ]
+  },
+  {
+    "id": "fund-chart-item",
+    "fields": [
       {
         "component": "text",
         "name": "dataSource",

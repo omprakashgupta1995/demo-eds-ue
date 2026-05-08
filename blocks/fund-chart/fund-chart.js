@@ -1,61 +1,81 @@
-// 1. Static Imports for amCharts
-import * as am5 from "https://cdn.amcharts.com/lib/5/index.js";
-import * as am5xy from "https://cdn.amcharts.com/lib/5/xy.js";
-import am5themes_Animated from "https://cdn.amcharts.com/lib/5/themes/Animated.js";
-
 export default async function decorate(block) {
-  // 2. Read Authored Content from Universal Editor
-  const titleRow = block.children[0];
-  const dataRow = block.children[1];
+  // 1. Parse the Universal Editor DOM
+  // The first child contains the parent fields (the richtext ul)
+  const filterRow = block.children[0];
+  const ul = filterRow ? filterRow.querySelector("ul") : null;
+  const tabNames = ul
+    ? Array.from(ul.querySelectorAll("li")).map((li) => li.textContent.trim())
+    : [];
 
-  const titleText = titleRow ? titleRow.textContent.trim() : "";
-  let dataUrl = dataRow ? dataRow.textContent.trim() : "";
-  if (dataRow && dataRow.querySelector("a")) {
-    dataUrl = dataRow.querySelector("a").href;
-  }
+  // The remaining children are the 'fund-chart-item' rows containing the data URLs
+  const itemRows = Array.from(block.children).slice(1);
 
-  // 3. Clean up raw DOM and build layout
-  block.innerHTML = "";
+  // Map the tab names to their respective JSON URLs
+  const tabData = tabNames.map((name, index) => {
+    const row = itemRows[index];
+    let url = "";
+    if (row) {
+      const a = row.querySelector("a");
+      url = a ? a.href : row.textContent.trim();
+    }
+    return { name, url };
+  });
 
-  if (titleText) {
-    const header = document.createElement("div");
-    header.className = "chart-header";
-    header.innerHTML = `<h3>${titleText}</h3>`;
-    block.append(header);
-  }
+  // 2. Build the UI Layout
+  block.innerHTML = ""; // Clear raw authored DOM
+
+  const topBar = document.createElement("div");
+  topBar.className = "chart-top-bar";
+
+  // Create Tabs UI
+  const tabsContainer = document.createElement("ul");
+  tabsContainer.className = "filter-tabs";
+
+  // Create CAGR Text Element
+  const cagrDisplay = document.createElement("div");
+  cagrDisplay.className = "cagr-display";
+  cagrDisplay.innerHTML = `CAGR <span class="cagr-val">--</span>`;
+
+  topBar.append(tabsContainer);
+  topBar.append(cagrDisplay);
+  block.append(topBar);
 
   const chartDiv = document.createElement("div");
   chartDiv.className = "amcharts-container";
   block.append(chartDiv);
 
-  // 4. Fetch Data (with fallback to generator for testing)
-  let chartData = [];
+  // 3. Bulletproof amCharts Loader for EDS
+  const loadAmCharts = async () => {
+    if (window.am5) return;
+    const loadScript = (src) =>
+      new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.append(script);
+      });
+
+    // Must load in exactly this order!
+    await loadScript("https://cdn.amcharts.com/lib/5/index.js");
+    await loadScript("https://cdn.amcharts.com/lib/5/xy.js");
+    await loadScript("https://cdn.amcharts.com/lib/5/themes/Animated.js");
+  };
+
   try {
-    if (dataUrl) {
-      const response = await fetch(dataUrl);
-      const json = await response.json();
-      chartData = json.data; // Expects properties: date, fundValue, benchmarkValue
-    } else {
-      // Fallback: Generate random data if no URL is provided (based on your snippet)
-      let date = new Date(2023, 0, 1).getTime();
-      let fundValue = 10500;
-      let benchmarkValue = 10000;
-      for (let i = 0; i < 900; i++) {
-        fundValue += Math.round(Math.random() * 100 - 45);
-        benchmarkValue += Math.round(Math.random() * 80 - 38);
-        chartData.push({
-          date: date + i * 86400000, // add days
-          fundValue: fundValue,
-          benchmarkValue: benchmarkValue,
-        });
-      }
-    }
-  } catch (e) {
-    console.error("Failed to load chart data:", e);
+    await loadAmCharts();
+  } catch (error) {
+    console.error("Failed to load amCharts", error);
+    chartDiv.innerHTML = "<p>Error loading chart library.</p>";
     return;
   }
 
-  // 5. Initialize amCharts
+  // Map to the global variables created by the amCharts scripts
+  const am5 = window.am5;
+  const am5xy = window.am5xy;
+  const am5themes_Animated = window.am5themes_Animated;
+
+  // 4. Initialize the Chart (Empty State)
   const root = am5.Root.new(chartDiv);
   root.setThemes([am5themes_Animated.new(root)]);
 
@@ -75,7 +95,6 @@ export default async function decorate(block) {
   cursor.lineX.set("forceHidden", true);
   cursor.lineY.set("forceHidden", true);
 
-  // Axes
   const xAxis = chart.xAxes.push(
     am5xy.DateAxis.new(root, {
       baseInterval: { timeUnit: "day", count: 1 },
@@ -92,7 +111,7 @@ export default async function decorate(block) {
     }),
   );
 
-  // Define Colors based on your image
+  // Define Colors
   const fundColor = am5.color(0x6b81ff); // Blue
   const benchmarkColor = am5.color(0xff9800); // Orange
 
@@ -113,7 +132,6 @@ export default async function decorate(block) {
     visible: true,
     fill: fundColor,
   });
-  seriesFund.data.setAll(chartData);
 
   // Series 2: Benchmark (Orange)
   const seriesBenchmark = chart.series.push(
@@ -131,7 +149,6 @@ export default async function decorate(block) {
     visible: true,
     fill: benchmarkColor,
   });
-  seriesBenchmark.data.setAll(chartData);
 
   // Add Scrollbar
   chart.set(
@@ -150,71 +167,103 @@ export default async function decorate(block) {
   );
   legend.data.setAll(chart.series.values);
 
-  // --- DRAG BUTTON / RANGE LOGIC (From your snippet) ---
-  const rangeDate = new Date(
-    chartData[Math.round(chartData.length / 1.5)].date,
-  ); // Place button at 2/3rds
-  const rangeTime = rangeDate.getTime();
+  // 5. JavaScript CAGR Calculator
+  const calculateCAGR = (data) => {
+    if (!data || data.length < 2) return 0;
 
-  const seriesRangeDataItem = xAxis.makeDataItem({});
-  const seriesRange = seriesFund.createAxisRange(seriesRangeDataItem);
+    // Sort just in case data comes back out of order
+    const sorted = [...data].sort((a, b) => a.date - b.date);
+    const initialVal = sorted[0].fundValue;
+    const finalVal = sorted[sorted.length - 1].fundValue;
 
-  // Create the blue fill pattern you had in your code (adjusted to blue to match button)
-  seriesRange.fills.template.setAll({ visible: true, opacity: 0.3 });
-  seriesRange.fills.template.set(
-    "fillPattern",
-    am5.LinePattern.new(root, {
-      color: fundColor,
-      rotation: 45,
-      strokeWidth: 2,
-      width: 2000,
-      height: 2000,
-      fill: am5.color(0xffffff),
-    }),
-  );
-  seriesRange.strokes.template.set("stroke", fundColor);
+    // Calculate time difference in years
+    const msDiff = sorted[sorted.length - 1].date - sorted[0].date;
+    const years = msDiff / (1000 * 60 * 60 * 24 * 365.25);
 
-  xAxis.onPrivate("max", function (value) {
-    seriesRangeDataItem.set("endValue", value);
-    seriesRangeDataItem.set("value", rangeTime);
+    if (years <= 0 || initialVal <= 0) return 0;
+
+    const cagr = (Math.pow(finalVal / initialVal, 1 / years) - 1) * 100;
+    return cagr.toFixed(2);
+  };
+
+  // 6. Data Fetching and Update Logic
+  const updateChartData = async (tab) => {
+    let data = [];
+
+    try {
+      if (tab.url) {
+        // If author provided a URL, fetch the real data
+        const response = await fetch(tab.url);
+        const json = await response.json();
+        data = json.data;
+      } else {
+        // FALLBACK: Generate dummy data if no URL is provided
+        let days =
+          tab.name === "1Y"
+            ? 365
+            : tab.name === "3Y"
+              ? 1095
+              : tab.name === "5Y"
+                ? 1825
+                : 3000;
+        let date = new Date().getTime() - days * 86400000; // go back 'days' amount from today
+        let fVal = 10000,
+          bVal = 10000;
+
+        for (let i = 0; i < days; i++) {
+          fVal += Math.random() * 100 - 45;
+          bVal += Math.random() * 80 - 38;
+          data.push({
+            date: date + i * 86400000,
+            fundValue: fVal,
+            benchmarkValue: bVal,
+          });
+        }
+      }
+    } catch (e) {
+      console.error("Failed to load chart data:", e);
+      return;
+    }
+
+    // Update the chart series (amCharts will animate this automatically)
+    seriesFund.data.setAll(data);
+    seriesBenchmark.data.setAll(data);
+
+    // Zoom out to show full new range
+    xAxis.zoom(0, 1, 1000);
+
+    // Update the CAGR text dynamically
+    const cagrPercent = calculateCAGR(data);
+    cagrDisplay.innerHTML = `CAGR ${tab.name} <span>${cagrPercent}%</span>`;
+  };
+
+  // 7. Wire up the Tab Buttons
+  tabData.forEach((tab, index) => {
+    const li = document.createElement("li");
+    li.textContent = tab.name;
+
+    // Set the first tab as active by default
+    if (index === 0) li.classList.add("active");
+
+    li.addEventListener("click", () => {
+      // Manage active state classes
+      tabsContainer
+        .querySelectorAll("li")
+        .forEach((el) => el.classList.remove("active"));
+      li.classList.add("active");
+
+      // Update the chart with new data
+      updateChartData(tab);
+    });
+
+    tabsContainer.append(li);
   });
 
-  const range = xAxis.createAxisRange(xAxis.makeDataItem({}));
-  range.set("value", rangeTime);
-  range.get("grid").setAll({ strokeOpacity: 1, stroke: fundColor });
-
-  // Custom blue drag button
-  const resizeButton = am5.Button.new(root, {
-    themeTags: ["resize", "horizontal"],
-    icon: am5.Graphics.new(root, { themeTags: ["icon"] }),
-    background: am5.RoundedRectangle.new(root, {
-      fill: fundColor,
-      cornerRadiusTL: 20,
-      cornerRadiusTR: 20,
-      cornerRadiusBL: 20,
-      cornerRadiusBR: 20,
-    }),
-  });
-
-  resizeButton.adapters.add("y", () => 0);
-  resizeButton.adapters.add("x", (x) =>
-    Math.max(0, Math.min(chart.plotContainer.width(), x)),
-  );
-
-  resizeButton.events.on("dragged", function () {
-    const x = resizeButton.x();
-    const position = xAxis.toAxisPosition(x / chart.plotContainer.width());
-    const value = xAxis.positionToValue(position);
-
-    range.set("value", value);
-    seriesRangeDataItem.set("value", value);
-    seriesRangeDataItem.set("endValue", xAxis.getPrivate("max"));
-  });
-
-  range.set("bullet", am5xy.AxisBullet.new(root, { sprite: resizeButton }));
-
-  // Animate on load
-  seriesFund.appear(1000);
-  seriesBenchmark.appear(1000);
-  chart.appear(1000, 100);
+  // Load the initial data for the first tab
+  if (tabData.length > 0) {
+    updateChartData(tabData[0]);
+    seriesFund.appear(1000);
+    seriesBenchmark.appear(1000);
+    chart.appear(1000, 100);
+  }
 }
