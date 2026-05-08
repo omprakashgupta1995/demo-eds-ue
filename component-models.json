@@ -422,7 +422,7 @@
     "id": "fund-chart",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "name": "filterYear",
         "label": "Year Filter",
         "valueType": "string"
