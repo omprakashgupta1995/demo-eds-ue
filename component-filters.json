@@ -28,7 +28,8 @@
       "form",
       "formV2",
       "vehicle-carousel",
-      "fragment"
+      "fragment",
+      "fund-details"
     ]
   },
   {
@@ -67,6 +68,9 @@
     "components": [
       "column"
     ]
+  },{
+    "id":"fund-details",
+    "components":[]
   },
   {
     "id": "column",
