@@ -40,8 +40,15 @@
         "label":"Fund Type",
         "value":""
       },
+       {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "col1_btn",
+        "label": "Button Link",
+        "value": ""
+      },
       {
-        "component":"richtext",
+        "component":"text",
         "valueType":"string",
         "name":"col1_btnText",
         "label":"Button Text",

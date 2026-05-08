@@ -591,7 +591,14 @@
         "value": ""
       },
       {
-        "component": "richtext",
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "col1_btn",
+        "label": "Button Link",
+        "value": ""
+      },
+      {
+        "component": "text",
         "valueType": "string",
         "name": "col1_btnText",
         "label": "Button Text",
