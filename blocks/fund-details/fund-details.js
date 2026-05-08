@@ -78,8 +78,6 @@ export default function decorate(block) {
       }
     });
     
-    
-    
     dataUl.style.display = 'none'; // Hide raw EDS list
   });
 
@@ -222,10 +220,6 @@ export default function decorate(block) {
   // --- 5. Clean up metadata & Style Footer ---
   if (btnContainer) {
     btnContainer.classList.add('fund-action');
-    const nextP = btnContainer.nextElementSibling;
-    if (nextP && nextP.textContent.trim().toLowerCase() === 'primary') {
-      nextP.remove();
-    }
   }
 
   const allPs = container.querySelectorAll('p');
