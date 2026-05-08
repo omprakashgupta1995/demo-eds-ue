@@ -419,6 +419,23 @@
     ]
   },
   {
+    "id": "fund-chart",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Chart Title (Optional)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "dataSource",
+        "label": "Data Source (Spreadsheet JSON URL)",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "heading",
     "fields": [
       {
