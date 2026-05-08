@@ -347,64 +347,6 @@
     ]
   },
   {
-    "id":"fund-details",
-    "fields":[
-      {
-        "component":"richtext",
-        "valueType":"string",
-        "name":"col1_title",
-        "label":"Title",
-        "value":""
-      },{
-         "component":"richtext",
-        "valueType":"string",
-        "name":"col1_fundTag",
-        "label":"Fund Tags",
-        "value":""
-      },
-      {
-        "component":"richtext",
-        "valueType":"string",
-        "name":"col1_fund_Type",
-        "label":"Fund Type",
-        "value":""
-      },
-      {
-        "component":"richtext",
-        "valueType":"string",
-        "name":"col1_btnText",
-        "label":"Button Text",
-        "value":""
-      },
-      {
-        "component":"select",
-        "name":"col1_btnType",
-        "label":"Button Type",
-        "options":[
-          {
-            "name":"default",
-            "value":""
-          },
-          {
-            "name":"Primary",
-            "value":"primary"
-          },{
-            "name":"secondary",
-            "value":"secondary"
-          }
-        ]
-      },
-      {
-        "component":"richtext",
-        "valueType":"string",
-        "name":"col1_description",
-        "label":"Description",
-        "value":""
-      }
-    ]
-
-  },
-  {
     "id": "columns",
     "fields": [
       {
@@ -621,6 +563,65 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "fund-details",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_fundTag",
+        "label": "Fund Tags",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_fund_Type",
+        "label": "Fund Type",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_btnText",
+        "label": "Button Text",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "col1_btnType",
+        "label": "Button Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_description",
+        "label": "Description",
+        "value": ""
       }
     ]
   },

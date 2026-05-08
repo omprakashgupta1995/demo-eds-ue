@@ -1,0 +1,291 @@
+/* ==========================================================================
+   Container & Card Base
+   ========================================================================== */
+.fund-details.block {
+  padding: 20px;
+  background-color: #f5f6fa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Prevent CLS: Hide ALL raw data lists immediately */
+.fund-details.block > div > div > ul:not(:first-of-type) {
+  display: none;
+}
+
+.fund-details .fund-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 420px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Header & Typography
+   ========================================================================== */
+.fund-details .fund-icon {
+  background-color: #ffdde4;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 16px;
+}
+
+.fund-details .fund-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.fund-details .fund-title {
+  font-size: 22px;
+  color: #2b268b;
+  font-weight: 700;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.fund-details .fund-desc {
+  font-size: 14px;
+  color: #5b55a3;
+  margin: 0 0 16px;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   Tags / Pills
+   ========================================================================== */
+.fund-details .fund-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fund-details .fund-tag-pill {
+  background-color: #f0f2f6;
+  color: #2b268b;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Interactive Stats Section
+   ========================================================================== */
+.fund-details .fund-stats-container {
+  margin-bottom: 24px;
+}
+
+.fund-details .fund-stats-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+
+.fund-details .stat-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.fund-details .stat-label {
+  font-size: 12px;
+  color: #666666;
+  font-weight: 500;
+}
+
+.fund-details .stat-value {
+  font-size: 24px;
+  color: #2b268b;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.fund-details .stat-value.highlight {
+  font-size: 28px;
+}
+
+.fund-details .stat-value span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.fund-details .trend.up {
+  font-size: 12px;
+  color: #00a65a;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Button & Footer
+   ========================================================================== */
+.fund-details .fund-action {
+  margin: 0 0 16px;
+}
+
+.fund-details .fund-action .button {
+  display: block;
+  width: 100%;
+  background-color: #352e93;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.fund-details .fund-action .button:hover {
+  background-color: #1c1860;
+}
+
+.fund-details .fund-footer {
+  font-size: 12px;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.fund-details .fund-footer .icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+}
+
+.fund-details .fund-footer img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
+   Custom Dropdown UI (Replaces Native <select>)
+   ========================================================================== */
+.fund-details .custom-select {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+
+.fund-details .plan-select-wrapper {
+  margin-bottom: 16px;
+  width: auto;
+}
+
+/* Fix z-index so dropdowns stack correctly over other text */
+.fund-details .stat-col.return-col {
+  z-index: 2; 
+  position: relative;
+}
+
+/* The visible "button" part of the dropdown */
+.fund-details .custom-select-trigger {
+  color: #2b268b;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 28px 6px 8px;
+  margin-left: -8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%232b268b" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+}
+
+.fund-details .custom-select-trigger:hover {
+  background-color: #f0f2f6;
+}
+
+.fund-details .custom-select-trigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(43, 38, 139, 0.1); 
+}
+
+/* Rotate arrow when open */
+.fund-details .custom-select-trigger.active {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%232b268b" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 14l5-5 5 5z"/></svg>');
+}
+
+/* Specific sizing for the two different dropdowns */
+.fund-details .plan-select-wrapper .custom-select-trigger {
+  font-size: 16px;
+}
+
+.fund-details .duration-select-wrapper .custom-select-trigger {
+  font-size: 13px;
+  background-size: 16px;
+  padding-right: 22px;
+}
+
+/* The Hidden UL List */
+.fund-details .custom-select-list {
+  position: absolute;
+  top: 100%;
+  left: -8px; /* Align perfectly with left edge */
+  z-index: 10;
+  display: none; /* Hidden until clicked */
+  margin: 4px 0 0 0;
+  padding: 4px 0;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 100%;
+  white-space: nowrap;
+  
+  /* SCROLL LOGIC: 39px per item * 4 items = 156px */
+  max-height: 156px; 
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar styling */
+.fund-details .custom-select-list::-webkit-scrollbar {
+  width: 6px;
+}
+.fund-details .custom-select-list::-webkit-scrollbar-thumb {
+  background-color: #cdd2e0;
+  border-radius: 10px;
+}
+
+.fund-details .custom-select-list.open {
+  display: block;
+}
+
+/* Individual Dropdown Options (LIs) */
+.fund-details .custom-select-option {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.fund-details .custom-select-option:hover {
+  background-color: #f5f6fa;
+}
+
+.fund-details .custom-select-option.selected {
+  color: #2b268b;
+  font-weight: 600;
+  background-color: #eef0f8;
+}

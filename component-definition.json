@@ -401,6 +401,21 @@
           }
         },
         {
+          "title": "Fund Details",
+          "id": "fund-details",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Fund Details",
+                  "model": "fund-details"
+                }
+              }
+            }
+          }
+        },
+        {
           "id": "hero-carousel",
           "title": "Hero Carousel",
           "description": "A carousel block to display multiple items in a sliding format.",
@@ -547,21 +562,6 @@
                 "template": {
                   "name": "Product Item 2",
                   "model": "product-item-2"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Fund Details",
-          "id": "fund-details",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Fund Details",
-                  "model": "fund-details"
                 }
               }
             }
