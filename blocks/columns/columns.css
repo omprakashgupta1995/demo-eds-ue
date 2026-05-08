@@ -35,6 +35,7 @@
   position: relative;
   background-color: white;
   font-family: var(--hero-font-family);
+  padding-bottom: 80px;
 }
 
 /* .section.our-range-h.columns-container{

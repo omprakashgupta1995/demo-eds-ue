@@ -295,7 +295,12 @@ main .section.highlight {
 
 /* Main Section Container */
 .section.bg-edge2 {
-    clip-path: polygon(
+  position: relative;
+  height: 100%;
+  width:100%;
+  background-color: white;
+  
+    /* clip-path: polygon(
         47% 0px,
         54% 9%,
         100% 9%,
@@ -318,7 +323,7 @@ main .section.highlight {
     position: relative;
     overflow: hidden;
     color: white;
-    margin: 0 auto;
+    margin: 0 auto; */
 }
 
 /* The Grey Angled Header Background */
@@ -348,6 +353,7 @@ main .section.highlight {
     cursor: pointer;
     background: #555;
     color: #fff;
+    border-radius: 0;
 }
 
 .tab-btn.active {
@@ -381,6 +387,37 @@ main .section.highlight {
     text-transform: uppercase;
 }
 
+.section.bg-edge2 .carousel-wrapper{
+  background-color: white;
+    clip-path: polygon(
+        47% 0px,
+        54% 9%,
+        100% 9%,
+        100% 70%,
+        100% 100%,
+        6% 100%,
+        0px 94%,
+        0px 0px
+    );
+    background: linear-gradient(
+        0deg,
+        rgb(0, 0, 0) 39.26%,
+        rgb(102, 102, 102) 128.14%
+    );
+    /* min-height: 700px; */
+    width: 80%;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%;
+    height: 100%; */
+    z-index: 2;
+}
 /* Button Styling (Targeting the second form button correctly) */
 .custom-submit-btn {
     background: #e11b22;

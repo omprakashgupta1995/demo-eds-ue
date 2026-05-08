@@ -96,7 +96,9 @@
 .value-block {
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid white;
     gap: 0.25rem;
+    
 }
 
 .value-block .label {
