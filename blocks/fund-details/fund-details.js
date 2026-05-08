@@ -231,6 +231,9 @@
 /**
  * Utility to easily create DOM elements with classes and text content
  */
+/**
+ * Utility to easily create DOM elements with classes and text content
+ */
 function createEl(tag, classNames = '', textContent = '') {
   const el = document.createElement(tag);
   if (classNames) {
@@ -271,8 +274,8 @@ export default function decorate(block) {
     tagsUl.querySelectorAll('li').forEach((li) => li.classList.add('fund-tag-pill'));
   }
 
-  // Find all remaining data lists
-  const dataUls = allUls.filter((ul) => ul !== tagsUl);
+  // FIX: Find top-level data lists only (ignore nested ones by checking if they are inside an li)
+  const dataUls = allUls.filter((ul) => ul !== tagsUl && !ul.closest('li'));
   if (dataUls.length === 0) return; 
 
   // --- 2. Parse Data Lists into a JS Object ---
@@ -280,13 +283,12 @@ export default function decorate(block) {
   
   dataUls.forEach((dataUl) => {
     [...dataUl.children].forEach((planLi) => {
-      // Look for the plan name (handles p strong, p, or just strong)
       const planNameP = planLi.querySelector('p strong') || planLi.querySelector('p') || planLi.querySelector('strong');
       if (!planNameP) return;
       
       const planName = planNameP.textContent.trim();
       
-      // Safety skip if it grabbed a detail label by mistake
+      // Skip if it accidentally grabbed a detail row instead of a plan name
       if (!planName || planName.toLowerCase().includes('return') || planName.toLowerCase().includes('nav')) return;
 
       fundData[planName] = { returns: {}, nav: { label: 'NAV', value: '-', trend: '' } };
@@ -446,7 +448,7 @@ export default function decorate(block) {
   // Build the Plan Select 
   planSelectWrapper = buildCustomSelect(planOptions, 'plan-select-wrapper', updateUI);
   
-  // Build the Duration Select safely
+  // Safely build Duration Select
   const firstPlanData = fundData[planOptions[0]];
   const durationOptions = (firstPlanData && Object.keys(firstPlanData.returns).length > 0) 
     ? Object.keys(firstPlanData.returns) 
