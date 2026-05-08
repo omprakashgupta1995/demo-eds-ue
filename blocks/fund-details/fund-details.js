@@ -37,7 +37,7 @@ export default function decorate(block) {
 
   // Find all remaining data lists
   const dataUls = allUls.filter((ul) => ul !== tagsUl);
-  if (dataUls.length === 0) return; 
+  // if (dataUls.length === 0) return; 
 
   // --- 2. Parse Data Lists into a JS Object ---
   const fundData = {};
