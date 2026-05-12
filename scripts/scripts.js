@@ -143,13 +143,13 @@ function decorateTables(main) {
       cells.forEach((cellText) => {
         const cell = document.createElement(rowIndex === 0 ? 'th' : 'td');
         cell.textContent = cellText;
-        tr.append(cell);
+        tr.prepend(cell);
       });
-      if (rowIndex === 0) thead.append(tr);
-      else tbody.append(tr);
+      if (rowIndex === 0) thead.prepend(tr);
+      else tbody.prepend(tr);
     });
-    if (thead.children.length) table.append(thead);
-    if (tbody.children.length) table.append(tbody);
+    if (thead.children.length) table.prepend(thead);
+    if (tbody.children.length) table.prepend(tbody);
     return table;
   };
 
