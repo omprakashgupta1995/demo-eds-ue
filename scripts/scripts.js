@@ -118,6 +118,53 @@ function autolinkModals(element) {
 }
 
 /**
+ * Converts paragraphs in default-content-wrapper to HTML tables.
+ * Pattern: <p>Table</p> followed by <p>col1 col2</p> rows.
+ * First data row becomes <thead> with <th>, rest become <tbody> with <td>.
+ * @param {Element} main The container element
+ */
+function decorateTables(main) {
+  main.querySelectorAll('.default-content-wrapper').forEach((wrapper) => {
+    const paragraphs = [...wrapper.querySelectorAll('p')];
+
+    paragraphs.forEach((marker) => {
+      if (marker.textContent.trim().toLowerCase() !== 'table') return;
+
+      const rowParagraphs = [];
+      let sibling = marker.nextElementSibling;
+      while (sibling && sibling.tagName === 'P') {
+        rowParagraphs.push(sibling);
+        sibling = sibling.nextElementSibling;
+      }
+
+      if (!rowParagraphs.length) return;
+
+      const table = document.createElement('table');
+      const thead = document.createElement('thead');
+      const tbody = document.createElement('tbody');
+
+      rowParagraphs.forEach((p, rowIndex) => {
+        const cells = p.textContent.trim().split(/\s+/);
+        const tr = document.createElement('tr');
+        cells.forEach((cellText) => {
+          const cell = document.createElement(rowIndex === 0 ? 'th' : 'td');
+          cell.textContent = cellText;
+          tr.append(cell);
+        });
+        if (rowIndex === 0) thead.append(tr);
+        else tbody.append(tr);
+      });
+
+      if (thead.children.length) table.append(thead);
+      if (tbody.children.length) table.append(tbody);
+
+      marker.replaceWith(table);
+      rowParagraphs.forEach((p) => p.remove());
+    });
+  });
+}
+
+/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
@@ -141,6 +188,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateTables(main);
 }
 /**
  * Loads everything needed to get to LCP.

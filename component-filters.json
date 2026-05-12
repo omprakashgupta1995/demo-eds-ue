@@ -118,11 +118,14 @@
     "id": "richtext",
     "rte": {
       "toolbar": {
-        "insert": ["link", "unlink", "image", "table"]
+        "format": ["bold", "italic", "underline"],
+        "list": ["bullet_list", "ordered_list"],
+        "insert": ["link", "unlink", "table"],
+        "sections": ["format", "list", "insert"]
       },
       "actions": {
         "table": {
-          "wrapInParagraphs": false,
+          "wrapInParagraphs": true,
           "label": "Insert Table"
         }
       }
