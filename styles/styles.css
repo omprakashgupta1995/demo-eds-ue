@@ -306,3 +306,41 @@ main .section.highlight {
   padding: 8px 16px;
   color: #0D2042;
 }
+
+/* table styles */
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: var(--body-font-size-xs);
+}
+
+main table th,
+main table td {
+  border: 1px solid #BFC4CD;
+  padding: 10px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+main table thead th {
+  background-color: var(--light-color);
+  font-weight: 600;
+  color: #0D2042;
+}
+
+main table tbody tr:nth-child(even) {
+  background-color: #f4f6fa;
+}
+
+main table tbody tr:hover {
+  background-color: #e8edf5;
+}
+
+@media (width < 900px) {
+  main table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

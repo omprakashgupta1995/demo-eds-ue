@@ -119,48 +119,72 @@ function autolinkModals(element) {
 
 /**
  * Converts paragraphs in default-content-wrapper to HTML tables.
- * Pattern: <p>Table</p> followed by <p>col1 col2</p> rows.
- * First data row becomes <thead> with <th>, rest become <tbody> with <td>.
+ * Supports two patterns:
+ * 1. <p>Table</p> marker followed by row paragraphs
+ * 2. All paragraphs in wrapper share same column count (≥2) — auto-detected
+ * Cells split by " | " if present, otherwise by whitespace.
+ * Skips in Universal Editor author iframe to preserve instrumentation.
  * @param {Element} main The container element
  */
 function decorateTables(main) {
+  // skip in Universal Editor author context
+  if (window.self !== window.top) return;
+
+  const getCells = (p) => {
+    const text = p.textContent.trim();
+    return text.includes(' | ')
+      ? text.split(' | ').map((c) => c.trim()).filter(Boolean)
+      : text.split(/\s+/).filter(Boolean);
+  };
+
+  const buildTable = (rowParagraphs) => {
+    const table = document.createElement('table');
+    const thead = document.createElement('thead');
+    const tbody = document.createElement('tbody');
+    rowParagraphs.forEach((p, rowIndex) => {
+      const cells = getCells(p);
+      const tr = document.createElement('tr');
+      cells.forEach((cellText) => {
+        const cell = document.createElement(rowIndex === 0 ? 'th' : 'td');
+        cell.textContent = cellText;
+        tr.append(cell);
+      });
+      if (rowIndex === 0) thead.append(tr);
+      else tbody.append(tr);
+    });
+    if (thead.children.length) table.append(thead);
+    if (tbody.children.length) table.append(tbody);
+    return table;
+  };
+
   main.querySelectorAll('.default-content-wrapper').forEach((wrapper) => {
     const paragraphs = [...wrapper.querySelectorAll('p')];
+    if (!paragraphs.length) return;
 
+    // pattern 1: explicit <p>Table</p> marker
     paragraphs.forEach((marker) => {
       if (marker.textContent.trim().toLowerCase() !== 'table') return;
-
       const rowParagraphs = [];
       let sibling = marker.nextElementSibling;
       while (sibling && sibling.tagName === 'P') {
         rowParagraphs.push(sibling);
         sibling = sibling.nextElementSibling;
       }
-
       if (!rowParagraphs.length) return;
-
-      const table = document.createElement('table');
-      const thead = document.createElement('thead');
-      const tbody = document.createElement('tbody');
-
-      rowParagraphs.forEach((p, rowIndex) => {
-        const cells = p.textContent.trim().split(/\s+/);
-        const tr = document.createElement('tr');
-        cells.forEach((cellText) => {
-          const cell = document.createElement(rowIndex === 0 ? 'th' : 'td');
-          cell.textContent = cellText;
-          tr.append(cell);
-        });
-        if (rowIndex === 0) thead.append(tr);
-        else tbody.append(tr);
-      });
-
-      if (thead.children.length) table.append(thead);
-      if (tbody.children.length) table.append(tbody);
-
-      marker.replaceWith(table);
+      marker.replaceWith(buildTable(rowParagraphs));
       rowParagraphs.forEach((p) => p.remove());
     });
+
+    // pattern 2: auto-detect — all paragraphs have same column count ≥ 2
+    const remaining = [...wrapper.querySelectorAll('p')];
+    if (remaining.length < 2) return;
+    const colCounts = remaining.map((p) => getCells(p).length);
+    const colCount = colCounts[0];
+    if (colCount < 2) return;
+    if (!colCounts.every((c) => c === colCount)) return;
+    const table = buildTable(remaining);
+    remaining[0].replaceWith(table);
+    remaining.slice(1).forEach((p) => p.remove());
   });
 }
 
