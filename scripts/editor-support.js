@@ -9,8 +9,10 @@ import {
 } from './aem.js';
 import { decorateRichtext } from './editor-support-rte.js';
 
-// mark document as author context so CSS can hide table borders
+// mark document as author context
 document.body.classList.add('is-author');
+// ensure body is visible in author iframe (scripts.js doesn't run here)
+document.body.classList.add('appear');
 import { decorateMain } from './scripts.js';
 
 async function applyChanges(event) {

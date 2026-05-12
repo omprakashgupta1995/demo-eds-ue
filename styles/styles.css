@@ -307,47 +307,45 @@ main .section.highlight {
   color: #0D2042;
 }
 
-/* table styles — only on published page, not in author */
-body:not(.is-author) main table {
+/* table styles */
+main table,
+.default-content-wrapper table {
   width: 100%;
   border-collapse: collapse;
   margin: 1em 0;
   font-size: var(--body-font-size-xs);
 }
 
-body:not(.is-author) main table th,
-body:not(.is-author) main table td {
+main table th,
+main table td,
+.default-content-wrapper table th,
+.default-content-wrapper table td {
   border: 1px solid #BFC4CD;
   padding: 10px 16px;
   text-align: left;
   vertical-align: top;
 }
 
-body:not(.is-author) main table thead th {
+main table thead th,
+.default-content-wrapper table thead th {
   background-color: var(--light-color);
   font-weight: 600;
   color: #0D2042;
 }
 
-body:not(.is-author) main table tbody tr:nth-child(even) {
+main table tbody tr:nth-child(even),
+.default-content-wrapper table tbody tr:nth-child(even) {
   background-color: #f4f6fa;
 }
 
-body:not(.is-author) main table tbody tr:hover {
+main table tbody tr:hover,
+.default-content-wrapper table tbody tr:hover {
   background-color: #e8edf5;
 }
 
-/* hide table borders in author mode */
-body.is-author main table,
-body.is-author main table th,
-body.is-author main table td {
-  border: none;
-  background: none;
-  padding: 0;
-}
-
 @media (width < 900px) {
-  body:not(.is-author) main table {
+  main table,
+  .default-content-wrapper table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
