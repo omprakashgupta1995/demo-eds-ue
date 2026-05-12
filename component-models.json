@@ -913,7 +913,7 @@
     ]
   },
   {
-    "id": "prabhu",
+    "id": "tarun",
     "fields": [
       {
         "component": "reference",
@@ -939,22 +939,8 @@
     ]
   },
   {
-    "id": "tarun",
+    "id": "richtext",
     "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "imageAlt",
-        "value": ""
-      },
       {
         "component": "richtext",
         "name": "text",

@@ -115,5 +115,20 @@
    {
     "id": "idfc-carousel",
     "components": ["idfc-carousel-item"]
+  },
+  {
+    "id": "richtext",
+    "rte": {
+      "toolbar": {
+        "insert": ["link", "unlink", "image", "table"]
+      },
+      "actions": {
+        "table": {
+          "wrapInParagraphs": false,
+          "label": "Insert Table"
+        }
+      }
+    },
+    "components": ["richtext"]
   }
 ]
