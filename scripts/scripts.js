@@ -175,14 +175,33 @@ function decorateTables(main) {
       rowParagraphs.forEach((p) => p.remove());
     });
 
-    // pattern 2: auto-detect — all paragraphs have same column count ≥ 2
+    // pattern 2: auto-detect — first paragraph has ≥ 2 columns, merged rows allowed
     const remaining = [...wrapper.querySelectorAll('p')];
     if (remaining.length < 2) return;
     const colCounts = remaining.map((p) => getCells(p).length);
-    const colCount = colCounts[0];
-    if (colCount < 2) return;
-    if (!colCounts.every((c) => c === colCount)) return;
-    const table = buildTable(remaining);
+    const maxCols = Math.max(...colCounts);
+    if (maxCols < 2) return;
+    // build table — rows with fewer cols are merged cells, add colspan to last cell
+    const table = document.createElement('table');
+    const thead = document.createElement('thead');
+    const tbody = document.createElement('tbody');
+    remaining.forEach((p, rowIndex) => {
+      const cells = getCells(p);
+      const tr = document.createElement('tr');
+      cells.forEach((cellText, cellIndex) => {
+        const cell = document.createElement(rowIndex === 0 ? 'th' : 'td');
+        cell.textContent = cellText;
+        // if last cell and row has fewer cols than max, add colspan
+        if (cellIndex === cells.length - 1 && cells.length < maxCols) {
+          cell.colSpan = maxCols - cells.length + 1;
+        }
+        tr.append(cell);
+      });
+      if (rowIndex === 0) thead.append(tr);
+      else tbody.append(tr);
+    });
+    if (thead.children.length) table.append(thead);
+    if (tbody.children.length) table.append(tbody);
     remaining[0].replaceWith(table);
     remaining.slice(1).forEach((p) => p.remove());
   });
