@@ -8,6 +8,9 @@ import {
   loadSections,
 } from './aem.js';
 import { decorateRichtext } from './editor-support-rte.js';
+
+// mark document as author context so CSS can hide table borders
+document.body.classList.add('is-author');
 import { decorateMain } from './scripts.js';
 
 async function applyChanges(event) {
