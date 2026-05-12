@@ -123,13 +123,9 @@ function autolinkModals(element) {
  * 1. <p>Table</p> marker followed by row paragraphs
  * 2. All paragraphs in wrapper share same column count (≥2) — auto-detected
  * Cells split by " | " if present, otherwise by whitespace.
- * Skips in Universal Editor author iframe to preserve instrumentation.
  * @param {Element} main The container element
  */
 function decorateTables(main) {
-  // skip in Universal Editor author context
-  if (window.self !== window.top) return;
-
   const getCells = (p) => {
     const text = p.textContent.trim();
     return text.includes(' | ')
@@ -231,7 +227,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
-  decorateTables(main);
+  decorateTables(main); // table
 }
 /**
  * Loads everything needed to get to LCP.

@@ -343,11 +343,16 @@ main table tbody tr:hover,
   background-color: #e8edf5;
 }
 
+/* responsive tables — scroll the wrapper, keep table layout intact so colspan/rowspan work */
 @media (width < 900px) {
+  main .default-content-wrapper,
+  .default-content-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   main table,
   .default-content-wrapper table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+    min-width: 500px;
   }
 }
