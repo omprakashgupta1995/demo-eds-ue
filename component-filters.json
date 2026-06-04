@@ -15,47 +15,17 @@
       "hero",
       "cards",
       "columns",
-      "quote",
-      "byline",
-      "product",
-      "swiper",
-      "tab",
-      "form",
-      "banner-container",
-      "product-1",
-      "teaser-cards",
-      "faq",
-      "fragment"
-    ]
-  },
-  {
-    "id": "teaser-cards",
-    "components": [
-      "teaser-card"
-    ]
-  },
-  {
-    "id": "banner-container",
-    "components": [
-      "banner"
+      "fragment",
+      "feature-cards",
+      "awards-banner",
+      "news-cards",
+      "cta-banner"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
-    ]
-  },
-  {
-    "id": "swiper",
-    "components": [
-      "swiper-item"
-    ]
-  },
-  {
-    "id": "tab",
-    "components": [
-      "tab-item"
     ]
   },
   {
@@ -71,6 +41,24 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "feature-cards",
+    "components": [
+      "feature-cards-item"
+    ]
+  },
+  {
+    "id": "hero",
+    "components": [
+      "hero-item"
+    ]
+  },
+  {
+    "id": "news-cards",
+    "components": [
+      "news-cards-item"
     ]
   }
 ]

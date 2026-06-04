@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1084" height="568"
+     viewBox="0 0 1084 568"
+     font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <rect width="1084" height="568" fill="#E2E5EA"/>
+  <!-- Panel 1: Feature Cards -->
+  <text x="266" y="22" font-size="13" fill="#2D3748" text-anchor="middle" font-weight="600">Feature Cards</text>
+  <g transform="translate(0,30)"><rect width="532" height="358" fill="#F3F4F6"/>
+  <line x1="480" y1="0" x2="480" y2="358" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="480" width="52" height="358" fill="#F3F4F6"/>
+  <text x="506" y="36" font-size="17" fill="#6B7280" text-anchor="middle">⚙</text>
+  <rect x="485" y="56" width="42" height="38" rx="5" fill="#DCE8FD"/>
+  <text x="506" y="82" font-size="17" fill="#0265DC" text-anchor="middle">◈</text>
+  <text x="506" y="128" font-size="17" fill="#6B7280" text-anchor="middle">✦</text>
+  <text x="506" y="174" font-size="17" fill="#6B7280" text-anchor="middle">💬</text>
+  <text x="506" y="220" font-size="17" fill="#6B7280" text-anchor="middle">⧉</text>
+  <text x="506" y="266" font-size="17" fill="#6B7280" text-anchor="middle">✏</text>
+  <text x="506" y="312" font-size="17" fill="#6B7280" text-anchor="middle">🗑</text>
+  <text x="506" y="358" font-size="17" fill="#6B7280" text-anchor="middle">⧅</text>
+  <text x="16" y="28" font-size="11" fill="#888888">Page › Main › Feature Cards</text>
+  <rect x="12" y="42" width="456" height="44" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="21" y="52" width="18" height="12" rx="1" fill="none" stroke="#555" stroke-width="1.4"/><polygon points="21,52 30,48 39,52 30,56" fill="none" stroke="#555" stroke-width="1.4"/><line x1="30" y1="56" x2="30" y2="64" stroke="#555" stroke-width="1.4"/>
+  <text x="50" y="71" font-size="14" fill="#111827" font-weight="600">Feature Cards</text>
+  <text x="456" y="72" font-size="20" fill="#6B7280" text-anchor="end">&#x2026;</text>
+  <!-- ── field: Section Heading (richtext) ── -->
+  <text x="16" y="120" font-size="12" fill="#4B5563" font-weight="500">Section Heading</text>
+  <text x="16" y="136" font-size="10" fill="#9CA3AF">Section H2 heading, e.g. Why choose NGS Super?</text>
+  <rect x="16" y="144" width="448" height="48" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="30" y="176" font-size="16" fill="#4B5563" font-weight="700" font-family="Georgia,serif">T</text>
+  <text x="54" y="174" font-size="12" fill="#374151">Section H2 heading, e.g. Why choose NGS Super…</text>
+  <!-- ── field: Section Image (reference) ── -->
+  <text x="16" y="222" font-size="12" fill="#4B5563" font-weight="500">Section Image</text>
+  <text x="464" y="222" font-size="11" fill="#9CA3AF" text-anchor="end">Max 1 items</text>
+  <text x="16" y="238" font-size="10" fill="#9CA3AF">Decorative image shown alongside the section headi…</text>
+  <rect x="16" y="246" width="448" height="48" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <circle cx="26" cy="260" r="1.5" fill="#B0B8C4"/><circle cx="31" cy="260" r="1.5" fill="#B0B8C4"/><circle cx="26" cy="265" r="1.5" fill="#B0B8C4"/><circle cx="31" cy="265" r="1.5" fill="#B0B8C4"/><circle cx="26" cy="270" r="1.5" fill="#B0B8C4"/><circle cx="31" cy="270" r="1.5" fill="#B0B8C4"/>
+  <rect x="44" y="251" width="38" height="38" rx="3" fill="#DDE3EC"/><text x="63" y="275" font-size="14" fill="#9CA3AF" text-anchor="middle">&#128247;</text>
+  <text x="90" y="275" font-size="12" fill="#1F2937">section_image.png</text>
+  <text x="452" y="276" font-size="16" fill="#9CA3AF" text-anchor="end">&#x2715;</text>
+  <text x="28" y="317" font-size="18" fill="#0265DC" font-weight="300">+</text>
+  <text x="48" y="317" font-size="12" fill="#0265DC" font-weight="500">Add</text></g>
+  <!-- Panel 2: Feature Cards Item -->
+  <text x="818" y="22" font-size="13" fill="#2D3748" text-anchor="middle" font-weight="600">Feature Cards Item</text>
+  <g transform="translate(552,30)"><rect width="532" height="538" fill="#F3F4F6"/>
+  <line x1="480" y1="0" x2="480" y2="538" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="480" width="52" height="538" fill="#F3F4F6"/>
+  <text x="506" y="36" font-size="17" fill="#6B7280" text-anchor="middle">⚙</text>
+  <rect x="485" y="56" width="42" height="38" rx="5" fill="#DCE8FD"/>
+  <text x="506" y="82" font-size="17" fill="#0265DC" text-anchor="middle">◈</text>
+  <text x="506" y="128" font-size="17" fill="#6B7280" text-anchor="middle">✦</text>
+  <text x="506" y="174" font-size="17" fill="#6B7280" text-anchor="middle">💬</text>
+  <text x="506" y="220" font-size="17" fill="#6B7280" text-anchor="middle">⧉</text>
+  <text x="506" y="266" font-size="17" fill="#6B7280" text-anchor="middle">✏</text>
+  <text x="506" y="312" font-size="17" fill="#6B7280" text-anchor="middle">🗑</text>
+  <text x="506" y="358" font-size="17" fill="#6B7280" text-anchor="middle">⧅</text>
+  <text x="16" y="28" font-size="11" fill="#888888">Page › Main › Feature Cards › Feature Cards Item</text>
+  <rect x="12" y="42" width="456" height="44" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="21" y="52" width="18" height="12" rx="1" fill="none" stroke="#555" stroke-width="1.4"/><polygon points="21,52 30,48 39,52 30,56" fill="none" stroke="#555" stroke-width="1.4"/><line x1="30" y1="56" x2="30" y2="64" stroke="#555" stroke-width="1.4"/>
+  <text x="50" y="71" font-size="14" fill="#111827" font-weight="600">Feature Cards Item</text>
+  <text x="456" y="72" font-size="20" fill="#6B7280" text-anchor="end">&#x2026;</text>
+  <!-- ── field: Card Icon (reference) ── -->
+  <text x="16" y="120" font-size="12" fill="#4B5563" font-weight="500">Card Icon</text>
+  <text x="464" y="120" font-size="11" fill="#9CA3AF" text-anchor="end">Max 1 items</text>
+  <text x="16" y="136" font-size="10" fill="#9CA3AF">Icon image for this card (small DAM reference)</text>
+  <rect x="16" y="144" width="448" height="48" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <circle cx="26" cy="158" r="1.5" fill="#B0B8C4"/><circle cx="31" cy="158" r="1.5" fill="#B0B8C4"/><circle cx="26" cy="163" r="1.5" fill="#B0B8C4"/><circle cx="31" cy="163" r="1.5" fill="#B0B8C4"/><circle cx="26" cy="168" r="1.5" fill="#B0B8C4"/><circle cx="31" cy="168" r="1.5" fill="#B0B8C4"/>
+  <rect x="44" y="149" width="38" height="38" rx="3" fill="#DDE3EC"/><text x="63" y="173" font-size="14" fill="#9CA3AF" text-anchor="middle">&#128247;</text>
+  <text x="90" y="173" font-size="12" fill="#1F2937">card_icon.png</text>
+  <text x="452" y="174" font-size="16" fill="#9CA3AF" text-anchor="end">&#x2715;</text>
+  <text x="28" y="215" font-size="18" fill="#0265DC" font-weight="300">+</text>
+  <text x="48" y="215" font-size="12" fill="#0265DC" font-weight="500">Add</text>
+  <!-- ── field: Card Content (richtext) ── -->
+  <text x="16" y="250" font-size="12" fill="#4B5563" font-weight="500">Card Content</text>
+  <text x="16" y="266" font-size="10" fill="#9CA3AF">Card heading (H3) and supporting body paragraph</text>
+  <rect x="16" y="274" width="448" height="48" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="30" y="306" font-size="16" fill="#4B5563" font-weight="700" font-family="Georgia,serif">T</text>
+  <text x="54" y="304" font-size="12" fill="#374151">Card heading (H3) and supporting body paragra…</text>
+  <!-- ── field: CTA Label (text) ── -->
+  <text x="16" y="352" font-size="12" fill="#4B5563" font-weight="500">CTA Label</text>
+  <text x="16" y="368" font-size="10" fill="#9CA3AF">Link text, e.g. Find out more</text>
+  <rect x="16" y="376" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="398" font-size="12" fill="#9CA3AF">Link text, e.g. Find out more</text>
+  <!-- ── field: CTA URL (text) ── -->
+  <text x="16" y="442" font-size="12" fill="#4B5563" font-weight="500">CTA URL</text>
+  <text x="16" y="458" font-size="10" fill="#9CA3AF">URL the card CTA link navigates to</text>
+  <rect x="16" y="466" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="488" font-size="12" fill="#9CA3AF">URL the card CTA link navigates to</text></g>
+</svg>

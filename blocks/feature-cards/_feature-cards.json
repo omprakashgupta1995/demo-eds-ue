@@ -1,0 +1,99 @@
+{
+  "definitions": [
+    {
+      "title": "Feature Cards",
+      "id": "feature-cards",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Feature Cards",
+              "model": "feature-cards",
+              "filter": "feature-cards"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Feature Cards Item",
+      "id": "feature-cards-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Feature Cards Item",
+              "model": "feature-cards-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "feature-cards",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "heading",
+          "value": "",
+          "label": "Section Heading",
+          "valueType": "string",
+          "description": "Section H2 heading, e.g. Why choose NGS Super?"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Section Image",
+          "multi": false,
+          "description": "Decorative image shown alongside the section heading"
+        }
+      ]
+    },
+    {
+      "id": "feature-cards-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col1_icon",
+          "label": "Card Icon",
+          "multi": false,
+          "description": "Icon image for this card (small DAM reference)"
+        },
+        {
+          "component": "richtext",
+          "name": "col2_text",
+          "value": "",
+          "label": "Card Content",
+          "valueType": "string",
+          "description": "Card heading (H3) and supporting body paragraph"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "col3_linkLabel",
+          "label": "CTA Label",
+          "description": "Link text, e.g. Find out more"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "col3_linkUrl",
+          "label": "CTA URL",
+          "description": "URL the card CTA link navigates to"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "feature-cards",
+      "components": ["feature-cards-item"]
+    }
+  ]
+}

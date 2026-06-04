@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="532" height="408"
+     viewBox="0 0 532 408"
+     font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <rect width="532" height="408" fill="#F3F4F6"/>
+  <line x1="480" y1="0" x2="480" y2="408" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="480" width="52" height="408" fill="#F3F4F6"/>
+  <text x="506" y="36" font-size="17" fill="#6B7280" text-anchor="middle">⚙</text>
+  <rect x="485" y="56" width="42" height="38" rx="5" fill="#DCE8FD"/>
+  <text x="506" y="82" font-size="17" fill="#0265DC" text-anchor="middle">◈</text>
+  <text x="506" y="128" font-size="17" fill="#6B7280" text-anchor="middle">✦</text>
+  <text x="506" y="174" font-size="17" fill="#6B7280" text-anchor="middle">💬</text>
+  <text x="506" y="220" font-size="17" fill="#6B7280" text-anchor="middle">⧉</text>
+  <text x="506" y="266" font-size="17" fill="#6B7280" text-anchor="middle">✏</text>
+  <text x="506" y="312" font-size="17" fill="#6B7280" text-anchor="middle">🗑</text>
+  <text x="506" y="358" font-size="17" fill="#6B7280" text-anchor="middle">⧅</text>
+  <text x="16" y="28" font-size="11" fill="#888888">Page › Main › Awards Banner</text>
+  <rect x="12" y="42" width="456" height="44" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="21" y="52" width="18" height="12" rx="1" fill="none" stroke="#555" stroke-width="1.4"/><polygon points="21,52 30,48 39,52 30,56" fill="none" stroke="#555" stroke-width="1.4"/><line x1="30" y1="56" x2="30" y2="64" stroke="#555" stroke-width="1.4"/>
+  <text x="50" y="71" font-size="14" fill="#111827" font-weight="600">Awards Banner</text>
+  <text x="456" y="72" font-size="20" fill="#6B7280" text-anchor="end">&#x2026;</text>
+  <!-- ── field: Tagline (richtext) ── -->
+  <text x="16" y="120" font-size="12" fill="#4B5563" font-weight="500">Tagline</text>
+  <text x="16" y="136" font-size="10" fill="#9CA3AF">Award tagline text, e.g. Award-winning service — w…</text>
+  <rect x="16" y="144" width="448" height="48" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="30" y="176" font-size="16" fill="#4B5563" font-weight="700" font-family="Georgia,serif">T</text>
+  <text x="54" y="174" font-size="12" fill="#374151">Award tagline text, e.g. Award-winning servic…</text>
+  <!-- ── field: CTA Label (text) ── -->
+  <text x="16" y="222" font-size="12" fill="#4B5563" font-weight="500">CTA Label</text>
+  <text x="16" y="238" font-size="10" fill="#9CA3AF">CTA link text, e.g. Built for success, and it show…</text>
+  <rect x="16" y="246" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="268" font-size="12" fill="#9CA3AF">CTA link text, e.g. Built for success, and it…</text>
+  <!-- ── field: CTA URL (text) ── -->
+  <text x="16" y="312" font-size="12" fill="#4B5563" font-weight="500">CTA URL</text>
+  <text x="16" y="328" font-size="10" fill="#9CA3AF">URL the CTA link navigates to</text>
+  <rect x="16" y="336" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="358" font-size="12" fill="#9CA3AF">URL the CTA link navigates to</text>
+</svg>

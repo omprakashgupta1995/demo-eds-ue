@@ -1,15 +1,5 @@
 [
   {
-    "id": "page-metadata",
-    "fields": [
-      {
-        "component": "text",
-        "name": "theme",
-        "label": "Theme"
-      }
-    ]
-  },
-  {
     "id": "image",
     "fields": [
       {
@@ -124,16 +114,33 @@
             "value": "highlight"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "awards-banner",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Tagline",
+        "valueType": "string",
+        "description": "Award tagline text, e.g. Award-winning service — when and how you need it."
       },
       {
         "component": "text",
-        "name": "id",
-        "label": "Section Data Id"
+        "valueType": "string",
+        "name": "col1_linkLabel",
+        "label": "CTA Label",
+        "description": "CTA link text, e.g. Built for success, and it shows"
       },
       {
         "component": "text",
-        "name": "background-color",
-        "label": "Background Color"
+        "valueType": "string",
+        "name": "col2_linkUrl",
+        "label": "CTA URL",
+        "description": "URL the CTA link navigates to"
       }
     ]
   },
@@ -176,31 +183,95 @@
     ]
   },
   {
+    "id": "cta-banner",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string",
+        "description": "Call-to-action heading, e.g. Join today. It only takes a few minutes."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_ctaLabel",
+        "label": "Button Label",
+        "description": "CTA button text, e.g. Become a member →"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_ctaUrl",
+        "label": "Button URL",
+        "description": "URL the CTA button navigates to"
+      }
+    ]
+  },
+  {
+    "id": "feature-cards",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Section Heading",
+        "valueType": "string",
+        "description": "Section H2 heading, e.g. Why choose NGS Super?"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Section Image",
+        "multi": false,
+        "description": "Decorative image shown alongside the section heading"
+      }
+    ]
+  },
+  {
+    "id": "feature-cards-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_icon",
+        "label": "Card Icon",
+        "multi": false,
+        "description": "Icon image for this card (small DAM reference)"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Card Content",
+        "valueType": "string",
+        "description": "Card heading (H3) and supporting body paragraph"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col3_linkLabel",
+        "label": "CTA Label",
+        "description": "Link text, e.g. Find out more"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col3_linkUrl",
+        "label": "CTA URL",
+        "description": "URL the card CTA link navigates to"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
-      }
-    ]
-  },
-  {
-    "id": "quote",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "quote",
-        "value": "",
-        "label": "Quote",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "author",
-        "label": "Author",
-        "value": ""
       }
     ]
   },
@@ -218,371 +289,106 @@
         "component": "text",
         "valueType": "string",
         "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
+        "label": "Image Alt",
+        "value": "",
+        "description": "Descriptive alt text for the hero image"
       },
       {
         "component": "richtext",
         "name": "text",
         "value": "",
         "label": "Text",
-        "valueType": "string"
+        "valueType": "string",
+        "description": "Hero heading (H1) and supporting paragraph"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_primaryCtaLabel",
+        "label": "Primary CTA Label",
+        "description": "Button label, e.g. Become a member"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_primaryCtaLink",
+        "label": "Primary CTA Link",
+        "description": "URL for the primary CTA button"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_secondaryCtaLabel",
+        "label": "Secondary CTA Label",
+        "description": "Secondary link label, e.g. Why NGS Super?"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_secondaryCtaLink",
+        "label": "Secondary CTA Link",
+        "description": "URL for the secondary CTA link"
       }
     ]
   },
   {
-    "id": "byline",
+    "id": "hero-item",
     "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkLabel",
+        "label": "Link Label",
+        "description": "Quick-link display text, e.g. Member Online"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkUrl",
+        "label": "Link URL",
+        "description": "URL the quick link navigates to"
+      }
+    ]
+  },
+  {
+    "id": "news-cards",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Section Heading",
+        "valueType": "string",
+        "description": "Section H2 heading, e.g. News and insights"
+      },
       {
         "component": "reference",
         "valueType": "string",
         "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "label": "Section Image",
+        "multi": false,
+        "description": "Decorative image shown alongside the section heading"
       }
     ]
   },
   {
-    "id": "product",
+    "id": "news-cards-item",
     "fields": [
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "name": "col1_image",
+        "label": "Thumbnail",
+        "multi": false,
+        "description": "Article thumbnail image"
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "col2_text",
         "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "swiper-item",
-    "fields": [
-      {
-        "component": "reference",
+        "label": "Article Content",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "tab",
-    "fields": [
-      {
-        "component": "multiselect",
-        "valueType": "string",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Theme",
-            "children": [
-              { "name": "Light", "value": "light" },
-              { "name": "Dark", "value": "dark" }
-            ]
-          },
-          {
-            "name": "Type",
-            "children": [
-              { "name": "Alpha", "value": "alpha" },
-              { "name": "Beta", "value": "beta" },
-              { "name": "Gamma", "value": "gamma" }
-            ]
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "config",
-        "label": "Config"
-      }
-    ]
-  },
-  {
-    "id": "tab-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Title",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "titleType",
-        "label": "Title Type",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "form",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "form-url",
-        "label": "Form URL",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "api-url",
-        "label": "API URL",
-        "multi": false
-      }
-    ]
-  },
-  {
-    "id": "banner",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "bannercol1_bgimage",
-        "label": "Background Image"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bannercol1_bgimageAlt",
-        "label": "Background Image Alt"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "bannercol1_frontimage",
-        "label": "Front Image"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bannercol1_frontimageAlt",
-        "label": "Front Image Alt"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "bannercol2_description",
-        "label": "Content"
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "bannercol2_link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "bannercol2_linkText",
-        "label": "Link Text"
-      },
-      {
-        "component": "select",
-        "valueType": "string",
-        "name": "bannercol2_linkType",
-        "label": "Link Text",
-        "options": [
-          {
-            "name": "Primary",
-            "value": "primary"
-          },
-          {
-            "name": "Secondary",
-            "value": "secondary"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "product-1",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "product-1",
-        "label": "Product Name",
-        "multi": true
-      }
-    ]
-  },
-  {
-    "id": "teaser-cards",
-    "fields": [
-      {
-        "component": "multiselect",
-        "valueType": "string",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Content Type",
-            "children": [
-              {
-                "name": "Primary",
-                "value": "primary"
-              },
-              {
-                "name": "Secondary",
-                "value": "secondary"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "component" : "reference" ,
-        "label" : "Select Image",
-        "name" : "image",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Image Alt",
-        "name" : "imageAlt",
-        "valueType" : "string"
-      }
-    ]
-  },
-  {
-    "id": "teaser-card",
-    "fields": [
-      {
-        "component" : "reference" ,
-        "label" : "Select Image",
-        "name" : "image",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Image Alt",
-        "name" : "imageAlt",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Sub Title",
-        "name" : "teaserText_subtitle",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Title",
-        "name" : "teaserText_title",
-        "valueType" : "string"
-      },
-      {
-        "component" : "select" ,
-        "label" : "Title Type",
-        "name" : "teaserText_titleType",
-        "valueType" : "string",
-        "options" : [
-          {
-            "name" : "H1",
-            "value" : "h1"
-          },
-          {
-            "name" : "H2",
-            "value" : "h2"
-          },
-          {
-            "name" : "H3",
-            "value" : "h3"
-          }
-        ]
-      },
-      {
-        "component" : "richtext" ,
-        "label" : "Description",
-        "name" : "teaserText_description",
-        "valueType" : "string"
-      },
-      {
-        "component" : "aem-content" ,
-        "label" : "Cta 1",
-        "name" : "teaserText_cta1",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Cta 1 Text",
-        "name" : "teaserText_cta1Text",
-        "valueType" : "string"
-      },
-      {
-        "component" : "aem-content" ,
-        "label" : "Cta 2",
-        "name" : "teaserText_cta2",
-        "valueType" : "string"
-      },
-      {
-        "component" : "text" ,
-        "label" : "Cta 2 Text",
-        "name" : "teaserText_cta2Text",
-        "valueType" : "string"
-      },
-      {
-        "component" : "select" ,
-        "label" : "Cta 2 Type",
-        "name" : "teaserText_cta2Type",
-        "valueType" : "string",
-        "options" : [
-          {
-            "name" : "Primary",
-            "value" : "primary"
-          },
-          {
-            "name" : "Secondary",
-            "value" : "secondary"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "faq",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "faq-url",
-        "value": "",
-        "label": "FAQ API PATH",
-        "valueType": "string"
+        "description": "Article title (H3), excerpt paragraph, and Read more link"
       }
     ]
   }

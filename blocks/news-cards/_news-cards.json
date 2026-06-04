@@ -1,0 +1,85 @@
+{
+  "definitions": [
+    {
+      "title": "News Cards",
+      "id": "news-cards",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "News Cards",
+              "model": "news-cards",
+              "filter": "news-cards"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "News Cards Item",
+      "id": "news-cards-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "News Cards Item",
+              "model": "news-cards-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "news-cards",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "heading",
+          "value": "",
+          "label": "Section Heading",
+          "valueType": "string",
+          "description": "Section H2 heading, e.g. News and insights"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Section Image",
+          "multi": false,
+          "description": "Decorative image shown alongside the section heading"
+        }
+      ]
+    },
+    {
+      "id": "news-cards-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col1_image",
+          "label": "Thumbnail",
+          "multi": false,
+          "description": "Article thumbnail image"
+        },
+        {
+          "component": "richtext",
+          "name": "col2_text",
+          "value": "",
+          "label": "Article Content",
+          "valueType": "string",
+          "description": "Article title (H3), excerpt paragraph, and Read more link"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "news-cards",
+      "components": ["news-cards-item"]
+    }
+  ]
+}

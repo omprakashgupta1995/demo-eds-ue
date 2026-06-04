@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1084" height="822"
+     viewBox="0 0 1084 822"
+     font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <rect width="1084" height="822" fill="#E2E5EA"/>
+  <!-- Panel 1: Hero -->
+  <text x="266" y="22" font-size="13" fill="#2D3748" text-anchor="middle" font-weight="600">Hero</text>
+  <g transform="translate(0,30)"><rect width="532" height="792" fill="#F3F4F6"/>
+  <line x1="480" y1="0" x2="480" y2="792" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="480" width="52" height="792" fill="#F3F4F6"/>
+  <text x="506" y="36" font-size="17" fill="#6B7280" text-anchor="middle">⚙</text>
+  <rect x="485" y="56" width="42" height="38" rx="5" fill="#DCE8FD"/>
+  <text x="506" y="82" font-size="17" fill="#0265DC" text-anchor="middle">◈</text>
+  <text x="506" y="128" font-size="17" fill="#6B7280" text-anchor="middle">✦</text>
+  <text x="506" y="174" font-size="17" fill="#6B7280" text-anchor="middle">💬</text>
+  <text x="506" y="220" font-size="17" fill="#6B7280" text-anchor="middle">⧉</text>
+  <text x="506" y="266" font-size="17" fill="#6B7280" text-anchor="middle">✏</text>
+  <text x="506" y="312" font-size="17" fill="#6B7280" text-anchor="middle">🗑</text>
+  <text x="506" y="358" font-size="17" fill="#6B7280" text-anchor="middle">⧅</text>
+  <text x="16" y="28" font-size="11" fill="#888888">Page › Main › Hero</text>
+  <rect x="12" y="42" width="456" height="44" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="21" y="52" width="18" height="12" rx="1" fill="none" stroke="#555" stroke-width="1.4"/><polygon points="21,52 30,48 39,52 30,56" fill="none" stroke="#555" stroke-width="1.4"/><line x1="30" y1="56" x2="30" y2="64" stroke="#555" stroke-width="1.4"/>
+  <text x="50" y="71" font-size="14" fill="#111827" font-weight="600">Hero</text>
+  <text x="456" y="72" font-size="20" fill="#6B7280" text-anchor="end">&#x2026;</text>
+  <!-- ── field: Image (reference) ── -->
+  <text x="16" y="120" font-size="12" fill="#4B5563" font-weight="500">Image</text>
+  <text x="464" y="120" font-size="11" fill="#9CA3AF" text-anchor="end">Max 1 items</text>
+  <rect x="16" y="128" width="448" height="48" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <circle cx="26" cy="142" r="1.5" fill="#B0B8C4"/><circle cx="31" cy="142" r="1.5" fill="#B0B8C4"/><circle cx="26" cy="147" r="1.5" fill="#B0B8C4"/><circle cx="31" cy="147" r="1.5" fill="#B0B8C4"/><circle cx="26" cy="152" r="1.5" fill="#B0B8C4"/><circle cx="31" cy="152" r="1.5" fill="#B0B8C4"/>
+  <rect x="44" y="133" width="38" height="38" rx="3" fill="#DDE3EC"/><text x="63" y="157" font-size="14" fill="#9CA3AF" text-anchor="middle">&#128247;</text>
+  <text x="90" y="157" font-size="12" fill="#1F2937">image.png</text>
+  <text x="452" y="158" font-size="16" fill="#9CA3AF" text-anchor="end">&#x2715;</text>
+  <text x="28" y="199" font-size="18" fill="#0265DC" font-weight="300">+</text>
+  <text x="48" y="199" font-size="12" fill="#0265DC" font-weight="500">Add</text>
+  <!-- ── field: Image Alt (text) ── -->
+  <text x="16" y="234" font-size="12" fill="#4B5563" font-weight="500">Image Alt</text>
+  <text x="16" y="250" font-size="10" fill="#9CA3AF">Descriptive alt text for the hero image</text>
+  <rect x="16" y="258" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="280" font-size="12" fill="#9CA3AF">Descriptive alt text for the hero image</text>
+  <!-- ── field: Text (richtext) ── -->
+  <text x="16" y="324" font-size="12" fill="#4B5563" font-weight="500">Text</text>
+  <text x="16" y="340" font-size="10" fill="#9CA3AF">Hero heading (H1) and supporting paragraph</text>
+  <rect x="16" y="348" width="448" height="48" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="30" y="380" font-size="16" fill="#4B5563" font-weight="700" font-family="Georgia,serif">T</text>
+  <text x="54" y="378" font-size="12" fill="#374151">Hero heading (H1) and supporting paragraph</text>
+  <!-- ── field: Primary CTA Label (text) ── -->
+  <text x="16" y="426" font-size="12" fill="#4B5563" font-weight="500">Primary CTA Label</text>
+  <text x="16" y="442" font-size="10" fill="#9CA3AF">Button label, e.g. Become a member</text>
+  <rect x="16" y="450" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="472" font-size="12" fill="#9CA3AF">Button label, e.g. Become a member</text>
+  <!-- ── field: Primary CTA Link (text) ── -->
+  <text x="16" y="516" font-size="12" fill="#4B5563" font-weight="500">Primary CTA Link</text>
+  <text x="16" y="532" font-size="10" fill="#9CA3AF">URL for the primary CTA button</text>
+  <rect x="16" y="540" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="562" font-size="12" fill="#9CA3AF">URL for the primary CTA button</text>
+  <!-- ── field: Secondary CTA Label (text) ── -->
+  <text x="16" y="606" font-size="12" fill="#4B5563" font-weight="500">Secondary CTA Label</text>
+  <text x="16" y="622" font-size="10" fill="#9CA3AF">Secondary link label, e.g. Why NGS Super?</text>
+  <rect x="16" y="630" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="652" font-size="12" fill="#9CA3AF">Secondary link label, e.g. Why NGS Super?</text>
+  <!-- ── field: Secondary CTA Link (text) ── -->
+  <text x="16" y="696" font-size="12" fill="#4B5563" font-weight="500">Secondary CTA Link</text>
+  <text x="16" y="712" font-size="10" fill="#9CA3AF">URL for the secondary CTA link</text>
+  <rect x="16" y="720" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="742" font-size="12" fill="#9CA3AF">URL for the secondary CTA link</text></g>
+  <!-- Panel 2: Hero Item -->
+  <text x="818" y="22" font-size="13" fill="#2D3748" text-anchor="middle" font-weight="600">Hero Item</text>
+  <g transform="translate(552,30)"><rect width="532" height="306" fill="#F3F4F6"/>
+  <line x1="480" y1="0" x2="480" y2="306" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="480" width="52" height="306" fill="#F3F4F6"/>
+  <text x="506" y="36" font-size="17" fill="#6B7280" text-anchor="middle">⚙</text>
+  <rect x="485" y="56" width="42" height="38" rx="5" fill="#DCE8FD"/>
+  <text x="506" y="82" font-size="17" fill="#0265DC" text-anchor="middle">◈</text>
+  <text x="506" y="128" font-size="17" fill="#6B7280" text-anchor="middle">✦</text>
+  <text x="506" y="174" font-size="17" fill="#6B7280" text-anchor="middle">💬</text>
+  <text x="506" y="220" font-size="17" fill="#6B7280" text-anchor="middle">⧉</text>
+  <text x="506" y="266" font-size="17" fill="#6B7280" text-anchor="middle">✏</text>
+  <text x="506" y="312" font-size="17" fill="#6B7280" text-anchor="middle">🗑</text>
+  <text x="506" y="358" font-size="17" fill="#6B7280" text-anchor="middle">⧅</text>
+  <text x="16" y="28" font-size="11" fill="#888888">Page › Main › Hero › Hero Item</text>
+  <rect x="12" y="42" width="456" height="44" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="21" y="52" width="18" height="12" rx="1" fill="none" stroke="#555" stroke-width="1.4"/><polygon points="21,52 30,48 39,52 30,56" fill="none" stroke="#555" stroke-width="1.4"/><line x1="30" y1="56" x2="30" y2="64" stroke="#555" stroke-width="1.4"/>
+  <text x="50" y="71" font-size="14" fill="#111827" font-weight="600">Hero Item</text>
+  <text x="456" y="72" font-size="20" fill="#6B7280" text-anchor="end">&#x2026;</text>
+  <!-- ── field: Link Label (text) ── -->
+  <text x="16" y="120" font-size="12" fill="#4B5563" font-weight="500">Link Label</text>
+  <text x="16" y="136" font-size="10" fill="#9CA3AF">Quick-link display text, e.g. Member Online</text>
+  <rect x="16" y="144" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="166" font-size="12" fill="#9CA3AF">Quick-link display text, e.g. Member Online</text>
+  <!-- ── field: Link URL (text) ── -->
+  <text x="16" y="210" font-size="12" fill="#4B5563" font-weight="500">Link URL</text>
+  <text x="16" y="226" font-size="10" fill="#9CA3AF">URL the quick link navigates to</text>
+  <rect x="16" y="234" width="448" height="36" rx="5" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="28" y="256" font-size="12" fill="#9CA3AF">URL the quick link navigates to</text></g>
+</svg>

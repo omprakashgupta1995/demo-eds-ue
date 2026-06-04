@@ -1,0 +1,53 @@
+/* cta-banner – full-width centred call-to-action section */
+
+.cta-banner {
+  background-color: #f9fafb;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.cta-banner .cta-banner-heading,
+.cta-banner .cta-banner-heading > div {
+  margin: 0 auto 32px;
+  max-width: 720px;
+}
+
+.cta-banner .cta-banner-heading h2 {
+  color: #1c3d6e;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.cta-banner .cta-banner-cta {
+  margin: 0;
+}
+
+.cta-banner .cta-banner-cta .button {
+  background-color: #f26d21;
+  border: 2px solid #f26d21;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 32px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.cta-banner .cta-banner-cta .button:hover {
+  background-color: #d45c14;
+  border-color: #d45c14;
+}
+
+@media (width >= 900px) {
+  .cta-banner {
+    padding: 80px 40px;
+  }
+
+  .cta-banner .cta-banner-heading h2 {
+    font-size: 2.5rem;
+  }
+}

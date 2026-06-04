@@ -1,0 +1,131 @@
+.feature-cards {
+  padding: 48px 24px;
+}
+
+/* ── Section header ─────────────────────────────────────────────────────── */
+
+.feature-cards-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-cards-heading h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1c3d6e;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.feature-cards-section-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ── Cards list ──────────────────────────────────────────────────────────── */
+
+.feature-cards-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
+}
+
+.feature-cards-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px 24px;
+}
+
+/* ── Card icon ───────────────────────────────────────────────────────────── */
+
+.feature-cards-icon {
+  flex-shrink: 0;
+}
+
+.feature-cards-icon img {
+  display: block;
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ── Card text ───────────────────────────────────────────────────────────── */
+
+.feature-cards-text h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1c3d6e;
+  margin: 0 0 8px;
+}
+
+.feature-cards-text p {
+  color: #374151;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Card CTA link ───────────────────────────────────────────────────────── */
+
+.feature-cards-link {
+  color: #1c3d6e;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 8px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.feature-cards-link:hover,
+.feature-cards-link:focus {
+  color: #f26d21;
+}
+
+/* ── Desktop ──────────────────────────────────────────────────────────────── */
+
+@media (width >= 900px) {
+  .feature-cards {
+    padding: 64px 32px;
+  }
+
+  .feature-cards-header {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+
+  .feature-cards-heading h2 {
+    font-size: 2.25rem;
+    max-width: 480px;
+  }
+
+  .feature-cards-section-image {
+    flex: 0 0 380px;
+  }
+
+  .feature-cards-section-image img {
+    width: 380px;
+  }
+
+  .feature-cards-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+}

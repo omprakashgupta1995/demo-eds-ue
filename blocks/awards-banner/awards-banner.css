@@ -1,0 +1,71 @@
+.awards-banner-container .awards-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.awards-banner {
+  background-color: #1c3d6e;
+  color: #fff;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+/* ── Tagline ─────────────────────────────────────────────────────────────── */
+
+.awards-banner-tagline p,
+.awards-banner-tagline h2,
+.awards-banner-tagline h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 auto 20px;
+  max-width: 720px;
+}
+
+/* ── CTA link ────────────────────────────────────────────────────────────── */
+
+.awards-banner-cta {
+  margin: 0;
+}
+
+.awards-banner-cta a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.awards-banner-cta a::after {
+  content: ' →';
+}
+
+.awards-banner-cta a:hover,
+.awards-banner-cta a:focus {
+  color: rgb(255 255 255 / 80%);
+}
+
+/* ── Desktop ──────────────────────────────────────────────────────────────── */
+
+@media (width >= 900px) {
+  .awards-banner {
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 48px 32px;
+    text-align: left;
+  }
+
+  .awards-banner-tagline p,
+  .awards-banner-tagline h2,
+  .awards-banner-tagline h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .awards-banner-cta {
+    flex-shrink: 0;
+  }
+}

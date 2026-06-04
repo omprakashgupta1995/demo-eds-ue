@@ -31,3 +31,84 @@
     order: unset;
   }
 }
+
+/* ── adviser-promo variant ──────────────────────────────────────────────── */
+
+.columns.adviser-promo {
+  background-color: #f0f4fa;
+  padding: 48px 24px;
+}
+
+.columns.adviser-promo > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columns.adviser-promo .columns-img-col img {
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 12%);
+  height: auto;
+  width: 100%;
+}
+
+.columns.adviser-promo h2,
+.columns.adviser-promo h3 {
+  color: #1c3d6e;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.columns.adviser-promo p {
+  color: #374151;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.columns.adviser-promo .button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.columns.adviser-promo .button {
+  background-color: #1c3d6e;
+  border: 2px solid #1c3d6e;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  text-decoration: none;
+}
+
+.columns.adviser-promo .button:hover,
+.columns.adviser-promo .button:focus {
+  background-color: #163260;
+  border-color: #163260;
+}
+
+.columns.adviser-promo .button.secondary {
+  background-color: transparent;
+  border-color: #1c3d6e;
+  color: #1c3d6e;
+}
+
+.columns.adviser-promo .button.secondary:hover,
+.columns.adviser-promo .button.secondary:focus {
+  background-color: #1c3d6e;
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  .columns.adviser-promo {
+    padding: 64px 32px;
+  }
+
+  .columns.adviser-promo h2,
+  .columns.adviser-promo h3 {
+    font-size: 2rem;
+  }
+}
