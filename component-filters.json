@@ -103,5 +103,11 @@
     "components": [
       "hero-slide"
     ]
+  },
+  {
+    "id": "shades-india",
+    "components": [
+      "shades-item"
+    ]
   }
 ]
