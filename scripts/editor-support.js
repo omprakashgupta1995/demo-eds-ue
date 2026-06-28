@@ -109,3 +109,6 @@ function attachEventListners(main) {
 }
 
 attachEventListners(document.querySelector('main'));
+
+// run table decoration on initial author load
+decorateMain(document.querySelector('main'));

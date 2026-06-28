@@ -143,18 +143,24 @@ function decorateTables(main) {
       cells.forEach((cellText) => {
         const cell = document.createElement(rowIndex === 0 ? 'th' : 'td');
         cell.textContent = cellText;
-        tr.replaceChild(cell);
+        tr.append(cell);
       });
-      if (rowIndex === 0) thead.replaceChild(tr);
-      else tbody.replaceChild(tr);
+      if (rowIndex === 0) thead.append(tr);
+      else tbody.append(tr);
     });
-    if (thead.children.length) table.replaceChild(thead);
-    if (tbody.children.length) table.replaceChild(tbody);
+    if (thead.children.length) table.append(thead);
+    if (tbody.children.length) table.append(tbody);
     return table;
   };
 
   main.querySelectorAll('.default-content-wrapper').forEach((wrapper) => {
-    const paragraphs = [...wrapper.querySelectorAll('p')];
+    // In Universal Editor, paragraphs live inside a [data-aue-type="richtext"] div.
+    // We operate inside that wrapper (keeping its UE attributes intact) so the
+    // table renders correctly in author without breaking UE instrumentation.
+    const richtextEl = wrapper.querySelector('[data-aue-type="richtext"]');
+    const container = richtextEl || wrapper;
+
+    const paragraphs = [...container.querySelectorAll('p')];
     if (!paragraphs.length) return;
 
     // pattern 1: explicit <p>Table</p> marker
@@ -172,7 +178,7 @@ function decorateTables(main) {
     });
 
     // pattern 2: auto-detect — first paragraph has ≥ 2 columns, merged rows allowed
-    const remaining = [...wrapper.querySelectorAll('p')];
+    const remaining = [...container.querySelectorAll('p')];
     if (remaining.length < 2) return;
     const colCounts = remaining.map((p) => getCells(p).length);
     const maxCols = Math.max(...colCounts);

@@ -1,7 +1,9 @@
 [
   {
     "id": "main",
-    "components": ["section"]
+    "components": [
+      "section"
+    ]
   },
   {
     "id": "section",
@@ -13,123 +15,28 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "sample-swiper",
-      "swiper-item",
-      "first-component",
-      "first-component-item",
-      "faq",
-      "my-form",
-      "favourite-corner",
-      "hero-banner-slider",
-      "custom-swiper",
-      "custom-swiper-second",
-      "zero-fee-banking",
-      "zero-block",
-      "our-funds",
-      "our-funds-header",
-      "glider",
-      "moti-tab",
-      "moti-swiper",
-      "calculator-ret",
-      "calculator-ret-graf",
-      "idfc-bank",
-      "idfc-banner",
-      "idfc-carousel",
-      "richtext"
+      "fragment"
     ]
   },
   {
     "id": "cards",
-    "components": ["card"]
-  },
-  {
-    "id": "columns",
-    "components": ["column"]
-  },
-  {
-    "id": "column",
-    "components": ["text", "image", "button", "title"]
-  },
-  {
-    "id": "sample-swiper",
-    "components": ["swiper-item"]
-  },
-  {
-    "id": "first-component",
-    "components": ["first-component-item"]
-  },
-  {
-    "id": "favourite-corner",
-    "components": ["favourite-corner-item"]
-  },
-  {
-    "id": "hero-banner-slider",
-    "components": ["hero-banner-slider-item", "hero-banner-embed-slider-item"]
-  },
-  {
-    "id": "custom-swiper",
-    "components": ["custom-swiper-banner-item", "custom-swiper-embed-item"]
-  },
-  {
-    "id": "custom-swiper-second",
     "components": [
-      "custom-swiper-banner-item-second",
-      "custom-swiper-embed-item-second"
+      "card"
     ]
   },
   {
-    "id": "zero-fee-banking",
-    "components": ["zero-fee-banking-item"]
+    "id": "columns",
+    "components": [
+      "column"
+    ]
   },
   {
-    "id": "our-funds",
-    "components": ["our-funds-item"]
-  },
-  {
-    "id": "moti-tab",
-    "components": ["moti-funds-items"]
-  },
-  {
-    "id": "glider",
-    "components": ["glider-item"]
-  },
-  {
-    "id": "moti-tab",
-    "components": ["moti-tab-items"]
-  },
-  {
-    "id": "moti-swiper",
-    "components": ["moti-swiper-items"]
-  },
-  {
-    "id": "idfc-bank",
-    "components": ["idfc-bank-item"]
-  },
-   {
-    "id": "idfc-banner",
-    "components": ["idfc-banner-item"]
-  },
-   {
-    "id": "idfc-carousel",
-    "components": ["idfc-carousel-item"]
-  },
-  {
-    "id": "richtext",
-    "rte": {
-      "toolbar": {
-        "format": ["bold", "italic", "underline"],
-        "list": ["bullet_list", "ordered_list"],
-        "insert": ["link", "unlink", "table"],
-        "sections": ["format", "list", "insert"]
-      },
-      "actions": {
-        "table": {
-          "wrapInParagraphs": true,
-          "label": "Insert Table"
-        }
-      }
-    },
-    "components": ["richtext"]
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
   }
 ]
