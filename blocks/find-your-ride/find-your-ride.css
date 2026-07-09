@@ -1,0 +1,317 @@
+/* Main Section */
+.find-your-ride.block {
+    background-color: #f0f0f0;
+    padding: 2rem;
+}
+
+.find-your-ride.block .find-ride__container {
+    background: linear-gradient(135deg, #2a2a2a 0%, #111111 100%);
+    color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    clip-path: polygon(0 0, 45% 0, 50% 5%, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+    gap: 2rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Left Column */
+.find-your-ride.block .find-ride__controls {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+.find-your-ride.block .find-ride__title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Tabs */
+.find-your-ride.block .find-ride__tabs {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.find-your-ride.block .find-ride__tab {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: #999999;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.find-your-ride.block .find-ride__tab--active {
+    background: #ed1c24;
+}
+
+/* Form Groups */
+.find-your-ride.block .find-ride__range-group {
+    margin-bottom: 2.5rem;
+}
+
+.find-your-ride.block .find-ride__range-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Dual Range Slider styling */
+.find-your-ride.block .range-slider {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: #333333;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.find-your-ride.block .range-slider__track {
+    position: absolute;
+    height: 100%;
+    background: #ed1c24;
+    top: 0;
+}
+
+.find-your-ride.block .range-slider__input {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    background: none;
+    pointer-events: none;
+}
+
+.find-your-ride.block .range-slider__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 8px;
+    background: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    pointer-events: auto;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+/* Inputs */
+.find-your-ride.block .range-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.find-your-ride.block .range-inputs__field {
+    width: 45%;
+}
+
+.find-your-ride.block .range-inputs__label {
+    display: block;
+    font-size: 0.8rem;
+    color: #999999;
+    margin-bottom: 0.25rem;
+}
+
+.find-your-ride.block .range-inputs__wrapper {
+    display: flex;
+    align-items: baseline;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 0.25rem;
+}
+
+.find-your-ride.block .range-inputs__input {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.find-your-ride.block .range-inputs__input::-webkit-outer-spin-button,
+.find-your-ride.block .range-inputs__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.find-your-ride.block .range-inputs__suffix,
+.find-your-ride.block .range-inputs__prefix {
+    font-size: 0.8rem;
+    color: #999999;
+}
+
+.find-your-ride.block .range-inputs__prefix {
+    margin-right: 0.25rem;
+}
+.find-your-ride.block .range-inputs__suffix {
+    margin-left: 0.25rem;
+}
+
+/* Actions */
+.find-your-ride.block .find-ride__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.find-your-ride.block .find-ride__btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.find-your-ride.block .find-ride__btn:hover {
+    opacity: 0.9;
+}
+
+.find-your-ride.block .find-ride__btn--primary {
+    background: #ed1c24;
+    color: #ffffff;
+}
+
+.find-your-ride.block .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.find-your-ride.block .checkbox-group__input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #ffffff;
+}
+
+.find-your-ride.block .checkbox-group__label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Right Column */
+.find-your-ride.block .find-ride__display {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.find-your-ride.block .find-ride__product-title {
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 800;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    color: #ffffff;
+    opacity: 0.9;
+    letter-spacing: 2px;
+}
+
+.find-your-ride.block .find-ride__product-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 4rem;
+    filter: drop-shadow(0 20px 10px rgba(0,0,0,0.5));
+}
+
+.find-your-ride.block .carousel-indicators {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.find-your-ride.block .carousel-indicators__arrow {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.find-your-ride.block .carousel-indicators__dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.find-your-ride.block .dot {
+    width: 12px;
+    height: 4px;
+    background: #999999;
+    border-radius: 2px;
+}
+
+.find-your-ride.block .dot--active {
+    background: #ed1c24;
+    width: 16px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .find-your-ride.block {
+        padding: 1rem;
+    }
+
+    .find-your-ride.block .find-ride__container {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        clip-path: none; /* Remove complex angles on small screens for better layout */
+        border-radius: 8px;
+    }
+
+    .find-your-ride.block .find-ride__controls,
+    .find-your-ride.block .find-ride__display {
+        max-width: 100%;
+        width: 100%;
+        flex: none;
+    }
+
+    .find-your-ride.block .find-ride__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .find-your-ride.block .find-ride__tabs {
+        justify-content: center;
+    }
+
+    .find-your-ride.block .find-ride__actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+    
+    .find-your-ride.block .find-ride__btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .find-your-ride.block .find-ride__product-title {
+        position: relative;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .find-your-ride.block .find-ride__product-image {
+        margin-top: 1rem;
+    }
+}

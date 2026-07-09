@@ -26,9 +26,9 @@
       "cardsv3",
       "product",
       "form",
-      "fund-details",
       "formV2",
       "vehicle-carousel",
+      "kl-carousel",
       "fragment"
     ]
   },
@@ -92,6 +92,10 @@
     ]
   },
   {
+    "id": "find-your-ride",
+    "components": []
+  },
+  {
     "id": "formV2",
     "components": [
       "formV2-item"
@@ -115,6 +119,12 @@
     "id": "hero-nav",
     "components": [
       "content-text"
+    ]
+  },
+  {
+    "id": "kl-carousel",
+    "components": [
+      "kl-carousel-item"
     ]
   },
   {

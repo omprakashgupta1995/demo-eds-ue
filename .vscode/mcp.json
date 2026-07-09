@@ -3,7 +3,7 @@
     "eds": {
       "type": "stdio",
       "command": "node",
-      "args": ["C://Users/Mahesh.kamble/Desktop/EDS Plugin/EDS_Build_Pluign/dist/index.js"]
+      "args": ["C:/Users/Mahesh.kamble/Desktop/EDS Plugin/EDS_Build_Pluign/dist/index.js"]
     }
   }
 }

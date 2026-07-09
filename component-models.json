@@ -523,6 +523,29 @@
     ]
   },
   {
+    "id": "find-your-ride",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "productName",
+        "label": "Product Name"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "productImage",
+        "label": "Product Image"
+      }
+    ]
+  },
+  {
     "id": "formV2-item",
     "fields": [
       {
@@ -717,6 +740,41 @@
     ]
   },
   {
+    "id": "kl-carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_btn1Text",
+        "label": "Primary Button Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_btn1Link",
+        "label": "Primary Button Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_btn2Text",
+        "label": "Secondary Button Text (Leave blank for 1 button)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "col2_btn2Link",
+        "label": "Secondary Button Link (Leave blank for 1 button)",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "menu-item",
     "fields": [
       {
@@ -786,6 +844,40 @@
         "value": "",
         "label": "Button",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "testimonials",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Section Title",
+        "required": true,
+        "value": ""
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
+        "name": "description",
+        "label": "Section Description",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaText",
+        "label": "CTA Button Text",
+        "value": "View All Portfolio"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaLink",
+        "label": "CTA Button Link",
+        "value": ""
       }
     ]
   },
