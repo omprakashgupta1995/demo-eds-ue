@@ -750,25 +750,25 @@
       },
       {
         "component": "text",
-        "name": "col2_btn1Text",
+        "name": "col2_btnText",
         "label": "Primary Button Text",
         "valueType": "string"
       },
       {
         "component": "aem-content",
-        "name": "col2_btn1Link",
+        "name": "col2_btnLink",
         "label": "Primary Button Link",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "col2_btn2Text",
+        "name": "col2_btnText",
         "label": "Secondary Button Text (Leave blank for 1 button)",
         "valueType": "string"
       },
       {
         "component": "aem-content",
-        "name": "col2_btn2Link",
+        "name": "col2_btnLink",
         "label": "Secondary Button Link (Leave blank for 1 button)",
         "valueType": "string"
       }
