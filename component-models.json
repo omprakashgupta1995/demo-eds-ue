@@ -755,7 +755,7 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "col2_btn1Link",
         "label": "Primary Button Link",
         "valueType": "string"
@@ -767,7 +767,7 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "col2_btn2Link",
         "label": "Secondary Button Link (Leave blank for 1 button)",
         "valueType": "string"

@@ -509,7 +509,7 @@
         },
         {
           "id": "kl-carousel",
-          "title": "Media Block Container",
+          "title": "KL carousel Container",
           "description": "A block container that holds media items.",
           "plugins": {
             "xwalk": {
@@ -525,7 +525,7 @@
         },
         {
           "id": "kl-carousel-item",
-          "title": "Media Item",
+          "title": "KL carousel Item",
           "description": "An item with an image and up to two buttons.",
           "plugins": {
             "xwalk": {

@@ -2,7 +2,7 @@
   "definitions": [
     {
       "id": "kl-carousel",
-      "title": "Media Block Container",
+      "title": "KL carousel Container",
       "description": "A block container that holds media items.",
       "plugins": {
         "xwalk": {
@@ -18,7 +18,7 @@
     },
     {
       "id": "kl-carousel-item",
-      "title": "Media Item",
+      "title": "KL carousel Item",
       "description": "An item with an image and up to two buttons.",
       "plugins": {
         "xwalk": {
@@ -50,7 +50,7 @@
           "valueType": "string"
         },
         {
-          "component": "text",
+          "component": "aem-content",
           "name": "col2_btn1Link",
           "label": "Primary Button Link",
           "valueType": "string"
@@ -62,7 +62,7 @@
           "valueType": "string"
         },
         {
-          "component": "text",
+          "component": "aem-content",
           "name": "col2_btn2Link",
           "label": "Secondary Button Link (Leave blank for 1 button)",
           "valueType": "string"
