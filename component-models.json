@@ -474,6 +474,10 @@
         "valueType": "string",
         "options": [
           {
+            "name": "default",
+            "value": ""
+          },
+          {
             "name": "Primary (Solid)",
             "value": "primary"
           },

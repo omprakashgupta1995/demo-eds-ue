@@ -23,7 +23,10 @@
       "name": "col1_linkType",
       "label": "Button Style",
       "valueType": "string",
-      "options": [
+      "options": [ {
+              "name": "default",
+              "value": ""
+            },
         { "name": "Primary (Solid)", "value": "primary" },
         { "name": "Secondary (Outline)", "value": "secondary" },
         { "name": "Ghost (Text Only)", "value": "ghost" }
