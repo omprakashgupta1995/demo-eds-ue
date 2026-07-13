@@ -28,6 +28,7 @@
       "card-v3",
       "product",
       "form",
+      "hero-program",
       "vehicle-carousel"
     ]
   },
@@ -92,6 +93,13 @@
     "components": [
       "hero-item-1",
       "hero-item-2"
+    ]
+  },
+  {
+    "id": "hero-program",
+    "components": [
+      "hero-program-item-1",
+      "hero-program-item-2"
     ]
   },
   {

@@ -261,7 +261,7 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-.section.bg-edge {
+.section.bg-edge .carousel-wrapper{
     clip-path: polygon(
         47% 0px,
         54% 9%,
@@ -279,7 +279,7 @@ main .section.highlight {
     );
     display: flex;
     justify-content: space-between;
-    min-height: 700px;
+    /* min-height: 700px; */
     width: 80%;
     padding: 50px;
     position: relative;
@@ -288,6 +288,12 @@ main .section.highlight {
     margin: 0 auto;
 }
 
+.section.bg-edge{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #f3f3f3;
+}
 /* The Grey Angled Header Background */
 .section.bg-edge::before {
     content: "";
@@ -315,6 +321,7 @@ main .section.highlight {
     cursor: pointer;
     background: #555;
     color: #fff;
+    border-radius: 0;
 }
 
 .tab-btn.active {

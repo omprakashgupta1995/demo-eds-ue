@@ -59,7 +59,7 @@ export default async function decorate(block) {
   const submitLinkEl = links.find((a) => a !== formLinkEl);
   const form = await createForm(
     formLinkEl.href,
-    submitLinkEl ? submitLinkEl.href : "",
+    submitLinkEl ? submitLinkEl.href : "  ",
   );
 
   if (form) {

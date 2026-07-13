@@ -529,6 +529,46 @@
     ]
   },
   {
+    "id": "hero-program-item-1",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text1",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text2",
+        "label": "Subheading"
+      }
+    ]
+  },
+  {
+    "id": "hero-program-item-2",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text1",
+        "label": "Heading"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {

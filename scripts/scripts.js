@@ -148,10 +148,27 @@ async function loadPage() {
 loadPage();
 
 document.querySelectorAll(".section.bg-edge").forEach((container) => {
+
+  // --- NEW: Create the carousel-wrapper dynamically ---
+  const carouselWrapper = document.createElement("div");
+  carouselWrapper.className = "carousel-wrapper";
+
   // 1. Tag wrappers by index
   const forms = container.querySelectorAll(".form-wrapper");
   const carousels = container.querySelectorAll(".vehicle-carousel-wrapper");
 
+  // Move them into the new carouselWrapper.
+  // (Note: appendChild automatically moves elements from their old DOM location to the new one)
+  forms.forEach((form, index) => {
+    carouselWrapper.appendChild(form);
+    if (carousels[index]) {
+      carouselWrapper.appendChild(carousels[index]);
+    }
+  });
+
+  // Attach the new fully loaded wrapper back into the main container
+  container.appendChild(carouselWrapper);
+  
   forms.forEach((f, i) =>
     f.classList.add(i === 0 ? "motorcycle-view" : "scooter-view"),
   );

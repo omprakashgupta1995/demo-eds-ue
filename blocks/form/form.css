@@ -89,7 +89,6 @@
 .range-values-row {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #333;
     padding-bottom: 1rem;
 }
 
@@ -97,6 +96,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    border-bottom: 1px solid #f3f3f3;
 }
 
 .value-block .label {

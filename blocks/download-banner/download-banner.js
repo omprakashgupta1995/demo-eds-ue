@@ -11,7 +11,6 @@ export default function decorate(block) {
 
   if (bannerContent) {
     const elements = [...bannerContent.children];
-
     const imageWrapper = elements[0];
     const heading = elements[1];
     const description = elements[2];
