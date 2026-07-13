@@ -20,7 +20,7 @@
   "fields": [
     {
       "component": "select",
-      "name": "col1_btnType",
+      "name": "col1_linkType",
       "label": "Button Style",
       "valueType": "string",
       "options": [
@@ -31,13 +31,13 @@
     },
     {
       "component": "text",
-      "name": "col1_btnText",
+      "name": "col1_linkText",
       "label": "Button Text",
       "valueType": "string"
     },
     {
       "component": "aem-content",
-      "name": "col1_btnLink",
+      "name": "col1_link",
       "label": "Button URL",
       "valueType": "string"
     }
