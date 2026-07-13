@@ -29,6 +29,7 @@
       "formV2",
       "vehicle-carousel",
       "kl-carousel",
+      "custom-btn",
       "fragment"
     ]
   },
@@ -90,6 +91,10 @@
     "components": [
       "content-text"
     ]
+  },
+  {
+    "id": "custom-btn",
+    "components": []
   },
   {
     "id": "find-your-ride",

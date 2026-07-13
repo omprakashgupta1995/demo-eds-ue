@@ -1,0 +1,51 @@
+{"definitions": [
+    {
+      "title": "custom btn",
+      "id": "custom-btn",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+                "name":"custom btn",
+              "model": "custom-btn"
+            }
+          }
+        }
+      }
+    }
+  ],
+"models":{
+  "id": "custom-btn",
+  "fields": [
+    {
+      "component": "select",
+      "name": "btnType",
+      "label": "Button Style",
+      "valueType": "string",
+      "options": [
+        { "name": "Primary (Solid)", "value": "primary" },
+        { "name": "Secondary (Outline)", "value": "secondary" },
+        { "name": "Ghost (Text Only)", "value": "ghost" }
+      ]
+    },
+    {
+      "component": "text",
+      "name": "btnText",
+      "label": "Button Text",
+      "valueType": "string"
+    },
+    {
+      "component": "aem-content",
+      "name": "btnLink",
+      "label": "Button URL",
+      "valueType": "string"
+    }
+  ]
+},"filters": [
+    {
+      "id": "custom-btn",
+      "components": []
+    }
+  ]
+}

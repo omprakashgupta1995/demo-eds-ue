@@ -465,6 +465,43 @@
     ]
   },
   {
+    "id": "custom-btn",
+    "fields": [
+      {
+        "component": "select",
+        "name": "btnType",
+        "label": "Button Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Primary (Solid)",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary (Outline)",
+            "value": "secondary"
+          },
+          {
+            "name": "Ghost (Text Only)",
+            "value": "ghost"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "btnText",
+        "label": "Button Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "btnLink",
+        "label": "Button URL",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "download-banner",
     "fields": [
       {
