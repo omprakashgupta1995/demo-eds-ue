@@ -1,4 +1,5 @@
-import { createOptimizedPicture, moveInstrumentation } from '../../scripts/aem.js';
+import { createOptimizedPicture } from '../../scripts/aem.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function loadSwiper() {
   return new Promise((resolve) => {
@@ -30,30 +31,30 @@ export default async function decorate(block) {
     const leftCol = document.createElement('div');
     leftCol.className = 'slide-left';
 
-    const headingEl = cells[0]?.querySelector('p, h2, h3');
-    if (headingEl) {
+    const headingText = cells[0]?.textContent.trim();
+    if (headingText) {
       const h2 = document.createElement('h2');
       h2.className = 'slide-heading';
-      h2.textContent = headingEl.textContent;
-      moveInstrumentation(headingEl, h2);
+      h2.textContent = headingText;
+      moveInstrumentation(cells[0], h2);
       leftCol.appendChild(h2);
     }
 
-    const descEl = cells[1]?.querySelector('p');
-    if (descEl) {
+    const descText = cells[1]?.textContent.trim();
+    if (descText) {
       const p = document.createElement('p');
       p.className = 'slide-description';
-      p.textContent = descEl.textContent;
-      moveInstrumentation(descEl, p);
+      p.textContent = descText;
+      moveInstrumentation(cells[1], p);
       leftCol.appendChild(p);
     }
 
     const ctaText = cells[2]?.textContent.trim();
     const ctaLink = cells[3]?.textContent.trim();
-    if (ctaText && ctaLink) {
+    if (ctaText) {
       const a = document.createElement('a');
       a.className = 'slide-cta button';
-      a.href = ctaLink;
+      a.href = ctaLink || '#';
       a.textContent = ctaText;
       leftCol.appendChild(a);
     }
