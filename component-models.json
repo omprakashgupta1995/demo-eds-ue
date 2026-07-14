@@ -419,23 +419,6 @@
     ]
   },
   {
-    "id": "fund-chart",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "filterYear",
-        "label": "Year Filter",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "dataSource",
-        "label": "Data Source (Spreadsheet JSON URL)",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "heading",
     "fields": [
       {
@@ -664,6 +647,17 @@
         "value": "",
         "label": "Button",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "reel-embed",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "link",
+        "label": "Reel link"
       }
     ]
   },
