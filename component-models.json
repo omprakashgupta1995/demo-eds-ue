@@ -668,17 +668,35 @@
     "id": "shades-item",
     "fields": [
       {
-        "component": "reference",
+        "component": "richtext",
         "valueType": "string",
-        "name": "image",
-        "label": "Region Image",
-        "multi": false
+        "name": "heading",
+        "label": "Slide Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Slide Description"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "regionName",
-        "label": "Region Name"
+        "name": "ctaText",
+        "label": "CTA Button Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaLink",
+        "label": "CTA Button Link"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Slide Image",
+        "multi": false
       }
     ]
   },
