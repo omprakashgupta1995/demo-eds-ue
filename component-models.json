@@ -718,6 +718,63 @@
     ]
   },
   {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style Classes",
+        "options": [
+          {
+            "name": "Embedded Video",
+            "value": "embedded-video"
+          },
+          {
+            "name": "Featured",
+            "value": "featured"
+          },
+          {
+            "name": "Simply Teaser V1",
+            "value": "simply-teaser-v1"
+          },
+          {
+            "name": "Simply Teaser V2",
+            "value": "simply-teaser-v2"
+          },
+          {
+            "name": "Image Left",
+            "value": "image-left"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image/ Thumbnail Image for Video"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt / Thumbnail Image Alt"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "videoLink",
+        "label": "Video Link"
+      }
+    ]
+  },
+  {
     "id": "vehicle-carousel-item",
     "fields": [
       {
