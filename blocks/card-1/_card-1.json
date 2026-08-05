@@ -48,6 +48,17 @@
       "id": "card-item",
       "fields": [
         {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+            {
+              "name": "DHNN",
+              "value": "dhnn"
+            }
+          ]
+        },
+        {
           "component": "reference",
           "valueType": "string",
           "name": "col1_image",
