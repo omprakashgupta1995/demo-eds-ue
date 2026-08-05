@@ -168,12 +168,7 @@
         "valueType": "string",
         "name": "text",
         "label": "Text"
-      }
-    ]
-  },
-  {
-    "id": "card-item",
-    "fields": [
+      },
       {
         "component": "multiselect",
         "name": "classes",
@@ -184,7 +179,12 @@
             "value": "dhnn"
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "id": "card-item",
+    "fields": [
       {
         "component": "reference",
         "valueType": "string",
