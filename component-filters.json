@@ -27,6 +27,7 @@
       "carouselv2",
       "hero-1",
       "card-v3",
+      "card-v4",
       "product",
       "form",
       "hero-program",
@@ -50,6 +51,12 @@
     "components": [
       "card-v3-item-1",
       "card-v3-item-2"
+    ]
+  },
+  {
+    "id": "cards-v4",
+    "components": [
+      "card-v4-item"
     ]
   },
   {
