@@ -1,10 +1,6 @@
 import { loadScript } from "../../scripts/aem.js";
 
 export default async function decorate(block) {
-  // 1. Load Locomotive and GSAP
-  await loadScript(
-    "https://cdn.jsdelivr.net/npm/locomotive-scroll/bundled/locomotive-scroll.min.js",
-  );
   await loadScript(
     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
   );
@@ -39,53 +35,22 @@ export default async function decorate(block) {
   ];
 
   const pictures = Array.from(block.querySelectorAll("picture"));
-  const container = block.closest(".card-1-container") || block;
 
-  const elementsOnSameLine = (a, b) => {
-    const rectA = a.getBoundingClientRect();
-    const rectB = b.getBoundingClientRect();
-    const overlap =
-      Math.min(rectA.bottom, rectB.bottom) - Math.max(rectA.top, rectB.top);
-    const minHeight = Math.min(rectA.height, rectB.height);
-    const centerDistance = Math.abs(
-      (rectA.top + rectA.bottom) / 2 - (rectB.top + rectB.bottom) / 2,
-    );
-    return overlap >= minHeight * 0.4 && centerDistance <= minHeight * 0.4;
+  const getCounterCompletionTime = (index) => {
+    let startTime = 0;
+    let moveDuration = 3;
+
+    if (index === 3) {
+      startTime = 1;
+      moveDuration = 2;
+    }
+
+    return startTime + moveDuration;
   };
 
-  const updateImageVisibilityOnBottom = () => {
-    const containerRect = container.getBoundingClientRect();
-    const viewportHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-    const atComponentBottom = containerRect.bottom <= viewportHeight + 1;
-
-    pictures.forEach((picture) => {
-      picture.style.display = atComponentBottom ? "none" : "";
-    });
-  };
-
-  const hideImagesWhenFtextInline = () => {
-    cards.forEach((card) => {
-      const picture = card.querySelector("picture");
-      const ftext = card.querySelector(".ftext");
-      if (!picture || !ftext) return;
-      picture.style.display = elementsOnSameLine(picture, ftext) ? "none" : "";
-    });
-  };
-
-  window.addEventListener(
-    "scroll",
-    () => {
-      updateImageVisibilityOnBottom();
-      hideImagesWhenFtextInline();
-    },
-    {
-      passive: true,
-    },
+  const maxCounterCompletionTime = Math.max(
+    ...cards.map((_, index) => getCounterCompletionTime(index)),
   );
-  window.addEventListener("resize", hideImagesWhenFtextInline);
-  updateImageVisibilityOnBottom();
-  hideImagesWhenFtextInline();
 
   cards.forEach((card, index) => {
     const picture = card.querySelector("picture");
@@ -185,7 +150,12 @@ export default async function decorate(block) {
     // PHASE 2: DISPLACE BELOW & DISAPPEAR (Time: 3 to 4)
     // ==========================================
 
-    // 1. Fade the physical grid line in precisely at Time 3
+    const counterCompleteTime = getCounterCompletionTime(index);
+    const imageHideStartTime = counterCompleteTime + 0.1;
+    const imageShrinkStartTime = imageHideStartTime - 0.5;
+    const imageFadeStartTime = imageShrinkStartTime + 0.5;
+
+    // 1. Fade the physical grid line in precisely after the counter finishes
     if (line) {
       tl.to(
         line,
@@ -193,7 +163,7 @@ export default async function decorate(block) {
           opacity: 1,
           duration: 0.5,
         },
-        3,
+        imageHideStartTime,
       );
     }
 
@@ -210,16 +180,17 @@ export default async function decorate(block) {
           yPercent: 80,
           duration: 1,
         },
-        3,
+        imageHideStartTime,
       );
 
       tl.to(
-        image,
+        picture,
         {
-          clipPath: "inset(50% 0% 50% 0%)",
-          duration: 1,
+          height: 0,
+          duration: 0.8,
+          ease: "power2.inOut",
         },
-        3,
+        imageShrinkStartTime,
       );
 
       tl.to(
@@ -227,8 +198,9 @@ export default async function decorate(block) {
         {
           opacity: 0,
           duration: 0.5,
+          ease: "power2.inOut",
         },
-        3.5,
+        imageFadeStartTime,
       );
     }
   });

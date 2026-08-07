@@ -13,9 +13,9 @@
     /* The correct shape: high on the left, slanting down toward the middle */
     clip-path: polygon(
         0% 0%,
-        /* 1. Top-left corner */ 30% 0%,
-        /* 2. Top edge stays flat until 30% of the screen width */ 40% 80px,
-        /* 3. Slants down and to the right */ 100% 80px,
+        30% 0%,
+        40% 80px,
+        100% 80px,
         /* 4. Continues flat to the top-right edge (now lowered) */ 100% 100%,
         /* 5. Bottom-right corner */ 0% 100% /* 6. Bottom-left corner */
     );
@@ -164,6 +164,18 @@ div.section.card-1-container
     display: none;
 }
 
+/* Text-only cards get subtle side and bottom lines */
+div.section.card-1-container
+    .card-1-wrapper
+    .card-1.dhnn.block
+    > div:not(:has(picture)) {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem 1rem 1.5rem;
+    box-sizing: border-box;
+}
+
 /* --------------------------------------
    4. IMAGE STYLING
 --------------------------------------- */
@@ -235,7 +247,7 @@ div.section.card-1-container
     bottom: 0;
     width: 1px;
     height: 100vh; /* Shoots the line way up into the dark space */
-    background-color: rgba(255, 255, 255, 0.08); /* Faint white line */
+    background-color: rgb(255, 255, 255);
     opacity: var(--line-opacity);
     pointer-events: none; /* Ensures the line doesn't block clicks */
 }
