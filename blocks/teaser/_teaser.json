@@ -22,6 +22,17 @@
       "id": "teaser",
       "fields": [
         {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Animation 1",
+              "value": "animation-1"
+            }
+          ]
+        },
+        {
           "component": "richtext",
           "name": "col1_title",
           "label": "Title",
