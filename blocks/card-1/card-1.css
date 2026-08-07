@@ -104,3 +104,138 @@
     font-weight: 400;
     text-align: center;
 }
+/* --------------------------------------
+   1. MAIN CONTAINER OVERRIDES
+--------------------------------------- */
+/* Chaining the div and multiple classes makes this very strong */
+div.section.card-1-container {
+    background-color: #1a1a1a;
+    clip-path: none;
+    overflow: clip;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* --------------------------------------
+   2. THE MAIN .dhnn BLOCK
+--------------------------------------- */
+/* Targeting the exact parent path to outscore the old flexbox rules */
+div.section.card-1-container .card-1-wrapper .card-1.dhnn.block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 250vh;
+    padding: 4rem 2rem 8rem 2rem;
+    box-sizing: border-box;
+    max-width: none;
+    gap: 0;
+    background-color: transparent;
+}
+
+/* --------------------------------------
+   3. THE INDIVIDUAL CARDS
+--------------------------------------- */
+/* This chain easily beats the old '.card-1.block > div:not(:first-child)' rule */
+div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 18%;
+    height: auto;
+    background-color: transparent;
+    clip-path: none;
+    position: relative;
+    transition: none; /* Removes any old transitions */
+}
+
+/* Wiping out the old dark gray hover effect */
+div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div:hover {
+    background-color: transparent;
+}
+
+/* Hiding the empty first div */
+div.section.card-1-container
+    .card-1-wrapper
+    .card-1.dhnn.block
+    > div:first-child:not(:has(picture)) {
+    display: none;
+}
+
+/* --------------------------------------
+   4. IMAGE STYLING
+--------------------------------------- */
+div.section.card-1-container .card-1-wrapper .card-1.dhnn.block picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+div.section.card-1-container .card-1-wrapper .card-1.dhnn.block picture img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: unset;
+    display: block;
+}
+
+/* --------------------------------------
+   5. TYPOGRAPHY
+--------------------------------------- */
+div.section.card-1-container .card-1-wrapper .card-1.dhnn.block h3 {
+    font-size: 3rem;
+    margin: 0 0 4px 0;
+    font-weight: 400;
+    color: #f5f5f5;
+    line-height: 1;
+}
+
+/* Specifically targeting the 'p' tags inside the cards to override the old text colors */
+div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div p {
+    font-size: 1rem;
+    margin: 0;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+/* --------------------------------------
+   6. HIGHLIGHT PLUS SIGN
+--------------------------------------- */
+div.section.card-1-container
+    .card-1-wrapper
+    .card-1.dhnn.block
+    h3
+    .yellow-plus {
+    color: #d6e326; /* The neon yellow from the image */
+    font-size: 1.5rem; /* Makes it smaller than the main number */
+    vertical-align: super; /* Pushes it up to align with the top of the number */
+    font-weight: 400;
+    margin-right: 4px; /* Adds a tiny bit of breathing room before the number */
+}
+/* --------------------------------------
+   7. VERTICAL SEPARATOR LINES (SAFE VERSION)
+--------------------------------------- */
+/* Create a variable for GSAP to animate */
+div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div {
+    --line-opacity: 0;
+}
+
+/* Draw the line using a pseudo-element so it doesn't break flexbox */
+div.section.card-1-container
+    .card-1-wrapper
+    .card-1.dhnn.block
+    > div:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -6%; /* Pushes the line into the empty gap between cards */
+    bottom: 0;
+    width: 1px;
+    height: 100vh; /* Shoots the line way up into the dark space */
+    background-color: rgba(255, 255, 255, 0.08); /* Faint white line */
+    opacity: var(--line-opacity);
+    pointer-events: none; /* Ensures the line doesn't block clicks */
+}
