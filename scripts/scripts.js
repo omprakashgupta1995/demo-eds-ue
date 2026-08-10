@@ -11,6 +11,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  loadScript,
 } from "./aem.js";
 
 /**
@@ -101,6 +102,7 @@ async function loadEager(doc) {
   if (main) {
     decorateMain(main);
     document.body.classList.add("appear");
+    await loadScript("/scripts/libs/gsap.min.js");
     await loadSection(main.querySelector(".section"), waitForFirstImage);
   }
 

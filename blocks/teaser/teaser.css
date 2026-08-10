@@ -1,4 +1,4 @@
-.teaser-container {
+/* .teaser-container {
     max-width: 100%;
     background-color: #e3f6e9;
 }
@@ -18,4 +18,12 @@
 .teaser.block picture > img {
     height: 124px;
     width: 124px;
+} */
+.teaser.animation-1.block {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: hidden;
 }
