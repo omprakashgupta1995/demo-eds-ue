@@ -367,3 +367,11 @@ main .section.highlight {
 }
 
 
+/* Override the default EDS max-width so sections can scale infinitely */
+.section.hero-container > .hero-wrapper,
+.section.card-v4-container > .card-v4-wrapper {
+  max-width: 100%;
+  padding-left: 5vw; /* Fluid side margins instead of fixed pixels */
+  padding-right: 5vw;
+}
+

@@ -1,37 +1,64 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
-}
-
-.hero {
+.hero.block {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  /* Stops shrinking at 400px tall, scales infinitely */
+  min-height: max(25rem, 40vw);
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  overflow: hidden;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-}
-
-.hero img {
-  object-fit: cover;
+.hero.block > div:first-child {
+  grid-area: 1 / 1 / 2 / 2; 
   width: 100%;
   height: 100%;
 }
 
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
-  }
+.hero.block > div:first-child > div,
+.hero.block > div:first-child picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero.block > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; 
+}
+
+.hero.block > div:last-child {
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 1;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  /* Padding scales perfectly with zoom */
+  padding: max(1.5rem, 5vw); 
+}
+
+.hero.block > div:last-child > div {
+  /* Note: If you want text to scale forever, you must remove max-width here */
+  width: 100%; 
+  text-align: center;
+  color: #ffffff; 
+  display: flex;
+  flex-direction: column;
+  gap: max(1rem, 1.5vw); 
+}
+
+.hero.block h1 {
+  /* Stops at 32px, scales infinitely */
+  font-size: max(2rem, 3.5vw);
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero.block p {
+  /* Stops at 16px, scales infinitely */
+  font-size: max(1rem, 1.5vw);
+  line-height: 1.6;
+  margin: 0;
 }
