@@ -69,7 +69,8 @@
   {
     "id": "carousel-cards",
     "components": [
-      "carousel-cards-item"
+      "carousel-cards-item",
+      "button"
     ]
   },
   {
