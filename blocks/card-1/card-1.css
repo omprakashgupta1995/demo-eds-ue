@@ -1,5 +1,5 @@
 /* --------------------------------------
-   1. MAIN CONTAINER
+   1. MAIN CONTAINER
 --------------------------------------- */
 /* Replace your existing .card-1-container block with this: */
 .section.card-1-container {
@@ -7,6 +7,7 @@
     margin-top: -80px;
     z-index: 1;
 }
+
 .card-1-container {
     background-color: #000000;
 
@@ -26,22 +27,24 @@
 }
 
 /* --------------------------------------
-   2. FLEXBOX LAYOUT (Rows & Columns)
+   2. FLEXBOX LAYOUT (Rows & Columns)
 --------------------------------------- */
 .card-1.block {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     justify-content: center;
-    max-width: 1200px; /* Optional: keeps cards from stretching too far on wide screens */
+    max-width: 1200px;
+    /* Optional: keeps cards from stretching too far on wide screens */
     margin: 0 auto;
 }
 
 /* --------------------------------------
-   3. TITLE STYLING (The 1st Div)
+   3. TITLE STYLING (The 1st Div)
 --------------------------------------- */
 .card-1.block > div:first-child {
-    width: 100%; /* Forces title to its own row */
+    width: 100%;
+    /* Forces title to its own row */
     margin-bottom: 12px;
 }
 
@@ -54,10 +57,11 @@
 }
 
 /* --------------------------------------
-   4. CARD STYLING (The remaining Divs)
+   4. CARD STYLING (The remaining Divs)
 --------------------------------------- */
 .card-1.block > div:not(:first-child) {
-    background-color: #2b2b2b; /* Dark grey */
+    background-color: #2b2b2b;
+    /* Dark grey */
     width: 260px;
     height: 140px;
     display: flex;
@@ -104,12 +108,13 @@
     font-weight: 400;
     text-align: center;
 }
+
 /* --------------------------------------
-   1. MAIN CONTAINER OVERRIDES
+   1. MAIN CONTAINER OVERRIDES
 --------------------------------------- */
 /* Chaining the div and multiple classes makes this very strong */
 div.section.card-1-container {
-    background-color: #1a1a1a;
+    background-color: rgb(43, 42, 43);
     clip-path: none;
     overflow: clip;
     margin: 0;
@@ -118,14 +123,14 @@ div.section.card-1-container {
 }
 
 /* --------------------------------------
-   2. THE MAIN .dhnn BLOCK
+   2. THE MAIN .dhnn BLOCK
 --------------------------------------- */
 /* Targeting the exact parent path to outscore the old flexbox rules */
 div.section.card-1-container .card-1-wrapper .card-1.dhnn.block {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    min-height: 250vh;
+    height: 2442.11px;
     padding: 4rem 2rem 8rem 2rem;
     box-sizing: border-box;
     max-width: none;
@@ -134,7 +139,7 @@ div.section.card-1-container .card-1-wrapper .card-1.dhnn.block {
 }
 
 /* --------------------------------------
-   3. THE INDIVIDUAL CARDS
+   3. THE INDIVIDUAL CARDS
 --------------------------------------- */
 /* This chain easily beats the old '.card-1.block > div:not(:first-child)' rule */
 div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div {
@@ -148,7 +153,8 @@ div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div {
     background-color: transparent;
     clip-path: none;
     position: relative;
-    transition: none; /* Removes any old transitions */
+    transition: none;
+    /* Removes any old transitions */
 }
 
 /* Wiping out the old dark gray hover effect */
@@ -177,7 +183,7 @@ div.section.card-1-container
 }
 
 /* --------------------------------------
-   4. IMAGE STYLING
+   4. IMAGE STYLING
 --------------------------------------- */
 div.section.card-1-container .card-1-wrapper .card-1.dhnn.block picture {
     display: flex;
@@ -195,7 +201,7 @@ div.section.card-1-container .card-1-wrapper .card-1.dhnn.block picture img {
 }
 
 /* --------------------------------------
-   5. TYPOGRAPHY
+   5. TYPOGRAPHY
 --------------------------------------- */
 div.section.card-1-container .card-1-wrapper .card-1.dhnn.block h3 {
     font-size: 3rem;
@@ -214,22 +220,28 @@ div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div p {
     letter-spacing: 1px;
     text-align: center;
 }
+
 /* --------------------------------------
-   6. HIGHLIGHT PLUS SIGN
+   6. HIGHLIGHT PLUS SIGN
 --------------------------------------- */
 div.section.card-1-container
     .card-1-wrapper
     .card-1.dhnn.block
     h3
     .yellow-plus {
-    color: #d6e326; /* The neon yellow from the image */
-    font-size: 1.5rem; /* Makes it smaller than the main number */
-    vertical-align: super; /* Pushes it up to align with the top of the number */
+    color: #d6e326;
+    /* The neon yellow from the image */
+    font-size: 1.5rem;
+    /* Makes it smaller than the main number */
+    vertical-align: super;
+    /* Pushes it up to align with the top of the number */
     font-weight: 400;
-    margin-right: 4px; /* Adds a tiny bit of breathing room before the number */
+    margin-right: 4px;
+    /* Adds a tiny bit of breathing room before the number */
 }
+
 /* --------------------------------------
-   7. VERTICAL SEPARATOR LINES (SAFE VERSION)
+   7. VERTICAL SEPARATOR LINES (SAFE VERSION)
 --------------------------------------- */
 /* Create a variable for GSAP to animate */
 div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div {
@@ -243,11 +255,83 @@ div.section.card-1-container
     > div:not(:last-child)::after {
     content: "";
     position: absolute;
-    right: -6%; /* Pushes the line into the empty gap between cards */
+    right: -6%;
+    /* Pushes the line into the empty gap between cards */
     bottom: 0;
     width: 1px;
-    height: 100vh; /* Shoots the line way up into the dark space */
+    height: 100vh;
+    /* Shoots the line way up into the dark space */
     background-color: rgb(255, 255, 255);
     opacity: var(--line-opacity);
-    pointer-events: none; /* Ensures the line doesn't block clicks */
+    pointer-events: none;
+    /* Ensures the line doesn't block clicks */
+}
+/* --------------------------------------
+   8. HARDWARE ACCELERATION (GPU RENDERING)
+--------------------------------------- */
+/* Pushes the animated cards and pictures to the GPU for buttery-smooth scrolling */
+div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div,
+div.section.card-1-container .card-1-wrapper .card-1.dhnn.block picture {
+    will-change: transform, opacity, clip-path;
+    transform: translateZ(
+        0
+    ); /* Forces hardware acceleration on older browsers */
+    backface-visibility: hidden;
+}
+/* =======================================================
+   CARD WIDTHS, HEIGHT, AND Z-INDEX LAYERING
+======================================================= */
+
+/* 1. Ensure all cards share the exact same height and relative positioning for z-index */
+div.section.card-1-container
+    .card-1-wrapper
+    .card-1.dhnn.block
+    > div:has(picture) {
+    height: auto;
+    position: relative;
+}
+
+/* Card 1: 328px equals roughly 22.3% of the total width */
+div.section.card-1-container
+    .card-1-wrapper
+    .card-1.dhnn.block
+    > div:nth-child(2) {
+    width: 22.3% !important;
+    z-index: 2; /* Sits in front */
+}
+
+/* Card 2: 409px equals roughly 27.9% */
+div.section.card-1-container
+    .card-1-wrapper
+    .card-1.dhnn.block
+    > div:nth-child(3) {
+    width: 27.9% !important;
+    z-index: 1; /* Pushed behind */
+}
+
+/* Card 3: 196px equals roughly 13.4% */
+div.section.card-1-container
+    .card-1-wrapper
+    .card-1.dhnn.block
+    > div:nth-child(4) {
+    width: 13.4% !important;
+    z-index: 2; /* Sits in front */
+}
+
+/* Card 4: 244px equals roughly 16.6% */
+div.section.card-1-container
+    .card-1-wrapper
+    .card-1.dhnn.block
+    > div:nth-child(5) {
+    width: 16.6% !important;
+    z-index: 1; /* Pushed behind */
+}
+
+/* Card 5: 291px equals roughly 19.8% */
+div.section.card-1-container
+    .card-1-wrapper
+    .card-1.dhnn.block
+    > div:nth-child(6) {
+    width: 19.8% !important;
+    z-index: 2; /* Sits in front */
 }
