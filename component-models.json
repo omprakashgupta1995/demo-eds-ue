@@ -266,14 +266,14 @@
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "heading-text",
         "label": "Text",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "text",
-        "label": "Text",
+        "name": "para-text",
+        "label": "Para-Text",
         "valueType": "string"
       },
       {
