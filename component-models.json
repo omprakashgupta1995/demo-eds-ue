@@ -116,6 +116,10 @@
           {
             "name": "bg-edge",
             "value": "bg-edge"
+          },
+          {
+            "name": "Animation 2",
+            "value": "animation2"
           }
         ]
       }
