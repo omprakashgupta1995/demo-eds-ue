@@ -4,50 +4,54 @@ export default async function decorate(block) {
   const { gsap } = window;
   if (!gsap) return;
 
-  // 2. Select the elements
+  // 1. Select the elements
   const allChildren = Array.from(block.querySelectorAll(":scope > div"));
   const cards = allChildren.filter((div) => div.querySelector("picture"));
   const container = block.closest(".card-1-container") || block;
 
-  // This is the fix! One timeline ensures all cards are synced to the exact same scroll percentage.
   const masterTl = gsap.timeline({ paused: true });
 
   // ==========================================
-  // 2. MASTER CHOREOGRAPHY TABLE (Scale of 0 to 10)
-  // 0 = Top of the section | 5 = Halfway down | 10 = Bottom of the section
+  // 2. MASTER CHOREOGRAPHY TABLE
   // ==========================================
   const cardSettings = [
     {
-      startY: "-190vh",
-      moveStart: 1, // Drops immediately
+      startY: "-1000px",
+      startWidth: "328px", // Your added width!
+      moveStart: 1,
       moveDuration: 4,
       disappearPhase: 7,
     },
     {
-      startY: "-210vh",
-      moveStart: 2.2, // Waits until 20% scrolled to drop
+      startY: "-1300px",
+      startWidth: "409px", // Your added width!
+      moveStart: 2.2,
       moveDuration: 3,
       disappearPhase: 6,
     },
     {
-      startY: "-50vh",
-      moveStart: 4, // Waits until 40% scrolled!
+      startY: "-500px",
+      startWidth: "196px", // Your added width!
+      moveStart: 4,
       moveDuration: 2,
       disappearPhase: 7.4,
     },
     {
-      startY: "-240vh",
-      moveStart: 2.5, // Waits until 10% scrolled
+      startY: "-1700px",
+      startWidth: "244px", // Your added width!
+      moveStart: 2.5,
       moveDuration: 2.5,
       disappearPhase: 6,
     },
     {
-      startY: "-150vh",
-      moveStart: 3, // Waits until 30% scrolled
+      startY: "-1100px",
+      startWidth: "291px", // Your added width!
+      moveStart: 3,
       moveDuration: 2.5,
       disappearPhase: 7.8,
     },
   ];
+
   const cardTimelines = [];
 
   // ==========================================
@@ -58,7 +62,6 @@ export default async function decorate(block) {
     const image = card.querySelector("picture img");
     const textGroup = card.querySelector("div:last-child");
 
-    // Grab the specific settings for this exact card based on its index
     const settings = cardSettings[index];
 
     let numberElement = textGroup.querySelector("h3");
@@ -74,16 +77,29 @@ export default async function decorate(block) {
     const tl = gsap.timeline({ paused: true });
 
     // ==========================================
-    // PHASE 1: MOVEMENT (Controlled by Settings)
+    // PHASE 1: MOVEMENT & SIZING (Your logic perfectly merged)
     // ==========================================
-    tl.from(
+
+    // 1. Instantly push the cards into the sky and force their exact starting width
+    gsap.set(card, {
+      y: settings.startY,
+      width: settings.startWidth,
+    });
+
+    // 2. A single fromTo tween handles both the drop and the shrink simultaneously
+    tl.fromTo(
       card,
       {
         y: settings.startY,
+        width: settings.startWidth, // Starts at your exact CSS pixel size
+      },
+      {
+        y: 0,
+        width: "250px", // Animates perfectly to 250px as you requested
         duration: settings.moveDuration,
         ease: "none",
       },
-      settings.moveStart, // Plugs in exactly when this card should start moving
+      settings.moveStart,
     );
 
     // Create the vertical line
@@ -138,10 +154,8 @@ export default async function decorate(block) {
     }
 
     // ==========================================
-    // PHASE 2: DISPLACE & DISAPPEAR (Controlled by Settings)
+    // PHASE 2: DISPLACE & DISAPPEAR
     // ==========================================
-
-    // Everything in Phase 2 now strictly uses `settings.disappearPhase`
     if (line) {
       tl.to(line, { opacity: 1, duration: 0.5 }, settings.disappearPhase);
     }

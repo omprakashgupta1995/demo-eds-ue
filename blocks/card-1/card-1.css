@@ -1,5 +1,5 @@
 /* --------------------------------------
-   1. MAIN CONTAINER
+   1. MAIN CONTAINER
 --------------------------------------- */
 /* Replace your existing .card-1-container block with this: */
 .section.card-1-container {
@@ -27,7 +27,7 @@
 }
 
 /* --------------------------------------
-   2. FLEXBOX LAYOUT (Rows & Columns)
+   2. FLEXBOX LAYOUT (Rows & Columns)
 --------------------------------------- */
 .card-1.block {
     display: flex;
@@ -40,7 +40,7 @@
 }
 
 /* --------------------------------------
-   3. TITLE STYLING (The 1st Div)
+   3. TITLE STYLING (The 1st Div)
 --------------------------------------- */
 .card-1.block > div:first-child {
     width: 100%;
@@ -57,7 +57,7 @@
 }
 
 /* --------------------------------------
-   4. CARD STYLING (The remaining Divs)
+   4. CARD STYLING (The remaining Divs)
 --------------------------------------- */
 .card-1.block > div:not(:first-child) {
     background-color: #2b2b2b;
@@ -110,7 +110,7 @@
 }
 
 /* --------------------------------------
-   1. MAIN CONTAINER OVERRIDES
+   1. MAIN CONTAINER OVERRIDES
 --------------------------------------- */
 /* Chaining the div and multiple classes makes this very strong */
 div.section.card-1-container {
@@ -123,7 +123,7 @@ div.section.card-1-container {
 }
 
 /* --------------------------------------
-   2. THE MAIN .dhnn BLOCK
+   2. THE MAIN .dhnn BLOCK
 --------------------------------------- */
 /* Targeting the exact parent path to outscore the old flexbox rules */
 div.section.card-1-container .card-1-wrapper .card-1.dhnn.block {
@@ -136,10 +136,11 @@ div.section.card-1-container .card-1-wrapper .card-1.dhnn.block {
     max-width: none;
     gap: 0;
     background-color: transparent;
+    flex-wrap: nowrap;
 }
 
 /* --------------------------------------
-   3. THE INDIVIDUAL CARDS
+   3. THE INDIVIDUAL CARDS
 --------------------------------------- */
 /* This chain easily beats the old '.card-1.block > div:not(:first-child)' rule */
 div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div {
@@ -183,7 +184,7 @@ div.section.card-1-container
 }
 
 /* --------------------------------------
-   4. IMAGE STYLING
+   4. IMAGE STYLING
 --------------------------------------- */
 div.section.card-1-container .card-1-wrapper .card-1.dhnn.block picture {
     display: flex;
@@ -201,7 +202,7 @@ div.section.card-1-container .card-1-wrapper .card-1.dhnn.block picture img {
 }
 
 /* --------------------------------------
-   5. TYPOGRAPHY
+   5. TYPOGRAPHY
 --------------------------------------- */
 div.section.card-1-container .card-1-wrapper .card-1.dhnn.block h3 {
     font-size: 3rem;
@@ -222,7 +223,7 @@ div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div p {
 }
 
 /* --------------------------------------
-   6. HIGHLIGHT PLUS SIGN
+   6. HIGHLIGHT PLUS SIGN
 --------------------------------------- */
 div.section.card-1-container
     .card-1-wrapper
@@ -234,14 +235,13 @@ div.section.card-1-container
     font-size: 1.5rem;
     /* Makes it smaller than the main number */
     vertical-align: super;
-    /* Pushes it up to align with the top of the number */
     font-weight: 400;
     margin-right: 4px;
     /* Adds a tiny bit of breathing room before the number */
 }
 
 /* --------------------------------------
-   7. VERTICAL SEPARATOR LINES (SAFE VERSION)
+   7. VERTICAL SEPARATOR LINES (SAFE VERSION)
 --------------------------------------- */
 /* Create a variable for GSAP to animate */
 div.section.card-1-container .card-1-wrapper .card-1.dhnn.block > div {
@@ -290,48 +290,50 @@ div.section.card-1-container
     height: auto;
     position: relative;
 }
-
-/* Card 1: 328px equals roughly 22.3% of the total width */
 div.section.card-1-container
     .card-1-wrapper
     .card-1.dhnn.block
     > div:nth-child(2) {
-    width: 22.3% !important;
-    z-index: 2; /* Sits in front */
+    width: 328px;
+    z-index: 2;
 }
 
 /* Card 2: 409px equals roughly 27.9% */
+
 div.section.card-1-container
     .card-1-wrapper
     .card-1.dhnn.block
     > div:nth-child(3) {
-    width: 27.9% !important;
-    z-index: 1; /* Pushed behind */
+    width: 409px;
+    z-index: 1;
 }
 
 /* Card 3: 196px equals roughly 13.4% */
+
 div.section.card-1-container
     .card-1-wrapper
     .card-1.dhnn.block
     > div:nth-child(4) {
-    width: 13.4% !important;
-    z-index: 2; /* Sits in front */
+    width: 196px;
+    z-index: 2;
 }
 
 /* Card 4: 244px equals roughly 16.6% */
+
 div.section.card-1-container
     .card-1-wrapper
     .card-1.dhnn.block
     > div:nth-child(5) {
-    width: 16.6% !important;
+    width: 244px;
     z-index: 1; /* Pushed behind */
 }
 
 /* Card 5: 291px equals roughly 19.8% */
+
 div.section.card-1-container
     .card-1-wrapper
     .card-1.dhnn.block
     > div:nth-child(6) {
-    width: 19.8% !important;
+    width: 291px;
     z-index: 2; /* Sits in front */
 }
