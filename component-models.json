@@ -120,6 +120,10 @@
           {
             "name": "Animation 2",
             "value": "animation2"
+          },
+          {
+            "name": "Animation 3",
+            "value": "animation3"
           }
         ]
       }
