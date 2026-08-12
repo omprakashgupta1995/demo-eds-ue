@@ -169,6 +169,46 @@
     ]
   },
   {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Dhnn",
+            "value": "dhnn"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image1",
+        "label": "Image1"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image2",
+        "label": "Image2"
+      },
+      {
+        "component": "reference",
+        "name": "col1_image3",
+        "label": "Image3",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "card-1",
     "fields": [
       {
