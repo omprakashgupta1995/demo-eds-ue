@@ -18,7 +18,7 @@ export default function decorate(block) {
       ease: "power1.inOut",
       delay: 0.2,
       repeat: -1,
-      // yoyo: true,
+      yoyo: true,
     });
   };
 

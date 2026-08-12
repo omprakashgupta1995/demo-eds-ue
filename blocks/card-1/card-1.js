@@ -206,8 +206,14 @@ export default async function decorate(block) {
     let progress = currentScroll / totalScrollDistance;
     progress = Math.max(0, Math.min(1, progress));
 
+    // THE FIX: Smoothly scrub the timeline instead of instantly snapping it!
     cardTimelines.forEach((tl) => {
-      tl.progress(progress);
+      gsap.to(tl, {
+        progress: progress,
+        duration: 0.5, // Feel free to tweak this! (0.2 is faster, 1.0 is slower/smoother)
+        ease: "power2.out",
+        overwrite: true,
+      });
     });
   };
 
