@@ -1,0 +1,239 @@
+@import '../vehicle-carousel/swiper.min.css';
+
+.section.carousel-cards-container {
+  display: flex;
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  /* Centers the carousel vertically */
+  padding: max(2rem, 4vw) 0;
+}
+
+/* Override EDS boundaries for edge-to-edge scaling */
+.section.carousel-cards-container>.carousel-cards-wrapper {
+  max-width: 100%;
+  padding-left: 5vw;
+  width: 100%;
+  overflow: hidden;
+  padding-right: 0;
+}
+
+/* ---------------------------------------------------------
+   1. SWIPER TRACK
+--------------------------------------------------------- */
+.carousel-cards.swiper {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: max(2rem, 3vw);
+}
+
+.swiper-wrapper {
+  display: flex;
+  box-sizing: content-box;
+  margin-left: 25vw;
+}
+
+/* ---------------------------------------------------------
+   2. INDIVIDUAL CARD (Swiper Slide)
+--------------------------------------------------------- */
+.carousel-cards.swiper .swiper-slide {
+  /* Forces Swiper to use our exact width, matching the 648px design */
+  width: max(308px, 30vw) !important;
+
+  /* Forces Swiper to respect the gap */
+  margin-right: max(1.5rem, 2vw) !important;
+  ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  border-radius: max(1rem, 1.25vw);
+  overflow: hidden;
+  background-color: #ffffff;
+  /* Prevents the card from ever squishing */
+  flex-shrink: 0 !important;
+
+}
+
+/* ---------------------------------------------------------
+   3. CARD TOP (Image & Title)
+--------------------------------------------------------- */
+.card-top {
+  position: relative;
+  aspect-ratio: 648 / 432;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: max(2rem, 3vw) max(2.5rem, 3.5vw);
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-title {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.card-title h3 {
+  font-size: max(2rem, 2.5vw);
+  font-weight: 400;
+  margin: 0 0 max(1rem, 1.5vw) 0;
+  line-height: 1.1;
+}
+
+.card-title p {
+  font-size: max(1.125rem, 1.25vw);
+  margin: 0;
+  line-height: 1.4;
+  max-width: 60%;
+}
+
+/* ---------------------------------------------------------
+   4. CARD BOTTOM (White section content)
+--------------------------------------------------------- */
+.card-bottom {
+  padding: max(2rem, 3vw) max(2.5rem, 3.5vw);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: max(1.5rem, 2vw);
+}
+
+.card-bottom p {
+  font-size: max(0.875rem, 1vw);
+  color: #111111;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card-bottom a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.icon.icon-right-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40px;
+  height: 40px;
+}
+
+/* ---------------------------------------------------------
+   5. PILL BUTTON ("See the proof")
+--------------------------------------------------------- */
+.card-button {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: max(0.5rem, 0.75vw);
+  margin-top: auto;
+  padding: max(0.6rem, 0.75vw) max(1.5rem, 2vw);
+  border: 1px solid #111111;
+  border-radius: 50px;
+  color: #111111;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: max(0.875rem, 1vw);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.card-button .icon img {
+  width: max(1rem, 1.25vw);
+  height: max(1rem, 1.25vw);
+  transition: filter 0.3s ease;
+}
+
+.card-button:hover .icon img {
+  filter: invert(1);
+}
+
+/* ---------------------------------------------------------
+   6. SWIPER NAVIGATION & PAGINATION
+--------------------------------------------------------- */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: max(2rem, 3vw);
+  margin-top: max(2rem, 4vw);
+}
+
+/* Swiper Dots */
+.swiper-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: auto !important;
+}
+
+.swiper-pagination-bullet {
+  width: max(8px, 0.6vw);
+  height: max(8px, 0.6vw);
+  border-radius: 50%;
+  background-color: transparent !important;
+  border: 1px solid #ffffff;
+  opacity: 1 !important;
+  margin: 0 !important;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff !important;
+}
+
+/* Swiper Next Arrow */
+.swiper-button-next.custom-next {
+  position: relative !important;
+  inset: auto !important;
+  margin: 0 !important;
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.swiper-button-next.custom-next::after {
+  display: none;
+  /* Hide default Swiper font-icon arrow */
+}
+
+.swiper-button-next.custom-next svg {
+  /* Starts at 24px (1.5rem), scales infinitely on wider screens */
+  width: max(1.5rem, 1.5vw);
+  height: max(1.5rem, 1.5vw);
+}
+
+.swiper-button-next.custom-next:hover {
+  transform: translateX(5px);
+}
+
+.swiper-button-next.custom-next.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
