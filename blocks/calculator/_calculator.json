@@ -1,0 +1,74 @@
+{
+    "definitions": [
+        {
+            "title": "Calculator",
+            "id": "calculator",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Calculator",
+                            "model": "calculator",
+                            "filter": "calculator"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "calculator",
+            "fields": [
+                {
+                    "component": "multiselect",
+                    "name": "classes",
+                    "label": "Classes",
+                    "options": [
+                        {
+                            "name": "View Style",
+                            "children": [
+                                {
+                                    "name": "Doughnut Graph",
+                                    "value": "doughnut"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Calculator Type",
+                            "children": [
+                                {
+                                    "name": "SIP Calculator",
+                                    "value": "sip-calculator"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "component": "aem-content",
+                    "name": "col1_spreadsheet",
+                    "value": "",
+                    "label": "Calculator Form URL",
+                    "valueType": "string"
+                },
+                {
+                    "component": "richtext",
+                    "name": "col2_heading",
+                    "value": "",
+                    "label": "Heading Text",
+                    "valueType": "string"
+                }
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "id": "calculator",
+            "components": [
+                "button"
+            ]
+        }
+    ]
+}
