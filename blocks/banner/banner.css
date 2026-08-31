@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:
+        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+*::selection {
+    background-color: #fff200;
+    color: #fff;
+}
+.banner.dhnn.block {
+    height: 820px;
+    position: relative;
+}
+.banner.dhnn.block p:first-child {
+    position: absolute;
+    top: 18%;
+    left: 35%;
+    height: 450px;
+    width: 450px;
+    z-index: 0;
+}
+.banner.dhnn.block p:first-child img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.banner.dhnn.block p:nth-child(2) {
+    position: absolute;
+    top: 10%;
+    left: 6%;
+    z-index: -1;
+}
+.banner.dhnn.block p:nth-child(2) img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.banner.dhnn.block p:nth-child(3) {
+    position: absolute;
+    top: -100%;
+    z-index: -2;
+}
+.banner.dhnn.block p:nth-child(3) img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.banner.dhnn.block h2 {
+    font-size: 180px;
+    z-index: 1;
+    position: absolute;
+}
+.banner.dhnn.block h2:first-child {
+    left: 0%;
+}
+.banner.dhnn.block h2:nth-child(2) {
+    top: 20%;
+    right: 0%;
+}
