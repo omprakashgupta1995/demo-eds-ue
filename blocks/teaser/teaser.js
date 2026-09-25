@@ -1,11 +1,11 @@
 export default function decorate(block) {
-  const teaserImage = block.querySelector("picture img");
+  const teaserImage = block.querySelector('picture img');
 
   // If no image is found, stop here
   if (!teaserImage) return;
 
   // CRITICAL CHECK: Is GSAP actually loaded on the page?
-  if (typeof gsap === "undefined") {
+  if (typeof gsap === 'undefined') {
     return;
   }
 
@@ -15,7 +15,7 @@ export default function decorate(block) {
     gsap.to(teaserImage, {
       x: 1000,
       duration: 3,
-      ease: "power1.inOut",
+      ease: 'power1.inOut',
       delay: 0.2,
       repeat: -1,
       yoyo: true,
@@ -25,6 +25,6 @@ export default function decorate(block) {
   if (teaserImage.complete) {
     animateIn();
   } else {
-    teaserImage.addEventListener("load", animateIn);
+    teaserImage.addEventListener('load', animateIn);
   }
 }

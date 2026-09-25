@@ -584,6 +584,64 @@
     ]
   },
   {
+    "id": "leadership-image",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "leadership-video",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_thumbnail",
+        "label": "Video Thumbnail",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_youtube-url",
+        "label": "YouTube URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_title",
+        "label": "Video Text",
+        "required": true
+      }
+    ]
+  },
+  {
     "id": "list-item",
     "fields": [
       {

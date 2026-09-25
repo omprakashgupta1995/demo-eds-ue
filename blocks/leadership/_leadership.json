@@ -1,0 +1,116 @@
+{
+  "definitions": [
+    {
+      "title": "Leadership",
+      "id": "leadership",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Leadership",
+              "model": "leadership",
+              "filter": "leadership"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Leadership Video",
+      "id": "leadership-video",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Leadership Video",
+              "model": "leadership-video"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Leadership image",
+      "id": "leadership-image",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Leadership image",
+              "model": "leadership-image"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "leadership-image",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "col1_text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col2_image",
+          "label": "Image",
+          "multi": false
+        }
+      ]
+    },
+    {
+      "id": "leadership-video",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "col1_text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col2_image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col2_thumbnail",
+          "label": "Video Thumbnail",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "col2_youtube-url",
+          "label": "YouTube URL"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "col1_title",
+          "label": "Video Text",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "leadership",
+      "components": ["leadership-image", "leadership-video"]
+    }
+  ]
+}

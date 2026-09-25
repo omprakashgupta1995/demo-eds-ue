@@ -1,5 +1,5 @@
 export default function decorate(block) {
-  const box = block.querySelector(".banner.dhnn.block p:first-child img");
+  const box = block.querySelector('.banner.dhnn.block p:first-child img');
 
   // gsap.registerPlugin(ScrollTrigger);
   gsap.set(box, { y: 0 });
@@ -9,12 +9,12 @@ export default function decorate(block) {
       duration: 2,
       repeat: -1,
       yoyo: true,
-      ease: "power1.inOut",
+      ease: 'power1.inOut',
     });
   };
   if (box.complete) {
     myAnimation();
   } else {
-    box.addEventListener("load", myAnimation);
+    box.addEventListener('load', myAnimation);
   }
 }

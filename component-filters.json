@@ -92,6 +92,13 @@
     ]
   },
   {
+    "id": "leadership",
+    "components": [
+      "leadership-image",
+      "leadership-video"
+    ]
+  },
+  {
     "id": "list",
     "components": [
       "list-item"

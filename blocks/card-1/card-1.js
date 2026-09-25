@@ -1,13 +1,13 @@
-import { loadScript } from "../../scripts/aem.js";
+import { loadScript } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
   const { gsap } = window;
   if (!gsap) return;
 
   // 1. Select the elements
-  const allChildren = Array.from(block.querySelectorAll(":scope > div"));
-  const cards = allChildren.filter((div) => div.querySelector("picture"));
-  const container = block.closest(".card-1-container") || block;
+  const allChildren = Array.from(block.querySelectorAll(':scope > div'));
+  const cards = allChildren.filter((div) => div.querySelector('picture'));
+  const container = block.closest('.card-1-container') || block;
 
   const masterTl = gsap.timeline({ paused: true });
 
@@ -16,36 +16,36 @@ export default async function decorate(block) {
   // ==========================================
   const cardSettings = [
     {
-      startY: "-1000px",
-      startWidth: "328px", // Your added width!
+      startY: '-1000px',
+      startWidth: '328px', // Your added width!
       moveStart: 1,
       moveDuration: 4,
       disappearPhase: 7,
     },
     {
-      startY: "-1300px",
-      startWidth: "409px", // Your added width!
+      startY: '-1300px',
+      startWidth: '409px', // Your added width!
       moveStart: 2.2,
       moveDuration: 3,
       disappearPhase: 6,
     },
     {
-      startY: "-500px",
-      startWidth: "196px", // Your added width!
+      startY: '-500px',
+      startWidth: '196px', // Your added width!
       moveStart: 4,
       moveDuration: 2,
       disappearPhase: 7.4,
     },
     {
-      startY: "-1700px",
-      startWidth: "244px", // Your added width!
+      startY: '-1700px',
+      startWidth: '244px', // Your added width!
       moveStart: 2.5,
       moveDuration: 2.5,
       disappearPhase: 6,
     },
     {
-      startY: "-1100px",
-      startWidth: "291px", // Your added width!
+      startY: '-1100px',
+      startWidth: '291px', // Your added width!
       moveStart: 3,
       moveDuration: 2.5,
       disappearPhase: 7.8,
@@ -58,19 +58,19 @@ export default async function decorate(block) {
   // BUILD INDIVIDUAL TIMELINES FOR EACH CARD
   // ==========================================
   cards.forEach((card, index) => {
-    const picture = card.querySelector("picture");
-    const image = card.querySelector("picture img");
-    const textGroup = card.querySelector("div:last-child");
+    const picture = card.querySelector('picture');
+    const image = card.querySelector('picture img');
+    const textGroup = card.querySelector('div:last-child');
 
     const settings = cardSettings[index];
 
-    let numberElement = textGroup.querySelector("h3");
+    let numberElement = textGroup.querySelector('h3');
     if (!numberElement) {
-      const pElement = textGroup.querySelector("p");
-      if (pElement && pElement.innerHTML.includes("<br>")) {
-        const parts = pElement.innerHTML.split("<br>");
+      const pElement = textGroup.querySelector('p');
+      if (pElement && pElement.innerHTML.includes('<br>')) {
+        const parts = pElement.innerHTML.split('<br>');
         textGroup.innerHTML = `<h3>${parts[0]}</h3><p>${parts[1]}</p>`;
-        numberElement = textGroup.querySelector("h3");
+        numberElement = textGroup.querySelector('h3');
       }
     }
 
@@ -95,9 +95,9 @@ export default async function decorate(block) {
       },
       {
         y: 0,
-        width: "250px", // Animates perfectly to 250px as you requested
+        width: '250px', // Animates perfectly to 250px as you requested
         duration: settings.moveDuration,
-        ease: "none",
+        ease: 'none',
       },
       settings.moveStart,
     );
@@ -105,16 +105,16 @@ export default async function decorate(block) {
     // Create the vertical line
     let line = null;
     if (index !== cards.length - 1) {
-      line = document.createElement("div");
-      line.style.position = "absolute";
-      line.style.right = "-7%";
-      line.style.bottom = "0";
-      line.style.width = "1px";
-      line.style.height = "200vh";
-      line.style.backgroundColor = "rgba(255, 255, 255, 0.08)";
-      line.style.opacity = "0";
-      line.style.pointerEvents = "none";
-      line.style.zIndex = "0";
+      line = document.createElement('div');
+      line.style.position = 'absolute';
+      line.style.right = '-7%';
+      line.style.bottom = '0';
+      line.style.width = '1px';
+      line.style.height = '200vh';
+      line.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+      line.style.opacity = '0';
+      line.style.pointerEvents = 'none';
+      line.style.zIndex = '0';
       card.appendChild(line);
     }
 
@@ -128,7 +128,7 @@ export default async function decorate(block) {
         const targetNum = Number(match[2]);
         const suffix = match[3];
 
-        const isOneK = targetNum === 1 && suffix.toUpperCase().includes("K");
+        const isOneK = targetNum === 1 && suffix.toUpperCase().includes('K');
         const counter = { val: isOneK ? 0 : 1 };
 
         tl.to(
@@ -140,7 +140,7 @@ export default async function decorate(block) {
               let displayNum;
               if (isOneK) {
                 const decimal = Math.floor(counter.val * 10);
-                displayNum = decimal >= 10 ? "1" : "." + decimal;
+                displayNum = decimal >= 10 ? '1' : `.${decimal}`;
               } else {
                 displayNum = Math.floor(counter.val);
                 if (counter.val === targetNum) displayNum = targetNum;
@@ -163,7 +163,7 @@ export default async function decorate(block) {
     if (image && picture) {
       const imageWrapper = picture.parentElement;
       if (imageWrapper) {
-        gsap.set(imageWrapper, { overflow: "hidden" });
+        gsap.set(imageWrapper, { overflow: 'hidden' });
       }
 
       // Image slides down
@@ -173,9 +173,9 @@ export default async function decorate(block) {
       tl.to(
         picture,
         {
-          clipPath: "inset(0% 0% 100% 0%)",
+          clipPath: 'inset(0% 0% 100% 0%)',
           duration: 0.8,
-          ease: "power2.inOut",
+          ease: 'power2.inOut',
         },
         settings.disappearPhase,
       );
@@ -183,7 +183,7 @@ export default async function decorate(block) {
       // Image fades out a half-second after the disappearance starts
       tl.to(
         image,
-        { opacity: 0, duration: 0.5, ease: "power2.inOut" },
+        { opacity: 0, duration: 0.5, ease: 'power2.inOut' },
         settings.disappearPhase + 0.5,
       );
     }
@@ -209,14 +209,14 @@ export default async function decorate(block) {
     // THE FIX: Smoothly scrub the timeline instead of instantly snapping it!
     cardTimelines.forEach((tl) => {
       gsap.to(tl, {
-        progress: progress,
+        progress,
         duration: 0.5, // Feel free to tweak this! (0.2 is faster, 1.0 is slower/smoother)
-        ease: "power2.out",
+        ease: 'power2.out',
         overwrite: true,
       });
     });
   };
 
-  window.addEventListener("scroll", handleScroll, { passive: true });
+  window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 }
