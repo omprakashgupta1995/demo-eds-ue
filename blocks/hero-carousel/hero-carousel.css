@@ -10,7 +10,7 @@
 .hero-carousel-wrapper {
     position: relative;
     width: 100%;
-    height: 640px; /* Forces full screen height */
+    height: 640px;
     overflow: hidden;
 }
 
@@ -19,18 +19,16 @@
 }
 
 /* Add this to ensure your new wrapper fills the slide properly */
-/* 2. Slide Layout (Flexbox to center text) 
-   Targeting both ensures centering works on Local (direct child of swiper-slide) 
-   and Author (child of hero-carousel-item) */
 .swiper-slide,
 .hero-carousel-item {
     position: relative;
     width: 100%;
     height: 100% !important;
     display: flex;
-    align-items: center; /* Centers text vertically */
-    justify-content: center; /* Centers text horizontally */
+    align-items: center;
+    justify-content: center;
 }
+
 /* 3. Background Image/Video (Pinned & Covering) */
 .hero-bg-col {
     position: absolute;
@@ -49,7 +47,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Makes the image/video fill the screen perfectly */
+    object-fit: cover;
     display: block;
     margin: 0;
 }
@@ -57,7 +55,7 @@
 /* 4. Center Text Styling */
 .hero-content-col {
     position: relative;
-    z-index: 2; /* Keeps text above the background */
+    z-index: 2;
 }
 
 .hero-content-col p {
@@ -74,9 +72,9 @@
     position: absolute;
     bottom: 40px;
     right: 40px;
-    z-index: 10; /* Keeps thumbnails above everything */
+    z-index: 10;
     display: flex;
-    gap: 10px; /* Space between the 4 thumbnails */
+    gap: 10px;
 }
 
 /* 6. Individual Thumbnail Styling */
@@ -107,7 +105,7 @@
     bottom: 40px;
     left: 40px;
     z-index: 10;
-    color: #ffffff;
+    color: #fff;
     font-weight: bold;
     font-size: 1.5rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
