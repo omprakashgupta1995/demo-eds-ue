@@ -118,22 +118,6 @@
     ]
   },
   {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "label",
-        "label": "Label"
-      },
-      {
-        "component": "richtext",
-        "name": "body",
-        "label": "Content",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "bio-cards",
     "fields": [
       {
@@ -600,30 +584,6 @@
           {
             "name": "secondary",
             "value": "secondary"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "tab-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "name",
-        "label": "Tab Label"
-      },
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "value": [
-          "tab-item"
-        ],
-        "options": [
-          {
-            "name": "Tab Item",
-            "value": "tab-item"
           }
         ]
       }

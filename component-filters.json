@@ -2,8 +2,7 @@
   {
     "id": "main",
     "components": [
-      "section",
-      "tab-item"
+      "section"
     ]
   },
   {
@@ -22,12 +21,6 @@
       "manage-account",
       "embed-videos",
       "card-with-link"
-    ]
-  },
-  {
-    "id": "accordion",
-    "components": [
-      "accordion-item"
     ]
   },
   {
@@ -79,25 +72,6 @@
     "id": "manage-account",
     "components": [
       "manage-accounts"
-    ]
-  },
-  {
-    "id": "tab-item",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title",
-      "hero",
-      "cards",
-      "columns",
-      "fragment",
-      "bio-cards",
-      "deposit-cards",
-      "manage-account",
-      "embed-videos",
-      "card-with-link",
-      "accordion"
     ]
   }
 ]

@@ -83,36 +83,6 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion",
-          "id": "accordion",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Accordion",
-                  "filter": "accordion"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Accordion Item",
-          "id": "accordion-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Accordion Item",
-                  "model": "accordion-item"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Bio Cards",
           "id": "bio-cards",
           "plugins": {
@@ -337,21 +307,6 @@
                 "template": {
                   "name": "Manage accounts",
                   "model": "manage-accounts"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Tab Item",
-          "id": "tab-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "model": "tab-item",
-                  "style": "tab-item"
                 }
               }
             }
