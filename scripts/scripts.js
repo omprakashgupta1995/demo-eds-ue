@@ -11,6 +11,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  decorateBlock,
 } from './aem.js';
 
 /**
@@ -63,9 +64,47 @@ async function loadFonts() {
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
-function buildAutoBlocks() {
+function buildAutoBlocks(main) {
   try {
-    // TODO: add auto block, if needed
+    const tabGroups = [];
+    let currentGroup = [];
+    [...main.querySelectorAll(':scope > .section')].forEach((section) => {
+      if (section.classList.contains('tab-item')) {
+        currentGroup.push(section);
+      } else if (currentGroup.length) {
+        if (currentGroup.length > 1) tabGroups.push(currentGroup);
+        currentGroup = [];
+      }
+    });
+    if (currentGroup.length > 1) tabGroups.push(currentGroup);
+
+    tabGroups.forEach((sections) => {
+      const tabs = document.createElement('div');
+      tabs.classList.add('tabs');
+
+      sections.forEach((section, index) => {
+        section.querySelectorAll(':scope > div > div').forEach(decorateBlock);
+
+        const row = document.createElement('div');
+        const label = document.createElement('div');
+        const labelText = document.createElement('p');
+        labelText.textContent = section.dataset.sectionName || `Tab ${index + 1}`;
+        label.append(labelText);
+
+        const content = document.createElement('div');
+        [...section.children].forEach((wrapper) => content.append(wrapper));
+        row.append(label, content);
+        tabs.append(row);
+      });
+
+      const host = sections[0];
+      host.classList.remove('tab-item');
+      host.removeAttribute('data-section-name');
+      const wrapper = document.createElement('div');
+      wrapper.append(tabs);
+      host.append(wrapper);
+      sections.slice(1).forEach((section) => section.remove());
+    });
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
@@ -81,8 +120,8 @@ export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateIcons(main);
-  buildAutoBlocks(main);
   decorateSections(main);
+  buildAutoBlocks(main);
   decorateBlocks(main);
 }
 

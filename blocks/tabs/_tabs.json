@@ -1,0 +1,64 @@
+{
+  "definitions": [
+    {
+      "title": "Tab Item",
+      "id": "tab-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/section/v1/section",
+            "template": {
+              "model": "tab-item",
+              "style": "tab-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "tab-item",
+      "fields": [
+        {
+          "component": "text",
+          "name": "name",
+          "label": "Tab Label"
+        },
+        {
+          "component": "multiselect",
+          "name": "style",
+          "label": "Style",
+          "value": ["tab-item"],
+          "options": [
+            {
+              "name": "Tab Item",
+              "value": "tab-item"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "tab-item",
+      "components": [
+        "text",
+        "image",
+        "button",
+        "title",
+        "hero",
+        "cards",
+        "columns",
+        "fragment",
+        "bio-cards",
+        "deposit-cards",
+        "manage-account",
+        "embed-videos",
+        "card-with-link",
+        "accordion"
+      ]
+    }
+  ]
+}
